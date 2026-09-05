@@ -1,0 +1,40 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(pip3 --version)",
+      "Bash(pip --version)",
+      "Bash(ffmpeg -version)",
+      "Bash(uv --version)",
+      "Bash(nvidia-smi)",
+      "Bash(.venv/bin/python --version)",
+      "Bash(.venv/bin/pip list *)",
+      "Bash(curl -s https://pypi.org/pypi/demucs/json)",
+      "Bash(python3 -c ' *)",
+      "Bash(uv add *)",
+      "Bash(curl -s https://download.pytorch.org/whl/torch/)",
+      "Bash(curl -s https://download.pytorch.org/whl/cu130/torch/)",
+      "Bash(uv sync *)",
+      "Bash(curl -s https://download.pytorch.org/whl/cu130/torchaudio/)",
+      "Bash(curl -s https://pypi.org/pypi/torchaudio/json)",
+      "Bash(curl -s https://download.pytorch.org/whl/torchaudio/)",
+      "Bash(.venv/bin/python -c ' *)",
+      "Bash(.venv/bin/python -c \"import demucs; import demucs.pretrained; print\\('demucs ok'\\)\")",
+      "Bash(.venv/bin/python -c \"import basic_pitch; from basic_pitch.inference import predict; print\\('basic-pitch ok'\\)\")",
+      "Bash(.venv/bin/python -c \"import basic_pitch\")",
+      "Bash(.venv/bin/python -c \"import tensorflow\")",
+      "Bash(.venv/bin/python -m pip list)",
+      "Bash(uv pip *)",
+      "WebSearch",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "WebFetch(domain:github.com)",
+      "Read(//tmp/**)",
+      "Bash(curl -s https://api.github.com/repos/mimbres/YourMT3/contents/)",
+      "Bash(python3 -c \"import json,sys; d=json.load\\(sys.stdin\\); [print\\(x['type'], x['name']\\) for x in d]\")",
+      "Bash(curl *)",
+      "Bash(python3 -c \"import json,sys; d=json.load\\(sys.stdin\\); [print\\(x['name']\\) for x in d]\")",
+      "WebFetch(domain:huggingface.co)",
+      "Bash(python3 -c \"import json,sys; d=json.load\\(sys.stdin\\); print\\(d.get\\('size'\\), d.get\\('encoding'\\)\\); import base64; print\\(base64.b64decode\\(d['content']\\).decode\\(\\)\\)\")",
+      "WebFetch(domain:arxiv.org)"
+    ]
+  }
+}

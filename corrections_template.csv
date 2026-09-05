@@ -1,0 +1,29 @@
+song,onset_time,original_pitch,new_pitch,new_onset,new_offset
+# One row per correction, applied to merged/<song>.mid's "other" track by
+# correct_notes.py. Never edits merged/ - writes corrected/<song>.mid.
+#
+# song            - matches a merged/<song>.mid filename, without ".mid"
+# onset_time      - the note's current onset in seconds (as transcribed)
+# original_pitch  - the note's current MIDI pitch, 0-127 (as transcribed)
+# new_pitch       - the corrected MIDI pitch, or the word "delete" to
+#                    remove the note entirely
+# new_onset       - optional: corrected onset in seconds; leave blank to
+#                    keep the note's current onset
+# new_offset      - optional: corrected offset in seconds; leave blank to
+#                    keep the note's current offset
+#
+# onset_time/original_pitch just need to get close enough to identify the
+# note - correct_notes.py matches by pitch plus onset within a tolerance
+# (default 50ms, see --tolerance), so exact decimals aren't required.
+#
+# Example - fix a note that should have been F# (66) instead of G (67),
+# found via inspect_range.py or rank_review_candidates.py's flagged
+# segments. Uncomment and edit to use:
+# 1nonly - Meaningless Love (Official Music Video),142.63,67,66,,
+#
+# Example - delete a spurious note entirely (new_onset/new_offset ignored
+# for a deletion):
+# 163braces - 過期 (lyrics music video),62.00,63,delete,,
+#
+# Example - fix a note's timing without changing its pitch:
+# Alice U (앨리스유) - 도주 (Official Video),0.52,53,53,0.55,0.95
