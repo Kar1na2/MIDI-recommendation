@@ -38,11 +38,11 @@ allowed to crash the batch. Both land in chords/_tag_failures.log - a
 separate log from extract_chords.py's own chords/_failures.log, so the two
 stages' failures don't get mixed together.
 
-Usage:
-    uv run tag_chord_tones.py                # process everything
-    uv run tag_chord_tones.py --limit 3       # first 3 unfinished songs (smoke test)
-    uv run tag_chord_tones.py --dry-run       # show what would run, do nothing
-    uv run tag_chord_tones.py --retry-failed  # clear the failure log and retry those too
+Usage (from the repo root; ARGS is forwarded as CLI flags):
+    make tag-chord-tones                              # process everything
+    make tag-chord-tones ARGS="--limit 3"             # first 3 unfinished songs (smoke test)
+    make tag-chord-tones ARGS="--dry-run"             # show what would run, do nothing
+    make tag-chord-tones ARGS="--retry-failed"        # clear the failure log and retry those too
 """
 import argparse
 import bisect

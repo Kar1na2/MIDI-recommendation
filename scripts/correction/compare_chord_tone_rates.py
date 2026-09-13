@@ -1,25 +1,28 @@
 #!/usr/bin/env python3
 """
-Before/after consistency check for auto_correct_pitches.py: re-runs the same
-chord-tone tagging logic tag_chord_tones.py used on merged/ (chord_tone /
-non_chord_tone / no_chord_data, by Chordino segment pitch-class membership),
-but against corrected/<song>.mid's "other" track instead - then compares the
-two tag distributions, per song and corpus-wide.
+Before/after consistency check for correct_notes.py's stuck_pitch
+auto-correction: re-runs the same chord-tone tagging logic tag_chord_tones.py
+used on merged/ (chord_tone / non_chord_tone / no_chord_data, by Chordino
+segment pitch-class membership), but against corrected/<song>.mid's "other"
+track instead - then compares the two tag distributions, per song and
+corpus-wide.
 
 This is NOT a ground-truth accuracy check (nothing here is compared against
 ground_truth/ or ground_truth_anchor/). It's a consistency check that the
 correction actually did what it was supposed to: move notes that were
 non_chord_tone against the Chordino read into chord tones. The retagging
-here is fully independent of auto_correct_pitches.py's own bookkeeping - it
+here is fully independent of correct_notes.py's own bookkeeping - it
 re-derives chord-segment membership from chords/<song>/other_chordnotes.csv
 from scratch, rather than trusting the changelog's recorded
 chord_segment_pitchclasses column - so a passing result here is a real
 second opinion, not a restatement of what the correction script already
 claimed to have done. (For that same by-construction reason, the after
 non_chord_tone rate should be very low but is not automatically zero - see
-"skipped_pitch_collision" in auto_correct_pitches.py and the duration
-threshold in Pass 2, both of which deliberately leave some non_chord_tone
-notes uncorrected.)
+"skipped_pitch_collision" in correct_notes.py, and note that correct_notes.py
+only ever auto-corrects the narrow stuck_pitch pattern - every other
+non_chord_tone note is deliberately left as-is, sent to
+corrected/<song>_proposals.csv for human review instead of being corrected
+here.)
 
 Two phases:
 
@@ -48,11 +51,11 @@ Two phases:
    they're the ones worth a manual listen if higher confidence is ever
    needed there.
 
-Usage:
-    uv run compare_chord_tone_rates.py                # full corpus
-    uv run compare_chord_tone_rates.py --limit 3       # smoke test the retag phase
-    uv run compare_chord_tone_rates.py --dry-run       # preview retagging, write nothing
-    uv run compare_chord_tone_rates.py --retry-failed
+Usage (from the repo root; ARGS is forwarded as CLI flags):
+    make compare-chord-tone-rates                             # full corpus
+    make compare-chord-tone-rates ARGS="--limit 3"            # smoke test the retag phase
+    make compare-chord-tone-rates ARGS="--dry-run"            # preview retagging, write nothing
+    make compare-chord-tone-rates ARGS="--retry-failed"
 """
 import argparse
 import csv
@@ -61,8 +64,8 @@ import time
 import traceback
 from pathlib import Path
 
-from tag_chord_tones import tag_one, write_csv as write_tags_csv, CHORDNOTES_FILENAME
-from tag_chord_tones import OUTPUT_FILENAME as BEFORE_TAGS_FILENAME
+from lib.tag_chord_tones import tag_one, write_csv as write_tags_csv, CHORDNOTES_FILENAME
+from lib.tag_chord_tones import OUTPUT_FILENAME as BEFORE_TAGS_FILENAME
 
 MERGED_ROOT = Path("merged")
 CHORDS_ROOT = Path("chords")
@@ -89,7 +92,7 @@ COMPARISON_HEADER = [
 def eligible_songs():
     """Songs with everything needed to compare: a merged MIDI, its "before"
     tags, the chordnotes CSV (needed to retag), and a changelog (i.e.
-    auto_correct_pitches.py has actually run on it)."""
+    correct_notes.py has actually run on it)."""
     if not MERGED_ROOT.is_dir():
         return []
     songs = []
@@ -294,7 +297,7 @@ def main():
     if not songs:
         print("No eligible songs found (need merged/<song>.mid, chords/<song>/other_note_tags.csv, "
               "chords/<song>/other_chordnotes.csv, and corrected/<song>_changelog.csv). "
-              "Run tag_chord_tones.py and auto_correct_pitches.py first.")
+              "Run tag_chord_tones.py and correct_notes.py first.")
         return
 
     # --- Phase 1: retag corrected/<song>.mid for every song that has one ---

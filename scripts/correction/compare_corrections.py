@@ -1,21 +1,23 @@
 #!/usr/bin/env python3
 """
-Side-by-side inspector for auto_correct_pitches.py's output: for one song and
-one time window, shows every note in the merged "other" track next to what
-(if anything) auto_correct_pitches.py did to it, with the harmonic context
-(active Chordino chord segment and its pitch classes) that decision was
-based on. This is the primary tool for visually verifying auto-correction
-before moving on to alignment.
+Side-by-side inspector for correct_notes.py's stuck_pitch auto-correction:
+for one song and one time window, shows every note in the merged "other"
+track next to what (if anything) correct_notes.py did to it, with the
+harmonic context (active Chordino chord segment and its pitch classes) that
+decision was based on. This is the primary tool for visually verifying
+auto-correction before moving on to alignment.
 
 Per note, prints:
     - onset time
     - original pitch (merged/<song>.mid, read fresh - never mutated here)
     - corrected pitch (corrected/<song>.mid), or "unchanged" if
-      auto_correct_pitches.py didn't touch this note
+      correct_notes.py didn't touch this note (either it wasn't
+      non_chord_tone, or it was left for human review in
+      corrected/<song>_proposals.csv instead)
     - the active chord segment's pitch classes (from
       chords/<song>/other_note_tags.csv, tag_chord_tones.py's output)
-    - the correction type if corrected (stuck_pitch / duration_filter), from
-      corrected/<song>_changelog.csv
+    - the correction type if corrected (currently only stuck_pitch - see
+      correct_notes.py), from corrected/<song>_changelog.csv
     - whether the pitch actually being used (corrected if corrected, else
       original) is a chord tone - for a corrected note this should ALWAYS
       be true by construction (that's the entire point of the snap); a
@@ -42,11 +44,11 @@ a glance, e.g. to confirm the song is clean and not just silently broken).
 Read-only: reads merged/, corrected/, and chords/*/other_note_tags.csv, and
 never modifies any of them.
 
-Usage:
-    uv run compare_corrections.py --song "Some Song"                # densest cluster
-    uv run compare_corrections.py --song "Some Song" --start 60 --end 75
-    uv run compare_corrections.py --song "Some Song" --start 1:00 --end 1:15
-    uv run compare_corrections.py --list                            # list songs available to inspect
+Usage (from the repo root; ARGS is forwarded as CLI flags):
+    make compare-corrections ARGS='--song "Some Song"'                # densest cluster
+    make compare-corrections ARGS='--song "Some Song" --start 60 --end 75'
+    make compare-corrections ARGS='--song "Some Song" --start 1:00 --end 1:15'
+    make compare-corrections ARGS="--list"                            # list songs available to inspect
 """
 import argparse
 import bisect
@@ -54,8 +56,8 @@ import csv
 import sys
 from pathlib import Path
 
-from inspect_range import parse_time, pitch_name, format_chord_set, resolve_song, load_notes
-from auto_correct_pitches import (
+from lib.inspect_range import parse_time, pitch_name, format_chord_set, resolve_song, load_notes
+from scripts.correction.correct_notes import (
     MERGED_ROOT, CHORDS_ROOT, OUTPUT_ROOT as CORRECTED_ROOT, NOTE_TAGS_FILENAME,
     match_notes_to_tags, parse_pitch_classes, ONSET_MATCH_TOLERANCE,
 )
@@ -72,7 +74,7 @@ TAG_MARK = {"chord_tone": " ", "non_chord_tone": "x", "no_chord_data": "?"}
 
 def discover_songs():
     """Songs this tool can compare: a merged MIDI, note tags, AND a
-    changelog (i.e. auto_correct_pitches.py has actually run on it - the
+    changelog (i.e. correct_notes.py has actually run on it - the
     changelog is written even for a song with zero corrections)."""
     if not MERGED_ROOT.is_dir():
         return []
@@ -104,9 +106,9 @@ def load_changelog(song_name: str):
 def find_changelog_row(sorted_rows: list, onset: float, pitch: int, tol: float = ONSET_MATCH_TOLERANCE):
     """The changelog row matching this note's (onset, original_pitch), or
     None. `sorted_rows` must already be sorted by onset_time (load_changelog
-    does this) - changelog row order on disk is NOT chronological
-    (auto_correct_pitches.py writes Pass 1 grouped by pitch value, not by
-    time), so this can't just zip positionally like merged-vs-tags can."""
+    does this) - changelog row order on disk isn't relied on to already be
+    chronological, so this can't just zip positionally like merged-vs-tags
+    can."""
     onsets = [r["onset_time"] for r in sorted_rows]
     i = bisect.bisect_left(onsets, onset - tol)
     while i < len(sorted_rows) and sorted_rows[i]["onset_time"] <= onset + tol:
@@ -116,21 +118,35 @@ def find_changelog_row(sorted_rows: list, onset: float, pitch: int, tol: float =
     return None
 
 
+def find_other_instrument(midi, path: Path):
+    """The single instrument named "other" (case-insensitive, stripped -
+    same convention as correct_notes.py's identify_other_track), or raises
+    ValueError if there's zero or more than one. Doesn't log to
+    correct_notes.py's failure log the way identify_other_track does - this
+    tool is read-only and never writes anything - but a song reaching this
+    point already has a changelog, which correct_notes.py only ever writes
+    after finding exactly one such track, so this should never actually
+    fire in practice."""
+    candidates = [inst for inst in midi.instruments if inst.name.strip().lower() == "other"]
+    if len(candidates) != 1:
+        raise ValueError(f"{path} has {len(candidates)} track(s) named 'other', expected exactly 1")
+    return candidates[0]
+
+
 def load_corrected_notes(corrected_path: Path, expected_count: int):
     """corrected/<song>.mid's "other"-track notes, in the same canonical
     order match_notes_to_tags() uses for merged/ (so index i lines up with
-    pairs[i] from that function) - safe because auto_correct_pitches.py
-    never adds, removes, or reorders notes, only changes pitch in place.
-    Raises ValueError if the count doesn't match, rather than silently
-    misaligning two lists."""
+    pairs[i] from that function) - safe because correct_notes.py never
+    adds, removes, or reorders notes, only changes pitch in place. Raises
+    ValueError if the count doesn't match, rather than silently misaligning
+    two lists."""
     import pretty_midi
     midi = pretty_midi.PrettyMIDI(str(corrected_path))
-    other_tracks = [inst for inst in midi.instruments if inst.name == "other"]
-    notes = [n for inst in other_tracks for n in sorted(inst.notes, key=lambda n: n.start)]
-    notes.sort(key=lambda n: n.start)
+    other_inst = find_other_instrument(midi, corrected_path)
+    notes = sorted(other_inst.notes, key=lambda n: n.start)
     if len(notes) != expected_count:
         raise ValueError(f"{corrected_path} has {len(notes)} 'other' notes, expected {expected_count} "
-                          f"(from merged/ + tags) - pipeline outputs look out of sync; re-run auto_correct_pitches.py")
+                          f"(from merged/ + tags) - pipeline outputs look out of sync; re-run correct_notes.py")
     return notes
 
 
@@ -151,7 +167,8 @@ def build_records(song_name: str):
 
     tag_rows = load_notes(song_name)
     merged_midi = pretty_midi.PrettyMIDI(str(merged_path))
-    pairs = match_notes_to_tags(merged_midi, tag_rows)  # [(Note, tag_row)], true chronological order
+    other_inst = find_other_instrument(merged_midi, merged_path)
+    pairs = match_notes_to_tags(other_inst, tag_rows)  # [(Note, tag_row)], true chronological order
 
     changelog_rows = load_changelog(song_name)
 
@@ -301,7 +318,7 @@ def main():
     if args.list or not args.song:
         if not songs:
             print(f"No songs found with merged + note tags + a changelog. "
-                  f"Run auto_correct_pitches.py first.")
+                  f"Run correct_notes.py first.")
             return
         print(f"{len(songs)} song(s) available to compare:")
         for name in songs:

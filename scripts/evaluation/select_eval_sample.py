@@ -19,16 +19,16 @@ raise later without losing labeling work already done.
 
 See README "Hand-labeling ground truth" for the annotation workflow.
 
-Usage:
-    uv run select_eval_sample.py                # sample 8 songs (default), seed 0
-    uv run select_eval_sample.py -n 5 --seed 42
-    uv run select_eval_sample.py --list          # show current sample + fill-in progress
+Usage (from the repo root; ARGS is forwarded as CLI flags):
+    make select-eval-sample                       # sample 8 songs (default), seed 0
+    make select-eval-sample ARGS="-n 5 --seed 42"
+    make select-eval-sample ARGS="--list"          # show current sample + fill-in progress
 """
 import argparse
 import random
 from pathlib import Path
 
-from gt_format import load_ground_truth, write_template
+from lib.gt_format import load_ground_truth, write_template
 
 MERGED_ROOT = Path("merged")
 GT_ROOT = Path("ground_truth")

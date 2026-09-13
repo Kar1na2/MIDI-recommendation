@@ -20,10 +20,10 @@ follow-up once a candidate section catches your eye.
 
 Reads only; never modifies merged/, chords/, or any other existing file.
 
-Usage:
-    uv run inspect_range.py --song "Some Song" --start 60 --end 75
-    uv run inspect_range.py --song "Some Song" --start 1:00 --end 1:15
-    uv run inspect_range.py --list                    # list songs available to inspect
+Usage (from the repo root; ARGS is forwarded as CLI flags):
+    make inspect-range ARGS='--song "Some Song" --start 60 --end 75'
+    make inspect-range ARGS='--song "Some Song" --start 1:00 --end 1:15'
+    make inspect-range ARGS="--list"                    # list songs available to inspect
 """
 import argparse
 import csv

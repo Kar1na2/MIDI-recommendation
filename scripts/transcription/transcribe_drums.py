@@ -5,7 +5,9 @@ midi/<song_name>/drums.mid.
 
 *** Must be run with the isolated ADTLib environment's interpreter: ***
 
-    tools/adtlib-env/bin/python transcribe_drums.py [options]
+    tools/adtlib-env/bin/python -m scripts.transcription.transcribe_drums [options]
+
+(the `make transcribe-drums` target below does this for you)
 
 Why a separate env: ADTLib's drum model depends on TensorFlow 1.15 (it uses
 the graph-mode `tensorflow.contrib` API, deleted in TF 2.0) and on an
@@ -29,11 +31,11 @@ against Omnizart's heavier CNN-based drum model.
 Resumable: a song is skipped if midi/<song_name>/drums.mid already exists.
 Failures are logged to midi/_failures_drums.log instead of aborting the batch.
 
-Usage:
-    tools/adtlib-env/bin/python transcribe_drums.py                # everything
-    tools/adtlib-env/bin/python transcribe_drums.py --limit 3       # smoke test
-    tools/adtlib-env/bin/python transcribe_drums.py --dry-run
-    tools/adtlib-env/bin/python transcribe_drums.py --retry-failed
+Usage (from the repo root; ARGS is forwarded as CLI flags):
+    make transcribe-drums                              # everything
+    make transcribe-drums ARGS="--limit 3"              # smoke test
+    make transcribe-drums ARGS="--dry-run"
+    make transcribe-drums ARGS="--retry-failed"
 """
 import argparse
 import sys

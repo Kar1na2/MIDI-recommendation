@@ -19,23 +19,21 @@ node, not another stage other scripts depend on.
             matched the same way tag_chord_tones.py does). Blank if the onset
             falls in a gap between segments, or the song has no chord data.
         was_corrected, correction_type, original_pitch  - from
-            corrected/<song>_changelog.csv (auto_correct_pitches.py's output),
-            matched by (onset_time, corrected_pitch) - exact match, not
-            tolerance-based, since a correction only ever changes pitch and
-            pretty_midi round-trips onset times exactly for files this size.
-            was_corrected is False and the other two columns blank for any
-            note the changelog doesn't mention (chord_tone, no_chord_data, or
-            a non_chord_tone left uncorrected because it was under
-            auto_correct_pitches.py's --min-duration-ms threshold - see
-            README).
+            corrected/<song>_changelog.csv (correct_notes.py's stuck_pitch
+            output), matched by (onset_time, corrected_pitch) - exact match,
+            not tolerance-based, since a correction only ever changes pitch
+            and pretty_midi round-trips onset times exactly for files this
+            size. was_corrected is False and the other two columns blank for
+            any note the changelog doesn't mention (chord_tone, no_chord_data,
+            or a non_chord_tone left for human review in
+            corrected/<song>_proposals.csv instead - see README).
 
     A song whose corrected/<song>.mid exists with no matching changelog next
-    to it (correct_notes.py's hand-correction path writes a single shared
-    corrected/correction_log.csv instead, a different format) still has its
-    corrected notes exported, but was_corrected/correction_type/original_pitch
-    are left blank for all of them and the song is called out in the summary
-    printed at the end - this script doesn't guess at hand-correction
-    provenance rather than risk mislabeling it.
+    to it (e.g. output from some workflow other than correct_notes.py) still
+    has its corrected notes exported, but was_corrected/correction_type/
+    original_pitch are left blank for all of them and the song is called out
+    in the summary printed at the end - this script doesn't guess at
+    unrecognized correction provenance rather than risk mislabeling it.
 
     chord_segments.csv - one row per distinct chord segment across every
     song under chords/, independent of how far merged/corrected coverage has
@@ -50,25 +48,25 @@ Read-only except for the two output CSVs (written at the repo root, next to
 review_candidates.csv): reads merged/, corrected/, and chords/ only, and
 writes nothing back into any of them.
 
-Usage:
-    uv run export_note_events.py
-    uv run export_note_events.py --note-events-out my_notes.csv --chord-segments-out my_chords.csv
-    uv run export_note_events.py --skip-note-events       # chord_segments.csv only
-    uv run export_note_events.py --skip-chord-segments    # note_events_other.csv only
+Usage (from the repo root; ARGS is forwarded as CLI flags):
+    make export-note-events
+    make export-note-events ARGS="--note-events-out my_notes.csv --chord-segments-out my_chords.csv"
+    make export-note-events ARGS="--skip-note-events"       # chord_segments.csv only
+    make export-note-events ARGS="--skip-chord-segments"    # note_events_other.csv only
 """
 import argparse
 import csv
 from pathlib import Path
 
-from tag_chord_tones import load_chord_segments, find_segment
+from lib.tag_chord_tones import load_chord_segments, find_segment
 
 MERGED_ROOT = Path("merged")
 CORRECTED_ROOT = Path("corrected")
 CHORDS_ROOT = Path("chords")
 CHORDNOTES_FILENAME = "other_chordnotes.csv"
 
-NOTE_EVENTS_CSV = Path("note_events_other.csv")
-CHORD_SEGMENTS_CSV = Path("chord_segments.csv")
+NOTE_EVENTS_CSV = Path("output") / "note_events_other.csv"
+CHORD_SEGMENTS_CSV = Path("output") / "chord_segments.csv"
 
 NOTE_EVENTS_HEADER = [
     "song", "onset", "offset", "pitch", "velocity",
@@ -80,7 +78,7 @@ CHORD_SEGMENTS_HEADER = ["song", "start", "end", "pitch_class_set"]
 
 def other_track_notes(midi):
     """Every Note in `midi`'s "other" track(s), sorted by onset - same
-    convention as tag_chord_tones.py/auto_correct_pitches.py (there may be
+    convention as tag_chord_tones.py/correct_notes.py (there may be
     more than one instrument literally named "other")."""
     other_tracks = [inst for inst in midi.instruments if inst.name == "other"]
     return sorted((n for inst in other_tracks for n in inst.notes), key=lambda n: n.start)
@@ -169,7 +167,7 @@ def export_note_events(out_path: Path):
     if songs_missing_changelog:
         names = ", ".join(songs_missing_changelog[:5]) + (", ..." if len(songs_missing_changelog) > 5 else "")
         print(f"  NOTE: {len(songs_missing_changelog)} song(s) have corrected/<song>.mid but no matching "
-              f"_changelog.csv (likely hand-corrected via correct_notes.py) - their notes are exported, "
+              f"_changelog.csv (not produced by correct_notes.py) - their notes are exported, "
               f"but was_corrected/correction_type/original_pitch are left blank for all of them: {names}")
 
 

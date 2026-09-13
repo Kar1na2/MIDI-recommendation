@@ -19,11 +19,11 @@ Runs on CPU: Basic Pitch's TensorFlow backend can't see this machine's GPU
 provide it - see README note on the transcription stage). Not a practical
 problem: the model is small and CPU inference is fast per file.
 
-Usage:
-    uv run transcribe_harmonic.py                # process everything
-    uv run transcribe_harmonic.py --limit 3       # first 3 unfinished jobs (smoke test)
-    uv run transcribe_harmonic.py --dry-run       # show what would run, do nothing
-    uv run transcribe_harmonic.py --retry-failed  # clear the failure log and retry those too
+Usage (from the repo root; ARGS is forwarded as CLI flags):
+    make transcribe-harmonic                              # process everything
+    make transcribe-harmonic ARGS="--limit 3"             # first 3 unfinished jobs (smoke test)
+    make transcribe-harmonic ARGS="--dry-run"             # show what would run, do nothing
+    make transcribe-harmonic ARGS="--retry-failed"        # clear the failure log and retry those too
 """
 import argparse
 import sys
@@ -35,6 +35,30 @@ STEMS_TO_TRANSCRIBE = ("other", "bass")
 STEMS_ROOT = Path("stems")
 OUTPUT_ROOT = Path("midi")
 FAILURE_LOG = OUTPUT_ROOT / "_failures_harmonic.log"
+
+# Mirrors basic_pitch.inference.DEFAULT_ONSET_THRESHOLD / DEFAULT_FRAME_THRESHOLD
+# (the library's own predict() defaults - not currently exported as named
+# constants in basic-pitch 0.4.0, so pinned here to the values in its
+# predict() signature instead of imported).
+DEFAULT_ONSET_THRESHOLD = 0.5
+DEFAULT_FRAME_THRESHOLD = 0.3
+
+# Per-stem Basic Pitch thresholds. Both stems use the library defaults -
+# no custom override for either.
+#
+# "other" onset threshold was previously lowered 0.5 -> 0.45, diagnosed on
+# stems/tmp/other_basic_pitch.npz around the 10.79s mark of
+# "1nonly - Meaningless Love", where a G#5 note had frame activation peak
+# 0.307 (clears the 0.3 frame threshold) and onset activation peak 0.474
+# (real signal, but just under the 0.5 default onset threshold) - the note
+# was detected but silently dropped for missing the onset cutoff alone.
+# That fix (and a follow-on minimum_note_length investigation) was reverted:
+# see README, "'other' stem transcription: known limitation on short/soft
+# high notes", for why this is now accepted as a known limitation instead.
+STEM_THRESHOLDS = {
+    "other": {"onset_threshold": DEFAULT_ONSET_THRESHOLD, "frame_threshold": DEFAULT_FRAME_THRESHOLD},
+    "bass": {"onset_threshold": DEFAULT_ONSET_THRESHOLD, "frame_threshold": DEFAULT_FRAME_THRESHOLD},
+}
 
 
 def collect_jobs():
@@ -103,7 +127,12 @@ def main():
         out_dir.mkdir(parents=True, exist_ok=True)
         out_path = out_dir / f"{stem}.mid"
         try:
-            _, midi_data, _ = predict(str(wav), ICASSP_2022_MODEL_PATH)
+            thresholds = STEM_THRESHOLDS[stem]
+            _, midi_data, _ = predict(
+                str(wav), ICASSP_2022_MODEL_PATH,
+                onset_threshold=thresholds["onset_threshold"],
+                frame_threshold=thresholds["frame_threshold"],
+            )
             tmp_path = out_path.with_suffix(".mid.tmp")
             midi_data.write(str(tmp_path))
             tmp_path.rename(out_path)  # atomic-ish: a half-written file never looks "done"

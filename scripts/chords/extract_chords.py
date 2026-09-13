@@ -24,11 +24,11 @@ already exists and is newer than stems/<song_name>/other.wav.
 
 Failures are logged to chords/_failures.log instead of aborting the batch.
 
-Usage:
-    uv run extract_chords.py                # process everything
-    uv run extract_chords.py --limit 3       # first 3 unfinished songs (smoke test)
-    uv run extract_chords.py --dry-run       # show what would run, do nothing
-    uv run extract_chords.py --retry-failed  # clear the failure log and retry those too
+Usage (from the repo root; ARGS is forwarded as CLI flags):
+    make extract-chords                              # process everything
+    make extract-chords ARGS="--limit 3"              # first 3 unfinished songs (smoke test)
+    make extract-chords ARGS="--dry-run"              # show what would run, do nothing
+    make extract-chords ARGS="--retry-failed"         # clear the failure log and retry those too
 """
 import argparse
 import csv
@@ -48,7 +48,7 @@ CSV_HEADER = ["segment", "onset", "offset", "pitch", "pitch_class"]
 
 # Built by tools/vamp-build/ (see its README) into a plain directory of
 # plugin binaries - no system-wide Vamp plugin install involved.
-VAMP_PLUGIN_DIR = Path(__file__).resolve().parent / "tools" / "vamp-plugins"
+VAMP_PLUGIN_DIR = Path(__file__).resolve().parent.parent.parent / "tools" / "vamp-plugins"
 
 
 def collect_jobs():

@@ -42,11 +42,11 @@ Two modes:
     in time order, with the actual note pitches involved - for checking a
     specific transcription result rather than browsing the whole corpus.
 
-Usage:
-    uv run rank_review_candidates.py                       # corpus-wide ranked list
-    uv run rank_review_candidates.py --top 50               # show more in the terminal
-    uv run rank_review_candidates.py --min-notes 4           # stricter noise floor
-    uv run rank_review_candidates.py --song "Some Song"      # investigate one song
+Usage (from the repo root; ARGS is forwarded as CLI flags):
+    make rank-review-candidates                                  # corpus-wide ranked list
+    make rank-review-candidates ARGS="--top 50"                  # show more in the terminal
+    make rank-review-candidates ARGS="--min-notes 4"              # stricter noise floor
+    make rank-review-candidates ARGS='--song "Some Song"'         # investigate one song
 """
 import argparse
 import csv
@@ -55,8 +55,8 @@ from pathlib import Path
 
 CHORDS_ROOT = Path("chords")
 NOTE_TAGS_FILENAME = "other_note_tags.csv"
-OUTPUT_CSV = Path("review_candidates.csv")
-CHORD_REVIEW_CSV = Path("chord_review_candidates.csv")
+OUTPUT_CSV = Path("output") / "review_candidates.csv"
+CHORD_REVIEW_CSV = Path("output") / "chord_review_candidates.csv"
 
 CSV_HEADER = ["song", "segment_onset", "segment_offset", "n_notes",
               "n_non_chord_tone", "density", "chord_pitch_classes"]

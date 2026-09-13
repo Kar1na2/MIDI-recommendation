@@ -39,9 +39,9 @@ it never modifies any of them. Ground-truth CSVs are scaffolded empty, same
 as select_eval_sample.py - this script picks *where* to label, not what the
 labels should be.
 
-Usage:
-    uv run select_anchor_excerpts.py
-    uv run select_anchor_excerpts.py --min-notes 20    # stricter noise floor
+Usage (from the repo root; ARGS is forwarded as CLI flags):
+    make select-anchor-excerpts
+    make select-anchor-excerpts ARGS="--min-notes 20"    # stricter noise floor
 """
 import argparse
 import csv
@@ -49,12 +49,12 @@ import sys
 import time
 from pathlib import Path
 
-from gt_format import write_template
-from inspect_range import load_segments, load_notes, CHORDS_ROOT
+from lib.gt_format import write_template
+from lib.inspect_range import load_segments, load_notes, CHORDS_ROOT
 
 MERGED_ROOT = Path("merged")
 STEMS_ROOT = Path("stems")
-CHORD_REVIEW_CSV = Path("chord_review_candidates.csv")
+CHORD_REVIEW_CSV = Path("output") / "chord_review_candidates.csv"
 GT_ANCHOR_ROOT = Path("ground_truth_anchor")
 ANCHOR_MANIFEST = GT_ANCHOR_ROOT / "_anchors.txt"
 

@@ -30,11 +30,11 @@ Two metrics per stem, per song:
   duration, so note_noffset is the one to trust there. For bass/other,
   Basic Pitch estimates real durations, so both are meaningful.
 
-Usage:
-    uv run evaluate_transcription.py                       # score the whole ground_truth/ sample
-    uv run evaluate_transcription.py --songs "SongA,SongB"  # score just these songs
-    uv run evaluate_transcription.py --onset-window 0.05 --pitch-tolerance 50
-    uv run evaluate_transcription.py --output-csv eval_results.csv
+Usage (from the repo root; ARGS is forwarded as CLI flags):
+    make evaluate-transcription                                  # score the whole ground_truth/ sample
+    make evaluate-transcription ARGS='--songs "SongA,SongB"'      # score just these songs
+    make evaluate-transcription ARGS="--onset-window 0.05 --pitch-tolerance 50"
+    make evaluate-transcription ARGS="--output-csv output/eval_results.csv"
 """
 import argparse
 import csv
@@ -46,7 +46,7 @@ import numpy as np
 import pretty_midi
 import mir_eval
 
-from gt_format import load_ground_truth, full_note_rows, GroundTruthError
+from lib.gt_format import load_ground_truth, full_note_rows, GroundTruthError
 
 MERGED_ROOT = Path("merged")
 GT_ROOT = Path("ground_truth")

@@ -25,12 +25,12 @@ After merging, each song gets a printed sanity-check summary: track count,
 notes per track, and total duration. A track with 0 notes is flagged - that
 usually means its stem's transcription silently produced nothing upstream.
 
-Usage:
-    uv run merge_stems.py                # merge everything
-    uv run merge_stems.py --limit 3      # first 3 unfinished songs (smoke test)
-    uv run merge_stems.py --dry-run      # show what would run, do nothing
-    uv run merge_stems.py --retry-failed # clear the failure log and retry those too
-    uv run merge_stems.py --check        # re-inspect existing merged/ files, no merging
+Usage (from the repo root; ARGS is forwarded as CLI flags):
+    make merge-stems                              # merge everything
+    make merge-stems ARGS="--limit 3"             # first 3 unfinished songs (smoke test)
+    make merge-stems ARGS="--dry-run"             # show what would run, do nothing
+    make merge-stems ARGS="--retry-failed"        # clear the failure log and retry those too
+    make merge-stems ARGS="--check"               # re-inspect existing merged/ files, no merging
 """
 import argparse
 import sys

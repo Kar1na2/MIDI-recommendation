@@ -11,11 +11,11 @@ of aborting the batch.
 
 Uses the GPU if available, falls back to CPU with a warning.
 
-Usage:
-    uv run separate_stems.py                # process everything
-    uv run separate_stems.py --limit 3       # process first 3 unfinished songs (smoke test)
-    uv run separate_stems.py --dry-run       # show what would run, do nothing
-    uv run separate_stems.py --retry-failed  # clear the failure log and retry those songs too
+Usage (from the repo root; ARGS is forwarded as CLI flags):
+    make separate-stems                              # process everything
+    make separate-stems ARGS="--limit 3"              # process first 3 unfinished songs (smoke test)
+    make separate-stems ARGS="--dry-run"              # show what would run, do nothing
+    make separate-stems ARGS="--retry-failed"         # clear the failure log and retry those songs too
 """
 import argparse
 import shutil
