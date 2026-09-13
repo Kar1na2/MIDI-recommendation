@@ -1,3 +1,18 @@
+"""
+Step 2: Download audio for a list of (title, artist) songs by scraping
+mp3juice.sc via a headless(-able) browser.
+
+Takes the JSON song list produced by fetch_liked_songs.py / fetch_playlist_songs.py
+(a list of {"title": ..., "artist": ...} entries) and downloads an mp3 for
+each into an output directory, to be fed into convert.py / extract_audio.py.
+
+Usage:
+  python download_songs.py liked_songs.json ./audio
+
+Moved here from the repo root (was `web_scraper.py`, undocumented) - same
+one-off-ingestion-tool category as its siblings in this directory, not part
+of the resumable scripts/ pipeline.
+"""
 from playwright.sync_api import sync_playwright
 import json
 import argparse

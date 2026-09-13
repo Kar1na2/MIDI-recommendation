@@ -1,8 +1,11 @@
-audio/
-k-indie/
-stems/
-midi/
-merged/
+__pycache__/
+*.pyc
+
+/audio/
+/k-indie/
+/stems/
+/midi/
+/merged/
 .venv/
 .cache
 tools/adtlib-env/
@@ -10,11 +13,21 @@ tools/python3.7-base/
 tools/vamp-build/vamp-plugin-sdk/
 tools/vamp-build/nnls-chroma/
 tools/vamp-plugins/
-chords/
-review_candidates.csv
-chord_review_candidates.csv
-corrected/
-note_events_other.csv
-chord_segments.csv
+/chords/
+/corrected/
+# Exception: the analysis design docs under output/analysis/ are authored
+# reasoning/methodology (which empirical choice was made and why, bugs
+# found and fixed), not regenerable pipeline output like the rest of
+# output/ - checked in for the same reason ground_truth/ is, below. The
+# CSVs alongside them (chord_sequences.csv, note_similarity_matrix.csv,
+# etc.) stay ignored - regenerable via `make build-chord-sequences` /
+# `make run-note-alignment` / etc. from the committed scripts. Git can't
+# re-include a file whose parent directory is itself ignored, so /output/
+# is excluded one level down (/output/*), not as a whole directory, to
+# leave room for these nested re-includes.
+/output/*
+!/output/analysis/
+/output/analysis/*
+!/output/analysis/*.md
 ground_truth_anchor/*/*.wav
 ground_truth_anchor/*/*.mid
