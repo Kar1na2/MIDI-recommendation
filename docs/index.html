@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>bepop</title>
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div id="app">
+    <header id="topBar">
+      <div id="brand">bepop</div>
+      <div id="searchWrap">
+        <input id="searchInput" type="text" placeholder="Search a song…" autocomplete="off" spellcheck="false" />
+        <button id="searchBtn" aria-label="Search" title="Search">&#8594;</button>
+        <ul id="suggestions" hidden></ul>
+        <div id="noMatches" hidden>No matches</div>
+      </div>
+    </header>
+
+    <main id="homeScreen">
+      <p id="homeHint">Type a song title to get started.</p>
+    </main>
+
+    <main id="songView" hidden>
+      <div id="songMeta">
+        <span id="songTitle"></span>
+        <span id="loadingNote" hidden>Loading…</span>
+      </div>
+
+      <div id="stage">
+        <div id="waveformColumn">
+          <div id="waveformBox">
+            <div id="waveform"></div>
+            <canvas id="pitchOverlay"></canvas>
+          </div>
+          <div id="transportControls">
+            <button id="backBtn" title="Back 5 seconds">&#8722;5s</button>
+            <button id="playPauseBtn" title="Play/Pause">&#9658;</button>
+            <button id="fwdBtn" title="Forward 5 seconds">+5s</button>
+          </div>
+          <p id="selectionHint">Drag on the waveform to select a range and find similar songs.</p>
+        </div>
+
+        <aside id="analysisPanel" hidden>
+          <button id="closePanelBtn" aria-label="Close" title="Close (Esc)">&times;</button>
+          <h2>Selection</h2>
+          <div id="selectionRange"></div>
+          <div id="chordSequence"></div>
+
+          <h3>Similar chord progression</h3>
+          <ol id="chordMatches" class="matchList"></ol>
+
+          <h3>Similar melodic pattern</h3>
+          <ol id="noteMatches" class="matchList"></ol>
+        </aside>
+      </div>
+    </main>
+  </div>
+
+  <!-- wavesurfer.js v7 (UMD), pinned version - see docs/README.md -->
+  <script src="https://cdn.jsdelivr.net/npm/wavesurfer.js@7.12.12/dist/wavesurfer.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/wavesurfer.js@7.12.12/dist/plugins/regions.min.js"></script>
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
