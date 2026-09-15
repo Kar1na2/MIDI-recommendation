@@ -59,10 +59,10 @@ an exact version (`7.12.12`) — see the CDN allowlist note below.
    initial home-screen search and switching songs later (one input, one
    code path, not two).
 3. **Opening a song** (`loadSong()`): tears down any previous WaveSurfer
-   instance/state completely, fetches `songs/<id>.json`, creates a fresh
-   `WaveSurfer` instance pointed at `audio_url`, and draws the pitch overlay
-   (a plain `<canvas>` positioned over the waveform, drawn directly from the
-   song's note list — no library, no precomputed peak data per Phase 4).
+   instance/state completely, fetches `songs/<id>.json`, and creates a fresh
+   `WaveSurfer` instance pointed at `audio_url`. (A MIDI pitch-curve overlay
+   drawn over the waveform existed through Phase 5 but was removed in the
+   post-Phase-5 visual revision pass — not currently rendered.)
 4. **Selection** uses wavesurfer's official Regions plugin
    (`enableDragSelection`). On `region-created` (drag finished) with a
    non-trivial duration, the layout shrinks the waveform and opens the

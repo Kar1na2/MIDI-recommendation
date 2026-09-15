@@ -28,7 +28,6 @@ const el = {
   stage: document.getElementById('stage'),
   waveformBox: document.getElementById('waveformBox'),
   waveform: document.getElementById('waveform'),
-  pitchOverlay: document.getElementById('pitchOverlay'),
   backBtn: document.getElementById('backBtn'),
   playPauseBtn: document.getElementById('playPauseBtn'),
   fwdBtn: document.getElementById('fwdBtn'),
@@ -174,8 +173,6 @@ function teardownSong() {
   }
   state.regions = null;
   state.currentSong = null;
-  const ctx = el.pitchOverlay.getContext('2d');
-  ctx.clearRect(0, 0, el.pitchOverlay.width, el.pitchOverlay.height);
 }
 
 async function loadSong(songId, { seekTo = null } = {}) {
@@ -193,8 +190,8 @@ async function loadSong(songId, { seekTo = null } = {}) {
   const ws = WaveSurfer.create({
     container: el.waveform,
     height: 140,
-    waveColor: '#4d4d4d',
-    progressColor: '#7a7a7a',
+    waveColor: '#2FBE7A',
+    progressColor: '#7CFFC2',
     cursorColor: '#1DB954',
     barWidth: 2,
     barGap: 1,
@@ -213,7 +210,6 @@ async function loadSong(songId, { seekTo = null } = {}) {
     el.loadingNote.hidden = true;
     const decodeMs = performance.now() - decodeStart;
     console.log(`[bepop] "${song.title}" decoded client-side in ${decodeMs.toFixed(0)}ms`);
-    drawPitchOverlay();
     if (seekTo != null) ws.setTime(Math.max(0, Math.min(song.duration, seekTo)));
   });
   ws.on('play', () => { el.playPauseBtn.innerHTML = '&#10074;&#10074;'; });
@@ -225,11 +221,6 @@ async function loadSong(songId, { seekTo = null } = {}) {
   regions.on('region-updated', (region) => {
     if (region === state.activeRegion) runAnalysis(region.start, region.end);
   });
-
-  // draw the pitch overlay once more on container resize (responsive layout,
-  // and the flex width change when the analysis panel opens/closes)
-  window.addEventListener('resize', drawPitchOverlay);
-  new ResizeObserver(() => drawPitchOverlay()).observe(el.waveformBox);
 }
 
 function onRegionFinalized(region) {
@@ -252,53 +243,6 @@ function onRegionFinalized(region) {
 el.playPauseBtn.addEventListener('click', () => state.ws && state.ws.playPause());
 el.backBtn.addEventListener('click', () => state.ws && state.ws.skip(-SKIP_SECONDS));
 el.fwdBtn.addEventListener('click', () => state.ws && state.ws.skip(SKIP_SECONDS));
-
-// ---------------------------------------------------------------------------
-// Pitch overlay (client-side, drawn from the song's note list - no
-// precomputed peak/pitch data per Phase 4)
-// ---------------------------------------------------------------------------
-function drawPitchOverlay() {
-  const song = state.currentSong;
-  if (!song) return;
-  const canvas = el.pitchOverlay;
-  const box = el.waveformBox;
-  const dpr = window.devicePixelRatio || 1;
-  const cssWidth = el.waveform.clientWidth || box.clientWidth - 32;
-  const cssHeight = 140;
-  canvas.width = Math.max(1, Math.round(cssWidth * dpr));
-  canvas.height = Math.max(1, Math.round(cssHeight * dpr));
-  canvas.style.width = cssWidth + 'px';
-  canvas.style.height = cssHeight + 'px';
-  const ctx = canvas.getContext('2d');
-  ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-  ctx.clearRect(0, 0, cssWidth, cssHeight);
-
-  const notes = song.notes;
-  if (!notes.length) return;
-  let minPitch = Infinity, maxPitch = -Infinity;
-  for (const n of notes) { if (n.pitch < minPitch) minPitch = n.pitch; if (n.pitch > maxPitch) maxPitch = n.pitch; }
-  const range = Math.max(1, maxPitch - minPitch);
-  const marginTop = cssHeight * 0.08, marginBottom = cssHeight * 0.08;
-  const usable = cssHeight - marginTop - marginBottom;
-  const x = (t) => (t / song.duration) * cssWidth;
-  const y = (pitch) => cssHeight - marginBottom - ((pitch - minPitch) / range) * usable;
-
-  ctx.strokeStyle = 'rgba(29, 185, 84, 0.55)';
-  ctx.lineWidth = 1;
-  ctx.beginPath();
-  notes.forEach((n, i) => {
-    const px = x(n.onset), py = y(n.pitch);
-    if (i === 0) ctx.moveTo(px, py); else ctx.lineTo(px, py);
-  });
-  ctx.stroke();
-
-  ctx.fillStyle = '#1DB954';
-  for (const n of notes) {
-    ctx.beginPath();
-    ctx.arc(x(n.onset), y(n.pitch), 1.6, 0, Math.PI * 2);
-    ctx.fill();
-  }
-}
 
 // ---------------------------------------------------------------------------
 // Selection & analysis panel
