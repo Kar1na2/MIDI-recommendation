@@ -62,6 +62,9 @@ inspect-range:
 correct-notes:
 	uv run python -m scripts.correction.correct_notes $(ARGS)
 
+correct-octave-duplicates:
+	uv run python -m scripts.correction.correct_octave_duplicates $(ARGS)
+
 compare-chord-tone-rates:
 	uv run python -m scripts.correction.compare_chord_tone_rates $(ARGS)
 
