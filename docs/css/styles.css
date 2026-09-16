@@ -9,8 +9,8 @@
   --accent-hover: #1ed760;
   --text-primary: #f5f5f5;
   --text-secondary: #b3b3b3;
-  --wave: #2FBE7A;
-  --wave-progress: #7CFFC2;
+  --wave: #4d4d4d;
+  --wave-progress: #7a7a7a;
 }
 
 * { box-sizing: border-box; }
@@ -73,9 +73,13 @@ body::before {
 }
 
 /* Home screen: there's no nav bar - the search bar *is* the entire home
-   screen. #topBar drops out of flow and centers its one visible child
-   (search) on both axes; the brand wordmark only appears in the song-view
-   top bar (it's shown/enlarged there per the brief - see #brand below). */
+   screen. #topBar drops out of flow and covers the viewport; #brand is
+   pulled out of its flex layout (position:absolute) and pinned to the
+   top-left corner of that viewport-covering box, independent of the
+   search bar, which is centered via the remaining flex child + justify-
+   content:center. "bepop" is a persistent element shown top-left on both
+   screens - it should never disappear just because the search bar is
+   being recentered around it. */
 #app:has(#homeScreen:not([hidden])) #topBar {
   position: fixed;
   inset: 0;
@@ -84,7 +88,9 @@ body::before {
 }
 
 #app:has(#homeScreen:not([hidden])) #brand {
-  display: none;
+  position: absolute;
+  top: 20px;
+  left: 28px;
 }
 
 #brand {
@@ -362,62 +368,63 @@ body::before {
   margin: 0 0 6px;
 }
 
-#analysisPanel h3 {
-  font-size: 12.5px;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  color: var(--accent-hover);
-  margin: 22px 0 8px;
-}
-
-#selectionRange {
-  font-size: 12px;
-  color: var(--text-secondary);
-  margin-bottom: 10px;
-}
-
-#chordSequence {
-  font-size: 15px;
-  color: var(--text-primary);
-  line-height: 1.5;
-  word-break: break-word;
-}
-
 .matchList {
   list-style: none;
   margin: 0;
   padding: 0;
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: 6px;
 }
 
-.matchList li {
+.matchItem {
+  padding: 10px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.matchItem:hover { background: rgba(29, 185, 84, 0.12); }
+
+.matchHeader {
   display: flex;
   justify-content: space-between;
+  align-items: baseline;
   gap: 10px;
-  padding: 8px 10px;
-  border-radius: 6px;
-  cursor: pointer;
-  font-size: 13px;
 }
 
-.matchList li:hover { background: rgba(29, 185, 84, 0.12); }
-
-.matchList .matchTitle {
+.matchTitle {
   color: var(--text-primary);
+  font-size: 14px;
+  font-weight: 600;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 
-.matchList .matchScore {
-  color: var(--text-secondary);
+.matchScore {
+  color: var(--accent-hover);
+  font-weight: 600;
   flex-shrink: 0;
   font-variant-numeric: tabular-nums;
+  font-size: 12.5px;
 }
 
-.matchList .emptyNote {
+.matchBullets {
+  list-style: disc;
+  margin: 6px 0 0;
+  padding-left: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.matchBullets li {
+  color: var(--text-secondary);
+  font-size: 12.5px;
+  line-height: 1.4;
+}
+
+.emptyNote {
   color: var(--text-secondary);
   font-size: 12.5px;
   padding: 4px 10px;

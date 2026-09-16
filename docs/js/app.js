@@ -9,9 +9,30 @@ import { searchChordQueryAgainstCorpus, searchNoteQueryAgainstCorpus } from './a
 
 const MIN_SELECTION_SECONDS = 0.15; // "non-trivial range" threshold for finalizing a drag-selection
 const MAX_SUGGESTIONS = 6;
-const MAX_MATCHES_SHOWN = 8;
+const TOP_MATCHES_SHOWN = 3;
+const MAX_BULLET_CHORDS = 3; // cap how many chord names a bullet spells out before "…"
 const SKIP_SECONDS = 5;
-const REGION_COLOR = 'rgba(29, 185, 84, 0.25)';
+// Amber/gold, not green - green is already spoken for by the accent color
+// and the background, and wouldn't read as a distinct "selected" state.
+const REGION_COLOR = 'rgba(255, 176, 59, 0.28)';
+
+// Curated forte_class -> display-quality table, ported from
+// scripts/webexport/chord_display_names.py (see that file for the "why" -
+// short version: music21's own commonName is inconsistent per-segment for
+// the same quality, so this is keyed by canonical forte_class instead).
+// Covers exactly the 9 forte classes present in this corpus.
+const CHORD_QUALITY_BY_FORTE = {
+  '3-11B': 'major', '3-11A': 'minor', '3-10': 'diminished', '3-12': 'augmented',
+  '4-20': 'major7', '4-26': 'minor7', '4-27B': 'dominant7', '4-27A': 'half-diminished7',
+  '4-22A': 'add9',
+};
+const NOTE_NAMES = ['C', 'C#', 'D', 'D#', 'E', 'F', 'F#', 'G', 'G#', 'A', 'A#', 'B'];
+
+function chordDisplayName(forte, rootPc) {
+  const quality = CHORD_QUALITY_BY_FORTE[forte];
+  const root = NOTE_NAMES[((rootPc % 12) + 12) % 12];
+  return quality ? `${root} ${quality}` : `${root} [${forte}]`;
+}
 
 // ---------------------------------------------------------------------------
 // DOM refs
@@ -34,10 +55,7 @@ const el = {
   selectionHint: document.getElementById('selectionHint'),
   analysisPanel: document.getElementById('analysisPanel'),
   closePanelBtn: document.getElementById('closePanelBtn'),
-  selectionRange: document.getElementById('selectionRange'),
-  chordSequence: document.getElementById('chordSequence'),
-  chordMatches: document.getElementById('chordMatches'),
-  noteMatches: document.getElementById('noteMatches'),
+  matches: document.getElementById('matches'),
 };
 
 // ---------------------------------------------------------------------------
@@ -189,9 +207,9 @@ async function loadSong(songId, { seekTo = null } = {}) {
 
   const ws = WaveSurfer.create({
     container: el.waveform,
-    height: 140,
-    waveColor: '#2FBE7A',
-    progressColor: '#7CFFC2',
+    height: 220,
+    waveColor: '#4d4d4d',
+    progressColor: '#7a7a7a',
     cursorColor: '#1DB954',
     barWidth: 2,
     barGap: 1,
@@ -280,15 +298,6 @@ function runAnalysis(start, end) {
   const songId = song.song_id;
   const seq = state.sequences[songId];
 
-  el.selectionRange.textContent = `${fmtTime(start)} – ${fmtTime(end)}`;
-
-  // -- human-readable chord sequence for the selection (songs/<id>.json
-  //    already carries chord_name; no need to re-derive it client-side) --
-  const chordsInRange = song.chords.filter((c) => c.end > start && c.start < end);
-  el.chordSequence.textContent = chordsInRange.length
-    ? chordsInRange.map((c) => c.chord_name).join(' → ')
-    : '(no chord data in this range)';
-
   // -- chord-progression query (sequences.json's compact form: id + root) --
   const chordQuery = seq.chords
     .filter((c) => c.end > start && c.start < end)
@@ -299,15 +308,76 @@ function runAnalysis(start, end) {
     .filter((n) => n.onset >= start && n.onset < end && n.interval_from_prev !== null)
     .map((n) => n.interval_from_prev);
 
+  if (!chordQuery.length && !noteQuery.length) {
+    renderCombinedMatches([], 'No chords or notes in this selection.');
+    return;
+  }
+
   const chordResults = chordQuery.length
     ? searchChordQueryAgainstCorpus(chordQuery, state.sequences, { excludeSongId: songId })
-    : null;
+    : [];
   const noteResults = noteQuery.length
     ? searchNoteQueryAgainstCorpus(noteQuery, state.sequences, { excludeSongId: songId })
-    : null;
+    : [];
 
-  renderMatchList(el.chordMatches, chordResults, 'chord');
-  renderMatchList(el.noteMatches, noteResults, 'note');
+  renderCombinedMatches(combineMatches(chordResults, noteResults), 'No meaningful matches found.');
+}
+
+// ---------------------------------------------------------------------------
+// Combine the two independent alignment signals (chord + melodic) into one
+// ranking. First pass, expected to be re-tuned once seen against real
+// selections - see the brief. Each result list is its own scale (the two
+// scoring functions aren't calibrated against each other), so each is
+// min-max'd against its own positive scores before combining; a
+// non-positive score means "not a meaningful match" per the alignment
+// engine's own convention and is treated as *absent* rather than 0, so a
+// song strong on only one signal
+// isn't dragged down by lacking the other. A song's combined score is the
+// average of whichever signal(s) it actually has.
+// ---------------------------------------------------------------------------
+function combineMatches(chordResults, noteResults) {
+  const maxChord = Math.max(0, ...chordResults.map((r) => r.score));
+  const maxNote = Math.max(0, ...noteResults.map((r) => r.score));
+  const chordBySong = new Map(chordResults.filter((r) => r.score > 0).map((r) => [r.song_id, r]));
+  const noteBySong = new Map(noteResults.filter((r) => r.score > 0).map((r) => [r.song_id, r]));
+
+  const combined = [];
+  for (const songId of new Set([...chordBySong.keys(), ...noteBySong.keys()])) {
+    const chord = chordBySong.get(songId) ?? null;
+    const note = noteBySong.get(songId) ?? null;
+    const chordNorm = chord && maxChord > 0 ? chord.score / maxChord : null;
+    const noteNorm = note && maxNote > 0 ? note.score / maxNote : null;
+    const norms = [chordNorm, noteNorm].filter((x) => x !== null);
+    if (!norms.length) continue;
+    const combinedScore = norms.reduce((a, b) => a + b, 0) / norms.length;
+    combined.push({ song_id: songId, combinedScore, chordNorm, noteNorm, chord, note });
+  }
+  combined.sort((a, b) => b.combinedScore - a.combinedScore);
+  return combined.slice(0, TOP_MATCHES_SHOWN);
+}
+
+// -- short, factual bullet text for whichever signal(s) actually matched --
+// (never invented for a signal that didn't contribute to a song's inclusion)
+
+function chordMatchBullet(songId, chordResult) {
+  const targetChords = state.sequences[songId].chords;
+  const [startIdx, endIdx] = chordResult.span;
+  const matched = targetChords.slice(startIdx, endIdx);
+  if (!matched.length) return null;
+  const names = matched.slice(0, MAX_BULLET_CHORDS).map((c) => chordDisplayName(c.canonical_chord_id, c.root_pc));
+  const more = matched.length > MAX_BULLET_CHORDS ? '…' : '';
+  return `Shares ${names.join(' → ')}${more} around ${fmtTime(matched[0].start)}`;
+}
+
+function noteMatchBullet(songId, noteResult) {
+  const rawNotes = state.sequences[songId].notes;
+  // searchNoteQueryAgainstCorpus aligns against notes with the null-interval
+  // "first note of the song" entry filtered out - span indices are into
+  // that filtered array, so shift by 1 to land back on seq.notes.
+  const offset = rawNotes.length && rawNotes[0].interval_from_prev === null ? 1 : 0;
+  const note = rawNotes[noteResult.span[0] + offset];
+  if (!note) return null;
+  return `Similar melodic phrase near ${fmtTime(note.onset)}`;
 }
 
 function jumpToMatch(songId, mode, span) {
@@ -327,37 +397,49 @@ function jumpToMatch(songId, mode, span) {
   });
 }
 
-function renderMatchList(listEl, results, mode) {
-  listEl.innerHTML = '';
-  if (results === null) {
+function renderCombinedMatches(combined, emptyMessage) {
+  el.matches.innerHTML = '';
+  if (combined.length === 0) {
     const li = document.createElement('li');
     li.className = 'emptyNote';
-    li.textContent = 'No ' + (mode === 'chord' ? 'chords' : 'notes') + ' in this selection.';
-    listEl.appendChild(li);
+    li.textContent = emptyMessage;
+    el.matches.appendChild(li);
     return;
   }
-  const shown = results.slice(0, MAX_MATCHES_SHOWN).filter((r) => r.score > 0);
-  if (shown.length === 0) {
+  combined.forEach((entry) => {
     const li = document.createElement('li');
-    li.className = 'emptyNote';
-    li.textContent = 'No meaningful matches found.';
-    listEl.appendChild(li);
-    return;
-  }
-  shown.forEach((r) => {
-    const li = document.createElement('li');
-    const title = state.manifestById.get(r.song_id)?.title ?? r.song_id;
+    li.className = 'matchItem';
+
+    const header = document.createElement('div');
+    header.className = 'matchHeader';
     const titleSpan = document.createElement('span');
     titleSpan.className = 'matchTitle';
-    titleSpan.textContent = title;
+    titleSpan.textContent = state.manifestById.get(entry.song_id)?.title ?? entry.song_id;
     const scoreSpan = document.createElement('span');
     scoreSpan.className = 'matchScore';
-    scoreSpan.textContent = r.score.toFixed(2);
-    li.appendChild(titleSpan);
-    li.appendChild(scoreSpan);
+    scoreSpan.textContent = Math.round(entry.combinedScore * 100) + '%';
+    header.appendChild(titleSpan);
+    header.appendChild(scoreSpan);
+    li.appendChild(header);
+
+    const bullets = document.createElement('ul');
+    bullets.className = 'matchBullets';
+    const bulletTexts = [
+      entry.chord ? chordMatchBullet(entry.song_id, entry.chord) : null,
+      entry.note ? noteMatchBullet(entry.song_id, entry.note) : null,
+    ].filter(Boolean);
+    bulletTexts.forEach((text) => {
+      const b = document.createElement('li');
+      b.textContent = text;
+      bullets.appendChild(b);
+    });
+    li.appendChild(bullets);
+
+    const mode = (entry.chordNorm ?? -1) >= (entry.noteNorm ?? -1) ? 'chord' : 'note';
+    const span = mode === 'chord' ? entry.chord.span : entry.note.span;
     li.title = 'Jump to the matched moment';
-    li.addEventListener('click', () => jumpToMatch(r.song_id, mode, r.span));
-    listEl.appendChild(li);
+    li.addEventListener('click', () => jumpToMatch(entry.song_id, mode, span));
+    el.matches.appendChild(li);
   });
 }
 
