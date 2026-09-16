@@ -55,7 +55,17 @@ const el = {
   selectionHint: document.getElementById('selectionHint'),
   analysisPanel: document.getElementById('analysisPanel'),
   closePanelBtn: document.getElementById('closePanelBtn'),
+  matchesHeading: document.getElementById('matchesHeading'),
   matches: document.getElementById('matches'),
+  matchDetail: document.getElementById('matchDetail'),
+  backToMatchesBtn: document.getElementById('backToMatchesBtn'),
+  matchDetailTitle: document.getElementById('matchDetailTitle'),
+  jumpToMatchBtn: document.getElementById('jumpToMatchBtn'),
+  chordAlignRows: document.getElementById('chordAlignRows'),
+  chordAlignCaption: document.getElementById('chordAlignCaption'),
+  noteAlignRows: document.getElementById('noteAlignRows'),
+  volumeTrack: document.getElementById('volumeTrack'),
+  volumeFill: document.getElementById('volumeFill'),
 };
 
 // ---------------------------------------------------------------------------
@@ -70,6 +80,7 @@ const state = {
   activeRegion: null,
   currentSong: null,        // current songs/<id>.json
   highlightedIndex: -1,
+  volume: 1,                // persists across song switches (each new WaveSurfer instance re-applies it)
 };
 
 // ---------------------------------------------------------------------------
@@ -215,8 +226,20 @@ async function loadSong(songId, { seekTo = null } = {}) {
     barGap: 1,
     barRadius: 2,
     url: song.audio_url,
+    // Precomputed RMS-energy peaks (scripts/webexport/compute_rms_peaks.mjs),
+    // not wavesurfer's default raw max-abs-per-bucket amplitude - on a
+    // loudness-normalized/heavily-compressed master, peak amplitude stays
+    // close to flat across the whole track no matter how it's drawn, while
+    // RMS energy still varies a lot. `duration` alongside `peaks` also lets
+    // wavesurfer skip its own client-side decode for rendering entirely -
+    // actual playback is unaffected, still served by `url` above. Falls
+    // back to wavesurfer's own extraction (undefined) if a song is somehow
+    // missing this field rather than crashing.
+    peaks: song.waveform_peaks ? [song.waveform_peaks] : undefined,
+    duration: song.duration,
   });
   state.ws = ws;
+  ws.setVolume(state.volume);
   const regions = ws.registerPlugin(WaveSurfer.Regions.create());
   state.regions = regions;
   // exposed for debugging/tests only - not read by any app logic
@@ -261,6 +284,40 @@ function onRegionFinalized(region) {
 el.playPauseBtn.addEventListener('click', () => state.ws && state.ws.playPause());
 el.backBtn.addEventListener('click', () => state.ws && state.ws.skip(-SKIP_SECONDS));
 el.fwdBtn.addEventListener('click', () => state.ws && state.ws.skip(SKIP_SECONDS));
+
+// ---------------------------------------------------------------------------
+// Volume - a utility control separate from the transport buttons; persists
+// across song switches (each fresh WaveSurfer instance re-applies
+// state.volume on creation - see loadSong()).
+// ---------------------------------------------------------------------------
+function setVolume(vol) {
+  vol = Math.max(0, Math.min(1, vol));
+  state.volume = vol;
+  if (state.ws) state.ws.setVolume(vol);
+  el.volumeFill.style.width = Math.round(vol * 100) + '%';
+  el.volumeTrack.setAttribute('aria-valuenow', String(Math.round(vol * 100)));
+}
+
+function volumeFromClientX(clientX) {
+  const rect = el.volumeTrack.getBoundingClientRect();
+  return (clientX - rect.left) / rect.width;
+}
+
+el.volumeTrack.addEventListener('mousedown', (e) => {
+  setVolume(volumeFromClientX(e.clientX));
+  const onMove = (ev) => setVolume(volumeFromClientX(ev.clientX));
+  const onUp = () => {
+    document.removeEventListener('mousemove', onMove);
+    document.removeEventListener('mouseup', onUp);
+  };
+  document.addEventListener('mousemove', onMove);
+  document.addEventListener('mouseup', onUp);
+});
+el.volumeTrack.addEventListener('keydown', (e) => {
+  if (e.key === 'ArrowRight' || e.key === 'ArrowUp') { e.preventDefault(); setVolume(state.volume + 0.05); }
+  else if (e.key === 'ArrowLeft' || e.key === 'ArrowDown') { e.preventDefault(); setVolume(state.volume - 0.05); }
+});
+setVolume(state.volume); // paint the fill at boot, before any song is loaded
 
 // ---------------------------------------------------------------------------
 // Selection & analysis panel
@@ -398,6 +455,7 @@ function jumpToMatch(songId, mode, span) {
 }
 
 function renderCombinedMatches(combined, emptyMessage) {
+  showMatchList(); // a fresh analysis always starts back at the top-3 list, never mid-detail
   el.matches.innerHTML = '';
   if (combined.length === 0) {
     const li = document.createElement('li');
@@ -435,13 +493,95 @@ function renderCombinedMatches(combined, emptyMessage) {
     });
     li.appendChild(bullets);
 
-    const mode = (entry.chordNorm ?? -1) >= (entry.noteNorm ?? -1) ? 'chord' : 'note';
-    const span = mode === 'chord' ? entry.chord.span : entry.note.span;
-    li.title = 'Jump to the matched moment';
-    li.addEventListener('click', () => jumpToMatch(entry.song_id, mode, span));
+    li.title = 'See a detailed comparison';
+    li.addEventListener('click', () => renderMatchDetail(entry));
     el.matches.appendChild(li);
   });
 }
+
+// ---------------------------------------------------------------------------
+// Match detail view (point 11): a pairwise chord/melody alignment, one
+// level deeper than the top-3 list, in the same panel. Escape/click-outside
+// still collapses the whole analysis flow via wireGlobalKeysAndClicks - that
+// logic doesn't care which sub-view of #analysisPanel is showing, it just
+// clears the region and hides the panel outright, so no separate dismissal
+// path is needed here; "Back" only steps up one level, back to the list.
+// ---------------------------------------------------------------------------
+function primaryMode(entry) {
+  return (entry.chordNorm ?? -1) >= (entry.noteNorm ?? -1) ? 'chord' : 'note';
+}
+
+function showMatchList() {
+  el.matchDetail.hidden = true;
+  el.matchesHeading.hidden = false;
+  el.matches.hidden = false;
+}
+
+function renderMatchDetail(entry) {
+  el.matchesHeading.hidden = true;
+  el.matches.hidden = true;
+  el.matchDetail.hidden = false;
+
+  el.matchDetailTitle.textContent = state.manifestById.get(entry.song_id)?.title ?? entry.song_id;
+
+  const mode = primaryMode(entry);
+  const span = mode === 'chord' ? entry.chord.span : entry.note.span;
+  el.jumpToMatchBtn.onclick = () => jumpToMatch(entry.song_id, mode, span);
+
+  renderAlignTrack(el.chordAlignRows, entry.chord,
+    (sym) => (sym === null ? '—' : chordDisplayName(sym.forte, sym.root)),
+    (a, b) => a.forte === b.forte && a.root === b.root);
+
+  if (entry.chord) {
+    const shift = entry.chord.transposition > 6 ? entry.chord.transposition - 12 : entry.chord.transposition;
+    el.chordAlignCaption.hidden = shift === 0;
+    el.chordAlignCaption.textContent = `Target song's chords shown transposed ${shift > 0 ? '+' : ''}${shift} semitones so matching keys line up.`;
+  } else {
+    el.chordAlignCaption.hidden = true;
+  }
+
+  renderAlignTrack(el.noteAlignRows, entry.note,
+    (iv) => (iv === null ? '—' : (iv > 0 ? `+${iv}` : String(iv))),
+    (a, b) => a === b);
+}
+
+/** resultObj is the raw {alignedQuery, alignedTarget} entry from
+ * alignment.js (or null if that signal didn't contribute to this song's
+ * inclusion - see point 6/11's "don't invent a match" rule). labelFn/equalFn
+ * are shared by both chord and note tracks; only how a symbol is displayed
+ * and compared differs between them. */
+function renderAlignTrack(rowsEl, resultObj, labelFn, equalFn) {
+  rowsEl.innerHTML = '';
+  if (!resultObj) {
+    const p = document.createElement('p');
+    p.className = 'alignEmpty';
+    p.textContent = 'No match on this signal for this song.';
+    rowsEl.appendChild(p);
+    return;
+  }
+  const a = resultObj.alignedQuery, b = resultObj.alignedTarget;
+  const queryRow = document.createElement('div');
+  queryRow.className = 'alignRow';
+  const targetRow = document.createElement('div');
+  targetRow.className = 'alignRow';
+  for (let i = 0; i < a.length; i++) {
+    const isGap = a[i] === null || b[i] === null;
+    const cls = isGap ? 'gap' : (equalFn(a[i], b[i]) ? 'match' : 'sub');
+    queryRow.appendChild(makeAlignBlock(labelFn(a[i]), cls));
+    targetRow.appendChild(makeAlignBlock(labelFn(b[i]), cls));
+  }
+  rowsEl.appendChild(queryRow);
+  rowsEl.appendChild(targetRow);
+}
+
+function makeAlignBlock(text, cls) {
+  const d = document.createElement('div');
+  d.className = 'alignBlock ' + cls;
+  d.textContent = text;
+  return d;
+}
+
+el.backToMatchesBtn.addEventListener('click', showMatchList);
 
 // ---------------------------------------------------------------------------
 // Escape / click-outside clears the selection + collapses the panel

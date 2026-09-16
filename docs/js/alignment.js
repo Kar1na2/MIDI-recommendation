@@ -253,6 +253,17 @@ export function searchChordQueryAgainstCorpus(querySegments, sequencesById, opts
     results.push({
       song_id: songId, score: result.score, transposition: bestTransposition,
       span: result.spanB, // [start, end) into the target song's chord array
+      // Full pairwise trace (point 11's in-depth comparison view) - this is
+      // NOT new computation, just exposing what smithWaterman()'s own
+      // traceback() already builds internally to reconstruct its
+      // best-scoring path before returning a score. alignedTarget's
+      // {forte, root} values are the TRANSPOSED (bestTransposition-shifted)
+      // target symbols actually compared against the query during scoring
+      // - i.e. shown "in the query's key" so matching blocks are visually
+      // identical - not the target song's real untransposed chords (those
+      // are already shown elsewhere, e.g. the point-6 bullets).
+      alignedQuery: result.alignedA,
+      alignedTarget: result.alignedB,
     });
   }
   results.sort((a, b) => b.score - a.score);
@@ -276,7 +287,15 @@ export function searchNoteQueryAgainstCorpus(queryIntervals, sequencesById, opts
     const target = seq.notes.map((n) => n.interval_from_prev).filter((v) => v !== null);
     if (target.length === 0) continue;
     const result = smithWaterman(queryIntervals, target, intervalSubstitutionScore, gapPenalty);
-    results.push({ song_id: songId, score: result.score, span: result.spanB });
+    // alignedQuery/alignedTarget: see searchChordQueryAgainstCorpus's comment
+    // above - same thing, already-computed traceback, no new computation.
+    // No transposition step for intervals (they're transposition-invariant
+    // by construction), so alignedTarget's values are real semitone
+    // intervals as-is, not shifted.
+    results.push({
+      song_id: songId, score: result.score, span: result.spanB,
+      alignedQuery: result.alignedA, alignedTarget: result.alignedB,
+    });
   }
   results.sort((a, b) => b.score - a.score);
   return results;

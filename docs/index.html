@@ -22,8 +22,17 @@
 
     <main id="songView" hidden>
       <div id="songMeta">
-        <span id="songTitle"></span>
-        <span id="loadingNote" hidden>Loading…</span>
+        <div id="songTitleGroup">
+          <span id="songTitle"></span>
+          <span id="loadingNote" hidden>Loading…</span>
+        </div>
+        <div id="volumeControl" title="Volume">
+          <span id="volumeIcon" aria-hidden="true">&#128266;</span>
+          <div id="volumeTrack" role="slider" tabindex="0" aria-label="Volume"
+               aria-valuemin="0" aria-valuemax="100" aria-valuenow="100">
+            <div id="volumeFill"></div>
+          </div>
+        </div>
       </div>
 
       <div id="stage">
@@ -32,17 +41,40 @@
             <div id="waveform"></div>
           </div>
           <div id="transportControls">
-            <button id="backBtn" title="Back 5 seconds">&#8722;5s</button>
+            <button id="backBtn" title="Back 5 seconds">&#8722;5 s</button>
             <button id="playPauseBtn" title="Play/Pause">&#9658;</button>
-            <button id="fwdBtn" title="Forward 5 seconds">+5s</button>
+            <button id="fwdBtn" title="Forward 5 seconds">+5 s</button>
           </div>
           <p id="selectionHint">Drag on the waveform to select a range and find similar songs.</p>
         </div>
 
         <aside id="analysisPanel" hidden>
           <button id="closePanelBtn" aria-label="Close" title="Close (Esc)">&times;</button>
-          <h2>Similar songs</h2>
+          <h2 id="matchesHeading">Similar songs</h2>
           <ol id="matches" class="matchList"></ol>
+
+          <div id="matchDetail" hidden>
+            <button id="backToMatchesBtn">&#8592; Back to results</button>
+            <h2 id="matchDetailTitle"></h2>
+            <button id="jumpToMatchBtn">&#9658; Play this match</button>
+
+            <div class="alignTrack">
+              <div class="alignTrackLabel">Chord progression</div>
+              <div id="chordAlignRows" class="alignRows"></div>
+              <p id="chordAlignCaption" class="alignCaption" hidden></p>
+            </div>
+
+            <div class="alignTrack">
+              <div class="alignTrackLabel">Melodic pattern</div>
+              <div id="noteAlignRows" class="alignRows"></div>
+            </div>
+
+            <div class="alignLegend">
+              <span class="legendMatch">Match</span>
+              <span class="legendSub">Substitution</span>
+              <span class="legendGap">Gap</span>
+            </div>
+          </div>
         </aside>
       </div>
     </main>

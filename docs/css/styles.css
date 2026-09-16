@@ -235,7 +235,8 @@ body::before {
 
 #songMeta {
   display: flex;
-  align-items: baseline;
+  align-items: center;
+  justify-content: space-between;
   gap: 12px;
   margin-bottom: 18px;
   min-height: 22px;
@@ -243,15 +244,64 @@ body::before {
   max-width: 900px;
 }
 
+#songTitleGroup {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  min-width: 0;
+}
+
 #songTitle {
   font-size: 18px;
   font-weight: 600;
   color: var(--text-primary);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 #loadingNote {
   color: var(--text-secondary);
   font-size: 13px;
+}
+
+/* -- volume: a utility control, top-right of the song area, separate from
+   the centered transport controls below the waveform -- */
+#volumeControl {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+#volumeIcon {
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+#volumeTrack {
+  position: relative;
+  width: 90px;
+  height: 6px;
+  border-radius: 3px;
+  background: var(--bg-elevated);
+  cursor: pointer;
+}
+
+#volumeTrack:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+#volumeFill {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  background: var(--accent);
+  border-radius: 3px;
+  pointer-events: none;
 }
 
 #stage {
@@ -293,7 +343,19 @@ body::before {
   margin-top: 18px;
 }
 
-#transportControls button {
+/* :not(#playPauseBtn) on both rules below, not just source order: a
+   compound selector like `#transportControls button` (id+type) is MORE
+   specific than a bare `#playPauseBtn` (id only) - the extra type selector
+   was silently winning `background`/`color`/`border-radius` here over
+   #playPauseBtn's own rules. At :hover that meant the icon's `color`
+   landed on the exact same bright green as its own `background` (i.e.
+   invisible); at idle it meant the button rendered as a plain grey pill
+   instead of the solid green circle #playPauseBtn actually declares -
+   same root cause, different property, no reported visibility bug there
+   yet but exactly the kind of thing that resurfaces in a new state later
+   if only patched where it was noticed. Excluding #playPauseBtn from both
+   means its own idle/hover/active rules are never contested, in any state. */
+#transportControls button:not(#playPauseBtn) {
   background: var(--bg-elevated);
   border: 1px solid var(--border);
   color: var(--text-primary);
@@ -304,7 +366,7 @@ body::before {
   transition: border-color 0.15s ease, color 0.15s ease;
 }
 
-#transportControls button:hover { border-color: var(--accent); color: var(--accent-hover); }
+#transportControls button:not(#playPauseBtn):hover { border-color: var(--accent); color: var(--accent-hover); }
 
 #playPauseBtn {
   width: 46px;
@@ -315,9 +377,14 @@ body::before {
   background: var(--accent);
   color: var(--bg);
   border: none;
+  cursor: pointer;
 }
 
-#playPauseBtn:hover { background: var(--accent-hover); color: var(--bg); }
+/* Explicit color (not inherited/currentColor) in every state - idle above,
+   hover and active here - so the icon never blends into its own
+   background regardless of which state is active. */
+#playPauseBtn:hover,
+#playPauseBtn:active { background: var(--accent-hover); color: var(--bg); }
 
 #selectionHint {
   text-align: center;
@@ -429,6 +496,138 @@ body::before {
   font-size: 12.5px;
   padding: 4px 10px;
   cursor: default;
+}
+
+/* ---------- match detail view (point 11: aligned chord/melody tracks) --- */
+
+#matchDetail {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+#backToMatchesBtn {
+  align-self: flex-start;
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  font-size: 12.5px;
+  cursor: pointer;
+  padding: 0 0 4px;
+}
+
+#backToMatchesBtn:hover { color: var(--text-primary); }
+
+#matchDetailTitle {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0 0 2px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+#jumpToMatchBtn {
+  align-self: flex-start;
+  background: none;
+  border: 1px solid var(--border);
+  color: var(--accent-hover);
+  border-radius: 14px;
+  padding: 4px 12px;
+  font-size: 12px;
+  cursor: pointer;
+  margin-bottom: 12px;
+}
+
+#jumpToMatchBtn:hover { border-color: var(--accent); }
+
+.alignTrack { margin-top: 10px; }
+
+.alignTrackLabel {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-secondary);
+  margin-bottom: 6px;
+}
+
+.alignRows {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+  /* selections can align to 40+ chords/notes, far wider than the panel -
+     an explicit thin scrollbar (rather than relying on the OS default,
+     which auto-hides on some platforms) signals there's more to scroll to */
+  scrollbar-width: thin;
+  scrollbar-color: var(--border) transparent;
+}
+
+.alignRows::-webkit-scrollbar { height: 6px; }
+.alignRows::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+.alignRows::-webkit-scrollbar-track { background: transparent; }
+
+.alignRow {
+  display: flex;
+  gap: 3px;
+}
+
+.alignBlock {
+  flex: 0 0 auto;
+  min-width: 34px;
+  padding: 4px 6px;
+  border-radius: 5px;
+  font-size: 10.5px;
+  line-height: 1.3;
+  text-align: center;
+  white-space: nowrap;
+  color: var(--text-primary);
+}
+
+.alignBlock.match { background: rgba(29, 185, 84, 0.35); }
+.alignBlock.sub { background: rgba(255, 176, 59, 0.3); }
+.alignBlock.gap {
+  background: transparent;
+  border: 1px dashed var(--border);
+  color: var(--text-secondary);
+}
+
+.alignCaption {
+  font-size: 11px;
+  color: var(--text-secondary);
+  font-style: italic;
+  margin-top: 4px;
+}
+
+.alignLegend {
+  display: flex;
+  gap: 12px;
+  font-size: 10.5px;
+  color: var(--text-secondary);
+  margin-top: 10px;
+}
+
+.alignLegend span::before {
+  content: '';
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 2px;
+  margin-right: 4px;
+  vertical-align: middle;
+}
+
+.alignLegend .legendMatch::before { background: rgba(29, 185, 84, 0.6); }
+.alignLegend .legendSub::before { background: rgba(255, 176, 59, 0.55); }
+.alignLegend .legendGap::before { background: transparent; border: 1px dashed var(--border); }
+
+.alignEmpty {
+  color: var(--text-secondary);
+  font-size: 12.5px;
+  font-style: italic;
+  margin: 0;
 }
 
 /* ---------- responsive ---------- */
