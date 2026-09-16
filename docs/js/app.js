@@ -62,7 +62,9 @@ const el = {
   matchDetailTitle: document.getElementById('matchDetailTitle'),
   chordAlignRows: document.getElementById('chordAlignRows'),
   chordAlignCaption: document.getElementById('chordAlignCaption'),
-  noteAlignRows: document.getElementById('noteAlignRows'),
+  noteContour: document.getElementById('noteContour'),
+  playOriginalClipBtn: document.getElementById('playOriginalClipBtn'),
+  playMatchClipBtn: document.getElementById('playMatchClipBtn'),
   volumeTrack: document.getElementById('volumeTrack'),
   volumeFill: document.getElementById('volumeFill'),
 };
@@ -82,8 +84,13 @@ const state = {
   volume: 1,                // persists across song switches (each new WaveSurfer instance re-applies it)
   // set right before switching to a similar-song match (comparison mode);
   // holds what "Back" (and Escape, same behavior) restores - the original
-  // song + its exact active selection. null outside comparison mode.
+  // song + its exact active selection, plus its audio_url (so "Play your
+  // selection" doesn't need a network fetch just to find it - the original
+  // song's data was already loaded once when the user made the selection,
+  // captured here instead of thrown away). null outside comparison mode.
   previousContext: null,
+  clipAudio: null,          // the headless <audio> currently playing a "play this bit" clip, if any
+  clipStopHandler: null,
 };
 
 // ---------------------------------------------------------------------------
@@ -205,6 +212,7 @@ async function selectSong(songId) {
 // ---------------------------------------------------------------------------
 function teardownSong() {
   clearSelection();
+  stopClipAudio();
   if (state.ws) {
     state.ws.destroy();
     state.ws = null;
@@ -359,6 +367,7 @@ function closePanel() {
   el.stage.classList.remove('panelOpen', 'comparisonMode');
   el.analysisPanel.hidden = true;
   el.selectionHint.hidden = false;
+  stopClipAudio();
 }
 
 function clearSelection() {
@@ -453,13 +462,20 @@ function chordMatchBullet(songId, chordResult) {
   return `Shares ${names.join(' → ')}${more} around ${fmtTime(matched[0].start)}`;
 }
 
+// searchNoteQueryAgainstCorpus aligns against notes with the null-interval
+// "first note of the song" entry filtered out - span indices are into that
+// filtered array, so every span index needs this same +1 shift to land back
+// on the real note arrays (sequences.json's compact notes, or a full
+// songs/<id>.json's notes - both are the same length/order, just a
+// different field subset - see matchedRegionRange()).
+function noteIndexOffset(songId) {
+  const notes = state.sequences[songId].notes;
+  return notes.length && notes[0].interval_from_prev === null ? 1 : 0;
+}
+
 function noteMatchBullet(songId, noteResult) {
   const rawNotes = state.sequences[songId].notes;
-  // searchNoteQueryAgainstCorpus aligns against notes with the null-interval
-  // "first note of the song" entry filtered out - span indices are into
-  // that filtered array, so shift by 1 to land back on seq.notes.
-  const offset = rawNotes.length && rawNotes[0].interval_from_prev === null ? 1 : 0;
-  const note = rawNotes[noteResult.span[0] + offset];
+  const note = rawNotes[noteResult.span[0] + noteIndexOffset(songId)];
   if (!note) return null;
   return `Similar melody near ${fmtTime(note.onset)}`;
 }
@@ -476,6 +492,69 @@ function seekTimeForSpan(songId, mode, span) {
   }
   const arr = seq.notes;
   return arr[Math.min(startIdx, arr.length - 1)]?.onset ?? 0;
+}
+
+/** {start, end} real seconds spanning entry's PRIMARY-signal matched region
+ * in entry.song_id's own timeline - used by the "Play the match" clip
+ * button (point 2B). Chords already carry `end` in the compact
+ * sequences.json; notes don't (only `onset`), so this reads real offsets
+ * from state.currentSong.notes instead - safe because this is only ever
+ * called from enterComparisonMode(), after loadSong(entry.song_id) has
+ * already made entry.song_id the active song. */
+function matchedRegionRange(entry) {
+  const mode = primaryMode(entry);
+  if (mode === 'chord') {
+    const chords = state.sequences[entry.song_id].chords;
+    const [startIdx, endIdx] = entry.chord.span;
+    const start = chords[Math.min(startIdx, chords.length - 1)]?.start ?? 0;
+    const end = chords[Math.min(Math.max(startIdx, endIdx - 1), chords.length - 1)]?.end ?? start;
+    return { start, end };
+  }
+  const fullNotes = state.currentSong.notes;
+  const offset = noteIndexOffset(entry.song_id);
+  const [startIdx, endIdx] = entry.note.span;
+  const start = fullNotes[Math.min(startIdx + offset, fullNotes.length - 1)]?.onset ?? 0;
+  const end = fullNotes[Math.min(Math.max(startIdx, endIdx - 1) + offset, fullNotes.length - 1)]?.offset ?? start;
+  return { start, end };
+}
+
+// ---------------------------------------------------------------------------
+// "Play this bit" clips (point 2B): independent of whichever song's
+// waveform happens to be on screen - the original selection's song isn't
+// even visible once viewing a match, so this runs off a plain headless
+// <audio> per clip rather than either song's WaveSurfer instance. Stops
+// automatically at `end` (a timeupdate listener, not just seeking and
+// hoping the user pauses in time) - that's what makes it "play this bit"
+// rather than "jump to this bit and keep going."
+// ---------------------------------------------------------------------------
+function stopClipAudio() {
+  if (state.clipAudio) {
+    state.clipAudio.pause();
+    if (state.clipStopHandler) state.clipAudio.removeEventListener('timeupdate', state.clipStopHandler);
+    state.clipAudio = null;
+    state.clipStopHandler = null;
+  }
+  el.playOriginalClipBtn.classList.remove('playing');
+  el.playMatchClipBtn.classList.remove('playing');
+}
+
+function playClip(url, start, end, btnEl) {
+  const wasThisButton = btnEl.classList.contains('playing');
+  stopClipAudio();
+  if (wasThisButton) return; // clicking the already-playing button just stops it
+
+  if (state.ws && state.ws.isPlaying()) state.ws.pause(); // don't overlap with the visible song's own playback
+
+  const audio = new Audio(url);
+  state.clipAudio = audio;
+  audio.addEventListener('loadedmetadata', () => {
+    audio.currentTime = Math.max(0, start);
+    audio.play();
+  }, { once: true });
+  state.clipStopHandler = () => { if (audio.currentTime >= end) stopClipAudio(); };
+  audio.addEventListener('timeupdate', state.clipStopHandler);
+  audio.addEventListener('ended', stopClipAudio);
+  btnEl.classList.add('playing');
 }
 
 function renderCombinedMatches(combined, emptyMessage) {
@@ -562,6 +641,7 @@ async function openMatchComparison(entry) {
     songId: state.currentSong.song_id,
     start: region.start,
     end: region.end,
+    audioUrl: state.currentSong.audio_url,
   };
   const mode = primaryMode(entry);
   const span = mode === 'chord' ? entry.chord.span : entry.note.span;
@@ -580,6 +660,11 @@ function enterComparisonMode(entry) {
   const prevTitle = state.manifestById.get(state.previousContext.songId)?.title ?? 'previous song';
   el.backToMatchesBtn.textContent = `← Back to "${prevTitle}"`;
   el.backToMatchesBtn.title = 'Return to your selection';
+
+  const prev = state.previousContext;
+  const matchRange = matchedRegionRange(entry);
+  el.playOriginalClipBtn.onclick = () => playClip(prev.audioUrl, prev.start, prev.end, el.playOriginalClipBtn);
+  el.playMatchClipBtn.onclick = () => playClip(state.currentSong.audio_url, matchRange.start, matchRange.end, el.playMatchClipBtn);
 }
 
 async function returnToOriginalSong() {
@@ -618,9 +703,7 @@ function renderMatchDetail(entry) {
     el.chordAlignCaption.hidden = true;
   }
 
-  renderAlignTrack(el.noteAlignRows, entry.note,
-    (iv) => (iv === null ? '—' : (iv > 0 ? `+${iv}` : String(iv))),
-    (a, b) => a === b);
+  renderContourGraph(el.noteContour, entry.note);
 }
 
 /** resultObj is the raw {alignedQuery, alignedTarget} entry from
@@ -657,6 +740,142 @@ function makeAlignBlock(text, cls) {
   d.className = 'alignBlock ' + cls;
   d.textContent = text;
   return d;
+}
+
+// ---------------------------------------------------------------------------
+// Melody contour graph (point 2A): replaces the raw signed-semitone-interval
+// chip row entirely - those weren't legible without music training, and a
+// corpus-wide investigation (see [[octave-duplicate-correction]] in
+// memory / the chat history) found and partly fixed a real transcription
+// artifact behind some of the more implausible jumps, but a real, smaller
+// share of large jumps still remain in the corrected data. This graph is
+// built to stay honest about that rather than re-introduce the same
+// confusion visually: each side's line is a cumulative pitch contour
+// (running sum of its own real intervals, both starting at 0 - relative,
+// not absolute, so it's directly comparable across songs in different
+// keys) but a GAP column (no note on one side to compare) holds the line
+// FLAT rather than connecting through it - a gap can never render as a
+// spike, by construction, not just by color choice. Non-gap segments are
+// colored green (exact match) / orange (similar, not exact) per the same
+// per-column classification already used for the chord chip row above.
+// ---------------------------------------------------------------------------
+const SVG_NS = 'http://www.w3.org/2000/svg';
+const CONTOUR_VIEWBOX_W = 400;
+const CONTOUR_VIEWBOX_H = 90;
+const CONTOUR_STACKED_VIEWBOX_H = 44; // each of the two stacked panels, once overlay gets too dense to read
+const CONTOUR_PAD_X = 6;
+const CONTOUR_PAD_Y = 10;
+const CONTOUR_STACKED_PAD_Y = 6;
+// Overlaid reads well for a typical short-to-medium selection (verified:
+// ~18 segments is clean); a long selection (~270 segments observed) turns
+// into visual mush at this size - past this many aligned columns, split
+// into two stacked mini-graphs instead (per the brief's own "overlaid
+// first, fall back to stacked only if it's cluttered" - this is that
+// fallback, triggered automatically rather than left as a manual judgment
+// call every time).
+const CONTOUR_STACKED_THRESHOLD = 50;
+const CONTOUR_SEG_COLOR = { match: 'rgba(29,185,84,0.9)', sub: 'rgba(255,176,59,0.9)' };
+const CONTOUR_GAP_COLOR = 'rgba(179,179,179,0.55)'; // muted, ~var(--text-secondary) - never a bold "confirmed" color
+
+function renderContourGraph(container, resultObj) {
+  container.innerHTML = '';
+  container.classList.remove('stacked');
+  if (!resultObj || !resultObj.alignedQuery.length) {
+    const p = document.createElement('p');
+    p.className = 'alignEmpty';
+    p.textContent = 'No match on this signal for this song.';
+    container.appendChild(p);
+    return;
+  }
+
+  const a = resultObj.alignedQuery, b = resultObj.alignedTarget;
+  const n = a.length;
+
+  // Cumulative contour per side; a gap (either side null at this column)
+  // holds that side's running sum flat instead of advancing it - see the
+  // block comment above for why this is the actual safety mechanism, not
+  // just the color.
+  let qy = 0, ty = 0;
+  const qPoints = [], tPoints = [];
+  const segCls = [null]; // segCls[i] = class of the segment from point i-1 to i; unused at i=0
+  for (let i = 0; i < n; i++) {
+    if (a[i] !== null) qy += a[i];
+    if (b[i] !== null) ty += b[i];
+    qPoints.push(qy);
+    tPoints.push(ty);
+    if (i > 0) segCls.push(a[i] === null || b[i] === null ? 'gap' : (a[i] === b[i] ? 'match' : 'sub'));
+  }
+
+  const xAt = (i) => CONTOUR_PAD_X + (n <= 1 ? (CONTOUR_VIEWBOX_W - CONTOUR_PAD_X * 2) / 2
+    : (i / (n - 1)) * (CONTOUR_VIEWBOX_W - CONTOUR_PAD_X * 2));
+
+  if (n > CONTOUR_STACKED_THRESHOLD) {
+    container.classList.add('stacked');
+    container.appendChild(makeContourPanel(qPoints, xAt, segCls, false, CONTOUR_STACKED_VIEWBOX_H, CONTOUR_STACKED_PAD_Y));
+    container.appendChild(makeContourPanel(tPoints, xAt, segCls, true, CONTOUR_STACKED_VIEWBOX_H, CONTOUR_STACKED_PAD_Y));
+  } else {
+    // overlaid: both lines share one Y-scale so they're directly comparable
+    const allVals = qPoints.concat(tPoints);
+    container.appendChild(makeContourSvg([
+      { points: qPoints, isMatchLine: false },
+      { points: tPoints, isMatchLine: true },
+    ], xAt, segCls, valueRange(allVals), CONTOUR_VIEWBOX_H, CONTOUR_PAD_Y));
+  }
+}
+
+function valueRange(vals) {
+  const minV = Math.min(...vals), maxV = Math.max(...vals);
+  return { minV, maxV, range: maxV - minV || 1 };
+}
+
+/** One stacked panel = its own SVG with its own Y-scale (so each shape uses
+ * the full available height independently, rather than being squashed by
+ * the other line's range) but the SAME xAt as its sibling panel, so a
+ * position in one still lines up horizontally with the same position in
+ * the other. */
+function makeContourPanel(points, xAt, segCls, isMatchLine, viewboxH, padY) {
+  return makeContourSvg([{ points, isMatchLine }], xAt, segCls, valueRange(points), viewboxH, padY);
+}
+
+function makeContourSvg(lines, xAt, segCls, { minV, range }, viewboxH, padY) {
+  const usableH = viewboxH - padY * 2;
+  const yAt = (v) => padY + usableH - ((v - minV) / range) * usableH;
+  const svg = document.createElementNS(SVG_NS, 'svg');
+  svg.setAttribute('viewBox', `0 0 ${CONTOUR_VIEWBOX_W} ${viewboxH}`);
+  svg.setAttribute('preserveAspectRatio', 'none');
+  // No axis numbers/semitone labels by design - the point is "these two
+  // shapes look alike," not the exact data (see point 6's bullets/scores
+  // for the precise numbers elsewhere in this panel).
+  for (const { points, isMatchLine } of lines) {
+    drawContourLine(svg, points, xAt, yAt, segCls, isMatchLine);
+  }
+  return svg;
+}
+
+/** isMatchLine picks the "matched song" line's visual identity (dashed,
+ * slightly thinner) vs. the "your selection" line (solid); a gap segment
+ * overrides both to the same muted/dashed treatment regardless of which
+ * line it's on, since it never represents a confirmed comparison. */
+function drawContourLine(svg, points, xAt, yAt, segCls, isMatchLine) {
+  for (let i = 1; i < points.length; i++) {
+    const cls = segCls[i];
+    const line = document.createElementNS(SVG_NS, 'line');
+    line.setAttribute('x1', xAt(i - 1));
+    line.setAttribute('y1', yAt(points[i - 1]));
+    line.setAttribute('x2', xAt(i));
+    line.setAttribute('y2', yAt(points[i]));
+    line.setAttribute('stroke-linecap', 'round');
+    if (cls === 'gap') {
+      line.setAttribute('stroke', CONTOUR_GAP_COLOR);
+      line.setAttribute('stroke-width', isMatchLine ? '1.5' : '2');
+      line.setAttribute('stroke-dasharray', '2 3');
+    } else {
+      line.setAttribute('stroke', CONTOUR_SEG_COLOR[cls]);
+      line.setAttribute('stroke-width', isMatchLine ? '2' : '2.5');
+      if (isMatchLine) line.setAttribute('stroke-dasharray', '5 3');
+    }
+    svg.appendChild(line);
+  }
 }
 
 el.backToMatchesBtn.addEventListener('click', returnToOriginalSong);

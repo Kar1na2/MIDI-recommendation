@@ -57,6 +57,11 @@
             <button id="backToMatchesBtn">&#8592; Back</button>
             <h2 id="matchDetailTitle"></h2>
 
+            <div id="clipButtons">
+              <button id="playOriginalClipBtn" class="clipBtn">&#9658; Play your selection</button>
+              <button id="playMatchClipBtn" class="clipBtn">&#9658; Play the match</button>
+            </div>
+
             <div class="alignTrack">
               <div class="alignTrackLabel">Chord progression</div>
               <div id="chordAlignRows" class="alignRows"></div>
@@ -65,7 +70,11 @@
 
             <div class="alignTrack">
               <div class="alignTrackLabel">Melody</div>
-              <div id="noteAlignRows" class="alignRows"></div>
+              <div id="noteContour" class="contourGraph"></div>
+              <div class="contourLineLegend">
+                <span class="lineKeySelection">Your selection</span>
+                <span class="lineKeyMatch">Matched song</span>
+              </div>
             </div>
 
             <div class="alignLegend">

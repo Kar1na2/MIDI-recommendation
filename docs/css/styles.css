@@ -576,6 +576,29 @@ body::before {
   white-space: nowrap;
 }
 
+/* -- "play this bit" clips: independent of whichever song's waveform is
+   showing (the original selection's song may not even be on screen once
+   viewing a match) - see playClip() in app.js, headless <audio> per clip. -- */
+#clipButtons {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 4px;
+  flex-wrap: wrap;
+}
+
+.clipBtn {
+  background: none;
+  border: 1px solid var(--border);
+  color: var(--accent-hover);
+  border-radius: 14px;
+  padding: 5px 12px;
+  font-size: 11.5px;
+  cursor: pointer;
+}
+
+.clipBtn:hover { border-color: var(--accent); }
+.clipBtn.playing { border-color: var(--accent); color: var(--accent); background: rgba(29, 185, 84, 0.12); }
+
 .alignTrack { margin-top: 10px; }
 
 .alignTrackLabel {
@@ -634,6 +657,59 @@ body::before {
   font-style: italic;
   margin-top: 4px;
 }
+
+/* -- melody contour graph: replaces the raw interval-number chip row.
+   Cumulative pitch shape (relative, not absolute - both lines start at 0),
+   no axis numbers, one set of shared axes. Fixed viewBox scaled by CSS, so
+   no horizontal scroll needed (unlike .alignRows) - the whole shape is
+   visible at once, which is the point ("do these look alike at a glance"). -- */
+.contourGraph {
+  width: 100%;
+  height: 90px;
+  background: var(--bg-elevated-2);
+  border-radius: 6px;
+}
+
+.contourGraph svg { display: block; width: 100%; height: 100%; }
+
+/* fallback for a long selection where one shared overlay gets too dense to
+   read (see CONTOUR_STACKED_THRESHOLD in app.js) - two independent-height
+   panels stacked instead of squeezed onto one set of axes */
+.contourGraph.stacked {
+  height: 92px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  background: none;
+}
+
+.contourGraph.stacked svg {
+  flex: 1 1 50%;
+  background: var(--bg-elevated-2);
+  border-radius: 6px;
+}
+
+.contourLineLegend {
+  display: flex;
+  gap: 14px;
+  font-size: 10.5px;
+  color: var(--text-secondary);
+  margin-top: 6px;
+}
+
+.contourLineLegend span::before {
+  content: '';
+  display: inline-block;
+  width: 14px;
+  height: 0;
+  margin-right: 5px;
+  vertical-align: middle;
+  border-top-width: 2px;
+  border-top-style: solid;
+  border-top-color: var(--text-secondary);
+}
+
+.contourLineLegend .lineKeyMatch::before { border-top-style: dashed; }
 
 .alignLegend {
   display: flex;
