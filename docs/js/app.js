@@ -81,8 +81,8 @@ const state = {
   highlightedIndex: -1,
   volume: 1,                // persists across song switches (each new WaveSurfer instance re-applies it)
   // set right before switching to a similar-song match (comparison mode);
-  // holds what "Back" (and Escape/click-outside, same behavior) restores -
-  // the original song + its exact active selection. null outside comparison mode.
+  // holds what "Back" (and Escape, same behavior) restores - the original
+  // song + its exact active selection. null outside comparison mode.
   previousContext: null,
 };
 
@@ -100,7 +100,7 @@ async function boot() {
   state.sequences = sequences;
   for (const entry of manifest) state.manifestById.set(entry.song_id, entry);
   wireSearch();
-  wireGlobalKeysAndClicks();
+  wireEscapeKey();
   window.__bepopReady = true; // signal for tests/debugging only
 }
 boot();
@@ -187,11 +187,17 @@ function wireSearch() {
 }
 
 async function selectSong(songId) {
+  // The search bar is persistent (home screen AND song-view switching share
+  // it - see the module docstring), so this is the one call site that has
+  // to actually tell the two cases apart rather than assume: home screen
+  // still showing right now means this is the FIRST load (start paused,
+  // user presses play themselves), not a switch (which autoplays).
+  const isInitialLoadFromHome = !el.homeScreen.hidden;
   el.searchInput.value = '';
   el.suggestions.hidden = true;
   el.noMatches.hidden = true;
   el.searchInput.blur();
-  await loadSong(songId);
+  await loadSong(songId, { autoplay: !isInitialLoadFromHome });
 }
 
 // ---------------------------------------------------------------------------
@@ -207,7 +213,7 @@ function teardownSong() {
   state.currentSong = null;
 }
 
-async function loadSong(songId, { seekTo = null } = {}) {
+async function loadSong(songId, { seekTo = null, autoplay = true } = {}) {
   teardownSong();
 
   el.homeScreen.hidden = true;
@@ -262,13 +268,17 @@ async function loadSong(songId, { seekTo = null } = {}) {
     const decodeMs = performance.now() - decodeStart;
     console.log(`[bepop] "${song.title}" decoded client-side in ${decodeMs.toFixed(0)}ms`);
     if (seekTo != null) ws.setTime(Math.max(0, Math.min(song.duration, seekTo)));
-    // Switching songs (search, a similar-song match, or "Back") autoplays -
-    // this is also *the* fix for the icon-desync bug: the icon is driven
-    // solely by the 'play'/'pause'/'finish' events below, never set
-    // independently of them, so starting real playback here is what makes
-    // the button's state and the actual playback state agree from the
-    // moment the switch happens, not just eventually.
-    ws.play();
+    // Switching songs (search-while-viewing, a similar-song match, or
+    // "Back") autoplays; the very first load from the home screen doesn't
+    // (see selectSong()'s isInitialLoadFromHome / this function's own
+    // `autoplay` param - every call site passes it explicitly rather than
+    // relying on a default). Either way, the icon is driven solely by the
+    // 'play'/'pause'/'finish' events below, never set independently of
+    // them - when autoplay is true that's what keeps the button's state
+    // and the actual playback state in agreement from the moment the
+    // switch happens; when it's false, the reset to the idle icon at the
+    // top of loadSong() is already correct and nothing further fires.
+    if (autoplay) ws.play();
   });
   ws.on('play', () => { el.playPauseBtn.innerHTML = '&#10074;&#10074;'; });
   ws.on('pause', () => { el.playPauseBtn.innerHTML = '&#9658;'; });
@@ -451,7 +461,7 @@ function noteMatchBullet(songId, noteResult) {
   const offset = rawNotes.length && rawNotes[0].interval_from_prev === null ? 1 : 0;
   const note = rawNotes[noteResult.span[0] + offset];
   if (!note) return null;
-  return `Similar melodic phrase near ${fmtTime(note.onset)}`;
+  return `Similar melody near ${fmtTime(note.onset)}`;
 }
 
 /** Real timestamp (seconds) a span's start index lands on in songId's own
@@ -520,10 +530,11 @@ function renderCombinedMatches(combined, emptyMessage) {
 // "comparison mode": the ordinary single-song view for the newly active
 // (matched) song on the left, the pairwise chord/melody alignment trace on
 // the right (same rendering built for the prior pass's in-panel detail
-// view, just relocated here rather than rebuilt). "Back" - and Escape/
-// click-outside, which behave identically, see wireGlobalKeysAndClicks -
-// return to the ORIGINAL song with its exact selection and analysis panel
-// restored, via state.previousContext captured right before the switch.
+// view, just relocated here rather than rebuilt). "Back" - and Escape,
+// which behaves identically, see wireEscapeKey - returns to the ORIGINAL
+// song with its exact selection and analysis panel restored, via
+// state.previousContext captured right before the switch. Click-outside is
+// deliberately NOT wired to this (or to clearSelection) - see wireEscapeKey.
 // ---------------------------------------------------------------------------
 function primaryMode(entry) {
   return (entry.chordNorm ?? -1) >= (entry.noteNorm ?? -1) ? 'chord' : 'note';
@@ -532,7 +543,7 @@ function primaryMode(entry) {
 function showMatchList() {
   // Also the single choke point for "we're back to normal, non-comparison
   // viewing" - covers not just the two explicit exits (Back button,
-  // Escape/click-outside) but also the edge case of the user drag-
+  // Escape) but also the edge case of the user drag-
   // selecting a *new* range on the matched song's own waveform while
   // comparison mode is open: that still runs a fresh runAnalysis() ->
   // renderCombinedMatches() -> here, which is exactly the right moment to
@@ -555,7 +566,7 @@ async function openMatchComparison(entry) {
   const mode = primaryMode(entry);
   const span = mode === 'chord' ? entry.chord.span : entry.note.span;
   const seekTo = seekTimeForSpan(entry.song_id, mode, span);
-  await loadSong(entry.song_id, { seekTo }); // switches + autoplays, same path as search
+  await loadSong(entry.song_id, { seekTo, autoplay: true }); // a switch, not an initial load - autoplays
   enterComparisonMode(entry);
 }
 
@@ -576,7 +587,7 @@ async function returnToOriginalSong() {
   if (!prev) return;
   state.previousContext = null;
   el.stage.classList.remove('comparisonMode');
-  await loadSong(prev.songId); // same switch-song path -> autoplays, same as any other switch
+  await loadSong(prev.songId, { autoplay: true }); // a switch, not an initial load - autoplays
   // loadSong() only awaits the song JSON fetch, not the actual audio
   // 'ready' event (that fires later, async) - register this before
   // returning control, so it can't miss an event that fires this fast.
@@ -651,25 +662,20 @@ function makeAlignBlock(text, cls) {
 el.backToMatchesBtn.addEventListener('click', returnToOriginalSong);
 
 // ---------------------------------------------------------------------------
-// Escape / click-outside: one consistent way out, whatever's currently
-// showing. In comparison mode that means "return to the original song and
-// selection" (identical to the Back button, not a second/different exit);
-// otherwise it's the pre-existing "clear the selection, collapse the panel".
+// Escape: the only keyboard shortcut for "close/back". Clicking outside the
+// analysis panel or comparison view is deliberately NOT wired to anything -
+// the X button (clearSelection, via closePanelBtn above) and the "Back to
+// <song>" button (returnToOriginalSong, via backToMatchesBtn above) are the
+// only ways to trigger those transitions; an accidental click while reading
+// the panel used to silently navigate away, which is exactly what this
+// removes. Escape stays as a deliberate-keypress equivalent of those same
+// two buttons - same "one consistent way out" logic as before, just no
+// longer reachable by a stray click.
 // ---------------------------------------------------------------------------
-function wireGlobalKeysAndClicks() {
+function wireEscapeKey() {
   document.addEventListener('keydown', (e) => {
     if (e.key !== 'Escape') return;
     if (state.previousContext) returnToOriginalSong();
     else if (state.activeRegion) clearSelection();
-  });
-  document.addEventListener('click', (e) => {
-    if (state.previousContext) {
-      if (!el.analysisPanel.contains(e.target)) returnToOriginalSong();
-      return;
-    }
-    if (!state.activeRegion) return;
-    const insidePanel = el.analysisPanel.contains(e.target);
-    const insideRegion = state.activeRegion.element && state.activeRegion.element.contains(e.target);
-    if (!insidePanel && !insideRegion) clearSelection();
   });
 }

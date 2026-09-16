@@ -266,12 +266,22 @@ body::before {
 }
 
 /* -- volume: a utility control, top-right of the song area, separate from
-   the centered transport controls below the waveform -- */
+   the centered transport controls below the waveform. Built from plain
+   div/span, not a native <input type="range"> - without an explicit
+   user-select:none, a click that doesn't land exactly on #volumeFill can
+   register as a text-selection click (blinking caret, as if this were
+   selectable text) rather than a slider interaction; a native range input
+   wouldn't have this problem at all, but the CSS fix is enough here. */
 #volumeControl {
   display: flex;
   align-items: center;
   gap: 8px;
   flex-shrink: 0;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
 }
 
 #volumeIcon {
@@ -286,6 +296,10 @@ body::before {
   border-radius: 3px;
   background: var(--bg-elevated);
   cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
 }
 
 #volumeTrack:focus-visible {
