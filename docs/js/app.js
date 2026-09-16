@@ -60,7 +60,6 @@ const el = {
   matchDetail: document.getElementById('matchDetail'),
   backToMatchesBtn: document.getElementById('backToMatchesBtn'),
   matchDetailTitle: document.getElementById('matchDetailTitle'),
-  jumpToMatchBtn: document.getElementById('jumpToMatchBtn'),
   chordAlignRows: document.getElementById('chordAlignRows'),
   chordAlignCaption: document.getElementById('chordAlignCaption'),
   noteAlignRows: document.getElementById('noteAlignRows'),
@@ -81,6 +80,10 @@ const state = {
   currentSong: null,        // current songs/<id>.json
   highlightedIndex: -1,
   volume: 1,                // persists across song switches (each new WaveSurfer instance re-applies it)
+  // set right before switching to a similar-song match (comparison mode);
+  // holds what "Back" (and Escape/click-outside, same behavior) restores -
+  // the original song + its exact active selection. null outside comparison mode.
+  previousContext: null,
 };
 
 // ---------------------------------------------------------------------------
@@ -211,6 +214,13 @@ async function loadSong(songId, { seekTo = null } = {}) {
   el.songView.hidden = false;
   el.songTitle.textContent = state.manifestById.get(songId)?.title ?? songId;
   el.loadingNote.hidden = false;
+  // Reset to the neutral idle icon immediately, before the new instance's
+  // own real events take over - otherwise a stale "playing" icon from the
+  // previous song lingers during the (now very brief, thanks to
+  // precomputed peaks) load window. The real fix is below (autoplay ->
+  // a real 'play' event fires and drives the icon correctly on its own);
+  // this is just the safe default for the moment in between.
+  el.playPauseBtn.innerHTML = '&#9658;';
 
   const song = await fetch(`data/songs/${songId}.json`).then((r) => r.json());
   state.currentSong = song;
@@ -252,6 +262,13 @@ async function loadSong(songId, { seekTo = null } = {}) {
     const decodeMs = performance.now() - decodeStart;
     console.log(`[bepop] "${song.title}" decoded client-side in ${decodeMs.toFixed(0)}ms`);
     if (seekTo != null) ws.setTime(Math.max(0, Math.min(song.duration, seekTo)));
+    // Switching songs (search, a similar-song match, or "Back") autoplays -
+    // this is also *the* fix for the icon-desync bug: the icon is driven
+    // solely by the 'play'/'pause'/'finish' events below, never set
+    // independently of them, so starting real playback here is what makes
+    // the button's state and the actual playback state agree from the
+    // moment the switch happens, not just eventually.
+    ws.play();
   });
   ws.on('play', () => { el.playPauseBtn.innerHTML = '&#10074;&#10074;'; });
   ws.on('pause', () => { el.playPauseBtn.innerHTML = '&#9658;'; });
@@ -329,7 +346,7 @@ function openPanel() {
 }
 
 function closePanel() {
-  el.stage.classList.remove('panelOpen');
+  el.stage.classList.remove('panelOpen', 'comparisonMode');
   el.analysisPanel.hidden = true;
   el.selectionHint.hidden = false;
 }
@@ -437,21 +454,18 @@ function noteMatchBullet(songId, noteResult) {
   return `Similar melodic phrase near ${fmtTime(note.onset)}`;
 }
 
-function jumpToMatch(songId, mode, span) {
+/** Real timestamp (seconds) a span's start index lands on in songId's own
+ * data - used to seek a newly-opened match to the actually-relevant
+ * matched moment rather than always starting from 0. */
+function seekTimeForSpan(songId, mode, span) {
   const seq = state.sequences[songId];
   const startIdx = span[0];
-  let t = 0;
   if (mode === 'chord') {
     const arr = seq.chords;
-    t = arr[Math.min(startIdx, arr.length - 1)]?.start ?? 0;
-  } else {
-    const arr = seq.notes;
-    t = arr[Math.min(startIdx, arr.length - 1)]?.onset ?? 0;
+    return arr[Math.min(startIdx, arr.length - 1)]?.start ?? 0;
   }
-  selectSong(songId).then(() => {
-    // selectSong -> loadSong doesn't accept opts; re-seek once ready instead
-    if (state.ws) state.ws.once('ready', () => state.ws.setTime(t));
-  });
+  const arr = seq.notes;
+  return arr[Math.min(startIdx, arr.length - 1)]?.onset ?? 0;
 }
 
 function renderCombinedMatches(combined, emptyMessage) {
@@ -493,40 +507,93 @@ function renderCombinedMatches(combined, emptyMessage) {
     });
     li.appendChild(bullets);
 
-    li.title = 'See a detailed comparison';
-    li.addEventListener('click', () => renderMatchDetail(entry));
+    li.title = 'Switch to this song and see a detailed comparison';
+    li.addEventListener('click', () => openMatchComparison(entry));
     el.matches.appendChild(li);
   });
 }
 
 // ---------------------------------------------------------------------------
-// Match detail view (point 11): a pairwise chord/melody alignment, one
-// level deeper than the top-3 list, in the same panel. Escape/click-outside
-// still collapses the whole analysis flow via wireGlobalKeysAndClicks - that
-// logic doesn't care which sub-view of #analysisPanel is showing, it just
-// clears the region and hides the panel outright, so no separate dismissal
-// path is needed here; "Back" only steps up one level, back to the list.
+// Similar-song match flow: clicking one of the top-3 results switches the
+// active song to that match (the same loadSong() path search uses, so it
+// autoplays and keeps the icon in sync for free) and opens a two-column
+// "comparison mode": the ordinary single-song view for the newly active
+// (matched) song on the left, the pairwise chord/melody alignment trace on
+// the right (same rendering built for the prior pass's in-panel detail
+// view, just relocated here rather than rebuilt). "Back" - and Escape/
+// click-outside, which behave identically, see wireGlobalKeysAndClicks -
+// return to the ORIGINAL song with its exact selection and analysis panel
+// restored, via state.previousContext captured right before the switch.
 // ---------------------------------------------------------------------------
 function primaryMode(entry) {
   return (entry.chordNorm ?? -1) >= (entry.noteNorm ?? -1) ? 'chord' : 'note';
 }
 
 function showMatchList() {
+  // Also the single choke point for "we're back to normal, non-comparison
+  // viewing" - covers not just the two explicit exits (Back button,
+  // Escape/click-outside) but also the edge case of the user drag-
+  // selecting a *new* range on the matched song's own waveform while
+  // comparison mode is open: that still runs a fresh runAnalysis() ->
+  // renderCombinedMatches() -> here, which is exactly the right moment to
+  // drop out of "peeking at a match" framing.
+  el.stage.classList.remove('comparisonMode');
+  state.previousContext = null;
   el.matchDetail.hidden = true;
   el.matchesHeading.hidden = false;
   el.matches.hidden = false;
 }
 
-function renderMatchDetail(entry) {
+async function openMatchComparison(entry) {
+  const region = state.activeRegion;
+  if (!region || !state.currentSong) return;
+  state.previousContext = {
+    songId: state.currentSong.song_id,
+    start: region.start,
+    end: region.end,
+  };
+  const mode = primaryMode(entry);
+  const span = mode === 'chord' ? entry.chord.span : entry.note.span;
+  const seekTo = seekTimeForSpan(entry.song_id, mode, span);
+  await loadSong(entry.song_id, { seekTo }); // switches + autoplays, same path as search
+  enterComparisonMode(entry);
+}
+
+function enterComparisonMode(entry) {
+  el.stage.classList.add('comparisonMode');
+  openPanel();
   el.matchesHeading.hidden = true;
   el.matches.hidden = true;
   el.matchDetail.hidden = false;
+  renderMatchDetail(entry);
+  const prevTitle = state.manifestById.get(state.previousContext.songId)?.title ?? 'previous song';
+  el.backToMatchesBtn.textContent = `← Back to "${prevTitle}"`;
+  el.backToMatchesBtn.title = 'Return to your selection';
+}
 
+async function returnToOriginalSong() {
+  const prev = state.previousContext;
+  if (!prev) return;
+  state.previousContext = null;
+  el.stage.classList.remove('comparisonMode');
+  await loadSong(prev.songId); // same switch-song path -> autoplays, same as any other switch
+  // loadSong() only awaits the song JSON fetch, not the actual audio
+  // 'ready' event (that fires later, async) - register this before
+  // returning control, so it can't miss an event that fires this fast.
+  if (state.ws) await new Promise((resolve) => state.ws.once('ready', resolve));
+  if (state.regions) {
+    const region = state.regions.addRegion({ start: prev.start, end: prev.end, color: REGION_COLOR, drag: true, resize: true });
+    // addRegion() fires 'region-created' itself once duration is known
+    // (confirmed against wavesurfer 7.12.12's regions-plugin source), which
+    // the existing listener below already routes into onRegionFinalized()
+    // (runAnalysis + openPanel) - this is just a defensive fallback in case
+    // that ever changes; harmless no-op when the event already handled it.
+    if (state.activeRegion !== region) onRegionFinalized(region);
+  }
+}
+
+function renderMatchDetail(entry) {
   el.matchDetailTitle.textContent = state.manifestById.get(entry.song_id)?.title ?? entry.song_id;
-
-  const mode = primaryMode(entry);
-  const span = mode === 'chord' ? entry.chord.span : entry.note.span;
-  el.jumpToMatchBtn.onclick = () => jumpToMatch(entry.song_id, mode, span);
 
   renderAlignTrack(el.chordAlignRows, entry.chord,
     (sym) => (sym === null ? '—' : chordDisplayName(sym.forte, sym.root)),
@@ -581,16 +648,25 @@ function makeAlignBlock(text, cls) {
   return d;
 }
 
-el.backToMatchesBtn.addEventListener('click', showMatchList);
+el.backToMatchesBtn.addEventListener('click', returnToOriginalSong);
 
 // ---------------------------------------------------------------------------
-// Escape / click-outside clears the selection + collapses the panel
+// Escape / click-outside: one consistent way out, whatever's currently
+// showing. In comparison mode that means "return to the original song and
+// selection" (identical to the Back button, not a second/different exit);
+// otherwise it's the pre-existing "clear the selection, collapse the panel".
 // ---------------------------------------------------------------------------
 function wireGlobalKeysAndClicks() {
   document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && state.activeRegion) clearSelection();
+    if (e.key !== 'Escape') return;
+    if (state.previousContext) returnToOriginalSong();
+    else if (state.activeRegion) clearSelection();
   });
   document.addEventListener('click', (e) => {
+    if (state.previousContext) {
+      if (!el.analysisPanel.contains(e.target)) returnToOriginalSong();
+      return;
+    }
     if (!state.activeRegion) return;
     const insidePanel = el.analysisPanel.contains(e.target);
     const insideRegion = state.activeRegion.element && state.activeRegion.element.contains(e.target);

@@ -413,6 +413,30 @@ body::before {
   max-width: 420px;
 }
 
+/* -- comparison mode (point 2 of the follow-up revision): clicking a top-3
+   match switches the active song to it and opens this two-column layout
+   instead of expanding detail in place - left column is the ordinary
+   single-song view (now at ~50% instead of 60%), right column is the
+   match-detail content (aligned tracks), both stretched to equal height
+   and the whole #stage widened to fit two comfortable columns. Source
+   order after the .panelOpen rules above matters - same specificity
+   (2 ids + 1 class each), later wins the tie. */
+#stage.comparisonMode {
+  max-width: 1040px;
+  align-items: stretch;
+}
+
+#stage.comparisonMode #waveformColumn {
+  flex: 1 1 50%;
+  justify-content: center;
+}
+
+#stage.comparisonMode #analysisPanel {
+  flex: 1 1 50%;
+  min-width: 320px;
+  max-width: 480px;
+}
+
 #closePanelBtn {
   position: absolute;
   top: 12px;
@@ -435,7 +459,14 @@ body::before {
   margin: 0 0 6px;
 }
 
-.matchList {
+/* :not([hidden]) - same reason as #homeScreen/#songView above: a bare
+   `display` on a selector tied with the UA stylesheet's `[hidden]{display:
+   none}` on specificity (both (0,1,0) here - class vs attribute selector)
+   lets the author rule win on source order alone and silently defeats the
+   `hidden` attribute. Caught by comparing a screenshot against what the
+   `hidden` DOM property claimed, not by the property check alone - see
+   [[webexport-visual-revision]] for why that check alone isn't enough. */
+.matchList:not([hidden]) {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -500,7 +531,10 @@ body::before {
 
 /* ---------- match detail view (point 11: aligned chord/melody tracks) --- */
 
-#matchDetail {
+/* :not([hidden]) - an ID selector's specificity beats [hidden]'s
+   unconditionally (not just a source-order tie like .matchList above), so
+   this one would defeat `hidden` even more silently if left bare. */
+#matchDetail:not([hidden]) {
   display: flex;
   flex-direction: column;
   gap: 4px;
@@ -522,25 +556,11 @@ body::before {
   font-size: 15px;
   font-weight: 600;
   color: var(--text-primary);
-  margin: 0 0 2px;
+  margin: 0 0 12px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-
-#jumpToMatchBtn {
-  align-self: flex-start;
-  background: none;
-  border: 1px solid var(--border);
-  color: var(--accent-hover);
-  border-radius: 14px;
-  padding: 4px 12px;
-  font-size: 12px;
-  cursor: pointer;
-  margin-bottom: 12px;
-}
-
-#jumpToMatchBtn:hover { border-color: var(--accent); }
 
 .alignTrack { margin-top: 10px; }
 
@@ -635,5 +655,7 @@ body::before {
 @media (max-width: 820px) {
   #stage { flex-direction: column; }
   #stage.panelOpen #waveformColumn,
-  #stage.panelOpen #analysisPanel { flex: 1 1 auto; width: 100%; max-width: none; }
+  #stage.panelOpen #analysisPanel,
+  #stage.comparisonMode #waveformColumn,
+  #stage.comparisonMode #analysisPanel { flex: 1 1 auto; width: 100%; max-width: none; }
 }
