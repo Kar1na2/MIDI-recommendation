@@ -1,6 +1,11 @@
 # MIDI-recommendation
 Recommending new songs through MIDI files
 
+Current product priorities are in [ROADMAP.md](ROADMAP.md): Phases 0, 1, 2,
+and 5A target November 2, 2026; later platform and screening work is gated on
+customer validation. The operational documentation below describes the
+existing research pipeline.
+
 ## Repository layout
 
 Pipeline code lives under `scripts/`, grouped by stage (`separation/`,
@@ -32,6 +37,62 @@ to resolve, so use the **`Makefile`** target for each stage rather than
 calling a script by file path directly. Every make target below accepts
 `ARGS="..."` to forward CLI flags, e.g. `make extract-chords ARGS="--limit 3"`.
 
+### Liked-song ingestion (local-only)
+
+The archived Spotify importer and downloader can refresh the personal Liked
+Songs list and place deduplicated MP3 files in `liked-audio/`:
+
+```
+uv run python archive/fetch_liked_songs.py --output archive/liked_songs.json \
+  --cache-path .spotify-cache-liked
+uv run python archive/download_songs.py archive/liked_songs.json liked-audio \
+  --dedupe-against audio --dedupe-against k-indie
+```
+
+Set `SPOTIPY_CLIENT_ID`, `SPOTIPY_CLIENT_SECRET`, and a Spotify developer
+redirect URI in the environment for the first command. The app must allow the
+loopback URI used by the command (`http://127.0.0.1:8888/callback` is the
+current Spotify-compatible form). The JSON list, OAuth cache, download
+manifest, failures, and MP3s are local ingestion artifacts and are ignored by
+Git. Files are keyed by Spotify track ID; existing corpus matches and exact
+audio duplicates are recorded and skipped. `liked-audio/` is an additional
+input to `make separate-stems` and is never a publishable web-audio directory.
+
+For a large library, run the normal stages in order and then use the
+candidate-retrieval analysis path before pairwise alignment:
+
+```
+make separate-stems ARGS="--batch-size 2"
+make transcribe-harmonic
+make transcribe-drums
+make merge-stems
+make extract-chords
+make tag-chord-tones
+make correct-notes
+make correct-octave-duplicates
+make export-note-events
+make build-chord-vocabulary build-chord-sequences build-note-sequences
+make build-alignment-candidates
+make run-alignment ARGS="--workers 8"
+make recompute-significance
+make run-note-alignment ARGS="--workers 8"
+make compute-note-corpus-z
+make build-analysis-database generate-corpus-report
+```
+
+`build-alignment-candidates` keeps the validated Smith–Waterman scoring while
+avoiding an impractical all-pairs run as the library grows. It records
+retrieval and background pairs in `output/analysis/alignment_candidates.csv`.
+`build-analysis-database` imports the CSV outputs into the ignored local
+`output/liked_songs_analysis.sqlite`; it is a staging database for analysis,
+not a replacement for the future Postgres/pgvector product database. The
+checked-in deliverable from this run is
+`LIKED_SONGS_ANALYSIS_REPORT_2026-10-30.md`. The completed local run covered
+1,128 unique songs (1,128 Spotify records after metadata de-duplication),
+exported 1,271,174 note events and 117,112 chord segments, and retained
+20,303 harmonic plus 21,116 melodic candidate alignments. Audio, JSON,
+manifests, caches, and the SQLite database remain local and ignored.
+
 ## Recreation 
 
 If you wish to recreate what I have done then do the following 
@@ -41,7 +102,7 @@ If you wish to recreate what I have done then do the following
 - Drum transcription needs a second, isolated environment - see "Drum transcription" below.
 
 **RUN** (each stage is resumable - safe to re-run after a crash, it only redoes what's missing)
-1. `make separate-stems` - Demucs (htdemucs_ft) splits every mp3 in `audio/` and `k-indie/` into `stems/<song_name>/{drums,bass,other,vocals}.wav`.
+1. `make separate-stems` - Demucs (htdemucs_ft) splits every mp3 in `audio/`, `k-indie/`, and the local-only `liked-audio/` directory into `stems/<song_name>/{drums,bass,other,vocals}.wav`.
 2. `make transcribe-harmonic` - Basic Pitch transcribes the `other` and `bass` stems to `midi/<song_name>/{other,bass}.mid`.
 3. `make transcribe-drums` - ADTLib transcribes the `drums` stem to `midi/<song_name>/drums.mid`. This target already runs under `tools/adtlib-env/bin/python`, the different interpreter - see below.
 4. `make merge-stems` - combines `midi/<song_name>/{other,bass,drums}.mid` into a single multi-track `merged/<song_name>.mid` (one instrument track per stem; merges as soon as any one stem is transcribed, doesn't wait on all three). Prints a per-song sanity check (track count, notes per track, duration) and flags any track that came back with 0 notes - a likely sign that stem's transcription silently failed upstream. `make merge-stems ARGS=--check` re-runs that same sanity check against existing `merged/*.mid` files without redoing any merging.

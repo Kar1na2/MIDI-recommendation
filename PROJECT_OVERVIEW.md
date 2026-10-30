@@ -6,11 +6,14 @@ what's needed to put a frontend/recommendation product on top of it.
 `README.md` is the narrative day-to-day reference and `PIPELINE_MAP.md` is
 the pipeline's own operational snapshot; this doc is the one-stop "what has
 been built and what's next" read, written after Phase 3B and a repo cleanup
-pass. Written 2026-09-13.
+pass. Written 2026-10-30 after the liked-library expansion and final local
+analysis run.
 
 ## 1. What this project is
 
-Given a personal music collection (two source playlists, 75 songs total),
+Given a personal music collection (the committed baseline has two source
+playlists and 75 songs; a larger personal Spotify Liked Songs import is kept
+local),
 transcribe each song into MIDI-level note/chord data, then look for songs
 that share real melodic or harmonic material — the long-term goal (per
 README's "Approach" section) being a recommendation system: "songs like
@@ -19,8 +22,8 @@ this one, and here's specifically why."
 Two layers exist right now:
 
 1. **The pipeline** (stages 1–8 below) — turns raw mp3s into structured,
-   per-note and per-chord-segment CSVs. Fully built, fully run, 75/75 songs,
-   0 failures anywhere.
+   per-note and per-chord-segment CSVs. The committed baseline is fully built
+   and run for 75/75 songs; the local liked-library run uses the same stages.
 2. **The analysis layer** (Phase 3A/3B) — takes those CSVs and finds
    cross-song similarity via sequence alignment (the same class of
    algorithm used for DNA/protein matching — Needleman-Wunsch/Smith-Waterman
@@ -30,8 +33,22 @@ Two layers exist right now:
    bugs were found and fixed along the way (§3.3), and one is only
    partially fixed and explicitly flagged in the output (§3.3, bug 3).
 
-**Nothing web-facing exists yet.** There is no API, no database, no served
-audio, no UI. §5 covers exactly what that needs.
+The web demo is backed by checked-in generated JSON for the 75-song baseline.
+There is no production API or database yet; the liked-library run now creates
+an ignored SQLite staging database for local analysis. §5 covers the future
+Postgres/pgvector product layer.
+
+### Completed liked-library run (2026-10-30)
+
+Spotify returned 1,128 de-duplicated records. The local downloader produced
+1,053 new files, matched 40 files already in the baseline corpus, skipped 17
+exact audio duplicates, and left 18 unavailable search results. After source
+de-duplication, 1,128 unique songs completed every pipeline stage with zero
+failures. The final export contains 1,271,174 note events and 117,112 chord
+segments; the retained candidate set contains 20,303 harmonic and 21,116
+melodic alignments. The report is
+`LIKED_SONGS_ANALYSIS_REPORT_2026-10-30.md`, and the SQLite database is local
+and ignored.
 
 ## 2. The pipeline, stage by stage
 
@@ -52,6 +69,10 @@ why, module imports need it run as `-m` from the repo root).
 | 6 | `rank-review-candidates` | Ranks segments/songs by non-chord-tone density (diagnostic, not a verdict) | recomputed fresh each run |
 | 7 | `correct-notes` | Auto-corrects only the high-confidence `stuck_pitch` pattern; everything else goes to a human-review proposals file | 75/75 |
 | 8 | `export-note-events` | Flattens everything into `output/note_events_other.csv` (113,938 rows) + `output/chord_segments.csv` (8,342 rows) | done |
+
+The status column preserves the committed 75-song baseline. The local
+liked-library run completed the same stages for 1,128 unique songs; its final
+counts and limitations are recorded above and in `PIPELINE_MAP.md`.
 
 **What this output actually represents, important for anything built on
 top of it:** every downstream number in this repo (pipeline and analysis
@@ -234,10 +255,11 @@ raw source filename — every other table (note events, chord segments,
 similarity matrices, motif variations) should be re-keyed to that id once
 it exists, rather than re-deriving string-matching logic in every consumer.
 
-### 5.2 Database — the README already names the target: Postgres + pgvector
+### 5.2 Database — local staging now, Postgres + pgvector as the product target
 
-A reasonable first schema, loadable directly from what already exists on
-disk:
+`scripts.analysis.build_analysis_database` now materializes this shape in
+`output/liked_songs_analysis.sqlite` (ignored and reproducible from CSVs). A
+future service can load the same shape into Postgres + pgvector:
 
 - `songs (id, title, artist, source_path, audio_path, midi_path, duration_sec, …)`
 - `note_events (id, song_id, onset, offset, pitch, velocity, chord_pitchclasses, was_corrected, …)` — from `note_events_other.csv`
@@ -277,9 +299,12 @@ minutes at this scale. A catalog of a few thousand songs (~50M+ pairs) would
 not be brute-forceable the same way — the k-mer seed-and-extend prefilter
 both design docs describe (and deliberately didn't build, because it wasn't
 needed yet) is the documented next step if the corpus grows meaningfully
-past its current 75 songs. Don't assume the current "brute force is fine"
-conclusion still holds without re-measuring at the new scale — the design
-docs say this explicitly.
+past its current 75 songs. `scripts.analysis.build_alignment_candidates` is
+now the documented approximate-retrieval prefilter for the local liked-library
+expansion; it keeps the downstream Smith–Waterman scoring unchanged and labels
+retrieval versus background pairs in the output. Don't assume the current
+"brute force is fine" conclusion still holds without re-measuring at the new
+scale — the design docs say this explicitly.
 
 ### 5.5 Motif coverage is a shortlist, not universal
 

@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """
-Batch-run Demucs (htdemucs_ft, 4-stem) over every mp3 in audio/ and k-indie/,
+Batch-run Demucs (htdemucs_ft, 4-stem) over every mp3 in audio/, k-indie/,
+and liked-audio/,
 writing stems to stems/<song_name>/{drums,bass,other,vocals}.wav.
 
 Resumable: a song is skipped if stems/<song_name>/ already has all four
@@ -26,7 +27,7 @@ from pathlib import Path
 
 MODEL = "htdemucs_ft"
 STEMS = ("drums", "bass", "other", "vocals")
-SOURCE_DIRS = ["audio", "k-indie"]
+SOURCE_DIRS = ["audio", "k-indie", "liked-audio"]
 OUTPUT_ROOT = Path("stems")
 FAILURE_LOG = OUTPUT_ROOT / "_failures.log"
 DEMUCS_TMP = OUTPUT_ROOT / ".demucs_tmp"  # scratch dir demucs writes into before we move results into place
@@ -70,30 +71,39 @@ def log_failure(song_name: str, path: Path, error: str):
 
 def separate_one(song_name: str, path: Path, device: str) -> bool:
     """Run demucs on a single file; return True on success."""
+    return separate_batch([(song_name, path)], device)
+
+
+def separate_batch(batch: list[tuple[str, Path]], device: str) -> bool:
+    """Run one Demucs process for a batch, loading the model only once."""
     DEMUCS_TMP.mkdir(parents=True, exist_ok=True)
     cmd = [
         sys.executable, "-m", "demucs",
         "-n", MODEL,
         "-d", device,
         "-o", str(DEMUCS_TMP),
-        str(path),
+        *(str(path) for _, path in batch),
     ]
     result = subprocess.run(cmd, capture_output=True, text=True)
-    produced = DEMUCS_TMP / MODEL / path.stem
-
-    if result.returncode != 0 or not all((produced / f"{s}.wav").exists() for s in STEMS):
-        err = result.stderr.strip().splitlines()[-1] if result.stderr.strip() else "unknown error"
-        if result.returncode == 0:
-            err = "demucs exited 0 but stem files are missing: " + err
-        log_failure(song_name, path, err)
-        shutil.rmtree(produced, ignore_errors=True)
+    error = result.stderr.strip().splitlines()[-1] if result.stderr.strip() else "unknown error"
+    if result.returncode != 0:
+        for song_name, path in batch:
+            log_failure(song_name, path, error)
+            shutil.rmtree(DEMUCS_TMP / MODEL / path.stem, ignore_errors=True)
         return False
 
-    final_out = OUTPUT_ROOT / song_name
-    if final_out.exists():
-        shutil.rmtree(final_out)
-    shutil.move(str(produced), str(final_out))
-    return True
+    success = True
+    for song_name, path in batch:
+        produced = DEMUCS_TMP / MODEL / path.stem
+        if not all((produced / f"{stem}.wav").exists() for stem in STEMS):
+            log_failure(song_name, path, "demucs exited 0 but stem files are missing: " + error)
+            success = False
+            continue
+        final_out = OUTPUT_ROOT / song_name
+        if final_out.exists():
+            shutil.rmtree(final_out)
+        shutil.move(str(produced), str(final_out))
+    return success
 
 
 def main():
@@ -104,6 +114,8 @@ def main():
                          help="List what would be processed, without running demucs")
     parser.add_argument("--retry-failed", action="store_true",
                          help="Clear the failure log first so previously-failed songs are attempted again")
+    parser.add_argument("--batch-size", type=int, default=1,
+                         help="Number of songs per Demucs process (2-4 reduces model reload overhead)")
     args = parser.parse_args()
 
     if args.retry_failed and FAILURE_LOG.exists():
@@ -129,10 +141,23 @@ def main():
 
     OUTPUT_ROOT.mkdir(parents=True, exist_ok=True)
     ok, failed = 0, 0
-    for i, (name, path) in enumerate(todo, 1):
-        print(f"[{i}/{len(todo)}] {name} ...", flush=True)
-        if separate_one(name, path, device):
-            ok += 1
+    batch_size = max(1, args.batch_size)
+    for offset in range(0, len(todo), batch_size):
+        batch = todo[offset:offset + batch_size]
+        label = batch[0][0] if len(batch) == 1 else f"{batch[0][0]} (+{len(batch) - 1} more)"
+        print(f"[{offset + 1}-{offset + len(batch)}/{len(todo)}] {label} ...", flush=True)
+        batch_ok = separate_batch(batch, device)
+        if batch_ok:
+            ok += len(batch)
+        elif len(batch) > 1:
+            # A single bad input should not turn an entire batch into a
+            # permanent failure; retry each item for an individual log entry.
+            for name, path in batch:
+                if separate_one(name, path, device):
+                    ok += 1
+                else:
+                    failed += 1
+                    print(f"  FAILED: {name} (see {FAILURE_LOG})")
         else:
             failed += 1
             print(f"  FAILED (see {FAILURE_LOG})")

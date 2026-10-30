@@ -26,7 +26,8 @@
         build-chord-vocabulary build-chord-sequences mine-ngrams \
         validate-alignment-sample run-alignment recompute-significance extract-motifs \
         build-note-sequences validate-note-alignment-sample run-note-alignment \
-        compute-note-corpus-z extract-note-motifs
+        compute-note-corpus-z extract-note-motifs build-alignment-candidates \
+        build-analysis-database generate-corpus-report
 
 # --- separation ---
 separate-stems:
@@ -114,6 +115,15 @@ extract-motifs:
 
 build-note-sequences:
 	uv run python -m scripts.analysis.build_note_sequences $(ARGS)
+
+build-alignment-candidates:
+	uv run python -m scripts.analysis.build_alignment_candidates $(ARGS)
+
+build-analysis-database:
+	uv run python -m scripts.analysis.build_analysis_database $(ARGS)
+
+generate-corpus-report:
+	uv run python -m scripts.analysis.generate_corpus_report $(ARGS)
 
 validate-note-alignment-sample:
 	uv run python -m scripts.analysis.validate_note_alignment_sample $(ARGS)
