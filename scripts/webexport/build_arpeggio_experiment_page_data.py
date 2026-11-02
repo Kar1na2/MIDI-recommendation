@@ -35,22 +35,6 @@ CLIPS = [
         "passage_start": 4.25, "passage_end": 7.0,
         "audio": {"type": "youtube", "video_id": "qvgORWX_B0s"},
     },
-    {
-        "id": "meovv-ddi-ro-ri", "title": "MEOVV — DDI RO RI", "kind": "mention",
-        "label": "Unconfirmed local lead · 6–6–6 in Basic Pitch MIDI",
-        "source": "Basic Pitch candidate; ByteDance's alternate piano transcription did not recover a strict triple",
-        "midi_path": ROOT / "midi/MEOVV - DDI RO RI [6Ja4MH8qIfhVABsb9Kxjjr]/other.mid",
-        "passage_start": 157.8818, "passage_end": 160.2273,
-        "audio": {"type": "local", "src": "audio/meovv-ddi-ro-ri-mv.mp3"},
-    },
-    {
-        "id": "lesserafim-impurities", "title": "LE SSERAFIM — Impurities", "kind": "mention",
-        "label": "Unconfirmed local lead · 3–3–3 in Basic Pitch MIDI",
-        "source": "Basic Pitch candidate; ByteDance's alternate piano transcription did not recover a strict triple",
-        "midi_path": ROOT / "midi/LE SSERAFIM - Impurities [7mYwDmbbp8UPLlnRjTJ54X]/other.mid",
-        "passage_start": 21.9341, "passage_end": 22.9432,
-        "audio": {"type": "youtube", "video_id": "I9wUHka2-NQ"},
-    },
 ]
 
 
@@ -150,22 +134,24 @@ def main() -> None:
     for clip in CLIPS:
         clip_start = max(0.0, clip["passage_start"] - 3.0)
         clip_end = clip["passage_end"] + 3.0
+        leading_pad = max(0.0, 3.0 - (clip["passage_start"] - clip_start))
         notes = []
         for note_start, note_end, pitch, velocity in read_midi(clip["midi_path"]):
             if note_end <= clip_start or note_start >= clip_end:
                 continue
             notes.append({
-                "start": round(max(note_start, clip_start) - clip_start, 4),
-                "end": round(min(note_end, clip_end) - clip_start, 4),
+                "start": round(max(note_start, clip_start) - clip_start + leading_pad, 4),
+                "end": round(min(note_end, clip_end) - clip_start + leading_pad, 4),
                 "pitch": pitch, "velocity": velocity,
             })
         notes.sort(key=lambda item: (item["start"], item["pitch"]))
         output.append({
             **{key: value for key, value in clip.items() if key != "midi_path"},
             "clip_start": round(clip_start, 4), "clip_end": round(clip_end, 4),
-            "duration": round(clip_end - clip_start, 4),
-            "passage_start_relative": round(clip["passage_start"] - clip_start, 4),
-            "passage_end_relative": round(clip["passage_end"] - clip_start, 4),
+            "duration": round(clip_end - clip_start + leading_pad, 4),
+            "leading_pad": round(leading_pad, 4),
+            "passage_start_relative": 3.0,
+            "passage_end_relative": round(clip["passage_end"] - clip["passage_start"] + 3.0, 4),
             "audio": {
                 **clip["audio"],
                 "play_start": clip["audio"].get("start", clip["passage_start"]),

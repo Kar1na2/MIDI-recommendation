@@ -2,6 +2,26 @@ const SVG = 'http://www.w3.org/2000/svg';
 const PITCH_NAME = ['C', 'C♯', 'D', 'D♯', 'E', 'F', 'F♯', 'G', 'G♯', 'A', 'A♯', 'B'];
 const PLOT = { width: 1080, height: 260, left: 54, right: 22, top: 18, bottom: 28 };
 
+// Ranked from the project's MIDI screen and outside score-side references.
+// The low–high–middle phrase ending still needs listening confirmation.
+const RANKED_LEADS = [
+  { title: 'Beethoven — Moonlight Sonata, Movement III', time: 5.54, counts: '4 · 4 · 4', source: 'Piano score reference; equal-sized rising figures', query: 'Beethoven Moonlight Sonata third movement piano full performance', evidence: 'Score reference' },
+  { title: 'Bach — Prelude in C major, BWV 846', time: 1.25, counts: '3 · 5 · 3', source: 'Score-side contour lead; local MIDI is a two-guitar arrangement', query: 'Bach Prelude in C major BWV 846 piano performance', evidence: 'Score lead' },
+  { title: 'Mozart — Piano Concerto No. 20 in D minor, K. 466, I', time: 442.58, counts: '4 · 4 · 4', source: 'Catalogue MIDI screen; live performance recording', query: 'Mozart Piano Concerto No. 20 K 466 first movement Cleveland 2010', evidence: 'Audio transcription' },
+  { title: 'Sibelius — Étude, Op. 76 No. 2', time: 59.40, counts: '3 · 3 · 3', source: 'Catalogue MIDI screen; equal note counts', query: 'Sibelius Etude Op 76 No 2 piano', evidence: 'Audio transcription' },
+  { title: 'Chopin — Étude, Op. 10 No. 4 “Torrent”', time: 14.92, counts: '3 · 3 · 3', source: 'Catalogue MIDI screen; quick, closely spaced rises', query: 'Chopin Etude Op 10 No 4 Torrent piano', evidence: 'Audio transcription' },
+  { title: 'Mozart — Piano Sonata No. 18 in D major, K. 576, I', time: 0, counts: 'score review', source: 'Additional score-side audition lead; not included in the MIDI scan', query: 'Mozart Piano Sonata K 576 first movement piano', evidence: 'Score lead' },
+  { title: 'Mozart — Requiem in D minor, K. 626, “Introitus”', time: 102.07, counts: '3 · 3 · 3', source: 'Catalogue MIDI screen; orchestral/vocal texture', query: 'Mozart Requiem K 626 Introitus Requiem aeternam', evidence: 'Audio transcription' },
+  { title: 'Rachmaninoff — Piano Concerto No. 3 in D minor, I', time: 93.13, counts: '3 · 3 · 3', source: 'Catalogue MIDI screen; equal note counts', query: 'Rachmaninoff Piano Concerto No 3 first movement piano', evidence: 'Audio transcription' },
+  { title: 'Mendelssohn — Violin Concerto in E minor, Op. 64, I', time: 138.47, counts: '3 · 3 · 3', source: 'Catalogue MIDI screen; orchestral passage', query: 'Mendelssohn Violin Concerto E minor first movement', evidence: 'Audio transcription' },
+  { title: 'Beethoven — Violin Sonata No. 9 “Kreutzer”, I', time: 544.14, counts: '3 · 3 · 3', source: 'Catalogue MIDI screen; score passage needs listening review', query: 'Beethoven Kreutzer Sonata first movement piano violin', evidence: 'Audio transcription' },
+  { title: 'Mahler — Symphony No. 1, Movement IV', time: 1057.77, counts: '3 · 3 · 3', source: 'Catalogue MIDI screen; equal note counts', query: 'Mahler Symphony No 1 fourth movement full recording', evidence: 'Audio transcription' },
+  { title: 'Vivaldi — Concerto for Four Violins in B minor, RV 580, I', time: 20.96, counts: '3 · 4 · 4', source: 'Catalogue MIDI screen; equal counts in final two runs', query: 'Vivaldi Concerto for Four Violins RV 580 first movement', evidence: 'Audio transcription' },
+  { title: 'Mahler — Symphony No. 1, Movement II, Trio', time: 411.92, counts: '3 · 4 · 4', source: 'Catalogue MIDI screen; equal counts in final two runs', query: 'Mahler Symphony No 1 second movement trio', evidence: 'Audio transcription' },
+  { title: 'Moszkowski — Piano Concerto in E major, Op. 59, II', time: 275.94, counts: '3 · 3 · 4', source: 'Catalogue MIDI screen; first two runs have equal counts', query: 'Moszkowski Piano Concerto E major Op 59 second movement', evidence: 'Audio transcription' },
+  { title: 'Beethoven — Moonlight Sonata, Movement I', time: 223.33, counts: '3 · 3 · 3', source: 'Score-side MIDI screen; needs check for the exact ending shape', query: 'Beethoven Moonlight Sonata first movement piano full', evidence: 'Score lead' },
+];
+
 const fmt = (seconds) => {
   const whole = Math.floor(seconds);
   const hundredths = Math.round((seconds - whole) * 100);
@@ -15,6 +35,27 @@ const element = (tag, cls, text) => {
   if (text !== undefined) node.textContent = text;
   return node;
 };
+
+function renderRankedList() {
+  const list = document.getElementById('rankedList');
+  for (const [index, lead] of RANKED_LEADS.entries()) {
+    const card = element('article', 'rank-card');
+    const rank = element('span', 'rank-number', String(index + 1).padStart(2, '0'));
+    const info = element('div', 'rank-info');
+    info.append(element('span', 'kind-tag', lead.evidence), element('h3', '', lead.title), element('p', '', lead.source));
+    const details = element('div', 'rank-details');
+    const countLabel = lead.counts === 'score review' ? `Score lead · ~${fmt(lead.time)}` : `${lead.counts} notes · ~${fmt(lead.time)}`;
+    details.append(element('span', 'rank-counts', countLabel));
+    const link = element('a', 'listen-link', 'Find a performance ↗');
+    link.href = `https://www.youtube.com/results?search_query=${encodeURIComponent(lead.query)}`;
+    link.target = '_blank';
+    link.rel = 'noopener noreferrer';
+    link.setAttribute('aria-label', `Search YouTube for ${lead.title}; scan excerpt begins around ${fmt(lead.time)}`);
+    details.append(link);
+    card.append(rank, info, details);
+    list.append(card);
+  }
+}
 
 function svgNode(name, attrs = {}, text = '') {
   const node = document.createElementNS(SVG, name);
@@ -70,7 +111,7 @@ function createRoll(clip) {
     const noteWidth = Math.max(2.1, x(note.end) - px);
     const noteHeight = Math.max(3.3, plotHeight / pitchSpan * 0.68);
     const shape = svgNode('rect', { x: px, y: py, width: noteWidth, height: noteHeight, rx: 2, class: 'note' });
-    shape.append(svgNode('title', {}, `${noteName(note.pitch)} · ${fmt(clip.clip_start + note.start)}–${fmt(clip.clip_start + note.end)}`));
+    shape.append(svgNode('title', {}, `${noteName(note.pitch)} · ${fmt(clip.clip_start + note.start - clip.leading_pad)}–${fmt(clip.clip_start + note.end - clip.leading_pad)}`));
     svg.append(shape);
   }
   svg.append(svgNode('line', { x1: left, x2: width - right, y1: height - bottom, y2: height - bottom, class: 'axis-line' }));
@@ -277,6 +318,7 @@ function renderAudioCard(clip) {
 }
 
 async function init() {
+  renderRankedList();
   const cards = document.getElementById('midiCards');
   const audioCards = document.getElementById('audioCards');
   try {
