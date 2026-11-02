@@ -59,7 +59,9 @@ def read_midi(path: Path) -> list[tuple[float, float, int, int]]:
         raise ValueError(f"SMPTE time division is not supported: {path}")
     offset = 8 + header_length
     tracks: list[list[tuple[int, int, int, int]]] = []
-    tempos: list[tuple[int, int]] = [(0, 500_000)]
+    # seconds_at supplies the default only before an explicit tempo event.
+    # Including a synthetic tick-zero event here could override faster scores.
+    tempos: list[tuple[int, int]] = []
     for _ in range(track_count):
         if data[offset:offset + 4] != b"MTrk":
             raise ValueError(f"Malformed track chunk: {path}")
@@ -131,7 +133,23 @@ def read_midi(path: Path) -> list[tuple[float, float, int, int]]:
 
 def main() -> None:
     output = []
-    for clip in CLIPS:
+    selections = json.loads((ROOT / 'scripts/webexport/classical_apex_selection.json').read_text(encoding='utf-8'))
+    clips = [CLIPS[0]]
+    clips[0] = {**clips[0], 'passage_start': 7.55, 'passage_end': 13.10}
+    for item in selections:
+        clips.append({
+            'id': f"classical-{item['id']}", 'rank': item['rank'], 'title': item['display_title'],
+            'kind': 'reference', 'label': 'Score-side contour match',
+            'source': item['instrument'].removeprefix('for ') + ' · Mutopia score MIDI',
+            'midi_path': ROOT / item['path'],
+            'passage_start': item['start'], 'passage_end': item['end'] + min(item['ioi_medians'][-1] * .8, .15),
+            'audio': {'type': 'midi'}, 'counts': item['counts'], 'apex': item['apex'],
+            'run_starts_absolute': item['run_starts'], 'run_ends_absolute': item['run_ends'],
+            'onset_runs_absolute': item['onset_runs'], 'pitch_runs': item['pitch_runs'],
+            'source_url': item['source_url'], 'midi_url': item['midi_url'], 'license': item['license'], 'maintainer': item['maintainer'],
+            'ioi': item['ioi_medians'],
+        })
+    for clip in clips:
         clip_start = max(0.0, clip["passage_start"] - 3.0)
         clip_end = clip["passage_end"] + 3.0
         leading_pad = max(0.0, 3.0 - (clip["passage_start"] - clip_start))
@@ -146,7 +164,7 @@ def main() -> None:
             })
         notes.sort(key=lambda item: (item["start"], item["pitch"]))
         output.append({
-            **{key: value for key, value in clip.items() if key != "midi_path"},
+            **{key: value for key, value in clip.items() if key != "midi_path" and not key.endswith('_absolute')},
             "clip_start": round(clip_start, 4), "clip_end": round(clip_end, 4),
             "duration": round(clip_end - clip_start + leading_pad, 4),
             "leading_pad": round(leading_pad, 4),
@@ -158,6 +176,13 @@ def main() -> None:
                 "play_end": clip["audio"].get("end", clip["passage_end"] if clip["audio"]["type"] == "youtube" else clip_end),
             },
             "note_count": len(notes), "notes": notes,
+            'motif_notes': [
+                {'start': round(t - clip_start + leading_pad, 4),
+                 'end': round(t - clip_start + leading_pad + min(clip['ioi'][i] * .85, .35), 4),
+                 'pitch': pitch, 'velocity': 90, 'run': i + 1}
+                for i, (times, pitches) in enumerate(zip(clip.get('onset_runs_absolute', []), clip.get('pitch_runs', [])))
+                for t, pitch in zip(times, pitches)
+            ],
         })
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text(json.dumps(output, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")

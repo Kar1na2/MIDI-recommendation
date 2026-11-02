@@ -4,84 +4,70 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#f7f7f3">
-  <title>Three rises · bepop experiment</title>
+  <title>Three rises · Classical listening lab</title>
   <link rel="stylesheet" href="css/experiment.css">
 </head>
 <body>
   <header class="page-head">
     <a class="back-link" href="index.html"><span aria-hidden="true">←</span> Back to bepop</a>
-    <p class="issue-label">Bepop · Listening experiment 01</p>
-    <h1>Three rises,<br><em>regardless of chord.</em></h1>
-    <p class="deck">A visual and listening study of the ascending instrumental figure in 1nonly’s “Meaningless Love.” We compare three consecutive arpeggios by their upward motion and note counts, without requiring the same pitches or chords.</p>
+    <p class="issue-label">Bepop · Listening experiment 02</p>
+    <h1>Up, higher,<br><em>then in between.</em></h1>
+    <p class="deck">15 classical score excerpts to compare with the instrumental in 1nonly’s “Meaningless Love.” Three consecutive rising figures, followed by a fresh start each time. Their top notes trace <b>low → high → middle</b>.</p>
     <div class="hero-chips" aria-label="Experiment priorities">
-      <span class="chip chip-pink">ascending contour</span>
-      <span class="chip chip-blue">three consecutive runs</span>
-      <span class="chip chip-yellow">matching note counts preferred</span>
+      <span class="chip chip-pink">three adjacent rises</span>
+      <span class="chip chip-blue">peak 1 &lt; peak 3 &lt; peak 2</span>
+      <span class="chip chip-yellow">equal note counts preferred</span>
     </div>
   </header>
-
   <main>
-    <section class="study-section shortlist-section" aria-labelledby="shortlist-heading">
-      <div class="section-intro">
-        <div class="section-index">00 <span>/</span> Ranked audition list</div>
-        <h2 id="shortlist-heading">15 classical leads to check by ear</h2>
-        <p>Ranked by the available MIDI screen for three adjacent rising runs, with equal note counts favored. Each linked recording search is paired with the scan's approximate time. The source MIDI is a transcription or score rendering, so the “one–higher–middle” ending still needs listening confirmation; the rank is a review order, not a claim that all 15 pass that final contour test.</p>
-        <p class="caveat">The MIDI screen filters out descending or intervening top-line attacks, but its event detector can miss quiet notes and confuse accompaniment with melody. Open a performance, jump to the listed time, and check that the three rises are uninterrupted and the last three notes have the requested low–high–middle shape.</p>
+    <section class="original-section" aria-labelledby="original-heading">
+      <div class="original-copy">
+        <div class="section-index">Your reference</div>
+        <h2 id="original-heading">Meaningless Love</h2>
+        <p>Original recording · 1nonly · piano-like instrumental</p>
       </div>
-      <div id="rankedList" class="ranked-list" aria-live="polite"></div>
+      <div id="originalAudio" class="original-player"></div>
     </section>
+    <details class="original-details">
+      <summary>See the original’s MIDI transcription</summary>
+      <p class="method-footnote">This Basic Pitch transcription is noisy and includes sustain overlap. The audio is the reference; the required peak contour comes from your description.</p>
+      <div id="originalMidi"></div>
+    </details>
 
-    <section class="study-section midi-section" aria-labelledby="midi-heading">
+    <section class="study-section" aria-labelledby="compare-heading">
       <div class="section-intro">
-        <div class="section-index">01 <span>/</span> MIDI findings</div>
-        <h2 id="midi-heading">Look for three quick climbs</h2>
-        <p>Each piano roll shows three seconds of context before and after the reported passage. The shaded span marks only the passage. Look for three consecutive ascending runs; equal note counts are preferred, while pitches and chords can differ. MIDI playback starts at the shaded passage and continues through its three-second tail.</p>
-        <p class="caveat">The 15-item queue above combines a few score-side leads with catalogue MIDI transcriptions. Those catalogue timestamps are approximate and may reflect transcription errors; the target’s MIDI timing is also a working hypothesis. Verify each passage against a performance before treating it as a match.</p>
+        <div class="section-index">01 <span>/</span> Compare the excerpts</div>
+        <h2 id="compare-heading">Choose a piece. Listen for the shape.</h2>
+        <p>Select any title to hear its score-derived MIDI excerpt. Switch between the full score and the isolated rising line. MIDI views include three seconds before and after the excerpt; playback starts at the excerpt and ends after the three-second tail. The play bar has no excerpt highlight.</p>
+        <p class="caveat">The screen follows the highest newly attacked note within each 55 ms attack group in MIDI 48–108. It retains every attack group in that register between the three rises. Other voices and lower bass notes can still sound underneath; these are score-side matches to audition, not a claim of the same melody or harmony.</p>
       </div>
-      <div id="midiCards" class="clip-stack" aria-live="polite"></div>
-    </section>
-
-    <section class="study-section audio-section" aria-labelledby="audio-heading">
-      <div class="section-intro">
-        <div class="section-index">02 <span>/</span> Audio comparison</div>
-        <h2 id="audio-heading">Listen to the comparisons</h2>
-        <p>Local playback starts at the passage and runs through the three-second tail. YouTube players are limited to the selected passage only. Performance recordings may not line up exactly with score-MIDI timing, so listen for the upward shape rather than an exact note match.</p>
+      <div class="comparison-layout">
+        <nav id="rankedList" class="ranked-list" aria-label="Classical pieces, most similar first"></nav>
+        <div id="selectedCandidate" class="selected-candidate" aria-live="polite"></div>
       </div>
-      <div id="audioCards" class="audio-stack"></div>
     </section>
 
     <section class="method-section" aria-labelledby="method-heading">
-      <div class="section-index">03 <span>/</span> Methodology</div>
+      <div class="section-index">02 <span>/</span> Evidence and ranking</div>
       <div class="method-grid">
         <div>
-          <h2 id="method-heading">How the scan works</h2>
+          <h2 id="method-heading">A shape test, not a chord match.</h2>
           <ol class="steps">
-            <li><b>Transcribe by source.</b> A piano-and-pedal model was tried on the isolated <code>other</code> stem; a monophonic pitch tracker on <code>bass</code>; and a drum-specific model on <code>drums</code>.</li>
-            <li><b>Find rising runs.</b> Collapse attacks within 55 ms, then keep runs with at least three notes, at least a five-semitone rise, and no large downward steps.</li>
-            <li><b>Rank triples.</b> Search for three adjacent rising runs. Equal note counts rank first; chords, keys, and exact pitches do not contribute.</li>
-            <li><b>Listen back.</b> MIDI results are candidates, not confirmation. Check that the shaded passage contains three rising figures with no extra attack between them.</li>
+            <li><b>Three uninterrupted rises.</b> Each contains at least three attacks and rises at least five semitones. A downward or repeated attack starts a new figure; no intervening fragment is skipped.</li>
+            <li><b>A specific peak contour.</b> The first figure’s peak is lower than the third’s; the third’s is lower than the second’s. This interprets your ending pattern across the three arpeggios.</li>
+            <li><b>Most similar first.</b> All selected passages have broken-chord-like rises. Equal counts rank first, followed by closeness to the target’s approximate 0.15 s attack pulse, evenness, and shorter gaps. Keys and chord names are ignored.</li>
+            <li><b>Listen and compare.</b> The isolated line is the detector’s reduction of the score. The full score lets you hear the surrounding voices. Excerpt times refer to the linked MIDI, not an independently timed performance video.</li>
           </ol>
-          <p class="method-footnote">The target transcription has pedal events, but its opening notes overlap heavily. The passage count used for this visualization is a review hypothesis, not verified ground truth.</p>
         </div>
-        <div class="code-panel">
-          <div class="code-heading"><span class="code-dot"></span> search_arpeggio_triples.py</div>
-          <pre><code>if current:
-    dt = event[0] - current[-1][0]
-    dp = event[1] - current[-1][1]
-    if not (0 &lt; dt &lt;= 0.42 and 0 &lt; dp &lt;= 12):
-        keep_if_rising(current)
-        current = []
-    current.append(event)
-
-# rank equal-count triples first
-equal_counts = len(set(run_counts)) == 1</code></pre>
-          <p class="code-note">Rising steps only · 0.42 s maximum between attacks · 0.60 s maximum between runs. No chord or key score.</p>
-        </div>
+        <aside class="evidence-panel">
+          <h3>Reading the piano roll</h3>
+          <p>Gray notes are score context. The pale band marks only the excerpt. The three rising figures are colored individually, with their top notes shown above the player.</p>
+          <p>Preview audio is synthesized from the score MIDI, so it plays in sync with the display. It is not a concert recording or an audio-to-MIDI transcription of that performance.</p>
+          <p>Each piece links to its score, source MIDI and license. The extracted score data retains that source’s license.</p>
+          <a class="report-link" href="data/experiment/CLASSICAL_REPORT.md">Read the screening report ↗</a>
+        </aside>
       </div>
-      <footer class="page-foot">
-        <span>Exploratory pattern match · not a transcription claim</span>
-        <a href="index.html">Return to bepop ↑</a>
-      </footer>
+      <footer class="page-foot"><span>Classical listening lab · public score sources from Mutopia</span><a href="index.html">Return to bepop ↑</a></footer>
     </section>
   </main>
   <script type="module" src="js/experiment.js"></script>
