@@ -1,4 +1,4 @@
-"""Build the static MIDI note data used by the Meaningless Love experiment page."""
+"""Build MIDI excerpt data for the three-rising-arpeggios experiment page."""
 from __future__ import annotations
 
 import json
@@ -8,49 +8,48 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]
 OUT = ROOT / "docs/data/experiment/arpeggio_clips.json"
 
-# Passage times are scan findings; excerpts include a three-second lead-in/out.
+# MIDI views include three seconds before and after each reported passage.
+# Local audio starts at the passage and continues through the three-second tail.
+# YouTube audio is constrained to the chosen performance excerpt only.
 CLIPS = [
     {
         "id": "meaningless-love", "title": "1nonly — Meaningless Love", "kind": "target",
-        "label": "Original · other-stem MIDI", "source": "Basic Pitch transcription of the separated other stem",
+        "label": "Original · other-stem MIDI", "source": "Basic Pitch transcription; timing remains a working hypothesis",
         "midi_path": ROOT / "midi/1nonly - Meaningless Love (Official Music Video)/other.mid",
-        "passage_start": 7.55, "passage_end": 8.91, "clip_start": 4.55, "clip_end": 11.91,
+        "passage_start": 7.55, "passage_end": 8.91,
         "audio": {"type": "local", "src": "audio/1nonly-meaningless-love-official-music-video.mp3"},
     },
     {
-        "id": "chopin-etude-op10-no1", "title": "Chopin — Étude Op. 10 No. 1", "kind": "reference",
-        "label": "Classical reference · MIDI", "source": "Outside reference-score MIDI · Mutopia edition",
-        "midi_path": ROOT / "output/analysis/arpeggio_experiment/references/Chopin_Etude_Op10_No1.mid",
-        "passage_start": 21.7329, "passage_end": 22.7557, "clip_start": 18.7329, "clip_end": 25.7557,
-        "audio": {"type": "youtube", "video_id": "9E82wwNc7r8"},
+        "id": "bach-prelude-c", "title": "Bach — Prelude in C major, BWV 846", "kind": "reference",
+        "label": "Outside-catalogue score lead · 3–5–3 rises",
+        "source": "Score-side contour lead; scanned MIDI is a two-guitar arrangement, not an audio-verified piano transcription",
+        "midi_path": ROOT / "output/analysis/arpeggio_experiment/references/Bach_WTK_BWV846.mid",
+        "passage_start": 1.25, "passage_end": 3.75,
+        "audio": {"type": "youtube", "video_id": "tCarlLNwekA"},
     },
     {
-        "id": "moonlight-sonata", "title": "Beethoven — Moonlight Sonata, Movement I", "kind": "reference",
-        "label": "Classical reference · MIDI", "source": "Outside reference-score MIDI · public-domain score transcription",
-        "midi_path": ROOT / "output/analysis/arpeggio_experiment/references/Moonlight/moonlight1.mid",
-        "passage_start": 16.0, "passage_end": 19.0, "clip_start": 13.0, "clip_end": 22.0,
-        "audio": {"type": "youtube", "video_id": "JnBxRCQbcxs"},
+        "id": "moonlight-sonata-mvt3", "title": "Beethoven — Moonlight Sonata, Movement III", "kind": "reference",
+        "label": "Score-side reference · 4–4–4 rises",
+        "source": "Rising-inversion figures in the piano score; this movement is already represented in the local catalogue",
+        "midi_path": ROOT / "output/analysis/arpeggio_experiment/references/Moonlight/moonlight3.mid",
+        "passage_start": 4.25, "passage_end": 7.0,
+        "audio": {"type": "youtube", "video_id": "qvgORWX_B0s"},
     },
     {
-        "id": "debussy-arabesque", "title": "Debussy — Arabesque No. 1", "kind": "reference",
-        "label": "Classical reference · MIDI", "source": "Outside reference-score MIDI · Mutopia edition",
-        "midi_path": ROOT / "output/analysis/arpeggio_experiment/references/Debussy_Arabesque_1.mid",
-        "passage_start": 40.1388, "passage_end": 42.3610, "clip_start": 37.1388, "clip_end": 45.3610,
-        "audio": {"type": "youtube", "video_id": "NyYm0fmizlE"},
+        "id": "meovv-ddi-ro-ri", "title": "MEOVV — DDI RO RI", "kind": "mention",
+        "label": "Unconfirmed local lead · 6–6–6 in Basic Pitch MIDI",
+        "source": "Basic Pitch candidate; ByteDance's alternate piano transcription did not recover a strict triple",
+        "midi_path": ROOT / "midi/MEOVV - DDI RO RI [6Ja4MH8qIfhVABsb9Kxjjr]/other.mid",
+        "passage_start": 157.8818, "passage_end": 160.2273,
+        "audio": {"type": "local", "src": "audio/meovv-ddi-ro-ri-mv.mp3"},
     },
     {
-        "id": "taeyang-eyes-nose-lips", "title": "TAEYANG — Eyes, Nose, Lips", "kind": "mention",
-        "label": "Honorable mention · local MIDI candidate", "source": "Project-catalogue Basic Pitch MIDI",
-        "midi_path": ROOT / "midi/TAEYANG - 눈,코,입 (Eyes, Nose, Lips) [0lYtIvI7bO51PZSeK22Mbz]/other.mid",
-        "passage_start": 34.4795, "passage_end": 36.7568, "clip_start": 31.4795, "clip_end": 39.7568,
-        "audio": {"type": "youtube", "video_id": "UwuAPyOImoI"},
-    },
-    {
-        "id": "kiiikii-delulu", "title": "KiiiKiii — Delulu", "kind": "mention",
-        "label": "Honorable mention · local MIDI candidate", "source": "Project-catalogue Basic Pitch MIDI",
-        "midi_path": ROOT / "midi/KiiiKiii - Delulu [3BWXNAPGGWhCJwsOFolnBB]/other.mid",
-        "passage_start": 6.6091, "passage_end": 8.6545, "clip_start": 3.6091, "clip_end": 11.6545,
-        "audio": {"type": "youtube", "video_id": "PBKbf9wlntg"},
+        "id": "lesserafim-impurities", "title": "LE SSERAFIM — Impurities", "kind": "mention",
+        "label": "Unconfirmed local lead · 3–3–3 in Basic Pitch MIDI",
+        "source": "Basic Pitch candidate; ByteDance's alternate piano transcription did not recover a strict triple",
+        "midi_path": ROOT / "midi/LE SSERAFIM - Impurities [7mYwDmbbp8UPLlnRjTJ54X]/other.mid",
+        "passage_start": 21.9341, "passage_end": 22.9432,
+        "audio": {"type": "youtube", "video_id": "I9wUHka2-NQ"},
     },
 ]
 
@@ -149,21 +148,29 @@ def read_midi(path: Path) -> list[tuple[float, float, int, int]]:
 def main() -> None:
     output = []
     for clip in CLIPS:
+        clip_start = max(0.0, clip["passage_start"] - 3.0)
+        clip_end = clip["passage_end"] + 3.0
         notes = []
         for note_start, note_end, pitch, velocity in read_midi(clip["midi_path"]):
-            if note_end <= clip["clip_start"] or note_start >= clip["clip_end"]:
+            if note_end <= clip_start or note_start >= clip_end:
                 continue
             notes.append({
-                "start": round(max(note_start, clip["clip_start"]) - clip["clip_start"], 4),
-                "end": round(min(note_end, clip["clip_end"]) - clip["clip_start"], 4),
+                "start": round(max(note_start, clip_start) - clip_start, 4),
+                "end": round(min(note_end, clip_end) - clip_start, 4),
                 "pitch": pitch, "velocity": velocity,
             })
         notes.sort(key=lambda item: (item["start"], item["pitch"]))
         output.append({
             **{key: value for key, value in clip.items() if key != "midi_path"},
-            "duration": round(clip["clip_end"] - clip["clip_start"], 4),
-            "passage_start_relative": round(clip["passage_start"] - clip["clip_start"], 4),
-            "passage_end_relative": round(clip["passage_end"] - clip["clip_start"], 4),
+            "clip_start": round(clip_start, 4), "clip_end": round(clip_end, 4),
+            "duration": round(clip_end - clip_start, 4),
+            "passage_start_relative": round(clip["passage_start"] - clip_start, 4),
+            "passage_end_relative": round(clip["passage_end"] - clip_start, 4),
+            "audio": {
+                **clip["audio"],
+                "play_start": clip["audio"].get("start", clip["passage_start"]),
+                "play_end": clip["audio"].get("end", clip["passage_end"] if clip["audio"]["type"] == "youtube" else clip_end),
+            },
             "note_count": len(notes), "notes": notes,
         })
     OUT.parent.mkdir(parents=True, exist_ok=True)

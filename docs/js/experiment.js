@@ -40,6 +40,15 @@ function createRoll(clip) {
   const x = (seconds) => left + (seconds / clip.duration) * plotWidth;
   const y = (pitch) => top + ((maxPitch - pitch) / pitchSpan) * plotHeight;
 
+  svg.append(svgNode('rect', {
+    x: x(clip.passage_start_relative), y: top,
+    width: x(clip.passage_end_relative) - x(clip.passage_start_relative),
+    height: plotHeight, class: 'excerpt-highlight',
+  }));
+  for (const edge of [clip.passage_start_relative, clip.passage_end_relative]) {
+    svg.append(svgNode('line', { x1: x(edge), x2: x(edge), y1: top, y2: height - bottom, class: 'excerpt-edge' }));
+  }
+
   for (let pitch = minPitch; pitch <= maxPitch; pitch += 1) {
     const lineClass = pitch % 12 === 0 ? 'octave-line' : 'grid-line';
     svg.append(svgNode('line', { x1: left, x2: width - right, y1: y(pitch), y2: y(pitch), class: lineClass }));
@@ -76,11 +85,13 @@ function renderMidiCard(clip) {
   titleWrap.append(element('span', 'kind-tag', clip.label));
   titleWrap.append(element('h3', '', clip.title));
   titleWrap.append(element('p', '', clip.source));
-  const time = element('span', 'time-chip', `Excerpt ${secRange(clip.clip_start, clip.clip_end)} · passage ${secRange(clip.passage_start, clip.passage_end)}`);
+  const time = element('span', 'time-chip', `View ${secRange(clip.clip_start, clip.clip_end)} · excerpt ${secRange(clip.passage_start, clip.passage_end)}`);
   head.append(titleWrap, time);
   card.append(head, createRoll(clip));
   const legend = element('div', 'clip-legend');
-  legend.append(element('span', 'legend-swatch'), document.createTextNode('MIDI note'), element('span', 'count-pill', `${clip.note_count} note attacks in view`));
+  legend.append(element('span', 'legend-swatch'), document.createTextNode('MIDI note'),
+    element('span', 'legend-focus'), document.createTextNode('excerpt'),
+    element('span', 'count-pill', `${clip.note_count} note attacks in view`));
   card.append(legend);
   const player = element('div', 'midi-preview-wrap');
   renderMidiAudio(clip, player);
@@ -88,7 +99,7 @@ function renderMidiCard(clip) {
   return card;
 }
 
-function createScrub(duration, focusStart, focusEnd) {
+function createScrub(duration) {
   const scrub = element('div', 'scrub');
   scrub.tabIndex = 0;
   scrub.setAttribute('role', 'slider');
@@ -96,12 +107,9 @@ function createScrub(duration, focusStart, focusEnd) {
   scrub.setAttribute('aria-valuemin', '0');
   scrub.setAttribute('aria-valuemax', String(Math.round(duration)));
   scrub.setAttribute('aria-valuenow', '0');
-  const band = element('span', 'focus-range');
-  band.style.left = `${focusStart / duration * 100}%`;
-  band.style.width = `${(focusEnd - focusStart) / duration * 100}%`;
   const playhead = element('span', 'playhead');
   playhead.style.left = '0%';
-  scrub.append(band, playhead);
+  scrub.append(playhead);
   return { scrub, playhead };
 }
 
@@ -109,19 +117,22 @@ function renderLocalAudio(clip, body) {
   const audio = element('audio', 'clip-audio');
   audio.src = clip.audio.src;
   audio.preload = 'metadata';
-  audio.setAttribute('aria-label', `${clip.title}, excerpt ${fmt(clip.clip_start)} to ${fmt(clip.clip_end)}`);
+  audio.setAttribute('aria-label', `${clip.title}, playback from ${fmt(clip.audio.play_start)} to ${fmt(clip.audio.play_end)}`);
   const row = element('div', 'player-row');
   const play = element('button', 'play-button', '▶');
   play.type = 'button';
   play.setAttribute('aria-label', `Play ${clip.title} excerpt`);
   const label = element('span', 'play-label', 'Play excerpt');
-  const timeline = createScrub(clip.duration, clip.passage_start_relative, clip.passage_end_relative);
-  const time = element('span', 'time-readout', `0:00 / ${fmt(clip.duration)}`);
+  const playStart = clip.audio.play_start;
+  const playEnd = clip.audio.play_end;
+  const playDuration = playEnd - playStart;
+  const timeline = createScrub(playDuration);
+  const time = element('span', 'time-readout', `0:00 / ${fmt(playDuration)}`);
   row.append(play, label, timeline.scrub, time);
   const update = () => {
-    const elapsed = Math.max(0, Math.min(clip.duration, audio.currentTime - clip.clip_start));
-    timeline.playhead.style.left = `${elapsed / clip.duration * 100}%`;
-    time.textContent = `${fmt(elapsed)} / ${fmt(clip.duration)}`;
+    const elapsed = Math.max(0, Math.min(playDuration, audio.currentTime - playStart));
+    timeline.playhead.style.left = `${elapsed / playDuration * 100}%`;
+    time.textContent = `${fmt(elapsed)} / ${fmt(playDuration)}`;
     timeline.scrub.setAttribute('aria-valuenow', String(Math.floor(elapsed)));
   };
   play.addEventListener('click', async () => {
@@ -129,34 +140,34 @@ function renderLocalAudio(clip, body) {
       audio.pause();
       return;
     }
-    if (audio.currentTime < clip.clip_start || audio.currentTime >= clip.clip_end) audio.currentTime = clip.clip_start;
+    if (audio.currentTime < playStart || audio.currentTime >= playEnd) audio.currentTime = playStart;
     try { await audio.play(); } catch { label.textContent = 'Playback unavailable'; }
   });
   audio.addEventListener('play', () => { play.textContent = 'Ⅱ'; label.textContent = 'Pause excerpt'; });
   audio.addEventListener('pause', () => { play.textContent = '▶'; label.textContent = 'Play excerpt'; });
   audio.addEventListener('timeupdate', () => {
     update();
-    if (audio.currentTime >= clip.clip_end) {
+    if (audio.currentTime >= playEnd) {
       audio.pause();
-      audio.currentTime = clip.clip_end;
+      audio.currentTime = playEnd;
     }
   });
   audio.addEventListener('loadedmetadata', update);
   timeline.scrub.addEventListener('click', (event) => {
     const rect = timeline.scrub.getBoundingClientRect();
     const fraction = Math.max(0, Math.min(1, (event.clientX - rect.left) / rect.width));
-    audio.currentTime = clip.clip_start + fraction * clip.duration;
+    audio.currentTime = playStart + fraction * (playEnd - playStart);
     update();
   });
   timeline.scrub.addEventListener('keydown', (event) => {
     if (!['ArrowLeft', 'ArrowRight', 'Home', 'End'].includes(event.key)) return;
     event.preventDefault();
-    if (event.key === 'Home') audio.currentTime = clip.clip_start;
-    else if (event.key === 'End') audio.currentTime = clip.clip_end;
-    else audio.currentTime = Math.max(clip.clip_start, Math.min(clip.clip_end, audio.currentTime + (event.key === 'ArrowRight' ? 1 : -1)));
+    if (event.key === 'Home') audio.currentTime = playStart;
+    else if (event.key === 'End') audio.currentTime = playEnd;
+    else audio.currentTime = Math.max(playStart, Math.min(playEnd, audio.currentTime + (event.key === 'ArrowRight' ? 1 : -1)));
     update();
   });
-  body.append(audio, row, element('span', 'audio-window-label', `Local audio excerpt · ${secRange(clip.clip_start, clip.clip_end)} · passage ${secRange(clip.passage_start, clip.passage_end)}`));
+  body.append(audio, row, element('span', 'audio-window-label', `Local audio · starts at excerpt ${fmt(playStart)}, stops after its 3 s tail at ${fmt(playEnd)}`));
 }
 
 function renderMidiAudio(clip, body) {
@@ -165,8 +176,11 @@ function renderMidiAudio(clip, body) {
   play.type = 'button';
   play.setAttribute('aria-label', `Play MIDI preview for ${clip.title}`);
   const label = element('span', 'play-label', 'Play MIDI preview');
-  const timeline = createScrub(clip.duration, clip.passage_start_relative, clip.passage_end_relative);
-  const time = element('span', 'time-readout', `0:00 / ${fmt(clip.duration)}`);
+  const playDuration = clip.duration - clip.passage_start_relative;
+  const timeline = createScrub(playDuration);
+  timeline.scrub.setAttribute('role', 'progressbar');
+  timeline.scrub.removeAttribute('tabindex');
+  const time = element('span', 'time-readout', `0:00 / ${fmt(playDuration)}`);
   row.append(play, label, timeline.scrub, time);
   let context;
   let timer;
@@ -182,22 +196,24 @@ function renderMidiAudio(clip, body) {
     label.textContent = 'Play MIDI preview';
   };
   const draw = (position) => {
-    timeline.playhead.style.left = `${Math.max(0, Math.min(1, position / clip.duration)) * 100}%`;
-    time.textContent = `${fmt(Math.min(position, clip.duration))} / ${fmt(clip.duration)}`;
+    timeline.playhead.style.left = `${Math.max(0, Math.min(1, position / playDuration)) * 100}%`;
+    time.textContent = `${fmt(Math.min(position, playDuration))} / ${fmt(playDuration)}`;
     timeline.scrub.setAttribute('aria-valuenow', String(Math.floor(position)));
   };
   play.addEventListener('click', async () => {
     if (activeNodes.length) { stop(); return; }
     context ??= new AudioContext();
     await context.resume();
+    const excerptStart = clip.passage_start_relative;
     const startAt = context.currentTime + 0.06;
     startedAt = performance.now();
     const master = context.createGain();
     master.gain.value = 0.48;
     master.connect(context.destination);
     for (const note of clip.notes) {
-      const onset = startAt + note.start;
-      const offset = startAt + Math.max(note.end, note.start + 0.07);
+      if (note.end <= excerptStart) continue;
+      const onset = startAt + Math.max(0, note.start - excerptStart);
+      const offset = startAt + Math.max(0.07, note.end - excerptStart);
       const envelope = context.createGain();
       envelope.gain.setValueAtTime(0.0001, onset);
       envelope.gain.linearRampToValueAtTime(0.042, onset + 0.012);
@@ -216,19 +232,19 @@ function renderMidiAudio(clip, body) {
     play.textContent = 'Ⅱ';
     label.textContent = 'Pause preview';
     const tick = () => {
-      const elapsed = Math.min(clip.duration, (performance.now() - startedAt) / 1000);
+      const elapsed = Math.min(playDuration, (performance.now() - startedAt) / 1000);
       draw(elapsed);
-      if (elapsed >= clip.duration) stop();
+      if (elapsed >= playDuration) stop();
       else timer = setTimeout(tick, 80);
     };
     tick();
   });
-  body.append(row, element('span', 'audio-window-label', `Synthesized from MIDI · ${secRange(clip.clip_start, clip.clip_end)}`));
+  body.append(row, element('span', 'audio-window-label', `Synthesized from MIDI · starts at excerpt and plays through 3 s of tail`));
 }
 
 function renderYoutubeAudio(clip, body) {
-  const start = Math.floor(clip.clip_start);
-  const end = Math.ceil(clip.clip_end);
+  const start = Math.round(clip.audio.play_start);
+  const end = Math.round(clip.audio.play_end);
   const frame = document.createElement('iframe');
   frame.className = 'youtube-frame';
   frame.title = `${clip.title} performance audio excerpt`;
@@ -237,31 +253,22 @@ function renderYoutubeAudio(clip, body) {
   frame.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
   frame.allowFullscreen = true;
   frame.src = `https://www.youtube-nocookie.com/embed/${encodeURIComponent(clip.audio.video_id)}?start=${start}&end=${end}&controls=1&rel=0&playsinline=1`;
-  const link = element('a', 'audio-window-label', `Performance audio · excerpt ${secRange(clip.clip_start, clip.clip_end)} · passage ${secRange(clip.passage_start, clip.passage_end)} (performance timing may differ)`);
+  const link = element('a', 'audio-window-label', `Open performance audio · excerpt ${secRange(clip.audio.play_start, clip.audio.play_end)} (performance timing may differ)`);
   link.href = `https://www.youtube.com/watch?v=${encodeURIComponent(clip.audio.video_id)}&t=${start}s`;
   link.target = '_blank';
   link.rel = 'noopener noreferrer';
-  const track = createScrub(clip.duration, clip.passage_start_relative, clip.passage_end_relative);
-  track.scrub.removeAttribute('role');
-  track.scrub.removeAttribute('tabindex');
-  track.scrub.removeAttribute('aria-label');
-  track.scrub.removeAttribute('aria-valuemin');
-  track.scrub.removeAttribute('aria-valuemax');
-  track.scrub.removeAttribute('aria-valuenow');
-  track.scrub.setAttribute('aria-hidden', 'true');
-  track.playhead.hidden = true;
-  const timelineRow = element('div', 'player-row');
-  timelineRow.append(element('span', 'play-label', 'Excerpt'), track.scrub,
-    element('span', 'time-readout', `${fmt(clip.audio.clip_start)}–${fmt(clip.audio.clip_end)}`));
-  body.append(frame, timelineRow, link);
+  body.append(frame, link);
 }
 
 function renderAudioCard(clip) {
   const card = element('article', 'audio-card');
   const head = element('div', 'audio-card-head');
-  head.append(element('span', 'kind-tag', clip.kind === 'target' ? 'Original audio' : clip.kind === 'reference' ? 'Classical performance audio' : 'Honorable mention audio'));
+  head.append(element('span', 'kind-tag', clip.kind === 'target' ? 'Original audio' : clip.kind === 'reference' ? 'Score reference audio' : 'Unconfirmed candidate audio'));
   head.append(element('h3', '', clip.title));
-  head.append(element('p', '', `Passage ${secRange(clip.passage_start, clip.passage_end)} · excerpt ${secRange(clip.clip_start, clip.clip_end)}`));
+  const audioWindow = clip.audio.type === 'youtube'
+    ? `MIDI passage ${secRange(clip.passage_start, clip.passage_end)} · video excerpt ${secRange(clip.audio.play_start, clip.audio.play_end)}`
+    : `MIDI passage ${secRange(clip.passage_start, clip.passage_end)} · audio stops at ${fmt(clip.audio.play_end)}`;
+  head.append(element('p', '', audioWindow));
   const body = element('div', 'audio-card-body');
   if (clip.audio.type === 'local') renderLocalAudio(clip, body);
   else renderYoutubeAudio(clip, body);

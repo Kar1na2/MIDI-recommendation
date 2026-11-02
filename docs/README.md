@@ -40,7 +40,7 @@ docs/
 │   ├── sequences.json      - compact chord/note sequences for ALL songs, loaded at boot (matching engine input)
 │   ├── songs/<id>.json      - full per-song note/chord detail, lazy-loaded when a song is opened
 │   ├── DATA_LAYER.md         - full schema reference for every file above (Phase 4 deliverable)
-│   └── experiment/arpeggio_clips.json - four MIDI excerpt event sets for the report page
+│   └── experiment/arpeggio_clips.json - five buffered MIDI excerpt event sets for the report page
 └── audio/<id>.mp3        - 75 tracks, 128kbps (Phase 4 deliverable)
 ```
 

@@ -92,8 +92,8 @@ h1 em { font-weight: 400; }
 .piano-roll { display: block; width: 100%; height: auto; min-height: 150px; border-block: 1px solid #ecece7; background: #fcfcfa; }
 .piano-roll text { font-family: inherit; fill: #7d8078; font-size: 10px; }
 .piano-roll .note { fill: var(--clip-accent); opacity: .84; }
-.piano-roll .focus-band { fill: var(--clip-accent); opacity: .105; }
-.piano-roll .focus-line { stroke: var(--clip-accent); stroke-width: 1.2; stroke-dasharray: 3 3; opacity: .78; }
+.piano-roll .excerpt-highlight { fill: var(--clip-accent); opacity: .11; }
+.piano-roll .excerpt-edge { stroke: var(--clip-accent); stroke-width: 1.2; stroke-dasharray: 3 3; opacity: .78; }
 .piano-roll .grid-line { stroke: #e7e8e2; stroke-width: 1; }
 .piano-roll .octave-line { stroke: #d3d5cf; stroke-width: 1; }
 .piano-roll .axis-line { stroke: #b8bbb3; stroke-width: 1; }
@@ -116,7 +116,6 @@ h1 em { font-weight: 400; }
 .play-label { min-width: 74px; color: #444640; font-size: 11px; font-weight: 650; }
 .scrub { position: relative; height: 20px; flex: 1; cursor: pointer; touch-action: none; }
 .scrub::before { content: ""; position: absolute; top: 9px; left: 0; right: 0; height: 3px; background: #e2e3dd; border-radius: 4px; }
-.scrub .focus-range { position: absolute; top: 7px; height: 7px; background: #ed9fc1; border-radius: 4px; }
 .scrub .playhead { position: absolute; top: 4px; width: 2px; height: 13px; background: var(--ink); transform: translateX(-1px); }
 .time-readout { color: var(--muted); font: 10px ui-monospace, SFMono-Regular, Consolas, monospace; font-variant-numeric: tabular-nums; white-space: nowrap; }
 .audio-window-label { color: var(--muted); font-size: 10px; font-variant-numeric: tabular-nums; }
