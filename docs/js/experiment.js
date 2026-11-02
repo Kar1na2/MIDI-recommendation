@@ -295,7 +295,7 @@ function renderMidiAudio(clip, body, roll) {
 
 async function init() {
   try {
-    const response = await fetch('data/experiment/arpeggio_clips.json');
+    const response = await fetch('data/experiment/arpeggio_clips.json?v=classical2');
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     const clips = await response.json();
     const original = clips.find(clip => clip.kind === 'target');
