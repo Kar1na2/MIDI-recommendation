@@ -2,11 +2,11 @@
 
 Interpretation: the three consecutive rising figures end on peaks **p1 < p3 < p2**, giving low → high → middle. This applies across the three figures, rather than a three-note ornament within each figure.
 
-The public-score scan covered **1,025 instrumental MIDI editions** found via Mutopia’s piano and guitar catalogue pages. It found **27 score editions** with broken-chord-like consecutive rises and the requested peak contour; 15 distinct works were selected for the page. The scan does not establish perceptual similarity to the original recording.
+The public-score scan covered **1,025 instrumental MIDI editions** found via Mutopia’s piano and guitar catalogue pages. It found **31 score editions** with broken-chord-like consecutive rises and the requested peak contour; 15 distinct works were selected for the page. The scan does not establish perceptual similarity to the original recording.
 
 ## Definition and ranking
 
-- Highest newly attacked note per 55 ms attack group, within MIDI 48–108. Sustain durations do not count as new attacks.
+- Highest newly attacked note per 55 ms attack group, within MIDI 21–108. Sustain durations do not count as new attacks.
 - Three adjacent rising runs: at least three notes, at least five semitones of rise, steps no larger than an octave, at most 0.42 seconds between attacks and 0.60 seconds between runs. All intervening attack groups are retained; no unrelated fragment is skipped.
 - A broken-chord-like screen requires 2–5 pitch classes in each run and at least two intervals of a minor third or larger. This is a loose symbolic filter, not a harmonic proof.
 - Peak notes must satisfy p1 < p3 < p2, using MIDI register, not pitch class.
@@ -18,25 +18,25 @@ All times below refer to the source MIDI score rendering. Playback includes the 
 
 | Rank | Work / source | MIDI start–last attack | Notes per rise | Peak MIDI notes |
 | --- | --- | --- | --- | --- |
-| 1 | [Burgmüller — La Chasse, Op. 100 No. 9](https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=220) | 27.300–28.500 s | 3–3–3 | 68 → 71 → 69 |
-| 2 | [Giuliani — Op. 50 No. 3](https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=1331) | 15.000–16.212 s | 3–3–3 | 72 → 77 → 74 |
+| 1 | [Burgmüller — La Chasse, Op. 100 No. 9](https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=220) | 25.500–26.700 s | 3–3–3 | 69 → 72 → 71 |
+| 2 | [Giuliani — Op. 50 No. 3](https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=1331) | 16.818–18.030 s | 3–3–3 | 72 → 77 → 74 |
 | 3 | [Schubert — Impromptu in G-flat major, D. 899 No. 3](https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=1193) | 168.167–169.500 s | 3–3–3 | 63 → 66 → 65 |
-| 4 | [Chopin — Prelude in E-flat major, Op. 28 No. 19](https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=2192) | 20.119–21.071 s | 3–3–3 | 77 → 80 → 78 |
+| 4 | [Chopin — Prelude in E-flat major, Op. 28 No. 19](https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=2192) | 65.119–66.071 s | 3–3–3 | 87 → 91 → 89 |
 | 5 | [Carcassi — Étude in C major, Op. 60 No. 1](https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=13) | 45.000–47.062 s | 4–4–4 | 64 → 69 → 67 |
 | 6 | [Burgmüller — L’Adieu, Op. 100 No. 12](https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=223) | 16.250–17.120 s | 3–3–3 | 64 → 72 → 71 |
 | 7 | [Rachmaninoff — Prelude in C-sharp minor, Op. 3 No. 2](https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=2033) | 56.604–57.438 s | 3–3–3 | 66 → 69 → 68 |
 | 8 | [Haydn — Sonata in G major, Hob. XVI:27, II: Menuetto](https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=186) | 33.478–35.217 s | 3–3–3 | 71 → 79 → 75 |
-| 9 | [Sor — Étude, Op. 6 No. 11](https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=2134) | 256.486–258.648 s | 3–3–3 | 59 → 66 → 64 |
+| 9 | [Sor — Étude, Op. 6 No. 11](https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=2134) | 157.567–159.730 s | 3–3–3 | 68 → 71 → 69 |
 | 10 | [Mendelssohn — Song Without Words, Op. 85 No. 1](https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=1744) | 74.167–75.833 s | 3–3–5 | 64 → 69 → 67 |
-| 11 | [Beethoven — Appassionata Sonata, Op. 57, III](https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=937) | 380.261–381.380 s | 3–5–3 | 68 → 77 → 72 |
+| 11 | [Beethoven — Appassionata Sonata, Op. 57, III](https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=937) | 210.112–211.231 s | 3–5–3 | 68 → 77 → 72 |
 | 12 | [Handel — Allemande](https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=166) | 39.167–41.667 s | 5–3–5 | 67 → 74 → 69 |
-| 13 | [Debussy — Clair de lune](https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=1778) | 144.500–147.000 s | 5–3–3 | 66 → 77 → 74 |
-| 14 | [Scarlatti — Sonata in C major](https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=139) | 23.250–25.500 s | 4–4–3 | 67 → 72 → 70 |
+| 13 | [Debussy — Clair de lune](https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=1778) | 144.250–147.000 s | 6–3–3 | 66 → 77 → 74 |
+| 14 | [Scarlatti — Sonata in C major](https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=139) | 53.250–55.500 s | 4–4–3 | 69 → 74 → 72 |
 | 15 | [Beethoven — Minuet, WoO 82](https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=904) | 138.214–143.036 s | 7–6–6 | 75 → 85 → 84 |
 
 ## Playback and limits
 
-The page synthesizes the actual source-MIDI excerpt, with an optional isolated detector line. That makes timing reproducible and avoids applying a MIDI timestamp to a different concert recording. The detector line is a reduction of the score; lower-register and simultaneous accompaniment can still sound in the full score. The no-intervening-note test applies to the screened attack stream, not every voice in the composition. No concert recording has been independently aligned or certified.
+The page synthesizes the actual source-MIDI excerpt, with an optional isolated detector line. That makes timing reproducible and avoids applying a MIDI timestamp to a different concert recording. The detector line is a reduction of the score; simultaneous accompaniment can still sound in the full score. Every attack group across the full piano register is retained. Simultaneous pitches within a group are reduced to their highest note; no intervening attack group is skipped. No concert recording has been independently aligned or certified.
 
 The original audio window is 7.55–13.10 seconds, followed by three seconds of context. Its Basic Pitch MIDI remains a noisy transcription hypothesis. The target peak contour is supplied by the user, not confirmed from that transcription. This ranking prioritizes the requested structure and is not an audio-embedding or listener-validated similarity score.
 

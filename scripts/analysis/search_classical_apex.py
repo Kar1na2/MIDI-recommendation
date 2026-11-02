@@ -114,7 +114,7 @@ def main() -> None:
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument('--download', action='store_true')
     ap.add_argument('--page-limit', type=int, default=100)
-    ap.add_argument('--min-note', type=int, default=48)
+    ap.add_argument('--min-note', type=int, default=21)
     ap.add_argument('--max-note', type=int, default=108)
     ap.add_argument('--instrument', choices=['Piano', 'Guitar'], default='Piano')
     args = ap.parse_args()
