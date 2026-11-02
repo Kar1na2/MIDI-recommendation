@@ -28,15 +28,19 @@ processing otherwise ignores/mangles anything starting with `_`, which
 ```
 docs/
 ├── index.html          - the entire page shell (search bar, home screen, song view, analysis panel)
+├── experiment.html     - visual report for the Meaningless Love ascending-arpeggio study
 ├── css/styles.css       - all styling (dark/Spotify-ish palette, layout transitions)
+├── css/experiment.css   - editorial report-page styling
 ├── js/
 │   ├── app.js            - UI logic: search, wavesurfer wiring, selection handling, panel rendering
-│   └── alignment.js       - Phase 4's ported matching engine (query-vs-corpus chord/note search)
+│   ├── alignment.js       - Phase 4's ported matching engine (query-vs-corpus chord/note search)
+│   └── experiment.js      - renders the MIDI rolls and buffered audio players for the report page
 ├── data/
 │   ├── manifest.json      - {song_id, title, duration} × 75, loaded at boot
 │   ├── sequences.json      - compact chord/note sequences for ALL songs, loaded at boot (matching engine input)
 │   ├── songs/<id>.json      - full per-song note/chord detail, lazy-loaded when a song is opened
-│   └── DATA_LAYER.md         - full schema reference for every file above (Phase 4 deliverable)
+│   ├── DATA_LAYER.md         - full schema reference for every file above (Phase 4 deliverable)
+│   └── experiment/arpeggio_clips.json - four MIDI excerpt event sets for the report page
 └── audio/<id>.mp3        - 75 tracks, 128kbps (Phase 4 deliverable)
 ```
 
@@ -113,3 +117,8 @@ pattern**, or it will silently stop hiding.
   UMD builds exposing the globals `WaveSurfer` and `WaveSurfer.Regions`).
   Bump the version in both tags together if you ever need to; nothing else
   in this repo references that version number.
+- **Arpeggio experiment excerpts**: regenerate the report page's MIDI note
+  windows with `uv run python scripts/webexport/build_arpeggio_experiment_page_data.py`.
+  The Debussy reference MIDI is an ignored local experiment input; it is only
+  needed for regeneration because the committed JSON already contains the
+  rendered excerpt data.
