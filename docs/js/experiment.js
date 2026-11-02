@@ -7,6 +7,7 @@ const fmt = (seconds) => {
   const hundredths = Math.round((seconds - whole) * 100);
   return `${Math.floor(whole / 60)}:${String(whole % 60).padStart(2, '0')}${hundredths ? `.${String(hundredths).padStart(2, '0')}` : ''}`;
 };
+const secRange = (start, end) => `${Number(start).toFixed(2)}–${Number(end).toFixed(2)}s`;
 const noteName = (pitch) => `${PITCH_NAME[pitch % 12]}${Math.floor(pitch / 12) - 1}`;
 const element = (tag, cls, text) => {
   const node = document.createElement(tag);
@@ -39,10 +40,6 @@ function createRoll(clip) {
   const x = (seconds) => left + (seconds / clip.duration) * plotWidth;
   const y = (pitch) => top + ((maxPitch - pitch) / pitchSpan) * plotHeight;
 
-  const bandX = x(clip.focus_start_relative);
-  const bandWidth = Math.max(1, x(clip.focus_end_relative) - bandX);
-  svg.append(svgNode('rect', { x: bandX, y: top, width: bandWidth, height: plotHeight, class: 'focus-band' }));
-
   for (let pitch = minPitch; pitch <= maxPitch; pitch += 1) {
     const lineClass = pitch % 12 === 0 ? 'octave-line' : 'grid-line';
     svg.append(svgNode('line', { x1: left, x2: width - right, y1: y(pitch), y2: y(pitch), class: lineClass }));
@@ -57,9 +54,6 @@ function createRoll(clip) {
     svg.append(svgNode('line', { x1: px, x2: px, y1: top, y2: height - bottom, class: 'grid-line' }));
     svg.append(svgNode('text', { x: px, y: height - 8, 'text-anchor': 'middle' }, `${sec}s`));
   }
-
-  svg.append(svgNode('line', { x1: bandX, x2: bandX, y1: top, y2: height - bottom, class: 'focus-line' }));
-  svg.append(svgNode('line', { x1: bandX + bandWidth, x2: bandX + bandWidth, y1: top, y2: height - bottom, class: 'focus-line' }));
 
   for (const note of clip.notes) {
     const px = x(note.start);
@@ -82,13 +76,15 @@ function renderMidiCard(clip) {
   titleWrap.append(element('span', 'kind-tag', clip.label));
   titleWrap.append(element('h3', '', clip.title));
   titleWrap.append(element('p', '', clip.source));
-  const time = element('span', 'time-chip', `Excerpt ${fmt(clip.clip_start)}–${fmt(clip.clip_end)} · focus ${fmt(clip.focus_start)}–${fmt(clip.focus_end)}`);
+  const time = element('span', 'time-chip', `Excerpt ${secRange(clip.clip_start, clip.clip_end)} · passage ${secRange(clip.passage_start, clip.passage_end)}`);
   head.append(titleWrap, time);
   card.append(head, createRoll(clip));
   const legend = element('div', 'clip-legend');
-  legend.append(element('span', 'legend-swatch'), document.createTextNode('MIDI note'), element('span', 'legend-focus'), document.createTextNode('passage to check'));
-  legend.append(element('span', 'count-pill', `${clip.note_count} note attacks in view`));
+  legend.append(element('span', 'legend-swatch'), document.createTextNode('MIDI note'), element('span', 'count-pill', `${clip.note_count} note attacks in view`));
   card.append(legend);
+  const player = element('div', 'midi-preview-wrap');
+  renderMidiAudio(clip, player);
+  card.append(player);
   return card;
 }
 
@@ -119,7 +115,7 @@ function renderLocalAudio(clip, body) {
   play.type = 'button';
   play.setAttribute('aria-label', `Play ${clip.title} excerpt`);
   const label = element('span', 'play-label', 'Play excerpt');
-  const timeline = createScrub(clip.duration, clip.focus_start_relative, clip.focus_end_relative);
+  const timeline = createScrub(clip.duration, clip.passage_start_relative, clip.passage_end_relative);
   const time = element('span', 'time-readout', `0:00 / ${fmt(clip.duration)}`);
   row.append(play, label, timeline.scrub, time);
   const update = () => {
@@ -160,7 +156,7 @@ function renderLocalAudio(clip, body) {
     else audio.currentTime = Math.max(clip.clip_start, Math.min(clip.clip_end, audio.currentTime + (event.key === 'ArrowRight' ? 1 : -1)));
     update();
   });
-  body.append(audio, row, element('span', 'audio-window-label', `Local audio excerpt · ${fmt(clip.clip_start)}–${fmt(clip.clip_end)} · pink band marks the passage`));
+  body.append(audio, row, element('span', 'audio-window-label', `Local audio excerpt · ${secRange(clip.clip_start, clip.clip_end)} · passage ${secRange(clip.passage_start, clip.passage_end)}`));
 }
 
 function renderMidiAudio(clip, body) {
@@ -169,7 +165,7 @@ function renderMidiAudio(clip, body) {
   play.type = 'button';
   play.setAttribute('aria-label', `Play MIDI preview for ${clip.title}`);
   const label = element('span', 'play-label', 'Play MIDI preview');
-  const timeline = createScrub(clip.duration, clip.focus_start_relative, clip.focus_end_relative);
+  const timeline = createScrub(clip.duration, clip.passage_start_relative, clip.passage_end_relative);
   const time = element('span', 'time-readout', `0:00 / ${fmt(clip.duration)}`);
   row.append(play, label, timeline.scrub, time);
   let context;
@@ -227,25 +223,25 @@ function renderMidiAudio(clip, body) {
     };
     tick();
   });
-  body.append(row, element('span', 'audio-window-label', `Synthesized from the reference MIDI excerpt · not a commercial recording`));
+  body.append(row, element('span', 'audio-window-label', `Synthesized from MIDI · ${secRange(clip.clip_start, clip.clip_end)}`));
 }
 
 function renderYoutubeAudio(clip, body) {
-  const start = Math.floor(clip.audio.clip_start);
-  const end = Math.ceil(clip.audio.clip_end);
+  const start = Math.floor(clip.clip_start);
+  const end = Math.ceil(clip.clip_end);
   const frame = document.createElement('iframe');
   frame.className = 'youtube-frame';
-  frame.title = `${clip.title} official audio excerpt`;
+  frame.title = `${clip.title} performance audio excerpt`;
   frame.loading = 'lazy';
   frame.referrerPolicy = 'strict-origin-when-cross-origin';
   frame.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
   frame.allowFullscreen = true;
   frame.src = `https://www.youtube-nocookie.com/embed/${encodeURIComponent(clip.audio.video_id)}?start=${start}&end=${end}&controls=1&rel=0&playsinline=1`;
-  const link = element('a', 'audio-window-label', `Official YouTube audio · clip ${fmt(clip.audio.clip_start)}–${fmt(clip.audio.clip_end)} · pink band marks the passage`);
+  const link = element('a', 'audio-window-label', `Performance audio · excerpt ${secRange(clip.clip_start, clip.clip_end)} · passage ${secRange(clip.passage_start, clip.passage_end)} (performance timing may differ)`);
   link.href = `https://www.youtube.com/watch?v=${encodeURIComponent(clip.audio.video_id)}&t=${start}s`;
   link.target = '_blank';
   link.rel = 'noopener noreferrer';
-  const track = createScrub(clip.duration, clip.focus_start_relative, clip.focus_end_relative);
+  const track = createScrub(clip.duration, clip.passage_start_relative, clip.passage_end_relative);
   track.scrub.removeAttribute('role');
   track.scrub.removeAttribute('tabindex');
   track.scrub.removeAttribute('aria-label');
@@ -263,12 +259,11 @@ function renderYoutubeAudio(clip, body) {
 function renderAudioCard(clip) {
   const card = element('article', 'audio-card');
   const head = element('div', 'audio-card-head');
-  head.append(element('span', 'kind-tag', clip.kind === 'target' ? 'Original audio' : clip.kind === 'reference' ? 'MIDI preview' : 'Honorable mention'));
+  head.append(element('span', 'kind-tag', clip.kind === 'target' ? 'Original audio' : clip.kind === 'reference' ? 'Classical performance audio' : 'Honorable mention audio'));
   head.append(element('h3', '', clip.title));
-  head.append(element('p', '', `Highlighted passage ${fmt(clip.focus_start)}–${fmt(clip.focus_end)}`));
+  head.append(element('p', '', `Passage ${secRange(clip.passage_start, clip.passage_end)} · excerpt ${secRange(clip.clip_start, clip.clip_end)}`));
   const body = element('div', 'audio-card-body');
   if (clip.audio.type === 'local') renderLocalAudio(clip, body);
-  else if (clip.audio.type === 'midi') renderMidiAudio(clip, body);
   else renderYoutubeAudio(clip, body);
   card.append(head, body);
   return card;
