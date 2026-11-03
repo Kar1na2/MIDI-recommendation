@@ -29,6 +29,7 @@ processing otherwise ignores/mangles anything starting with `_`, which
 docs/
 ├── index.html          - the entire page shell (search bar, home screen, song view, analysis panel)
 ├── experiment.html     - visual report for the Meaningless Love ascending-arpeggio study
+├── layers.html         - searchable, clickable onion map of note-event patterns across the catalog
 ├── css/styles.css       - all styling (dark/Spotify-ish palette, layout transitions)
 ├── css/experiment.css   - editorial report-page styling
 ├── js/
@@ -37,6 +38,8 @@ docs/
 │   └── experiment.js      - renders the MIDI rolls and buffered audio players for the report page
 ├── data/
 │   ├── manifest.json      - {song_id, title, duration} × 75, loaded at boot
+│   ├── layers/manifest.json - searchable index for the full pattern corpus
+│   ├── layers/songs/<id>.json - exploratory 3–5 level audio/MIDI pattern map, loaded on selection
 │   ├── sequences.json      - compact chord/note sequences for ALL songs, loaded at boot (matching engine input)
 │   ├── songs/<id>.json      - full per-song note/chord detail, lazy-loaded when a song is opened
 │   ├── DATA_LAYER.md         - full schema reference for every file above (Phase 4 deliverable)
@@ -44,6 +47,13 @@ docs/
 │   └── experiment/CLASSICAL_REPORT.md - screening rule, ranked evidence and source credits
 └── audio/<id>.mp3        - 75 tracks, 128kbps (Phase 4 deliverable)
 ```
+
+The homepage links to **Song layers**. Regenerate its data and corpus
+observations report with `uv run python -m scripts.webexport.build_song_layers`.
+The map uses audio novelty boundaries and transcribed note-event traits; read
+`output/analysis/SONG_PATTERN_LAYERS_REPORT.md` for its scope and limitations.
+This page has its own expanded search catalog; audio previews remain limited
+to the 75 songs already published under `docs/audio/`.
 
 `index.html` has no build-time templating — it's the literal file the
 browser receives. `app.js` is loaded as `<script type="module">` (so it can

@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Song layers · bepop</title><link rel="stylesheet" href="css/layers.css">
+</head>
+<body>
+<header class="top"><a class="brand" href="index.html">bepop</a><a href="experiment.html">Pattern study ↗</a></header>
+<main>
+  <section class="intro"><div class="eyebrow">PATTERN EXPLORER</div><h1>Hear the song<br><em>in layers.</em></h1><p>Explore each track from its broad outline down to short pattern windows. Select a slice to inspect its timing and musical traits.</p></section>
+  <section class="workspace">
+    <div class="picker"><label for="songSearch">Find a song</label><input id="songSearch" type="search" placeholder="Search the catalog…" autocomplete="off"><select id="songSelect" aria-label="Songs"></select><p id="catalogCount"></p></div>
+    <div class="visual"><div id="songHeading"></div><div class="mapWrap"><svg id="onion" viewBox="0 0 440 440" role="img" aria-label="Clickable concentric song pattern map"></svg></div><div class="layer-key" id="layerKey"></div></div>
+    <aside class="detail" id="detail"><div class="eyebrow">SELECT A SLICE</div><h2 id="detailTitle">The song map</h2><p id="detailText">Each ring is one zoom level. The outside shows broad spans; moving toward the center reveals shorter windows.</p><div class="facts" id="facts"></div><button id="listenWindow" type="button">Listen to this window ▶</button><audio id="windowAudio" controls preload="none" aria-label="Selected song window"></audio></aside>
+  </section>
+  <section class="motifs"><div class="eyebrow">CLOSER LISTENING</div><h2>Recurring note shapes</h2><p>Candidate phrases from the highest note near each onset. Matches allow transposition and proportional timing; listen to confirm the musical phrase.</p><div id="motifSummary"></div></section>
+  <p class="note">Time runs clockwise from the top. Candidate boundaries come from changes in the recording; colors and descriptions summarize activity in the transcribed “other” stem. These are listening aids, not verified section labels or instrument-entry annotations.</p>
+</main>
+<script type="module" src="js/layers.js"></script>
+</body></html>
