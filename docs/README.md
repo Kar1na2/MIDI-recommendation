@@ -29,7 +29,7 @@ processing otherwise ignores/mangles anything starting with `_`, which
 docs/
 ├── index.html          - the entire page shell (search bar, home screen, song view, analysis panel)
 ├── experiment.html     - visual report for the Meaningless Love ascending-arpeggio study
-├── layers.html         - searchable, clickable onion map of note-event patterns across the catalog
+├── layers.html         - searchable instrumental-only disc and stem pattern explorer
 ├── css/styles.css       - all styling (dark/Spotify-ish palette, layout transitions)
 ├── css/experiment.css   - editorial report-page styling
 ├── js/
@@ -38,8 +38,8 @@ docs/
 │   └── experiment.js      - renders the MIDI rolls and buffered audio players for the report page
 ├── data/
 │   ├── manifest.json      - {song_id, title, duration} × 75, loaded at boot
-│   ├── layers/manifest.json - searchable index for the full pattern corpus
-│   ├── layers/songs/<id>.json - exploratory 3–5 level audio/MIDI pattern map, loaded on selection
+│   ├── instrumentals/manifest.json - playlist scope, processing states, and lazy-loaded pattern records
+│   ├── instrumentals/songs/<id>.json - three combined-stem rings and up to two per-stem rings
 │   ├── sequences.json      - compact chord/note sequences for ALL songs, loaded at boot (matching engine input)
 │   ├── songs/<id>.json      - full per-song note/chord detail, lazy-loaded when a song is opened
 │   ├── DATA_LAYER.md         - full schema reference for every file above (Phase 4 deliverable)
@@ -48,12 +48,36 @@ docs/
 └── audio/<id>.mp3        - 75 tracks, 128kbps (Phase 4 deliverable)
 ```
 
-The homepage links to **Song layers**. Regenerate its data and corpus
-observations report with `uv run python -m scripts.webexport.build_song_layers`.
-The map uses audio novelty boundaries and transcribed note-event traits; read
-`output/analysis/SONG_PATTERN_LAYERS_REPORT.md` for its scope and limitations.
-This page has its own expanded search catalog; audio previews remain limited
-to the 75 songs already published under `docs/audio/`.
+The homepage links to **Instrumental patterns**. Its separate local database
+is `instrumentals/catalog.sqlite`; the original corpus and its 75-track
+homepage audio set stay separate. The new pipeline is:
+
+Run every catalog stage inside WSL. Do not open the active SQLite database
+from native Windows while WSL workers are writing it; use the generated JSON
+and Markdown exports for review instead.
+
+```text
+uv run python -m scripts.instrumentals.ingest --download
+uv run python -m scripts.instrumentals.audit_sources --apply
+uv run python -m scripts.instrumentals.separate_api --watch
+uv run python -m scripts.instrumentals.analyze --watch
+uv run python -m scripts.instrumentals.export_site --write-report
+```
+
+Add `--refresh-ready` to the analysis command only when intentionally rebuilding
+all already-ready maps after changing the analysis method.
+
+Read `output/analysis/INSTRUMENTAL_PATTERN_ANALYSIS_REPORT.md` for coverage,
+statistics, missing originals, and exclusions. Pattern maps are built from
+instrumental recordings; the combined view plays the saved original MP3
+matched from `liked-audio/` by Spotify ID, while the three individual views
+play the isolated WAV stems. The player seeks and stops audio within each
+selected window. The repository has no MP3Juice script; instrumental lookup
+uses the existing yt-dlp downloader with strict title and duration checks.
+`instrumental-audio-host/` contains a separate read-only R2/Worker hosting
+option and the relative-path upload manifest. Set
+`INSTRUMENTAL_AUDIO_BASE_URL` only after the actual media files are uploaded
+and range-tested.
 
 `index.html` has no build-time templating — it's the literal file the
 browser receives. `app.js` is loaded as `<script type="module">` (so it can

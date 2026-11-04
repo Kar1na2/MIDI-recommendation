@@ -3,13 +3,13 @@
   "title": "Best Lover",
   "artist": "88rising",
   "duration": 153.1,
-  "method": "instrumental-stem-patterns-v2",
+  "method": "instrumental-stem-patterns-v4",
   "views": {
     "instrumental": {
       "name": "All three stems",
       "preview": {
         "type": "mp3",
-        "file": "instrumental.mp3"
+        "file": "original.mp3"
       },
       "layers": [
         {
@@ -19,41 +19,23 @@
             {
               "index": 0,
               "start": 0.0,
-              "end": 23.0,
-              "label": "Bass-led texture",
-              "description": "other becomes less prominent",
+              "end": 4.0,
+              "label": "Other-led texture",
+              "description": "bass becomes more prominent, then other becomes less prominent",
               "boundary_supported": true,
               "pattern_change_score": null
             },
             {
               "index": 1,
-              "start": 23.0,
-              "end": 81.0,
-              "label": "Balanced instrumental texture",
-              "description": "bass becomes less prominent, then drums becomes more prominent",
-              "boundary_supported": true,
-              "pattern_change_score": null
-            },
-            {
-              "index": 2,
-              "start": 81.0,
-              "end": 140.0,
-              "label": "Balanced instrumental texture",
-              "description": "bass becomes less prominent, then drums becomes more prominent",
-              "boundary_supported": true,
-              "pattern_change_score": null
-            },
-            {
-              "index": 3,
-              "start": 140.0,
+              "start": 4.0,
               "end": 153.1,
               "label": "Bass-led texture",
               "description": "Stem balance stays broadly similar across the window.",
               "boundary_supported": true,
-              "pattern_change_score": null
+              "pattern_change_score": 1.321
             }
           ],
-          "new_boundaries": 3
+          "new_boundaries": 1
         },
         {
           "depth": 2,
@@ -62,86 +44,32 @@
             {
               "index": 0,
               "start": 0.0,
-              "end": 23.0,
-              "label": "Bass-led texture",
-              "description": "other becomes less prominent No finer split passed the conservative change threshold.",
+              "end": 4.0,
+              "label": "Other-led texture",
+              "description": "bass becomes more prominent, then other becomes less prominent No finer split passed the conservative change threshold.",
               "boundary_supported": false,
               "pattern_change_score": null
             },
             {
               "index": 1,
-              "start": 23.0,
-              "end": 46.0,
+              "start": 4.0,
+              "end": 23.0,
               "label": "Bass-led texture",
-              "description": "bass becomes less prominent, then drums becomes more prominent",
+              "description": "Stem balance stays broadly similar across the window.",
               "boundary_supported": true,
               "pattern_change_score": null
             },
             {
               "index": 2,
-              "start": 46.0,
-              "end": 58.0,
-              "label": "Other-led texture",
-              "description": "bass becomes more prominent, then other becomes less prominent",
-              "boundary_supported": true,
-              "pattern_change_score": null
-            },
-            {
-              "index": 3,
-              "start": 58.0,
-              "end": 81.0,
-              "label": "Balanced instrumental texture",
-              "description": "Stem balance stays broadly similar across the window.",
-              "boundary_supported": true,
-              "pattern_change_score": null
-            },
-            {
-              "index": 4,
-              "start": 81.0,
-              "end": 93.0,
-              "label": "Bass-led texture",
-              "description": "Stem balance stays broadly similar across the window.",
-              "boundary_supported": true,
-              "pattern_change_score": null
-            },
-            {
-              "index": 5,
-              "start": 93.0,
-              "end": 105.0,
-              "label": "Balanced instrumental texture",
-              "description": "drums becomes less prominent",
-              "boundary_supported": true,
-              "pattern_change_score": null
-            },
-            {
-              "index": 6,
-              "start": 105.0,
-              "end": 116.0,
-              "label": "Other-led texture",
-              "description": "bass becomes more prominent, then other becomes less prominent",
-              "boundary_supported": true,
-              "pattern_change_score": null
-            },
-            {
-              "index": 7,
-              "start": 116.0,
-              "end": 140.0,
-              "label": "Balanced instrumental texture",
-              "description": "Stem balance stays broadly similar across the window.",
-              "boundary_supported": true,
-              "pattern_change_score": null
-            },
-            {
-              "index": 8,
-              "start": 140.0,
+              "start": 23.0,
               "end": 153.1,
               "label": "Bass-led texture",
-              "description": "Stem balance stays broadly similar across the window. No finer split passed the conservative change threshold.",
-              "boundary_supported": false,
-              "pattern_change_score": null
+              "description": "Stem balance stays broadly similar across the window.",
+              "boundary_supported": true,
+              "pattern_change_score": 1.131
             }
           ],
-          "new_boundaries": 5
+          "new_boundaries": 1
         },
         {
           "depth": 3,
@@ -150,149 +78,50 @@
             {
               "index": 0,
               "start": 0.0,
-              "end": 2.0,
+              "end": 4.0,
               "label": "Other-led texture",
-              "description": "Stem balance stays broadly similar across the window.",
-              "boundary_supported": true,
+              "description": "bass becomes more prominent, then other becomes less prominent No finer split passed the conservative change threshold.",
+              "boundary_supported": false,
               "pattern_change_score": null
             },
             {
               "index": 1,
-              "start": 2.0,
-              "end": 18.0,
+              "start": 4.0,
+              "end": 11.0,
               "label": "Bass-led texture",
-              "description": "drums becomes more prominent",
+              "description": "Stem balance stays broadly similar across the window.",
               "boundary_supported": true,
               "pattern_change_score": null
             },
             {
               "index": 2,
-              "start": 18.0,
+              "start": 11.0,
               "end": 23.0,
               "label": "Balanced instrumental texture",
-              "description": "drums becomes less prominent",
+              "description": "Stem balance stays broadly similar across the window.",
               "boundary_supported": true,
-              "pattern_change_score": null
+              "pattern_change_score": 0.93
             },
             {
               "index": 3,
               "start": 23.0,
-              "end": 35.0,
-              "label": "Bass-led texture",
-              "description": "Stem balance stays broadly similar across the window.",
+              "end": 140.0,
+              "label": "Balanced instrumental texture",
+              "description": "bass becomes less prominent, then drums becomes more prominent",
               "boundary_supported": true,
               "pattern_change_score": null
             },
             {
               "index": 4,
-              "start": 35.0,
-              "end": 46.0,
-              "label": "Balanced instrumental texture",
-              "description": "Stem balance stays broadly similar across the window.",
-              "boundary_supported": true,
-              "pattern_change_score": null
-            },
-            {
-              "index": 5,
-              "start": 46.0,
-              "end": 51.0,
-              "label": "Other-led texture",
-              "description": "Stem balance stays broadly similar across the window.",
-              "boundary_supported": true,
-              "pattern_change_score": null
-            },
-            {
-              "index": 6,
-              "start": 51.0,
-              "end": 58.0,
-              "label": "Bass-led texture",
-              "description": "bass becomes more prominent, then other becomes less prominent",
-              "boundary_supported": true,
-              "pattern_change_score": null
-            },
-            {
-              "index": 7,
-              "start": 58.0,
-              "end": 81.0,
-              "label": "Balanced instrumental texture",
-              "description": "Stem balance stays broadly similar across the window. No finer split passed the conservative change threshold.",
-              "boundary_supported": false,
-              "pattern_change_score": null
-            },
-            {
-              "index": 8,
-              "start": 81.0,
-              "end": 93.0,
-              "label": "Bass-led texture",
-              "description": "Stem balance stays broadly similar across the window. No finer split passed the conservative change threshold.",
-              "boundary_supported": false,
-              "pattern_change_score": null
-            },
-            {
-              "index": 9,
-              "start": 93.0,
-              "end": 100.0,
-              "label": "Balanced instrumental texture",
-              "description": "Stem balance stays broadly similar across the window.",
-              "boundary_supported": true,
-              "pattern_change_score": null
-            },
-            {
-              "index": 10,
-              "start": 100.0,
-              "end": 105.0,
-              "label": "Balanced instrumental texture",
-              "description": "drums becomes less prominent, then other becomes more prominent",
-              "boundary_supported": true,
-              "pattern_change_score": null
-            },
-            {
-              "index": 11,
-              "start": 105.0,
-              "end": 110.0,
-              "label": "Other-led texture",
-              "description": "Stem balance stays broadly similar across the window.",
-              "boundary_supported": true,
-              "pattern_change_score": null
-            },
-            {
-              "index": 12,
-              "start": 110.0,
-              "end": 116.0,
-              "label": "Bass-led texture",
-              "description": "bass becomes more prominent",
-              "boundary_supported": true,
-              "pattern_change_score": null
-            },
-            {
-              "index": 13,
-              "start": 116.0,
-              "end": 135.0,
-              "label": "Balanced instrumental texture",
-              "description": "Stem balance stays broadly similar across the window.",
-              "boundary_supported": true,
-              "pattern_change_score": null
-            },
-            {
-              "index": 14,
-              "start": 135.0,
-              "end": 140.0,
-              "label": "Balanced instrumental texture",
-              "description": "Stem balance stays broadly similar across the window.",
-              "boundary_supported": true,
-              "pattern_change_score": null
-            },
-            {
-              "index": 15,
               "start": 140.0,
               "end": 153.1,
               "label": "Bass-led texture",
-              "description": "Stem balance stays broadly similar across the window. No finer split passed the conservative change threshold.",
-              "boundary_supported": false,
-              "pattern_change_score": null
+              "description": "Stem balance stays broadly similar across the window.",
+              "boundary_supported": true,
+              "pattern_change_score": 1.233
             }
           ],
-          "new_boundaries": 7
+          "new_boundaries": 2
         }
       ],
       "recurrences": []
@@ -311,20 +140,20 @@
             {
               "index": 0,
               "start": 0.0,
-              "end": 110.0,
-              "label": "Bass holds",
-              "description": "The bass stem's average activity is relatively steady here.",
+              "end": 4.0,
+              "label": "Bass grows",
+              "description": "The bass stem gains energy toward the end of this window.",
               "boundary_supported": true,
               "pattern_change_score": null
             },
             {
               "index": 1,
-              "start": 110.0,
+              "start": 4.0,
               "end": 153.1,
               "label": "Bass recedes",
               "description": "The bass stem loses energy toward the end of this window.",
               "boundary_supported": true,
-              "pattern_change_score": null
+              "pattern_change_score": 0.944
             }
           ],
           "new_boundaries": 1
@@ -336,42 +165,15 @@
             {
               "index": 0,
               "start": 0.0,
-              "end": 6.0,
+              "end": 4.0,
               "label": "Bass grows",
-              "description": "The bass stem gains energy toward the end of this window.",
-              "boundary_supported": true,
+              "description": "The bass stem gains energy toward the end of this window. No finer split passed the conservative change threshold.",
+              "boundary_supported": false,
               "pattern_change_score": null
             },
             {
               "index": 1,
-              "start": 6.0,
-              "end": 23.0,
-              "label": "Bass grows",
-              "description": "The bass stem gains energy toward the end of this window.",
-              "boundary_supported": true,
-              "pattern_change_score": null
-            },
-            {
-              "index": 2,
-              "start": 23.0,
-              "end": 52.0,
-              "label": "Bass recedes",
-              "description": "The bass stem loses energy toward the end of this window.",
-              "boundary_supported": true,
-              "pattern_change_score": null
-            },
-            {
-              "index": 3,
-              "start": 52.0,
-              "end": 104.0,
-              "label": "Bass grows",
-              "description": "The bass stem gains energy toward the end of this window.",
-              "boundary_supported": true,
-              "pattern_change_score": null
-            },
-            {
-              "index": 4,
-              "start": 104.0,
+              "start": 4.0,
               "end": 110.0,
               "label": "Bass recedes",
               "description": "The bass stem loses energy toward the end of this window.",
@@ -379,16 +181,16 @@
               "pattern_change_score": null
             },
             {
-              "index": 5,
+              "index": 2,
               "start": 110.0,
               "end": 153.1,
               "label": "Bass recedes",
-              "description": "The bass stem loses energy toward the end of this window. No finer split passed the conservative change threshold.",
-              "boundary_supported": false,
-              "pattern_change_score": null
+              "description": "The bass stem loses energy toward the end of this window.",
+              "boundary_supported": true,
+              "pattern_change_score": 0.918
             }
           ],
-          "new_boundaries": 4
+          "new_boundaries": 1
         }
       ],
       "recurrences": []
@@ -407,32 +209,23 @@
             {
               "index": 0,
               "start": 0.0,
-              "end": 23.0,
-              "label": "Drums grows",
-              "description": "The drums stem gains energy toward the end of this window.",
+              "end": 4.0,
+              "label": "Drums holds",
+              "description": "The drums stem's average activity is relatively steady here.",
               "boundary_supported": true,
               "pattern_change_score": null
             },
             {
               "index": 1,
-              "start": 23.0,
-              "end": 81.0,
-              "label": "Drums grows",
-              "description": "The drums stem gains energy toward the end of this window.",
-              "boundary_supported": true,
-              "pattern_change_score": null
-            },
-            {
-              "index": 2,
-              "start": 81.0,
+              "start": 4.0,
               "end": 153.1,
               "label": "Drums holds",
               "description": "The drums stem's average activity is relatively steady here.",
               "boundary_supported": true,
-              "pattern_change_score": null
+              "pattern_change_score": 1.704
             }
           ],
-          "new_boundaries": 2
+          "new_boundaries": 1
         },
         {
           "depth": 2,
@@ -441,50 +234,23 @@
             {
               "index": 0,
               "start": 0.0,
-              "end": 23.0,
-              "label": "Drums grows",
-              "description": "The drums stem gains energy toward the end of this window. No finer split passed the conservative change threshold.",
+              "end": 4.0,
+              "label": "Drums holds",
+              "description": "The drums stem's average activity is relatively steady here. No finer split passed the conservative change threshold.",
               "boundary_supported": false,
               "pattern_change_score": null
             },
             {
               "index": 1,
-              "start": 23.0,
-              "end": 81.0,
-              "label": "Drums grows",
-              "description": "The drums stem gains energy toward the end of this window. No finer split passed the conservative change threshold.",
-              "boundary_supported": false,
-              "pattern_change_score": null
-            },
-            {
-              "index": 2,
-              "start": 81.0,
-              "end": 93.0,
-              "label": "Drums holds",
-              "description": "The drums stem's average activity is relatively steady here.",
-              "boundary_supported": true,
-              "pattern_change_score": null
-            },
-            {
-              "index": 3,
-              "start": 93.0,
-              "end": 140.0,
-              "label": "Drums holds",
-              "description": "The drums stem's average activity is relatively steady here.",
-              "boundary_supported": true,
-              "pattern_change_score": null
-            },
-            {
-              "index": 4,
-              "start": 140.0,
+              "start": 4.0,
               "end": 153.1,
               "label": "Drums holds",
-              "description": "The drums stem's average activity is relatively steady here.",
-              "boundary_supported": true,
+              "description": "The drums stem's average activity is relatively steady here. No finer split passed the conservative change threshold.",
+              "boundary_supported": false,
               "pattern_change_score": null
             }
           ],
-          "new_boundaries": 2
+          "new_boundaries": 0
         }
       ],
       "recurrences": []
@@ -503,29 +269,29 @@
             {
               "index": 0,
               "start": 0.0,
-              "end": 45.0,
-              "label": "Other holds",
-              "description": "The other stem's average activity is relatively steady here.",
+              "end": 4.0,
+              "label": "Other grows",
+              "description": "The other stem gains energy toward the end of this window.",
               "boundary_supported": true,
               "pattern_change_score": null
             },
             {
               "index": 1,
-              "start": 45.0,
-              "end": 105.0,
+              "start": 4.0,
+              "end": 45.0,
               "label": "Other recedes",
               "description": "The other stem loses energy toward the end of this window.",
               "boundary_supported": true,
-              "pattern_change_score": null
+              "pattern_change_score": 1.273
             },
             {
               "index": 2,
-              "start": 105.0,
+              "start": 45.0,
               "end": 153.1,
               "label": "Other recedes",
               "description": "The other stem loses energy toward the end of this window.",
               "boundary_supported": true,
-              "pattern_change_score": null
+              "pattern_change_score": 1.161
             }
           ],
           "new_boundaries": 2
@@ -537,68 +303,41 @@
             {
               "index": 0,
               "start": 0.0,
-              "end": 45.0,
-              "label": "Other holds",
-              "description": "The other stem's average activity is relatively steady here. No finer split passed the conservative change threshold.",
+              "end": 4.0,
+              "label": "Other grows",
+              "description": "The other stem gains energy toward the end of this window. No finer split passed the conservative change threshold.",
               "boundary_supported": false,
               "pattern_change_score": null
             },
             {
               "index": 1,
-              "start": 45.0,
-              "end": 57.0,
+              "start": 4.0,
+              "end": 45.0,
               "label": "Other recedes",
-              "description": "The other stem loses energy toward the end of this window.",
-              "boundary_supported": true,
+              "description": "The other stem loses energy toward the end of this window. No finer split passed the conservative change threshold.",
+              "boundary_supported": false,
               "pattern_change_score": null
             },
             {
               "index": 2,
-              "start": 57.0,
-              "end": 81.0,
-              "label": "Other grows",
-              "description": "The other stem gains energy toward the end of this window.",
+              "start": 45.0,
+              "end": 105.0,
+              "label": "Other recedes",
+              "description": "The other stem loses energy toward the end of this window.",
               "boundary_supported": true,
               "pattern_change_score": null
             },
             {
               "index": 3,
-              "start": 81.0,
-              "end": 105.0,
-              "label": "Other grows",
-              "description": "The other stem gains energy toward the end of this window.",
-              "boundary_supported": true,
-              "pattern_change_score": null
-            },
-            {
-              "index": 4,
               "start": 105.0,
-              "end": 116.0,
-              "label": "Other recedes",
-              "description": "The other stem loses energy toward the end of this window.",
-              "boundary_supported": true,
-              "pattern_change_score": null
-            },
-            {
-              "index": 5,
-              "start": 116.0,
-              "end": 140.0,
-              "label": "Other grows",
-              "description": "The other stem gains energy toward the end of this window.",
-              "boundary_supported": true,
-              "pattern_change_score": null
-            },
-            {
-              "index": 6,
-              "start": 140.0,
               "end": 153.1,
               "label": "Other recedes",
               "description": "The other stem loses energy toward the end of this window.",
               "boundary_supported": true,
-              "pattern_change_score": null
+              "pattern_change_score": 1.374
             }
           ],
-          "new_boundaries": 4
+          "new_boundaries": 1
         }
       ],
       "recurrences": []
@@ -613,9 +352,9 @@
   "audio": {
     "instrumental": {
       "url": null,
-      "object_key": "songs/0iWFz0Q5Qha9bx325ocFWq/instrumental.mp3",
+      "object_key": "songs/0iWFz0Q5Qha9bx325ocFWq/original.mp3",
       "mime": "audio/mpeg",
-      "bytes": 3674925,
+      "bytes": 4883949,
       "status": "awaiting_host"
     },
     "bass": {

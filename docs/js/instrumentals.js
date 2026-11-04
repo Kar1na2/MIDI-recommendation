@@ -62,9 +62,13 @@ function installPlayerSource() {
   }
   listenButton.disabled = !currentAudioUrl || !currentSegment;
   if (!currentAudioUrl) {
-    setPlayerStatus(source?.status === 'awaiting_host'
-      ? 'Audio hosting is prepared separately; this preview will be available once its files are published.'
-      : 'No playable audio file is attached to this view.');
+    if (source?.status === 'awaiting_host') {
+      setPlayerStatus('Audio hosting is prepared separately; this preview will be available once its files are published.');
+    } else if (source?.status === 'missing_original') {
+      setPlayerStatus('The original-song MP3 is missing from the saved library. Stem previews remain available after hosting.');
+    } else {
+      setPlayerStatus('No playable audio file is attached to this view.');
+    }
   } else {
     const type = source.mime || (currentView === 'instrumental' ? 'MP3' : 'WAV');
     setPlayerStatus(`${type} preview · only the selected time window will play.`);
@@ -107,7 +111,7 @@ async function playWindow() {
     await audio.play();
     if (token !== playbackToken) return;
     listenButton.querySelector('span').textContent = 'Ⅱ';
-    setPlayerStatus(`Playing ${fmt(start)}–${fmt(end)} · ${currentView === 'instrumental' ? 'instrumental MP3' : `${currentView} WAV`}.`);
+    setPlayerStatus(`Playing ${fmt(start)}–${fmt(end)} · ${currentView === 'instrumental' ? 'original MP3' : `${currentView} WAV`}.`);
     const checkEnd = () => {
       if (token !== playbackToken) return;
       if (audio.currentTime >= end || audio.ended) {
@@ -227,7 +231,7 @@ function renderDetail() {
   const items = [
     ['Time', `${fmt(start)}–${fmt(end)} · ${Math.max(0, end - start).toFixed(1)} sec`],
     ['Zoom', layer.name],
-    ['View', currentView === 'instrumental' ? 'Three stems together · instrumental MP3' : `${currentView} stem · isolated WAV`],
+    ['View', currentView === 'instrumental' ? 'Three stems together · original MP3' : `${currentView} stem · isolated WAV`],
   ];
   if (recurrence.length) {
     const pair = recurrence[0];
@@ -280,7 +284,7 @@ function clearCurrentTrack(message = 'Choose a song to explore its patterns.') {
   heading.textContent = 'A listening map for every instrumental.';
   trackMeta.textContent = message;
   trackStatus.textContent = 'SELECT A RECORD';
-  recordLabel.textContent = 'INSTRUMENTAL';
+  recordLabel.textContent = 'ALL STEMS';
   recordDuration.textContent = 'PATTERN MAP';
   returnMain.hidden = true;
   onion.innerHTML = '<text x="220" y="216" text-anchor="middle" fill="#eee4d6" font-family="DM Sans, sans-serif" font-size="13">Choose a song to begin.</text>';
@@ -301,7 +305,7 @@ async function loadSong(track) {
   heading.textContent = `${track.artist} — ${track.title}`;
   trackStatus.textContent = track.status.replaceAll('_', ' ').toUpperCase();
   trackMeta.textContent = track.reason || `${fmt(track.duration)} · individual instrumental pattern map`;
-  recordLabel.textContent = 'INSTRUMENTAL';
+  recordLabel.textContent = 'ALL STEMS';
   recordDuration.textContent = fmt(track.duration);
   onion.innerHTML = '<text x="220" y="216" text-anchor="middle" fill="#eee4d6" font-family="DM Mono, monospace" font-size="11">OPENING THE RECORD…</text>';
   layerKey.innerHTML = '';
@@ -345,7 +349,7 @@ function populateSelect(preferredId = null) {
 listenButton.addEventListener('click', playWindow);
 returnMain.addEventListener('click', () => {
   stopPlayback(); currentView = 'instrumental'; selectedDepth = 1; selectedIndex = 0;
-  recordLabel.textContent = 'INSTRUMENTAL';
+  recordLabel.textContent = 'ALL STEMS';
   renderMiniRecords(); renderOnion(); renderDetail(); installPlayerSource();
 });
 songSelect.addEventListener('change', () => {

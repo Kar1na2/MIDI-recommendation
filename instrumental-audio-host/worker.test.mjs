@@ -4,6 +4,7 @@ import worker from './worker.mjs';
 
 const id = '7FT7a5DV7Mk6Mc9ZRJnX70';
 const url = `https://audio.example/v1/${id}/bass.wav`;
+const originalUrl = `https://audio.example/v1/${id}/original.mp3`;
 const object = (extra = {}) => ({
   size: 10, httpEtag: '"abc"',
   writeHttpMetadata(headers) { headers.set('Content-Type', 'audio/wav'); },
@@ -32,10 +33,22 @@ test('HEAD returns metadata without a body', async () => {
   assert.equal((await response.arrayBuffer()).byteLength, 0);
 });
 
+test('serves the matched original MP3 through the same read-only route', async () => {
+  const env = { AUDIO: { async get(key) {
+    assert.equal(key, `songs/${id}/original.mp3`);
+    return object({ body: new Uint8Array([1, 2, 3]) });
+  } } };
+  const response = await worker.fetch(new Request(originalUrl), env);
+  assert.equal(response.status, 200);
+  assert.equal(response.headers.get('Content-Type'), 'audio/mpeg');
+  assert.deepEqual([...new Uint8Array(await response.arrayBuffer())], [1, 2, 3]);
+});
+
 test('does not expose writes or bucket listing', async () => {
   assert.equal((await worker.fetch(new Request(url, { method: 'POST' }), {})).status, 405);
   assert.equal((await worker.fetch(new Request('https://audio.example/'), {})).status, 404);
   assert.equal((await worker.fetch(new Request(`https://audio.example/v1/${id}/vocals.wav`), {})).status, 404);
+  assert.equal((await worker.fetch(new Request(`https://audio.example/v1/${id}/instrumental.mp3`), {})).status, 404);
 });
 
 test('OPTIONS exposes the Range headers needed by browser playback', async () => {

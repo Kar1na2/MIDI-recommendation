@@ -1,5 +1,5 @@
 const FILES = new Map([
-  ["instrumental.mp3", "audio/mpeg"],
+  ["original.mp3", "audio/mpeg"],
   ["bass.wav", "audio/wav"],
   ["drums.wav", "audio/wav"],
   ["other.wav", "audio/wav"],
@@ -23,7 +23,7 @@ export default {
       return new Response("Method Not Allowed", { status: 405, headers: { Allow: "GET, HEAD, OPTIONS", ...corsHeaders() } });
     }
 
-    const match = url.pathname.match(/^\/v1\/([A-Za-z0-9_-]{10,64})\/(instrumental\.mp3|bass\.wav|drums\.wav|other\.wav)$/);
+    const match = url.pathname.match(/^\/v1\/([A-Za-z0-9_-]{10,64})\/(original\.mp3|bass\.wav|drums\.wav|other\.wav)$/);
     if (!match) return new Response("Not Found", { status: 404, headers: corsHeaders() });
     const [, trackId, file] = match;
     const key = `songs/${trackId}/${file}`;
