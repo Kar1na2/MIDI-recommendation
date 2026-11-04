@@ -1,6 +1,8 @@
-# Instrumental audio hosting draft
+# Instrumental audio hosting
 
-This is a reviewable Cloudflare Worker + R2 option for keeping the GitHub Pages interface while serving the four selected preview files from object storage. It is not deployed and does not create a bucket or incur charges. The Worker only allows reads for the four expected filenames under a Spotify track ID; it has no upload, delete, or bucket-list endpoint.
+The Cloudflare Worker + R2 host serves the preview files separately from the GitHub Pages interface. Its configured base URL is `https://song-pattern-audio.bepop.workers.dev`. The Worker only allows reads for the four expected filenames under a Spotify track ID; it has no upload, delete, or bucket-list endpoint. The static export now includes this URL for every locally available preview.
+
+The upload inventory contains 2,853 objects totaling 21.03 GiB. A full HEAD audit on November 4, 2026 confirmed every object has the expected size and audio type, supports byte ranges, and allows GitHub Pages access. The results are recorded in [`verification.json`](verification.json). Small range requests for Silo's original MP3 and bass WAV also returned `206 Partial Content` with the expected content types and CORS headers.
 
 ## Layout
 
@@ -15,7 +17,7 @@ songs/<spotify-track-id>/other.wav
 
 The endpoint maps to `https://<worker-subdomain>.workers.dev/v1/<spotify-track-id>/<filename>`. It streams `Range` requests through to R2, so the page's bounded MP3/WAV previews can seek without decoding an entire file. The UI uses the browser's native audio element, seeks to the chosen window, and pauses at its end.
 
-## Setup after review
+## Setup for a new host
 
 1. Install Wrangler and sign in to the Cloudflare account that should own the bucket.
 2. Create the R2 bucket named `song-pattern-previews` (or change the matching name in this file).
@@ -25,4 +27,4 @@ The endpoint maps to `https://<worker-subdomain>.workers.dev/v1/<spotify-track-i
 
 R2 public buckets are private until public access is explicitly enabled. A Worker binding can expose a narrow read-only route without exposing bucket listing or mutation. Cloudflare's `r2.dev` address is described as rate-limited development access; for production, use an owned custom domain or a Worker route. See [R2 public buckets](https://developers.cloudflare.com/r2/buckets/public-buckets/), [R2 Workers API](https://developers.cloudflare.com/r2/api/workers/workers-api-usage/), and [R2 pricing](https://developers.cloudflare.com/r2/pricing/).
 
-Current Standard pricing lists 10 GB-month and request allowances in its monthly free tier, $0.015/GB-month for additional storage, and no egress charge. The actual monthly estimate should use the measured final media bytes in the analysis report; the sample is not large enough to estimate a complete-library total reliably.
+Current Standard pricing lists 10 GB-month and request allowances in its monthly free tier, $0.015/GB-month for additional storage, and no egress charge. For the current 22.58 GB inventory, the storage component is about $0.19/month after the free storage allowance. Request charges depend on traffic; see the analysis report for the measured inventory and pricing references.

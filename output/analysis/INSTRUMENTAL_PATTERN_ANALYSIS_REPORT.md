@@ -17,7 +17,7 @@ The Spotify example link supplied for Silo (`1PirBnF2xXUyf9yduhzrIt`) is not in 
 - Audio objects included in the hosting upload list: **2,853 files**, totaling **21.03 GiB** (22,579,981,818 bytes).
 - Estimated R2 Standard storage component at the current Cloudflare list rate, after the 10 GB-month free allowance: **about $0.19/month** for this captured inventory. This excludes any future growth and rounds differently from the provider's billing calculation.
 
-The public page can only play previews after an audio host URL is configured and the listed files have been uploaded. The combined view uses the original MP3 from the existing library; the three WAVs come from instrumental separation. Tracks missing that original MP3 can still play their stems after hosting. The read-only Cloudflare Worker/R2 draft is in [`instrumental-audio-host/`](../../instrumental-audio-host/); it is not deployed and no bucket has been provisioned. The GitHub Pages interface remains separate.
+The separate audio host is configured in this export: **690 songs** have original MP3 preview links, and **721 songs** have the three isolated WAV preview links. The combined view uses the original MP3 from the existing library; the three WAVs come from instrumental separation. Tracks missing the original MP3 can still play their stems. The Cloudflare Worker/R2 setup and upload inventory are in [`instrumental-audio-host/`](../../instrumental-audio-host/). The GitHub Pages interface remains separate. A full host check on November 4, 2026 confirmed all **2,853** objects have the expected size and audio type, support byte ranges, and allow page access.
 
 ## Pattern observations
 
@@ -48,11 +48,10 @@ The public page can only play previews after an audio host URL is configured and
 
 ## Preview availability and recommended fixes
 
-- **Main-view audio unavailable for 75 track(s)** because no original MP3 matched its Spotify ID in `liked-audio/`. The three separated-stem previews remain usable for analyzed tracks after hosting. Recover each original MP3 and save it with the matching Spotify ID in its filename; the track-by-track list below names every missing item.
+- **Main-view audio unavailable for 75 track(s)** because no original MP3 matched its Spotify ID in `liked-audio/`. The three separated-stem previews are linked to the configured host for analyzed tracks. Recover each original MP3 and save it with the matching Spotify ID in its filename; the track-by-track list below names every missing item.
 
 - **download_failed: 1** — A candidate was selected, but its stream could not be saved. Retry with updated yt-dlp or replace it with a verified accessible source.
 - **not_found: 406** — No candidate passed the instrumental marker, title/artist overlap, and duration guards. Verify the exact track manually or add its official instrumental URL to `instrumentals/source_overrides.json`; the downloader does not substitute the original vocal recording.
-- **awaiting audio host: 721 analyzed track(s)** — deploy the reviewed Worker, create the R2 bucket, upload verified entries from `instrumental-audio-host/upload_manifest.csv`, set `INSTRUMENTAL_AUDIO_BASE_URL`, and rebuild the page. Until then, the static page will show a clear preview-unavailable state rather than a dead URL.
 
 ## Track-by-track follow-up
 
@@ -510,7 +509,7 @@ A missing instrumental is different from a source-search failure. `not_found` me
 The current inventory size is estimated using Cloudflare R2 Standard's published $0.015 per GB-month rate, a 10 GB-month free allowance, and free egress. Request counts are expected to remain within the published free allowance at modest traffic; storage and request totals must be rechecked after the full upload. R2 public development URLs are rate-limited, so production should use a controlled Worker route or an owned custom domain.
 
 1. Finish/retry YouTube bot-check and transport failures without loosening candidate-match rules.
-2. Complete separation and feature analysis for each successfully downloaded instrumental, then review a varied sample of change points by listening.
+2. Review a varied sample of the completed arrangement and stem change points by listening; refine annotations where the measured texture does not capture the musical phrase.
 3. Compare the final R2 upload inventory against every published URL and issue a byte-range test for MP3 and WAV previews.
 4. Add human-verified note/rhythm annotations only where phrase boundaries and repeated cells are confirmed.
 

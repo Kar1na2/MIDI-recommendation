@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 from collections import Counter
+import json
 from pathlib import Path
 
 
@@ -12,6 +13,27 @@ def write_report(manifest_rows, analyses, tracks, assets, upload_rows, destinati
     original_missing = [row for row in manifest_rows if not row.get("original_audio_available", False)]
     instrumental_sources = [row for row in manifest_rows if row.get("instrumental_source_available", False)]
     source_missing_original = [row for row in instrumental_sources if not row.get("original_audio_available", False)]
+    host_configured = any(row.get("audio_host_configured", False) for row in manifest_rows)
+    main_previews = sum(bool(row.get("audio_ready")) for row in manifest_rows)
+    repo_root = Path(__file__).resolve().parents[2]
+    verification_note = ""
+    verification_path = repo_root / "instrumental-audio-host/verification.json"
+    config_path = repo_root / "docs/data/instrumentals/media-config.json"
+    if host_configured and verification_path.exists() and config_path.exists():
+        verification = json.loads(verification_path.read_text(encoding="utf-8"))
+        media_config = json.loads(config_path.read_text(encoding="utf-8"))
+        if (verification.get("audio_base_url") == media_config.get("audio_base_url")
+                and verification.get("total_objects") == len(upload_rows)):
+            verified = verification.get("verified_objects", 0)
+            total_verified = verification.get("total_objects", 0)
+            issue_count = len(verification.get("failures", []))
+            checked_at = verification.get("checked_at", "").split("T", 1)[0]
+            if issue_count:
+                verification_note = (f" A host check on {checked_at} verified **{verified:,}/{total_verified:,}** objects; "
+                                     f"**{issue_count:,}** need a retry. See `instrumental-audio-host/verification.json`.")
+            else:
+                verification_note = (f" A full host check on {checked_at} confirmed all **{verified:,}** objects "
+                                     "have the expected size and audio type, support byte ranges, and allow page access.")
     per_depth = []
     for depth in range(3):
         per_depth.append([song["views"]["instrumental"]["layers"][depth]["new_boundaries"]
@@ -45,7 +67,9 @@ def write_report(manifest_rows, analyses, tracks, assets, upload_rows, destinati
         f"- Audio objects included in the hosting upload list: **{len(upload_rows):,} files**, totaling **{audio_bytes / (1024 ** 3):.2f} GiB** ({audio_bytes:,} bytes).",
         f"- Estimated R2 Standard storage component at the current Cloudflare list rate, after the 10 GB-month free allowance: **about ${monthly_charge:.2f}/month** for this captured inventory. This excludes any future growth and rounds differently from the provider's billing calculation.",
         "",
-        "The public page can only play previews after an audio host URL is configured and the listed files have been uploaded. The combined view uses the original MP3 from the existing library; the three WAVs come from instrumental separation. Tracks missing that original MP3 can still play their stems after hosting. The read-only Cloudflare Worker/R2 draft is in [`instrumental-audio-host/`](../../instrumental-audio-host/); it is not deployed and no bucket has been provisioned. The GitHub Pages interface remains separate.",
+        (f"The separate audio host is configured in this export: **{main_previews:,} songs** have original MP3 preview links, and **{len(ready):,} songs** have the three isolated WAV preview links. The combined view uses the original MP3 from the existing library; the three WAVs come from instrumental separation. Tracks missing the original MP3 can still play their stems. The Cloudflare Worker/R2 setup and upload inventory are in [`instrumental-audio-host/`](../../instrumental-audio-host/). The GitHub Pages interface remains separate.{verification_note}"
+         if host_configured else
+         "The public page can only play previews after an audio host URL is configured and the listed files have been uploaded. The combined view uses the original MP3 from the existing library; the three WAVs come from instrumental separation. Tracks missing that original MP3 can still play their stems after hosting. The read-only Cloudflare Worker/R2 setup is in [`instrumental-audio-host/`](../../instrumental-audio-host/); no audio host URL is configured in this export. The GitHub Pages interface remains separate."),
         "",
         "## Pattern observations", "",
     ]
@@ -74,7 +98,8 @@ def write_report(manifest_rows, analyses, tracks, assets, upload_rows, destinati
 
     lines += ["", "## Preview availability and recommended fixes", ""]
     if original_missing:
-        lines += [f"- **Main-view audio unavailable for {len(original_missing):,} track(s)** because no original MP3 matched its Spotify ID in `liked-audio/`. The three separated-stem previews remain usable for analyzed tracks after hosting. Recover each original MP3 and save it with the matching Spotify ID in its filename; the track-by-track list below names every missing item.", ""]
+        stem_availability = "are linked to the configured host" if host_configured else "can be published after hosting is configured"
+        lines += [f"- **Main-view audio unavailable for {len(original_missing):,} track(s)** because no original MP3 matched its Spotify ID in `liked-audio/`. The three separated-stem previews {stem_availability} for analyzed tracks. Recover each original MP3 and save it with the matching Spotify ID in its filename; the track-by-track list below names every missing item.", ""]
     remedies = {
         "not_found": "No candidate passed the instrumental marker, title/artist overlap, and duration guards. Verify the exact track manually or add its official instrumental URL to `instrumentals/source_overrides.json`; the downloader does not substitute the original vocal recording.",
         "search_failed": "The metadata search failed before candidate review, commonly from throttling, connectivity, or YouTube bot checks. Retry later at a lower worker count, update yt-dlp, or use a manually verified source.",
@@ -120,7 +145,7 @@ def write_report(manifest_rows, analyses, tracks, assets, upload_rows, destinati
         "The current inventory size is estimated using Cloudflare R2 Standard's published $0.015 per GB-month rate, a 10 GB-month free allowance, and free egress. Request counts are expected to remain within the published free allowance at modest traffic; storage and request totals must be rechecked after the full upload. R2 public development URLs are rate-limited, so production should use a controlled Worker route or an owned custom domain.",
         "",
         "1. Finish/retry YouTube bot-check and transport failures without loosening candidate-match rules.",
-        "2. Complete separation and feature analysis for each successfully downloaded instrumental, then review a varied sample of change points by listening.",
+        "2. Review a varied sample of the completed arrangement and stem change points by listening; refine annotations where the measured texture does not capture the musical phrase.",
         "3. Compare the final R2 upload inventory against every published URL and issue a byte-range test for MP3 and WAV previews.",
         "4. Add human-verified note/rhythm annotations only where phrase boundaries and repeated cells are confirmed.",
         "",

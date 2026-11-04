@@ -1,6 +1,6 @@
 const manifestUrl = 'data/instrumentals/manifest.json';
 const stemNames = ['bass', 'drums', 'other'];
-const palette = ['#cf5c3d', '#d3a844', '#587b83', '#76936d', '#b76c7c', '#ae825d', '#7787a2', '#c68549'];
+const palette = ['#efb970', '#9bdda7', '#65b7a2', '#536da0'];
 const songSearch = document.querySelector('#songSearch');
 const songSelect = document.querySelector('#songSelect');
 const catalogCount = document.querySelector('#catalogCount');
@@ -19,6 +19,10 @@ const audio = document.querySelector('#windowAudio');
 const recordLabel = document.querySelector('#recordLabel');
 const recordDuration = document.querySelector('#recordDuration');
 const returnMain = document.querySelector('#returnMain');
+const recordWrap = document.querySelector('.big-record-wrap');
+const recordStage = document.querySelector('.record-stage');
+const detailPanel = document.querySelector('#detail');
+const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 
 let manifest;
 let activeSong;
@@ -30,6 +34,7 @@ let currentSegment;
 let currentAudioUrl;
 let playbackFrame = 0;
 let playbackToken = 0;
+let discAnimations = [];
 
 const fmt = seconds => {
   const value = Math.max(0, Math.floor(Number(seconds) || 0));
@@ -39,11 +44,62 @@ const currentLayers = () => songData?.views?.[currentView]?.layers || [];
 const selectedLayer = () => currentLayers().find(layer => layer.depth === selectedDepth) || currentLayers()[0];
 const selectedSegment = () => selectedLayer()?.segments?.find(segment => segment.index === selectedIndex) || selectedLayer()?.segments?.[0];
 
+function cancelDiscAnimations() {
+  for (const animation of discAnimations) animation.cancel();
+  discAnimations = [];
+}
+
+function switchView(view, trigger) {
+  if (!songData?.views?.[view] || currentView === view) return;
+  const restoreFocus = document.activeElement === trigger;
+  stopPlayback();
+  cancelDiscAnimations();
+  currentView = view;
+  selectedDepth = 1;
+  selectedIndex = 0;
+  recordLabel.textContent = view === 'instrumental' ? 'ALL STEMS' : view.toUpperCase();
+  renderMiniRecords();
+  renderOnion();
+  renderDetail();
+  installPlayerSource();
+
+  const chosen = miniRecords.querySelector(`[data-view="${view}"]`);
+  if (restoreFocus) {
+    (chosen || onion.querySelector('.ring-segment'))?.focus({ preventScroll: true });
+  }
+  if (!reducedMotion.matches && typeof recordWrap.animate === 'function') {
+    discAnimations.push(
+      recordWrap.animate([
+        { opacity: .15, transform: 'translateY(14px) rotate(-12deg) scale(.96)' },
+        { opacity: 1, transform: 'translateY(0) rotate(0) scale(1)' },
+      ], { duration: 480, easing: 'cubic-bezier(.2,.75,.25,1)' }),
+      detailPanel.animate([
+        { opacity: .2, transform: 'translateY(8px)' },
+        { opacity: 1, transform: 'translateY(0)' },
+      ], { duration: 320, easing: 'ease-out' }),
+      layerKey.animate([{ opacity: .2 }, { opacity: 1 }], { duration: 320 }),
+    );
+    if (chosen) discAnimations.push(chosen.querySelector('.mini-disc').animate([
+      { transform: 'rotate(-45deg)' }, { transform: 'rotate(0)' },
+    ], { duration: 600, easing: 'cubic-bezier(.2,.75,.25,1)' }));
+  }
+  // A disc chosen below the player should bring its new listening view into sight.
+  const bounds = recordWrap.getBoundingClientRect();
+  if (trigger !== returnMain && (bounds.top < 0 || bounds.bottom > window.innerHeight)) {
+    recordStage.scrollIntoView({ block: 'start', behavior: reducedMotion.matches ? 'instant' : 'smooth' });
+  }
+}
+
+reducedMotion.addEventListener('change', () => {
+  if (reducedMotion.matches) cancelDiscAnimations();
+});
+
 function stopPlayback(message = '') {
   playbackToken++;
   if (playbackFrame) cancelAnimationFrame(playbackFrame);
   playbackFrame = 0;
   audio.pause();
+  listenButton.querySelector('span').textContent = '▶';
   if (message) setPlayerStatus(message);
 }
 
@@ -65,7 +121,9 @@ function installPlayerSource() {
     if (source?.status === 'awaiting_host') {
       setPlayerStatus('Audio hosting is prepared separately; this preview will be available once its files are published.');
     } else if (source?.status === 'missing_original') {
-      setPlayerStatus('The original-song MP3 is missing from the saved library. Stem previews remain available after hosting.');
+      setPlayerStatus(songData?.audio?.bass?.url
+        ? 'The original-song MP3 is missing. Choose a stem disc below to listen to its isolated WAV.'
+        : 'The original-song MP3 is missing from the saved library. Stem previews can be added after hosting.');
     } else {
       setPlayerStatus('No playable audio file is attached to this view.');
     }
@@ -124,6 +182,7 @@ async function playWindow() {
     if (token !== playbackToken) return;
     stopPlayback(error.message || 'Could not play this preview. Check the audio host and try again.');
     setPlayerStatus(error.message || 'Could not play this preview. Check the audio host and try again.', true);
+    listenButton.disabled = !currentAudioUrl || !currentSegment;
   } finally {
     if (token === playbackToken) listenButton.disabled = !currentAudioUrl;
   }
@@ -156,7 +215,7 @@ function renderOnion() {
   const layers = currentLayers();
   onion.innerHTML = '';
   if (!activeSong || !layers.length) {
-    onion.innerHTML = '<text x="220" y="204" text-anchor="middle" fill="#eee4d6" font-family="DM Mono, monospace" font-size="11">NO PATTERN MAP</text><text x="220" y="224" text-anchor="middle" fill="#c8bcaa" font-family="DM Sans, sans-serif" font-size="12">This song is still being prepared.</text>';
+    onion.innerHTML = '<text x="220" y="204" text-anchor="middle" fill="#f3f0e6" font-family="DM Mono, monospace" font-size="11">NO PATTERN MAP</text><text x="220" y="224" text-anchor="middle" fill="#9bafa3" font-family="DM Sans, sans-serif" font-size="12">This song is still being prepared.</text>';
     return;
   }
   const duration = Math.max(1, Number(songData.duration) || activeSong.duration || 1);
@@ -258,28 +317,20 @@ function renderMiniRecords() {
     const button = document.createElement('button');
     button.type = 'button';
     button.className = `mini-record${currentView === stem ? ' active' : ''}`;
+    button.dataset.view = stem;
     button.setAttribute('aria-pressed', String(currentView === stem));
     const layers = view?.layers || [];
     const changeCount = layers.reduce((sum, layer) => sum + (layer.new_boundaries || 0), 0);
     button.innerHTML = `<span class="mini-disc" aria-hidden="true"></span><span class="mini-copy"><strong>${stem[0].toUpperCase() + stem.slice(1)}</strong><span>${layers.length ? `${changeCount} supported change${changeCount === 1 ? '' : 's'} · up to 2 rings` : 'Analysis in progress'}</span></span>`;
     button.disabled = !view;
-    button.addEventListener('click', () => {
-      stopPlayback();
-      currentView = stem;
-      selectedDepth = 1;
-      selectedIndex = 0;
-      recordLabel.textContent = stem.toUpperCase();
-      renderMiniRecords();
-      renderOnion();
-      renderDetail();
-      installPlayerSource();
-    });
+    button.addEventListener('click', () => switchView(stem, button));
     miniRecords.append(button);
   }
 }
 
 function clearCurrentTrack(message = 'Choose a song to explore its patterns.') {
   stopPlayback();
+  cancelDiscAnimations();
   activeSong = null; songData = null; currentSegment = null;
   heading.textContent = 'A listening map for every instrumental.';
   trackMeta.textContent = message;
@@ -287,7 +338,7 @@ function clearCurrentTrack(message = 'Choose a song to explore its patterns.') {
   recordLabel.textContent = 'ALL STEMS';
   recordDuration.textContent = 'PATTERN MAP';
   returnMain.hidden = true;
-  onion.innerHTML = '<text x="220" y="216" text-anchor="middle" fill="#eee4d6" font-family="DM Sans, sans-serif" font-size="13">Choose a song to begin.</text>';
+  onion.innerHTML = '<text x="220" y="216" text-anchor="middle" fill="#f3f0e6" font-family="DM Sans, sans-serif" font-size="13">Choose a song to begin.</text>';
   layerKey.innerHTML = '';
   detailTitle.textContent = 'Move through the arrangement.';
   detailText.textContent = message;
@@ -299,6 +350,7 @@ function clearCurrentTrack(message = 'Choose a song to explore its patterns.') {
 
 async function loadSong(track) {
   stopPlayback();
+  cancelDiscAnimations();
   activeSong = track;
   songData = null;
   currentView = 'instrumental'; selectedDepth = 1; selectedIndex = 0;
@@ -307,7 +359,7 @@ async function loadSong(track) {
   trackMeta.textContent = track.reason || `${fmt(track.duration)} · individual instrumental pattern map`;
   recordLabel.textContent = 'ALL STEMS';
   recordDuration.textContent = fmt(track.duration);
-  onion.innerHTML = '<text x="220" y="216" text-anchor="middle" fill="#eee4d6" font-family="DM Mono, monospace" font-size="11">OPENING THE RECORD…</text>';
+  onion.innerHTML = '<text x="220" y="216" text-anchor="middle" fill="#f3f0e6" font-family="DM Mono, monospace" font-size="11">OPENING THE RECORD…</text>';
   layerKey.innerHTML = '';
   detailTitle.textContent = track.status === 'not_found' ? 'No verified instrumental was found.' : 'Pattern analysis is still in progress.';
   detailText.textContent = track.reason || 'This song has not finished its instrumental search, stem separation, and analysis.';
@@ -317,7 +369,7 @@ async function loadSong(track) {
   renderMiniRecords();
   if (!track.analysis_url) return;
   try {
-    const response = await fetch(track.analysis_url);
+    const response = await fetch(track.analysis_url, { cache: 'no-cache' });
     if (!response.ok) throw new Error(`Pattern file returned ${response.status}.`);
     const data = await response.json();
     if (activeSong?.track_id !== track.track_id) return;
@@ -339,7 +391,10 @@ function populateSelect(preferredId = null) {
     option.textContent = `${track.artist} — ${track.title}${track.status === 'ready' ? '' : ` · ${track.status.replaceAll('_', ' ')}`}`;
     songSelect.append(option);
   }
-  catalogCount.textContent = `${manifest.total_tracks.toLocaleString()} saved songs · ${manifest.tracks.filter(x => x.analysis_url).length.toLocaleString()} pattern maps ready · ${manifest.tracks.filter(x => x.audio_ready).length.toLocaleString()} hosted previews`;
+  const maps = manifest.tracks.filter(track => track.analysis_url).length.toLocaleString();
+  const originals = manifest.tracks.filter(track => track.audio_ready).length.toLocaleString();
+  const stems = manifest.tracks.filter(track => track.audio_host_configured && track.available_preview_views >= 3).length.toLocaleString();
+  catalogCount.textContent = `${manifest.total_tracks.toLocaleString()} saved songs · ${maps} pattern maps ready · ${manifest.audio_base_url ? `${originals} original previews · ${stems} stem sets` : '0 hosted previews'}`;
   const chosen = matches.find(track => track.track_id === preferredId) || matches[0];
   if (!chosen) { clearCurrentTrack('No songs match that title or artist.'); return; }
   songSelect.value = chosen.track_id;
@@ -347,18 +402,14 @@ function populateSelect(preferredId = null) {
 }
 
 listenButton.addEventListener('click', playWindow);
-returnMain.addEventListener('click', () => {
-  stopPlayback(); currentView = 'instrumental'; selectedDepth = 1; selectedIndex = 0;
-  recordLabel.textContent = 'ALL STEMS';
-  renderMiniRecords(); renderOnion(); renderDetail(); installPlayerSource();
-});
+returnMain.addEventListener('click', () => switchView('instrumental', returnMain));
 songSelect.addEventListener('change', () => {
   const track = manifest?.tracks.find(item => item.track_id === songSelect.value);
   if (track) loadSong(track);
 });
 songSearch.addEventListener('input', () => populateSelect(songSelect.value));
 
-fetch(manifestUrl)
+fetch(manifestUrl, { cache: 'no-cache' })
   .then(response => { if (!response.ok) throw new Error(`Catalog returned ${response.status}.`); return response.json(); })
   .then(data => {
     manifest = data;
