@@ -1,0 +1,409 @@
+{
+  "track_id": "17rhDgnYYryQU4uS71ZxFu",
+  "title": "ギターと孤独と蒼い惑星",
+  "artist": "結束バンド",
+  "duration": 242.86,
+  "method": "instrumental-stem-patterns-v4",
+  "views": {
+    "instrumental": {
+      "name": "All three stems",
+      "preview": {
+        "type": "mp3",
+        "file": "original.mp3"
+      },
+      "layers": [
+        {
+          "depth": 1,
+          "name": "Broad arrangement shifts",
+          "segments": [
+            {
+              "index": 0,
+              "start": 0.0,
+              "end": 242.86,
+              "label": "Balanced instrumental texture",
+              "description": "Stem balance stays broadly similar across the window. No finer split passed the conservative change threshold.",
+              "boundary_supported": false,
+              "pattern_change_score": null
+            }
+          ],
+          "new_boundaries": 0
+        },
+        {
+          "depth": 2,
+          "name": "Phrase-scale changes",
+          "segments": [
+            {
+              "index": 0,
+              "start": 0.0,
+              "end": 3.0,
+              "label": "Balanced instrumental texture",
+              "description": "bass becomes more prominent, then other becomes less prominent",
+              "boundary_supported": true,
+              "pattern_change_score": null
+            },
+            {
+              "index": 1,
+              "start": 3.0,
+              "end": 242.86,
+              "label": "Balanced instrumental texture",
+              "description": "Stem balance stays broadly similar across the window.",
+              "boundary_supported": true,
+              "pattern_change_score": 2.623
+            }
+          ],
+          "new_boundaries": 1
+        },
+        {
+          "depth": 3,
+          "name": "Fine texture changes",
+          "segments": [
+            {
+              "index": 0,
+              "start": 0.0,
+              "end": 3.0,
+              "label": "Balanced instrumental texture",
+              "description": "bass becomes more prominent, then other becomes less prominent No finer split passed the conservative change threshold.",
+              "boundary_supported": false,
+              "pattern_change_score": null
+            },
+            {
+              "index": 1,
+              "start": 3.0,
+              "end": 227.0,
+              "label": "Balanced instrumental texture",
+              "description": "drums becomes less prominent, then other becomes more prominent",
+              "boundary_supported": true,
+              "pattern_change_score": null
+            },
+            {
+              "index": 2,
+              "start": 227.0,
+              "end": 242.86,
+              "label": "Balanced instrumental texture",
+              "description": "Stem balance stays broadly similar across the window.",
+              "boundary_supported": true,
+              "pattern_change_score": 2.497
+            }
+          ],
+          "new_boundaries": 1
+        }
+      ],
+      "recurrences": []
+    },
+    "bass": {
+      "name": "Bass",
+      "preview": {
+        "type": "wav",
+        "file": "bass.wav"
+      },
+      "layers": [
+        {
+          "depth": 1,
+          "name": "Broad arrangement shifts",
+          "segments": [
+            {
+              "index": 0,
+              "start": 0.0,
+              "end": 45.0,
+              "label": "Bass grows",
+              "description": "The bass stem gains energy toward the end of this window.",
+              "boundary_supported": true,
+              "pattern_change_score": null
+            },
+            {
+              "index": 1,
+              "start": 45.0,
+              "end": 163.0,
+              "label": "Bass recedes",
+              "description": "The bass stem loses energy toward the end of this window.",
+              "boundary_supported": true,
+              "pattern_change_score": 2.798
+            },
+            {
+              "index": 2,
+              "start": 163.0,
+              "end": 242.86,
+              "label": "Bass grows",
+              "description": "The bass stem gains energy toward the end of this window.",
+              "boundary_supported": true,
+              "pattern_change_score": 3.165
+            }
+          ],
+          "new_boundaries": 2
+        },
+        {
+          "depth": 2,
+          "name": "Phrase-scale changes",
+          "segments": [
+            {
+              "index": 0,
+              "start": 0.0,
+              "end": 36.0,
+              "label": "Bass grows",
+              "description": "The bass stem gains energy toward the end of this window.",
+              "boundary_supported": true,
+              "pattern_change_score": null
+            },
+            {
+              "index": 1,
+              "start": 36.0,
+              "end": 45.0,
+              "label": "Bass grows",
+              "description": "The bass stem gains energy toward the end of this window.",
+              "boundary_supported": true,
+              "pattern_change_score": 3.149
+            },
+            {
+              "index": 2,
+              "start": 45.0,
+              "end": 110.0,
+              "label": "Bass holds",
+              "description": "The bass stem's average activity is relatively steady here.",
+              "boundary_supported": true,
+              "pattern_change_score": null
+            },
+            {
+              "index": 3,
+              "start": 110.0,
+              "end": 163.0,
+              "label": "Bass grows",
+              "description": "The bass stem gains energy toward the end of this window.",
+              "boundary_supported": true,
+              "pattern_change_score": 2.383
+            },
+            {
+              "index": 4,
+              "start": 163.0,
+              "end": 173.0,
+              "label": "Bass holds",
+              "description": "The bass stem's average activity is relatively steady here.",
+              "boundary_supported": true,
+              "pattern_change_score": null
+            },
+            {
+              "index": 5,
+              "start": 173.0,
+              "end": 242.86,
+              "label": "Bass recedes",
+              "description": "The bass stem loses energy toward the end of this window.",
+              "boundary_supported": true,
+              "pattern_change_score": 2.813
+            }
+          ],
+          "new_boundaries": 3
+        }
+      ],
+      "recurrences": [
+        {
+          "start": 36,
+          "end": 42,
+          "repeat_start": 163,
+          "repeat_end": 169,
+          "similarity": 0.9933,
+          "kind": "similar 6-second audio-texture window"
+        }
+      ]
+    },
+    "drums": {
+      "name": "Drums",
+      "preview": {
+        "type": "wav",
+        "file": "drums.wav"
+      },
+      "layers": [
+        {
+          "depth": 1,
+          "name": "Broad arrangement shifts",
+          "segments": [
+            {
+              "index": 0,
+              "start": 0.0,
+              "end": 44.0,
+              "label": "Drums recedes",
+              "description": "The drums stem loses energy toward the end of this window.",
+              "boundary_supported": true,
+              "pattern_change_score": null
+            },
+            {
+              "index": 1,
+              "start": 44.0,
+              "end": 242.86,
+              "label": "Drums recedes",
+              "description": "The drums stem loses energy toward the end of this window.",
+              "boundary_supported": true,
+              "pattern_change_score": 2.53
+            }
+          ],
+          "new_boundaries": 1
+        },
+        {
+          "depth": 2,
+          "name": "Phrase-scale changes",
+          "segments": [
+            {
+              "index": 0,
+              "start": 0.0,
+              "end": 44.0,
+              "label": "Drums recedes",
+              "description": "The drums stem loses energy toward the end of this window. No finer split passed the conservative change threshold.",
+              "boundary_supported": false,
+              "pattern_change_score": null
+            },
+            {
+              "index": 1,
+              "start": 44.0,
+              "end": 119.0,
+              "label": "Drums recedes",
+              "description": "The drums stem loses energy toward the end of this window.",
+              "boundary_supported": true,
+              "pattern_change_score": null
+            },
+            {
+              "index": 2,
+              "start": 119.0,
+              "end": 242.86,
+              "label": "Drums recedes",
+              "description": "The drums stem loses energy toward the end of this window.",
+              "boundary_supported": true,
+              "pattern_change_score": 2.411
+            }
+          ],
+          "new_boundaries": 1
+        }
+      ],
+      "recurrences": []
+    },
+    "other": {
+      "name": "Other",
+      "preview": {
+        "type": "wav",
+        "file": "other.wav"
+      },
+      "layers": [
+        {
+          "depth": 1,
+          "name": "Broad arrangement shifts",
+          "segments": [
+            {
+              "index": 0,
+              "start": 0.0,
+              "end": 100.0,
+              "label": "Other grows",
+              "description": "The other stem gains energy toward the end of this window.",
+              "boundary_supported": true,
+              "pattern_change_score": null
+            },
+            {
+              "index": 1,
+              "start": 100.0,
+              "end": 228.0,
+              "label": "Other recedes",
+              "description": "The other stem loses energy toward the end of this window.",
+              "boundary_supported": true,
+              "pattern_change_score": 2.438
+            },
+            {
+              "index": 2,
+              "start": 228.0,
+              "end": 242.86,
+              "label": "Other recedes",
+              "description": "The other stem loses energy toward the end of this window.",
+              "boundary_supported": true,
+              "pattern_change_score": 2.353
+            }
+          ],
+          "new_boundaries": 2
+        },
+        {
+          "depth": 2,
+          "name": "Phrase-scale changes",
+          "segments": [
+            {
+              "index": 0,
+              "start": 0.0,
+              "end": 3.0,
+              "label": "Other grows",
+              "description": "The other stem gains energy toward the end of this window.",
+              "boundary_supported": true,
+              "pattern_change_score": null
+            },
+            {
+              "index": 1,
+              "start": 3.0,
+              "end": 100.0,
+              "label": "Other recedes",
+              "description": "The other stem loses energy toward the end of this window.",
+              "boundary_supported": true,
+              "pattern_change_score": 3.009
+            },
+            {
+              "index": 2,
+              "start": 100.0,
+              "end": 221.0,
+              "label": "Other grows",
+              "description": "The other stem gains energy toward the end of this window.",
+              "boundary_supported": true,
+              "pattern_change_score": null
+            },
+            {
+              "index": 3,
+              "start": 221.0,
+              "end": 228.0,
+              "label": "Other recedes",
+              "description": "The other stem loses energy toward the end of this window.",
+              "boundary_supported": true,
+              "pattern_change_score": 2.931
+            },
+            {
+              "index": 4,
+              "start": 228.0,
+              "end": 242.86,
+              "label": "Other recedes",
+              "description": "The other stem loses energy toward the end of this window. No finer split passed the conservative change threshold.",
+              "boundary_supported": false,
+              "pattern_change_score": null
+            }
+          ],
+          "new_boundaries": 2
+        }
+      ],
+      "recurrences": []
+    }
+  },
+  "source": {
+    "url": "https://www.youtube.com/watch?v=L533huJwwO0",
+    "title": "【カラオケ音源】結束バンド - ギターと孤独と蒼い惑星 (Instrumental/Off Vocal)",
+    "kind": "metadata_matched_instrumental",
+    "metadata_match_score": 0.9387
+  },
+  "audio": {
+    "instrumental": {
+      "url": null,
+      "object_key": "songs/17rhDgnYYryQU4uS71ZxFu/original.mp3",
+      "mime": "audio/mpeg",
+      "bytes": 7465509,
+      "status": "awaiting_host"
+    },
+    "bass": {
+      "url": null,
+      "object_key": "songs/17rhDgnYYryQU4uS71ZxFu/bass.wav",
+      "mime": "audio/wav",
+      "bytes": 10709994,
+      "status": "awaiting_host"
+    },
+    "drums": {
+      "url": null,
+      "object_key": "songs/17rhDgnYYryQU4uS71ZxFu/drums.wav",
+      "mime": "audio/wav",
+      "bytes": 10709994,
+      "status": "awaiting_host"
+    },
+    "other": {
+      "url": null,
+      "object_key": "songs/17rhDgnYYryQU4uS71ZxFu/other.wav",
+      "mime": "audio/wav",
+      "bytes": 10709994,
+      "status": "awaiting_host"
+    }
+  }
+}

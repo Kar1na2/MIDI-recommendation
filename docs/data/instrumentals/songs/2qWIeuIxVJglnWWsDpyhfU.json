@@ -1,0 +1,372 @@
+{
+  "track_id": "2qWIeuIxVJglnWWsDpyhfU",
+  "title": "RINGO",
+  "artist": "ITZY",
+  "duration": 206.66,
+  "method": "instrumental-stem-patterns-v4",
+  "views": {
+    "instrumental": {
+      "name": "All three stems",
+      "preview": {
+        "type": "mp3",
+        "file": "original.mp3"
+      },
+      "layers": [
+        {
+          "depth": 1,
+          "name": "Broad arrangement shifts",
+          "segments": [
+            {
+              "index": 0,
+              "start": 0.0,
+              "end": 112.0,
+              "label": "Drums-led texture",
+              "description": "drums becomes more prominent, then other becomes less prominent",
+              "boundary_supported": true,
+              "pattern_change_score": null
+            },
+            {
+              "index": 1,
+              "start": 112.0,
+              "end": 206.66,
+              "label": "Drums-led texture",
+              "description": "bass becomes less prominent, then drums becomes less prominent",
+              "boundary_supported": true,
+              "pattern_change_score": 1.535
+            }
+          ],
+          "new_boundaries": 1
+        },
+        {
+          "depth": 2,
+          "name": "Phrase-scale changes",
+          "segments": [
+            {
+              "index": 0,
+              "start": 0.0,
+              "end": 112.0,
+              "label": "Drums-led texture",
+              "description": "drums becomes more prominent, then other becomes less prominent No finer split passed the conservative change threshold.",
+              "boundary_supported": false,
+              "pattern_change_score": null
+            },
+            {
+              "index": 1,
+              "start": 112.0,
+              "end": 206.66,
+              "label": "Drums-led texture",
+              "description": "bass becomes less prominent, then drums becomes less prominent No finer split passed the conservative change threshold.",
+              "boundary_supported": false,
+              "pattern_change_score": null
+            }
+          ],
+          "new_boundaries": 0
+        },
+        {
+          "depth": 3,
+          "name": "Fine texture changes",
+          "segments": [
+            {
+              "index": 0,
+              "start": 0.0,
+              "end": 53.0,
+              "label": "Drums-led texture",
+              "description": "bass becomes more prominent, then drums becomes more prominent",
+              "boundary_supported": true,
+              "pattern_change_score": null
+            },
+            {
+              "index": 1,
+              "start": 53.0,
+              "end": 112.0,
+              "label": "Drums-led texture",
+              "description": "Stem balance stays broadly similar across the window.",
+              "boundary_supported": true,
+              "pattern_change_score": 1.656
+            },
+            {
+              "index": 2,
+              "start": 112.0,
+              "end": 206.66,
+              "label": "Drums-led texture",
+              "description": "bass becomes less prominent, then drums becomes less prominent No finer split passed the conservative change threshold.",
+              "boundary_supported": false,
+              "pattern_change_score": null
+            }
+          ],
+          "new_boundaries": 1
+        }
+      ],
+      "recurrences": []
+    },
+    "bass": {
+      "name": "Bass",
+      "preview": {
+        "type": "wav",
+        "file": "bass.wav"
+      },
+      "layers": [
+        {
+          "depth": 1,
+          "name": "Broad arrangement shifts",
+          "segments": [
+            {
+              "index": 0,
+              "start": 0.0,
+              "end": 40.0,
+              "label": "Bass holds",
+              "description": "The bass stem's average activity is relatively steady here.",
+              "boundary_supported": true,
+              "pattern_change_score": null
+            },
+            {
+              "index": 1,
+              "start": 40.0,
+              "end": 112.0,
+              "label": "Bass recedes",
+              "description": "The bass stem loses energy toward the end of this window.",
+              "boundary_supported": true,
+              "pattern_change_score": 2.21
+            },
+            {
+              "index": 2,
+              "start": 112.0,
+              "end": 206.66,
+              "label": "Bass recedes",
+              "description": "The bass stem loses energy toward the end of this window.",
+              "boundary_supported": true,
+              "pattern_change_score": 2.296
+            }
+          ],
+          "new_boundaries": 2
+        },
+        {
+          "depth": 2,
+          "name": "Phrase-scale changes",
+          "segments": [
+            {
+              "index": 0,
+              "start": 0.0,
+              "end": 40.0,
+              "label": "Bass holds",
+              "description": "The bass stem's average activity is relatively steady here. No finer split passed the conservative change threshold.",
+              "boundary_supported": false,
+              "pattern_change_score": null
+            },
+            {
+              "index": 1,
+              "start": 40.0,
+              "end": 112.0,
+              "label": "Bass recedes",
+              "description": "The bass stem loses energy toward the end of this window. No finer split passed the conservative change threshold.",
+              "boundary_supported": false,
+              "pattern_change_score": null
+            },
+            {
+              "index": 2,
+              "start": 112.0,
+              "end": 174.0,
+              "label": "Bass holds",
+              "description": "The bass stem's average activity is relatively steady here.",
+              "boundary_supported": true,
+              "pattern_change_score": null
+            },
+            {
+              "index": 3,
+              "start": 174.0,
+              "end": 206.66,
+              "label": "Bass holds",
+              "description": "The bass stem's average activity is relatively steady here.",
+              "boundary_supported": true,
+              "pattern_change_score": 1.72
+            }
+          ],
+          "new_boundaries": 1
+        }
+      ],
+      "recurrences": [
+        {
+          "start": 41,
+          "end": 47,
+          "repeat_start": 113,
+          "repeat_end": 119,
+          "similarity": 0.9959,
+          "kind": "similar 6-second audio-texture window"
+        },
+        {
+          "start": 44,
+          "end": 50,
+          "repeat_start": 116,
+          "repeat_end": 122,
+          "similarity": 0.9922,
+          "kind": "similar 6-second audio-texture window"
+        }
+      ]
+    },
+    "drums": {
+      "name": "Drums",
+      "preview": {
+        "type": "wav",
+        "file": "drums.wav"
+      },
+      "layers": [
+        {
+          "depth": 1,
+          "name": "Broad arrangement shifts",
+          "segments": [
+            {
+              "index": 0,
+              "start": 0.0,
+              "end": 24.0,
+              "label": "Drums grows",
+              "description": "The drums stem gains energy toward the end of this window.",
+              "boundary_supported": true,
+              "pattern_change_score": null
+            },
+            {
+              "index": 1,
+              "start": 24.0,
+              "end": 206.66,
+              "label": "Drums recedes",
+              "description": "The drums stem loses energy toward the end of this window.",
+              "boundary_supported": true,
+              "pattern_change_score": 2.218
+            }
+          ],
+          "new_boundaries": 1
+        },
+        {
+          "depth": 2,
+          "name": "Phrase-scale changes",
+          "segments": [
+            {
+              "index": 0,
+              "start": 0.0,
+              "end": 24.0,
+              "label": "Drums grows",
+              "description": "The drums stem gains energy toward the end of this window. No finer split passed the conservative change threshold.",
+              "boundary_supported": false,
+              "pattern_change_score": null
+            },
+            {
+              "index": 1,
+              "start": 24.0,
+              "end": 96.0,
+              "label": "Drums recedes",
+              "description": "The drums stem loses energy toward the end of this window.",
+              "boundary_supported": true,
+              "pattern_change_score": null
+            },
+            {
+              "index": 2,
+              "start": 96.0,
+              "end": 206.66,
+              "label": "Drums recedes",
+              "description": "The drums stem loses energy toward the end of this window.",
+              "boundary_supported": true,
+              "pattern_change_score": 2.005
+            }
+          ],
+          "new_boundaries": 1
+        }
+      ],
+      "recurrences": [
+        {
+          "start": 18,
+          "end": 24,
+          "repeat_start": 90,
+          "repeat_end": 96,
+          "similarity": 0.9974,
+          "kind": "similar 6-second audio-texture window"
+        }
+      ]
+    },
+    "other": {
+      "name": "Other",
+      "preview": {
+        "type": "wav",
+        "file": "other.wav"
+      },
+      "layers": [
+        {
+          "depth": 1,
+          "name": "Broad arrangement shifts",
+          "segments": [
+            {
+              "index": 0,
+              "start": 0.0,
+              "end": 206.66,
+              "label": "Other recedes",
+              "description": "The other stem loses energy toward the end of this window. No finer split passed the conservative change threshold.",
+              "boundary_supported": false,
+              "pattern_change_score": null
+            }
+          ],
+          "new_boundaries": 0
+        },
+        {
+          "depth": 2,
+          "name": "Phrase-scale changes",
+          "segments": [
+            {
+              "index": 0,
+              "start": 0.0,
+              "end": 206.66,
+              "label": "Other recedes",
+              "description": "The other stem loses energy toward the end of this window. No finer split passed the conservative change threshold.",
+              "boundary_supported": false,
+              "pattern_change_score": null
+            }
+          ],
+          "new_boundaries": 0
+        }
+      ],
+      "recurrences": [
+        {
+          "start": 26,
+          "end": 32,
+          "repeat_start": 98,
+          "repeat_end": 104,
+          "similarity": 0.9958,
+          "kind": "similar 6-second audio-texture window"
+        }
+      ]
+    }
+  },
+  "source": {
+    "url": "https://www.youtube.com/watch?v=g_ePxBcRFmo",
+    "title": "ITZY - Ringo (Official Instrumental/99%)",
+    "kind": "metadata_matched_instrumental",
+    "metadata_match_score": 1.0
+  },
+  "audio": {
+    "instrumental": {
+      "url": null,
+      "object_key": "songs/2qWIeuIxVJglnWWsDpyhfU/original.mp3",
+      "mime": "audio/mpeg",
+      "bytes": 6836013,
+      "status": "awaiting_host"
+    },
+    "bass": {
+      "url": null,
+      "object_key": "songs/2qWIeuIxVJglnWWsDpyhfU/bass.wav",
+      "mime": "audio/wav",
+      "bytes": 9113926,
+      "status": "awaiting_host"
+    },
+    "drums": {
+      "url": null,
+      "object_key": "songs/2qWIeuIxVJglnWWsDpyhfU/drums.wav",
+      "mime": "audio/wav",
+      "bytes": 9113926,
+      "status": "awaiting_host"
+    },
+    "other": {
+      "url": null,
+      "object_key": "songs/2qWIeuIxVJglnWWsDpyhfU/other.wav",
+      "mime": "audio/wav",
+      "bytes": 9113926,
+      "status": "awaiting_host"
+    }
+  }
+}

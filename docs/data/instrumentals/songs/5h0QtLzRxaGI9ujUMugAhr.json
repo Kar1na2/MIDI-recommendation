@@ -1,0 +1,418 @@
+{
+  "track_id": "5h0QtLzRxaGI9ujUMugAhr",
+  "title": "Ice Queen",
+  "artist": "IVE",
+  "duration": 183.38,
+  "method": "instrumental-stem-patterns-v4",
+  "views": {
+    "instrumental": {
+      "name": "All three stems",
+      "preview": {
+        "type": "mp3",
+        "file": "original.mp3"
+      },
+      "layers": [
+        {
+          "depth": 1,
+          "name": "Broad arrangement shifts",
+          "segments": [
+            {
+              "index": 0,
+              "start": 0.0,
+              "end": 168.0,
+              "label": "Balanced instrumental texture",
+              "description": "bass becomes more prominent, then other becomes less prominent",
+              "boundary_supported": true,
+              "pattern_change_score": null
+            },
+            {
+              "index": 1,
+              "start": 168.0,
+              "end": 183.38,
+              "label": "Other-led texture",
+              "description": "drums becomes more prominent, then other becomes less prominent",
+              "boundary_supported": true,
+              "pattern_change_score": 1.469
+            }
+          ],
+          "new_boundaries": 1
+        },
+        {
+          "depth": 2,
+          "name": "Phrase-scale changes",
+          "segments": [
+            {
+              "index": 0,
+              "start": 0.0,
+              "end": 137.0,
+              "label": "Balanced instrumental texture",
+              "description": "bass becomes more prominent, then drums becomes more prominent",
+              "boundary_supported": true,
+              "pattern_change_score": null
+            },
+            {
+              "index": 1,
+              "start": 137.0,
+              "end": 168.0,
+              "label": "Bass-led texture",
+              "description": "bass becomes more prominent, then other becomes less prominent",
+              "boundary_supported": true,
+              "pattern_change_score": 1.402
+            },
+            {
+              "index": 2,
+              "start": 168.0,
+              "end": 183.38,
+              "label": "Other-led texture",
+              "description": "drums becomes more prominent, then other becomes less prominent No finer split passed the conservative change threshold.",
+              "boundary_supported": false,
+              "pattern_change_score": null
+            }
+          ],
+          "new_boundaries": 1
+        },
+        {
+          "depth": 3,
+          "name": "Fine texture changes",
+          "segments": [
+            {
+              "index": 0,
+              "start": 0.0,
+              "end": 137.0,
+              "label": "Balanced instrumental texture",
+              "description": "bass becomes more prominent, then drums becomes more prominent No finer split passed the conservative change threshold.",
+              "boundary_supported": false,
+              "pattern_change_score": null
+            },
+            {
+              "index": 1,
+              "start": 137.0,
+              "end": 142.0,
+              "label": "Other-led texture",
+              "description": "drums becomes more prominent, then other becomes less prominent",
+              "boundary_supported": true,
+              "pattern_change_score": null
+            },
+            {
+              "index": 2,
+              "start": 142.0,
+              "end": 168.0,
+              "label": "Bass-led texture",
+              "description": "Stem balance stays broadly similar across the window.",
+              "boundary_supported": true,
+              "pattern_change_score": 1.514
+            },
+            {
+              "index": 3,
+              "start": 168.0,
+              "end": 183.38,
+              "label": "Other-led texture",
+              "description": "drums becomes more prominent, then other becomes less prominent No finer split passed the conservative change threshold.",
+              "boundary_supported": false,
+              "pattern_change_score": null
+            }
+          ],
+          "new_boundaries": 1
+        }
+      ],
+      "recurrences": []
+    },
+    "bass": {
+      "name": "Bass",
+      "preview": {
+        "type": "wav",
+        "file": "bass.wav"
+      },
+      "layers": [
+        {
+          "depth": 1,
+          "name": "Broad arrangement shifts",
+          "segments": [
+            {
+              "index": 0,
+              "start": 0.0,
+              "end": 168.0,
+              "label": "Bass grows",
+              "description": "The bass stem gains energy toward the end of this window.",
+              "boundary_supported": true,
+              "pattern_change_score": null
+            },
+            {
+              "index": 1,
+              "start": 168.0,
+              "end": 183.38,
+              "label": "Bass holds",
+              "description": "The bass stem's average activity is relatively steady here.",
+              "boundary_supported": true,
+              "pattern_change_score": 1.864
+            }
+          ],
+          "new_boundaries": 1
+        },
+        {
+          "depth": 2,
+          "name": "Phrase-scale changes",
+          "segments": [
+            {
+              "index": 0,
+              "start": 0.0,
+              "end": 143.0,
+              "label": "Bass holds",
+              "description": "The bass stem's average activity is relatively steady here.",
+              "boundary_supported": true,
+              "pattern_change_score": null
+            },
+            {
+              "index": 1,
+              "start": 143.0,
+              "end": 168.0,
+              "label": "Bass holds",
+              "description": "The bass stem's average activity is relatively steady here.",
+              "boundary_supported": true,
+              "pattern_change_score": 1.895
+            },
+            {
+              "index": 2,
+              "start": 168.0,
+              "end": 183.38,
+              "label": "Bass holds",
+              "description": "The bass stem's average activity is relatively steady here. No finer split passed the conservative change threshold.",
+              "boundary_supported": false,
+              "pattern_change_score": null
+            }
+          ],
+          "new_boundaries": 1
+        }
+      ],
+      "recurrences": []
+    },
+    "drums": {
+      "name": "Drums",
+      "preview": {
+        "type": "wav",
+        "file": "drums.wav"
+      },
+      "layers": [
+        {
+          "depth": 1,
+          "name": "Broad arrangement shifts",
+          "segments": [
+            {
+              "index": 0,
+              "start": 0.0,
+              "end": 40.0,
+              "label": "Drums grows",
+              "description": "The drums stem gains energy toward the end of this window.",
+              "boundary_supported": true,
+              "pattern_change_score": null
+            },
+            {
+              "index": 1,
+              "start": 40.0,
+              "end": 167.0,
+              "label": "Drums grows",
+              "description": "The drums stem gains energy toward the end of this window.",
+              "boundary_supported": true,
+              "pattern_change_score": 1.349
+            },
+            {
+              "index": 2,
+              "start": 167.0,
+              "end": 183.38,
+              "label": "Drums holds",
+              "description": "The drums stem's average activity is relatively steady here.",
+              "boundary_supported": true,
+              "pattern_change_score": 1.255
+            }
+          ],
+          "new_boundaries": 2
+        },
+        {
+          "depth": 2,
+          "name": "Phrase-scale changes",
+          "segments": [
+            {
+              "index": 0,
+              "start": 0.0,
+              "end": 31.0,
+              "label": "Drums grows",
+              "description": "The drums stem gains energy toward the end of this window.",
+              "boundary_supported": true,
+              "pattern_change_score": null
+            },
+            {
+              "index": 1,
+              "start": 31.0,
+              "end": 40.0,
+              "label": "Drums holds",
+              "description": "The drums stem's average activity is relatively steady here.",
+              "boundary_supported": true,
+              "pattern_change_score": 1.136
+            },
+            {
+              "index": 2,
+              "start": 40.0,
+              "end": 137.0,
+              "label": "Drums holds",
+              "description": "The drums stem's average activity is relatively steady here.",
+              "boundary_supported": true,
+              "pattern_change_score": null
+            },
+            {
+              "index": 3,
+              "start": 137.0,
+              "end": 167.0,
+              "label": "Drums grows",
+              "description": "The drums stem gains energy toward the end of this window.",
+              "boundary_supported": true,
+              "pattern_change_score": 1.422
+            },
+            {
+              "index": 4,
+              "start": 167.0,
+              "end": 183.38,
+              "label": "Drums holds",
+              "description": "The drums stem's average activity is relatively steady here. No finer split passed the conservative change threshold.",
+              "boundary_supported": false,
+              "pattern_change_score": null
+            }
+          ],
+          "new_boundaries": 2
+        }
+      ],
+      "recurrences": []
+    },
+    "other": {
+      "name": "Other",
+      "preview": {
+        "type": "wav",
+        "file": "other.wav"
+      },
+      "layers": [
+        {
+          "depth": 1,
+          "name": "Broad arrangement shifts",
+          "segments": [
+            {
+              "index": 0,
+              "start": 0.0,
+              "end": 69.0,
+              "label": "Other recedes",
+              "description": "The other stem loses energy toward the end of this window.",
+              "boundary_supported": true,
+              "pattern_change_score": null
+            },
+            {
+              "index": 1,
+              "start": 69.0,
+              "end": 178.0,
+              "label": "Other grows",
+              "description": "The other stem gains energy toward the end of this window.",
+              "boundary_supported": true,
+              "pattern_change_score": 1.327
+            },
+            {
+              "index": 2,
+              "start": 178.0,
+              "end": 183.38,
+              "label": "Other holds",
+              "description": "The other stem's average activity is relatively steady here.",
+              "boundary_supported": true,
+              "pattern_change_score": 2.111
+            }
+          ],
+          "new_boundaries": 2
+        },
+        {
+          "depth": 2,
+          "name": "Phrase-scale changes",
+          "segments": [
+            {
+              "index": 0,
+              "start": 0.0,
+              "end": 34.0,
+              "label": "Other grows",
+              "description": "The other stem gains energy toward the end of this window.",
+              "boundary_supported": true,
+              "pattern_change_score": null
+            },
+            {
+              "index": 1,
+              "start": 34.0,
+              "end": 69.0,
+              "label": "Other holds",
+              "description": "The other stem's average activity is relatively steady here.",
+              "boundary_supported": true,
+              "pattern_change_score": 1.081
+            },
+            {
+              "index": 2,
+              "start": 69.0,
+              "end": 167.0,
+              "label": "Other holds",
+              "description": "The other stem's average activity is relatively steady here.",
+              "boundary_supported": true,
+              "pattern_change_score": null
+            },
+            {
+              "index": 3,
+              "start": 167.0,
+              "end": 178.0,
+              "label": "Other recedes",
+              "description": "The other stem loses energy toward the end of this window.",
+              "boundary_supported": true,
+              "pattern_change_score": 1.327
+            },
+            {
+              "index": 4,
+              "start": 178.0,
+              "end": 183.38,
+              "label": "Other holds",
+              "description": "The other stem's average activity is relatively steady here. No finer split passed the conservative change threshold.",
+              "boundary_supported": false,
+              "pattern_change_score": null
+            }
+          ],
+          "new_boundaries": 2
+        }
+      ],
+      "recurrences": []
+    }
+  },
+  "source": {
+    "url": "https://www.youtube.com/watch?v=NfEr0tGu_p0",
+    "title": "IVE – Ice Queen | Instrumental",
+    "kind": "metadata_matched_instrumental",
+    "metadata_match_score": 0.9958
+  },
+  "audio": {
+    "instrumental": {
+      "url": null,
+      "object_key": "songs/5h0QtLzRxaGI9ujUMugAhr/original.mp3",
+      "mime": "audio/mpeg",
+      "bytes": 5812989,
+      "status": "awaiting_host"
+    },
+    "bass": {
+      "url": null,
+      "object_key": "songs/5h0QtLzRxaGI9ujUMugAhr/bass.wav",
+      "mime": "audio/wav",
+      "bytes": 8087278,
+      "status": "awaiting_host"
+    },
+    "drums": {
+      "url": null,
+      "object_key": "songs/5h0QtLzRxaGI9ujUMugAhr/drums.wav",
+      "mime": "audio/wav",
+      "bytes": 8087278,
+      "status": "awaiting_host"
+    },
+    "other": {
+      "url": null,
+      "object_key": "songs/5h0QtLzRxaGI9ujUMugAhr/other.wav",
+      "mime": "audio/wav",
+      "bytes": 8087278,
+      "status": "awaiting_host"
+    }
+  }
+}

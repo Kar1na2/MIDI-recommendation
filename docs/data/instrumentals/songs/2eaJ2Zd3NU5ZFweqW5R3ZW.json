@@ -1,0 +1,326 @@
+{
+  "track_id": "2eaJ2Zd3NU5ZFweqW5R3ZW",
+  "title": "Hit the Road Jack (Electro Swing Cover)",
+  "artist": "Wolfgang Lohr",
+  "duration": 160.25,
+  "method": "instrumental-stem-patterns-v4",
+  "views": {
+    "instrumental": {
+      "name": "All three stems",
+      "preview": {
+        "type": "mp3",
+        "file": "original.mp3"
+      },
+      "layers": [
+        {
+          "depth": 1,
+          "name": "Broad arrangement shifts",
+          "segments": [
+            {
+              "index": 0,
+              "start": 0.0,
+              "end": 160.25,
+              "label": "Balanced instrumental texture",
+              "description": "drums becomes less prominent, then other becomes more prominent No finer split passed the conservative change threshold.",
+              "boundary_supported": false,
+              "pattern_change_score": null
+            }
+          ],
+          "new_boundaries": 0
+        },
+        {
+          "depth": 2,
+          "name": "Phrase-scale changes",
+          "segments": [
+            {
+              "index": 0,
+              "start": 0.0,
+              "end": 160.25,
+              "label": "Balanced instrumental texture",
+              "description": "drums becomes less prominent, then other becomes more prominent No finer split passed the conservative change threshold.",
+              "boundary_supported": false,
+              "pattern_change_score": null
+            }
+          ],
+          "new_boundaries": 0
+        },
+        {
+          "depth": 3,
+          "name": "Fine texture changes",
+          "segments": [
+            {
+              "index": 0,
+              "start": 0.0,
+              "end": 152.0,
+              "label": "Drums-led texture",
+              "description": "Stem balance stays broadly similar across the window.",
+              "boundary_supported": true,
+              "pattern_change_score": null
+            },
+            {
+              "index": 1,
+              "start": 152.0,
+              "end": 160.25,
+              "label": "Other-led texture",
+              "description": "Stem balance stays broadly similar across the window.",
+              "boundary_supported": true,
+              "pattern_change_score": 2.071
+            }
+          ],
+          "new_boundaries": 1
+        }
+      ],
+      "recurrences": []
+    },
+    "bass": {
+      "name": "Bass",
+      "preview": {
+        "type": "wav",
+        "file": "bass.wav"
+      },
+      "layers": [
+        {
+          "depth": 1,
+          "name": "Broad arrangement shifts",
+          "segments": [
+            {
+              "index": 0,
+              "start": 0.0,
+              "end": 160.25,
+              "label": "Bass recedes",
+              "description": "The bass stem loses energy toward the end of this window. No finer split passed the conservative change threshold.",
+              "boundary_supported": false,
+              "pattern_change_score": null
+            }
+          ],
+          "new_boundaries": 0
+        },
+        {
+          "depth": 2,
+          "name": "Phrase-scale changes",
+          "segments": [
+            {
+              "index": 0,
+              "start": 0.0,
+              "end": 152.0,
+              "label": "Bass grows",
+              "description": "The bass stem gains energy toward the end of this window.",
+              "boundary_supported": true,
+              "pattern_change_score": null
+            },
+            {
+              "index": 1,
+              "start": 152.0,
+              "end": 160.25,
+              "label": "Bass holds",
+              "description": "The bass stem's average activity is relatively steady here.",
+              "boundary_supported": true,
+              "pattern_change_score": 2.596
+            }
+          ],
+          "new_boundaries": 1
+        }
+      ],
+      "recurrences": [
+        {
+          "start": 67,
+          "end": 73,
+          "repeat_start": 120,
+          "repeat_end": 126,
+          "similarity": 0.997,
+          "kind": "similar 6-second audio-texture window"
+        },
+        {
+          "start": 3,
+          "end": 9,
+          "repeat_start": 123,
+          "repeat_end": 129,
+          "similarity": 0.9922,
+          "kind": "similar 6-second audio-texture window"
+        },
+        {
+          "start": 116,
+          "end": 122,
+          "repeat_start": 153,
+          "repeat_end": 159,
+          "similarity": 0.991,
+          "kind": "similar 6-second audio-texture window"
+        }
+      ]
+    },
+    "drums": {
+      "name": "Drums",
+      "preview": {
+        "type": "wav",
+        "file": "drums.wav"
+      },
+      "layers": [
+        {
+          "depth": 1,
+          "name": "Broad arrangement shifts",
+          "segments": [
+            {
+              "index": 0,
+              "start": 0.0,
+              "end": 152.0,
+              "label": "Drums grows",
+              "description": "The drums stem gains energy toward the end of this window.",
+              "boundary_supported": true,
+              "pattern_change_score": null
+            },
+            {
+              "index": 1,
+              "start": 152.0,
+              "end": 160.25,
+              "label": "Drums holds",
+              "description": "The drums stem's average activity is relatively steady here.",
+              "boundary_supported": true,
+              "pattern_change_score": 2.229
+            }
+          ],
+          "new_boundaries": 1
+        },
+        {
+          "depth": 2,
+          "name": "Phrase-scale changes",
+          "segments": [
+            {
+              "index": 0,
+              "start": 0.0,
+              "end": 112.0,
+              "label": "Drums grows",
+              "description": "The drums stem gains energy toward the end of this window.",
+              "boundary_supported": true,
+              "pattern_change_score": null
+            },
+            {
+              "index": 1,
+              "start": 112.0,
+              "end": 152.0,
+              "label": "Drums grows",
+              "description": "The drums stem gains energy toward the end of this window.",
+              "boundary_supported": true,
+              "pattern_change_score": 2.343
+            },
+            {
+              "index": 2,
+              "start": 152.0,
+              "end": 160.25,
+              "label": "Drums holds",
+              "description": "The drums stem's average activity is relatively steady here. No finer split passed the conservative change threshold.",
+              "boundary_supported": false,
+              "pattern_change_score": null
+            }
+          ],
+          "new_boundaries": 1
+        }
+      ],
+      "recurrences": []
+    },
+    "other": {
+      "name": "Other",
+      "preview": {
+        "type": "wav",
+        "file": "other.wav"
+      },
+      "layers": [
+        {
+          "depth": 1,
+          "name": "Broad arrangement shifts",
+          "segments": [
+            {
+              "index": 0,
+              "start": 0.0,
+              "end": 4.0,
+              "label": "Other recedes",
+              "description": "The other stem loses energy toward the end of this window.",
+              "boundary_supported": true,
+              "pattern_change_score": null
+            },
+            {
+              "index": 1,
+              "start": 4.0,
+              "end": 160.25,
+              "label": "Other recedes",
+              "description": "The other stem loses energy toward the end of this window.",
+              "boundary_supported": true,
+              "pattern_change_score": 1.708
+            }
+          ],
+          "new_boundaries": 1
+        },
+        {
+          "depth": 2,
+          "name": "Phrase-scale changes",
+          "segments": [
+            {
+              "index": 0,
+              "start": 0.0,
+              "end": 4.0,
+              "label": "Other recedes",
+              "description": "The other stem loses energy toward the end of this window. No finer split passed the conservative change threshold.",
+              "boundary_supported": false,
+              "pattern_change_score": null
+            },
+            {
+              "index": 1,
+              "start": 4.0,
+              "end": 134.0,
+              "label": "Other grows",
+              "description": "The other stem gains energy toward the end of this window.",
+              "boundary_supported": true,
+              "pattern_change_score": null
+            },
+            {
+              "index": 2,
+              "start": 134.0,
+              "end": 160.25,
+              "label": "Other recedes",
+              "description": "The other stem loses energy toward the end of this window.",
+              "boundary_supported": true,
+              "pattern_change_score": 1.555
+            }
+          ],
+          "new_boundaries": 1
+        }
+      ],
+      "recurrences": []
+    }
+  },
+  "source": {
+    "url": "https://www.youtube.com/watch?v=hvdv45nKT18",
+    "title": "Wolfgang Lohr & Maskarade - Hit the Road Jack (Instrumental) // Electro Swing",
+    "kind": "metadata_matched_instrumental",
+    "metadata_match_score": 0.8785
+  },
+  "audio": {
+    "instrumental": {
+      "url": null,
+      "object_key": "songs/2eaJ2Zd3NU5ZFweqW5R3ZW/original.mp3",
+      "mime": "audio/mpeg",
+      "bytes": 5185365,
+      "status": "awaiting_host"
+    },
+    "bass": {
+      "url": null,
+      "object_key": "songs/2eaJ2Zd3NU5ZFweqW5R3ZW/bass.wav",
+      "mime": "audio/wav",
+      "bytes": 7066982,
+      "status": "awaiting_host"
+    },
+    "drums": {
+      "url": null,
+      "object_key": "songs/2eaJ2Zd3NU5ZFweqW5R3ZW/drums.wav",
+      "mime": "audio/wav",
+      "bytes": 7066982,
+      "status": "awaiting_host"
+    },
+    "other": {
+      "url": null,
+      "object_key": "songs/2eaJ2Zd3NU5ZFweqW5R3ZW/other.wav",
+      "mime": "audio/wav",
+      "bytes": 7066982,
+      "status": "awaiting_host"
+    }
+  }
+}

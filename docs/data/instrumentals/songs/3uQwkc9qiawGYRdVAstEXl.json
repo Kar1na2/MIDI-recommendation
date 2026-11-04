@@ -1,0 +1,308 @@
+{
+  "track_id": "3uQwkc9qiawGYRdVAstEXl",
+  "title": "Set The Tone",
+  "artist": "aespa",
+  "duration": 202.58,
+  "method": "instrumental-stem-patterns-v4",
+  "views": {
+    "instrumental": {
+      "name": "All three stems",
+      "preview": {
+        "type": "mp3",
+        "file": "original.mp3"
+      },
+      "layers": [
+        {
+          "depth": 1,
+          "name": "Broad arrangement shifts",
+          "segments": [
+            {
+              "index": 0,
+              "start": 0.0,
+              "end": 202.58,
+              "label": "Balanced instrumental texture",
+              "description": "drums becomes less prominent, then other becomes more prominent No finer split passed the conservative change threshold.",
+              "boundary_supported": false,
+              "pattern_change_score": null
+            }
+          ],
+          "new_boundaries": 0
+        },
+        {
+          "depth": 2,
+          "name": "Phrase-scale changes",
+          "segments": [
+            {
+              "index": 0,
+              "start": 0.0,
+              "end": 202.58,
+              "label": "Balanced instrumental texture",
+              "description": "drums becomes less prominent, then other becomes more prominent No finer split passed the conservative change threshold.",
+              "boundary_supported": false,
+              "pattern_change_score": null
+            }
+          ],
+          "new_boundaries": 0
+        },
+        {
+          "depth": 3,
+          "name": "Fine texture changes",
+          "segments": [
+            {
+              "index": 0,
+              "start": 0.0,
+              "end": 142.0,
+              "label": "Balanced instrumental texture",
+              "description": "bass becomes more prominent, then drums becomes less prominent",
+              "boundary_supported": true,
+              "pattern_change_score": null
+            },
+            {
+              "index": 1,
+              "start": 142.0,
+              "end": 202.58,
+              "label": "Balanced instrumental texture",
+              "description": "bass becomes less prominent, then other becomes more prominent",
+              "boundary_supported": true,
+              "pattern_change_score": 1.785
+            }
+          ],
+          "new_boundaries": 1
+        }
+      ],
+      "recurrences": []
+    },
+    "bass": {
+      "name": "Bass",
+      "preview": {
+        "type": "wav",
+        "file": "bass.wav"
+      },
+      "layers": [
+        {
+          "depth": 1,
+          "name": "Broad arrangement shifts",
+          "segments": [
+            {
+              "index": 0,
+              "start": 0.0,
+              "end": 202.58,
+              "label": "Bass holds",
+              "description": "The bass stem's average activity is relatively steady here. No finer split passed the conservative change threshold.",
+              "boundary_supported": false,
+              "pattern_change_score": null
+            }
+          ],
+          "new_boundaries": 0
+        },
+        {
+          "depth": 2,
+          "name": "Phrase-scale changes",
+          "segments": [
+            {
+              "index": 0,
+              "start": 0.0,
+              "end": 141.0,
+              "label": "Bass grows",
+              "description": "The bass stem gains energy toward the end of this window.",
+              "boundary_supported": true,
+              "pattern_change_score": null
+            },
+            {
+              "index": 1,
+              "start": 141.0,
+              "end": 202.58,
+              "label": "Bass recedes",
+              "description": "The bass stem loses energy toward the end of this window.",
+              "boundary_supported": true,
+              "pattern_change_score": 2.402
+            }
+          ],
+          "new_boundaries": 1
+        }
+      ],
+      "recurrences": [
+        {
+          "start": 46,
+          "end": 52,
+          "repeat_start": 109,
+          "repeat_end": 115,
+          "similarity": 0.9937,
+          "kind": "similar 6-second audio-texture window"
+        },
+        {
+          "start": 42,
+          "end": 48,
+          "repeat_start": 105,
+          "repeat_end": 111,
+          "similarity": 0.9934,
+          "kind": "similar 6-second audio-texture window"
+        },
+        {
+          "start": 49,
+          "end": 55,
+          "repeat_start": 112,
+          "repeat_end": 118,
+          "similarity": 0.9901,
+          "kind": "similar 6-second audio-texture window"
+        }
+      ]
+    },
+    "drums": {
+      "name": "Drums",
+      "preview": {
+        "type": "wav",
+        "file": "drums.wav"
+      },
+      "layers": [
+        {
+          "depth": 1,
+          "name": "Broad arrangement shifts",
+          "segments": [
+            {
+              "index": 0,
+              "start": 0.0,
+              "end": 10.0,
+              "label": "Drums holds",
+              "description": "The drums stem's average activity is relatively steady here.",
+              "boundary_supported": true,
+              "pattern_change_score": null
+            },
+            {
+              "index": 1,
+              "start": 10.0,
+              "end": 202.58,
+              "label": "Drums recedes",
+              "description": "The drums stem loses energy toward the end of this window.",
+              "boundary_supported": true,
+              "pattern_change_score": 1.881
+            }
+          ],
+          "new_boundaries": 1
+        },
+        {
+          "depth": 2,
+          "name": "Phrase-scale changes",
+          "segments": [
+            {
+              "index": 0,
+              "start": 0.0,
+              "end": 10.0,
+              "label": "Drums holds",
+              "description": "The drums stem's average activity is relatively steady here. No finer split passed the conservative change threshold.",
+              "boundary_supported": false,
+              "pattern_change_score": null
+            },
+            {
+              "index": 1,
+              "start": 10.0,
+              "end": 54.0,
+              "label": "Drums recedes",
+              "description": "The drums stem loses energy toward the end of this window.",
+              "boundary_supported": true,
+              "pattern_change_score": null
+            },
+            {
+              "index": 2,
+              "start": 54.0,
+              "end": 202.58,
+              "label": "Drums recedes",
+              "description": "The drums stem loses energy toward the end of this window.",
+              "boundary_supported": true,
+              "pattern_change_score": 1.608
+            }
+          ],
+          "new_boundaries": 1
+        }
+      ],
+      "recurrences": []
+    },
+    "other": {
+      "name": "Other",
+      "preview": {
+        "type": "wav",
+        "file": "other.wav"
+      },
+      "layers": [
+        {
+          "depth": 1,
+          "name": "Broad arrangement shifts",
+          "segments": [
+            {
+              "index": 0,
+              "start": 0.0,
+              "end": 202.58,
+              "label": "Other recedes",
+              "description": "The other stem loses energy toward the end of this window. No finer split passed the conservative change threshold.",
+              "boundary_supported": false,
+              "pattern_change_score": null
+            }
+          ],
+          "new_boundaries": 0
+        },
+        {
+          "depth": 2,
+          "name": "Phrase-scale changes",
+          "segments": [
+            {
+              "index": 0,
+              "start": 0.0,
+              "end": 41.0,
+              "label": "Other grows",
+              "description": "The other stem gains energy toward the end of this window.",
+              "boundary_supported": true,
+              "pattern_change_score": null
+            },
+            {
+              "index": 1,
+              "start": 41.0,
+              "end": 202.58,
+              "label": "Other recedes",
+              "description": "The other stem loses energy toward the end of this window.",
+              "boundary_supported": true,
+              "pattern_change_score": 1.423
+            }
+          ],
+          "new_boundaries": 1
+        }
+      ],
+      "recurrences": []
+    }
+  },
+  "source": {
+    "url": "https://www.youtube.com/watch?v=KUUSuJhBpGs",
+    "title": "aespa 'Set The Tone' (Official Instrumental)",
+    "kind": "metadata_matched_instrumental",
+    "metadata_match_score": 1.0
+  },
+  "audio": {
+    "instrumental": {
+      "url": null,
+      "object_key": "songs/3uQwkc9qiawGYRdVAstEXl/original.mp3",
+      "mime": "audio/mpeg",
+      "bytes": 6513141,
+      "status": "awaiting_host"
+    },
+    "bass": {
+      "url": null,
+      "object_key": "songs/3uQwkc9qiawGYRdVAstEXl/bass.wav",
+      "mime": "audio/wav",
+      "bytes": 8933998,
+      "status": "awaiting_host"
+    },
+    "drums": {
+      "url": null,
+      "object_key": "songs/3uQwkc9qiawGYRdVAstEXl/drums.wav",
+      "mime": "audio/wav",
+      "bytes": 8933998,
+      "status": "awaiting_host"
+    },
+    "other": {
+      "url": null,
+      "object_key": "songs/3uQwkc9qiawGYRdVAstEXl/other.wav",
+      "mime": "audio/wav",
+      "bytes": 8933998,
+      "status": "awaiting_host"
+    }
+  }
+}

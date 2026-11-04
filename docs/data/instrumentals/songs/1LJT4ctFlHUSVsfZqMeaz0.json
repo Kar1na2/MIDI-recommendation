@@ -1,0 +1,382 @@
+{
+  "track_id": "1LJT4ctFlHUSVsfZqMeaz0",
+  "title": "Cheshire",
+  "artist": "ITZY",
+  "duration": 179.57,
+  "method": "instrumental-stem-patterns-v4",
+  "views": {
+    "instrumental": {
+      "name": "All three stems",
+      "preview": {
+        "type": "mp3",
+        "file": "original.mp3"
+      },
+      "layers": [
+        {
+          "depth": 1,
+          "name": "Broad arrangement shifts",
+          "segments": [
+            {
+              "index": 0,
+              "start": 0.0,
+              "end": 179.57,
+              "label": "Drums-led texture",
+              "description": "other becomes less prominent No finer split passed the conservative change threshold.",
+              "boundary_supported": false,
+              "pattern_change_score": null
+            }
+          ],
+          "new_boundaries": 0
+        },
+        {
+          "depth": 2,
+          "name": "Phrase-scale changes",
+          "segments": [
+            {
+              "index": 0,
+              "start": 0.0,
+              "end": 48.0,
+              "label": "Balanced instrumental texture",
+              "description": "bass becomes more prominent, then other becomes less prominent",
+              "boundary_supported": true,
+              "pattern_change_score": null
+            },
+            {
+              "index": 1,
+              "start": 48.0,
+              "end": 179.57,
+              "label": "Drums-led texture",
+              "description": "drums becomes less prominent, then other becomes more prominent",
+              "boundary_supported": true,
+              "pattern_change_score": 1.348
+            }
+          ],
+          "new_boundaries": 1
+        },
+        {
+          "depth": 3,
+          "name": "Fine texture changes",
+          "segments": [
+            {
+              "index": 0,
+              "start": 0.0,
+              "end": 48.0,
+              "label": "Balanced instrumental texture",
+              "description": "bass becomes more prominent, then other becomes less prominent No finer split passed the conservative change threshold.",
+              "boundary_supported": false,
+              "pattern_change_score": null
+            },
+            {
+              "index": 1,
+              "start": 48.0,
+              "end": 96.0,
+              "label": "Drums-led texture",
+              "description": "bass becomes more prominent, then drums becomes less prominent",
+              "boundary_supported": true,
+              "pattern_change_score": null
+            },
+            {
+              "index": 2,
+              "start": 96.0,
+              "end": 179.57,
+              "label": "Drums-led texture",
+              "description": "drums becomes less prominent, then other becomes more prominent",
+              "boundary_supported": true,
+              "pattern_change_score": 1.481
+            }
+          ],
+          "new_boundaries": 1
+        }
+      ],
+      "recurrences": []
+    },
+    "bass": {
+      "name": "Bass",
+      "preview": {
+        "type": "wav",
+        "file": "bass.wav"
+      },
+      "layers": [
+        {
+          "depth": 1,
+          "name": "Broad arrangement shifts",
+          "segments": [
+            {
+              "index": 0,
+              "start": 0.0,
+              "end": 87.0,
+              "label": "Bass grows",
+              "description": "The bass stem gains energy toward the end of this window.",
+              "boundary_supported": true,
+              "pattern_change_score": null
+            },
+            {
+              "index": 1,
+              "start": 87.0,
+              "end": 179.57,
+              "label": "Bass recedes",
+              "description": "The bass stem loses energy toward the end of this window.",
+              "boundary_supported": true,
+              "pattern_change_score": 1.706
+            }
+          ],
+          "new_boundaries": 1
+        },
+        {
+          "depth": 2,
+          "name": "Phrase-scale changes",
+          "segments": [
+            {
+              "index": 0,
+              "start": 0.0,
+              "end": 87.0,
+              "label": "Bass grows",
+              "description": "The bass stem gains energy toward the end of this window. No finer split passed the conservative change threshold.",
+              "boundary_supported": false,
+              "pattern_change_score": null
+            },
+            {
+              "index": 1,
+              "start": 87.0,
+              "end": 97.0,
+              "label": "Bass recedes",
+              "description": "The bass stem loses energy toward the end of this window.",
+              "boundary_supported": true,
+              "pattern_change_score": null
+            },
+            {
+              "index": 2,
+              "start": 97.0,
+              "end": 179.57,
+              "label": "Bass recedes",
+              "description": "The bass stem loses energy toward the end of this window.",
+              "boundary_supported": true,
+              "pattern_change_score": 1.556
+            }
+          ],
+          "new_boundaries": 1
+        }
+      ],
+      "recurrences": []
+    },
+    "drums": {
+      "name": "Drums",
+      "preview": {
+        "type": "wav",
+        "file": "drums.wav"
+      },
+      "layers": [
+        {
+          "depth": 1,
+          "name": "Broad arrangement shifts",
+          "segments": [
+            {
+              "index": 0,
+              "start": 0.0,
+              "end": 48.0,
+              "label": "Drums grows",
+              "description": "The drums stem gains energy toward the end of this window.",
+              "boundary_supported": true,
+              "pattern_change_score": null
+            },
+            {
+              "index": 1,
+              "start": 48.0,
+              "end": 174.0,
+              "label": "Drums holds",
+              "description": "The drums stem's average activity is relatively steady here.",
+              "boundary_supported": true,
+              "pattern_change_score": 1.241
+            },
+            {
+              "index": 2,
+              "start": 174.0,
+              "end": 179.57,
+              "label": "Drums recedes",
+              "description": "The drums stem loses energy toward the end of this window.",
+              "boundary_supported": true,
+              "pattern_change_score": 1.274
+            }
+          ],
+          "new_boundaries": 2
+        },
+        {
+          "depth": 2,
+          "name": "Phrase-scale changes",
+          "segments": [
+            {
+              "index": 0,
+              "start": 0.0,
+              "end": 32.0,
+              "label": "Drums grows",
+              "description": "The drums stem gains energy toward the end of this window.",
+              "boundary_supported": true,
+              "pattern_change_score": null
+            },
+            {
+              "index": 1,
+              "start": 32.0,
+              "end": 48.0,
+              "label": "Drums holds",
+              "description": "The drums stem's average activity is relatively steady here.",
+              "boundary_supported": true,
+              "pattern_change_score": 1.292
+            },
+            {
+              "index": 2,
+              "start": 48.0,
+              "end": 96.0,
+              "label": "Drums recedes",
+              "description": "The drums stem loses energy toward the end of this window.",
+              "boundary_supported": true,
+              "pattern_change_score": null
+            },
+            {
+              "index": 3,
+              "start": 96.0,
+              "end": 174.0,
+              "label": "Drums recedes",
+              "description": "The drums stem loses energy toward the end of this window.",
+              "boundary_supported": true,
+              "pattern_change_score": 1.217
+            },
+            {
+              "index": 4,
+              "start": 174.0,
+              "end": 179.57,
+              "label": "Drums recedes",
+              "description": "The drums stem loses energy toward the end of this window. No finer split passed the conservative change threshold.",
+              "boundary_supported": false,
+              "pattern_change_score": null
+            }
+          ],
+          "new_boundaries": 2
+        }
+      ],
+      "recurrences": []
+    },
+    "other": {
+      "name": "Other",
+      "preview": {
+        "type": "wav",
+        "file": "other.wav"
+      },
+      "layers": [
+        {
+          "depth": 1,
+          "name": "Broad arrangement shifts",
+          "segments": [
+            {
+              "index": 0,
+              "start": 0.0,
+              "end": 49.0,
+              "label": "Other recedes",
+              "description": "The other stem loses energy toward the end of this window.",
+              "boundary_supported": true,
+              "pattern_change_score": null
+            },
+            {
+              "index": 1,
+              "start": 49.0,
+              "end": 96.0,
+              "label": "Other grows",
+              "description": "The other stem gains energy toward the end of this window.",
+              "boundary_supported": true,
+              "pattern_change_score": 1.121
+            },
+            {
+              "index": 2,
+              "start": 96.0,
+              "end": 179.57,
+              "label": "Other grows",
+              "description": "The other stem gains energy toward the end of this window.",
+              "boundary_supported": true,
+              "pattern_change_score": 1.184
+            }
+          ],
+          "new_boundaries": 2
+        },
+        {
+          "depth": 2,
+          "name": "Phrase-scale changes",
+          "segments": [
+            {
+              "index": 0,
+              "start": 0.0,
+              "end": 49.0,
+              "label": "Other recedes",
+              "description": "The other stem loses energy toward the end of this window. No finer split passed the conservative change threshold.",
+              "boundary_supported": false,
+              "pattern_change_score": null
+            },
+            {
+              "index": 1,
+              "start": 49.0,
+              "end": 96.0,
+              "label": "Other grows",
+              "description": "The other stem gains energy toward the end of this window. No finer split passed the conservative change threshold.",
+              "boundary_supported": false,
+              "pattern_change_score": null
+            },
+            {
+              "index": 2,
+              "start": 96.0,
+              "end": 175.0,
+              "label": "Other grows",
+              "description": "The other stem gains energy toward the end of this window.",
+              "boundary_supported": true,
+              "pattern_change_score": null
+            },
+            {
+              "index": 3,
+              "start": 175.0,
+              "end": 179.57,
+              "label": "Other holds",
+              "description": "The other stem's average activity is relatively steady here.",
+              "boundary_supported": true,
+              "pattern_change_score": 1.081
+            }
+          ],
+          "new_boundaries": 1
+        }
+      ],
+      "recurrences": []
+    }
+  },
+  "source": {
+    "url": "https://www.youtube.com/watch?v=m6XS7fC1_2o",
+    "title": "ITZY - Cheshire [Official Instrumental]",
+    "kind": "metadata_matched_instrumental",
+    "metadata_match_score": 1.0
+  },
+  "audio": {
+    "instrumental": {
+      "url": null,
+      "object_key": "songs/1LJT4ctFlHUSVsfZqMeaz0/original.mp3",
+      "mime": "audio/mpeg",
+      "bytes": 6168045,
+      "status": "awaiting_host"
+    },
+    "bass": {
+      "url": null,
+      "object_key": "songs/1LJT4ctFlHUSVsfZqMeaz0/bass.wav",
+      "mime": "audio/wav",
+      "bytes": 7918994,
+      "status": "awaiting_host"
+    },
+    "drums": {
+      "url": null,
+      "object_key": "songs/1LJT4ctFlHUSVsfZqMeaz0/drums.wav",
+      "mime": "audio/wav",
+      "bytes": 7918994,
+      "status": "awaiting_host"
+    },
+    "other": {
+      "url": null,
+      "object_key": "songs/1LJT4ctFlHUSVsfZqMeaz0/other.wav",
+      "mime": "audio/wav",
+      "bytes": 7918994,
+      "status": "awaiting_host"
+    }
+  }
+}

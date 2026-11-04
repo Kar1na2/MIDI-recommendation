@@ -1,0 +1,355 @@
+{
+  "track_id": "0pHylQR53epYtRcVIhUSCh",
+  "title": "I Love My Body",
+  "artist": "HWASA",
+  "duration": 150.41,
+  "method": "instrumental-stem-patterns-v4",
+  "views": {
+    "instrumental": {
+      "name": "All three stems",
+      "preview": {
+        "type": "mp3",
+        "file": "original.mp3"
+      },
+      "layers": [
+        {
+          "depth": 1,
+          "name": "Broad arrangement shifts",
+          "segments": [
+            {
+              "index": 0,
+              "start": 0.0,
+              "end": 150.41,
+              "label": "Bass-led texture",
+              "description": "drums becomes more prominent, then other becomes less prominent No finer split passed the conservative change threshold.",
+              "boundary_supported": false,
+              "pattern_change_score": null
+            }
+          ],
+          "new_boundaries": 0
+        },
+        {
+          "depth": 2,
+          "name": "Phrase-scale changes",
+          "segments": [
+            {
+              "index": 0,
+              "start": 0.0,
+              "end": 113.0,
+              "label": "Bass-led texture",
+              "description": "bass becomes more prominent, then drums becomes more prominent",
+              "boundary_supported": true,
+              "pattern_change_score": null
+            },
+            {
+              "index": 1,
+              "start": 113.0,
+              "end": 150.41,
+              "label": "Bass-led texture",
+              "description": "drums becomes more prominent",
+              "boundary_supported": true,
+              "pattern_change_score": 2.367
+            }
+          ],
+          "new_boundaries": 1
+        },
+        {
+          "depth": 3,
+          "name": "Fine texture changes",
+          "segments": [
+            {
+              "index": 0,
+              "start": 0.0,
+              "end": 113.0,
+              "label": "Bass-led texture",
+              "description": "bass becomes more prominent, then drums becomes more prominent No finer split passed the conservative change threshold.",
+              "boundary_supported": false,
+              "pattern_change_score": null
+            },
+            {
+              "index": 1,
+              "start": 113.0,
+              "end": 150.41,
+              "label": "Bass-led texture",
+              "description": "drums becomes more prominent No finer split passed the conservative change threshold.",
+              "boundary_supported": false,
+              "pattern_change_score": null
+            }
+          ],
+          "new_boundaries": 0
+        }
+      ],
+      "recurrences": []
+    },
+    "bass": {
+      "name": "Bass",
+      "preview": {
+        "type": "wav",
+        "file": "bass.wav"
+      },
+      "layers": [
+        {
+          "depth": 1,
+          "name": "Broad arrangement shifts",
+          "segments": [
+            {
+              "index": 0,
+              "start": 0.0,
+              "end": 7.0,
+              "label": "Bass holds",
+              "description": "The bass stem's average activity is relatively steady here.",
+              "boundary_supported": true,
+              "pattern_change_score": null
+            },
+            {
+              "index": 1,
+              "start": 7.0,
+              "end": 120.0,
+              "label": "Bass recedes",
+              "description": "The bass stem loses energy toward the end of this window.",
+              "boundary_supported": true,
+              "pattern_change_score": 3.454
+            },
+            {
+              "index": 2,
+              "start": 120.0,
+              "end": 150.41,
+              "label": "Bass recedes",
+              "description": "The bass stem loses energy toward the end of this window.",
+              "boundary_supported": true,
+              "pattern_change_score": 2.813
+            }
+          ],
+          "new_boundaries": 2
+        },
+        {
+          "depth": 2,
+          "name": "Phrase-scale changes",
+          "segments": [
+            {
+              "index": 0,
+              "start": 0.0,
+              "end": 7.0,
+              "label": "Bass holds",
+              "description": "The bass stem's average activity is relatively steady here. No finer split passed the conservative change threshold.",
+              "boundary_supported": false,
+              "pattern_change_score": null
+            },
+            {
+              "index": 1,
+              "start": 7.0,
+              "end": 113.0,
+              "label": "Bass recedes",
+              "description": "The bass stem loses energy toward the end of this window.",
+              "boundary_supported": true,
+              "pattern_change_score": null
+            },
+            {
+              "index": 2,
+              "start": 113.0,
+              "end": 120.0,
+              "label": "Bass holds",
+              "description": "The bass stem's average activity is relatively steady here.",
+              "boundary_supported": true,
+              "pattern_change_score": 3.324
+            },
+            {
+              "index": 3,
+              "start": 120.0,
+              "end": 150.41,
+              "label": "Bass recedes",
+              "description": "The bass stem loses energy toward the end of this window. No finer split passed the conservative change threshold.",
+              "boundary_supported": false,
+              "pattern_change_score": null
+            }
+          ],
+          "new_boundaries": 1
+        }
+      ],
+      "recurrences": [
+        {
+          "start": 88,
+          "end": 94,
+          "repeat_start": 118,
+          "repeat_end": 124,
+          "similarity": 0.9927,
+          "kind": "similar 6-second audio-texture window"
+        }
+      ]
+    },
+    "drums": {
+      "name": "Drums",
+      "preview": {
+        "type": "wav",
+        "file": "drums.wav"
+      },
+      "layers": [
+        {
+          "depth": 1,
+          "name": "Broad arrangement shifts",
+          "segments": [
+            {
+              "index": 0,
+              "start": 0.0,
+              "end": 6.0,
+              "label": "Drums holds",
+              "description": "The drums stem's average activity is relatively steady here.",
+              "boundary_supported": true,
+              "pattern_change_score": null
+            },
+            {
+              "index": 1,
+              "start": 6.0,
+              "end": 75.0,
+              "label": "Drums grows",
+              "description": "The drums stem gains energy toward the end of this window.",
+              "boundary_supported": true,
+              "pattern_change_score": 1.74
+            },
+            {
+              "index": 2,
+              "start": 75.0,
+              "end": 150.41,
+              "label": "Drums recedes",
+              "description": "The drums stem loses energy toward the end of this window.",
+              "boundary_supported": true,
+              "pattern_change_score": 1.647
+            }
+          ],
+          "new_boundaries": 2
+        },
+        {
+          "depth": 2,
+          "name": "Phrase-scale changes",
+          "segments": [
+            {
+              "index": 0,
+              "start": 0.0,
+              "end": 6.0,
+              "label": "Drums holds",
+              "description": "The drums stem's average activity is relatively steady here. No finer split passed the conservative change threshold.",
+              "boundary_supported": false,
+              "pattern_change_score": null
+            },
+            {
+              "index": 1,
+              "start": 6.0,
+              "end": 28.0,
+              "label": "Drums grows",
+              "description": "The drums stem gains energy toward the end of this window.",
+              "boundary_supported": true,
+              "pattern_change_score": null
+            },
+            {
+              "index": 2,
+              "start": 28.0,
+              "end": 75.0,
+              "label": "Drums grows",
+              "description": "The drums stem gains energy toward the end of this window.",
+              "boundary_supported": true,
+              "pattern_change_score": 1.217
+            },
+            {
+              "index": 3,
+              "start": 75.0,
+              "end": 150.41,
+              "label": "Drums recedes",
+              "description": "The drums stem loses energy toward the end of this window. No finer split passed the conservative change threshold.",
+              "boundary_supported": false,
+              "pattern_change_score": null
+            }
+          ],
+          "new_boundaries": 1
+        }
+      ],
+      "recurrences": []
+    },
+    "other": {
+      "name": "Other",
+      "preview": {
+        "type": "wav",
+        "file": "other.wav"
+      },
+      "layers": [
+        {
+          "depth": 1,
+          "name": "Broad arrangement shifts",
+          "segments": [
+            {
+              "index": 0,
+              "start": 0.0,
+              "end": 150.41,
+              "label": "Other holds",
+              "description": "The other stem's average activity is relatively steady here. No finer split passed the conservative change threshold.",
+              "boundary_supported": false,
+              "pattern_change_score": null
+            }
+          ],
+          "new_boundaries": 0
+        },
+        {
+          "depth": 2,
+          "name": "Phrase-scale changes",
+          "segments": [
+            {
+              "index": 0,
+              "start": 0.0,
+              "end": 40.0,
+              "label": "Other grows",
+              "description": "The other stem gains energy toward the end of this window.",
+              "boundary_supported": true,
+              "pattern_change_score": null
+            },
+            {
+              "index": 1,
+              "start": 40.0,
+              "end": 150.41,
+              "label": "Other holds",
+              "description": "The other stem's average activity is relatively steady here.",
+              "boundary_supported": true,
+              "pattern_change_score": 2.522
+            }
+          ],
+          "new_boundaries": 1
+        }
+      ],
+      "recurrences": []
+    }
+  },
+  "source": {
+    "url": "https://www.youtube.com/watch?v=JICASnlkka8",
+    "title": "[INSTRUMENTAL] 화사 (HWASA) - I Love My Body",
+    "kind": "metadata_matched_instrumental",
+    "metadata_match_score": 0.9945
+  },
+  "audio": {
+    "instrumental": {
+      "url": null,
+      "object_key": "songs/0pHylQR53epYtRcVIhUSCh/original.mp3",
+      "mime": "audio/mpeg",
+      "bytes": 4898781,
+      "status": "awaiting_host"
+    },
+    "bass": {
+      "url": null,
+      "object_key": "songs/0pHylQR53epYtRcVIhUSCh/bass.wav",
+      "mime": "audio/wav",
+      "bytes": 6633038,
+      "status": "awaiting_host"
+    },
+    "drums": {
+      "url": null,
+      "object_key": "songs/0pHylQR53epYtRcVIhUSCh/drums.wav",
+      "mime": "audio/wav",
+      "bytes": 6633038,
+      "status": "awaiting_host"
+    },
+    "other": {
+      "url": null,
+      "object_key": "songs/0pHylQR53epYtRcVIhUSCh/other.wav",
+      "mime": "audio/wav",
+      "bytes": 6633038,
+      "status": "awaiting_host"
+    }
+  }
+}
