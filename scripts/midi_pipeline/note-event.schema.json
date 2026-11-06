@@ -1,0 +1,37 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.invalid/midi-first/canonical-midi-notes-1.json",
+  "title": "Canonical MIDI-first note events",
+  "type": "object",
+  "required": ["schema", "run_id", "clock", "source_window", "native_to_source_offset", "timing", "confidence", "velocity_provenance", "drum_duration_provenance", "tracks", "notes"],
+  "properties": {
+    "schema": {"const": "canonical-midi-notes/1"},
+    "run_id": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "clock": {"const": "source_recording_seconds"},
+    "source_window": {"type": "array", "prefixItems": [{"type": "number"}, {"type": "number"}], "minItems": 2, "maxItems": 2},
+    "native_to_source_offset": {"type": "number"},
+    "timing": {"type": "string"},
+    "confidence": {"const": "not provided by backend"},
+    "velocity_provenance": {"type": "string"},
+    "drum_duration_provenance": {"type": "string"},
+    "tracks": {"type": "array", "items": {"type": "object", "required": ["track", "name", "program", "is_drum"]}},
+    "notes": {"type": "array", "items": {
+      "type": "object",
+      "required": ["id", "run_id", "source_audio_id", "source_sha256", "source_stem", "separation_identifier", "backend", "checkpoint_sha256", "track", "instrument", "program", "is_drum", "pitch", "onset", "offset", "duration", "velocity", "native_onset", "native_offset", "in_source_window"],
+      "properties": {
+        "id": {"type": "integer"}, "run_id": {"type": "string"},
+        "source_audio_id": {"type": "string"}, "source_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+        "source_stem": {"type": "string"}, "separation_identifier": {"type": "string"},
+        "backend": {"const": "yourmt3-plus"}, "checkpoint_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+        "track": {"type": "integer", "minimum": 0}, "instrument": {"type": "string"},
+        "program": {"type": "integer", "minimum": 0, "maximum": 127}, "is_drum": {"type": "boolean"},
+        "pitch": {"type": "integer", "minimum": 0, "maximum": 127}, "onset": {"type": "number"},
+        "offset": {"type": "number"}, "duration": {"type": "number", "exclusiveMinimum": 0},
+        "velocity": {"type": "integer", "minimum": 0, "maximum": 127}, "native_onset": {"type": "number"},
+        "native_offset": {"type": "number"}, "in_source_window": {"type": "boolean"}
+      },
+      "additionalProperties": false
+    }}
+  },
+  "additionalProperties": false
+}
