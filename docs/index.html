@@ -1,96 +1,46 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>bepop</title>
-<link rel="stylesheet" href="css/styles.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>bepop</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div id="app">
-    <header id="topBar">
-      <div id="brand"><a href="index.html">bepop</a><a class="experimentNav" href="layers.html">Instrumental patterns <span aria-hidden="true">↗</span></a><a class="experimentNav" href="experiment.html">Pattern study <span aria-hidden="true">↗</span></a></div>
-      <div id="searchWrap">
-        <input id="searchInput" type="text" placeholder="Search a song…" autocomplete="off" spellcheck="false" />
-        <button id="searchBtn" aria-label="Search" title="Search">&#8594;</button>
-        <ul id="suggestions" hidden></ul>
-        <div id="noMatches" hidden>No matches</div>
-      </div>
-    </header>
-
-    <main id="homeScreen"></main>
-
-    <main id="songView" hidden>
-      <div id="songMeta">
-        <div id="songTitleGroup">
-          <span id="songTitle"></span>
-          <span id="loadingNote" hidden>Loading…</span>
-        </div>
-        <div id="volumeControl" title="Volume">
-          <span id="volumeIcon" aria-hidden="true">&#128266;</span>
-          <div id="volumeTrack" role="slider" tabindex="0" aria-label="Volume"
-               aria-valuemin="0" aria-valuemax="100" aria-valuenow="100">
-            <div id="volumeFill"></div>
-          </div>
-        </div>
-      </div>
-
-      <div id="stage">
-        <div id="waveformColumn">
-          <div id="waveformBox">
-            <div id="waveform"></div>
-          </div>
-          <div id="transportControls">
-            <button id="backBtn" title="Back 5 seconds">&#8722;5 s</button>
-            <button id="playPauseBtn" title="Play/Pause">&#9658;</button>
-            <button id="fwdBtn" title="Forward 5 seconds">+5 s</button>
-          </div>
-          <p id="selectionHint">Drag on the waveform to select a range and find similar songs.</p>
-        </div>
-
-        <aside id="analysisPanel" hidden>
-          <button id="closePanelBtn" aria-label="Close" title="Close (Esc)">&times;</button>
-          <h2 id="matchesHeading">Similar songs</h2>
-          <ol id="matches" class="matchList"></ol>
-
-          <div id="matchDetail" hidden>
-            <button id="backToMatchesBtn">&#8592; Back</button>
-            <h2 id="matchDetailTitle"></h2>
-
-            <div id="clipButtons">
-              <button id="playOriginalClipBtn" class="clipBtn">&#9658; Play your selection</button>
-              <button id="playMatchClipBtn" class="clipBtn">&#9658; Play the match</button>
-            </div>
-
-            <div class="alignTrack">
-              <div class="alignTrackLabel">Chord progression</div>
-              <div id="chordAlignRows" class="alignRows"></div>
-              <p id="chordAlignCaption" class="alignCaption" hidden></p>
-            </div>
-
-            <div class="alignTrack">
-              <div class="alignTrackLabel">Melody</div>
-              <div id="noteContour" class="contourGraph"></div>
-              <div class="contourLineLegend">
-                <span class="lineKeySelection">Your selection</span>
-                <span class="lineKeyMatch">Matched song</span>
-              </div>
-            </div>
-
-            <div class="alignLegend">
-              <span class="legendMatch">Same</span>
-              <span class="legendSub">Similar, not exact</span>
-              <span class="legendGap">No match here</span>
-            </div>
-          </div>
-        </aside>
-      </div>
-    </main>
+  <header><a class="brand" href="./" aria-label="bepop home">bepop</a></header>
+  <div class="search-shell">
+    <form id="searchForm" role="search" autocomplete="off">
+      <svg class="search-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg>
+      <input id="search" type="search" placeholder="Search a song…" aria-label="Search MVP songs" role="combobox" aria-autocomplete="list" aria-controls="results" aria-expanded="false" spellcheck="false">
+      <button class="search-submit" aria-label="Search" title="Search"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6"/></svg></button>
+    </form>
+    <div id="searchMessage" role="status" hidden></div>
+    <ul id="results" role="listbox" aria-label="Matching MVP songs" hidden></ul>
   </div>
-
-  <!-- wavesurfer.js v7 (UMD), pinned version - see docs/README.md -->
-  <script src="https://cdn.jsdelivr.net/npm/wavesurfer.js@7.12.12/dist/wavesurfer.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/wavesurfer.js@7.12.12/dist/plugins/regions.min.js"></script>
-  <script type="module" src="js/app.js"></script>
+  <main id="stage" hidden>
+    <section class="record-column" aria-label="Song layers and playback">
+      <div id="record" class="record">
+        <svg id="onion" viewBox="0 0 600 600" role="group" aria-label="Song sections on the full-song timeline"></svg>
+        <button id="hub" class="hub" title="Play whole song" aria-label="Play whole song"><span id="hubArtist"></span><strong id="hubTitle"></strong><span id="hubDuration"></span></button>
+      </div>
+      <div class="transport">
+        <div class="seek-wrap"><div id="selectedRange" class="selected-range" hidden></div><input id="timeline" type="range" min="0" max="1" step="0.01" value="0" aria-label="Song progress" disabled></div>
+        <div class="transport-row">
+          <time id="currentTime">0:00</time>
+          <div class="transport-buttons">
+            <button id="back" class="skip" title="Back 5 seconds" aria-label="Back 5 seconds" disabled><svg viewBox="0 0 28 28" aria-hidden="true"><path d="M7 8a9 9 0 1 1-2 11M7 3v6H1"/><text x="13.5" y="18">5</text></svg></button>
+            <button id="play" class="play" title="Play" aria-label="Play" disabled><svg id="playShape" viewBox="0 0 24 24" aria-hidden="true"><path d="m8 5 11 7-11 7z"/></svg></button>
+            <button id="forward" class="skip" title="Forward 5 seconds" aria-label="Forward 5 seconds" disabled><svg viewBox="0 0 28 28" aria-hidden="true"><path d="M21 8a9 9 0 1 0 2 11M21 3v6h6"/><text x="14.5" y="18">5</text></svg></button>
+          </div>
+          <time id="totalTime">0:00</time>
+        </div>
+      </div>
+    </section>
+    <aside id="details" aria-label="Selected section details" hidden></aside>
+  </main>
+  <audio id="audio" preload="none"></audio>
+  <div id="announcement" class="sr-only" role="status" aria-live="polite"></div>
+  <script type="module" src="app.mjs"></script>
 </body>
 </html>

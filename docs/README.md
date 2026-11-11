@@ -1,159 +1,22 @@
-# bepop — frontend (Phase 5)
+# bepop — published song-layer homepage
 
-Static site, published via GitHub Pages from a **dedicated `pages` branch,
-`/docs` folder**. No build step, no framework, no bundler — this whole
-directory *is* the published site; editing a file here and pushing an
-update to `pages` is the entire deploy process.
+GitHub Pages serves this site from the `pages` branch's `docs/` directory. The
+homepage presents the 300-song MVP plus 23 eligible additions. Select a song and
+choose a segment to see vocal sections, rhythmic-section summaries and bar
+comparison details. Playback uses a full-song timeline.
 
-## Why a dedicated branch (not `main`/docs)
+The source for the homepage is `frontend/`; `frontend/export_site.mjs` creates
+a static export from the read-only datasets `mvp/`, `mvp_325/` and `outputs/`.
+The published `app-data/` files contain only the fields used by the page and
+omit lyric text, source paths, and raw audio. No analysis is recalculated.
 
-Both are valid GitHub Pages sources (the brief allowed either). A dedicated
-branch was chosen to keep `main`'s history free of the ~239 MB published
-payload (mostly audio, see `data/DATA_LAYER.md` §5) and because this repo's
-working convention is to never commit straight to `main`. `pages` was
-branched from `main` once, at the point Phase 4+5 were ready to ship, and
-gets fast-forwarded/updated the same way for future publishes — it isn't a
-generated/orphan branch, just the ordinary branch this content lives on.
+Original previews with verified matching source hashes are served from the
+existing host described in `instrumental-audio-host/README.md`. Tracks not
+listed on that host show an explicit unavailable-audio message; see
+`app-data/audio-unavailable.json` for the current list. The two additional
+songs without sufficient regular pattern data are skipped and explained in
+`frontend/UPDATE_REPORT.md`.
 
-This directory was built as `web/` during Phase 4 and renamed to `docs/`
-verbatim (content unchanged) when Phase 5 settled on this publish target —
-every path reference in `data/DATA_LAYER.md` and the build scripts under
-`scripts/webexport/` was updated to match. `.nojekyll` sits at this
-directory's root so GitHub Pages serves every file as-is (Jekyll's default
-processing otherwise ignores/mangles anything starting with `_`, which
-`data/_song_id_map.csv` does).
-
-## Structure
-
-```
-docs/
-├── index.html          - the entire page shell (search bar, home screen, song view, analysis panel)
-├── experiment.html     - visual report for the Meaningless Love ascending-arpeggio study
-├── layers.html         - searchable instrumental-only disc and stem pattern explorer
-├── css/styles.css       - all styling (dark/Spotify-ish palette, layout transitions)
-├── css/experiment.css   - editorial report-page styling
-├── js/
-│   ├── app.js            - UI logic: search, wavesurfer wiring, selection handling, panel rendering
-│   ├── alignment.js       - Phase 4's ported matching engine (query-vs-corpus chord/note search)
-│   └── experiment.js      - renders the MIDI rolls and buffered audio players for the report page
-├── data/
-│   ├── manifest.json      - {song_id, title, duration} × 75, loaded at boot
-│   ├── instrumentals/manifest.json - playlist scope, processing states, and lazy-loaded pattern records
-│   ├── instrumentals/songs/<id>.json - three combined-stem rings and up to two per-stem rings
-│   ├── sequences.json      - compact chord/note sequences for ALL songs, loaded at boot (matching engine input)
-│   ├── songs/<id>.json      - full per-song note/chord detail, lazy-loaded when a song is opened
-│   ├── DATA_LAYER.md         - full schema reference for every file above (Phase 4 deliverable)
-│   ├── experiment/arpeggio_clips.json - original + 15 buffered classical score excerpts
-│   └── experiment/CLASSICAL_REPORT.md - screening rule, ranked evidence and source credits
-└── audio/<id>.mp3        - 75 tracks, 128kbps (Phase 4 deliverable)
-```
-
-The homepage links to **Instrumental patterns**. Its separate local database
-is `instrumentals/catalog.sqlite`; the original corpus and its 75-track
-homepage audio set stay separate. The new pipeline is:
-
-Run every catalog stage inside WSL. Do not open the active SQLite database
-from native Windows while WSL workers are writing it; use the generated JSON
-and Markdown exports for review instead.
-
-```text
-uv run python -m scripts.instrumentals.ingest --download
-uv run python -m scripts.instrumentals.audit_sources --apply
-uv run python -m scripts.instrumentals.separate_api --watch
-uv run python -m scripts.instrumentals.analyze --watch
-uv run python -m scripts.instrumentals.export_site --write-report
-```
-
-Add `--refresh-ready` to the analysis command only when intentionally rebuilding
-all already-ready maps after changing the analysis method.
-
-Read `output/analysis/INSTRUMENTAL_PATTERN_ANALYSIS_REPORT.md` for coverage,
-statistics, missing originals, and exclusions. Pattern maps are built from
-instrumental recordings; the combined view plays the saved original MP3
-matched from `liked-audio/` by Spotify ID, while the three individual views
-play the isolated WAV stems. The player seeks and stops audio within each
-selected window. The repository has no MP3Juice script; instrumental lookup
-uses the existing yt-dlp downloader with strict title and duration checks.
-`instrumental-audio-host/` contains a separate read-only R2/Worker hosting
-option and the relative-path upload manifest. Set
-`INSTRUMENTAL_AUDIO_BASE_URL` only after the actual media files are uploaded
-and range-tested.
-
-`index.html` has no build-time templating — it's the literal file the
-browser receives. `app.js` is loaded as `<script type="module">` (so it can
-`import` from `alignment.js`); the two `wavesurfer.js` files are loaded via
-plain `<script>` tags from jsdelivr **before** the module script, pinned to
-an exact version (`7.12.12`) — see the CDN allowlist note below.
-
-## How the pieces fit together
-
-1. **Boot** (`app.js` `boot()`): fetches `manifest.json` + `sequences.json`
-   once, in parallel, and keeps both resident in memory for the rest of the
-   session — per `DATA_LAYER.md`, `sequences.json` is sized (~6.3 MB raw /
-   ~667 KB gzip) specifically so this is safe to do upfront rather than
-   per-search.
-2. **Search** filters `manifest.json` client-side (substring match on
-   `title`, case-insensitive) — no backend, no index file, just an
-   `Array.filter` over 75 entries. The same search bar handles both the
-   initial home-screen search and switching songs later (one input, one
-   code path, not two).
-3. **Opening a song** (`loadSong()`): tears down any previous WaveSurfer
-   instance/state completely, fetches `songs/<id>.json`, and creates a fresh
-   `WaveSurfer` instance pointed at `audio_url`. (A MIDI pitch-curve overlay
-   drawn over the waveform existed through Phase 5 but was removed in the
-   post-Phase-5 visual revision pass — not currently rendered.)
-4. **Selection** uses wavesurfer's official Regions plugin
-   (`enableDragSelection`). On `region-created` (drag finished) with a
-   non-trivial duration, the layout shrinks the waveform and opens the
-   analysis panel; on `region-updated` (the user resizes/redrags the same
-   selection) the analysis re-runs with the new bounds.
-5. **Analysis** slices `sequences.json`'s entry for the open song down to
-   the selection's time range and calls `alignment.js`'s
-   `searchChordQueryAgainstCorpus()` / `searchNoteQueryAgainstCorpus()`
-   against the full in-memory `sequences.json` — synchronous, no fetch,
-   typically tens of milliseconds (see `DATA_LAYER.md` §6 for measured
-   numbers). The two result lists are rendered separately and never merged.
-6. **Escape / click-outside** (a single `document`-level `keydown`/`click`
-   listener, only active while a selection exists) clears the region and
-   collapses the panel.
-
-## A real CSS bug found and fixed during Phase 5's build-order testing
-
-`#homeScreen`/`#songView` are toggled with the HTML `hidden` attribute, but
-each also has its own `display: flex` rule for layout. A bare `display`
-declaration on an id selector **outranks** the browser's built-in
-`[hidden] { display: none }` rule (higher specificity), which silently
-defeats `hidden` — the element stays visible. Fixed by scoping those rules
-to `#homeScreen:not([hidden])` / `#songView:not([hidden])` instead. Caught
-by the automated click-through test (`isHidden()` returning `false` right
-after page load, before any interaction) — see the Phase 5 report for the
-rest of that test pass. **If a future edit adds `display` to any other
-element that's also toggled via `hidden`, use this same `:not([hidden])`
-pattern**, or it will silently stop hiding.
-
-## Making a change here
-
-- **Content/data changes** (new songs, re-tuned matching): regenerate via
-  `scripts/webexport/` (see `data/DATA_LAYER.md`'s reproduce commands), not
-  by hand-editing anything under `data/` or `audio/`.
-- **UI/behavior changes**: edit `index.html` / `css/styles.css` / `js/app.js`
-  directly — there's nothing to compile. Open `index.html` through a local
-  static server (`python3 -m http.server` from inside `docs/`, not
-  `file://`, since the `fetch()` calls for the JSON data need real HTTP) and
-  reload.
-- **`js/alignment.js`**: don't hand-edit the scoring/DP logic — it's a
-  validated port of `lib/sequence_alignment.py` /
-  `lib/chord_similarity.py` / `lib/note_similarity.py` (see
-  `DATA_LAYER.md` §6). If the Python originals change, re-port and re-run
-  `scripts/webexport/dump_validation_cases.py` +
-  `scripts/webexport/run_js_validation.mjs` before trusting the new version.
-- **CDN dependency**: `wavesurfer.js` is pinned to `7.12.12` in
-  `index.html`'s two `<script>` tags (core + Regions plugin, both loaded as
-  UMD builds exposing the globals `WaveSurfer` and `WaveSurfer.Regions`).
-  Bump the version in both tags together if you ever need to; nothing else
-  in this repo references that version number.
-- **Arpeggio experiment excerpts**: regenerate the report page's MIDI note
-  windows with `uv run python scripts/webexport/build_arpeggio_experiment_page_data.py`.
-  The Debussy reference MIDI is an ignored local experiment input; it is only
-  needed for regeneration because the committed JSON already contains the
-  rendered excerpt data.
+See [RETIRED_PAGES.md](RETIRED_PAGES.md) for the content and supporting files
+of the previous public pages. Their supporting files remain in the repository
+and its history.
