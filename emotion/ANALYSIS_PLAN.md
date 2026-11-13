@@ -1,0 +1,74 @@
+# Task D analysis plan — registered before song scoring
+
+Date: 2026-11-12, America/Los_Angeles. No song has been scored when this plan was written. Any subsequent change goes in a dated **Deviation** appended here; it must identify whether scoring had started.
+
+## Scope, interpretation and inputs
+
+The sampling frame is `mvp_325/summary.csv`: random 300 for headline results, pilot 25 and combined results as nonrandom descriptions. Probes are a third cohort and never enter corpus normalization, training, controls, or headline statistics. Take the random outputs from `outputs/<id>` and pilot outputs from `mvp_325/songs/<id>`; these locations are read-only. `analysis_v2/language.csv` is the sole language source; missing IDs remain missing, including for language-stratified tests. Do not infer or silently replace missing languages. Report counts and missingness per cohort.
+
+Use unsnapped `raw_start_s`/`raw_end_s`; the primary set is validated lyric sections with finite, increasing bounds. Secondary unaligned and vocal-activity spans are marked secondary and never enter primary tests. Instrumental songs receive background-only status and are excluded from pair statistics. Take cached vocal stems; regenerate `no_vocals` once per song with Demucs two-stems vocals, preserving input audio, under `emotion/stems/<id>/instrumental.flac`, and record wall time and any failure. Each section's words are the text actually used by its lyric stage: aligned LRCLIB, cached Genius section via its index, or cached WhisperX timed lines as appropriate. Text attribution must follow recorded provenance; if it cannot be established, mark text unavailable rather than use unrelated text or fabricate it. All text is confined to ignored `emotion/private/`, with only SHA-256 of normalized UTF-8 text and counts outside it. Silent or nonexistent channels are missing, not zero.
+
+There are no human judgments for this analysis. Results and internal checks are model-based. Some models use human-rated training data, whereas embeddings and zero-shot models are not necessarily trained on human emotion ratings; ratings here are not ground truth. Singing, lyrics, separation artifacts and language shifts may all be out of distribution.
+
+## Fixed models and scores
+
+Exact revisions, local file hashes, licenses and language coverage are in `models.json`; verify hashes before inference. Do not automatically substitute a missing or failed model. Any noncommercial weight is explicitly identified there. All inference uses evaluation mode and fixed weights.
+
+* **T1:** `clapAI/roberta-base-multilingual-sentiment`, chosen because its documented 16-language training data includes en/ja/ko/zh and real review/sentiment sources. Three-class text valence is `P(positive) - P(negative)`; it does not supply arousal. Truncate at its 512-token limit and flag truncation. Score the section and each source line individually. Unsupported languages are unavailable, not relabeled.
+* **T2:** `intfloat/multilingual-e5-base`, masked mean pool and L2-normalize with `query: ` prefix, max 512 tokens. For each axis subtract cosine similarity to the negative/low anchor from similarity to the positive/high anchor. Score section and lines. Anchor words below are dictionary entries, not translated claims about the lyrics. Use the anchor set for the Task A language; other/missing languages have no T2 score. Text arousal is low-confidence; T1 has no arousal, so there is no two-model text-arousal consensus or trust verdict.
+
+| Language | positive | negative | low arousal | high arousal |
+|---|---|---|---|---|
+| English | happiness | sadness | calm | excitement |
+| Japanese | 幸せ | 悲しい | 穏やか | 興奮 |
+| Korean | 행복 | 슬픔 | 차분하다 | 흥분 |
+| Chinese | 快乐 | 悲伤 | 平静 | 兴奋 |
+
+Dictionary verification: Japanese [幸せ](https://en.wiktionary.org/wiki/幸せ), [悲しい](https://en.wiktionary.org/wiki/悲しい), [穏やか](https://en.wiktionary.org/wiki/穏やか), [興奮](https://en.wiktionary.org/wiki/興奮); Korean [행복](https://en.wiktionary.org/wiki/행복), [슬픔](https://en.wiktionary.org/wiki/슬픔), [차분하다](https://en.wiktionary.org/wiki/차분하다), [흥분](https://en.wiktionary.org/wiki/흥분); Chinese [快乐](https://en.wiktionary.org/wiki/快乐), [悲伤](https://en.wiktionary.org/wiki/悲伤), [平静](https://en.wiktionary.org/wiki/平静), [兴奋](https://en.wiktionary.org/wiki/兴奋). Single-word anchors are intentionally identical to these dictionary headwords; their imperfect context is a limitation.
+
+* **M1:** Essentia MusiCNN `msd-musicnn-1` embeddings and `emomusic-msd-musicnn-2` regression head, with outputs in documented valence, arousal order and 16 kHz input. Also score the full mix. CPU execution is permitted if the Essentia TensorFlow GPU runtime is unavailable, and is explicitly recorded.
+* **M2:** `laion/clap-htsat-unfused`, 48 kHz. Fixed prompt pairs are valence: `cheerful, bright music` minus `sad, dark music`; arousal: `intense, energetic music` minus `calm, quiet music`. Each value is the difference of the two normalized audio/text cosine similarities. Use the model processor's fixed short-audio padding policy; do not select the highest-scoring prompt after observing data.
+* **V1:** `audeering/wav2vec2-large-robust-12-ft-emotion-msp-dim`, 16 kHz, returns direct continuous arousal and valence from the published dimensional regression head. This replaces the example categorical emotion2vec model to avoid an unsupported category-to-dimension map. It is trained on English speech, not singing; neither singing nor multilingual validity is assumed. [Model card](https://huggingface.co/audeering/wav2vec2-large-robust-12-ft-emotion-msp-dim).
+* **V2:** interpretable, uncalibrated prosody composite, not a pretrained ground-truth model. Compute voiced f0 median and semitone range with pYIN; vibrato rate/extent from the detrended voiced f0 trajectory, RMS mean/variance, spectral centroid, voiced fraction, and MuScriptor voice note-onset rate. Standardize each feature over primary random-section observations; V2 arousal is the unweighted mean of z(RMS), z(RMS variance), z(f0 range), z(brightness), and z(note rate). V2 valence is the unweighted mean of z(brightness), z(f0 median), and minus z(RMS variance). This valence rule is a proposed heuristic, not a published or validated mapping; high activation can reflect anger as well as happiness. Its only role is the specified internal agreement check and exploratory scores, never a claim of measured emotion. Associations of vocal cues with affect and their ambiguity are reviewed by [Juslin and Laukka (2003)](https://doi.org/10.1037/0033-2909.129.5.770). Missing components make the corresponding composite unavailable; no zero imputation.
+
+## Windows, aggregation and normalization
+
+For each raw-timed section, partition by 4 s audio windows at 1 s hop, with starts beginning at the section start; clip the final window to its section and zero-pad it to 4 s. Record the fraction of actual audio. The M1 native MusiCNN patches within each window are averaged before reporting the window. A voice window is active only when at least 20% of its 100 ms RMS frames exceed -40 dBFS on the vocal stem; no active frames means voice missing. Analyze full mix and instrumental with identical boundaries. Store each model's individual frame values and coverage, then section mean, median, standard deviation, and fraction of possible frames available. Nonfinite inputs and model errors are explicit missing statuses.
+
+For each channel/model/dimension separately, calculate mean and population standard deviation over all available **primary** random-300 sections, without duration weighting. Apply these fixed parameters to pilot, secondary, and probes; if SD is zero or no observations exist, that score and all dependent results are unavailable. For a dimension with two available models, consensus is their arithmetic mean z-score; agreement is their absolute z-score difference. Never impute a missing model as consensus. Primary valence and arousal trust verdicts are evaluated separately, because T1 supplies no arousal; arousal requiring words is exploratory T2-only and cannot meet the two-model criterion.
+
+## Trust and controls
+
+For each channel/dimension, calculate Spearman correlation between model section scores on primary random sections with both models present, overall and by language; undefined correlation or insufficient pairs is not a pass. A channel/dimension is trusted only if overall ρ ≥ 0.40 **and** repeated same-label sections of a song are closer than different-label pairs from that song with one-sided permutation p < 0.01. For the repeat test, compare within-song mean absolute differences in consensus z for same versus different labels, averaging each song's difference equally; omit unlabeled, inferred-group and songs without both pair types. Permute the actual labels among sections within each eligible song 10,000 times, seed 20261112, p = (1 + number of null differences at least as large as observed)/(10001). Report eligible songs, pair counts, missingness, per-language correlations and p values. Not evaluable is not trusted.
+
+For words↔background, compute a shuffle control on eligible primary random sections with language known. At each of 1,000 iterations (seed 20261113), assign to each section a background consensus score sampled from a different random song of the same language. Use the difference between supports and contradicts as the statistic, with identical thresholds and eligible rows in real and shuffled comparisons. Report the real statistic, null mean and two-sided permutation p; if no partner exists, exclude that row from both arms and report the count. A nonsignificant result is no evidence this method detects a relationship. Separately report Spearman ρ of M1 instrumental vs full mix for both dimensions and sample size; high correlation limits interpretation of the separation check.
+
+## Relations, profiles, and ablation
+
+For every pair with trusted channels and a two-model consensus on a dimension: `supports` for equal signs with both absolute z ≥ 0.5; `contradicts` for opposite signs with both absolute z ≥ 0.5; otherwise `neutral/ambiguous`. Also save the signed difference (first channel minus second). Without trust, keep model scores and provisional labels only in a clearly exploratory table, never promote them to the primary result. Confidence is descriptive, not a calibrated probability: minimum frame coverage of the two channels multiplied by `exp(-mean absolute within-channel model disagreement)`; text coverage is 1 only when an attributable section text exists. Clamp to [0,1].
+
+Per song and dimension, calculate shares of available primary sections weighted by raw duration. Fewer than 3 scored sections gives `flat`; otherwise ≥60% supports is `congruent`, else ≥40% contradicts is `contrasting`, else `mixed`. Record unavailable separately; select strongest contradiction by largest absolute pairwise z difference, ties earliest. Primary distribution uses random songs only; show pilot and combined explicitly as nonrandom. Break down section relations by verified section label, language and ring-1 source; unlabeled is reported separately.
+
+For the preregistered **text-misses-it** ablation, a section qualifies only where both audio channels and words are trusted for the relevant dimension and all have two-model consensuses. Audio agrees when voice and background have the same sign and each |z| ≥ 0.5. The words-only reading is labeled `wrong relative to audio` if words have the opposite sign and |z| ≥ 0.5; divide by the number of qualifying audio-agreeing sections. Report coverage and by-song weighting sensitivity. This is disagreement with model-based audio consensus, not error against human truth. If voice or words is untrusted, the primary ablation is unavailable.
+
+## Probes and optional human anchor
+
+Expected directions are fixed now and never tune models or thresholds to them:
+
+| Probe | Expected | Published source |
+|---|---|---|
+| YOASOBI — Yoru ni Kakeru | contrasting | [Atwood artist interview](https://atwoodmagazine.com/yoasobi-interview-music-feature-2023/) |
+| Foster the People — Pumped Up Kicks | contrasting | [WRAL interview/report](https://www.wral.com/archive/17085525/) |
+| OutKast — Hey Ya! | contrasting | [Voice and Whiteley (2019)](https://eprints.whiterose.ac.uk/id/eprint/145600/) |
+| Mark Ronson ft. Bruno Mars — Uptown Funk | congruent | [Emotional Misalignment in Contemporary Music](https://run.unl.pt/server/api/core/bitstreams/87c6ae10-85db-4cdd-a5d5-e892da7176dd/content) |
+| Adele — Someone Like You | congruent | [Pitchfork review](https://pitchfork.com/reviews/tracks/12105-adele-someone-like-you/) |
+
+24K Magic is an alternate candidate and not a selected known-answer probe. Search the entire local MP3 library by filename and title/artist tags and list absent candidates; do not download audio. If a selected probe is outside the 325, keep all new artifacts under `emotion/`, subject to resolving the request's conflicting instruction about normal `outputs/` paths. Record no probe result if audio is missing. Optional human anchor: sample 30 validated sections without replacement with seed 20261114, allocating equally across known languages where possible and redistributing unused slots proportionally, at most one section per song; leave user rating fields empty. If labels exist, report Cohen's κ and matched n; otherwise report no human labels yet.
+
+## Explanations
+
+Extract cached tempo, per-instrument onset density and off-strong-beat fraction, pattern compression and repetition, median pitch register, Krumhansl pitch-class key/mode correlation and strength, chord-layer onset rate, instrumental RMS and centroid, and listed voice prosody. Missing provenance gives missing feature values. Fit separate ridge regressions to trusted background consensus valence and arousal, and voice dimensions only when trusted. Use grouped-by-song five-fold CV, fixed ridge α=1, fold-local median imputation and scaling; report out-of-fold R². Compute held-out permutation importance with 10 within-test-fold shuffles, seed 20261115. Refit on all eligible random songs for section-level signed standardized-feature contributions; report the largest three absolute contributions and a fixed descriptive template. These explain model ratings, not ground truth or causal effects.
+
+## Output and compute accountability
+
+Write only under `emotion/`, preserving `cohort` in every per-song and flat table. Record errors, frame coverage, stage timings, GPU/CPU use, software versions, model hashes, lyric provenance and the preregistration commit. Verify the two supplied snapshots before and after the run. The report must put trust and missingness before outcomes and distinguish human-rated training sets from internal model validation. Do not report unavailable analyses as negative findings.
