@@ -1,0 +1,300 @@
+{
+  "schema_version": 1,
+  "models": [
+    {
+      "id": "clapAI/roberta-base-multilingual-sentiment",
+      "revision": "5986405bd6f2fbaf98b2a5568fdbc02d74546694",
+      "files": [
+        {
+          "path": "all_results.json",
+          "sha256": "934bb6ab2ab46eb581c26cea2d992bf973ed61c82ca8690361f396a82334d251",
+          "size": 677
+        },
+        {
+          "path": "config.json",
+          "sha256": "d46970508c8ee7a75451d9d669a2178e1f0af13fcf7fb540b32b4d7a77ba7c77",
+          "size": 944
+        },
+        {
+          "path": "eval_results.json",
+          "sha256": "0ffb3c1f7badc1f8422040d58c6a4e3da6a64980a874f1f86793ac6dc0cd11bd",
+          "size": 274
+        },
+        {
+          "path": "model.safetensors",
+          "sha256": "01234f0e63a987c7bd768b5eb4a047343844de0414b14fa4f6625f88698c7771",
+          "size": 556116054
+        },
+        {
+          "path": "special_tokens_map.json",
+          "sha256": "06e405a36dfe4b9604f484f6a1e619af1a7f7d09e34a8555eb0b77b66318067f",
+          "size": 280
+        },
+        {
+          "path": "test_results.json",
+          "sha256": "68a6a154a9d35ef0ff39b5c01302dd2c63229e3b4c20093ed8b786f432843af2",
+          "size": 257
+        },
+        {
+          "path": "tokenizer.json",
+          "sha256": "3a56def25aa40facc030ea8b0b87f3688e4b3c39eb8b45d5702b3a1300fe2a20",
+          "size": 17082734
+        },
+        {
+          "path": "tokenizer_config.json",
+          "sha256": "6fad4d6385e29b05abc467af4707771008621f3671ae590e8549df22aeacb962",
+          "size": 1271
+        },
+        {
+          "path": "train_results.json",
+          "sha256": "20566276c5f36c467688826a576fd3e5855f584a67c5df02dd01f35c12fd42c0",
+          "size": 168
+        },
+        {
+          "path": "trainer_state.json",
+          "sha256": "4309ce63a0ffc52a0038dc4b64a6a812d6fb82d3e4600f499512a74ef2f1c447",
+          "size": 537065
+        }
+      ],
+      "channel": "words",
+      "role": "T1",
+      "license": "Apache-2.0",
+      "noncommercial": false,
+      "languages": [
+        "en",
+        "ja",
+        "ko",
+        "zh",
+        "ar",
+        "de",
+        "es",
+        "fr",
+        "hi",
+        "id",
+        "it",
+        "ms",
+        "pt",
+        "ru",
+        "tr",
+        "vi"
+      ],
+      "coverage_note": "Model card reports 16+ languages and training on mixed-source review and sentiment datasets; lyric-domain validity is unverified.",
+      "card": "https://huggingface.co/clapAI/roberta-base-multilingual-sentiment",
+      "training_data": "https://huggingface.co/datasets/clapAI/MultiLingualSentiment",
+      "weight": "model.safetensors",
+      "weight_sha256": "01234f0e63a987c7bd768b5eb4a047343844de0414b14fa4f6625f88698c7771"
+    },
+    {
+      "id": "intfloat/multilingual-e5-base",
+      "revision": "d128750597153bb5987e10b1c3493a34e5a4502a",
+      "files": [
+        {
+          "path": "1_Pooling/config.json",
+          "sha256": "f586ab6c734af7b8d14d898bfa7faa886f23b46f86dd1730514309893af13d75",
+          "size": 200
+        },
+        {
+          "path": "config.json",
+          "sha256": "9dab198f24c8c0879e481cf7822005d5ecbceedbacb390ffafa594e28d31bac4",
+          "size": 694
+        },
+        {
+          "path": "model.safetensors",
+          "sha256": "a18a44fad1d0b46ded15928144138cff1135d5cc8233bdd90be5f18822de09a7",
+          "size": 1112201288
+        },
+        {
+          "path": "modules.json",
+          "sha256": "c6e29747481e8b5dd2b58401966aeac910de39092f90cda9a704b1545f902b04",
+          "size": 387
+        },
+        {
+          "path": "sentence_bert_config.json",
+          "sha256": "948201d8329907aae938fa62f9ceeed53f5694dacc2b87b9f3b78b37ee986529",
+          "size": 57
+        },
+        {
+          "path": "sentencepiece.bpe.model",
+          "sha256": "cfc8146abe2a0488e9e2a0c56de7952f7c11ab059eca145a0a727afce0db2865",
+          "size": 5069051
+        },
+        {
+          "path": "special_tokens_map.json",
+          "sha256": "06e405a36dfe4b9604f484f6a1e619af1a7f7d09e34a8555eb0b77b66318067f",
+          "size": 280
+        },
+        {
+          "path": "tokenizer.json",
+          "sha256": "62c24cdc13d4c9952d63718d6c9fa4c287974249e16b7ade6d5a85e7bbb75626",
+          "size": 17082660
+        },
+        {
+          "path": "tokenizer_config.json",
+          "sha256": "efb5c0d09722e5fe59a462cd2a9976ee216d55b037597d997cd3fe833216da15",
+          "size": 418
+        }
+      ],
+      "channel": "words",
+      "role": "T2",
+      "license": "MIT",
+      "noncommercial": false,
+      "languages": [
+        "en",
+        "ja",
+        "ko",
+        "zh"
+      ],
+      "coverage_note": "Model card reports XLM-R coverage of 100 languages, with lower-resource degradation possible; not trained as an emotion classifier.",
+      "card": "https://huggingface.co/intfloat/multilingual-e5-base",
+      "weight": "model.safetensors",
+      "weight_sha256": "a18a44fad1d0b46ded15928144138cff1135d5cc8233bdd90be5f18822de09a7"
+    },
+    {
+      "id": "laion/clap-htsat-unfused",
+      "revision": "8fa0f1c6d0433df6e97c127f64b2a1d6c0dcda8a",
+      "files": [
+        {
+          "path": "config.json",
+          "sha256": "9efb9557bc804f2ca6e394486af2e45dfed0b18554909735a99c6220b84e4288",
+          "size": 5390
+        },
+        {
+          "path": "merges.txt",
+          "sha256": "fe36cab26d4f4421ed725e10a2e9ddb7f799449c603a96e7f29b5a3c82a95862",
+          "size": 456356
+        },
+        {
+          "path": "preprocessor_config.json",
+          "sha256": "9739f58296aa6f9ac18008fd0150fb2649bc554985fbde86d0a4041c882ac753",
+          "size": 541
+        },
+        {
+          "path": "pytorch_model.bin",
+          "sha256": "1cd3c601bc4afe0fa87be3de4c13dd2cfadd249fac1e29acf74a9b296c3219bb",
+          "size": 614525833
+        },
+        {
+          "path": "special_tokens_map.json",
+          "sha256": "06e405a36dfe4b9604f484f6a1e619af1a7f7d09e34a8555eb0b77b66318067f",
+          "size": 280
+        },
+        {
+          "path": "tokenizer.json",
+          "sha256": "77ef92283d67f0d97e1454909a964afcbfa2019f0fb9f18f8e88d5c25c3ba729",
+          "size": 2108746
+        },
+        {
+          "path": "tokenizer_config.json",
+          "sha256": "377f91458f7729a4574a84c77bdce67dbc3c58c1a345a29bbf8c4eb1307948a3",
+          "size": 384
+        },
+        {
+          "path": "vocab.json",
+          "sha256": "ed19656ea1707df69134c4af35c8ceda2cc9860bf2c3495026153a133670ab5e",
+          "size": 798293
+        }
+      ],
+      "channel": "background",
+      "role": "M2",
+      "license": "Apache-2.0",
+      "noncommercial": false,
+      "languages": [
+        "en"
+      ],
+      "coverage_note": "English text prompts; music audio is not language-restricted.",
+      "card": "https://huggingface.co/laion/clap-htsat-unfused",
+      "weight": "pytorch_model.bin",
+      "weight_sha256": "1cd3c601bc4afe0fa87be3de4c13dd2cfadd249fac1e29acf74a9b296c3219bb"
+    },
+    {
+      "id": "audeering/wav2vec2-large-robust-12-ft-emotion-msp-dim",
+      "revision": "6eba34a2485ea31cb03600241787c3a5edab8626",
+      "files": [
+        {
+          "path": "config.json",
+          "sha256": "c0962c3d1f065972bbebbba0bbffb8016ef4e9aae4a9b07e5fec22f770d2cddb",
+          "size": 2344
+        },
+        {
+          "path": "model.safetensors",
+          "sha256": "efa5ac1a13b2d2f42182738e44794b1eb4c0cdd221a8b4ae11304c3a5f5fae95",
+          "size": 661375508
+        },
+        {
+          "path": "preprocessor_config.json",
+          "sha256": "60ca5a31e13f69ee2fbf147504c8676db5f6398fd7a6b12294341dff838edfcf",
+          "size": 214
+        },
+        {
+          "path": "vocab.json",
+          "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+          "size": 2
+        }
+      ],
+      "channel": "voice",
+      "role": "V1",
+      "license": "CC-BY-NC-SA-4.0",
+      "noncommercial": true,
+      "languages": [
+        "en"
+      ],
+      "coverage_note": "English speech; singing and cross-language use are unvalidated.",
+      "card": "https://huggingface.co/audeering/wav2vec2-large-robust-12-ft-emotion-msp-dim",
+      "weight": "model.safetensors",
+      "weight_sha256": "efa5ac1a13b2d2f42182738e44794b1eb4c0cdd221a8b4ae11304c3a5f5fae95"
+    },
+    {
+      "id": "Essentia emomusic-msd-musicnn",
+      "role": "M1",
+      "channel": "background",
+      "revision": "emomusic-msd-musicnn-2 + msd-musicnn-1",
+      "license": "CC-BY-NC-SA-4.0",
+      "noncommercial": true,
+      "languages": [
+        "audio, language independent"
+      ],
+      "coverage_note": "Music regressors; vocal language transfer and separation artifacts unvalidated.",
+      "card": "https://essentia.upf.edu/models.html",
+      "files": [
+        {
+          "url": "https://essentia.upf.edu/models/feature-extractors/musicnn/msd-musicnn-1.pb",
+          "path": "msd-musicnn-1.pb",
+          "size": 3197999,
+          "sha256": "cdea0722bcee7f731286843f2233e3aa69887bb5c3e2dce011eff55f38d04f3e"
+        },
+        {
+          "url": "https://essentia.upf.edu/models/feature-extractors/musicnn/msd-musicnn-1.json",
+          "path": "msd-musicnn-1.json",
+          "size": 3299,
+          "sha256": "8e6b3b509f0610c0e65dce467fd459d6777509388eaddb13ed138d8ac1341ffe"
+        },
+        {
+          "url": "https://essentia.upf.edu/models/classification-heads/emomusic/emomusic-msd-musicnn-2.pb",
+          "path": "emomusic-msd-musicnn-2.pb",
+          "size": 82460,
+          "sha256": "fcfb486510213b35e0a691975325f58170f648ad4a02d749bce790da13ded43b"
+        },
+        {
+          "url": "https://essentia.upf.edu/models/classification-heads/emomusic/emomusic-msd-musicnn-2.json",
+          "path": "emomusic-msd-musicnn-2.json",
+          "size": 2715,
+          "sha256": "fe393417b709080582201f15624460882702d596b534344d00f7a256db87c5a8"
+        }
+      ]
+    },
+    {
+      "id": "fixed prosody feature composite",
+      "role": "V2",
+      "channel": "voice",
+      "revision": "defined in preregistration",
+      "license": "not applicable",
+      "noncommercial": false,
+      "languages": [
+        "audio, language independent"
+      ],
+      "coverage_note": "Heuristic, uncalibrated composite; not a trained emotion model.",
+      "files": []
+    }
+  ],
+  "license_note": "Noncommercial flags apply to the named model weights; other dependencies and training data may have separate terms."
+}

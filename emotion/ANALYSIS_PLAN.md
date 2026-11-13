@@ -72,3 +72,7 @@ Extract cached tempo, per-instrument onset density and off-strong-beat fraction,
 ## Output and compute accountability
 
 Write only under `emotion/`, preserving `cohort` in every per-song and flat table. Record errors, frame coverage, stage timings, GPU/CPU use, software versions, model hashes, lyric provenance and the preregistration commit. Verify the two supplied snapshots before and after the run. The report must put trust and missingness before outcomes and distinguish human-rated training sets from internal model validation. Do not report unavailable analyses as negative findings.
+
+## Deviation / clarification — 2026-11-12, before scoring
+
+The original plan referred to `models.json` without binding its contents in the preregistration commit. To make the reference immutable, the selected manifest is committed alongside this clarification; its SHA-256 is `97e4994265e0e8c1c67026ea3ad25ade751df6733321ad264869d7ab5b3a315f`. This fixes the same models already described above and changes no analysis threshold, model or result. No songs have been scored.
