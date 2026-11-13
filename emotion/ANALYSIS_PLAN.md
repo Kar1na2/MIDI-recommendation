@@ -76,3 +76,7 @@ Write only under `emotion/`, preserving `cohort` in every per-song and flat tabl
 ## Deviation / clarification — 2026-11-12, before scoring
 
 The original plan referred to `models.json` without binding its contents in the preregistration commit. To make the reference immutable, the selected manifest is committed alongside this clarification; its SHA-256 is `97e4994265e0e8c1c67026ea3ad25ade751df6733321ad264869d7ab5b3a315f`. This fixes the same models already described above and changes no analysis threshold, model or result. No songs have been scored.
+
+## Deviation / clarification — 2026-11-12, before scoring: separation model
+
+The model manifest is extended to pin the `adefossez/HTDemucs` revision and all local checkpoint files; its updated SHA-256 is `988abbb5964977517cdcdc9bc1f2d062de2131fb3855319e1a4262ef9f8e9f0c`. The maintainer says the pretrained weights are for scientific purposes and are not under the code's MIT license ([source](https://github.com/facebookresearch/demucs/issues/327)). The explicit local loader rejects hash mismatches and disables model-source fallback. This does not alter the selected separation model or any threshold. No songs have been scored.

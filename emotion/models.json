@@ -294,6 +294,43 @@
       ],
       "coverage_note": "Heuristic, uncalibrated composite; not a trained emotion model.",
       "files": []
+    },
+    {
+      "id": "adefossez/HTDemucs",
+      "role": "source_separation",
+      "channel": "background",
+      "revision": "cbc8a9b1a87023b7fd74e7b3412e6321c0eab003",
+      "software_version": "4.1.0",
+      "license": "scientific purposes only (maintainer statement); code MIT",
+      "noncommercial": true,
+      "license_source": "https://github.com/facebookresearch/demucs/issues/327",
+      "languages": [
+        "audio, language independent"
+      ],
+      "card": "https://huggingface.co/adefossez/HTDemucs",
+      "coverage_note": "Music source separation; artifacts and vocal leakage are possible.",
+      "files": [
+        {
+          "path": "demucs/955717e8.json",
+          "size": 12087,
+          "sha256": "12540373de858920b60002ebfbe17738860dbf2e89df625dc3b7875af2d28491"
+        },
+        {
+          "path": "demucs/955717e8.safetensors",
+          "size": 84025440,
+          "sha256": "d9fa14133cfcc034a6758923bb3a8ca9f8dfd0b582134643bbf83f72c17576dd"
+        },
+        {
+          "path": "demucs/README.md",
+          "size": 647,
+          "sha256": "b34c13f1b6c3473bf44978f70b5c62666ee309514d6d50b34cf44827f9a38104"
+        },
+        {
+          "path": "demucs/htdemucs.yaml",
+          "size": 21,
+          "sha256": "239c445d0b14454d541ad8bd9bb271c9e536d267e8a4625208744cbb2e7bb66c"
+        }
+      ]
     }
   ],
   "license_note": "Noncommercial flags apply to the named model weights; other dependencies and training data may have separate terms."
