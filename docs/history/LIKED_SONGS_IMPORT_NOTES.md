@@ -36,5 +36,5 @@ audio files, matched 40 existing corpus files, skipped 17 exact duplicates,
 and left 18 tracks unavailable from the search source. It processed 1,128
 unique local songs through the pipeline, exporting 1,271,174 notes and
 117,112 chord segments. The checked-in report is
-`LIKED_SONGS_ANALYSIS_REPORT_2026-10-30.md`; the SQLite database remains
+`../../LIKED_SONGS_ANALYSIS_REPORT_2026-10-30.md`; the SQLite database remains
 ignored and local.
