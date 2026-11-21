@@ -3,6 +3,7 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { buildCatalog } from './model.mjs';
+import { makeCalibration, buildSongReadings } from './emotion_readings.mjs';
 
 const root = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
 export const sourceFolder = path.join(root, 'emotion_r2/digest/frontend_data');
@@ -19,6 +20,7 @@ export async function buildEmotionData({ source = sourceFolder, destination = da
   const songs = catalog || await localCatalog();
   const files = (await fs.readdir(source)).filter(name => name.endsWith('.json') && !['schema.json', 'corpus.json'].includes(name)).sort();
   const tracks = {};
+  const entries = [];
   await fs.mkdir(destination, { recursive: true });
   for (const file of files) {
     const bytes = await fs.readFile(path.join(source, file));
@@ -29,11 +31,20 @@ export async function buildEmotionData({ source = sourceFolder, destination = da
     let sections = [];
     try { sections = JSON.parse(await fs.readFile(path.join(metadataRoot, 'emotion_r2/songs', data.track_id, 'sections.json'), 'utf8')).sections; }
     catch (error) { if (error.code !== 'ENOENT') throw error; }
+    entries.push({ data, sections });
     tracks[data.track_id] = {
       scored: data.sections.some(s => [s.words_valence_z, s.background_arousal_z, s.experimental?.voice_arousal, s.experimental?.voice_valence].some(Number.isFinite)),
       lyricSections: data.sections.filter(s => s.section_id.startsWith('lyric-')).length,
       geniusSections: Object.fromEntries(sections.filter(s => ['chorus', 'verse'].includes(s.genius_category)).map(s => [s.section_id, s.genius_category]))
     };
+  }
+  const calibration = makeCalibration(entries);
+  const calibrationSummary = { ...calibration };
+  delete calibrationSummary.distributions;
+  await fs.writeFile(path.join(destination, 'calibration.json'), JSON.stringify(calibrationSummary, null, 2) + '\n');
+  for (const entry of entries) {
+    const reading = buildSongReadings(entry.data, entry.sections, calibration);
+    await fs.writeFile(path.join(destination, `${entry.data.track_id}.readings.json`), JSON.stringify(reading, null, 2) + '\n');
   }
   const withFile = songs.filter(s => tracks[s.id]);
   const instrumentals = [];

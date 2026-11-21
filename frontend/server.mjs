@@ -34,7 +34,7 @@ for (const row of extraRows) {
 const extraIds = new Set(extra.map(s => s.id));
 const ids = new Set([...originals, ...extraIds]);
 function songDir(id) { return extraIds.has(id) ? path.join(root, 'mvp_325/songs', id) : path.join(root, 'outputs', id); }
-const staticFiles = new Map(['index.html', 'styles.css', 'app.mjs', 'model.mjs', 'player.mjs', 'summaries.mjs', 'emotion.mjs', 'emotion_view.mjs'].map(f => ['/' + f, path.join(webRoot, f)]));
+const staticFiles = new Map(['index.html', 'styles.css', 'app.mjs', 'model.mjs', 'player.mjs', 'summaries.mjs', 'emotion.mjs', 'emotion_view.mjs', 'emotion_readings.mjs'].map(f => ['/' + f, path.join(webRoot, f)]));
 staticFiles.set('/', path.join(webRoot, 'index.html'));
 const dataFiles = new Set(['report.json', 'beats.json', 'lyrics.json', 'patterns.json', 'layers.json']);
 const mime = { '.html': 'text/html; charset=utf-8', '.css': 'text/css; charset=utf-8', '.mjs': 'text/javascript; charset=utf-8', '.json': 'application/json; charset=utf-8', '.csv': 'text/csv; charset=utf-8', '.mp3': 'audio/mpeg' };
@@ -56,10 +56,10 @@ const server = http.createServer((req, res) => {
     if (staticFiles.has(url.pathname)) file = staticFiles.get(url.pathname);
     else if (['/mvp/sample.csv', '/mvp/summary.csv'].includes(url.pathname)) file = path.join(root, url.pathname.slice(1));
     else {
-      const emotion = url.pathname.match(/^\/data\/emotion\/([A-Za-z0-9]+)\.json$/);
+      const emotion = url.pathname.match(/^\/data\/emotion\/([A-Za-z0-9]+)(\.readings)?\.json$/);
       const match = url.pathname.match(/^\/outputs\/([A-Za-z0-9]+)\/([^/]+)$/);
       const audio = url.pathname.match(/^\/audio\/([A-Za-z0-9]+)$/);
-      if (emotion && (ids.has(emotion[1]) || ['corpus', 'manifest'].includes(emotion[1]))) file = path.join(webRoot, 'data/emotion', emotion[1] + '.json');
+      if (emotion && (ids.has(emotion[1]) || !emotion[2] && ['corpus', 'manifest', 'calibration'].includes(emotion[1]))) file = path.join(webRoot, 'data/emotion', emotion[1] + (emotion[2] || '') + '.json');
       else if (match && ids.has(match[1]) && dataFiles.has(match[2])) file = path.join(songDir(match[1]), match[2]);
       else if (audio && ids.has(audio[1])) file = sourceAudio(audio[1]);
       else return sendError(res, 404, 'This route is not part of the frontend preview.');

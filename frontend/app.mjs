@@ -152,9 +152,10 @@ async function openSong(item) {
   const names = ['report', 'beats', 'lyrics', 'patterns', 'layers'];
 
   const emotionRequest = fetchSource(`/data/emotion/${item.id}.json`);
-  const [responses, emotionResponse] = await Promise.all([
+  const [responses, emotionResponse, readingsResponse] = await Promise.all([
     Promise.allSettled(names.map(name => fetchSource(`/outputs/${item.id}/${name}.json`))),
-    emotionRequest.then(value => ({ value }), error => ({ error: error.message }))
+    emotionRequest.then(value => ({ value }), error => ({ error: error.message })),
+    fetchSource(`/data/emotion/${item.id}.readings.json`).then(value => ({ value }), error => ({ error: error.message }))
   ]);
 
   if (request !== loadToken) return;
@@ -163,6 +164,7 @@ async function openSong(item) {
 
   song = buildSong(item, files); song.summaries = summarizeSections(song); document.body.classList.remove('loading');
   song.emotion = emotionResponse.value || null;
+  song.emotionReadings = readingsResponse.value || null;
   song.emotionError = emotionResponse.error ? 'Emotion data unavailable for this song · not scored.' : '';
   song.emotionMeta = emotionManifest?.tracks?.[item.id] || null;
   renderEmotion($('emotionTimeline'), song, emotionCorpus, choose);

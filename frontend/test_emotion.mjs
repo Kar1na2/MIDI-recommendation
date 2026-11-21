@@ -6,6 +6,8 @@ import os from 'node:os';
 import { fileURLToPath } from 'node:url';
 import { buildEmotionData, localCatalog, sourceFolder, dataFolder } from './build_emotion_data.mjs';
 import { sectionWindow, selectedEmotionSections, overlaps, describeValue, missingLabel, curvePaths, corpusCallout } from './emotion.mjs';
+import { percentile, percentileBand, makeCalibration, buildSongReadings, wordsAgreement, musicTrend, readingWords, togetherLabel } from './emotion_readings.mjs';
+import { renderEmotion, updateEmotionTime, appendEmotionDetails } from './emotion_view.mjs';
 
 const root = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
 const section = (overrides = {}) => ({ section_id: 'lyric-0000', label: 'Verse 1', start_s: 2.25, end_s: 7.75, set: 'primary', words_valence_z: null, background_arousal_z: 0,
@@ -112,4 +114,176 @@ test('corpus callout uses the supplied development result and caveat', async () 
   const corpus = JSON.parse(await fs.readFile(path.join(dataFolder, 'corpus.json'), 'utf8'));
   assert.equal(corpusCallout(corpus), 'Choruses had higher instrumental energy than verses in 72% of 146 songs (median +0.26 z) · development check on these same songs, not confirmed.');
   assert.equal(corpusCallout(null), 'Corpus development check unavailable.');
+});
+
+const attitudeId = '6QIY4JAyzPH6UuFsyndaPs';
+async function attitude() {
+  const [data, readings] = await Promise.all([`${attitudeId}.json`, `${attitudeId}.readings.json`].map(name => fs.readFile(path.join(dataFolder, name), 'utf8').then(JSON.parse)));
+  const byLabel = label => readings.sections[data.sections.find(s => s.label === label).section_id];
+  return { data, readings, byLabel };
+}
+
+test('percentiles preserve nulls, handle ties and follow the requested band edges', () => {
+  assert.equal(percentile(null, [0, 1]), null);
+  assert.equal(percentile(0, []), null);
+  assert.equal(percentile(0, [-1, 0, 0, 1]), 50);
+  assert.deepEqual([null, 9.99, 10, 29.99, 30, 69.99, 70, 90, 90.01].map(percentileBand), [null, 'very_low', 'low', 'low', 'middle', 'middle', 'high', 'high', 'very_high']);
+});
+
+test('calibration uses only scored random-300 primary sections and model spreads', () => {
+  const primary = section({ words_valence_z: 0, background_arousal_z: 0 });
+  const metadata = { ...primary, model_z: { T1_valence: -1, T3_valence: 0, L1_valence: 1 } };
+  const calibration = makeCalibration([
+    { data: { cohort: 'random', sections: [primary, section({ set: 'secondary', words_valence_z: 99 })] }, sections: [metadata] },
+    { data: { cohort: 'pilot', sections: [section({ words_valence_z: 99 })] }, sections: [{ ...metadata, model_z: { T1_valence: 99 } }] }
+  ]);
+  assert.deepEqual(calibration.distributions.words_valence_z, [0]);
+  assert.equal(calibration.channels.words_valence_z.count, 1);
+  assert.equal(calibration.wordsAgreement.firstTercile, 2);
+  assert.equal(calibration.wordsAgreement.secondTercile, 2);
+});
+
+test('word agreement uses corpus terciles, the strict 0.3 sign rule and available models', () => {
+  const calibration = { wordsAgreement: { firstTercile: 0.7, secondTercile: 1.3, signMagnitude: 0.3 } };
+  assert.equal(wordsAgreement({ T1: 0.5, T3: 0.7, L1: 0.9 }, calibration).level, 'high');
+  assert.equal(wordsAgreement({ T1: 0, T3: 0.5, L1: 1 }, calibration).level, 'moderate');
+  assert.equal(wordsAgreement({ T1: 0.1, T3: 2, L1: 1 }, calibration).level, 'low');
+  assert.equal(wordsAgreement({ T1: -0.3, T3: 0.3, L1: null }, calibration).oppositeSigns, false);
+  assert.equal(wordsAgreement({ T1: -0.01, T3: 0.31, L1: null }, calibration).level, 'low');
+  assert.equal(wordsAgreement({ T1: 0.4, T3: null, L1: null }, calibration).level, null);
+});
+
+test('music builds and drops compare time thirds at the requested 0.5 z boundary', () => {
+  const s = section({ start_s: 0, end_s: 9 });
+  const data = values => ({ curves_1hz: values.map(([start_s, background_arousal_z]) => ({ section_id: s.section_id, start_s, background_arousal_z })) });
+  assert.equal(musicTrend(data([[0, 0], [6, 0.5]]), s).word, 'builds');
+  assert.equal(musicTrend(data([[0, 0], [6, -0.5]]), s).word, 'drops');
+  assert.equal(musicTrend(data([[0, 0], [6, 0.49]]), s).word, '');
+  assert.equal(musicTrend(data([[0, null], [6, 0.7]]), s).change, null);
+  assert.equal(musicTrend(data([[3, 0], [6, 0.7]]), s).change, null);
+});
+
+test('ATTITUDE Verse 2 has mixed lyrics, moderate music and the requested combined reading', async () => {
+  const { byLabel } = await attitude();
+  const reading = byLabel('Verse 2'), words = readingWords(reading);
+  assert.equal(words.lyrics, 'Mixed: the models pick up both upbeat and downbeat cues');
+  assert.equal(words.music, 'Moderate, steady');
+  assert.equal(words.together, 'Mixed lyrics over a steady groove');
+  assert.equal(reading.wordsAgreement.oppositeSigns, true);
+});
+
+test('ATTITUDE Pre-Chorus 2 has positive wording, agreement and a warm combined reading', async () => {
+  const { byLabel } = await attitude();
+  const reading = byLabel('Pre-Chorus 2'), words = readingWords(reading);
+  assert.equal(words.lyrics, 'Positive: hopeful, happy-leaning wording');
+  assert.equal(reading.wordsAgreement.label, 'Models agree');
+  assert.equal(words.together, 'Warm, upbeat-leaning');
+});
+
+test('ATTITUDE Bridge 1 is very calm and tender, while Outro energy stays moderate', async () => {
+  const { data, byLabel } = await attitude();
+  assert.equal(readingWords(byLabel('Bridge 1')).music, 'Very calm, stripped back');
+  assert.equal(readingWords(byLabel('Bridge 1')).together, 'Tender, reflective');
+  assert.ok(Math.abs(data.sections.find(s => s.label === 'Outro 1').background_arousal_z + 0.02) < 0.003);
+  assert.equal(readingWords(byLabel('Outro 1')).music, 'Moderate, steady');
+});
+
+test('derived ranks, immediate previous changes and repeated-lyrics references preserve missingness', () => {
+  const a = section({ section_id: 'a', start_s: 0, end_s: 2, words_valence_z: 1 });
+  const b = section({ section_id: 'b', start_s: 2, end_s: 4, words_valence_z: null });
+  const c = section({ section_id: 'c', start_s: 4, end_s: 6, words_valence_z: 1 });
+  const data = { track_id: 'test', cohort: 'random', sections: [c, a, b], curves_1hz: [] };
+  const metadata = [a, b, c].map(s => ({ ...s, text_sha256: s === b ? null : 'same-fingerprint', model_z: {} }));
+  const readings = buildSongReadings(data, metadata, makeCalibration([{ data, sections: metadata }])).sections;
+  assert.equal(readings.c.channels.words_valence_z.rank, 1);
+  assert.equal(readings.c.channels.words_valence_z.rankedSections, 2);
+  assert.equal(readings.c.channels.words_valence_z.changeFromPrevious, null);
+  assert.equal(readings.c.channels.words_valence_z.previousSection.section_id, 'b');
+  assert.equal(readings.c.repeatedLyrics.section_id, 'a');
+  assert.equal(readings.a.repeatedLyrics, null);
+});
+
+test('combined reading excludes voice and untrusted background valence across all bands', () => {
+  const reading = (lyrics, music, level = 'high') => ({ channels: { words_valence_z: { band: lyrics }, background_arousal_z: { band: music }, voice_arousal: { band: 'very_high' }, background_valence: { band: 'very_low' } }, wordsAgreement: { level } });
+  for (const band of ['high', 'very_high']) {
+    assert.equal(readingWords(reading(band, 'very_high')).together, 'Upbeat, joyful');
+    assert.equal(readingWords(reading(band, 'middle')).together, 'Warm, upbeat-leaning');
+    assert.equal(readingWords(reading(band, 'very_low')).together, 'Tender, reflective');
+  }
+  for (const band of ['low', 'very_low']) {
+    assert.equal(readingWords(reading(band, 'high')).together, 'Tense, defiant or angry');
+    assert.equal(readingWords(reading(band, 'middle')).together, 'Uneasy, brooding');
+    assert.equal(readingWords(reading(band, 'low')).together, 'Sad, melancholic');
+  }
+  assert.equal(readingWords(reading('middle', 'middle')).together, 'Steady groove');
+  assert.ok(readingWords(reading('high', 'middle', 'low')).lyrics.endsWith('(models disagree)'));
+  assert.equal(readingWords(reading(null, 'middle')).together, null);
+  assert.equal(readingWords(reading('high', null)).together, null);
+  assert.equal(readingWords(reading('high', 'middle')).voice, 'Intense, high, bright delivery');
+});
+
+// A small DOM stand-in exercises rendering and events without a browser dependency.
+class TestElement {
+  constructor(tag) {
+    this.tagName = tag; this.children = []; this.attributes = {}; this.listeners = {};
+    this.dataset = new Proxy({}, { set: (target, key, value) => { target[key] = String(value); this.attributes[`data-${key.replace(/[A-Z]/g, c => '-' + c.toLowerCase())}`] = String(value); return true; } });
+    this.classList = { toggle: (name, active) => { const names = new Set((this.className || '').split(' ').filter(Boolean)); if (active) names.add(name); else names.delete(name); this.className = [...names].join(' '); } };
+  }
+  set className(value) { this.attributes.class = value; }
+  get className() { return this.attributes.class || ''; }
+  set textContent(value) { this.text = String(value); this.children = []; }
+  get textContent() { return (this.text || '') + this.children.map(child => child.textContent).join(' '); }
+  append(...children) { this.children.push(...children); }
+  replaceChildren(...children) { this.text = ''; this.children = children; }
+  setAttribute(name, value) { this.attributes[name] = String(value); if (name.startsWith('data-')) this.dataset[name.slice(5).replace(/-([a-z])/g, (_, c) => c.toUpperCase())] = String(value); }
+  getAttribute(name) { return this.attributes[name] ?? null; }
+  addEventListener(name, callback) { this.listeners[name] = callback; }
+  querySelectorAll(selector) {
+    const matches = item => selector.startsWith('.') ? item.className.split(' ').includes(selector.slice(1)) : Object.hasOwn(item.attributes, selector.slice(1, -1));
+    return this.children.flatMap(child => [...(matches(child) ? [child] : []), ...child.querySelectorAll(selector)]);
+  }
+  querySelector(selector) { return this.querySelectorAll(selector)[0] || null; }
+}
+
+function withTestDocument(callback) {
+  const original = globalThis.document;
+  globalThis.document = { createElement: tag => new TestElement(tag), createElementNS: (_, tag) => new TestElement(tag) };
+  try { callback(); } finally { if (original === undefined) delete globalThis.document; else globalThis.document = original; }
+}
+
+test('lane selection updates all three lane labels, highlights and the combined reading', async () => {
+  const { data, readings } = await attitude();
+  withTestDocument(() => {
+    const host = new TestElement('section');
+    const song = { emotion: data, emotionReadings: readings, duration: 220 };
+    renderEmotion(host, song, null, (_, window) => updateEmotionTime(host, { window, duration: 220, position: window.start }));
+    const verse = data.sections.find(s => s.label === 'Verse 2');
+    const band = host.querySelectorAll('[data-emotion-id]').find(e => e.dataset.emotionId === verse.section_id);
+    band.listeners.click();
+    assert.equal(host.querySelectorAll('[data-reading-lane]')[0].textContent, 'Mixed: the models pick up both upbeat and downbeat cues');
+    assert.ok(host.querySelectorAll('[data-reading-lane]')[1].textContent.startsWith('Moderate, steady'));
+    assert.ok(host.querySelector('.reading-combined').textContent.includes('Mixed lyrics over a steady groove'));
+    assert.equal(host.querySelectorAll('[data-emotion-id]').filter(e => e.dataset.emotionId === verse.section_id && e.getAttribute('aria-pressed') === 'true').length, 3);
+    assert.equal(host.querySelectorAll('.emotion-playhead').every(e => Number(e.getAttribute('x1')) === verse.start_s / 220 * 720), true);
+    updateEmotionTime(host, { window: null, duration: 220, position: verse.start_s });
+    assert.ok(host.querySelectorAll('[data-reading-lane]')[0].textContent.startsWith('Mixed:'));
+    const preChorus = data.sections.find(s => s.label === 'Pre-Chorus 2');
+    updateEmotionTime(host, { window: null, duration: 220, position: preChorus.start_s });
+    assert.ok(host.querySelectorAll('[data-reading-lane]')[0].textContent.startsWith('Positive:'));
+    assert.ok(host.querySelector('.reading-combined').textContent.includes('Warm, upbeat-leaning'));
+  });
+});
+
+test('null lyrics render an explicit music-only note and omit the Together line', () => {
+  const raw = section({ start_s: 0, end_s: 9, section_id: 'span-0', words_valence_z: null });
+  const data = { track_id: 'emptyWords', cohort: 'random', sections: [raw], curves_1hz: [] };
+  const readings = buildSongReadings(data, [], makeCalibration([{ data, sections: [] }]));
+  assert.equal(readingWords(readings.sections['span-0']).together, null);
+  withTestDocument(() => {
+    const panel = new TestElement('aside');
+    appendEmotionDetails(panel, { emotion: data, emotionReadings: readings }, sectionWindow(raw));
+    assert.ok(panel.textContent.includes('Lyrics unavailable'));
+    assert.ok(panel.textContent.includes('Music only — Moderate, steady'));
+    assert.equal(panel.textContent.includes(togetherLabel), false);
+  });
 });
