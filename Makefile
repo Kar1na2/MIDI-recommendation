@@ -22,4 +22,4 @@ test:
 	$(PYTHON) -B -m unittest discover -s emotion -p 'test_*.py' -v
 	$(PYTHON) -B -m unittest discover -s emotion_r2 -p 'test_*.py' -v
 	$(PYTHON) -B -m unittest discover -s frontend -p 'test_*.py' -v
-	"$(NODE)" --test frontend/test.mjs frontend/test_summaries.mjs
+	"$(NODE)" --test frontend/test.mjs frontend/test_summaries.mjs frontend/test_emotion.mjs
