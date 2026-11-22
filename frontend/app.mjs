@@ -17,7 +17,7 @@ const svg = (tag, attrs) => { const e = document.createElementNS('http://www.w3.
 let catalog = [], skippedSongs = [], matches = [], activeResult = -1, song = null, selected = null, displayed = null, loadToken = 0, needle;
 
 let lastState = { playing: false, position: 0, duration: 0 }, audioFailure = '';
-let emotionManifest = null, emotionCorpus = null;
+let emotionManifest = null, emotionCorpus = null, emotionModels = null;
 
 const announce = text => { $('announcement').textContent = text; };
 
@@ -165,6 +165,7 @@ async function openSong(item) {
   song = buildSong(item, files); song.summaries = summarizeSections(song); document.body.classList.remove('loading');
   song.emotion = emotionResponse.value || null;
   song.emotionReadings = readingsResponse.value || null;
+  song.emotionModels = emotionModels;
   song.emotionError = emotionResponse.error ? 'Emotion data unavailable for this song · not scored.' : '';
   song.emotionMeta = emotionManifest?.tracks?.[item.id] || null;
   renderEmotion($('emotionTimeline'), song, emotionCorpus, choose);
@@ -438,9 +439,9 @@ document.querySelector('.brand').addEventListener('click', event => { event.prev
 
 Promise.all([
   fetchSource('/mvp/sample.csv', false), fetchSource('/mvp/summary.csv', false), fetchSource('/catalog/additions'),
-  fetchSource('/data/emotion/manifest.json').catch(() => null), fetchSource('/data/emotion/corpus.json').catch(() => null)
-]).then(([sample, summary, additions, manifest, corpus]) => {
+  fetchSource('/data/emotion/manifest.json').catch(() => null), fetchSource('/data/emotion/corpus.json').catch(() => null), fetchSource('/data/emotion/models.json').catch(() => null)
+]).then(([sample, summary, additions, manifest, corpus, models]) => {
   catalog = [...buildCatalog(sample, summary), ...additions.extra]; skippedSongs = additions.skipped;
-  emotionManifest = manifest; emotionCorpus = corpus;
+  emotionManifest = manifest; emotionCorpus = corpus; emotionModels = models;
   announce(`${catalog.length} MVP songs are searchable.`);
 }).catch(error => { searchMessage(`Song search is unavailable. ${error.message}`, true); announce(error.message); });

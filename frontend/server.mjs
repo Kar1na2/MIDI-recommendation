@@ -59,7 +59,7 @@ const server = http.createServer((req, res) => {
       const emotion = url.pathname.match(/^\/data\/emotion\/([A-Za-z0-9]+)(\.readings)?\.json$/);
       const match = url.pathname.match(/^\/outputs\/([A-Za-z0-9]+)\/([^/]+)$/);
       const audio = url.pathname.match(/^\/audio\/([A-Za-z0-9]+)$/);
-      if (emotion && (ids.has(emotion[1]) || !emotion[2] && ['corpus', 'manifest', 'calibration'].includes(emotion[1]))) file = path.join(webRoot, 'data/emotion', emotion[1] + (emotion[2] || '') + '.json');
+      if (emotion && (ids.has(emotion[1]) || !emotion[2] && ['corpus', 'manifest', 'calibration', 'models'].includes(emotion[1]))) file = path.join(webRoot, 'data/emotion', emotion[1] + (emotion[2] || '') + '.json');
       else if (match && ids.has(match[1]) && dataFiles.has(match[2])) file = path.join(songDir(match[1]), match[2]);
       else if (audio && ids.has(audio[1])) file = sourceAudio(audio[1]);
       else return sendError(res, 404, 'This route is not part of the frontend preview.');

@@ -75,8 +75,11 @@ export function musicTrend(data, section) {
   return { word: change >= 0.5 ? 'builds' : change <= -0.5 ? 'drops' : '', change };
 }
 
-export function buildSongReadings(data, sourceSections, calibration) {
+export function buildSongReadings(data, sourceSections, calibration, display = {}) {
   const sources = new Map(sourceSections.map(s => [s.section_id, s]));
+  const probabilityRows = new Map((display.probabilities?.sections || []).map(s => [s.section_id, s]));
+  const l1Rows = new Map((display.l1?.sections || []).map(s => [s.section_id, s]));
+  const descriptions = new Map((display.descriptions?.sections || []).map(s => [s.section_id, s]));
   const ordered = data.sections.filter(timedSection).sort((a, b) => a.start_s - b.start_s || a.end_s - b.end_s || a.section_id.localeCompare(b.section_id));
   const previous = new Map(ordered.map((s, index) => [s.section_id, ordered[index - 1] || null]));
   const songValues = Object.fromEntries(readingChannels.map(channel => [channel, data.sections.map(s => emotionValue(s, channel)).filter(finite)]));
@@ -89,6 +92,9 @@ export function buildSongReadings(data, sourceSections, calibration) {
   }
   return { track_id: data.track_id, sections: Object.fromEntries(data.sections.map(section => {
     const models = modelScores(sources.get(section.section_id));
+    const probabilities = probabilityRows.get(section.section_id);
+    const l1 = l1Rows.get(section.section_id);
+    const description = descriptions.get(section.section_id);
     return [section.section_id, {
       channels: Object.fromEntries(readingChannels.map(channel => {
         const value = emotionValue(section, channel), prior = previous.get(section.section_id), priorValue = prior ? emotionValue(prior, channel) : null;
@@ -100,6 +106,22 @@ export function buildSongReadings(data, sourceSections, calibration) {
           changeFromPrevious: finite(value) && finite(priorValue) ? value - priorValue : null }];
       })),
       wordsModels: models,
+      wordsModelDetails: Object.fromEntries(lyricModels.map(model => {
+        const value = models[model];
+        const channel = probabilities?.[model];
+        const position = percentile(value, calibration.distributions.words_valence_z);
+        const row = { score: value, percentile: position, band: percentileBand(position) };
+        if (model !== 'L1') {
+          row.status = typeof channel?.status === 'string' ? channel.status : null;
+          row.probabilities = Object.fromEntries(['negative', 'neutral', 'positive'].map(name => [name, finite(channel?.probabilities?.[name]) ? channel.probabilities[name] : null]));
+        } else {
+          row.energy = finite(l1?.arousal) ? l1.arousal : null;
+          row.uncertain = typeof l1?.uncertain === 'boolean' ? l1.uncertain : null;
+          row.status = typeof l1?.status === 'string' ? l1.status : null;
+          row.description = description?.status === 'ok' && typeof description.reading === 'string' && description.reading.trim() ? description.reading : null;
+        }
+        return [model, row];
+      })),
       wordsAgreement: wordsAgreement(models, calibration),
       musicTrend: musicTrend(data, section),
       repeatedLyrics: repeats.get(section.section_id) || null
@@ -113,21 +135,22 @@ const lyricsWords = {
   high: 'Positive: hopeful, happy-leaning wording',
   very_high: 'Very positive: joyful, loving or triumphant wording'
 };
+export function lyricMood(band) {
+  return band === 'middle' ? 'Neutral: plain, matter-of-fact wording' : lyricsWords[band] || null;
+}
 const musicWords = { very_low: 'Very calm, stripped back', low: 'Relaxed, laid back', middle: 'Moderate, steady', high: 'Energetic, driving', very_high: 'Intense, full force' };
 const voiceWords = { very_low: 'Soft, low-key delivery', low: 'Gentle, relaxed delivery', middle: 'Moderate, steady delivery', high: 'Strong, animated delivery', very_high: 'Intense, high, bright delivery' };
-const grooves = { very_low: 'a very calm instrumental', low: 'a relaxed instrumental flow', middle: 'a steady groove', high: 'a driving instrumental push', very_high: 'an intense instrumental push' };
 const instrumentalWords = { very_low: 'Very calm instrumental', low: 'Relaxed instrumental flow', middle: 'Steady groove', high: 'Driving instrumental push', very_high: 'Intense instrumental push' };
 
 export function readingWords(reading) {
   const lyricsBand = reading?.channels?.words_valence_z?.band, musicBand = reading?.channels?.background_arousal_z?.band;
   const agreement = reading?.wordsAgreement;
   let lyrics = lyricsWords[lyricsBand] || null;
-  if (lyricsBand === 'middle') lyrics = agreement?.level === 'low' ? 'Mixed: the models pick up both upbeat and downbeat cues' : agreement?.level ? 'Neutral: plain, matter-of-fact wording' : 'Middle-range wording · agreement unavailable';
-  else if (lyrics && agreement?.level === 'low') lyrics += ' (models disagree)';
+  if (lyricsBand === 'middle') lyrics = 'Neutral: plain, matter-of-fact wording';
   let together = null;
   if (lyricsBand && musicBand) {
     const energy = ['very_low', 'low'].includes(musicBand) ? 'low' : musicBand === 'middle' ? 'middle' : 'high';
-    if (lyricsBand === 'middle') together = agreement?.level === 'low' ? `Mixed lyrics over ${grooves[musicBand]}` : agreement?.level ? instrumentalWords[musicBand] : null;
+    if (lyricsBand === 'middle') together = instrumentalWords[musicBand];
     else if (['high', 'very_high'].includes(lyricsBand)) together = { high: 'Upbeat, joyful', middle: 'Warm, upbeat-leaning', low: 'Tender, reflective' }[energy];
     else together = { high: 'Tense, defiant or angry', middle: 'Uneasy, brooding', low: 'Sad, melancholic' }[energy];
   }

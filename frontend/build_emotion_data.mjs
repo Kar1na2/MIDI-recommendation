@@ -42,8 +42,40 @@ export async function buildEmotionData({ source = sourceFolder, destination = da
   const calibrationSummary = { ...calibration };
   delete calibrationSummary.distributions;
   await fs.writeFile(path.join(destination, 'calibration.json'), JSON.stringify(calibrationSummary, null, 2) + '\n');
+  let models = [];
+  try {
+    const manifest = JSON.parse(await fs.readFile(path.join(metadataRoot, 'emotion_r2/models_amended.json'), 'utf8'));
+    models = manifest.models.filter(model => ['T1', 'T3', 'L1'].includes(model.role)).map(model => ({
+      role: model.role,
+      id: model.id,
+      family: model.family || null,
+      coverageNote: model.coverage_note || null,
+      distinctFromT1: model.distinct_from_T1 || null,
+      relatedFamily: model.related_family || null,
+      languages: model.languages || [],
+      trainingData: model.training_data || null
+    }));
+    if (new Set(models.map(model => model.role)).size !== 3) throw new Error('Expected model manifest entries for T1, T3 and L1.');
+  } catch (error) { if (error.code !== 'ENOENT') throw error; }
+  await fs.writeFile(path.join(destination, 'models.json'), JSON.stringify({ source: 'emotion_r2/models_amended.json', models }, null, 2) + '\n');
   for (const entry of entries) {
-    const reading = buildSongReadings(entry.data, entry.sections, calibration);
+    const readOptional = async filename => {
+      try { return JSON.parse(await fs.readFile(path.join(metadataRoot, filename), 'utf8')); }
+      catch (error) { if (error.code === 'ENOENT') return null; throw error; }
+    };
+    const id = entry.data.track_id;
+    const [probabilities, l1, descriptions] = await Promise.all([
+      readOptional(`emotion_r2/display/text_model_probs/${id}.json`),
+      readOptional(`emotion_r2/scores/L1/${id}.json`),
+      readOptional(`emotion_r2/display/l1_readings/${id}.json`)
+    ]);
+    for (const source of [probabilities, l1, descriptions]) if (source && source.track_id !== id) throw new Error(`Mismatched track ID for ${id}`);
+    for (const section of descriptions?.sections || []) {
+      if (section.reading && (section.overlap_flags?.four_word_overlap !== false || section.overlap_flags?.four_cjk_character_overlap !== false)) {
+        throw new Error(`L1 reading did not pass both overlap checks for ${id}/${section.section_id}`);
+      }
+    }
+    const reading = buildSongReadings(entry.data, entry.sections, calibration, { probabilities, l1, descriptions });
     await fs.writeFile(path.join(destination, `${entry.data.track_id}.readings.json`), JSON.stringify(reading, null, 2) + '\n');
   }
   const withFile = songs.filter(s => tracks[s.id]);

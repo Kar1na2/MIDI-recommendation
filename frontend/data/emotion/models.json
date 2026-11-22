@@ -1,0 +1,75 @@
+{
+  "source": "emotion_r2/models_amended.json",
+  "models": [
+    {
+      "role": "T1",
+      "id": "clapAI/roberta-base-multilingual-sentiment",
+      "family": null,
+      "coverageNote": "Model card reports 16+ languages and training on mixed-source review and sentiment datasets; lyric-domain validity is unverified.",
+      "distinctFromT1": null,
+      "relatedFamily": null,
+      "languages": [
+        "en",
+        "ja",
+        "ko",
+        "zh",
+        "ar",
+        "de",
+        "es",
+        "fr",
+        "hi",
+        "id",
+        "it",
+        "ms",
+        "pt",
+        "ru",
+        "tr",
+        "vi"
+      ],
+      "trainingData": "https://huggingface.co/datasets/clapAI/MultiLingualSentiment"
+    },
+    {
+      "role": "T3",
+      "id": "Horizon-Labs/multilingual-sentiment-base",
+      "family": "mmBERT-base, supervised three-class sentiment student",
+      "coverageNote": "Supervised multilingual sentiment; lyric-domain and singing validity unverified.",
+      "distinctFromT1": "Different training corpora and label pipeline from clapAI MultiLingualSentiment; both are transformer encoders, recorded as a shared architecture family.",
+      "relatedFamily": "L1: training labels generated using a Qwen teacher; L1 is Qwen",
+      "languages": [
+        "en",
+        "ja",
+        "ko",
+        "zh",
+        "ar",
+        "de",
+        "es",
+        "fr",
+        "hi",
+        "id",
+        "it",
+        "nl",
+        "pt",
+        "ru",
+        "tr",
+        "vi"
+      ],
+      "trainingData": null
+    },
+    {
+      "role": "L1",
+      "id": "Qwen/Qwen3-4B-Instruct-2507",
+      "family": "Qwen3 4B instruct, decoder-only LLM",
+      "coverageNote": "Instruct LLM rated on section text only, with no title or artist, so it rates text rather than recalling a known song. Runs locally in fp16 on the 4060 Ti.",
+      "distinctFromT1": null,
+      "relatedFamily": "T3: T3 labels generated using a Qwen teacher",
+      "languages": [
+        "en",
+        "ja",
+        "ko",
+        "zh",
+        "and 100+ reported by the model card"
+      ],
+      "trainingData": null
+    }
+  ]
+}

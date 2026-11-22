@@ -120,7 +120,8 @@ const attitudeId = '6QIY4JAyzPH6UuFsyndaPs';
 async function attitude() {
   const [data, readings] = await Promise.all([`${attitudeId}.json`, `${attitudeId}.readings.json`].map(name => fs.readFile(path.join(dataFolder, name), 'utf8').then(JSON.parse)));
   const byLabel = label => readings.sections[data.sections.find(s => s.label === label).section_id];
-  return { data, readings, byLabel };
+  const models = JSON.parse(await fs.readFile(path.join(dataFolder, 'models.json'), 'utf8'));
+  return { data, readings, byLabel, models };
 }
 
 test('percentiles preserve nulls, handle ties and follow the requested band edges', () => {
@@ -163,12 +164,13 @@ test('music builds and drops compare time thirds at the requested 0.5 z boundary
   assert.equal(musicTrend(data([[3, 0], [6, 0.7]]), s).change, null);
 });
 
-test('ATTITUDE Verse 2 has mixed lyrics, moderate music and the requested combined reading', async () => {
+test('ATTITUDE Verse 2 has per-model neutral readings, moderate music and no mixed label', async () => {
   const { byLabel } = await attitude();
   const reading = byLabel('Verse 2'), words = readingWords(reading);
-  assert.equal(words.lyrics, 'Mixed: the models pick up both upbeat and downbeat cues');
+  assert.equal(words.lyrics, 'Neutral: plain, matter-of-fact wording');
+  assert.doesNotMatch(words.lyrics, /mixed/i);
   assert.equal(words.music, 'Moderate, steady');
-  assert.equal(words.together, 'Mixed lyrics over a steady groove');
+  assert.equal(words.together, 'Steady groove');
   assert.equal(reading.wordsAgreement.oppositeSigns, true);
 });
 
@@ -216,7 +218,7 @@ test('combined reading excludes voice and untrusted background valence across al
     assert.equal(readingWords(reading(band, 'low')).together, 'Sad, melancholic');
   }
   assert.equal(readingWords(reading('middle', 'middle')).together, 'Steady groove');
-  assert.ok(readingWords(reading('high', 'middle', 'low')).lyrics.endsWith('(models disagree)'));
+  assert.equal(readingWords(reading('high', 'middle', 'low')).lyrics, 'Positive: hopeful, happy-leaning wording');
   assert.equal(readingWords(reading(null, 'middle')).together, null);
   assert.equal(readingWords(reading('high', null)).together, null);
   assert.equal(readingWords(reading('high', 'middle')).voice, 'Intense, high, bright delivery');
@@ -251,25 +253,33 @@ function withTestDocument(callback) {
   try { callback(); } finally { if (original === undefined) delete globalThis.document; else globalThis.document = original; }
 }
 
-test('lane selection updates all three lane labels, highlights and the combined reading', async () => {
-  const { data, readings } = await attitude();
+test('lane selection updates all model rows, highlights and the combined reading', async () => {
+  const { data, readings, models } = await attitude();
   withTestDocument(() => {
     const host = new TestElement('section');
-    const song = { emotion: data, emotionReadings: readings, duration: 220 };
+    const song = { emotion: data, emotionReadings: readings, emotionModels: models, duration: 220 };
     renderEmotion(host, song, null, (_, window) => updateEmotionTime(host, { window, duration: 220, position: window.start }));
     const verse = data.sections.find(s => s.label === 'Verse 2');
     const band = host.querySelectorAll('[data-emotion-id]').find(e => e.dataset.emotionId === verse.section_id);
     band.listeners.click();
-    assert.equal(host.querySelectorAll('[data-reading-lane]')[0].textContent, 'Mixed: the models pick up both upbeat and downbeat cues');
+    const lyrics = host.querySelectorAll('[data-reading-lane]')[0];
+    const rows = lyrics.querySelectorAll('.words-model-row');
+    assert.equal(rows.length, 3);
+    assert.ok(rows[0].textContent.includes('T1 -0.38 z'));
+    assert.ok(rows[1].textContent.includes('T3 +0.22 z'));
+    assert.ok(rows[2].textContent.includes('L1 +0.61 z'));
+    assert.ok(rows[2].textContent.includes("the model's own description, written after scoring"));
+    assert.equal(rows.some(row => /^Mixed:/m.test(row.textContent)), false);
+    assert.equal(lyrics.querySelector('.words-average').textContent, 'Average · +0.15 z');
     assert.ok(host.querySelectorAll('[data-reading-lane]')[1].textContent.startsWith('Moderate, steady'));
-    assert.ok(host.querySelector('.reading-combined').textContent.includes('Mixed lyrics over a steady groove'));
+    assert.ok(host.querySelector('.reading-combined').textContent.includes('Steady groove'));
     assert.equal(host.querySelectorAll('[data-emotion-id]').filter(e => e.dataset.emotionId === verse.section_id && e.getAttribute('aria-pressed') === 'true').length, 3);
     assert.equal(host.querySelectorAll('.emotion-playhead').every(e => Number(e.getAttribute('x1')) === verse.start_s / 220 * 720), true);
     updateEmotionTime(host, { window: null, duration: 220, position: verse.start_s });
-    assert.ok(host.querySelectorAll('[data-reading-lane]')[0].textContent.startsWith('Mixed:'));
+    assert.ok(host.querySelectorAll('[data-reading-lane]')[0].textContent.includes('T1'));
     const preChorus = data.sections.find(s => s.label === 'Pre-Chorus 2');
     updateEmotionTime(host, { window: null, duration: 220, position: preChorus.start_s });
-    assert.ok(host.querySelectorAll('[data-reading-lane]')[0].textContent.startsWith('Positive:'));
+    assert.ok(host.querySelectorAll('[data-reading-lane]')[0].textContent.includes('Positive: hopeful, happy-leaning wording'));
     assert.ok(host.querySelector('.reading-combined').textContent.includes('Warm, upbeat-leaning'));
   });
 });
@@ -286,4 +296,91 @@ test('null lyrics render an explicit music-only note and omit the Together line'
     assert.ok(panel.textContent.includes('Music only — Moderate, steady'));
     assert.equal(panel.textContent.includes(togetherLabel), false);
   });
+});
+
+test('ATTITUDE Verse 2 displays three shared-scale rows and all model outputs', async () => {
+  const { data, byLabel, models } = await attitude();
+  const section = data.sections.find(s => s.label === 'Verse 2');
+  const details = byLabel('Verse 2').wordsModelDetails;
+  assert.deepEqual(Object.keys(details), ['T1', 'T3', 'L1']);
+  assert.equal(details.T1.score, -0.37720004519454864);
+  assert.equal(details.T3.score, 0.2183465343941608);
+  assert.equal(details.L1.score, 0.6072099357250312);
+  assert.deepEqual(details.T1.probabilities, { negative: 0.2524271607398987, neutral: 0.4024697542190552, positive: 0.34510308504104614 });
+  assert.deepEqual(details.T3.probabilities, { negative: 0.1696285754442215, neutral: 0.39781251549720764, positive: 0.43255889415740967 });
+  assert.equal(details.L1.energy, 0.8);
+  assert.equal(details.L1.uncertain, false);
+  assert.ok(details.L1.description);
+  assert.equal(models.models.length, 3);
+  assert.equal(Object.hasOwn(section, 'text'), false);
+});
+
+test('words lane keeps its Trusted badge above all three model rows', async () => {
+  const { data, readings, models } = await attitude();
+  withTestDocument(() => {
+    const host = new TestElement('section');
+    renderEmotion(host, { emotion: data, emotionReadings: readings, emotionModels: models, duration: 220 }, null, () => {});
+    const firstLane = host.querySelector('.emotion-lane');
+    const badge = firstLane.querySelector('.trust-badge');
+    assert.ok(badge.textContent.startsWith('Trusted'));
+    assert.equal(firstLane.querySelectorAll('.words-model-row').length, 3);
+  });
+});
+
+test('model outputs preserve nulls and Part B absence remains explicit', () => {
+  const source = section({ section_id: 'null-row', words_valence_z: null, experimental: { voice_arousal: null } });
+  const calibration = makeCalibration([{ data: { cohort: 'random', sections: [source] }, sections: [] }]);
+  const result = buildSongReadings({ track_id: 'nulls', cohort: 'random', sections: [source], curves_1hz: [] }, [], calibration, {
+    probabilities: { sections: [{ section_id: 'null-row', T1: { status: 'missing_text', probabilities: { negative: null, neutral: null, positive: null } }, T3: { status: 'missing_text', probabilities: { negative: null, neutral: null, positive: null } } }] },
+    l1: { sections: [{ section_id: 'null-row', status: 'missing_text', valence: null, arousal: null, uncertain: null }] }
+  });
+  const details = result.sections['null-row'].wordsModelDetails;
+  assert.equal(details.T1.score, null); assert.equal(details.T1.probabilities.positive, null);
+  assert.equal(details.T3.score, null); assert.equal(details.T3.probabilities.negative, null);
+  assert.equal(details.L1.score, null); assert.equal(details.L1.energy, null); assert.equal(details.L1.uncertain, null); assert.equal(details.L1.description, null);
+});
+
+test('generated display data never embeds a source section-text string', async () => {
+  const files = await fs.readdir(dataFolder);
+  const ids = files.filter(name => /^[A-Za-z0-9]+\.json$/.test(name) && !['corpus.json', 'manifest.json', 'calibration.json', 'models.json'].includes(name)).map(name => name.slice(0, -5));
+  assert.equal(ids.length, 325);
+  for (const id of ids) {
+    let privateData;
+    try { privateData = JSON.parse(await fs.readFile(path.join(root, 'emotion_r2/private', `${id}.json`), 'utf8')); }
+    catch (error) { if (error.code === 'ENOENT') continue; throw error; }
+    const display = await Promise.all([`${id}.json`, `${id}.readings.json`].map(name => fs.readFile(path.join(dataFolder, name), 'utf8')));
+    for (const section of privateData.sections || []) {
+      if (typeof section.text === 'string' && section.text.trim()) for (const asset of display) assert.equal(asset.includes(section.text), false);
+    }
+  }
+});
+
+test('all Part B missing-text sections retain null scores, energy, uncertainty and descriptions', async () => {
+  const files = (await fs.readdir(sourceFolder)).filter(name => /^[A-Za-z0-9]+\.json$/.test(name) && !['schema.json', 'corpus.json'].includes(name));
+  let missingText = 0;
+  for (const name of files) {
+    const id = name.slice(0, -5);
+    const [emotion, readings, registered] = await Promise.all([
+      fs.readFile(path.join(dataFolder, name), 'utf8').then(JSON.parse),
+      fs.readFile(path.join(dataFolder, `${id}.readings.json`), 'utf8').then(JSON.parse),
+      fs.readFile(path.join(root, 'emotion_r2/display/l1_readings', `${id}.json`), 'utf8').then(JSON.parse)
+    ]);
+    const displayById = new Map(registered.sections.map(row => [row.section_id, row]));
+    for (const source of emotion.sections) {
+      const l1Source = displayById.get(source.section_id);
+      const result = readings.sections[source.section_id].wordsModelDetails.L1;
+      if (l1Source.status === 'missing_text') {
+        missingText++;
+        assert.equal(result.status, 'missing_text');
+        assert.equal(result.score, null);
+        assert.equal(result.energy, null);
+        assert.equal(result.uncertain, null);
+        assert.equal(result.description, null);
+      } else if (l1Source.status === 'ok') {
+        assert.equal(result.description, l1Source.reading);
+      }
+    }
+  }
+  assert.equal(files.length, 325);
+  assert.equal(missingText, 1519);
 });

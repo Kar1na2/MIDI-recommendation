@@ -1,6 +1,6 @@
 import { formatBoundary, formatTime } from './model.mjs';
 import { finite, emotionValue, timedSection, sectionWindow, overlaps, selectedEmotionSections, missingLabel, curvePaths, corpusCallout } from './emotion.mjs';
-import { readingWords, togetherLabel, lyricModels } from './emotion_readings.mjs';
+import { readingWords, togetherLabel, lyricModels, lyricMood } from './emotion_readings.mjs';
 
 const element = (tag, text, className) => {
   const result = document.createElement(tag);
@@ -25,6 +25,40 @@ const lanes = [
 
 const sectionReading = (song, section) => song.emotionReadings?.sections?.[section?.section_id];
 const signed = value => finite(value) ? `${value >= 0 ? '+' : ''}${value.toFixed(2)}` : null;
+const modelProfile = (song, role) => song.emotionModels?.models?.find(model => model.role === role);
+const modelNote = (song, role) => {
+  const model = modelProfile(song, role);
+  if (!model) return 'Model training details unavailable in the supplied manifest.';
+  if (role === 'T1') return 'Multilingual RoBERTa sentiment classifier, trained on mixed-source review and sentiment datasets.';
+  if (role === 'T3') return 'Supervised mmBERT-base sentiment student, trained on separate corpora with a Qwen teacher label pipeline.';
+  return `${model.family}. The supplied model manifest does not specify its training data.`;
+};
+
+function appendWordsRows(host, song, section) {
+  host.replaceChildren();
+  const reading = sectionReading(song, section);
+  for (const model of lyricModels) {
+    const row = element('div', null, 'words-model-row');
+    const details = reading?.wordsModelDetails?.[model];
+    const score = details?.score;
+    const title = element('div', null, 'words-model-title');
+    title.append(element('strong', model), element('span', finite(score) ? `${signed(score)} z · ${lyricMood(details.band) || 'reading unavailable'}` : 'Not scored'));
+    row.append(title, element('p', modelNote(song, model), 'words-model-note'));
+    if (model !== 'L1') {
+      const probabilities = details?.probabilities;
+      const format = value => finite(value) ? `${(value * 100).toFixed(1)}%` : 'unavailable';
+      row.append(element('p', `Negative ${format(probabilities?.negative)} · Neutral ${format(probabilities?.neutral)} · Positive ${format(probabilities?.positive)}`, 'words-model-extra'));
+      if (details?.status && details.status !== 'ok') row.append(element('p', `Probability status · ${details.status.replaceAll('_', ' ')}`, 'words-model-extra'));
+    } else {
+      row.append(element('p', `Energy rating ${finite(details?.energy) ? signed(details.energy) : 'unavailable'} · uncertain ${details?.uncertain === true ? 'yes' : details?.uncertain === false ? 'no' : 'unavailable'}`, 'words-model-extra'));
+      if (details?.description) row.append(element('p', "the model's own description, written after scoring", 'words-model-note'), element('p', details.description, 'words-model-extra'));
+      else row.append(element('p', "the model's own description, written after scoring · unavailable", 'words-model-note'));
+    }
+    host.append(row);
+  }
+  const average = section?.words_valence_z;
+  host.append(element('p', finite(average) ? `Average · ${signed(average)} z` : `Average · ${missingLabel(song, section, 'words_valence_z')}`, 'words-average'));
+}
 
 function laneReading(song, section, lane) {
   const reading = sectionReading(song, section), words = readingWords(reading);
@@ -58,7 +92,8 @@ function updateReadingSummary(host, window, position = 0) {
   caption.textContent = section ? `${section.label} · ${formatTime(section.start_s)}–${formatTime(section.end_s)}${!exact && selected.length > 1 ? ` · ${selected.length} source sections overlap this window, with each reading in the detail panel` : ''}` : 'This time window has no scored emotion section.';
   for (const target of host.querySelectorAll('[data-reading-lane]')) {
     const lane = lanes.find(l => l.key === target.dataset.readingLane);
-    target.textContent = section ? laneReading(song, section, lane) : missingLabel(song, null, lane.channels[0]);
+    if (lane.key === 'lyrics') appendWordsRows(target, song, section);
+    else target.textContent = section ? laneReading(song, section, lane) : missingLabel(song, null, lane.channels[0]);
   }
   const combined = host.querySelector('.reading-combined');
   combined.replaceChildren();
@@ -93,11 +128,11 @@ export function renderEmotion(host, song, corpus, choose) {
     const heading = element('div', null, 'lane-heading');
     heading.append(element('h3', lane.name), badge(lane.experimental));
     article.append(heading, element('p', lane.subtitle, 'lane-subtitle'));
-    const reading = element('p', null, 'lane-reading'); reading.dataset.readingLane = lane.key; article.append(reading);
+    const reading = element(lane.key === 'lyrics' ? 'div' : 'p', null, 'lane-reading'); reading.dataset.readingLane = lane.key; article.append(reading);
     if (lane.experimental) article.append(element('p', 'Models agree, but may track pitch/brightness; the singing detector misses many sections.', 'voice-reason'));
     const chart = svg('svg', { viewBox: '0 0 720 84', preserveAspectRatio: 'none', class: 'emotion-chart', role: 'group', 'aria-label': `${lane.name} on the full song timeline` });
     chart.append(svg('line', { x1: 0, x2: 720, y1: 42, y2: 42, class: 'emotion-average' }));
-    const values = timed.flatMap(s => lane.channels.map(ch => emotionValue(s, ch))).concat((data?.curves_1hz || []).flatMap(p => lane.channels.map(ch => emotionValue(p, ch)))).filter(finite);
+    const values = lane.key === 'lyrics' ? timed.flatMap(s => lyricModels.map(model => sectionReading(song, s)?.wordsModels?.[model])).filter(finite) : timed.flatMap(s => lane.channels.map(ch => emotionValue(s, ch))).concat((data?.curves_1hz || []).flatMap(p => lane.channels.map(ch => emotionValue(p, ch)))).filter(finite);
     const extent = Math.max(1, ...values.map(Math.abs));
     for (const section of timed) {
       const window = sectionWindow(section);
@@ -124,6 +159,13 @@ export function renderEmotion(host, song, corpus, choose) {
             chart.append(svg('circle', { cx, cy, r: 2, class: 'emotion-point' }));
           }
         }
+      } else if (lane.key === 'lyrics') {
+        for (const section of timed) for (const model of lyricModels) {
+          const value = sectionReading(song, section)?.wordsModels?.[model];
+          if (!finite(value)) continue;
+          const y = 42 - value / extent * 35;
+          chart.append(svg('line', { x1: Math.max(0, section.start_s) / song.duration * 720, x2: Math.min(song.duration, section.end_s) / song.duration * 720, y1: y, y2: y, class: `emotion-line model-${model.toLowerCase()}` }));
+        }
       } else {
         for (const section of timed) {
           const value = emotionValue(section, channel);
@@ -137,7 +179,7 @@ export function renderEmotion(host, song, corpus, choose) {
     article.append(chart);
     const axis = element('div', null, 'emotion-axis'); axis.append(element('span', '0:00'), element('span', '300-song average · dotted line'), element('span', formatTime(song.duration))); article.append(axis);
     if (!values.length) article.append(element('p', lane.channels.map(ch => missingLabel(song, null, ch)).filter((label, i, labels) => labels.indexOf(label) === i).join(' · '), 'emotion-empty'));
-    else article.append(element('p', lane.experimental ? 'The line shows vocal energy. Delivery descriptions are provisional.' : 'Select a section to read its wording, numbers and model agreement.', 'lane-help'));
+    else article.append(element('p', lane.experimental ? 'The line shows vocal energy. Delivery descriptions are provisional.' : lane.key === 'lyrics' ? 'T1, T3 and L1 share one z-score scale. Percentile words compare each model score with the consensus distribution.' : 'Select a section to read its wording, numbers and model agreement.', 'lane-help'));
     host.append(article);
   }
   host.append(element('div', null, 'reading-combined'));
@@ -203,7 +245,8 @@ export function appendEmotionDetails(panel, song, window) {
     for (const lane of lanes) {
       const heading = element('div', null, 'lane-heading'); heading.append(element('h4', lane.name), badge(lane.experimental)); item.append(heading);
       if (lane.experimental) item.append(element('p', 'Experimental · models agree, but may track pitch/brightness; the singing detector misses many sections.', 'voice-reason'));
-      item.append(element('p', laneReading(song, section, lane), 'emotion-reading'));
+      if (lane.key === 'lyrics') { const rows = element('div', null, 'words-models'); appendWordsRows(rows, song, section); item.append(rows); }
+      else item.append(element('p', laneReading(song, section, lane), 'emotion-reading'));
     }
     const together = element('div', null, 'reading-combined'); appendTogether(together, song, section); item.append(together);
     if (reading?.repeatedLyrics) item.append(element('p', `Repeated lyrics · same text fingerprint as ${reading.repeatedLyrics.label}.`, 'repeat-note'));
