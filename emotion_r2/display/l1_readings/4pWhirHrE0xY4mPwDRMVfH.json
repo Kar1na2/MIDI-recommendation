@@ -1,0 +1,135 @@
+{
+  "schema_version": 1,
+  "track_id": "4pWhirHrE0xY4mPwDRMVfH",
+  "cohort": "random",
+  "display_only": true,
+  "registered_scores_unchanged": true,
+  "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+  "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "prompt_sha256": "ffdf21672c16d12394441664976928ac03a51b35d721d3925cca9be8adc58e3d",
+  "registered_checkpoint_sha256": "e947a26c5efbfdba304ec8902ba60ecc603f258a989d6eba30fc30e471da447f",
+  "reading_label": "L1's interpretation of the lyrics",
+  "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+  "reading_type": "model_interpretation",
+  "decoding": {
+    "do_sample": false,
+    "num_beams": 1,
+    "max_new_tokens": 128,
+    "torch_dtype": "float16",
+    "seed": 20261115
+  },
+  "overlap_rule": "NFKC/casefold 4-word ngrams; additionally 4 consecutive ja/ko/zh script characters with spacing/punctuation removed; block if either overlaps.",
+  "sections": [
+    {
+      "section_id": "lyric-0000",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "0d2460c6833ac81f5f907a29ad652c20b6293917c3c5900a89edec211210a1cd",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of emotional resolution and guarded hope, reflecting a shift from vulnerability to intentional self-preservation. The theme centers on the cyclical nature of trust and the decision to protect one's emotional well-being by choosing to share love with someone else.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "9bdbd29baa305485b3d5bae1688842b81e59ff069d48d3577d83f1ac47650050"
+    },
+    {
+      "section_id": "lyric-0001",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "57a2894d99405b68ace2449707cf146a1c4a399a3b1da51162d79a35905e8682",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a mix of regret and lingering attraction, highlighting the tension between past mistakes and an enduring emotional pull. The theme explores the complexity of love that persists despite repeated harm, where vulnerability and self-awareness coexist with an unwillingness to fully move on.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "112271b7b4b3fc7a7fc11589317f90e405142c44f917f967e782e5a0443b4bd0"
+    },
+    {
+      "section_id": "lyric-0002",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "0d2460c6833ac81f5f907a29ad652c20b6293917c3c5900a89edec211210a1cd",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of emotional resolution and guarded hope, reflecting a shift from vulnerability to intentional self-preservation. The theme centers on the cyclical nature of trust and the decision to protect one's emotional well-being by choosing to share love with someone else.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "9bdbd29baa305485b3d5bae1688842b81e59ff069d48d3577d83f1ac47650050"
+    },
+    {
+      "section_id": "lyric-0003",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": "b523192b409bfa2f22ff41abc4550832f39a8214edbe12f7585c422fe4805881",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of emotional distance and unmet expectations, highlighting a strained relationship marked by coldness and mutual disappointment. The themes revolve around betrayal of trust, shifting roles in intimacy, and the pain of being used or overlooked in a bond once believed to be supportive.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "f55769f9b4c137f8ff8f68abb9f593c7136b3ef041a95e220ff4d628d9295b24"
+    },
+    {
+      "section_id": "lyric-0004",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": "cfe4666a9e8b88af522b366cf8dfa42b56f7d51b8e99d971345469464b5b7bf2",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of emotional resolution and guarded hope, shifting from vulnerability to deliberate self-preservation. The central theme explores the act of giving and receiving love as a transaction shaped by past betrayal and the desire to protect oneself in future relationships.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "b075c4d4ebc59986a4e067c36b1de39981dbf13e7262c2ac6a62fe5d9970261a"
+    },
+    {
+      "section_id": "span-0000",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    },
+    {
+      "section_id": "span-0004",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    }
+  ]
+}

@@ -1,0 +1,105 @@
+{
+  "schema_version": 1,
+  "track_id": "3vkCueOmm7xQDoJ17W1Pm3",
+  "cohort": "random",
+  "display_only": true,
+  "registered_scores_unchanged": true,
+  "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+  "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "prompt_sha256": "ffdf21672c16d12394441664976928ac03a51b35d721d3925cca9be8adc58e3d",
+  "registered_checkpoint_sha256": "995898f1dbdb29d8586507cda7ba1a012dfc16f3bf90e710881666fb3d4f37f0",
+  "reading_label": "L1's interpretation of the lyrics",
+  "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+  "reading_type": "model_interpretation",
+  "decoding": {
+    "do_sample": false,
+    "num_beams": 1,
+    "max_new_tokens": 128,
+    "torch_dtype": "float16",
+    "seed": 20261115
+  },
+  "overlap_rule": "NFKC/casefold 4-word ngrams; additionally 4 consecutive ja/ko/zh script characters with spacing/punctuation removed; block if either overlaps.",
+  "sections": [
+    {
+      "section_id": "lyric-0000",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "a8980a9ee48686a1e65ef3e7206b257f0f27b24d94ac19d6694f9c8ed8194fd8",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is reflective and yearning, expressing a deep desire for connection and continuity beyond death. The central theme explores the longing for love and presence to endure beyond physical existence, suggesting a spiritual or emotional bond that transcends time and mortality.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "1e5a65badd4ab226e4c2338789f7d5a4e9a755b4fd3c2591985049f359f69d74"
+    },
+    {
+      "section_id": "lyric-0001",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "94bcefaf9bec35bc050af324fb47f560b6baab04ab6e97064dd99aba1d6acefe",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a strong, possessive assertion of personal value, emphasizing exclusivity and self-determination. The central theme explores the idea of love as a defining, irreplaceable element of identity, set apart from all external claims.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "88f2189881104e584440f08e604cc260d5fb9b6b8551da73ec2d0f774a38bfea"
+    },
+    {
+      "section_id": "lyric-0002",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "930087a1b9675d8f431cc7e46b9338ff40020178666e5d7f3d00d324f994b93a",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a deep, reverent longing, blending vulnerability with a sense of sacred responsibility. The central theme explores the enduring value of love and the desire to pass on emotional significance across life's transitions.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "229fb5135a2accf2fe578c54de123bf00e600797ff0a43017952cec16da2eda7"
+    },
+    {
+      "section_id": "lyric-0003",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "974cd1b05f7ab2c6b100158c6ee1a5cec587879489095ef7c9ad34692e13950a",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a strong, possessive assertion of personal value, emphasizing emotional exclusivity and self-determination. The central theme explores the idea of love as the sole true possession, contrasting it with the world's transient and unowned elements.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "0b4e3474dc2ddee73633a5104fab63a7919af15a47b0289ec09d4098d8f67bbf"
+    },
+    {
+      "section_id": "span-0000",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    }
+  ]
+}

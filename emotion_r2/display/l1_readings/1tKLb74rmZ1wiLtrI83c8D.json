@@ -1,0 +1,259 @@
+{
+  "schema_version": 1,
+  "track_id": "1tKLb74rmZ1wiLtrI83c8D",
+  "cohort": "random",
+  "display_only": true,
+  "registered_scores_unchanged": true,
+  "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+  "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "prompt_sha256": "ffdf21672c16d12394441664976928ac03a51b35d721d3925cca9be8adc58e3d",
+  "registered_checkpoint_sha256": "f0f5defbb5f6578dd4426cfb5df2c56d526b3a644595e7b8d6fc81a60a5fdb2d",
+  "reading_label": "L1's interpretation of the lyrics",
+  "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+  "reading_type": "model_interpretation",
+  "decoding": {
+    "do_sample": false,
+    "num_beams": 1,
+    "max_new_tokens": 128,
+    "torch_dtype": "float16",
+    "seed": 20261115
+  },
+  "overlap_rule": "NFKC/casefold 4-word ngrams; additionally 4 consecutive ja/ko/zh script characters with spacing/punctuation removed; block if either overlaps.",
+  "sections": [
+    {
+      "section_id": "lyric-0000",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "8df40dff2eb1744ec3c9a9db072dbb88f90f9d9c443eb19a81b2f2f73ecb78bf",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is repetitive and rhythmic, suggesting a sense of ritual or emotional resonance. The themes imply cyclical experience and a focus on internal or collective sensation.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "1a1b8f1c6539b2cd9c304cafa7b19a2f727105ae184098492c896321aceccf80"
+    },
+    {
+      "section_id": "lyric-0001",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "6ee77ffd369557e9fd3fd603c64cb6ef9951ff8d140c0b9716b5661b22870d83",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a defensive refusal of association with certain behaviors, while subtly acknowledging the influence or presence of those behaviors in the surrounding environment. The theme explores the tension between personal boundaries and societal pressures, highlighting a conscious choice to remain separate despite external cues.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "2f5d371ea8b403b9d9b012d050435e50dfd4ce6ad4bc0e406a497f28b1d7bc14"
+    },
+    {
+      "section_id": "lyric-0002",
+      "set": "secondary",
+      "language": "uncertain",
+      "text_sha256": "5f7c732ac0b6f1ac49abb76874adaed9875583f257ac6849c0295f67428fc39d",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of frustration and defiance, emphasizing struggle and economic vulnerability. The themes revolve around exploitation, the tension between giving and being taken advantage of, and the persistence of hardship in a transactional relationship.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "5a3eb774df77fdcfdbe125a5d7b6e1938d821d3b1caa937c8c504710fb3ccc18"
+    },
+    {
+      "section_id": "lyric-0003",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "d8522afcc40141d3a7f30983b0340f908fc1d81e2d323d64bc6cf53108fd4ffe",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of restless energy and financial struggle, underscored by a recurring cycle of spending and loss. The themes explore the tension between desire and deprivation, highlighting the emotional and material consequences of impulsive consumption and isolation.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "d512cd1e6d5028eda64a3e71668c68c2e7a05862e2fba786ba431b31f87336f4"
+    },
+    {
+      "section_id": "lyric-0004",
+      "set": "secondary",
+      "language": "uncertain",
+      "text_sha256": "5f7c732ac0b6f1ac49abb76874adaed9875583f257ac6849c0295f67428fc39d",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of frustration and defiance, emphasizing struggle and economic vulnerability. The themes revolve around exploitation, the tension between giving and being taken advantage of, and the persistence of hardship in a transactional relationship.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "5a3eb774df77fdcfdbe125a5d7b6e1938d821d3b1caa937c8c504710fb3ccc18"
+    },
+    {
+      "section_id": "lyric-0005",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "6708d35eeeb9b8dd4147cf9b7e3927732e417170396d43b273c2f6cc5ae6b9a2",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of emotional and financial loss intertwined with a resigned acceptance of dependency and indulgence. The themes explore broken trust, material sacrifice, and the cyclical nature of emotional and financial compromise.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "9347666a60ca1db363ff72deff993cdcfefac772cef3bcbd2d561b3732e2a55d"
+    },
+    {
+      "section_id": "lyric-0006",
+      "set": "secondary",
+      "language": "uncertain",
+      "text_sha256": "b9cef58de8f796a475bea711d21f67cb33c3773dc590eed63897a5d5f2cdedc6",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of resignation and subtle resentment, highlighting the tension between submission and the loss of personal agency. The central theme explores the cost of dependency, where desire and affection are intertwined with the exchange of value and control.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "280516f90f79d2034f18281c85d194f958a75fcca69ca9a92ff59c457e8cf98c"
+    },
+    {
+      "section_id": "lyric-0007",
+      "set": "secondary",
+      "language": "uncertain",
+      "text_sha256": "943af743469bf22b315eeddb42a00d9a13b1ff91616df6e27234e3387138bede",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a persistent, almost obsessive demand, emphasizing control and extraction. The themes revolve around power dynamics, economic exploitation, and the repetition of a coercive act.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "3ea5da4e7ff09f8d6e39f8eeb0962c8990e9c9f1dceb79b985f60f5e0081da8e"
+    },
+    {
+      "section_id": "lyric-0008",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "ea1a802cf6a429d57e5a109a82c3bb26a1930c152fa7afdb47bffe2e1f410166",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of assertive dominance and material emphasis, while the recurring theme centers on power dynamics and the prioritization of financial value in a relationship.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "808d33be3306f3c721042cafdefa375780aa433a2190c0234fe96c7c2c793461"
+    },
+    {
+      "section_id": "lyric-0009",
+      "set": "secondary",
+      "language": "uncertain",
+      "text_sha256": "0d3682d68ae9734264a6e80a68eaf1a19dfd53c13db6b61b53cb10787fa98322",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests a dynamic, intense engagement marked by ambition and risk, while the themes revolve around pursuit, desire, and the exchange of effort for material gain.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "38cb4667325a3b7d029677f90d8374d722b9aad4c79ef7dc3d499a7597e8afb1"
+    },
+    {
+      "section_id": "span-0000",
+      "set": "secondary",
+      "language": "uncertain",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    },
+    {
+      "section_id": "span-0002",
+      "set": "secondary",
+      "language": "uncertain",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    },
+    {
+      "section_id": "span-0004",
+      "set": "secondary",
+      "language": "uncertain",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    },
+    {
+      "section_id": "span-0006",
+      "set": "secondary",
+      "language": "uncertain",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    },
+    {
+      "section_id": "span-0008",
+      "set": "secondary",
+      "language": "uncertain",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    }
+  ]
+}

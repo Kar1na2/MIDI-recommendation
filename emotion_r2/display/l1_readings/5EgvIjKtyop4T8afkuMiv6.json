@@ -1,0 +1,105 @@
+{
+  "schema_version": 1,
+  "track_id": "5EgvIjKtyop4T8afkuMiv6",
+  "cohort": "random",
+  "display_only": true,
+  "registered_scores_unchanged": true,
+  "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+  "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "prompt_sha256": "ffdf21672c16d12394441664976928ac03a51b35d721d3925cca9be8adc58e3d",
+  "registered_checkpoint_sha256": "fda75ba91c837769c82a56ccc8ae830d47af567ec203cc1deae18162fb0ce194",
+  "reading_label": "L1's interpretation of the lyrics",
+  "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+  "reading_type": "model_interpretation",
+  "decoding": {
+    "do_sample": false,
+    "num_beams": 1,
+    "max_new_tokens": 128,
+    "torch_dtype": "float16",
+    "seed": 20261115
+  },
+  "overlap_rule": "NFKC/casefold 4-word ngrams; additionally 4 consecutive ja/ko/zh script characters with spacing/punctuation removed; block if either overlaps.",
+  "sections": [
+    {
+      "section_id": "lyric-0000",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "70a704dfc59ad7ea44bdba66355f6d0159388345187cff1ed209898d908b0679",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a stark, unsettling introspection amid raw vulnerability, suggesting a confrontation with inner decay and the fragility of identity. The themes explore the erosion of self, the illusion of strength, and the inevitability of collapse under pressure.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "0362cbe888aa7f19b0a198e7da6181c8e24e59683dc33490a1f446ac2c2cea88"
+    },
+    {
+      "section_id": "lyric-0001",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "173227ea73f606bbadd4a09ec1223f12d0c2d739ab377ca02d07dbddd67a4483",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a intense, almost ritualistic embrace of suffering and transformation, suggesting a fascination with pain as a catalyst for renewal. The themes explore the paradox of destruction and rebirth, where pain is not merely endured but actively sought as a path to personal or existential regeneration.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "35e80c081fd64372f397d5ef53d7244e04cfc78803d71450c992bd8fb210cb17"
+    },
+    {
+      "section_id": "lyric-0002",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "fcbf49e67dd7e005691857d7baa7f062e44a953fdd993031aaa082e892cc4ad6",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests a stark, almost inevitable confrontation between power and decay, emphasizing the futility of resistance in the face of overwhelming force. The themes explore the paradox of strength and vulnerability, questioning the authenticity of suffering when it is erased or consumed by greater forces.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "31cf1778638f8bcc48e1a00e842596ea11d087d58c42d08f65d9cae809248da2"
+    },
+    {
+      "section_id": "lyric-0003",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "6ebd84a45965310020625613068b95011f96658b662751776ec5b2696b78db4a",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a intense, almost ritualistic embrace of suffering and transformation, suggesting a fascination with pain as a catalyst for renewal. The themes explore the paradox of destruction and rebirth, where pain is not merely endured but actively sought as a path to personal or existential resurgence.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "030873235df620ff18f916f6027a1d995f46c6aa36876149e5cf4e8d372db3db"
+    },
+    {
+      "section_id": "span-0000",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    }
+  ]
+}

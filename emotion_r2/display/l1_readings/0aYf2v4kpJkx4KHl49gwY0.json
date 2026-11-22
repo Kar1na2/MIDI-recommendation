@@ -1,0 +1,254 @@
+{
+  "schema_version": 1,
+  "track_id": "0aYf2v4kpJkx4KHl49gwY0",
+  "cohort": "random",
+  "display_only": true,
+  "registered_scores_unchanged": true,
+  "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+  "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "prompt_sha256": "ffdf21672c16d12394441664976928ac03a51b35d721d3925cca9be8adc58e3d",
+  "registered_checkpoint_sha256": "09d690ef4a919c23e4b74aeb2133e96680f144bb8a31fa48305629202d2504c6",
+  "reading_label": "L1's interpretation of the lyrics",
+  "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+  "reading_type": "model_interpretation",
+  "decoding": {
+    "do_sample": false,
+    "num_beams": 1,
+    "max_new_tokens": 128,
+    "torch_dtype": "float16",
+    "seed": 20261115
+  },
+  "overlap_rule": "NFKC/casefold 4-word ngrams; additionally 4 consecutive ja/ko/zh script characters with spacing/punctuation removed; block if either overlaps.",
+  "sections": [
+    {
+      "section_id": "lyric-0000",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "c4ef1cccc39bfdea764e0e34f46b7029de1f902ff914f81390673cd515fe19c7",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of shared vulnerability and cautious resilience, emphasizing the difficulty of navigating danger through mutual trust. The theme centers on the struggle between fear and the necessity of cooperation to survive.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "37b0f49638fb4bfdadf76a4508c58f2935ee924cf1d0c8c1f0bfdc322c107523"
+    },
+    {
+      "section_id": "lyric-0001",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "52d00c81771fa25c82496ff7aea3af4f83aa67c0b5039c4d65152e07ba77d86c",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of quiet sorrow and lingering grief, underscored by a feeling of irreversible separation. The themes explore the fragility of shared construction and the devastating impact of sudden, uncontrollable change on intimate bonds.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "0b6ac17d01a55df7a7034a614d42531a75431aab80c58db7d7f6cbdf074959ed"
+    },
+    {
+      "section_id": "lyric-0002",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "e954d823fb74588fcd47bb7a5a20750d270d37d816b1c530d8847a6fe29690b6",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of melancholic reflection and quiet regret, tinged with a sense of inevitability. The themes explore the fragility of connection, the influence of fate or timing, and the bittersweet realization of a relationship that ended too quickly.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "4d4769c6b64e4a0c3ae98441fed29820f45994c35a171f9092ab97898d970538"
+    },
+    {
+      "section_id": "lyric-0003",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "f4f0940c0c3015fe0c4d14021af8315e84fc375cfbcd078baf3329cb55a383b8",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests a sense of misplaced timing and subtle dissonance, while the themes explore inevitability, misalignment, and the tension between expectation and reality.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "52890a7bcda8f350ab188ef8c45ef17692d3cd7d4f36857767057feb54627dc8"
+    },
+    {
+      "section_id": "lyric-0004",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "7f26626963d8a7468cf6ed2f4423599a26d2d1051296e04f60e8bf0857dcbd3b",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of internal conflict and quiet introspection, where self-worth is challenged by an unyielding sense of inadequacy. The theme centers on the paradox of being deeply valued despite feeling unworthy, suggesting that true care is revealed only through external realization.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "91df93a2903cf3f4ed700dae19863f6e4747df224331571cdf939a14f48d930e"
+    },
+    {
+      "section_id": "lyric-0005",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "a72ba9ffbebf90d9dbfaea3202a2a42c00b195b5489e10cb6c01ee4ea4256aad",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests a quiet disillusionment with idealized morality, highlighting a subtle yet significant gap between abstract virtue and personal accountability. The theme explores how genuine responsibility in relationships is often absent, replaced by a performative or detached version of goodness.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "e445a8b84b9e6d5d3a1f50119f0d648927e69f574d9c613a1efddee4b9a6f706"
+    },
+    {
+      "section_id": "lyric-0006",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": "b260abfe17c506d23c9875804ebaf22ec5afa5e8f6cd93626e01b13e7241b23e",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of melancholic reflection and quiet regret, tinged with a sense of inevitability. The themes explore the fragility of connection, the influence of fate or timing, and the painful realization of a relationship that ended prematurely despite its intensity.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "7b2be02953300c8d67f9a3e7671353fce1d75e4f18d821bb9dd2860c7f80bac7"
+    },
+    {
+      "section_id": "lyric-0007",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "ba22c9e51ed6d20cb87b0049e2d01ab39906c71ed1438b437d5c04ac9ab9bfec",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests a sense of misplaced timing and subtle unease, while the themes explore misalignment between expectation and reality, and the ambiguity of moments that feel both significant and off-kilter.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "31ac1676938d93d73d5a769edb4384a3b6805bd410296abd15b2c9d3886179be"
+    },
+    {
+      "section_id": "lyric-0008",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "07c3231652189a76fedef5f1759c898b3a5f7cc9cef931ffd9e589d9360ee647",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests a reflective, almost wistful acknowledgment of rare and enduring connection, emphasizing the uniqueness and lasting nature of a bond. The themes revolve around the rarity of deep emotional alignment and the bittersweet anticipation of future reunion or recognition.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "cc1ed0a7fe1ea9064f7f54c5adccebafeb94175edb149a77ca52bb75a6b86844"
+    },
+    {
+      "section_id": "lyric-0009",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "c72e6da03f265d56d47f23713b7f6f4d528469a5e6d8a46797aa9a713a677b7b",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a reflective and melancholic longing, tinged with uncertainty and a sense of fate. The themes explore enduring connection, the tension between destiny and timing, and the bittersweet nature of relationships that feel both inevitable and fleeting.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "c4d009209cc8edb332a01315bd5832bce1a3a316209493ae160ac641c05615b2"
+    },
+    {
+      "section_id": "lyric-0010",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "f4f0940c0c3015fe0c4d14021af8315e84fc375cfbcd078baf3329cb55a383b8",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests a sense of misplaced timing and subtle dissonance, while the themes explore inevitability, misalignment, and the tension between expectation and reality.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "52890a7bcda8f350ab188ef8c45ef17692d3cd7d4f36857767057feb54627dc8"
+    },
+    {
+      "section_id": "lyric-0011",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "c93c6aa18c565f9f8ad5f30b759f01b1c0db19a767592332c645cc8a0a9c3864",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests a sense of premature longing and unresolved emotion, while the themes explore the tension between anticipated connection and the passage of time.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "6b445b103205f1de08eef3c4252ece61c9ca5db0220d8733d627bde54367c7aa"
+    },
+    {
+      "section_id": "span-0000",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    },
+    {
+      "section_id": "span-0007",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    }
+  ]
+}

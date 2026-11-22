@@ -1,0 +1,216 @@
+{
+  "schema_version": 1,
+  "track_id": "7jr3iPu4O4bTCVwLMbdU2i",
+  "cohort": "random",
+  "display_only": true,
+  "registered_scores_unchanged": true,
+  "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+  "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "prompt_sha256": "ffdf21672c16d12394441664976928ac03a51b35d721d3925cca9be8adc58e3d",
+  "registered_checkpoint_sha256": "e75c777466a325776d0a2ba565f8b91fed6abcf81898af8f7c2b5890383f4e50",
+  "reading_label": "L1's interpretation of the lyrics",
+  "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+  "reading_type": "model_interpretation",
+  "decoding": {
+    "do_sample": false,
+    "num_beams": 1,
+    "max_new_tokens": 128,
+    "torch_dtype": "float16",
+    "seed": 20261115
+  },
+  "overlap_rule": "NFKC/casefold 4-word ngrams; additionally 4 consecutive ja/ko/zh script characters with spacing/punctuation removed; block if either overlaps.",
+  "sections": [
+    {
+      "section_id": "lyric-0000",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "9458b2aab1d0f315ee1d4ba83bc3d2ec6a5ab4c38c6165ce998f96a2463dc07e",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests a repetitive, almost ritualistic emphasis on reconciliation and emotional restoration. The themes revolve around the cyclical nature of conflict and the reliance on affection as a means to resolve disputes.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "6a56f9b8e1c640a217ea90ba89ce088c8b79bfc9a088bcb9547c34e444f86b3f"
+    },
+    {
+      "section_id": "lyric-0001",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "626cd12715da8431f3c5ed490d80f8ed5ba56fd40b3a2d66fedb4d168ffad037",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of emotional exhaustion and vulnerability, marked by repeated attempts to hold onto something essential amid growing instability. The central theme explores the fear of losing a profound connection, highlighting both internal turmoil and a deep desire to preserve intimacy.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "3f6eeb8ee35e758b13031e9b2c03f16fc56244f772fb7135fd9369db391858c1"
+    },
+    {
+      "section_id": "lyric-0002",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "8fbe9361dd9e19c90e26cbae9fbb5ccb499551042f43ca3c4930d6c06cfa70ff",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of emotional instability and urgency, marked by repetition and a fragile hope for reconciliation. The themes explore the tension between impending separation and a persistent desire to restore connection.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "e243f4d87d79dda2fac32a04f55e6925866991e5440cde5670cf3643cd0a831e"
+    },
+    {
+      "section_id": "lyric-0003",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "4d8759c818dbc09afb3c488fe924ecf8d5a0390e629cf4a1dc17c6fa60f9b753",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a restless desire for genuine connection and a rejection of superficial reconciliation. The themes center on emotional fatigue with insincerity and a yearning for authentic, immediate intimacy.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "28d0d32d85e5774c2009f927eafc27a4f71181eb223e247a249612bcc3b2109b"
+    },
+    {
+      "section_id": "lyric-0004",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "ce60842eba0cb519f290c68e6cc57550a9363fe88f2324853414c6b58f089a8b",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of unresolved longing and quiet resignation, underscored by a melancholic acceptance of inevitable endings. The central theme explores the futility of repair in broken relationships, suggesting that closure is unattainable and finality is both inevitable and emotionally hollow.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "2f9ce0fd003731d3d99b9ee33403f2f7955b178cb6f69ca1d529a37ea315dd72"
+    },
+    {
+      "section_id": "lyric-0005",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "8fbe9361dd9e19c90e26cbae9fbb5ccb499551042f43ca3c4930d6c06cfa70ff",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of emotional instability and urgency, marked by repetition and a fragile hope for reconciliation. The themes explore the tension between impending separation and a persistent desire to restore connection.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "e243f4d87d79dda2fac32a04f55e6925866991e5440cde5670cf3643cd0a831e"
+    },
+    {
+      "section_id": "lyric-0006",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "30b729f4b335cba52ad060d31d80f6d1c00288ecd2f218ec8f93251345b6778c",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a restless yearning for direct, unmediated connection, contrasting with repeated cycles of reconciliation that feel hollow. The themes explore frustration with superficial resolutions and a desire for genuine, immediate intimacy.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "f56d6b4b9dcdc4842bf9303c8ad24b426e1a3beaf2db29bc5c7222eb8d7798aa"
+    },
+    {
+      "section_id": "lyric-0007",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": "ade003ee160c1d370ef51d5054683be879fcd13c726a6e423fb8529cdcf30990",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a hopeful and reconciliatory energy, emphasizing the possibility of restoring connection through mutual effort and emotional intimacy. The central theme revolves around the desire to mend a relationship by returning to a shared, tender moment of initial connection.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "d2917278b6af70f5f1f5cc91c9a1575689635cbaaacb1351255b3613b7965bf0"
+    },
+    {
+      "section_id": "lyric-0008",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": "89cb8602782cd67fcc9c7ba876ec646db694283db75f9e90471820e02db85da8",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a restless yearning for direct, unmediated connection, contrasting with repeated cycles of reconciliation that feel hollow. The themes explore frustration with superficial resolutions and a desire for genuine, immediate intimacy.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "f56d6b4b9dcdc4842bf9303c8ad24b426e1a3beaf2db29bc5c7222eb8d7798aa"
+    },
+    {
+      "section_id": "lyric-0009",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    },
+    {
+      "section_id": "span-0000",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    },
+    {
+      "section_id": "span-0008",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    }
+  ]
+}

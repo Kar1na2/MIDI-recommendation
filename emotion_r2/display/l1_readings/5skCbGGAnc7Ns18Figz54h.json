@@ -1,0 +1,169 @@
+{
+  "schema_version": 1,
+  "track_id": "5skCbGGAnc7Ns18Figz54h",
+  "cohort": "random",
+  "display_only": true,
+  "registered_scores_unchanged": true,
+  "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+  "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "prompt_sha256": "ffdf21672c16d12394441664976928ac03a51b35d721d3925cca9be8adc58e3d",
+  "registered_checkpoint_sha256": "f65e52e069610b7bcafd0b78adfe03ff1a97614d41db9e80a72603ac1080deaf",
+  "reading_label": "L1's interpretation of the lyrics",
+  "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+  "reading_type": "model_interpretation",
+  "decoding": {
+    "do_sample": false,
+    "num_beams": 1,
+    "max_new_tokens": 128,
+    "torch_dtype": "float16",
+    "seed": 20261115
+  },
+  "overlap_rule": "NFKC/casefold 4-word ngrams; additionally 4 consecutive ja/ko/zh script characters with spacing/punctuation removed; block if either overlaps.",
+  "sections": [
+    {
+      "section_id": "lyric-0000",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": "7b3b5fc035e7e6d2cf6843d7f9003ad32dca82f0c6622592faec6c0352b5f02c",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a melancholic yearning intertwined with fragile hope, portraying love as both a source of emotional intensity and a refuge from inner pain. The themes explore the tension between longing and vulnerability, suggesting that emotional connection persists even in the face of unspoken truths and personal sorrow.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "fb10e8be5eec1baea83eecac11a708c257b42ccc190061bd8d407307690b8b14"
+    },
+    {
+      "section_id": "lyric-0001",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": "91f9e546a85b5ae40f78abc5a3161e11434ef802d1bb97f90a85d56e1e8daff5",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests a reflective and slightly critical observation of emotional exhaustion and the pressure to conform. The themes explore internal struggle, the tension between authenticity and societal expectations, and the desire to preserve personal integrity amid external influences.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "adf2029ed3539c270ef25557cb0c195c595dca852a1cd3668991e3def5ff5810"
+    },
+    {
+      "section_id": "lyric-0002",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": "da6c037dd34d41db4a3d9a093c2b04573c7378c49750bc22bd968992b1813efe",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a passionate and determined embrace of emotional authenticity, contrasting inner strength with external shadows. The themes explore the transformative power of genuine connection and the search for inner peace through vulnerability and presence.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "c3ad302ed536e7405430574b251baf7f90a810d587a1e8795cbfea9c02c37687"
+    },
+    {
+      "section_id": "lyric-0003",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": "7b3b5fc035e7e6d2cf6843d7f9003ad32dca82f0c6622592faec6c0352b5f02c",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a melancholic yearning intertwined with fragile hope, portraying love as both a source of emotional intensity and a refuge from inner pain. The themes explore the tension between longing and vulnerability, suggesting that emotional connection persists even in the face of unspoken truths and personal sorrow.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "fb10e8be5eec1baea83eecac11a708c257b42ccc190061bd8d407307690b8b14"
+    },
+    {
+      "section_id": "lyric-0004",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": "48f6246a985ae14838265d29559b3d25416f0f96184beb6d2ac290564c6e7dd1",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests a reflective and subtly melancholic observation, balancing vulnerability with a quiet sense of resolution. The themes explore emotional endurance, the quiet strength found in hardship, and a gradual healing process.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "101714afc9318983760a054e82f9f21722561f1749bbd1ac678710e432832e41"
+    },
+    {
+      "section_id": "lyric-0005",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "010165244882a26ae2eec6a064673a8322a9cabf1ea38a550dc75e5794a15fb3",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests a soft, intimate intrusion, conveying a sense of quiet vulnerability and subtle emotional weight. The theme centers on the quiet, almost imperceptible penetration of presence or feeling into a private, guarded space.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "ab553509afd38757fe5c8b668f63cc827ecf20bbe8f2a8ada8918a453a2966c9"
+    },
+    {
+      "section_id": "lyric-0006",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": "9743e34c82c7806c166833bf2b1718702eb7ac5e0c4b2a4ac396b6a7bebc3d78",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a deep, vulnerable intimacy laced with emotional yearning and a bittersweet awareness of love's fragility. The themes explore the interplay between longing and sorrow, and the quiet strength found in sharing inner pain with a trusted other.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "e7bfa893df298c6df23c063a8b342fa966d6581b689efec35bc10e65605bf05b"
+    },
+    {
+      "section_id": "span-0000",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    },
+    {
+      "section_id": "span-0002",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    }
+  ]
+}

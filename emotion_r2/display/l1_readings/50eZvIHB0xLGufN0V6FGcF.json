@@ -1,0 +1,250 @@
+{
+  "schema_version": 1,
+  "track_id": "50eZvIHB0xLGufN0V6FGcF",
+  "cohort": "random",
+  "display_only": true,
+  "registered_scores_unchanged": true,
+  "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+  "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "prompt_sha256": "ffdf21672c16d12394441664976928ac03a51b35d721d3925cca9be8adc58e3d",
+  "registered_checkpoint_sha256": "4934183cb7c159544f3d70283426da9b625876f6930eeda84a6a2f61f43debfe",
+  "reading_label": "L1's interpretation of the lyrics",
+  "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+  "reading_type": "model_interpretation",
+  "decoding": {
+    "do_sample": false,
+    "num_beams": 1,
+    "max_new_tokens": 128,
+    "torch_dtype": "float16",
+    "seed": 20261115
+  },
+  "overlap_rule": "NFKC/casefold 4-word ngrams; additionally 4 consecutive ja/ko/zh script characters with spacing/punctuation removed; block if either overlaps.",
+  "sections": [
+    {
+      "section_id": "lyric-0000",
+      "set": "primary",
+      "language": "ja",
+      "text_sha256": "f904d78c3bc39030e7bfaf72da0c7a9e9589dada48019abff1ae4868c9d236a7",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of disillusionment and inevitability, highlighting the failure of trust despite prior promises. The central theme explores the futility of concealment and the breaking of bonds when deception becomes unavoidable.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "988963742e1a89203077dc52f0606f9d78bbe220ee60cabe84ae77813119cf0b"
+    },
+    {
+      "section_id": "lyric-0001",
+      "set": "primary",
+      "language": "ja",
+      "text_sha256": "aed4d32d6371430be8048b01540f6feb84fb4d2c7b35e1c5035703aa949a4b85",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of intense loyalty and high-stakes commitment, underpinned by underlying danger and emotional volatility. The themes explore the fragility of bonds in the face of betrayal and the willingness to endure extreme consequences to maintain trust.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "b5da22dce7cecef56c38755f82fc9b1b58b2654097bf6ec928b46e731ee12053"
+    },
+    {
+      "section_id": "lyric-0002",
+      "set": "primary",
+      "language": "ja",
+      "text_sha256": "5248eb3d0bae304a3e3f70811c463ad2e31ac074393b97cfc784df2751a1c13f",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a persistent sense of quiet companionship contrasted with underlying isolation, suggesting a deep emotional duality between unity and solitude. The themes explore the tension between shared presence and individual loneliness, highlighting the paradox of being together while still feeling apart.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "f03070fb6f8f953cb9abecebeb5247c5a7bf4980014656486e8f97c3aa3d4efb"
+    },
+    {
+      "section_id": "lyric-0003",
+      "set": "primary",
+      "language": "ja",
+      "text_sha256": "5c5c4f0e6636a3334f0d8c1c357f33a908724dc06309cf3b081eb050d7ed8cde",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of isolation and subtle rebellion against conformity, highlighting a personal divergence within a shared norm. The theme explores identity and individuality in contrast to collective expectations.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "6fe958f5a2fd9e7eb7d62cea4c2a99dbd83183e8309cb61d5e5d4e844c266f6c"
+    },
+    {
+      "section_id": "lyric-0004",
+      "set": "primary",
+      "language": "ja",
+      "text_sha256": "f904d78c3bc39030e7bfaf72da0c7a9e9589dada48019abff1ae4868c9d236a7",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of disillusionment and inevitability, highlighting the failure of trust despite prior promises. The central theme explores the futility of concealment and the breaking of bonds when deception becomes unavoidable.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "988963742e1a89203077dc52f0606f9d78bbe220ee60cabe84ae77813119cf0b"
+    },
+    {
+      "section_id": "lyric-0005",
+      "set": "primary",
+      "language": "ja",
+      "text_sha256": "17186f5535f479d7496091586c9f73bb9a49dae9fd459b8e93372d83411f327a",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is repetitive and insistent, conveying a sense of overwhelming repetition that may suggest deception or a refusal to acknowledge truth. The theme centers on the pervasive and unrelenting nature of falsehood, implying a deep-seated conflict between honesty and concealment.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "02e38196025b249c1f36b299b0a635c5d180924c31ae2f2149050187ec5cc444"
+    },
+    {
+      "section_id": "lyric-0006",
+      "set": "primary",
+      "language": "ja",
+      "text_sha256": "8b5efaa31a8b9d489840e1d1b208bbec22082026000da675c2e635506fadb7d1",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of betrayal and cold resentment, highlighting the contrast between false intimacy and hidden hostility. The themes revolve around deception, the erosion of trust, and the persistence of secrets despite attempts to erase them.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "1e24f9dd4410c23698ec218b651923efe73cd915b28e88d3456bc6eef2bd9bc2"
+    },
+    {
+      "section_id": "lyric-0007",
+      "set": "primary",
+      "language": "ja",
+      "text_sha256": "0edbb8a4176a16770518100ceffac0c7c92265ff473f2322dde6c0ad8409cf41",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests a sense of collective urgency and shared fascination, while the themes explore the allure and inescapability of supernatural inquiry and human curiosity.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "227a3275eb17e6f1cfe18b9d1b19f9f3935cebde36d6de90f942ea770d750b18"
+    },
+    {
+      "section_id": "lyric-0008",
+      "set": "primary",
+      "language": "ja",
+      "text_sha256": "895f9fe10a745d11077c86708de13d6b04ab225483a439ff097a758f2954636a",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of confusion and disillusionment, suggesting a struggle to distinguish truth from fabricated or altered memories. The central theme explores the erosion of authenticity in a world where history and commitments have been manipulated or obscured.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "d363883837e8e4e819d6e4cffc3b8d7afe966c7cbe2b099baddf87a19355bd4f"
+    },
+    {
+      "section_id": "lyric-0009",
+      "set": "primary",
+      "language": "ja",
+      "text_sha256": "ebef3633416db425bb1a41cd8d8b5136c357510df32cd50f9e8a93cc3bb7000c",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of disillusionment and inevitability, highlighting the contradiction between promises and reality. The central theme explores the futility of concealment and the exposure of deception despite attempts to maintain appearances.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "2960bdcc74a0bfed351db153708cdbe0f29e0f32f71055a67aaa779a1cddbc69"
+    },
+    {
+      "section_id": "lyric-0010",
+      "set": "primary",
+      "language": "ja",
+      "text_sha256": "bbae491ada448fec7aae54e08825c3d5d86b0ef2dda4754f5b5cea5f1437a110",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of disillusionment and inevitability, suggesting that trust has been broken despite prior promises. The themes revolve around betrayal, the futility of concealment, and the painful realization of untrustworthiness in a relationship.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "bf5d9675b17199568f08aa456147776d279e266bc7c1c52a57260554b4d6ef8b"
+    },
+    {
+      "section_id": "span-0000",
+      "set": "secondary",
+      "language": "ja",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    },
+    {
+      "section_id": "span-0007",
+      "set": "secondary",
+      "language": "ja",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    },
+    {
+      "section_id": "span-0009",
+      "set": "secondary",
+      "language": "ja",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    }
+  ]
+}

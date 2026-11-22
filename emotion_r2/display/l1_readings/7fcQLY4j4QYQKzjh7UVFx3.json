@@ -1,0 +1,139 @@
+{
+  "schema_version": 1,
+  "track_id": "7fcQLY4j4QYQKzjh7UVFx3",
+  "cohort": "random",
+  "display_only": true,
+  "registered_scores_unchanged": true,
+  "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+  "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "prompt_sha256": "ffdf21672c16d12394441664976928ac03a51b35d721d3925cca9be8adc58e3d",
+  "registered_checkpoint_sha256": "c03a66d41935dc2e6f73b23019eea7b109cbfb252ce1739d3fa8895cf8d8fff5",
+  "reading_label": "L1's interpretation of the lyrics",
+  "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+  "reading_type": "model_interpretation",
+  "decoding": {
+    "do_sample": false,
+    "num_beams": 1,
+    "max_new_tokens": 128,
+    "torch_dtype": "float16",
+    "seed": 20261115
+  },
+  "overlap_rule": "NFKC/casefold 4-word ngrams; additionally 4 consecutive ja/ko/zh script characters with spacing/punctuation removed; block if either overlaps.",
+  "sections": [
+    {
+      "section_id": "lyric-0000",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": "6bf93ac2ab219bc511fb2908a145d7364e6f6f0fb239ebcfb910c05892f0383a",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests a sense of abruptness and potential disruption, while the themes imply instability and the fragility of established order.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "5b5b8fe9dd7c6b047565ba0bef60ac91e351a59c151a4e052c47b87c438096f8"
+    },
+    {
+      "section_id": "lyric-0001",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "7434b3441e3ddfa5d13bdc51576098d96177ae3faf65d939cef0f94b0e9b1e6b",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a detached, confident indifference toward social interaction, emphasizing self-reliance and resistance to external influence. The central theme explores the prioritization of personal autonomy and independence over connection or compromise.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "552998cef26d38568fdf02b2dd8b8f3b8cbb3fcec687530c153ff5d6392d3136"
+    },
+    {
+      "section_id": "lyric-0002",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "ca47c43d2b793ba57b9a651d32cd5594633a649431ec772ac9fafb67d82ed6e6",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is confident and dominant, emphasizing unmatched authority and innovation. The themes revolve around effortless influence, originality, and the distinction between authentic excellence and imitation.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "3bf9ba526ca9358c60d8a52b6832e66328cb6af4f7252a3f0a09dcb172612695"
+    },
+    {
+      "section_id": "lyric-0003",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "76b111737b8d8f3e8e69d7d6c500472145a5e226b068e6083fb6f8ff5f01d819",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a confident, detached assertiveness, emphasizing independence and resistance to external influence. The central theme explores the allure and danger of fleeting connections, highlighting a preference for self-sufficiency over emotional engagement.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "68485fc01c0bcdd764f4bfe89f3844d89a566c47ab370f8482321bf76db63255"
+    },
+    {
+      "section_id": "lyric-0004",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "59ec2c0f73b8b78fa9beadf67d316c131605f7ed7250df6163a765cd9a2d8e65",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone presents a confident, assertive persona that emphasizes uniqueness, dominance, and resilience, while the themes revolve around individuality, power, and an unyielding presence in a competitive environment.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "e00306510a33aaa35999db4baf0671cb5f32d4f6f016ba07a10d7ce4795245a5"
+    },
+    {
+      "section_id": "lyric-0005",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "66627eb1d1f30c7ae15d7fb2254ae2c9d2fac3c640c589b34330a5de968dfe19",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a detached, self-assured confidence, emphasizing independence and emotional boundaries. The central theme explores resistance to external influence and the prioritization of personal autonomy over connection or compromise.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "e7b151248f0c6f078f71a929b31c492ba4b5dd277453d5073386e63284444668"
+    },
+    {
+      "section_id": "span-0000",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    }
+  ]
+}

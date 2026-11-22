@@ -1,0 +1,139 @@
+{
+  "schema_version": 1,
+  "track_id": "77DRzu7ERs0TX3roZcre7Q",
+  "cohort": "random",
+  "display_only": true,
+  "registered_scores_unchanged": true,
+  "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+  "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "prompt_sha256": "ffdf21672c16d12394441664976928ac03a51b35d721d3925cca9be8adc58e3d",
+  "registered_checkpoint_sha256": "c4240c845b607a278038b825323b679eddc24fabdb55665b260cc330dd352368",
+  "reading_label": "L1's interpretation of the lyrics",
+  "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+  "reading_type": "model_interpretation",
+  "decoding": {
+    "do_sample": false,
+    "num_beams": 1,
+    "max_new_tokens": 128,
+    "torch_dtype": "float16",
+    "seed": 20261115
+  },
+  "overlap_rule": "NFKC/casefold 4-word ngrams; additionally 4 consecutive ja/ko/zh script characters with spacing/punctuation removed; block if either overlaps.",
+  "sections": [
+    {
+      "section_id": "lyric-0000",
+      "set": "secondary",
+      "language": "uncertain",
+      "text_sha256": "95f5b8c87932722834d5828ffbd3cec1d33b4d6aa9da33392272510851b8f7d2",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is celebratory and defiant, emphasizing resilience and cultural pride amid historical challenges. The theme centers on enduring strength and the transformative power of community spirit rising from adversity.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "e3a04981d39b66f64e8b8c6335c6f28906716986336d4990df08067c8cc5124b"
+    },
+    {
+      "section_id": "lyric-0001",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "a6125895ba5d0adf29ebadf3213949f06d4a7da4c87e7922b87bd6e235513283",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is critical and detached, portraying a sense of intellectual superiority and moral disapproval. The central theme revolves around the exposure of deception and manipulation, contrasting authenticity with calculated falsehoods.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "928e3c1572e433f77a1bc9467e2885d1024d17fe28eeffcaadb0b79d4b099dd4"
+    },
+    {
+      "section_id": "lyric-0002",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "a50cdf954972633088716f4d0e6196e8e4255d62fe06650e2c21e9f1a89db6f5",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is repetitive and playful, suggesting a lighthearted, almost childlike rhythm. The themes revolve around motion, rhythm, and the presence of a small, persistent force—possibly symbolizing energy, urgency, or a natural, cyclical pattern.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "5f6f4d6e895be5a64432750a5fdb6c4e2b1ee09c7d5ee63f9d8108daef712c4d"
+    },
+    {
+      "section_id": "lyric-0003",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "213aacbcdc94e5f1ed226bf48d88bac4962d04d72af18275365360405552decc",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is sharp and confrontational, marked by a blend of defiance, cultural critique, and personal animosity. The themes revolve around power, identity, hypocrisy, and the cyclical nature of conflict within a competitive environment.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "422303c6e0327985925316a997ea79f2eca68a56a8fca9bdeae74273da777c6c"
+    },
+    {
+      "section_id": "lyric-0004",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "18678e47669679647cdcc145078f6159e37a6a2632ca7f20cfa3db3dc730eafd",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is confrontational and defiant, marked by a sharp, aggressive dismissal of rivals and a sense of personal and cultural superiority. The themes revolve around power, authenticity, and resistance to perceived deception, emphasizing control over narrative, lineage, and influence in a competitive environment.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "6f3804b61f4309090c7603b8667f667ee35d2c102946cea3f436f5a6c7b96063"
+    },
+    {
+      "section_id": "lyric-0005",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "b994db601ea27f76a9113a9c762f9b43cd9df9ff9a8a608c73e960bdae3f6167",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is confrontational and urgent, emphasizing a clear demand for behavioral change. The central theme revolves around the rejection of certain language and the imposition of a normative standard of speech.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "ffc05d9a39f206b9adeeac2d34964441e988b6d68300e9107e2a441e054e5f74"
+    },
+    {
+      "section_id": "span-0000",
+      "set": "secondary",
+      "language": "uncertain",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    }
+  ]
+}

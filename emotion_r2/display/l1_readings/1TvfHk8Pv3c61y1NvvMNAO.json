@@ -1,0 +1,139 @@
+{
+  "schema_version": 1,
+  "track_id": "1TvfHk8Pv3c61y1NvvMNAO",
+  "cohort": "random",
+  "display_only": true,
+  "registered_scores_unchanged": true,
+  "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+  "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "prompt_sha256": "ffdf21672c16d12394441664976928ac03a51b35d721d3925cca9be8adc58e3d",
+  "registered_checkpoint_sha256": "17f76d516a98b3f88564a15b7cdf83f14b15cc8471513d479c16b90420b98cc7",
+  "reading_label": "L1's interpretation of the lyrics",
+  "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+  "reading_type": "model_interpretation",
+  "decoding": {
+    "do_sample": false,
+    "num_beams": 1,
+    "max_new_tokens": 128,
+    "torch_dtype": "float16",
+    "seed": 20261115
+  },
+  "overlap_rule": "NFKC/casefold 4-word ngrams; additionally 4 consecutive ja/ko/zh script characters with spacing/punctuation removed; block if either overlaps.",
+  "sections": [
+    {
+      "section_id": "lyric-0000",
+      "set": "secondary",
+      "language": "uncertain",
+      "text_sha256": "20e0a22612721926eb4042858963a2fa643f1c84fa7145968b21d7ae3e7833c4",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests aggression and a sense of imminent action, while the themes revolve around confrontation and the elimination of perceived threats.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "c4ff6ee722669d0b4027c873b9cdc24f865ab6d591e260941cf65ad7203510be"
+    },
+    {
+      "section_id": "lyric-0001",
+      "set": "secondary",
+      "language": "uncertain",
+      "text_sha256": "b05d646730c6ab0e7a7ef62a6b2f47c428aab6afe140153999551d75c08d77c4",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is aggressive and unyielding, emphasizing dominance and relentless action. The central themes revolve around confrontation, perseverance, and the assertion of power through constant presence and intensity.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "cf8ef8e2825974df7c0ab781cb67b3f00f7e88e9d9ddddeafd253d03e08d199a"
+    },
+    {
+      "section_id": "lyric-0002",
+      "set": "secondary",
+      "language": "uncertain",
+      "text_sha256": "5dad3001f10eda656e18ad86d28f2d1e4b32471ac09f49c57784b0b2c8f9b094",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is aggressive and confrontational, emphasizing dominance and defiance. The themes revolve around control, rebellion, and a sense of isolation rooted in violent self-reliance.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "502ddd98e577b38fe5c638985e8ec579306e043aea8955fde19e682faa7fb73c"
+    },
+    {
+      "section_id": "lyric-0003",
+      "set": "secondary",
+      "language": "uncertain",
+      "text_sha256": "f27c7486fafd0768558c906efb1184942a92b0bb43d722dda646e089c0b532f4",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is aggressive and confrontational, emphasizing relentless conflict and a sense of inevitable violence. The themes revolve around entrenched rivalry, the cyclical nature of bloodshed, and the justification of violent action to achieve a perceived sense of closure or dominance.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "00cfd91159bdb0126911c449fda2c6f2811815e864aeb414b96edd8bb0cf3484"
+    },
+    {
+      "section_id": "lyric-0004",
+      "set": "secondary",
+      "language": "uncertain",
+      "text_sha256": "5dad3001f10eda656e18ad86d28f2d1e4b32471ac09f49c57784b0b2c8f9b094",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is aggressive and confrontational, emphasizing dominance and defiance. The themes revolve around control, rebellion, and a sense of isolation rooted in violent self-reliance.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "502ddd98e577b38fe5c638985e8ec579306e043aea8955fde19e682faa7fb73c"
+    },
+    {
+      "section_id": "lyric-0005",
+      "set": "secondary",
+      "language": "uncertain",
+      "text_sha256": "d50b10789ec460eb65ae45a0d5a1f1892a363305016a4213be083618d2961361",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of urgency and cautious optimism, while the themes suggest the importance of timely resolution in a significant situation.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "71766685d1a815c37c27576b3546f06bfeb55d8aefaf23dcf2102aacda8313aa"
+    },
+    {
+      "section_id": "span-0000",
+      "set": "secondary",
+      "language": "uncertain",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    }
+  ]
+}

@@ -1,0 +1,411 @@
+{
+  "schema_version": 1,
+  "track_id": "4s19UCSaXZVVd3U9kTOe07",
+  "cohort": "random",
+  "display_only": true,
+  "registered_scores_unchanged": true,
+  "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+  "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "prompt_sha256": "ffdf21672c16d12394441664976928ac03a51b35d721d3925cca9be8adc58e3d",
+  "registered_checkpoint_sha256": "e5ace348e25cc08871fd11897828804c187f43853b826e381d5d4f213753b203",
+  "reading_label": "L1's interpretation of the lyrics",
+  "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+  "reading_type": "model_interpretation",
+  "decoding": {
+    "do_sample": false,
+    "num_beams": 1,
+    "max_new_tokens": 128,
+    "torch_dtype": "float16",
+    "seed": 20261115
+  },
+  "overlap_rule": "NFKC/casefold 4-word ngrams; additionally 4 consecutive ja/ko/zh script characters with spacing/punctuation removed; block if either overlaps.",
+  "sections": [
+    {
+      "section_id": "lyric-0000",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "004e6af737f8c4cd35ded1a21808e2b3feaa5100ae137571b862300fee740773",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is energetic and unrestrained, conveying a sense of continuous motion and joy. The theme centers on liberation through movement and the pursuit of unending excitement.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "5793008c3423dd03452bb93cb51af4ba7b4f9a464876eaf66531f9f80dd6c248"
+    },
+    {
+      "section_id": "lyric-0001",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "4e7a9ed7fe6311ca16a3db6c017934749ffc06b4aff368e2e43fb9d1de706d77",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a persistent, heartfelt devotion, emphasizing an enduring emotional connection. The theme centers on predestined unity and deep, instinctive affection between two individuals.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "55027bd236849491cc81eb4ba22792baf13cb8b83030b3718ed1ba26ca1fbff8"
+    },
+    {
+      "section_id": "lyric-0002",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "8f94edec4daa52fd77b12b19e80774ab8666ebeb659e9b480a12cd1a65d7dfd0",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone evokes a serene, reflective stillness, blending intimacy with natural rhythms. The themes center on enduring connection, quiet longing, and the passage of time in moments of peaceful presence.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "3b0404bc34f84c9a641a07117ed155ee654d2227ff2d2814cdd0be9946c6a2fa"
+    },
+    {
+      "section_id": "lyric-0003",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "004e6af737f8c4cd35ded1a21808e2b3feaa5100ae137571b862300fee740773",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is energetic and unrestrained, conveying a sense of continuous motion and joy. The theme centers on liberation through movement and the pursuit of unending excitement.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "5793008c3423dd03452bb93cb51af4ba7b4f9a464876eaf66531f9f80dd6c248"
+    },
+    {
+      "section_id": "lyric-0004",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "31dab4173a8250ed27947db2975995bb2764232503122cb71e54b7002e0344dd",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of emotional release and inner fulfillment, suggesting that movement and expression serve as a profound connection to personal completeness and clarity. The central theme revolves around the transformative power of dance as a means to achieve spiritual and emotional balance.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "beeec6abefb6bcd13611ab781f806c20c7cc5f1a37b52b163ea7e030ab155160"
+    },
+    {
+      "section_id": "lyric-0005",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "31dab4173a8250ed27947db2975995bb2764232503122cb71e54b7002e0344dd",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of emotional release and inner fulfillment, suggesting that movement and expression serve as a profound connection to personal completeness and clarity. The central theme revolves around the transformative power of dance as a means to achieve spiritual and emotional balance.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "beeec6abefb6bcd13611ab781f806c20c7cc5f1a37b52b163ea7e030ab155160"
+    },
+    {
+      "section_id": "lyric-0006",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "ee88c92d17865113b71d976a4c2ac352d9c31ae98757f5151bf24c142faf781e",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a deep sense of devotion and emotional certainty, emphasizing unwavering loyalty and personal fulfillment. The central theme revolves around the transformative power of love, portrayed as a source of enduring joy and self-worth.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "f4614bc70d09c08d323d20281e77590718bcc93c1642a017744681b70ad13c0f"
+    },
+    {
+      "section_id": "lyric-0007",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "004e6af737f8c4cd35ded1a21808e2b3feaa5100ae137571b862300fee740773",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is energetic and unrestrained, conveying a sense of continuous motion and joy. The theme centers on liberation through movement and the pursuit of unending excitement.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "5793008c3423dd03452bb93cb51af4ba7b4f9a464876eaf66531f9f80dd6c248"
+    },
+    {
+      "section_id": "lyric-0008",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "31dab4173a8250ed27947db2975995bb2764232503122cb71e54b7002e0344dd",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of emotional release and inner fulfillment, suggesting that movement and expression serve as a profound connection to personal completeness and clarity. The central theme revolves around the transformative power of dance as a means to achieve spiritual and emotional balance.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "beeec6abefb6bcd13611ab781f806c20c7cc5f1a37b52b163ea7e030ab155160"
+    },
+    {
+      "section_id": "lyric-0009",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "31dab4173a8250ed27947db2975995bb2764232503122cb71e54b7002e0344dd",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of emotional release and inner fulfillment, suggesting that movement and expression serve as a profound connection to personal completeness and clarity. The central theme revolves around the transformative power of dance as a means to achieve spiritual and emotional balance.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "beeec6abefb6bcd13611ab781f806c20c7cc5f1a37b52b163ea7e030ab155160"
+    },
+    {
+      "section_id": "lyric-0010",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "c49bc1f1fdb8520d6840bcff7e848f8e22a192a2abc3a6379f6ff18413448dd2",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is energetic and unrestrained, conveying a sense of continuous motion and joy. The theme centers on liberation through movement and the pursuit of unending excitement.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "5793008c3423dd03452bb93cb51af4ba7b4f9a464876eaf66531f9f80dd6c248"
+    },
+    {
+      "section_id": "lyric-0011",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "c49bc1f1fdb8520d6840bcff7e848f8e22a192a2abc3a6379f6ff18413448dd2",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is energetic and unrestrained, conveying a sense of continuous motion and joy. The theme centers on liberation through movement and the pursuit of unending excitement.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "5793008c3423dd03452bb93cb51af4ba7b4f9a464876eaf66531f9f80dd6c248"
+    },
+    {
+      "section_id": "lyric-0012",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "31dab4173a8250ed27947db2975995bb2764232503122cb71e54b7002e0344dd",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of emotional release and inner fulfillment, suggesting that movement and expression serve as a profound connection to personal completeness and clarity. The central theme revolves around the transformative power of dance as a means to achieve spiritual and emotional balance.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "beeec6abefb6bcd13611ab781f806c20c7cc5f1a37b52b163ea7e030ab155160"
+    },
+    {
+      "section_id": "lyric-0013",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "31dab4173a8250ed27947db2975995bb2764232503122cb71e54b7002e0344dd",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of emotional release and inner fulfillment, suggesting that movement and expression serve as a profound connection to personal completeness and clarity. The central theme revolves around the transformative power of dance as a means to achieve spiritual and emotional balance.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "beeec6abefb6bcd13611ab781f806c20c7cc5f1a37b52b163ea7e030ab155160"
+    },
+    {
+      "section_id": "lyric-0014",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "31dab4173a8250ed27947db2975995bb2764232503122cb71e54b7002e0344dd",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of emotional release and inner fulfillment, suggesting that movement and expression serve as a profound connection to personal completeness and clarity. The central theme revolves around the transformative power of dance as a means to achieve spiritual and emotional balance.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "beeec6abefb6bcd13611ab781f806c20c7cc5f1a37b52b163ea7e030ab155160"
+    },
+    {
+      "section_id": "lyric-0015",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "31dab4173a8250ed27947db2975995bb2764232503122cb71e54b7002e0344dd",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of emotional release and inner fulfillment, suggesting that movement and expression serve as a profound connection to personal completeness and clarity. The central theme revolves around the transformative power of dance as a means to achieve spiritual and emotional balance.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "beeec6abefb6bcd13611ab781f806c20c7cc5f1a37b52b163ea7e030ab155160"
+    },
+    {
+      "section_id": "lyric-0016",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "31dab4173a8250ed27947db2975995bb2764232503122cb71e54b7002e0344dd",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of emotional release and inner fulfillment, suggesting that movement and expression serve as a profound connection to personal completeness and clarity. The central theme revolves around the transformative power of dance as a means to achieve spiritual and emotional balance.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "beeec6abefb6bcd13611ab781f806c20c7cc5f1a37b52b163ea7e030ab155160"
+    },
+    {
+      "section_id": "lyric-0017",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "31dab4173a8250ed27947db2975995bb2764232503122cb71e54b7002e0344dd",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of emotional release and inner fulfillment, suggesting that movement and expression serve as a profound connection to personal completeness and clarity. The central theme revolves around the transformative power of dance as a means to achieve spiritual and emotional balance.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "beeec6abefb6bcd13611ab781f806c20c7cc5f1a37b52b163ea7e030ab155160"
+    },
+    {
+      "section_id": "lyric-0018",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "31dab4173a8250ed27947db2975995bb2764232503122cb71e54b7002e0344dd",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of emotional release and inner fulfillment, suggesting that movement and expression serve as a profound connection to personal completeness and clarity. The central theme revolves around the transformative power of dance as a means to achieve spiritual and emotional balance.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "beeec6abefb6bcd13611ab781f806c20c7cc5f1a37b52b163ea7e030ab155160"
+    },
+    {
+      "section_id": "lyric-0019",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "31dab4173a8250ed27947db2975995bb2764232503122cb71e54b7002e0344dd",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of emotional release and inner fulfillment, suggesting that movement and expression serve as a profound connection to personal completeness and clarity. The central theme revolves around the transformative power of dance as a means to achieve spiritual and emotional balance.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "beeec6abefb6bcd13611ab781f806c20c7cc5f1a37b52b163ea7e030ab155160"
+    },
+    {
+      "section_id": "lyric-0020",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "31dab4173a8250ed27947db2975995bb2764232503122cb71e54b7002e0344dd",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of emotional release and inner fulfillment, suggesting that movement and expression serve as a profound connection to personal completeness and clarity. The central theme revolves around the transformative power of dance as a means to achieve spiritual and emotional balance.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "beeec6abefb6bcd13611ab781f806c20c7cc5f1a37b52b163ea7e030ab155160"
+    },
+    {
+      "section_id": "lyric-0021",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "31dab4173a8250ed27947db2975995bb2764232503122cb71e54b7002e0344dd",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of emotional release and inner fulfillment, suggesting that movement and expression serve as a profound connection to personal completeness and clarity. The central theme revolves around the transformative power of dance as a means to achieve spiritual and emotional balance.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "beeec6abefb6bcd13611ab781f806c20c7cc5f1a37b52b163ea7e030ab155160"
+    },
+    {
+      "section_id": "span-0000",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    }
+  ]
+}

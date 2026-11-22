@@ -1,0 +1,258 @@
+{
+  "schema_version": 1,
+  "track_id": "2FEUloDXMvRnyfLcsrCfkw",
+  "cohort": "random",
+  "display_only": true,
+  "registered_scores_unchanged": true,
+  "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+  "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "prompt_sha256": "ffdf21672c16d12394441664976928ac03a51b35d721d3925cca9be8adc58e3d",
+  "registered_checkpoint_sha256": "86fd766bc83ba3aa3074d24fa40140ca278976f38bb455ac00e892b13ee90cf5",
+  "reading_label": "L1's interpretation of the lyrics",
+  "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+  "reading_type": "model_interpretation",
+  "decoding": {
+    "do_sample": false,
+    "num_beams": 1,
+    "max_new_tokens": 128,
+    "torch_dtype": "float16",
+    "seed": 20261115
+  },
+  "overlap_rule": "NFKC/casefold 4-word ngrams; additionally 4 consecutive ja/ko/zh script characters with spacing/punctuation removed; block if either overlaps.",
+  "sections": [
+    {
+      "section_id": "lyric-0000",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "8e8c0baec7338d72196e8960e3e0d9558df5d4aa29bdce4de232630e99dd5419",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a urgent, almost primal sense of presence and connection, emphasizing physical and emotional immediacy. The themes revolve around enduring intimacy, the blending of dream and reality, and a collective, rhythmic experience that resists separation.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "3b761123af9a0a40f79d2bdabc964382c38125326b2b009a1b2800f0c99dd6ba"
+    },
+    {
+      "section_id": "lyric-0001",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "453cebeb1f9acd655a2866ef56b521f7d7b451f4ecae745a4f5a0c078e40e6e7",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a passionate, urgent emotional connection, blending physical intimacy with a sense of longing and vulnerability. The themes explore desire, presence, and the tension between awakening and departure.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "992fabcec1caba2cd349993c3661797b4a0a5c8f5526d76fd3930daa86e5d550"
+    },
+    {
+      "section_id": "lyric-0002",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "68f9b85f0c630889cfdb03ff4533ac006cc48534b8832ca59af230ac659e92f3",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is energetic and collective, emphasizing unity and shared experience through movement and emotion. The themes revolve around communal participation, physical expression, and a sense of urgency or longing to remain connected.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "55febf393da1cdf9dbbded2230fae3a1b2ee49a3fd229fd69dd272f39db0045d"
+    },
+    {
+      "section_id": "lyric-0003",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "fb4fb06d3adfb9428c3d272c3c2689207ae106ff848bf25c971e57fac28f0ac4",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a restless blend of longing and urgency, emphasizing a persistent, almost physical desire to remain connected. The themes revolve around the tension between dreaming and waking reality, and the emotional intensity of being drawn to a presence that is both elusive and deeply felt.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "cdb06dc69fa1d078abd16b395083af02519d2d6c80ad05f397200d9d44004e96"
+    },
+    {
+      "section_id": "lyric-0004",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "453cebeb1f9acd655a2866ef56b521f7d7b451f4ecae745a4f5a0c078e40e6e7",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a passionate, urgent emotional connection, blending physical intimacy with a sense of longing and vulnerability. The themes explore desire, presence, and the tension between awakening and departure.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "992fabcec1caba2cd349993c3661797b4a0a5c8f5526d76fd3930daa86e5d550"
+    },
+    {
+      "section_id": "lyric-0005",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "453cebeb1f9acd655a2866ef56b521f7d7b451f4ecae745a4f5a0c078e40e6e7",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a passionate, urgent emotional connection, blending physical intimacy with a sense of longing and vulnerability. The themes explore desire, presence, and the tension between awakening and departure.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "992fabcec1caba2cd349993c3661797b4a0a5c8f5526d76fd3930daa86e5d550"
+    },
+    {
+      "section_id": "lyric-0006",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "453cebeb1f9acd655a2866ef56b521f7d7b451f4ecae745a4f5a0c078e40e6e7",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a passionate, urgent emotional connection, blending physical intimacy with a sense of longing and vulnerability. The themes explore desire, presence, and the tension between awakening and departure.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "992fabcec1caba2cd349993c3661797b4a0a5c8f5526d76fd3930daa86e5d550"
+    },
+    {
+      "section_id": "lyric-0007",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "453cebeb1f9acd655a2866ef56b521f7d7b451f4ecae745a4f5a0c078e40e6e7",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a passionate, urgent emotional connection, blending physical intimacy with a sense of longing and vulnerability. The themes explore desire, presence, and the tension between awakening and departure.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "992fabcec1caba2cd349993c3661797b4a0a5c8f5526d76fd3930daa86e5d550"
+    },
+    {
+      "section_id": "lyric-0008",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "063a3136f0f3a806c596f0d36693c92cc6ea1d11c6acd3370d7e2844fb0c4dd1",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is energetic and collective, emphasizing unity and shared participation. The themes revolve around communal joy, endurance, and a call to remain together in the face of uncertainty.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "58f9286605bfee54480e869f11218977362886582d790f12b67bb71980d0d361"
+    },
+    {
+      "section_id": "lyric-0009",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "453cebeb1f9acd655a2866ef56b521f7d7b451f4ecae745a4f5a0c078e40e6e7",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a passionate, urgent emotional connection, blending physical intimacy with a sense of longing and vulnerability. The themes explore desire, presence, and the tension between awakening and departure.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "992fabcec1caba2cd349993c3661797b4a0a5c8f5526d76fd3930daa86e5d550"
+    },
+    {
+      "section_id": "lyric-0010",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "453cebeb1f9acd655a2866ef56b521f7d7b451f4ecae745a4f5a0c078e40e6e7",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a passionate, urgent emotional connection, blending physical intimacy with a sense of longing and vulnerability. The themes explore desire, presence, and the tension between awakening and departure.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "992fabcec1caba2cd349993c3661797b4a0a5c8f5526d76fd3930daa86e5d550"
+    },
+    {
+      "section_id": "lyric-0011",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "453cebeb1f9acd655a2866ef56b521f7d7b451f4ecae745a4f5a0c078e40e6e7",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a passionate, urgent emotional connection, blending physical intimacy with a sense of longing and vulnerability. The themes explore desire, presence, and the tension between awakening and departure.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "992fabcec1caba2cd349993c3661797b4a0a5c8f5526d76fd3930daa86e5d550"
+    },
+    {
+      "section_id": "lyric-0012",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "68f9b85f0c630889cfdb03ff4533ac006cc48534b8832ca59af230ac659e92f3",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is energetic and collective, emphasizing unity and shared experience through movement and emotion. The themes revolve around communal participation, physical expression, and a sense of urgency or longing to remain connected.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "55febf393da1cdf9dbbded2230fae3a1b2ee49a3fd229fd69dd272f39db0045d"
+    },
+    {
+      "section_id": "span-0000",
+      "set": "secondary",
+      "language": "uncertain",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    }
+  ]
+}

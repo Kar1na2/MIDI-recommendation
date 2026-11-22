@@ -1,0 +1,105 @@
+{
+  "schema_version": 1,
+  "track_id": "5Lphv44uN2V1n0rQfur9Gh",
+  "cohort": "random",
+  "display_only": true,
+  "registered_scores_unchanged": true,
+  "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+  "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "prompt_sha256": "ffdf21672c16d12394441664976928ac03a51b35d721d3925cca9be8adc58e3d",
+  "registered_checkpoint_sha256": "1b3073d128c76cb397fc0b848fe084844c024644bc33a59e0077f578387a398f",
+  "reading_label": "L1's interpretation of the lyrics",
+  "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+  "reading_type": "model_interpretation",
+  "decoding": {
+    "do_sample": false,
+    "num_beams": 1,
+    "max_new_tokens": 128,
+    "torch_dtype": "float16",
+    "seed": 20261115
+  },
+  "overlap_rule": "NFKC/casefold 4-word ngrams; additionally 4 consecutive ja/ko/zh script characters with spacing/punctuation removed; block if either overlaps.",
+  "sections": [
+    {
+      "section_id": "lyric-0000",
+      "set": "secondary",
+      "language": "uncertain",
+      "text_sha256": "a4b074a9d176545b30563d0d23a10047396ea479c6201102c67f48fcdc121b2e",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of dominance and control, emphasizing power over others through intimidation and authority. The themes revolve around manipulation, social defiance, and the assertion of influence in a world governed by law and perception.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "c2c93b8a650d49ca91871e796d4faaa4ca809df976472fb35bfcc4d25a6ba9a9"
+    },
+    {
+      "section_id": "lyric-0001",
+      "set": "secondary",
+      "language": "uncertain",
+      "text_sha256": "7dd9f5360105701b648448f79eded1d3bbc7cf57df82276d24dd1f156d2c9021",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys defiance and secrecy, emphasizing evasion of authority through technological and geographic concealment. The central theme revolves around the struggle for autonomy and innocence in the face of systemic surveillance and legal scrutiny.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "648f20881b5f6a52dcbbfb3808d108b5dbdeebea6edbe4a44f7a0a9695ec2def"
+    },
+    {
+      "section_id": "lyric-0002",
+      "set": "secondary",
+      "language": "uncertain",
+      "text_sha256": "a4b074a9d176545b30563d0d23a10047396ea479c6201102c67f48fcdc121b2e",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of dominance and control, emphasizing power over others through intimidation and authority. The themes revolve around manipulation, social defiance, and the assertion of influence in a world governed by law and perception.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "c2c93b8a650d49ca91871e796d4faaa4ca809df976472fb35bfcc4d25a6ba9a9"
+    },
+    {
+      "section_id": "lyric-0003",
+      "set": "secondary",
+      "language": "uncertain",
+      "text_sha256": "e4dd3f9561a127e3ea5bcf46ac88411d2d54d022ad67ce669a5215b458278e33",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is defiant and skeptical, conveying a sense of distrust toward authority and interrogation. The themes revolve around resistance to coercion, the manipulation of truth, and the assertion of personal autonomy in the face of pressure.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "bf95dbc1c477322aeb13b7dd2c007c2720fc4afa66a0a4680c3e670c0ed6cf48"
+    },
+    {
+      "section_id": "span-0001",
+      "set": "secondary",
+      "language": "uncertain",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    }
+  ]
+}

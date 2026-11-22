@@ -1,0 +1,293 @@
+{
+  "schema_version": 1,
+  "track_id": "4ZxOuNHhpyOj4gv52MtQpT",
+  "cohort": "random",
+  "display_only": true,
+  "registered_scores_unchanged": true,
+  "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+  "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "prompt_sha256": "ffdf21672c16d12394441664976928ac03a51b35d721d3925cca9be8adc58e3d",
+  "registered_checkpoint_sha256": "ca41effeb9f182ff9f465b14a60ee68cc76eecbdeb5f56e22da9c488fb205f11",
+  "reading_label": "L1's interpretation of the lyrics",
+  "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+  "reading_type": "model_interpretation",
+  "decoding": {
+    "do_sample": false,
+    "num_beams": 1,
+    "max_new_tokens": 128,
+    "torch_dtype": "float16",
+    "seed": 20261115
+  },
+  "overlap_rule": "NFKC/casefold 4-word ngrams; additionally 4 consecutive ja/ko/zh script characters with spacing/punctuation removed; block if either overlaps.",
+  "sections": [
+    {
+      "section_id": "lyric-0000",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "fc86c8b79d9b05ec78fc912f19e4abc0c5987356f54d957ac135b5c4534eb4b1",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests a restless desire for fragments of something desirable, conveying a sense of insatiable longing. The theme explores the pursuit of small, fleeting elements as a means of fulfillment, hinting at both vulnerability and the search for meaning in incomplete or scattered experiences.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "4a538c454c2cc3dfe66ec2df4c8098a7311dfd1076aa806f82d981136828863a"
+    },
+    {
+      "section_id": "lyric-0001",
+      "set": "secondary",
+      "language": "uncertain",
+      "text_sha256": "94119085c0cec7ee5cde5e737c1d9875b5ea35da034cdd18874ff5da10b80727",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a mix of yearning and frustration, highlighting the tension between desire and unfulfilled expectations. The central theme explores the paradox of being deeply drawn to something or someone that remains elusive and difficult to control.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "b0dd835754bebbb50d9c429e788f64ea5662ef121444b96d7f180d6f03d9eb78"
+    },
+    {
+      "section_id": "lyric-0002",
+      "set": "secondary",
+      "language": "uncertain",
+      "text_sha256": "a144a49fa0eecd24c868c5485fd28c51269112dc727f2cc151168808ea36f91b",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a yearning for connection and emotional release, blending vulnerability with a plea for liberation. The central theme explores the tension between attachment and the desire to break free from emotional dependence.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "77d33ef8dfb26390a9e20071c545a1e88f3cfd3639038f965b5880c62eb4fba2"
+    },
+    {
+      "section_id": "lyric-0003",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "8b532a1ec4adf0b9a891606d3c3f570eab7338628b6b35154fbaa27bfb716778",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a deep, intimate longing for connection and emotional surrender, emphasizing a desire for pure, unfiltered affection in a moment of finality. The theme centers on the profound need for closeness and authenticity in the face of inevitable endings.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "ade523e0a01be33c98df421d68c3e7e78f66cecf8e8e2aa9d2034e13f2a66722"
+    },
+    {
+      "section_id": "lyric-0004",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "322bbef3eb34c95d724eff3dbef8882c0423912caf047f381a27d06410b52927",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of finality and emotional weight, emphasizing the irrevocable nature of an ending. The theme centers on the inevitability of closure and the quiet acceptance of time's passage.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "4d51c0b964e59c0fc95ef6b755a982e6f0f40f4d96622d24b38fb5b85ecefa66"
+    },
+    {
+      "section_id": "lyric-0005",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "8b14fd377c017f657c2be7581a3ebcf6cd781c0b89e950e9c1c4252fdcdd997e",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is confident and passionate, emphasizing intimacy, commitment, and a bold, unapologetic embrace of a deep emotional and physical bond. The themes revolve around loyalty, mutual devotion, and the intensity of a relationship built on trust and shared destiny.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "f3015af12b2eea94575b58fe45db0782c04ca802745d30fd895826de3c71bb16"
+    },
+    {
+      "section_id": "lyric-0006",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "a193bbf6cf826c9fb0596004e2003deb34a4d76d074fb2e868d617c9e1fe25e3",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a persistent sense of longing and emotional entanglement, underscored by a quiet plea for release from unresolved attachment. The themes explore the tension between enduring emotional dependence and the desire for liberation from unfulfilled connection.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "681734e977b93ec8d430034f10c1595c51c5f352d858664d2134bdb1511d746d"
+    },
+    {
+      "section_id": "lyric-0007",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "6bbb1363e83cf9485d2507d3aa22e143fc9d7f77bc6fd2844324a965956350e9",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a deep, intimate longing and emotional vulnerability, centered around a desire for unreserved connection and the finality of a profound, tender moment. The themes explore raw sincerity, the need for complete openness in love, and the bittersweet nature of a concluding, emotionally charged encounter.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "5fece23f192449e5da88f78c670b0c75d7aacb3e1c4223d1518549bdf7ff86b5"
+    },
+    {
+      "section_id": "lyric-0008",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "322bbef3eb34c95d724eff3dbef8882c0423912caf047f381a27d06410b52927",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of finality and emotional weight, emphasizing the irrevocable nature of an ending. The theme centers on the inevitability of closure and the quiet acceptance of time's passage.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "4d51c0b964e59c0fc95ef6b755a982e6f0f40f4d96622d24b38fb5b85ecefa66"
+    },
+    {
+      "section_id": "lyric-0009",
+      "set": "secondary",
+      "language": "uncertain",
+      "text_sha256": "0a6c3de27c4d05e1634f6e8b0904d49e99729df015d44486112895b8056ae353",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys assertive confidence and unyielding determination, emphasizing self-possession and independence. The central theme revolves around embracing one's identity fully and maintaining control over personal boundaries without external interference.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "d9a6f4caf97a4f508612d347b783f0373a471e15dd828bc846e261f512f9dba9"
+    },
+    {
+      "section_id": "lyric-0010",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "4f75613903e93c84a355ee151b3500c20e78ade0a1a0521de451f5cb5b945df9",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a deep, intimate longing for connection and emotional surrender, emphasizing a desire for unreserved affection in a moment of finality. The theme centers on the purity and intensity of love as a final, heartfelt expression of closeness.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "bf409ed2178520b227cfca4e52ca26fa56cecab6b07149babeda314165616ffe"
+    },
+    {
+      "section_id": "lyric-0011",
+      "set": "secondary",
+      "language": "uncertain",
+      "text_sha256": "322bbef3eb34c95d724eff3dbef8882c0423912caf047f381a27d06410b52927",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of finality and emotional weight, emphasizing the irrevocable nature of an ending. The theme centers on the inevitability of closure and the quiet acceptance of time's passage.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "4d51c0b964e59c0fc95ef6b755a982e6f0f40f4d96622d24b38fb5b85ecefa66"
+    },
+    {
+      "section_id": "span-0000",
+      "set": "secondary",
+      "language": "uncertain",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    },
+    {
+      "section_id": "span-0002",
+      "set": "secondary",
+      "language": "uncertain",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    },
+    {
+      "section_id": "span-0005",
+      "set": "secondary",
+      "language": "uncertain",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    },
+    {
+      "section_id": "span-0009",
+      "set": "secondary",
+      "language": "uncertain",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    },
+    {
+      "section_id": "span-0011",
+      "set": "secondary",
+      "language": "uncertain",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    }
+  ]
+}

@@ -1,0 +1,186 @@
+{
+  "schema_version": 1,
+  "track_id": "2K2kujL7erU8ItCd2Tv5lh",
+  "cohort": "random",
+  "display_only": true,
+  "registered_scores_unchanged": true,
+  "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+  "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "prompt_sha256": "ffdf21672c16d12394441664976928ac03a51b35d721d3925cca9be8adc58e3d",
+  "registered_checkpoint_sha256": "1b35326b3a8b8ab093b624eb164474355ba4b41d32ba4ba1cbfdd0bb2632153c",
+  "reading_label": "L1's interpretation of the lyrics",
+  "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+  "reading_type": "model_interpretation",
+  "decoding": {
+    "do_sample": false,
+    "num_beams": 1,
+    "max_new_tokens": 128,
+    "torch_dtype": "float16",
+    "seed": 20261115
+  },
+  "overlap_rule": "NFKC/casefold 4-word ngrams; additionally 4 consecutive ja/ko/zh script characters with spacing/punctuation removed; block if either overlaps.",
+  "sections": [
+    {
+      "section_id": "lyric-0000",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "d2ce73a4dda00e52eca44365956494282aaf215fceb8d4192e80bdaef6ad4afc",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of quiet longing and emotional stagnation, marked by unresolved feelings and a lingering ache after absence. The themes explore the struggle to heal from loss, the gap between expectation and reality, and the difficulty of moving forward when emotional closure remains unattained.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "19cdfa9fb5a2624b1bf46a5f4fd78a7b718066c4a598caceb5e870fa00710aad"
+    },
+    {
+      "section_id": "lyric-0001",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "49aa3d83ca1c4ddc0952b1a29cb64df54e288b72966ca8b2435c56245c408de4",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests a sense of quiet frustration and emotional distance, while the themes explore the complexities of loyalty, desire, and the unseen forces that influence personal choices.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "a8a04b47b2bd6249d8a7f86fbd7633c3af93d13679af2cb02ad8a8df8129208e"
+    },
+    {
+      "section_id": "lyric-0002",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "c4f26b6c571b75391f34891e691e201a2c4561f6888637a989acf109ae73014a",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of persistent, unrelenting presence and emotional entrapment, suggesting that one's identity or influence remains inescapably linked to another despite attempts to distance oneself. The central theme explores the futility of evasion, highlighting how certain emotional or psychological imprints endure regardless of conscious effort to move on.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "9de57357e5779b90d3224e582f43de0e29041ed704d47518e252fc87cb6efcb9"
+    },
+    {
+      "section_id": "lyric-0003",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "670e77ad1fbdb7d79c0614fc233100b04978946507dc686756a9ce9253988f89",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of melancholic reflection and emotional distance, marked by resignation and a quiet defiance. The themes explore lost ambitions, internal conflict, and the passage of time, suggesting a journey from active involvement to a state of quiet, distant presence.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "e7dfac51a3ee2dcb7c8b5f91c8824465e42d1b71bfa530084c97fbcfb50b87ea"
+    },
+    {
+      "section_id": "lyric-0004",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "1c38ec3954275e52673b3b0ae53ce38f2b94c5d2a4752dbec510070d42b851ec",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of emotional fragility and quiet despair, underscored by a feeling of being overlooked and adrift in a shifting, indifferent world. The themes explore isolation, the struggle to be seen, and the lingering impact of unacknowledged emotional loss.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "8c6c82701543080290ab81e37bf312ab49e20f17599b026b0d6385ead7417664"
+    },
+    {
+      "section_id": "lyric-0005",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "49aa3d83ca1c4ddc0952b1a29cb64df54e288b72966ca8b2435c56245c408de4",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests a sense of quiet frustration and emotional distance, while the themes explore the complexities of loyalty, desire, and the unseen forces that influence personal choices.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "a8a04b47b2bd6249d8a7f86fbd7633c3af93d13679af2cb02ad8a8df8129208e"
+    },
+    {
+      "section_id": "lyric-0006",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": "243ac8778f8a85d2f911ee788524995c65dfcdfffbe68942c3fba0c9fce2e1f4",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of persistent, inescapable presence and emotional entanglement, suggesting that a feeling or connection remains unavoidable despite attempts to suppress it. The theme explores the idea of being indelibly marked by a relationship or influence, even when communication or resolution seems impossible.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "694a7b7098e1d7fc8df753a753a0fe2f84e967ff9836d87d4c59a29723261627"
+    },
+    {
+      "section_id": "lyric-0007",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": "0cb0dacaccd15c179e7ad16f7d787c49138a8436c0d9992ebd951d4f65948754",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests a reflective, almost reverent stillness, while the themes imply a sense of quiet introspection and emotional resonance.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "be22e7c91eac1756c27458fc7150f000ddd05e5e47886fc97b2e09ed5d090c86"
+    },
+    {
+      "section_id": "span-0000",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    },
+    {
+      "section_id": "span-0007",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    }
+  ]
+}

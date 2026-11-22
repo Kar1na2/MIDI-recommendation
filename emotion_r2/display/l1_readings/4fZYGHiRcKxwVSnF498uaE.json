@@ -1,0 +1,259 @@
+{
+  "schema_version": 1,
+  "track_id": "4fZYGHiRcKxwVSnF498uaE",
+  "cohort": "random",
+  "display_only": true,
+  "registered_scores_unchanged": true,
+  "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+  "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "prompt_sha256": "ffdf21672c16d12394441664976928ac03a51b35d721d3925cca9be8adc58e3d",
+  "registered_checkpoint_sha256": "d3a9740d36655d1865d654f9c30b229343b5e31768a2ba3f0cd467556d930b40",
+  "reading_label": "L1's interpretation of the lyrics",
+  "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+  "reading_type": "model_interpretation",
+  "decoding": {
+    "do_sample": false,
+    "num_beams": 1,
+    "max_new_tokens": 128,
+    "torch_dtype": "float16",
+    "seed": 20261115
+  },
+  "overlap_rule": "NFKC/casefold 4-word ngrams; additionally 4 consecutive ja/ko/zh script characters with spacing/punctuation removed; block if either overlaps.",
+  "sections": [
+    {
+      "section_id": "lyric-0000",
+      "set": "secondary",
+      "language": "ko",
+      "text_sha256": "f28163cdc98bc05b51d1b2cd4352eec3f181607e9dfe0be0dfab9879545d6aeb",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is playful and energetic, suggesting a lighthearted, rhythmic engagement with a broader audience. The themes revolve around movement, transition, and a sense of release or closure within a dynamic, possibly performative environment.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "5974453ab52c5afd70fa393fe3fa94c5d2dda77ec5754ff5a305c0bb63f5b31b"
+    },
+    {
+      "section_id": "lyric-0001",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "840293b983b2abbe5f947a41bf55daf8a56afd643d9a1b4999690422038f77fe",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is energetic and playful, emphasizing movement and rhythmic engagement. The themes revolve around collective participation, physical expression, and the joy derived from synchronized, lively activity.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "4df1bce153dcca53c6cb8fa1e9b712b8e6b11a20fa6f0cbb5acd71c1dd5e3037"
+    },
+    {
+      "section_id": "lyric-0002",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "bb7619ba445143a4fb8307a5a84512a3b43be94c8bbc6d30aea3019ffa1b45c2",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is energetic and urgent, conveying a sense of immediate action and playful intensity. The themes revolve around dynamism, sensory stimulation, and the anticipation of movement or change.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "3d2a863f3b4e54734edd37030758ddb7d0fecd1cd2acc9ba6bf7487c368033d3"
+    },
+    {
+      "section_id": "lyric-0003",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "b7d0ff6296cd0e144b1b80a42ffd6c3d23a51a26827b1d2d26e3c2508f7a3e17",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is energetic and defiant, conveying a sense of rebellion and unapologetic freedom. The themes revolve around breaking constraints, embracing spontaneity, and asserting individuality through collective action.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "69d6292aab9969043ea4b267a40d7d5e588974b10baca705b4d7908a387a866e"
+    },
+    {
+      "section_id": "lyric-0004",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "23434cbb0ea14a51dcf771da0ba75531cb213e04fdb0e85898c811323671a18c",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is upbeat and energetic, emphasizing rhythm and joy in movement. The theme centers on communal participation and the infectious nature of music as a unifying force.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "fa3fbd27a9901bde30f66c0c46953bd84ea2f98d107091fe349fb8bb922a9393"
+    },
+    {
+      "section_id": "lyric-0005",
+      "set": "secondary",
+      "language": "ko",
+      "text_sha256": "b734e76955cf1970ee1737e00314b90c187af17d5f0b09dd5682e29d20101a25",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is energetic and defiant, conveying a sense of rebellion and unapologetic freedom. The themes explore chaos, individuality, and the thrill of breaking norms in a vibrant, immersive environment.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "2f18b1605fbd6392d1eb87092773b04f8743326b6a78ce79ad4f37391f0dd453"
+    },
+    {
+      "section_id": "lyric-0006",
+      "set": "secondary",
+      "language": "ko",
+      "text_sha256": "3bde5675cac6d56638327b1ced28c8211eb9c150e50a721304de5459740e0b7a",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of frustration and urgency, emphasizing a demand for genuine engagement and authenticity in an otherwise forced or superficial interaction. The central theme revolves around the tension between performative effort and true, meaningful participation.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "54f02aca5e9b4b66d644571bbd956037b24abfe8ab780100dd7ed8f79e0986d4"
+    },
+    {
+      "section_id": "lyric-0007",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "b8847b4d2f9a23e84a747d15dafafb8241c1a0b2a005669dc374800ad1b94c16",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is energetic and defiant, embracing rebellion and unapologetic expression. The theme centers on breaking free from constraints and embracing spontaneity and individuality.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "d729fa48e01a7945ba97e3b6d4a3e2abac2cbecab5cd23c56d5cb59afeced849"
+    },
+    {
+      "section_id": "lyric-0008",
+      "set": "secondary",
+      "language": "ko",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    },
+    {
+      "section_id": "lyric-0009",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "e8f7ce251b357aa5bb4de36007405cc1d83888825cb04d1f629979af8817c350",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is energetic and defiant, emphasizing liberation and rebellion against restraint. The themes revolve around breaking free from constraints and embracing uninhibited, spontaneous action.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "b9b1aacbae81aff5f0dc51db877fea3184d7c69526959be98bbeaa26f4839501"
+    },
+    {
+      "section_id": "lyric-0010",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "5a1f410ad5b7a91f9530802763f4c80fdf8b1ddf41defd937d3d3ac59a35e521",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is energetic and forward-moving, conveying a sense of relentless progress and unyielding determination. The central theme revolves around ascension and continuous growth, suggesting a commitment to exceeding limits and achieving lasting elevation.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "cc8acb0bb2a3637a1a61294318ce3ced09fe7cf0fd5c8e0d5189f1c8d00ac3d9"
+    },
+    {
+      "section_id": "span-0000",
+      "set": "secondary",
+      "language": "ko",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    },
+    {
+      "section_id": "span-0002",
+      "set": "secondary",
+      "language": "ko",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    },
+    {
+      "section_id": "span-0005",
+      "set": "secondary",
+      "language": "ko",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    },
+    {
+      "section_id": "span-0007",
+      "set": "secondary",
+      "language": "ko",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    }
+  ]
+}

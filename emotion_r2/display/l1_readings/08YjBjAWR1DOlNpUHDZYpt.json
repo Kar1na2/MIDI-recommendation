@@ -1,0 +1,186 @@
+{
+  "schema_version": 1,
+  "track_id": "08YjBjAWR1DOlNpUHDZYpt",
+  "cohort": "random",
+  "display_only": true,
+  "registered_scores_unchanged": true,
+  "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+  "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "prompt_sha256": "ffdf21672c16d12394441664976928ac03a51b35d721d3925cca9be8adc58e3d",
+  "registered_checkpoint_sha256": "e29bbdb8289d6304f75ab0298c72f8cd92714effb8c43ae8522d68698c5c4ffc",
+  "reading_label": "L1's interpretation of the lyrics",
+  "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+  "reading_type": "model_interpretation",
+  "decoding": {
+    "do_sample": false,
+    "num_beams": 1,
+    "max_new_tokens": 128,
+    "torch_dtype": "float16",
+    "seed": 20261115
+  },
+  "overlap_rule": "NFKC/casefold 4-word ngrams; additionally 4 consecutive ja/ko/zh script characters with spacing/punctuation removed; block if either overlaps.",
+  "sections": [
+    {
+      "section_id": "lyric-0000",
+      "set": "secondary",
+      "language": "uncertain",
+      "text_sha256": "d834c61b019c328e33664466b938c170b2b35605c38756bbffcff9c53dd6ff13",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests a detached, almost mechanical repetition, evoking a sense of routine or artificiality. The themes imply isolation, cyclical patterns, and emotional distance.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "967f42463c1543679dcf719478e8ab6cb93705847314bf8e4270490906527b70"
+    },
+    {
+      "section_id": "lyric-0001",
+      "set": "secondary",
+      "language": "uncertain",
+      "text_sha256": "6d015309708668e053acfa9c58fc5b9f6b6151e80cf5a2f1472685970573c93a",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of disorientation and internal uncertainty, marked by a gradual loss of stability and awareness. The themes explore movement without direction, emotional detachment, and the struggle to maintain balance in an ever-shifting state.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "4f60b0cd52a02d1ed8aadd3fcddbe50e6a550702b0249632dc2d65e02f84b3a7"
+    },
+    {
+      "section_id": "lyric-0002",
+      "set": "secondary",
+      "language": "uncertain",
+      "text_sha256": "5c2626db369d22ef67a5a13a8f7eda2fe843bdac0ab55e9cb8e9c2c5ebffd153",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of emotional struggle and longing, balanced with a yearning for liberation and inner peace. The themes explore personal dependency, the weight of memory, and the desire to break free from emotional constraints to achieve a more balanced state of being.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "9d4aa2b88d40f8bcf37ba14c9afa41bc9cda5fffa872976973411ccd9ef2153a"
+    },
+    {
+      "section_id": "lyric-0003",
+      "set": "secondary",
+      "language": "uncertain",
+      "text_sha256": "d834c61b019c328e33664466b938c170b2b35605c38756bbffcff9c53dd6ff13",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests a detached, almost mechanical repetition, evoking a sense of routine or artificiality. The themes imply isolation, cyclical patterns, and emotional distance.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "967f42463c1543679dcf719478e8ab6cb93705847314bf8e4270490906527b70"
+    },
+    {
+      "section_id": "lyric-0004",
+      "set": "secondary",
+      "language": "uncertain",
+      "text_sha256": "d488215eff0edcd08b92935afeb885ec94d32be6d5ac0233a6382919453e1f3f",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of frustration and emotional rejection, highlighting a struggle between effort and disconnection. The central theme explores the pain of being misunderstood or pushed aside despite attempts to communicate.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "23a4f912dcfc0e646f8325d121e6ca35f085d0031f61fe9562cf27ef1a08b574"
+    },
+    {
+      "section_id": "lyric-0005",
+      "set": "secondary",
+      "language": "uncertain",
+      "text_sha256": "5c2626db369d22ef67a5a13a8f7eda2fe843bdac0ab55e9cb8e9c2c5ebffd153",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of emotional struggle and longing, balanced with a yearning for liberation and inner peace. The themes explore personal dependency, the weight of memory, and the desire to break free from emotional constraints to achieve a more balanced state of being.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "9d4aa2b88d40f8bcf37ba14c9afa41bc9cda5fffa872976973411ccd9ef2153a"
+    },
+    {
+      "section_id": "lyric-0006",
+      "set": "secondary",
+      "language": "uncertain",
+      "text_sha256": "d834c61b019c328e33664466b938c170b2b35605c38756bbffcff9c53dd6ff13",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests a detached, almost mechanical repetition, evoking a sense of routine or artificiality. The themes imply isolation, cyclical patterns, and emotional distance.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "967f42463c1543679dcf719478e8ab6cb93705847314bf8e4270490906527b70"
+    },
+    {
+      "section_id": "lyric-0007",
+      "set": "secondary",
+      "language": "uncertain",
+      "text_sha256": "d834c61b019c328e33664466b938c170b2b35605c38756bbffcff9c53dd6ff13",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests a detached, almost mechanical repetition, evoking a sense of routine or artificiality. The themes imply isolation, cyclical patterns, and emotional distance.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "967f42463c1543679dcf719478e8ab6cb93705847314bf8e4270490906527b70"
+    },
+    {
+      "section_id": "span-0001",
+      "set": "secondary",
+      "language": "uncertain",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    },
+    {
+      "section_id": "span-0003",
+      "set": "secondary",
+      "language": "uncertain",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    }
+  ]
+}

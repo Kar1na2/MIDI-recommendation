@@ -1,0 +1,275 @@
+{
+  "schema_version": 1,
+  "track_id": "6lBuB7sJdiFC8GRYlFIBm9",
+  "cohort": "random",
+  "display_only": true,
+  "registered_scores_unchanged": true,
+  "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+  "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "prompt_sha256": "ffdf21672c16d12394441664976928ac03a51b35d721d3925cca9be8adc58e3d",
+  "registered_checkpoint_sha256": "9fdddb953fb8969429a6611f18a74b3ce6f328fd2cc0d8748562a4cfec075f82",
+  "reading_label": "L1's interpretation of the lyrics",
+  "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+  "reading_type": "model_interpretation",
+  "decoding": {
+    "do_sample": false,
+    "num_beams": 1,
+    "max_new_tokens": 128,
+    "torch_dtype": "float16",
+    "seed": 20261115
+  },
+  "overlap_rule": "NFKC/casefold 4-word ngrams; additionally 4 consecutive ja/ko/zh script characters with spacing/punctuation removed; block if either overlaps.",
+  "sections": [
+    {
+      "section_id": "lyric-0000",
+      "set": "primary",
+      "language": "zh",
+      "text_sha256": "c94cb44dee2f7cfd0b31f7a3a2013cb47b46bea658d6106f384e8c2464b3f956",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of quiet longing and yearning for intimacy amidst a bustling, overwhelming world. The theme explores the desire to escape sensory noise in order to reconnect with a personal, serene moment of recognition.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "8f940e6e929fbd3e04b6bc931f4d367a1cb0af4901886f21f2ba5fc7468eb9e0"
+    },
+    {
+      "section_id": "lyric-0001",
+      "set": "primary",
+      "language": "zh",
+      "text_sha256": "f12af6b89bc57fdb3b40054c74528516ee1f235420858b101fea2a6790fe6abf",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of fragile vulnerability and yearning, juxtaposed with an overwhelming force that resists return. The themes explore the tension between desire for the past and the inescapable pull of present reality.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "6121f61d08c36d30d90ccfcb0a61c610ab0e9fba2ba500ccd0c9bc4e64c5303a"
+    },
+    {
+      "section_id": "lyric-0002",
+      "set": "primary",
+      "language": "zh",
+      "text_sha256": "4d174f0cfbcb9feff9082a403102fb530e0689a5cb9be443f386a044e0ef1192",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone evokes a sense of lingering nostalgia and internal uncertainty, blending personal reflection with a struggle against the weight of the past. The central theme explores identity and selfhood in the face of time, memory, and the overwhelming influence of history.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "98d036f32caae3bac5629e055bbe6712f04703f10ee25c1820238aca2b58eabf"
+    },
+    {
+      "section_id": "lyric-0003",
+      "set": "primary",
+      "language": "zh",
+      "text_sha256": "fb92076f28b23e2b1058beabb5e9fb2ed3a4f2966ea90c6156ce70d56da1d8b8",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of quiet loss and sudden displacement, as if moments of presence are abruptly snatched away. The theme explores the fragility of fleeting experiences and the involuntary nature of being drawn from one moment to another.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "eab873e6c89228dd4aacfba6c2c632bd2b0f863f4b34c6c7f1e4caa25131b322"
+    },
+    {
+      "section_id": "lyric-0004",
+      "set": "primary",
+      "language": "zh",
+      "text_sha256": "ef1063a9af87aa81bcf4a121e13e0fbf8550f2a9d66f8080d065aacee935225f",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of internal struggle and emotional detachment, reflecting a state of mental confusion and vulnerability. The themes explore the fragility of thought, the difficulty of maintaining stability in a disoriented mind, and the search for grounding in an unstable, dreamlike existence.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "465170689b3fe8198cc3e437670608a64804888d10a2242f2ebaccfac3d8bc5a"
+    },
+    {
+      "section_id": "lyric-0005",
+      "set": "primary",
+      "language": "zh",
+      "text_sha256": "6253a2a3bb423c0372e876d103af6929e10824e0d18d275aa9aadc0c4516b316",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of weary resignation and quiet introspection, emphasizing the futility of persistent overthinking. A central theme explores the idea that much of human distress stems from internalized anxieties rather than external realities.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "845a7ac7ff726c0910906f7beae42b72a1735468efb82589083db63d5d927e40"
+    },
+    {
+      "section_id": "lyric-0006",
+      "set": "primary",
+      "language": "zh",
+      "text_sha256": "aa77a5eff0af5d44d3d28cc8eeb435329b75f17e6a8984f84742daf13467f5b6",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests a sense of repetition and longing, emphasizing the passage of time and the desire to reclaim lost moments. The themes revolve around renewal, emotional vulnerability, and the struggle to maintain connection amid fleeting circumstances.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "bbc0a5e516286435e02509ec680ec9273f26692a720e0d293e7923b45d3fb0f2"
+    },
+    {
+      "section_id": "lyric-0007",
+      "set": "primary",
+      "language": "zh",
+      "text_sha256": "bb43e3cf4f971b923f79004708912f2638f776e96d0847a43324992e0214b1ee",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone evokes a quiet, reflective contemplation on existence and the fragility of identity. The themes explore the nature of being, the uncertainty of life's purpose, and the tension between impermanence and the search for meaning.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "6ae207510975c393aae9fed29bdcd89f403193cb4dc9cc525020d50170e3d087"
+    },
+    {
+      "section_id": "lyric-0008",
+      "set": "primary",
+      "language": "zh",
+      "text_sha256": "17525e1bc23796c452c00938e0b7e67ae40a7a0fe1ec5f6257f3d6b1a944f570",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of inevitable observation and temporal inevitability, suggesting a world where every action is caught in an unyielding, omniscient flow of time. The central theme explores the inescapable nature of existence and the quiet, pervasive awareness that defines all moments.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "ef2012f5a89e494be964ece7374a8ab85a74096c2105f281efc762d2a4ca5509"
+    },
+    {
+      "section_id": "lyric-0009",
+      "set": "primary",
+      "language": "zh",
+      "text_sha256": "89a0006704097b76660163fa4585b2daf213ea9ad281e2bdd88dbaa25f4b3a8e",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of confusion and disorientation amid a rapidly changing, overwhelming environment. The themes explore the struggle to keep pace with external chaos and the uncertainty of finding clarity or direction in a turbulent present.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "5f11c06a352af4e5fb9617c311fda9b3438aea15b9a57cece069f14b50237dd3"
+    },
+    {
+      "section_id": "lyric-0010",
+      "set": "primary",
+      "language": "zh",
+      "text_sha256": "ea6e618a718acd770df6958741e80e85781c7fd51439ee3c4feb22d3c3269a7b",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of internal struggle and disorientation, reflecting a state of mental and emotional instability. The themes explore the difficulty of maintaining clarity and stability when immersed in abstract, ungrounded thoughts.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "409d757787d6f362d6fc036b88148f0409498cb9daf33d0c3dc4f85014737138"
+    },
+    {
+      "section_id": "lyric-0011",
+      "set": "primary",
+      "language": "zh",
+      "text_sha256": "d03b58fbddeaced3aef881cc5a368bac30af0c05bb312b91ff5d3d58ebfafcba",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of weary resignation and quiet introspection, emphasizing the futility of persistent overthinking. A central theme explores the idea that much of human suffering stems from internal conflict rather than external realities.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "4782cd9f77a78dd0afa6748a6d297a864494232884dc51a1ace9a581da3ed82d"
+    },
+    {
+      "section_id": "lyric-0012",
+      "set": "primary",
+      "language": "zh",
+      "text_sha256": "d6bd2c535067809e9d06bc4e212cde817abdeb2e03e44d24a6bab705f6f1bcb5",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of urgency and frustration, urging cessation of persistent internal contemplation. The theme centers on the burden of overthinking and the desire to clear mental clutter.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "f13a5dbdf15b543547f287c5f1ce3b5bef3c3f09b66468ff4ceec32762829ec1"
+    },
+    {
+      "section_id": "lyric-0013",
+      "set": "primary",
+      "language": "zh",
+      "text_sha256": "dc75126cfda4a995790ebe5f836f0e1f9e6299d5ddee461e70d3919d37bea0bd",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of urgency and repetition, emphasizing the need to cease internal contemplation. The themes revolve around mental clarity, the burden of overthinking, and the desire to break free from persistent thoughts.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "c120e76e4862de07821a93d881c5d64c5fc4557897fafa48414f3efd5aef4fa3"
+    },
+    {
+      "section_id": "span-0000",
+      "set": "secondary",
+      "language": "zh",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    }
+  ]
+}

@@ -1,0 +1,122 @@
+{
+  "schema_version": 1,
+  "track_id": "664FIU1PGtfB6cxGQ1vAVP",
+  "cohort": "random",
+  "display_only": true,
+  "registered_scores_unchanged": true,
+  "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+  "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "prompt_sha256": "ffdf21672c16d12394441664976928ac03a51b35d721d3925cca9be8adc58e3d",
+  "registered_checkpoint_sha256": "c5337c09c3f80a52fd738ebac37b0c602b210861bf8e36c68fcd50c36c1bd7ba",
+  "reading_label": "L1's interpretation of the lyrics",
+  "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+  "reading_type": "model_interpretation",
+  "decoding": {
+    "do_sample": false,
+    "num_beams": 1,
+    "max_new_tokens": 128,
+    "torch_dtype": "float16",
+    "seed": 20261115
+  },
+  "overlap_rule": "NFKC/casefold 4-word ngrams; additionally 4 consecutive ja/ko/zh script characters with spacing/punctuation removed; block if either overlaps.",
+  "sections": [
+    {
+      "section_id": "lyric-0000",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "d517f71ec9cc9033ccca1a12538e5fb1d92993b281edf41c55f47c112f96911b",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a yearning and emotional vulnerability, marked by persistent longing and uncertainty. The themes explore unrequited desire, the difficulty of initiating connection, and the pain of emotional distance.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "7538fdc4ccbd9fda000dccdb92ad66d39754cb939b73dcbe019fb501268bf8de"
+    },
+    {
+      "section_id": "lyric-0001",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "aeab110b0f1a1f42ce3cdef1ca076da83ecbb0164c94229ffe2c90004b83c702",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a desperate yet hopeful yearning, blending vulnerability with an unyielding belief in love as a force capable of overcoming immense suffering and danger. The central theme explores love as both a source of strength and a means of enduring through profound trials.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "209a6b9fa989e582635e908acb6e4b3ee0a0b6394de360beba00664a0401b351"
+    },
+    {
+      "section_id": "lyric-0002",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "3d0f930621d77d210cc45c9062bdc44f47cbd1057bcd8b6e32e5f2052da42563",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a melancholic yearning mixed with unspoken emotional conflict, while the central theme explores the dissonance between affection and inner sorrow.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "e4da2d1d32b1851cf68f00f34df682c9c764ab259d250b08bcc5efff3a9a7fd9"
+    },
+    {
+      "section_id": "lyric-0003",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "aeab110b0f1a1f42ce3cdef1ca076da83ecbb0164c94229ffe2c90004b83c702",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a desperate yet hopeful yearning, blending vulnerability with an unyielding belief in love as a force capable of overcoming immense suffering and danger. The central theme explores love as both a source of strength and a means of enduring through profound trials.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "209a6b9fa989e582635e908acb6e4b3ee0a0b6394de360beba00664a0401b351"
+    },
+    {
+      "section_id": "lyric-0004",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "3d0f930621d77d210cc45c9062bdc44f47cbd1057bcd8b6e32e5f2052da42563",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a melancholic yearning mixed with unspoken emotional conflict, while the central theme explores the dissonance between affection and inner sorrow.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "e4da2d1d32b1851cf68f00f34df682c9c764ab259d250b08bcc5efff3a9a7fd9"
+    },
+    {
+      "section_id": "span-0000",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    }
+  ]
+}

@@ -1,0 +1,190 @@
+{
+  "schema_version": 1,
+  "track_id": "2Ryp5LkAWyJwRqoFd8N7Kk",
+  "cohort": "random",
+  "display_only": true,
+  "registered_scores_unchanged": true,
+  "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+  "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "prompt_sha256": "ffdf21672c16d12394441664976928ac03a51b35d721d3925cca9be8adc58e3d",
+  "registered_checkpoint_sha256": "33349aecea5786047b1d584bfe8e8fd59e9dd0dfb9cb2fe5d4bd3c916eeb94ed",
+  "reading_label": "L1's interpretation of the lyrics",
+  "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+  "reading_type": "model_interpretation",
+  "decoding": {
+    "do_sample": false,
+    "num_beams": 1,
+    "max_new_tokens": 128,
+    "torch_dtype": "float16",
+    "seed": 20261115
+  },
+  "overlap_rule": "NFKC/casefold 4-word ngrams; additionally 4 consecutive ja/ko/zh script characters with spacing/punctuation removed; block if either overlaps.",
+  "sections": [
+    {
+      "section_id": "lyric-0000",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "46271b3b094cd93e38fb658d62f4a02b67b3db93a2e366cbe2cee07f3daf6fe9",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a restless, internal turmoil marked by contradictory thoughts of acceptance and disorientation. The themes explore the dissonance between emotional reassurance and underlying anxiety, suggesting a struggle to find stability in a chaotic mental state.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "2ef01511bb32abab811f5e8eefa3d266d9b97e8ecaec81b9f51245927be3ce9e"
+    },
+    {
+      "section_id": "lyric-0001",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "10b5516817e9314808c391fb633e80be3ada3a186faefccd9dad2fe833a07f89",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys restlessness and a yearning for escape from routine and emotional stagnation. The themes explore dissatisfaction with conventional life and a desire to transcend it through movement and change.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "72f016962b8636c531b52662e2fedba5a5b92cca515504c797b37f4bd7a1a732"
+    },
+    {
+      "section_id": "lyric-0002",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "e2eef7b00acf78f3d5f143cd1622b55518348b63fe493fd187dc95018c9cfb1d",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of liberation and existential urgency, blending euphoria with a growing awareness of time slipping away. The themes explore the tension between transcendent experience and the inevitability of temporal limitation.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "914f7a1d55b859c1f7d0bd9090d3db13c145c5b46a1b2c3e84b48225e5dbeb91"
+    },
+    {
+      "section_id": "lyric-0003",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "1eea753b18eac2dc876a409416ffd201fa5c3547093991a1f48eaa05bb4f64ea",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of urgency and exhilaration, driven by a confident, forward-moving energy. The themes explore liberation, readiness for action, and a belief in boundless possibility with no constraints.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "e99e71a909f87fd2767ef1529e933b26a12a04b3dee026aba82342a3a1fa2fde"
+    },
+    {
+      "section_id": "lyric-0004",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "46271b3b094cd93e38fb658d62f4a02b67b3db93a2e366cbe2cee07f3daf6fe9",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a restless, internal turmoil marked by contradictory thoughts of acceptance and disorientation. The themes explore the dissonance between emotional reassurance and underlying anxiety, suggesting a struggle to find stability in a chaotic mental state.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "2ef01511bb32abab811f5e8eefa3d266d9b97e8ecaec81b9f51245927be3ce9e"
+    },
+    {
+      "section_id": "lyric-0005",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "a535f87d6450e54e6163101bd340adbf16cebdc485324207dacfd7241f39688c",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of urgency and exhilaration, driven by a relentless forward motion and a desire to escape routine. The themes explore vitality, purpose, and the pursuit of an intense, immersive experience.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "5e5fcd995b6be500e8ffce4b14ff94c2f0a43f8b788046b2e38de1c48bc71473"
+    },
+    {
+      "section_id": "lyric-0006",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "e2eef7b00acf78f3d5f143cd1622b55518348b63fe493fd187dc95018c9cfb1d",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of liberation and existential urgency, blending euphoria with a growing awareness of time slipping away. The themes explore the tension between transcendent experience and the inevitability of temporal limitation.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "914f7a1d55b859c1f7d0bd9090d3db13c145c5b46a1b2c3e84b48225e5dbeb91"
+    },
+    {
+      "section_id": "lyric-0007",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "1eea753b18eac2dc876a409416ffd201fa5c3547093991a1f48eaa05bb4f64ea",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of urgency and exhilaration, driven by a confident, forward-moving energy. The themes explore liberation, readiness for action, and a belief in boundless possibility with no constraints.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "e99e71a909f87fd2767ef1529e933b26a12a04b3dee026aba82342a3a1fa2fde"
+    },
+    {
+      "section_id": "lyric-0008",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "46271b3b094cd93e38fb658d62f4a02b67b3db93a2e366cbe2cee07f3daf6fe9",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a restless, internal turmoil marked by contradictory thoughts of acceptance and disorientation. The themes explore the dissonance between emotional reassurance and underlying anxiety, suggesting a struggle to find stability in a chaotic mental state.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "2ef01511bb32abab811f5e8eefa3d266d9b97e8ecaec81b9f51245927be3ce9e"
+    },
+    {
+      "section_id": "span-0000",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    }
+  ]
+}

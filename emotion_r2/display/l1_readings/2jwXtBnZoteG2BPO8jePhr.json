@@ -1,0 +1,173 @@
+{
+  "schema_version": 1,
+  "track_id": "2jwXtBnZoteG2BPO8jePhr",
+  "cohort": "random",
+  "display_only": true,
+  "registered_scores_unchanged": true,
+  "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+  "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "prompt_sha256": "ffdf21672c16d12394441664976928ac03a51b35d721d3925cca9be8adc58e3d",
+  "registered_checkpoint_sha256": "9e4f6c64cd3edcad8edd64bdd559fb42129273ac0607b7a3332082f4ef8351d0",
+  "reading_label": "L1's interpretation of the lyrics",
+  "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+  "reading_type": "model_interpretation",
+  "decoding": {
+    "do_sample": false,
+    "num_beams": 1,
+    "max_new_tokens": 128,
+    "torch_dtype": "float16",
+    "seed": 20261115
+  },
+  "overlap_rule": "NFKC/casefold 4-word ngrams; additionally 4 consecutive ja/ko/zh script characters with spacing/punctuation removed; block if either overlaps.",
+  "sections": [
+    {
+      "section_id": "lyric-0000",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "92b4513788dd4e3b819be0404cf98a82f240758f08547ca9b7c2f6ba1d805251",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of urgency and dominance, suggesting a relentless drive to prevail at the expense of others. The themes revolve around inevitability, personal triumph, and the potential for negative consequences resulting from that triumph.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "fba5c9d930b2481856f334c212c545611fa7f8432fbce7e75835e66e98604ea3"
+    },
+    {
+      "section_id": "lyric-0001",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "92dc778efcb8114ec780119e32b55ec763e1be5ca8b4e0f48479c7ab0831e929",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is resolute and defiant, emphasizing unyielding strength and inevitability. The central theme revolves around invincibility in the face of opposition and the certainty of ultimate triumph.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "43cf99ac92dfbe0ebca05120b040da3e31f5cb12c08ee580302b80a561877089"
+    },
+    {
+      "section_id": "lyric-0002",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "ecd0d7a1cb8ba26ef39a9ead359408e9b3eb8e52adee7a03c47c729d61ae463c",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests resistance and defiance, conveying a sense of determination to persist despite opposition. The theme centers on the struggle between control and freedom, highlighting an internal or external conflict over direction and autonomy.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "01de48d7128b12c39cf76b1c42d7cf5e4c163b13c59716294a6a9586d2a8b624"
+    },
+    {
+      "section_id": "lyric-0003",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "63613e24ad1ead9bc2b77b15ca79fd09874e283e0d1121df736c29aa61f8a022",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of unyielding confidence and defiance, emphasizing a powerful, self-sustaining force that resists external attempts to halt or destroy it. The central theme explores the idea of invincibility and the futility of opposition in the face of an internal, unshakable resolve.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "a1938f6dccaed7f3e74e2c904ad76c0fffa0bab3667fb2ba810b94401944bf91"
+    },
+    {
+      "section_id": "lyric-0004",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "0aa5f560fad47ca4958b57302c3e36965a6c17f04a32618d2eb2613cf6a4df60",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of assertive dominance and unpredictability, suggesting a challenge to perceived authority. The themes revolve around strength, resistance to vulnerability, and the potential for sudden, overwhelming consequences.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "3dcf6f423d91f8b8a61ad6bc78fe666dae4f4b0f627257b4bfd698a3bed5100f"
+    },
+    {
+      "section_id": "lyric-0005",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "f0ed6f4c8a1c8a72c3045097b5a44fee2ff6469d972021229fdaf71a6ee42fc5",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is resolute and defiant, emphasizing invincibility in the face of opposition. The central theme revolves around enduring strength and the inevitability of triumph despite overwhelming challenges.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "ca2ca0ae6bb8175e7750f9a4085e1526fe86d96e7e87323bb954290e95949c9b"
+    },
+    {
+      "section_id": "lyric-0006",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "d1be4dbccc27fa7b6dd99ba4491ed438696157468a5546e8702bc24c481a9a52",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of unyielding resilience and defiance, emphasizing a powerful, self-sustaining force that resists external attempts to halt or destroy it. The central theme explores the inevitability of persistence in the face of opposition, suggesting that true strength lies in maintaining inner stability despite relentless pressure.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "77ac7e91d6f1742e98d0d5e7de1d26f935c41e66af010daea87e978bdad33ed2"
+    },
+    {
+      "section_id": "lyric-0007",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "ecd0d7a1cb8ba26ef39a9ead359408e9b3eb8e52adee7a03c47c729d61ae463c",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests resistance and defiance, conveying a sense of determination to persist despite opposition. The theme centers on the struggle between control and freedom, highlighting an internal or external conflict over direction and autonomy.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "01de48d7128b12c39cf76b1c42d7cf5e4c163b13c59716294a6a9586d2a8b624"
+    },
+    {
+      "section_id": "span-0000",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    }
+  ]
+}

@@ -1,0 +1,190 @@
+{
+  "schema_version": 1,
+  "track_id": "6GUiIbJ834FcHewby3PwV0",
+  "cohort": "random",
+  "display_only": true,
+  "registered_scores_unchanged": true,
+  "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+  "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "prompt_sha256": "ffdf21672c16d12394441664976928ac03a51b35d721d3925cca9be8adc58e3d",
+  "registered_checkpoint_sha256": "b24168dfa390a0b635dd29ea36bd2fb0328b6575952f680368ff977a7ad4390d",
+  "reading_label": "L1's interpretation of the lyrics",
+  "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+  "reading_type": "model_interpretation",
+  "decoding": {
+    "do_sample": false,
+    "num_beams": 1,
+    "max_new_tokens": 128,
+    "torch_dtype": "float16",
+    "seed": 20261115
+  },
+  "overlap_rule": "NFKC/casefold 4-word ngrams; additionally 4 consecutive ja/ko/zh script characters with spacing/punctuation removed; block if either overlaps.",
+  "sections": [
+    {
+      "section_id": "lyric-0000",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "4faaf01fedb11eb706c5ec86f9e6b43b25cbeb3182ff220fbd4577bfd5a0b632",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of intense, almost overwhelming sensuality intertwined with a feeling of injustice and hidden truths. The themes explore the complexity of desire, the ambiguity of perception, and the tension between surface appearances and deeper, unspoken realities.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "e57b708261cab208e9f3d28f507cd553266d0756039ab4ed3085c5c2a457a3e8"
+    },
+    {
+      "section_id": "lyric-0001",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "d9d6e3ba2ccf7e0b75860264178f9d39b1a0a1ca5196bf093cea12af8b49e942",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests a confident, assertive presence that leans into dominance and control, while the themes explore the dynamics of influence, assertion, and the potential for intimidation or transformation through authority.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "c1d30849900f5ccf55af0f2a96b06a27b0feed4a5a05718b72bb3741592b4af6"
+    },
+    {
+      "section_id": "lyric-0002",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "a354932796861bf2d1ab9af50e785743da3da0b348d60b4fb95e385640dcb732",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is detached and possessive, presenting a surreal and consuming behavior with a sense of inevitability. The themes explore identity, control, and the blurring of boundaries between desire, survival, and self.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "58b0dedf0b05f3889a521846142fcaa0f461cbc8530ed8eeb8cd99101fc0fabd"
+    },
+    {
+      "section_id": "lyric-0003",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "715d5550a17c0a1a0007af0822e0702cd60cd85ef33c5af8b3e6a8a18fc3fbb3",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests a blend of vulnerability and defiance, presenting illness as both a burden and a source of altered perception. The themes explore the contrast between ignorance and knowledge, implying that truth or insight may be hidden from others but accessible to the speaker.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "043dbd0ab309eecd43c98cdfd7ee9610ed41b099edab2794e6acb2e7093fe2d7"
+    },
+    {
+      "section_id": "lyric-0004",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "d9d6e3ba2ccf7e0b75860264178f9d39b1a0a1ca5196bf093cea12af8b49e942",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests a confident, assertive presence that leans into dominance and control, while the themes explore the dynamics of influence, assertion, and the potential for intimidation or transformation through authority.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "c1d30849900f5ccf55af0f2a96b06a27b0feed4a5a05718b72bb3741592b4af6"
+    },
+    {
+      "section_id": "lyric-0005",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "a354932796861bf2d1ab9af50e785743da3da0b348d60b4fb95e385640dcb732",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is detached and possessive, presenting a surreal and consuming behavior with a sense of inevitability. The themes explore identity, control, and the blurring of boundaries between desire, survival, and self.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "58b0dedf0b05f3889a521846142fcaa0f461cbc8530ed8eeb8cd99101fc0fabd"
+    },
+    {
+      "section_id": "lyric-0006",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "92b4e883c6d55fe5a9f71e6fe117d7b8d033bf6297b0b9d7116484c05f3660b2",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is repetitive and unsettling, suggesting a disturbing obsession or consumption motif. The theme centers on a disturbing cycle of self-absorption and potentially violent or dehumanizing behavior.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "523912706feeb484d2da558c0166329388a72f5e128f198c48b96f1cf87596a5"
+    },
+    {
+      "section_id": "lyric-0007",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "4faaf01fedb11eb706c5ec86f9e6b43b25cbeb3182ff220fbd4577bfd5a0b632",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of intense, almost overwhelming sensuality intertwined with a feeling of injustice and hidden truths. The themes explore the complexity of desire, the ambiguity of perception, and the tension between surface appearances and deeper, unspoken realities.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "e57b708261cab208e9f3d28f507cd553266d0756039ab4ed3085c5c2a457a3e8"
+    },
+    {
+      "section_id": "lyric-0008",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "a354932796861bf2d1ab9af50e785743da3da0b348d60b4fb95e385640dcb732",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is detached and possessive, presenting a surreal and consuming behavior with a sense of inevitability. The themes explore identity, control, and the blurring of boundaries between desire, survival, and self.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "58b0dedf0b05f3889a521846142fcaa0f461cbc8530ed8eeb8cd99101fc0fabd"
+    },
+    {
+      "section_id": "span-0000",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    }
+  ]
+}

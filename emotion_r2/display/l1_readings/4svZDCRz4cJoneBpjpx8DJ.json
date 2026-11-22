@@ -1,0 +1,280 @@
+{
+  "schema_version": 1,
+  "track_id": "4svZDCRz4cJoneBpjpx8DJ",
+  "cohort": "random",
+  "display_only": true,
+  "registered_scores_unchanged": true,
+  "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+  "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "prompt_sha256": "ffdf21672c16d12394441664976928ac03a51b35d721d3925cca9be8adc58e3d",
+  "registered_checkpoint_sha256": "f55fe6c66f389efe48eff8714e6d9aa16600d099953d30d4336ba109ee949db3",
+  "reading_label": "L1's interpretation of the lyrics",
+  "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+  "reading_type": "model_interpretation",
+  "decoding": {
+    "do_sample": false,
+    "num_beams": 1,
+    "max_new_tokens": 128,
+    "torch_dtype": "float16",
+    "seed": 20261115
+  },
+  "overlap_rule": "NFKC/casefold 4-word ngrams; additionally 4 consecutive ja/ko/zh script characters with spacing/punctuation removed; block if either overlaps.",
+  "sections": [
+    {
+      "section_id": "lyric-0000",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "174869df64e9572f8b3dd6b45fbd618c5ceb545f44f96d4b8dc40133d0f64600",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests a calculated, almost performative engagement with manipulation, portraying a dynamic where deception is exchanged with a sense of balance and control. The theme centers on the paradox of love and exploitation, where emotional intimacy is maintained through mutual deceit and a fragile equilibrium of power.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "b4a2bcd1b33b7723c8243ee9db141875da7cbc752280bc4ce93e02fba5ed483f"
+    },
+    {
+      "section_id": "lyric-0001",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "8b4290872b433a06cfca7c57fe94eeaf22e7ee2b8fbefd3381672c422402c34c",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is defiant and assertive, conveying a sense of unyielding self-worth and resistance to criticism. The theme centers on empowerment through emotional and verbal autonomy, rejecting external judgment with confidence.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "e86379978f255e7bd763e53810ca2ef5585b0ee9c7f6ff7f88af5b6882505cd2"
+    },
+    {
+      "section_id": "lyric-0002",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": "72a8c2b484897bfdc3ea91f958c2a7bdbb29e81dd092c51ffdd9e32396e424e0",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a paradoxical blend of defiance and pleasure, suggesting that actions deemed wrong by others are experienced as deeply satisfying. The theme explores the conflict between external judgment and internal fulfillment, highlighting the allure of rebellion or transgression when it brings intense personal joy.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "fc8c7ba7b9f749afd3961fb826e5d538e3d5f6ac573763a463c3078ce3f32d66"
+    },
+    {
+      "section_id": "lyric-0003",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": "50e2c22ec0a4b49d69aa1e5588fbf1fdd0b1fb6f59d3aca0d463914cda4e217a",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is repetitive and rhythmic, suggesting a sense of mechanical or ritualistic pattern. The themes revolve around cyclical motion and enduring repetition, evoking a feeling of inevitability or unchanging structure.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "a4d6984444641800a6f23fe8394b7590e4ca080a84afb399d122f90705053ee6"
+    },
+    {
+      "section_id": "lyric-0004",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "07cfdd51aeb5fd96573d09020f9d5cd37143ac08a7f9efc9dc899f071c5516d5",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests a detached, inevitable inevitability, portraying actions as part of a larger, impersonal system. The themes revolve around deception, cyclical patterns of power and abandonment, and the quiet acceptance of fate.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "5ed9c6576172ad5bef303477f68a6ac83395904533e320ca293590dd090e9f5a"
+    },
+    {
+      "section_id": "lyric-0005",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "2304de183def08c3f2b744650c23e342ce0d426af62f3da0e51d5d0401078085",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of emotional intensity and defiance, marked by a sharp awareness of power dynamics and personal boundaries. The themes explore ownership, betrayal, and the consequences of trust when relationships are unbalanced.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "688af297e9925cc79c236dd19af2d690d3b137ef02b85369412374a96e40467f"
+    },
+    {
+      "section_id": "lyric-0006",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "0543be83f5808b13c578563e6d9e3d8b1838d32db8f724f908c26e9cde06a647",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a paradoxical blend of defiance and pleasure, suggesting a deep internal satisfaction despite external judgment. The theme explores the conflict between societal condemnation and personal enjoyment, highlighting how actions perceived as wrong can still feel profoundly rewarding.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "e733d031b359770e4a506621f24d3c59385d9569c7a674c3f998903906d9c648"
+    },
+    {
+      "section_id": "lyric-0007",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": "7ba5b09e7c6f841e2151968a6c6bcab5ada01a4be4a815074a37fe7f4329e11c",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is repetitive and rhythmic, suggesting a sense of ease or emotional release. The themes revolve around pleasure, sensation, and a visceral, almost instinctive response to experience.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "376e46751126074ea33cf3559c0bcf3f2b64f54800d9aea270f3b46b71154f7e"
+    },
+    {
+      "section_id": "lyric-0008",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "e9c3d5eccbf522bac64e62efdc2f3386990c9dbb1cd4db6e6befa25595f56831",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is defiant and urgent, conveying a sense of resistance against unjust persecution. The themes revolve around the dangers of mass hysteria, the absurdity of targeting innocent individuals, and a call to embrace freedom in the face of fear and oppression.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "b10b6b70ffa180fa85b00e6b17da7f74551726d0d9a7ddc613abd25b8a68dff0"
+    },
+    {
+      "section_id": "lyric-0009",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "ad9f28a695688e65313f6f30d9ed13f0d9a5132eaedd4c4572ba5db93ca75185",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a paradoxical blend of guilt and exhilaration, highlighting a conflict between external judgment and internal satisfaction. The theme explores the allure of actions that are deemed wrong, emphasizing the powerful pull of personal enjoyment over moral accountability.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "7570213cf9060a1b2109a873e1f0db34861e3017e15ef54bfcb99bc827d080b3"
+    },
+    {
+      "section_id": "lyric-0010",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": "2ed513fd357997bd928d37c124eb683ca203084ea789d7ed5490ad52c7ee2a44",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests a paradoxical blend of defiance and pleasure, where wrongdoing is acknowledged yet embraced with satisfaction. The theme explores the contradiction between actions and their emotional consequences, highlighting how negative behavior can produce a sense of positive or liberating experience.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "898e05e87be758fdba82d36b87ab4f902e1ee35893b6379b01077c123995356d"
+    },
+    {
+      "section_id": "lyric-0011",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "99ff6eeac6d446fd31372d3c5b3ebfe57d94c796315288214e15124106283384",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests a paradoxical blend of discomfort and pleasure, highlighting a contradiction between negative circumstances and an overwhelming sense of satisfaction. The theme explores the complexity of human experience, where undesirable conditions can still evoke strong, positive emotional responses.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "d4ff842f5aa098354bf4ddf4d76c2b49fdabc512937f58622b6a9cbb3cd6e493"
+    },
+    {
+      "section_id": "span-0000",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    },
+    {
+      "section_id": "span-0003",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    },
+    {
+      "section_id": "span-0007",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    },
+    {
+      "section_id": "span-0010",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    }
+  ]
+}

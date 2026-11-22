@@ -1,0 +1,271 @@
+{
+  "schema_version": 1,
+  "track_id": "59QIYdXAL9XeNtM0j8vN0k",
+  "cohort": "random",
+  "display_only": true,
+  "registered_scores_unchanged": true,
+  "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+  "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "prompt_sha256": "ffdf21672c16d12394441664976928ac03a51b35d721d3925cca9be8adc58e3d",
+  "registered_checkpoint_sha256": "ea1edebe9d7a5e8108e26845fb9629791c51fe4e3df25e1446b89b375bf24322",
+  "reading_label": "L1's interpretation of the lyrics",
+  "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+  "reading_type": "model_interpretation",
+  "decoding": {
+    "do_sample": false,
+    "num_beams": 1,
+    "max_new_tokens": 128,
+    "torch_dtype": "float16",
+    "seed": 20261115
+  },
+  "overlap_rule": "NFKC/casefold 4-word ngrams; additionally 4 consecutive ja/ko/zh script characters with spacing/punctuation removed; block if either overlaps.",
+  "sections": [
+    {
+      "section_id": "lyric-0000",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": "6f53756dac1772d424c0b24b9dabcff949f61b66a154ca8975bd0c767fd96e9a",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests a sense of personal introspection and urgency, focusing on internal resolution amid external pressures. The theme centers on self-confrontation and the prioritization of individual responsibility in a complex, possibly overwhelming environment.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "c605191fb419375364d77259399e88696673db81fe77c22440ead2e0170d924f"
+    },
+    {
+      "section_id": "lyric-0001",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": "99dbd5ca6f768b8a5051d560bb0a3dd2dde7bd702a3db5979e78b7eaefaaca0c",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of intensity and defiance, emphasizing a transformation into a powerful, uncontrollable force. The themes revolve around identity, unpredictability, and resistance to external judgment or attempts to categorize or disrupt that identity.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "ae2b4c32c5b9abf394a224350de05c9726595482d411014333a5865a43b65deb"
+    },
+    {
+      "section_id": "lyric-0002",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": "bb103ed442133a6d3b44cf7e0eac023a905c495f87a3d1b9d5cae4b309436cac",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests a sense of stark contrast and transformation, emphasizing a shift in identity or behavior. The recurring motif underscores a fundamental divergence, implying change that is both noticeable and definitive.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "b40bdbfb48ea02d67d794a7962f8116cdbac95d7436aa1a756b59b13e417181d"
+    },
+    {
+      "section_id": "lyric-0003",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": "e49cfba2a89b09d678d6a5cc1b9f9f96341cd4230bb02b5977b94f5548003fd1",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a defiant resistance to external control, marked by a sense of internal strength and transformation. The themes explore identity forged through pain and autonomy, with a recurring motif of breaking free from imposed roles or expectations.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "04ce6d98dcd60a843c3371d81df681dc4a4bd6f4f654aefb6067b7c96cb2f24e"
+    },
+    {
+      "section_id": "lyric-0004",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": "d4bf193611693bd59bc809d5943708bcb6908b2b5afa2321ac511fcc9e4081a5",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of frustration and intensity, emphasizing a growing inner resolve amid suppressed voices. The themes explore resistance, personal transformation, and the tension between silence and expression.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "11d2cf936721d7d247449752a671f55130060b68eb8111c04703fa1cf5d785dd"
+    },
+    {
+      "section_id": "lyric-0005",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": "547962a2933cbb752c2f9729c22b6f9d2121e1589d5eb7ad410907b77976cff0",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of transformation and disruption, emphasizing a shift that defies previous norms. The themes revolve around evolution, unpredictability, and the emergence of something fundamentally new and unrecognizable.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "0a3be7193503485226cb60ea666e18b382099a01ad185955169acde044fdcabb"
+    },
+    {
+      "section_id": "lyric-0006",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": "bb103ed442133a6d3b44cf7e0eac023a905c495f87a3d1b9d5cae4b309436cac",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests a sense of stark contrast and transformation, emphasizing a shift in identity or behavior. The recurring motif underscores a fundamental divergence, implying change that is both noticeable and definitive.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "b40bdbfb48ea02d67d794a7962f8116cdbac95d7436aa1a756b59b13e417181d"
+    },
+    {
+      "section_id": "lyric-0007",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": "d8de50b3e124a95936e6a478035630fb836d962cc012e7183ba10f2fe90556ea",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys an urgent, energetic call for connection and transformation, emphasizing personal agency and a shift into a fresh, dynamic state. The themes revolve around self-redefinition, the desire for authentic interaction, and the emergence of a distinct, individual identity.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "b3f5a8f1e2a8f6912696cfdf11e14a38e5768365190ff9ce0a7a67016edebfe4"
+    },
+    {
+      "section_id": "lyric-0008",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "8bddfe842d215c0a8e6512f379f83d449f0db2f2e9237b964c0b0a2db0a4ab21",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a restless urgency and internal intensity, driven by a sense of suppressed emotion and a desire for recognition. The themes explore the buildup of personal tension and the frustration of being overlooked or silenced in a conversation that should matter.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "ba9af016d832dec456e93c7757b4062f46dabd7f4dc400d0bbf2afbe8718953f"
+    },
+    {
+      "section_id": "lyric-0009",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": "547962a2933cbb752c2f9729c22b6f9d2121e1589d5eb7ad410907b77976cff0",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of transformation and disruption, emphasizing a shift that defies previous norms. The themes revolve around evolution, unpredictability, and the emergence of something fundamentally new and unrecognizable.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "0a3be7193503485226cb60ea666e18b382099a01ad185955169acde044fdcabb"
+    },
+    {
+      "section_id": "lyric-0010",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": "fd81f50a854d1f6ad14e6c42ed99cb5bdde108b4200c904896a28a0403c76df0",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of intimacy and playful assertion, while the central theme explores identity and self-affirmation through a dynamic, confident presence.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "a87066185422f0dc8815e382006b7523e3a916e9c4ad2f5c11fe2be27b98b458"
+    },
+    {
+      "section_id": "lyric-0011",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": "5bacfd0118fe48f49c687fbace5dc831f3d169d7c3cd4863fe03eea75227cb5c",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of energetic defiance and transformation, emphasizing a break from conventional norms. The themes revolve around identity shift, rebellion against stagnation, and the assertion of a powerful, distinct presence.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "d4edc831330ef74069e27367657299290de76750486e15e7bf667cbad7c172c2"
+    },
+    {
+      "section_id": "lyric-0012",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": "251d719899a50f681dbcb692ff235dbd7828bc8d399550b89d6334e6ebf0b27f",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests a sense of surprise and admiration, emphasizing transformation and a shift in identity. The themes revolve around change, intensity, and the emergence of a new, powerful self.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "f05c420bce9cecda41421650b9db5befc92c821b14176a2e20e8097605fe5e75"
+    },
+    {
+      "section_id": "span-0000",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    },
+    {
+      "section_id": "span-0002",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    }
+  ]
+}

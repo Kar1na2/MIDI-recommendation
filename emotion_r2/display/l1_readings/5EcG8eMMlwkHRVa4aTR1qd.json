@@ -1,0 +1,173 @@
+{
+  "schema_version": 1,
+  "track_id": "5EcG8eMMlwkHRVa4aTR1qd",
+  "cohort": "random",
+  "display_only": true,
+  "registered_scores_unchanged": true,
+  "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+  "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "prompt_sha256": "ffdf21672c16d12394441664976928ac03a51b35d721d3925cca9be8adc58e3d",
+  "registered_checkpoint_sha256": "61f07696e49d7aa5d73ecfe538ee13a63873fe946eb4fc808c69b407f7d3c23f",
+  "reading_label": "L1's interpretation of the lyrics",
+  "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+  "reading_type": "model_interpretation",
+  "decoding": {
+    "do_sample": false,
+    "num_beams": 1,
+    "max_new_tokens": 128,
+    "torch_dtype": "float16",
+    "seed": 20261115
+  },
+  "overlap_rule": "NFKC/casefold 4-word ngrams; additionally 4 consecutive ja/ko/zh script characters with spacing/punctuation removed; block if either overlaps.",
+  "sections": [
+    {
+      "section_id": "lyric-0000",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": "d35daa51d09925ac06e3c228236e964389dd37e6c0958bc66be8becc03367b99",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of confusion and resistance to external judgment, while the central theme explores identity and the dissonance between self-perception and others' assumptions.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "b8e009b71a4277b035738e34a5f6c31fbc847f5a323d11f88848b7ad42abc6ac"
+    },
+    {
+      "section_id": "lyric-0001",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "30f9e9facb839523dcef4218094c65414e69f36a1d04fbef0a0db7a483b18d4e",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a confident, assertive shift in identity, emphasizing self-assurance and independence. The themes revolve around transformation, rejection of past vulnerabilities, and a deliberate assertion of strength and autonomy.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "eb36b7e70e9f1df69a905215cd30fb2466cb14d826aea5cc735441b5dd64cd59"
+    },
+    {
+      "section_id": "lyric-0002",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "9f9d8aadab9915eed273ca257f82a783dc82265c2e9a0e484409b56ab77d9dbe",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is intense and resolute, conveying a sense of relentless determination and confrontation. The themes revolve around defiance, ongoing struggle, and the inevitability of conflict.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "fe9d77d7c86ffe8a7fd62456724daefcec0fd51fa7fd4004801775d25e5828c7"
+    },
+    {
+      "section_id": "lyric-0003",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "4494d7af96597a24988e72db93f53d249013f04324cc67cce6a5e40f065e9618",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of growing frustration and emotional restlessness, underscored by a quiet desperation to find connection or validation. The themes explore isolation, uncertainty in relationships, and the internal struggle of longing amid unmet expectations.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "9dd44e8f93f44932cad7352941446bfda0eb9192e2c7beae2be0eb83d3cccc7c"
+    },
+    {
+      "section_id": "lyric-0004",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "8b68caa85a82c7f8724056d55df85c4f5118ad96414f809b6ea6ead725285bcd",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is intense and resolute, conveying a sense of relentless determination and confrontation. The themes revolve around defiance, ongoing struggle, and the inevitability of conflict.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "fe9d77d7c86ffe8a7fd62456724daefcec0fd51fa7fd4004801775d25e5828c7"
+    },
+    {
+      "section_id": "lyric-0005",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "c8d02f067bbbdb5c32dc1036a72af3ea8a534de10ed3ed86bb651f12b40c8ead",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a defiant and emotionally charged resolve, emphasizing rejection and the potential for destruction in the face of absence. The themes revolve around emotional withdrawal, the fragility of relationships, and the intensity of personal consequences when connection is lost.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "d42490dcb1eef8bcac5a615c9dfd6f5ac3812b27f9fa9b72687f325995bd8bac"
+    },
+    {
+      "section_id": "lyric-0006",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "fc7b0aa9a3c06d5dd77ad353b9225ed77fce59e4ef38d507960a6d7ebbcb04e4",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is intense and relentless, conveying a sense of unresolved anger and determination. The themes revolve around conflict, persistence, and the cyclical nature of confrontation.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "1e16a4ff0ad2a8c5c289e2a3f1aff9554b5391f9c486963dad7f9f327ae61f6e"
+    },
+    {
+      "section_id": "lyric-0007",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "071564378ab6cc7db7aff3b4cfeda2e0d03069c0e9fd90a2997f97d281b3119d",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is repetitive and overwhelming, suggesting a sense of relentless disruption or exhaustion. The theme centers on fragmentation and the persistence of an unresolvable cycle, implying a deep emotional or structural instability.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "ac845fe7227ca92e9dee139b5b70b1e0936a9fbd58418b17fe3c46f64e1e272c"
+    },
+    {
+      "section_id": "span-0000",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    }
+  ]
+}

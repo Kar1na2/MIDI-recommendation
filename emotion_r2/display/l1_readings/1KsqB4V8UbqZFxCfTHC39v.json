@@ -1,0 +1,173 @@
+{
+  "schema_version": 1,
+  "track_id": "1KsqB4V8UbqZFxCfTHC39v",
+  "cohort": "random",
+  "display_only": true,
+  "registered_scores_unchanged": true,
+  "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+  "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "prompt_sha256": "ffdf21672c16d12394441664976928ac03a51b35d721d3925cca9be8adc58e3d",
+  "registered_checkpoint_sha256": "79cb3cd927b4e63713f9a484baf6bb801b043fe268d988b14597e4fd1659479f",
+  "reading_label": "L1's interpretation of the lyrics",
+  "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+  "reading_type": "model_interpretation",
+  "decoding": {
+    "do_sample": false,
+    "num_beams": 1,
+    "max_new_tokens": 128,
+    "torch_dtype": "float16",
+    "seed": 20261115
+  },
+  "overlap_rule": "NFKC/casefold 4-word ngrams; additionally 4 consecutive ja/ko/zh script characters with spacing/punctuation removed; block if either overlaps.",
+  "sections": [
+    {
+      "section_id": "lyric-0000",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": "0ec48189dc692689c04ea4b42fcb23a5e339cac9da9a5da318d0a1b4caa1adc2",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests energetic enthusiasm and a sense of playful defiance, while the themes revolve around individuality, confidence, and a call to action.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "e92c6718c48076ff1adb2581bfa4c10f86213b8cf97fa4f767691ff70fa30f7a"
+    },
+    {
+      "section_id": "lyric-0001",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "df8e9aa18a23cdbd6d83f6cb31c1df75aebbfb2c59e37db793dde97b05f35cf7",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys confidence and assertiveness, emphasizing strength and financial success. The themes revolve around self-assurance, material achievement, and a sense of dominance in one's environment.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "8f04c1a756a6b5a0b4f23c074c8bb6d0612d39554c843689508f4e7976b8da4e"
+    },
+    {
+      "section_id": "lyric-0002",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "56948685345a62c1872a094af4754d3ccf957c77c6b4d46ba5808d9a35fb8ea9",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of dominance and aggression, emphasizing power, control, and a confrontational presence. The themes revolve around authority, intimidation, and the projection of a relentless, unstoppable force.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "f91860c0620666ea2be375b6554522529e091f7ffb29ba7bef0a0185b730302f"
+    },
+    {
+      "section_id": "lyric-0003",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "979ad86e62e307e4aa33e23b809522835e8c64aaa197314bf9d6681a200b4025",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is confident and defiant, emphasizing dominance and intensity in a relationship marked by tension and magnetic attraction. The themes revolve around power dynamics, emotional danger, and an unyielding presence that commands attention and provokes reaction.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "b58ac07ea8c1970d9895e94c7cd6b41d1d21565178cd661e92625dee094e03c4"
+    },
+    {
+      "section_id": "lyric-0004",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "ecbd84316d10626f3cae99f98ec1358d3f53c7c7ef82066a2877968db1228c57",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of controlled assertiveness and quiet authority, emphasizing presence and inevitability. The themes revolve around power dynamics, self-identity, and the unspoken understanding between individuals.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "39a1e3aa8839a82024bfa6cbd6e0abac34ab9bf2f1968213ed80a17ab7222019"
+    },
+    {
+      "section_id": "lyric-0005",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "3aea34aecc657e06128c6fae92a12fb71a66dc20bd1f3764739889e4896b9727",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of aggressive confidence and dominance, emphasizing power, control, and a confrontational presence. The themes revolve around authority, intimidation, and the projection of a relentless, unstoppable force.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "f78fa77c8ed19ad84b7d2fdf4394b66c1650a073c53aa688435de15ec0ad1193"
+    },
+    {
+      "section_id": "lyric-0006",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "5ce3a44af630c3c32daac98ba4e008646cb1aaf573ec56503b489f91bc167f24",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys confidence and assertiveness, emphasizing dominance and allure. The themes revolve around power, exclusivity, and the idea of mutual superiority in a relationship.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "d83cacee3220822c44dd2853aeed6cdd96dfa4c7cf15298d7fbd618a117252f8"
+    },
+    {
+      "section_id": "lyric-0007",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "6e15b2b899bc8deb054242f6e27197f65e6bd745438ee079f9323ec9bd6179e1",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of dominance and aggression, emphasizing power and control through assertive, confrontational language. The themes revolve around authority, intimidation, and the projection of invincibility in a competitive or hostile environment.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "30b13d857b1ed86f441a5e96c5e0388ef1f0cb0c2a83c77b4ecd00cc924ab31e"
+    },
+    {
+      "section_id": "span-0000",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    }
+  ]
+}

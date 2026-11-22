@@ -1,0 +1,88 @@
+{
+  "schema_version": 1,
+  "track_id": "5j4hgym3SUadjFieaAIVw0",
+  "cohort": "random",
+  "display_only": true,
+  "registered_scores_unchanged": true,
+  "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+  "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "prompt_sha256": "ffdf21672c16d12394441664976928ac03a51b35d721d3925cca9be8adc58e3d",
+  "registered_checkpoint_sha256": "4a98dec4c443deb96d458b8888d9c8fe2112eb6bf45fc33d7eee86cc318147d1",
+  "reading_label": "L1's interpretation of the lyrics",
+  "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+  "reading_type": "model_interpretation",
+  "decoding": {
+    "do_sample": false,
+    "num_beams": 1,
+    "max_new_tokens": 128,
+    "torch_dtype": "float16",
+    "seed": 20261115
+  },
+  "overlap_rule": "NFKC/casefold 4-word ngrams; additionally 4 consecutive ja/ko/zh script characters with spacing/punctuation removed; block if either overlaps.",
+  "sections": [
+    {
+      "section_id": "lyric-0000",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "1daf18239015db5229604ea6d84ce4348c9acdc2df2dfbdbddecbaa926d9f3e3",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of internal struggle and emotional weight, marked by conflict and sorrow. The themes explore self-doubt, unresolved past decisions, and a feeling of loss or emptiness despite outward appearances.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "afa312b7fe735a482919fcc481be0b9156f7238f281b67cdd350df8aa695c63e"
+    },
+    {
+      "section_id": "lyric-0001",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "ab787c7fcd954973ca93a8b10bee1cb4b7316adc741bb9657ed454662dc6d893",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of fragmentation and longing, suggesting a struggle with identity and the inability to reconstruct a coherent sense of self. The central theme explores the disconnection between physical presence and memory, highlighting a deep yearning to regain lost or incomplete aspects of personal experience.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "536bb817727f8bc514d59fbc945811c1d1acf1bad5a08665bd2c83fcc1546165"
+    },
+    {
+      "section_id": "lyric-0002",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "1daf18239015db5229604ea6d84ce4348c9acdc2df2dfbdbddecbaa926d9f3e3",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of internal struggle and emotional weight, marked by conflict and sorrow. The themes explore self-doubt, unresolved past decisions, and a feeling of loss or emptiness despite outward appearances.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "afa312b7fe735a482919fcc481be0b9156f7238f281b67cdd350df8aa695c63e"
+    },
+    {
+      "section_id": "span-0000",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    }
+  ]
+}

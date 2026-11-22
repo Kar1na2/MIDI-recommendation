@@ -1,0 +1,156 @@
+{
+  "schema_version": 1,
+  "track_id": "39382sUtIOwIXftX0i76do",
+  "cohort": "random",
+  "display_only": true,
+  "registered_scores_unchanged": true,
+  "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+  "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "prompt_sha256": "ffdf21672c16d12394441664976928ac03a51b35d721d3925cca9be8adc58e3d",
+  "registered_checkpoint_sha256": "c809724f15c62ed123c85ef200fc58f56914bbf0aba8a222b955cfc19d532be8",
+  "reading_label": "L1's interpretation of the lyrics",
+  "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+  "reading_type": "model_interpretation",
+  "decoding": {
+    "do_sample": false,
+    "num_beams": 1,
+    "max_new_tokens": 128,
+    "torch_dtype": "float16",
+    "seed": 20261115
+  },
+  "overlap_rule": "NFKC/casefold 4-word ngrams; additionally 4 consecutive ja/ko/zh script characters with spacing/punctuation removed; block if either overlaps.",
+  "sections": [
+    {
+      "section_id": "lyric-0000",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "03a1a1795dfc63d0a1a7799624582db1a4d590b6f54237ed2dc57bf68dc5c656",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a blend of intimacy and possessiveness, emphasizing personal desire and control in a relationship. The central theme explores the idea of emotional exclusivity and the assertion of need, suggesting a focus on mutual dependency and dominance in connection.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "8558deee6d3478050a32fe4d58c986efe4836c84b8dda86ce2de1ba194b348d8"
+    },
+    {
+      "section_id": "lyric-0001",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "9f0a6df4249e93219d58b4a4952473647f1b158663ad13abc22dcb98bb8eb82c",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a blend of intimacy and defiance, emphasizing deep emotional connection while asserting personal boundaries. The themes revolve around mutual affection, physical and emotional vulnerability, and the tension between acceptance and resistance.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "ca958dbcd45ea4dd3d957cb2883d667cae444a4ec788dce884768921413a7180"
+    },
+    {
+      "section_id": "lyric-0002",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "9ba8ff038821775ed0e6ee4b68383c3ca5396714abd69a85fcdd548f924f7778",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a repetitive, almost ritualistic affirmation, emphasizing physical and bodily presence. The themes suggest devotion, submission, and the alignment of self with another's desires.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "790489df985c908ae7c6cda44fcde7a97a8957ea906c4d264edc6cfe6e377c4f"
+    },
+    {
+      "section_id": "lyric-0003",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "d22fc25567dfac1893bb038dcab52e5dd669b06966b61bd9efb9e5c13dfe548f",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a mix of vulnerability and internal conflict, juxtaposing emotional longing with a sense of mechanical or impersonal response. The themes explore the tension between genuine connection and performative care, questioning the authenticity of love in the face of uncertainty and self-doubt.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "8e18d0bacb26f29575d77a61fc2eb3b093555451fd8da4277401a4381f24668b"
+    },
+    {
+      "section_id": "lyric-0004",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "447335feead85c5ae1dd8c8003f4eabbd563c53c114a0965e9af26e35bc73ec4",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of repetition and emotional intensity, suggesting a deep, almost ritualistic expression of identity or self-awareness. The themes revolve around bodily presence, self-recognition, and an unapologetic assertion of individuality.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "bb58bee369b52f4f723406220c47754d2b704d2eb04bcd815c63da916f250318"
+    },
+    {
+      "section_id": "lyric-0005",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "e5fe418896add54f9c84fd77f24b486050c3fc6fabddebfacadc5772a62de66f",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is repetitive and rhythmic, emphasizing a structured, almost ritualistic focus on physical parts of the body. The themes suggest a sense of self-observation and bodily awareness, possibly intertwined with a subtle comparison or reflection on another individual.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "cd9dce19b8cdc3c87f93d614708a869f4c21899a75b9d95c289e919fe370e20b"
+    },
+    {
+      "section_id": "lyric-0006",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "db5fb186adff0962b662275448cba59b9134e9aeaebde6495a70334e4e0472d2",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of lingering emotional presence and surrender, blending vulnerability with a quiet assertion of autonomy. The themes explore the enduring impact of connection and the complex interplay between giving and receiving in intimate relationships.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "f4c22894a929a60c25df73a9aa2e7e22455c385a74be61d64ef09801ec7d365f"
+    },
+    {
+      "section_id": "span-0000",
+      "set": "secondary",
+      "language": "ko",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    }
+  ]
+}

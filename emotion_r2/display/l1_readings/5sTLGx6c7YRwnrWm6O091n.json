@@ -1,0 +1,254 @@
+{
+  "schema_version": 1,
+  "track_id": "5sTLGx6c7YRwnrWm6O091n",
+  "cohort": "random",
+  "display_only": true,
+  "registered_scores_unchanged": true,
+  "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+  "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "prompt_sha256": "ffdf21672c16d12394441664976928ac03a51b35d721d3925cca9be8adc58e3d",
+  "registered_checkpoint_sha256": "3b3078a2ae929a193474f7f81fb9c0e6d3d9aef36014246639314d72ec683d05",
+  "reading_label": "L1's interpretation of the lyrics",
+  "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+  "reading_type": "model_interpretation",
+  "decoding": {
+    "do_sample": false,
+    "num_beams": 1,
+    "max_new_tokens": 128,
+    "torch_dtype": "float16",
+    "seed": 20261115
+  },
+  "overlap_rule": "NFKC/casefold 4-word ngrams; additionally 4 consecutive ja/ko/zh script characters with spacing/punctuation removed; block if either overlaps.",
+  "sections": [
+    {
+      "section_id": "lyric-0000",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "9b8ac0e3bc96149e08b931ed1a76f92b27ddef7e4907161ae300b53917dfbc30",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of intense, overwhelming emotional transformation, suggesting a sudden and powerful shift in personal experience. The themes revolve around the enduring desire for deep connection and the profound impact of a single presence that disrupts and redefines one's inner world.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "4be7b1b79991e5b21ebe5b925f710f4e3551aa7f0f826488f74c604cdb999fc2"
+    },
+    {
+      "section_id": "lyric-0001",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "a60dc100b00015c20c18abc349eda499c9c5135d0b0611670aef2ad6de2fd1e4",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys intense longing and a deep desire for complete, unreserved connection. The theme centers on the yearning for total emotional and physical intimacy as a fulfillment of a prolonged and significant anticipation.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "7d4b841e3c578043feff0340e680015a0cb9db8b3848cfc6f130e93a1926432d"
+    },
+    {
+      "section_id": "lyric-0002",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "718a1daa4e9a85e0b170c19d951c24b11d8165907b9afd25e5ffc91c084040b0",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys an intense, urgent longing and emotional dependency, while the central theme explores the irresistible pull of connection and the fear of separation.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "3a149fc1e1b5905aea81a7967ad0a91fc7d5e39539b65e3134fc7374fcbd68e3"
+    },
+    {
+      "section_id": "lyric-0003",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "e95352723866d3458086cdb0d8504df906b39df6bc707545f307fcc367cdfe86",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of intense, almost overwhelming emotional transformation, marked by longing and sudden fulfillment. The themes explore the power of love to disrupt and reconfigure inner states, suggesting a shift from isolation to deep, consuming connection.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "943c66cb3e3236aa5a91ad9335d8687c6885854426bc7420a2b81956aa1c8c6d"
+    },
+    {
+      "section_id": "lyric-0004",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": "8f0c546a51c31beea4845e49213d1e7d2e3faac01f670aa448fbed4c30970516",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is rhythmic and melodic, suggesting a sense of repetition and emotional resonance. The themes revolve around affection and a lingering, almost hypnotic connection between two individuals.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "1bb32f29c565bdbef8e9868d2a7c253c68f32e9a4b9aa7c264c83101b0c55d97"
+    },
+    {
+      "section_id": "lyric-0005",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "bd16fbfe2697d0252a2d0b4af9418f8e531099f5519de3f8c661797c5fecdcaf",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a yearning for deep connection and transcendence, blending vulnerability with a dreamlike aspiration. The themes explore trust, mutual commitment, and the pursuit of something beyond the ordinary.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "ba272e17925af320a7fb0d92890cb375c6e0117bae33f69b7ed158609c89800e"
+    },
+    {
+      "section_id": "lyric-0006",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "1aacccd5dbb9877d59a6220f9bc5eb23af99cfe4247182e504a2cc71786a3b66",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of intense, almost overwhelming emotional vulnerability and longing, blending sensuality with a deep yearning for connection. The themes explore the transformative power of a single moment of intimacy and the persistent desire to remain entangled in a relationship.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "7023711f3d9393fac160456bf9a08c7caef50043f4d00b4145b03a40b29adb41"
+    },
+    {
+      "section_id": "lyric-0007",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "3396b1262e26eea8fb93d1cda4a37bb33b1b9f6670a0c9b7262076e9f9d77414",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of intense, almost overwhelming emotional transformation, blending yearning and sudden fulfillment. The themes explore the power of love to ignite and consume, replacing long-held desires with a profound, irreversible shift in emotional state.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "7031cceee549c18556733033d747e10086df8ce17a49448065f0223a492e3810"
+    },
+    {
+      "section_id": "lyric-0008",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "d4c0c0f99134ee0a3deb0bf9af90e659a76610652c4bbbb64fd9ac30d9d40152",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of overwhelming, celestial passion, blending intensity with idealized devotion. The themes explore the idea of love as a powerful, transformative force that transcends ordinary experience and merges opposites into a unified, luminous essence.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "5f4255ae4b177973cf540fc8ec28bb38597de107ef55bfa14ae2e42e647ff00e"
+    },
+    {
+      "section_id": "lyric-0009",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "b49908a58e854d6d6aca7834cf1584f88d53ea8a74ec5f52d40e142797e9f23f",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys an urgent, passionate appeal to connection and devotion, emphasizing emotional intensity and mutual commitment. The central theme revolves around the exchange of love as a vital, almost celestial force that binds individuals together.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "2ce281b47b172abbc91c95c7d09780bebde15995e3a3dbdb32182eb8d21a7ce4"
+    },
+    {
+      "section_id": "lyric-0010",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "3396b1262e26eea8fb93d1cda4a37bb33b1b9f6670a0c9b7262076e9f9d77414",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of intense, almost overwhelming emotional transformation, blending yearning and sudden fulfillment. The themes explore the power of love to ignite and consume, replacing long-held desires with a profound, irreversible shift in emotional state.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "7031cceee549c18556733033d747e10086df8ce17a49448065f0223a492e3810"
+    },
+    {
+      "section_id": "lyric-0011",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "ce0252906f23ae51d9d927ac1a68c9fa8c30c4c4f7b81f25b9b30502f91dc106",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is detached and repetitive, suggesting a sense of mechanical or abstract observation. The theme revolves around cosmic phenomena presented in a manner that feels distant, almost impersonal, emphasizing scale and inevitability over emotional resonance.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "06882853698156cc22f92b016723cd0c3332ccccc4a4c6b7de0411e16b8556e7"
+    },
+    {
+      "section_id": "span-0000",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    },
+    {
+      "section_id": "span-0005",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    }
+  ]
+}

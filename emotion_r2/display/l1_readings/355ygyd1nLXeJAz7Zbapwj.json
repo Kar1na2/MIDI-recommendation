@@ -1,0 +1,156 @@
+{
+  "schema_version": 1,
+  "track_id": "355ygyd1nLXeJAz7Zbapwj",
+  "cohort": "pilot",
+  "display_only": true,
+  "registered_scores_unchanged": true,
+  "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+  "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "prompt_sha256": "ffdf21672c16d12394441664976928ac03a51b35d721d3925cca9be8adc58e3d",
+  "registered_checkpoint_sha256": "3dbca230da563d7ebb1b9c5bfc2b5663dcc5b388dcb2d73a9253e931aa17fd02",
+  "reading_label": "L1's interpretation of the lyrics",
+  "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+  "reading_type": "model_interpretation",
+  "decoding": {
+    "do_sample": false,
+    "num_beams": 1,
+    "max_new_tokens": 128,
+    "torch_dtype": "float16",
+    "seed": 20261115
+  },
+  "overlap_rule": "NFKC/casefold 4-word ngrams; additionally 4 consecutive ja/ko/zh script characters with spacing/punctuation removed; block if either overlaps.",
+  "sections": [
+    {
+      "section_id": "lyric-0000",
+      "set": "primary",
+      "language": "zh",
+      "text_sha256": "99ec4693ed7f92d16c9557465fd983d309a8e3f6b65ff2654da276d5147c1f34",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of quiet resilience and wonder, suggesting that hardship and danger can reveal hidden beauty and value. The theme explores the idea that true treasures are found not in ease, but in enduring and embracing difficult, uncharted experiences.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "c2401a503c58e129030bd8711bfb02802879557d70353c410114a03a6530ab8b"
+    },
+    {
+      "section_id": "lyric-0001",
+      "set": "primary",
+      "language": "zh",
+      "text_sha256": "2442a51b0e8a9ea74099802318d2571d7068a42fd2fd597951b422c9078414b4",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests a quiet acceptance of natural cycles and transformation, emphasizing resilience and the potential for beauty even in enduring hardship. The theme explores the idea that growth and renewal can emerge from both decay and resistance.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "ebe9de4d4183cc37bb4e3db78380cfa316c6c62b6566f3af45755ff921457ced"
+    },
+    {
+      "section_id": "lyric-0002",
+      "set": "primary",
+      "language": "zh",
+      "text_sha256": "91f6a7cb59feab671e2a451855e5b9780bb49f7b5d6f24639147ff2cddf0f3b0",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a resilient optimism, emphasizing hope and clarity amid chaos. The central theme revolves around the enduring power of vision and connection, even in desolate or uncertain conditions.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "6efd36f03d80f4164f22efcafa58bfb3e34c5bbe4b13133261701ae193394783"
+    },
+    {
+      "section_id": "lyric-0003",
+      "set": "primary",
+      "language": "zh",
+      "text_sha256": "fa10487c3de8e5ce49809886d54e07bcd74f11d80b7e9ce734a6230ae97d2d41",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is resolute and defiant, embracing individuality and unyielding determination. The central theme revolves around persistent self-expression and the courage to pursue one's path despite adversity.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "4bdf392aa48e78f6ab1f744b1ac9891a3dd8ed3d54cf3d080599c5d763bfd2d6"
+    },
+    {
+      "section_id": "lyric-0004",
+      "set": "primary",
+      "language": "zh",
+      "text_sha256": "91f6a7cb59feab671e2a451855e5b9780bb49f7b5d6f24639147ff2cddf0f3b0",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a resilient optimism, emphasizing hope and clarity amid chaos. The central theme revolves around the enduring power of vision and connection, even in desolate or uncertain conditions.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "6efd36f03d80f4164f22efcafa58bfb3e34c5bbe4b13133261701ae193394783"
+    },
+    {
+      "section_id": "lyric-0005",
+      "set": "primary",
+      "language": "zh",
+      "text_sha256": "fa10487c3de8e5ce49809886d54e07bcd74f11d80b7e9ce734a6230ae97d2d41",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is resolute and defiant, embracing individuality and unyielding determination. The central theme revolves around persistent self-expression and the courage to pursue one's path despite adversity.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "4bdf392aa48e78f6ab1f744b1ac9891a3dd8ed3d54cf3d080599c5d763bfd2d6"
+    },
+    {
+      "section_id": "lyric-0006",
+      "set": "primary",
+      "language": "zh",
+      "text_sha256": "5e87401aa1d8d3f6a1b4bfdd9c07eeb98fdaaaec33371121f66c47d1fc14d0bc",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of surrender and quiet acceptance, emphasizing peace through emotional release rather than resolution. The central theme explores the idea of letting go as a form of inner stability and contentment.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "57c23f1431e9009af2807e94f996198cfc4f700cf866dce9d94d849f364f57df"
+    },
+    {
+      "section_id": "span-0000",
+      "set": "secondary",
+      "language": "zh",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    }
+  ]
+}

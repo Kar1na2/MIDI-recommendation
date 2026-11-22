@@ -1,0 +1,220 @@
+{
+  "schema_version": 1,
+  "track_id": "5NxmDq0yXBYGfCbMqvIXuv",
+  "cohort": "random",
+  "display_only": true,
+  "registered_scores_unchanged": true,
+  "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+  "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "prompt_sha256": "ffdf21672c16d12394441664976928ac03a51b35d721d3925cca9be8adc58e3d",
+  "registered_checkpoint_sha256": "cda29a8214a75b16f63044d629cce185d22ec9f17527385a907cae1d6c0266f5",
+  "reading_label": "L1's interpretation of the lyrics",
+  "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+  "reading_type": "model_interpretation",
+  "decoding": {
+    "do_sample": false,
+    "num_beams": 1,
+    "max_new_tokens": 128,
+    "torch_dtype": "float16",
+    "seed": 20261115
+  },
+  "overlap_rule": "NFKC/casefold 4-word ngrams; additionally 4 consecutive ja/ko/zh script characters with spacing/punctuation removed; block if either overlaps.",
+  "sections": [
+    {
+      "section_id": "lyric-0000",
+      "set": "secondary",
+      "language": "uncertain",
+      "text_sha256": "50cdd8793868dc5132248c31f69cf84a07f111ae5b6c496965ab1eae3c6baad8",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests a reflective, almost urgent call to resilience and self-awareness amidst emotional struggle. The themes revolve around overcoming internal and external pressures, maintaining awareness of one's vitality, and rejecting passive despair in favor of active, hopeful persistence.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "b49a5cc7133ed964347eface0d8a3798be46697ecbbe90baf04c605b8f1244c8"
+    },
+    {
+      "section_id": "lyric-0001",
+      "set": "secondary",
+      "language": "uncertain",
+      "text_sha256": "6894f70f2f9efaf54a70ede48709f5672bc62d06ff3c66808e7d566bfe4d5799",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of internal conflict and emotional distance, marked by a quiet awareness of unresolved past experiences. The themes explore the persistence of forgotten or suppressed memories and their deep, invisible influence on the present self.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "b5c5f6c9c5ecaf4a0f166cfc3a9fae847adc8ff51c4e7081919adc49123dcbd5"
+    },
+    {
+      "section_id": "lyric-0002",
+      "set": "secondary",
+      "language": "uncertain",
+      "text_sha256": "b518aff230d0731cf188b94998ec2fd8c56dcc14c9df4f09960ac6ddf1480969",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of internal struggle and paradox, highlighting a fragmented identity caught between past impressions and present reality. The themes explore self-perception, the persistence of outdated labels, and a feeling of being overwhelmed by an inescapable, consuming internal force.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "37807cd1866c79b56a29f10b64bffc7c99c11ef9e30840b745bbda05e1e75565"
+    },
+    {
+      "section_id": "lyric-0003",
+      "set": "secondary",
+      "language": "uncertain",
+      "text_sha256": "c62c0a2cdfeb1f71b3d1323addb8130c952239180f366b625fc967155f57a0c5",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of restless urgency and existential uncertainty, emphasizing personal transformation and the unpredictability of fate. The themes revolve around resistance to stagnation, the pursuit of joy amid chaos, and the tension between fear and the possibility of peace in an unstable world.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "3441fb60c15e87147d17f1562902021d9b60296b9e823f9f58c8d231d996c3ca"
+    },
+    {
+      "section_id": "lyric-0004",
+      "set": "secondary",
+      "language": "uncertain",
+      "text_sha256": "eb74b115d7ae22e9fc9623edd9355faf5a2df46820550a43bb4df23f7b5ec589",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests a sense of inevitability and forward motion, emphasizing the inescapability of the past while urging engagement with what lies ahead. The central theme revolves around the human struggle to reconcile with what has already occurred and the persistent drive to move toward potential change.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "86c4cd65ab1401b31b6b4137d0bb08e81ab929e136d71d8102ccc11783c4c8d7"
+    },
+    {
+      "section_id": "lyric-0005",
+      "set": "secondary",
+      "language": "uncertain",
+      "text_sha256": "56187fff07c367b1666d4143b6f914d9c71979f48133d9b6f36f5bb0b659064b",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of emotional exhaustion and detachment, marked by a quiet resignation to stagnation and the absence of meaningful change or anticipation. The central theme explores the erosion of hope and the feeling of having experienced all possible outcomes, leaving only repetition and emptiness.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "75ccef44cd891aa64f60a2fc4d722dd972e3088a2e2ac95c03f1499ba134d9ab"
+    },
+    {
+      "section_id": "lyric-0006",
+      "set": "secondary",
+      "language": "uncertain",
+      "text_sha256": "b4faf920858395d0af75be968b9cce35799a8c83797f14a293eaa83a60d45205",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of emotional exhaustion and disillusionment, tinged with a detached, almost mechanical repetition of experiences. The themes explore the loss of wonder in the face of overwhelming information and the resulting numbness, where once-distinct experiences merge into a hollow, unchanging state.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "aaaec445b0616c3447167f272240da668a62a945b26c035b45453abd05d4e0d0"
+    },
+    {
+      "section_id": "lyric-0007",
+      "set": "secondary",
+      "language": "uncertain",
+      "text_sha256": "6a8301b02fabadbf29655fd962527a79b321a4cfc088ba9cacb7da8623434adc",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a urgent, introspective call to resilience and emotional authenticity, emphasizing the continuity of personal existence across time. The central theme explores the tension between enduring suffering and maintaining a lived, human experience, suggesting that true vitality lies in active pursuit of happiness rather than passive endurance.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "4f68b6b9762a455e03a1ad86cc13f31ed63487e15769a71827fc17831d95dddb"
+    },
+    {
+      "section_id": "lyric-0008",
+      "set": "secondary",
+      "language": "uncertain",
+      "text_sha256": "ee15a6793f7044de4708abd30494e6e34b182168e4de9b172f80ff2656b057cf",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of urgent personal responsibility amid emotional struggle, emphasizing inner awareness and the ongoing struggle between despair and the pursuit of fulfillment. A central theme explores the individual's agency in shaping their emotional state, balancing the impossibility of altering the past with the necessity of moving forward.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "f0f2a46aebb1404d674e3b6c2d181fc9774e250eca74eb5f6d3ddb9e7799a0d5"
+    },
+    {
+      "section_id": "lyric-0009",
+      "set": "secondary",
+      "language": "uncertain",
+      "text_sha256": "b4ac971d58797292e58d5c64792b0a7459ff8a7c2496ded8f5f430c8ba9d6493",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests a pervasive sense of dread and collective struggle, while the themes explore the enduring human experience amid overwhelming, unseen threats.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "eeedaad20565c9ac7fffdfae6bc41be928597d060a7bbae0b4f8f9fe3d13f8c6"
+    },
+    {
+      "section_id": "span-0000",
+      "set": "secondary",
+      "language": "uncertain",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    },
+    {
+      "section_id": "span-0002",
+      "set": "secondary",
+      "language": "uncertain",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    }
+  ]
+}

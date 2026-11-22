@@ -1,0 +1,139 @@
+{
+  "schema_version": 1,
+  "track_id": "1t8sqIScEIP0B4bQzBuI2P",
+  "cohort": "random",
+  "display_only": true,
+  "registered_scores_unchanged": true,
+  "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+  "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "prompt_sha256": "ffdf21672c16d12394441664976928ac03a51b35d721d3925cca9be8adc58e3d",
+  "registered_checkpoint_sha256": "9ab85c63faaa2b0a2153412047cc6aa0c9c92511261b8e144164a30371b14b7e",
+  "reading_label": "L1's interpretation of the lyrics",
+  "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+  "reading_type": "model_interpretation",
+  "decoding": {
+    "do_sample": false,
+    "num_beams": 1,
+    "max_new_tokens": 128,
+    "torch_dtype": "float16",
+    "seed": 20261115
+  },
+  "overlap_rule": "NFKC/casefold 4-word ngrams; additionally 4 consecutive ja/ko/zh script characters with spacing/punctuation removed; block if either overlaps.",
+  "sections": [
+    {
+      "section_id": "lyric-0000",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "16584052fd337f09553dfe2ed98e35a2de86043f25e61a3acb5d1e63a949e844",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests a neutral or hesitant beginning, possibly signaling uncertainty or a pause in expression. The central theme may revolve around ambiguity, unresolved intent, or the absence of clear direction.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "29052cff0ab79f58a067aff51e5d7adecb7facd2b24482c845688a6ea7f3c292"
+    },
+    {
+      "section_id": "lyric-0001",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "e8dfb6640f8da12f31009b05e902ec606d433c9246abd7c164b9c08bed9b3e44",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests a blend of allure and surprise, presenting something valuable and visually striking with a sense of playful revelation. The themes revolve around hidden treasures, personal secrets shared with others, and the emotional impact of discovery.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "744185321f80dd4d527dd53fba540d9c23a707d726557022ee43a64bb612db5b"
+    },
+    {
+      "section_id": "lyric-0002",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "36c095f26193d8432c6ca408d850d5d3c0f824ce20f93bbee77b8c593f0ce70e",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is defiant and self-assured, emphasizing autonomy and emotional intensity. The themes revolve around rejecting superficiality, asserting personal value, and contrasting inner strength with external weakness.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "c7deb141e7877f7fa512ea153eeefa1af410f69e82a8f1ada61605b3a6f119df"
+    },
+    {
+      "section_id": "lyric-0003",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "e8dfb6640f8da12f31009b05e902ec606d433c9246abd7c164b9c08bed9b3e44",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests a blend of allure and surprise, presenting something valuable and visually striking with a sense of playful revelation. The themes revolve around hidden treasures, personal secrets shared with others, and the emotional impact of discovery.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "744185321f80dd4d527dd53fba540d9c23a707d726557022ee43a64bb612db5b"
+    },
+    {
+      "section_id": "lyric-0004",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "bf83e93ed96d0b28dc606d526e591906db71879ff4feaba5f5d87eaad01e100f",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is confident and detached, presenting a sense of emotional control amid underlying tension and unspoken hostility. The themes explore identity, independence, and the rejection of vulnerability, contrasting inner strength with external pressures and unfulfilled expectations.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "7d3611dfdff905e2956640a598c907dd37e9175ba87d4514b9cc87fc50bde201"
+    },
+    {
+      "section_id": "lyric-0005",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "e8dfb6640f8da12f31009b05e902ec606d433c9246abd7c164b9c08bed9b3e44",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests a blend of allure and surprise, presenting something valuable and visually striking with a sense of playful revelation. The themes revolve around hidden treasures, personal secrets shared with others, and the emotional impact of discovery.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "744185321f80dd4d527dd53fba540d9c23a707d726557022ee43a64bb612db5b"
+    },
+    {
+      "section_id": "span-0000",
+      "set": "secondary",
+      "language": "uncertain",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    }
+  ]
+}

@@ -1,0 +1,169 @@
+{
+  "schema_version": 1,
+  "track_id": "0MJ5wsGpqu0gTJkx53ewxc",
+  "cohort": "random",
+  "display_only": true,
+  "registered_scores_unchanged": true,
+  "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+  "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "prompt_sha256": "ffdf21672c16d12394441664976928ac03a51b35d721d3925cca9be8adc58e3d",
+  "registered_checkpoint_sha256": "76fcb1520c288890fd6769b8680b737269af3e655712a5356be4b0b58ef2e0ca",
+  "reading_label": "L1's interpretation of the lyrics",
+  "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+  "reading_type": "model_interpretation",
+  "decoding": {
+    "do_sample": false,
+    "num_beams": 1,
+    "max_new_tokens": 128,
+    "torch_dtype": "float16",
+    "seed": 20261115
+  },
+  "overlap_rule": "NFKC/casefold 4-word ngrams; additionally 4 consecutive ja/ko/zh script characters with spacing/punctuation removed; block if either overlaps.",
+  "sections": [
+    {
+      "section_id": "lyric-0000",
+      "set": "secondary",
+      "language": "ja",
+      "text_sha256": "36ada5026d9a33896c379cd1fd8fb83371ab2ba7270fd8062411ff3b3485e5e3",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests a deliberate release or surrender, implying a sense of letting go or emotional detachment. The theme centers on the idea of relinquishing control, possibly symbolizing peace, exhaustion, or a shift in focus.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "7e1ec8a28f817c140c03447e590b8042b077a7ab072dfdf8f4faf8b228649b6c"
+    },
+    {
+      "section_id": "lyric-0001",
+      "set": "primary",
+      "language": "ja",
+      "text_sha256": "172a4f9265fd93c331dd96d069672c2787dac29c4fbdc1991d52dfd619836095",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a reflective, melancholic persistence, emphasizing the quiet gathering of fragmented memories amid ongoing emotional turmoil. The theme centers on the cyclical nature of sorrow and the gradual, resilient effort to reclaim lost experiences.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "0e040d2cdd7f1112d31a5cb7738aba1afa537bea7f7807aa1d73af8b904ecd45"
+    },
+    {
+      "section_id": "lyric-0002",
+      "set": "primary",
+      "language": "ja",
+      "text_sha256": "909be54ddccbd4cebd07042c59d4b85ea1244b0fc35fca3e6f215dca8f8ff9ea",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of emotional emptiness and disillusionment, underscored by imagery of mundane, artificial elements that contrast with a deeper yearning for warmth and authenticity. The themes explore the loss of connection and the disintegration of meaningful experiences in a world that feels hollow and superficial.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "0d08839137a654139ce6bb536c368648821900cd0047a1f8327121c417f3d76e"
+    },
+    {
+      "section_id": "lyric-0003",
+      "set": "secondary",
+      "language": "ja",
+      "text_sha256": "2b5e514fdf9b29c571d2fe063c036865be7ea1152a6c0605d8256990687ac59c",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone evokes a bittersweet nostalgia, blending melancholy with a quiet longing for a past moment of simple, stable joy. The central theme explores the emotional weight of letting go, suggesting that even fleeting sensory memories can carry deep significance in the face of change.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "78b68836b93e9b90ddf04a270be75fbb000f5b29f64b94e44c73ec10ae30e9b4"
+    },
+    {
+      "section_id": "lyric-0004",
+      "set": "secondary",
+      "language": "ja",
+      "text_sha256": "36ada5026d9a33896c379cd1fd8fb83371ab2ba7270fd8062411ff3b3485e5e3",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests a deliberate release or surrender, implying a sense of letting go or emotional detachment. The theme centers on the idea of relinquishing control, possibly symbolizing peace, exhaustion, or a shift in focus.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "7e1ec8a28f817c140c03447e590b8042b077a7ab072dfdf8f4faf8b228649b6c"
+    },
+    {
+      "section_id": "lyric-0005",
+      "set": "primary",
+      "language": "ja",
+      "text_sha256": "81f715dd8226626e6b1736306f2e243aa884a2486dddfd708ee4cc6af19b4874",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of quiet melancholy and existential unease, underscored by a feeling of isolation and unresolved longing. The themes explore inner emptiness, the search for connection, and the persistence of unfulfilled emotions in a seemingly indifferent world.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "26b69a42f3f38c2c2f4930f4e87eaf4c797dd0b30f7bd0e8f8842e5109afe94f"
+    },
+    {
+      "section_id": "lyric-0006",
+      "set": "primary",
+      "language": "ja",
+      "text_sha256": "829e47f27b5e0add4f67e163e08ab511ba2f22986108d65cd2730b7a718edcb4",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a quiet resignation mixed with bittersweet nostalgia, suggesting a peaceful acceptance of change. The themes revolve around the passage of time, the fading of cherished moments, and a gentle release from a once-happy, sensory-rich existence.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "51cba654881b177fd2a14f994ed805e8f0a5e7ae10c4bf39afb7b7c5e92705d4"
+    },
+    {
+      "section_id": "span-0000",
+      "set": "secondary",
+      "language": "ja",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    },
+    {
+      "section_id": "span-0003",
+      "set": "secondary",
+      "language": "ja",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    }
+  ]
+}

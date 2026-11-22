@@ -1,0 +1,152 @@
+{
+  "schema_version": 1,
+  "track_id": "0vjeOZ3Ft5jvAi9SBFJm1j",
+  "cohort": "random",
+  "display_only": true,
+  "registered_scores_unchanged": true,
+  "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+  "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "prompt_sha256": "ffdf21672c16d12394441664976928ac03a51b35d721d3925cca9be8adc58e3d",
+  "registered_checkpoint_sha256": "a8ab50750eada3924e8f85e8c2f1c0cf1ced863233e69cb111592a90677ca978",
+  "reading_label": "L1's interpretation of the lyrics",
+  "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+  "reading_type": "model_interpretation",
+  "decoding": {
+    "do_sample": false,
+    "num_beams": 1,
+    "max_new_tokens": 128,
+    "torch_dtype": "float16",
+    "seed": 20261115
+  },
+  "overlap_rule": "NFKC/casefold 4-word ngrams; additionally 4 consecutive ja/ko/zh script characters with spacing/punctuation removed; block if either overlaps.",
+  "sections": [
+    {
+      "section_id": "lyric-0000",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": "14eacbf5be392b646ac21b997fcb306b090fb4f128352c8b45a49f5f9f63ff80",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone presents a defiant and exaggerated assertion of power, blending self-aggrandizement with a sense of invincibility derived from substance use and external influence. The themes revolve around transformation through external forces, the blurring of reality and power, and a confrontational stance toward distrust.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "731ee9cc439d969ff8b4831dc8946657fe45b282f7f797fda27605ffb34455dd"
+    },
+    {
+      "section_id": "lyric-0001",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": "ae8e21444334f4e782755bc3e66cf34af03878b26e1aef1c8f73f8fcb4e58392",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests a repetitive, almost hypnotic rhythm emphasizing persistence and momentum. The themes revolve around continuous motion, control, and an unyielding drive to maintain or intensify a state of action.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "792cf2ca1e20e1238d1cd1d2a99215dc1184895eeb41036aa69d00a764383b32"
+    },
+    {
+      "section_id": "lyric-0002",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": "5d3ca7cf9739c3851af1c75612a3c58d413eca6d91e9f45a41ed6f1768d3ac2d",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is aggressive and boastful, emphasizing dominance, wealth, and assertive behavior. The themes revolve around power, material success, and a confrontational attitude toward rivals and social norms.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "e2443f5f7327f9c355f0aa564952d6e35233e65cb8535f22ffb20ceff19e97d1"
+    },
+    {
+      "section_id": "lyric-0003",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "d2f21bd3d88bf4b5328a21f9bd9b6b6f8a67402a947048c6637f6be877e2b9dc",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone presents a confident, self-assured assertion of power and financial dominance, emphasizing control, exclusivity, and unchallengeable status. The themes revolve around material success, detachment from societal norms, and the portrayal of wealth as both a personal achievement and a form of authority.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "2f3fae61e3e5596fb8d5457f5b741de094d7b1eac6ad1e672cb52cacad46adaa"
+    },
+    {
+      "section_id": "lyric-0004",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "0ea8b6e1998156deaf3237433b482e9174033e77c3a40d511b5b24f64840462b",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is aggressive and boastful, emphasizing wealth, dominance, and physical prowess. The themes revolve around material success, power displays, and a confrontational attitude toward rivals and social norms.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "2a65ee6e083888692ef7dc86f9203057146ea0cbf21a0cdf98a6df39454220e8"
+    },
+    {
+      "section_id": "lyric-0005",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": "1c272c72c32034b99a760f34702b2b208f6b7767de1780572cf812fb6bc97882",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of isolation and existential tension, reflecting on the burden of responsibility and the fear of moral decay over time. A central theme explores the ambiguity of good and evil, suggesting that power and perception may lead individuals to transform from heroes into adversaries.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "bce2905c7cee6792b7048739a67ef4f1205824510af595dae0896a5dfc02bbaa"
+    },
+    {
+      "section_id": "span-0000",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    },
+    {
+      "section_id": "span-0003",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    }
+  ]
+}

@@ -1,0 +1,152 @@
+{
+  "schema_version": 1,
+  "track_id": "7ByDxFf6Xy7xPFAYafsLxI",
+  "cohort": "random",
+  "display_only": true,
+  "registered_scores_unchanged": true,
+  "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+  "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "prompt_sha256": "ffdf21672c16d12394441664976928ac03a51b35d721d3925cca9be8adc58e3d",
+  "registered_checkpoint_sha256": "37e6363146d3c3a49431a5a2da5df8a754078e901c0a926bf5e936f249d33e59",
+  "reading_label": "L1's interpretation of the lyrics",
+  "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+  "reading_type": "model_interpretation",
+  "decoding": {
+    "do_sample": false,
+    "num_beams": 1,
+    "max_new_tokens": 128,
+    "torch_dtype": "float16",
+    "seed": 20261115
+  },
+  "overlap_rule": "NFKC/casefold 4-word ngrams; additionally 4 consecutive ja/ko/zh script characters with spacing/punctuation removed; block if either overlaps.",
+  "sections": [
+    {
+      "section_id": "lyric-0000",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "9560d4c0f23d58971d3d469528c76ec0f5bc1563688862dab18d2b0d80fb4433",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is tense and fragmented, suggesting internal conflict and a sense of instability. The themes explore identity, trauma, and the struggle to maintain coherence in a disordered reality.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "49770ceff0120282a912627deca8730065ff5f7cd5fdf22e19b88cff3452db53"
+    },
+    {
+      "section_id": "lyric-0001",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "fb88a227be106a578e6235cb2c551d44adce82c26207e787353929ba4fc87d6d",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of finality and emotional exhaustion, suggesting a breakdown of trust and the exposure of hidden pain. The themes revolve around betrayal, the cost of concealment, and the inevitability of truth emerging when all defenses are stripped away.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "ad2a9d87ae0e26a00625c8c8904f59d9aa98e98813e4218300a0943465ef9a0a"
+    },
+    {
+      "section_id": "lyric-0002",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "f7f2c7bc599affb6a7a1958f03045d011f17d7262cd80c4beb91ab070e723e1e",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests a raw, intimate vulnerability, where surrender and emotional exposure are central. The themes revolve around the removal of hidden suffering and the act of listening as a form of healing and connection.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "1c9348418ca7b7d086d74dc574946157aa83813180c9427c88689062b540475f"
+    },
+    {
+      "section_id": "lyric-0003",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "99b9c1c20e65122a06613d951bb5402c80c2d80a4e6c01f1f4d918a95b3c2925",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of frustration and emotional disarray, highlighting unresolved conflict and a feeling of instability in the relationship. The themes center on broken connection, inability to reconcile differences, and lingering distrust.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "76f152424a760edb203eec957b069c6d907cca555d8b66673b33f355b55626c1"
+    },
+    {
+      "section_id": "lyric-0004",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": "88f848075b01b8563d64cc7b1405122ec1cb00e37fdb37eff744d8c703e1791b",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of disillusionment and emotional exhaustion, marked by a sharp awareness of betrayal and the collapse of trust. The central theme explores the inevitability of truth emerging in the face of deception, highlighting a power shift where the speaker feels both exposed and liberated from false pretenses.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "88635546dfb71fb481b39973a02bc3083eab3edd6cd42300b2307eb6cec27c7b"
+    },
+    {
+      "section_id": "lyric-0005",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": "8af099bd03251640740d8be7d1c28dd9358ade62101c22dc13e4861d151b139d",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests a raw, intense desire for emotional exposure and vulnerability, framed as a physical and psychological surrender. The themes revolve around the removal of hidden suffering and the pursuit of authentic, unfiltered communication.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "4b33671f8b2922fdf706c14cec14ec015b3188a9cff6b0b96362571e496675f3"
+    },
+    {
+      "section_id": "span-0000",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    },
+    {
+      "section_id": "span-0005",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    }
+  ]
+}

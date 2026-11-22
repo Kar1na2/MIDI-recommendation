@@ -1,0 +1,216 @@
+{
+  "schema_version": 1,
+  "track_id": "6GKGoi0FHzldk1ZRQoV1fv",
+  "cohort": "random",
+  "display_only": true,
+  "registered_scores_unchanged": true,
+  "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+  "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "prompt_sha256": "ffdf21672c16d12394441664976928ac03a51b35d721d3925cca9be8adc58e3d",
+  "registered_checkpoint_sha256": "17140fdbbb92eed98528c6cfd8aeedbeb8a7c7a2cb2807b794e653b112a0589a",
+  "reading_label": "L1's interpretation of the lyrics",
+  "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+  "reading_type": "model_interpretation",
+  "decoding": {
+    "do_sample": false,
+    "num_beams": 1,
+    "max_new_tokens": 128,
+    "torch_dtype": "float16",
+    "seed": 20261115
+  },
+  "overlap_rule": "NFKC/casefold 4-word ngrams; additionally 4 consecutive ja/ko/zh script characters with spacing/punctuation removed; block if either overlaps.",
+  "sections": [
+    {
+      "section_id": "lyric-0000",
+      "set": "secondary",
+      "language": "uncertain",
+      "text_sha256": "11a5a4995b280f5fcd31a25754f68ff5d75a8fbb82305d8ecba68408d30907f4",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is light and playful, with a sense of casual, almost performative energy. The themes revolve around flirtation, rhythmic repetition, and the dynamics of attraction expressed through sound and rhythm.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "69734d6c62195004fa42a97d9a09004a05c6b56bcfc2ba4872966df772e1ac41"
+    },
+    {
+      "section_id": "lyric-0001",
+      "set": "secondary",
+      "language": "uncertain",
+      "text_sha256": "733705635bdc32ba74d2aad2896f9febab55e23bafef927bb495515935482c4c",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a confident, boastful attitude mixed with a sense of dominance and detachment, emphasizing material indulgence and assertive behavior. Themes of power, risk-taking, and emotional detachment underlie the portrayal of actions and choices.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "e5974d7b2227a91503654d7cb5f44f062043f6e2615b19e037a2dffb56c7c847"
+    },
+    {
+      "section_id": "lyric-0002",
+      "set": "secondary",
+      "language": "uncertain",
+      "text_sha256": "b4ed143154f9288de8ca29446d234684e3646eaa24111c55fd18377b16560dc3",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests a blend of playful urgency and rhythmic insistence, conveying a sense of dynamic energy balanced with a gentle, guiding presence. The themes revolve around emotional intensity, the tension between impulsivity and restraint, and the interplay of desire and control.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "dfc6b9ee7cf183bd16a94d1e1ad23cddf470d54fe18d9b7eab9375aa6a7a7b2a"
+    },
+    {
+      "section_id": "lyric-0003",
+      "set": "secondary",
+      "language": "uncertain",
+      "text_sha256": "fce8a0a9fe5e90e1986972f12973e44d7fb15236042d8319c359f907d2e8fdbf",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is playful and affectionate, centered on a desire for shared experience and intimacy through simple, sensory pleasures. The themes explore familiarity, mutual understanding, and the comfort found in personal preferences.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "be4bb356e019817df64ce510ef86aa7a325c367d9dac3ddac1c1ea1120af3f62"
+    },
+    {
+      "section_id": "lyric-0004",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "582cb226b5c41c862ddaf319751fc601974e7aa7518b7964b2f081557366e231",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys an exaggerated, confident display of allure and self-assurance, blending sensuality with a sense of performative glamour. The themes explore desire, material success, and the pursuit of emotional connection within a context of vivid, almost theatrical imagery.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "6e564a6edcc03a86ade508d3f9457aa35d76dad53af96ed3d704dc12f1926fc0"
+    },
+    {
+      "section_id": "lyric-0005",
+      "set": "secondary",
+      "language": "uncertain",
+      "text_sha256": "2a3b347c793211884720beaa56f85d19aa63ec9ade5fa8e3c621a503290fad56",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests a blend of playful urgency and rhythmic insistence, conveying a sense of dynamic energy and emotional push-pull. The themes revolve around desire, tempo, and the interplay between impulsivity and controlled intimacy.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "82f7a8d5d1430e4b82b10b45bcd1dcb7d8272854af7c0ab1cf166febd1cf12fd"
+    },
+    {
+      "section_id": "lyric-0006",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "5b6a1dc9e51c6a56607e38e4024d87ec1e3ece7a04e2ea2dbb2a752a97e7f6be",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a persistent, almost insistent desire, blending intimacy with a sense of craving. The themes explore personal preference, shared understanding, and the emotional weight of simple, familiar choices.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "d545faed66087081e59f2ed513fb863023ed2e3fcb385d57ad469778aafcad8f"
+    },
+    {
+      "section_id": "lyric-0007",
+      "set": "secondary",
+      "language": "uncertain",
+      "text_sha256": "0d5eda78c58c59773de8bf28041697a4f4871831a512bc44046b58aecc893395",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a playful, insistent desire, blending affection with a sense of craving. The themes revolve around personal preference, intimacy through shared interests, and the expression of longing in a lighthearted, rhythmic manner.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "c544020681d96b212014afdb610a2915c97127ba718b9d265769131942c32abc"
+    },
+    {
+      "section_id": "lyric-0008",
+      "set": "secondary",
+      "language": "uncertain",
+      "text_sha256": "f2ad310039cf5560e8aba8c06dcc6c7dedb6eb0c4e02950cfb0d6b34f75b2483",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is playful and self-aware, blending casual confidence with a sense of irony. The themes revolve around cultural fusion, mutual recognition of preferences, and a light-hearted celebration of shared tastes.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "1b218347370faf85c5b258e0a2fbdda040840c0c5cc090f33daff19c0416a816"
+    },
+    {
+      "section_id": "span-0000",
+      "set": "secondary",
+      "language": "uncertain",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    },
+    {
+      "section_id": "span-0002",
+      "set": "secondary",
+      "language": "uncertain",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    },
+    {
+      "section_id": "span-0004",
+      "set": "secondary",
+      "language": "uncertain",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    }
+  ]
+}

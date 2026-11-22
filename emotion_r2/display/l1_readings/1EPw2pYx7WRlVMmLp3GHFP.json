@@ -1,0 +1,139 @@
+{
+  "schema_version": 1,
+  "track_id": "1EPw2pYx7WRlVMmLp3GHFP",
+  "cohort": "random",
+  "display_only": true,
+  "registered_scores_unchanged": true,
+  "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+  "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "prompt_sha256": "ffdf21672c16d12394441664976928ac03a51b35d721d3925cca9be8adc58e3d",
+  "registered_checkpoint_sha256": "61e19f4ae68b02ff983078d4f837e764e7bdecbc0a73b5e5c5c37eef0375b9a1",
+  "reading_label": "L1's interpretation of the lyrics",
+  "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+  "reading_type": "model_interpretation",
+  "decoding": {
+    "do_sample": false,
+    "num_beams": 1,
+    "max_new_tokens": 128,
+    "torch_dtype": "float16",
+    "seed": 20261115
+  },
+  "overlap_rule": "NFKC/casefold 4-word ngrams; additionally 4 consecutive ja/ko/zh script characters with spacing/punctuation removed; block if either overlaps.",
+  "sections": [
+    {
+      "section_id": "lyric-0000",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "7feb7b5d8fa11c11a9379d6086bf618d53ee6de8620f08b8ef0fd84c77137065",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is sharply critical and dismissive, conveying a sense of frustration and exhaustion toward performative, uninspired presentations. The central theme revolves around the failure of artistic authenticity and the emotional disconnect between performers and audiences.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "25324ad95b69f9281fe6d1d1106e3792e86fb5a48cd05cf60e8fefd9a426521f"
+    },
+    {
+      "section_id": "lyric-0001",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "91e7efb9871ce72e532b8e6fcee4ba2fc2f254790967c5549beb42b8ff4ad6f7",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a defiant rejection of external influences and superficial desires, emphasizing self-sufficiency and inner clarity. The themes revolve around autonomy, resistance to manipulation, and a call for self-awareness in the face of societal or emotional pressures.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "bf948f175a7c98142532bc963b9305b0ccbd2e10b7cacf1816c7ec35c7ccc448"
+    },
+    {
+      "section_id": "lyric-0002",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "edd0babad6c8dc284418b694598ec24077351d0ed4ce0d45a66f1f0fe42de2ce",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys confidence and defiance, emphasizing a sense of self-assuredness amid perceived social or cultural contrasts. The themes explore identity, resistance to conventional norms, and a declaration of individuality in the face of external judgment.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "8a584e7b963a576d19a21c859aaba2d226819eead3b60e5ec0e4373abd8891d0"
+    },
+    {
+      "section_id": "lyric-0003",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "1ce0bc561249ed045b379a0f3d82bd2b905c2f4bd82109b80698269462648143",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is critical and dismissive, portraying artistic ambition as hollow and commercially driven. The central theme explores the disparity between idealized self-expression and the reality of a system that values conformity and marketability over authenticity.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "675180998f1cf6407214b917d9f8634b010bb6ee0267b0e85fc220f0d62dadc4"
+    },
+    {
+      "section_id": "lyric-0004",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "fcb0607d6f22ffe987ffbe85282f1a9e99c2c73290d6eb30826fb23108278ed5",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a defiant rejection of external influences and superficial desires, emphasizing self-sufficiency and inner resolve. The central theme explores the refusal to be swayed by material or emotional attachments, asserting autonomy through clear, uncompromising statements.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "68e723f463d375cfd74a68b94079d0ecf8d3d545888b589eaf431f09597acee7"
+    },
+    {
+      "section_id": "lyric-0005",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "edd0babad6c8dc284418b694598ec24077351d0ed4ce0d45a66f1f0fe42de2ce",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys confidence and defiance, emphasizing a sense of self-assuredness amid perceived social or cultural contrasts. The themes explore identity, resistance to conventional norms, and a declaration of individuality in the face of external judgment.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "8a584e7b963a576d19a21c859aaba2d226819eead3b60e5ec0e4373abd8891d0"
+    },
+    {
+      "section_id": "span-0000",
+      "set": "secondary",
+      "language": "ko",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    }
+  ]
+}

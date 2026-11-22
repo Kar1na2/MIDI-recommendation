@@ -1,0 +1,173 @@
+{
+  "schema_version": 1,
+  "track_id": "1p4EbJLS0jdWX3tOHdru8S",
+  "cohort": "random",
+  "display_only": true,
+  "registered_scores_unchanged": true,
+  "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+  "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "prompt_sha256": "ffdf21672c16d12394441664976928ac03a51b35d721d3925cca9be8adc58e3d",
+  "registered_checkpoint_sha256": "e223625f62ef473be6dcd7418e22ffee4a1f53388a06cf7eaef9714726a044c8",
+  "reading_label": "L1's interpretation of the lyrics",
+  "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+  "reading_type": "model_interpretation",
+  "decoding": {
+    "do_sample": false,
+    "num_beams": 1,
+    "max_new_tokens": 128,
+    "torch_dtype": "float16",
+    "seed": 20261115
+  },
+  "overlap_rule": "NFKC/casefold 4-word ngrams; additionally 4 consecutive ja/ko/zh script characters with spacing/punctuation removed; block if either overlaps.",
+  "sections": [
+    {
+      "section_id": "lyric-0000",
+      "set": "primary",
+      "language": "ja",
+      "text_sha256": "048051a41bd3bd0c20649e744b5bb4f4126e99cf39db593974a1a81b691ec2bc",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests a detached, ironic inquiry into systems of judgment and control, while the themes explore the tension between perceived truth and superficial validation, hinting at a skepticism toward authority and the commodification of experience.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "ceb98613af56076d64fecd9f09369f7ba3fe7cda6196fd49d11da34c9f9e6077"
+    },
+    {
+      "section_id": "lyric-0001",
+      "set": "primary",
+      "language": "ja",
+      "text_sha256": "fe3e44049aef7f6d7e4a35644fdd28b62f56af5803cc101a67d5cebac3bd106a",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of frustration and existential disarray, reflecting on the fragility of connections and the ease with which things or relationships collapse. The themes explore the tension between societal expectations and internal instability, highlighting impulsive reactions and the difficulty of maintaining coherence in chaotic situations.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "b4cc43935716f181689159dce084b30d34dd8971a1c4c98355ab87534cbe0127"
+    },
+    {
+      "section_id": "lyric-0002",
+      "set": "primary",
+      "language": "ja",
+      "text_sha256": "a3e9e4e856f976899d76ef9ab3bdaf826bfae934fa69ab31f77d652682c7e162",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is detached and ironic, blending surreal imagery with a sense of bureaucratic absurdity. The themes explore the alienation of modern consumer culture and the dissonance between expected experiences and their actual, often meaningless, outcomes.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "b6c7e5f866abaf0527cc26fe71c6a803cb35a32171917afdb067abbd0b29bac2"
+    },
+    {
+      "section_id": "lyric-0003",
+      "set": "primary",
+      "language": "ja",
+      "text_sha256": "eec86b3d225b4442379581d8f3ed75c5dfcbc2216ea7f72428b4146fc30987ee",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of detached resignation and emotional withdrawal, emphasizing avoidance and the suppression of personal history. The central theme explores the burden of memory and the desire to escape responsibility by erasing the past.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "a5a0f7903750107d399fc27cff945ff54fe12f8585ff75e7592891107201968b"
+    },
+    {
+      "section_id": "lyric-0004",
+      "set": "primary",
+      "language": "ja",
+      "text_sha256": "d9050a662e65b7118d09e7b88945fa4d63c71273268891f9477a7e17f48462cf",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of internal turmoil and emotional instability, marked by rapid shifts between attraction and repulsion. The themes explore obsession, avoidance, and a deep existential dissatisfaction.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "3917c93a87876203b85f2d0acb35d90bc598b63b4568b3d163e8585494213f85"
+    },
+    {
+      "section_id": "lyric-0005",
+      "set": "primary",
+      "language": "ja",
+      "text_sha256": "d5fe039a01e3be1af5a383fc36228ae5e4f94d20af220591c515e4856447b217",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a mix of playful absurdity and underlying social discomfort, blending casual references with subtle expressions of embarrassment and collective anxiety. Themes of fleeting connections, financial strain, and the tension between social performance and personal vulnerability emerge throughout.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "601601ad89b9213b7327c4b516af424fc49b763013bbbc12fe502fbafa863d6b"
+    },
+    {
+      "section_id": "lyric-0006",
+      "set": "primary",
+      "language": "ja",
+      "text_sha256": "5536f87daf21405f72cda3ba86c3459d746d4b2da7b1442696afb7500987c81f",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of emotional exhaustion and despair, marked by frustration and a deep feeling of futility. The themes explore isolation, self-doubt, and the desire to escape from an overwhelming internal and external reality.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "3665a709b75d6be47a083250d42ff5dec9ce708048068299a99dd9bfc4836ec5"
+    },
+    {
+      "section_id": "lyric-0007",
+      "set": "primary",
+      "language": "ja",
+      "text_sha256": "af844f73205f445f27b780b2576536a79cfd06ad78088a90f5d520298426ca35",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests a reflective and apologetic atmosphere, conveying a sense of vulnerability and emotional hesitation. The themes revolve around regret, the desire for forgiveness, and the complexity of human relationships.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "9f9c6da661ba84140f7b667a4121b6ba5d59259d29040be08fab4dbf5256293e"
+    },
+    {
+      "section_id": "span-0000",
+      "set": "secondary",
+      "language": "ja",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    }
+  ]
+}

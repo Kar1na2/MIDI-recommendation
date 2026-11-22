@@ -1,0 +1,139 @@
+{
+  "schema_version": 1,
+  "track_id": "3zb9k8UUuKz5tYmKJvNqQA",
+  "cohort": "random",
+  "display_only": true,
+  "registered_scores_unchanged": true,
+  "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+  "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "prompt_sha256": "ffdf21672c16d12394441664976928ac03a51b35d721d3925cca9be8adc58e3d",
+  "registered_checkpoint_sha256": "cc7a668f6e7f74a3680d665f234ced506960ec7c017a77e2bed5a33bda212a99",
+  "reading_label": "L1's interpretation of the lyrics",
+  "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+  "reading_type": "model_interpretation",
+  "decoding": {
+    "do_sample": false,
+    "num_beams": 1,
+    "max_new_tokens": 128,
+    "torch_dtype": "float16",
+    "seed": 20261115
+  },
+  "overlap_rule": "NFKC/casefold 4-word ngrams; additionally 4 consecutive ja/ko/zh script characters with spacing/punctuation removed; block if either overlaps.",
+  "sections": [
+    {
+      "section_id": "lyric-0000",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": "8a20561110a06a7a1aec2750e9f3e2c6eefecdb054faeb4ca289ae02278c48bd",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is detached and minimal, suggesting a focus on quantity or measurement rather than emotional depth. The theme centers on simplicity, objectivity, and the reduction of complex ideas to basic, measurable units.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "6f9eee0e8a49d4fad5629febe39418253443cc704351d10bb83c12b11f107930"
+    },
+    {
+      "section_id": "lyric-0001",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "9e3ad7b938c72bfed1de6d98739c502366cf25fb446b3bd9d9e6d2843b43625b",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is confident and self-assured, blending a sense of independence with subtle irony. The themes explore personal autonomy, digital interaction, and the contrast between outward appearances and inner realities.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "8350311433bff86b19a1f3a9315e57541f15392d47052e83f5ce535fe1b3d52d"
+    },
+    {
+      "section_id": "lyric-0002",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "a6b39045e2b99383ee333aac2b5c313d83d5d39c2dd947cbe2f493f1b7e43d66",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is confident and assertive, portraying a sense of self-assured dominance and control over one's presence and influence. The themes revolve around autonomy, resistance to imitation, and the idea of maintaining authenticity and power in a competitive environment.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "685544ef628f78a4409d54b4d0f290b9aff914b3fa49c96294ac25367555030b"
+    },
+    {
+      "section_id": "lyric-0003",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "48965164e78d9756b3f2babf027dbf94452e9e5a3c39cf173855a0b6beb3db9a",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of confident self-awareness mixed with subtle irony, portraying a balance between personal autonomy and external pressures. Themes of identity, control, and the tension between individuality and societal expectations emerge throughout.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "d0c12464c953b9245a69a89459eb083d35a05ea5eedb4824d30c04a28b32818f"
+    },
+    {
+      "section_id": "lyric-0004",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "634a1b041305b401143b91e66177349fb1dc6453f4a3ad063033ca800fe1350f",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is confident and assertive, portraying an unshakable sense of self-assurance and dominance. The themes revolve around relentless ambition, creative power, and the perception of being unstoppable, contrasted with a subtle acknowledgment of personal intensity and its impact on others.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "235691fb0d4a4e9ce200ba163efe0658add5ed61da2a906546aa4f03acb76754"
+    },
+    {
+      "section_id": "lyric-0005",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "fcaee59a6e6ca561697a7037a124cfca1fe6f0fef8d4591c6dd027058b276a8c",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is detached and observant, presenting a sense of emotional distance amid routine actions. The themes explore isolation within connection, the tension between personal boundaries and external expectations, and the subtle shifts in identity through mechanical or symbolic gestures.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "eb38b1c355daa27e0cae88d9251bfa55588afd78b907523a3262a437a67750d3"
+    },
+    {
+      "section_id": "span-0000",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    }
+  ]
+}

@@ -1,0 +1,246 @@
+{
+  "schema_version": 1,
+  "track_id": "3ym9bzwGG4uxVaJ0pLoQbM",
+  "cohort": "random",
+  "display_only": true,
+  "registered_scores_unchanged": true,
+  "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+  "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "prompt_sha256": "ffdf21672c16d12394441664976928ac03a51b35d721d3925cca9be8adc58e3d",
+  "registered_checkpoint_sha256": "1885fd9574fb07a67ab9d4a79eb075f5f7a4baed0c5cf5b8d0861afa986b3adc",
+  "reading_label": "L1's interpretation of the lyrics",
+  "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+  "reading_type": "model_interpretation",
+  "decoding": {
+    "do_sample": false,
+    "num_beams": 1,
+    "max_new_tokens": 128,
+    "torch_dtype": "float16",
+    "seed": 20261115
+  },
+  "overlap_rule": "NFKC/casefold 4-word ngrams; additionally 4 consecutive ja/ko/zh script characters with spacing/punctuation removed; block if either overlaps.",
+  "sections": [
+    {
+      "section_id": "lyric-0000",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": "b73a2ef517dd0081f8c4c752b40517626ca3905b290e424b23513341465ff6ac",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is repetitive and rhythmic, suggesting a sense of urgency or emotional intensity. The themes revolve around resonance, call-and-response dynamics, and possibly inner turmoil or collective expression.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "9b5863584173a4a3dc6ff4774bbf5362827c0e9768b0029845ee714e0cb4d6f0"
+    },
+    {
+      "section_id": "lyric-0001",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "4dadb6bfc2789b532d4445aa2d8f7feb0c8ea08b51c92912838e47dc26b35c7d",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of finality and emotional detachment, emphasizing self-reliance and the rejection of dependency. The central theme explores the idea of personal autonomy born from a relationship that was driven by the other's pursuit rather than mutual connection.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "8c1940a292bfdd8af55ca7ba6b8dbccb6e74139c63added238c4791b6f862054"
+    },
+    {
+      "section_id": "lyric-0002",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": "53ec33b8bedb4823cbda42d62a3c73f5d470ecf381edc23ef505e06c928eed57",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of emotional exhaustion and unresolved longing, highlighting a power imbalance in a relationship where one partner's affection is exploited. The central theme explores the cost of giving without reciprocity and the persistent desire for reclamation of one's emotional worth.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "e7bcb1c05ce2b0fcf25a4b1f2db1813be64a69fe4a12ee656ce3cc9cd5184f1a"
+    },
+    {
+      "section_id": "lyric-0003",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "fc5dad866b146bfa716f7cd5ee12762047c30de2146cfa118c967cd74624fbd5",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of weary realization and emotional release, emphasizing the cost of misplaced devotion. The central theme explores the painful recognition that certain relationships or attachments fail to deliver genuine value or fulfillment.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "9f1cd922a5894ca4f45cf3808b0afe66185dbd81269033547ccb027159839e8a"
+    },
+    {
+      "section_id": "lyric-0004",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "f6f093f5a17d5af36a19e5d5bed42da048467c389d793a9f58ba08ed6f01e1b7",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of emotional exhaustion and disillusionment, highlighting the cost of dependency and the fragility of relationships built on mutual need. A central theme emerges around the idea that connection often masks deeper emotional wounds, and true healing requires self-reliance rather than reliance on others.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "4744edb52298b06b48e2cb61e8fb870a3ff0922b363018b85f400de770386e4f"
+    },
+    {
+      "section_id": "lyric-0005",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": "53ec33b8bedb4823cbda42d62a3c73f5d470ecf381edc23ef505e06c928eed57",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of emotional exhaustion and unresolved longing, highlighting a power imbalance in a relationship where one partner's affection is exploited. The central theme explores the cost of giving without reciprocity and the persistent desire for reclamation of one's emotional worth.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "e7bcb1c05ce2b0fcf25a4b1f2db1813be64a69fe4a12ee656ce3cc9cd5184f1a"
+    },
+    {
+      "section_id": "lyric-0006",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "3ccf8e8e2db63c37bc4a1bee250456cf2c6ab2d4317f789fef0d3a44820ecbd1",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of weary realization and emotional detachment, emphasizing the futility of continued investment in a relationship. The central theme explores the cost of emotional pain and the eventual acceptance that certain connections do not justify the effort or suffering they entail.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "77dbbb1db895f521124450259f1d2a053da01af6ac249478406b9a2a9e746ca6"
+    },
+    {
+      "section_id": "lyric-0007",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": "b58fc0bc4b76d581495bfc69b25e71aed4b56de459946091876c9e144c9fa9be",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of unresolved dependency and emotional vulnerability, suggesting a struggle with identity and autonomy. The themes explore the tension between individual strength and collective reliance, questioning the possibility of self-sufficiency in a relationship.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "eb2d8c49087536d963a83ccaa726b3c549f331c80ee91e4eb8ca33d8a2b6a50e"
+    },
+    {
+      "section_id": "lyric-0008",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "4dcb7e8348bd7ef831aee8d1d861279922a988b11dcc9b58e3f85852703f2cef",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of weary realization and emotional exhaustion, emphasizing the futility of continued investment in a relationship. The central theme explores the painful yet inevitable acceptance that certain connections do not justify the emotional cost they impose.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "0a12ca137e52a779e589171e58c19f8e59c1ea850b1f0603950e473339b0c15e"
+    },
+    {
+      "section_id": "lyric-0009",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "39e8e3b52a3770e134cc12f5c8572f0114fa2137368ed365ae56fd94a74920a9",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests a moment of surprise or sudden shift, while the underlying themes point to emotional unpredictability and the tension between stillness and movement.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "733286117b10b57dc32f327f7131a4048e56633da57127830adf2c77ee16ec60"
+    },
+    {
+      "section_id": "span-0000",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    },
+    {
+      "section_id": "span-0002",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    },
+    {
+      "section_id": "span-0005",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    },
+    {
+      "section_id": "span-0007",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    }
+  ]
+}

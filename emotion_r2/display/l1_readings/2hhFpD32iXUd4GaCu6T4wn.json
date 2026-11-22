@@ -1,0 +1,156 @@
+{
+  "schema_version": 1,
+  "track_id": "2hhFpD32iXUd4GaCu6T4wn",
+  "cohort": "random",
+  "display_only": true,
+  "registered_scores_unchanged": true,
+  "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+  "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "prompt_sha256": "ffdf21672c16d12394441664976928ac03a51b35d721d3925cca9be8adc58e3d",
+  "registered_checkpoint_sha256": "54f36c39a7c807c2d05e0cbea7857366d488871b4718b5fb67a8af535bb6389c",
+  "reading_label": "L1's interpretation of the lyrics",
+  "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+  "reading_type": "model_interpretation",
+  "decoding": {
+    "do_sample": false,
+    "num_beams": 1,
+    "max_new_tokens": 128,
+    "torch_dtype": "float16",
+    "seed": 20261115
+  },
+  "overlap_rule": "NFKC/casefold 4-word ngrams; additionally 4 consecutive ja/ko/zh script characters with spacing/punctuation removed; block if either overlaps.",
+  "sections": [
+    {
+      "section_id": "lyric-0000",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "b95025bb57345f765257a7d4ad410419cdbe3318654ee2c7d97e0d92892c8c9e",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a defiant and assertive challenge, emphasizing a sense of enduring energy and resistance to external constraints. The themes suggest a longing for continuous engagement and a rejection of limitations, implying a persistent drive to maintain intensity and connection.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "d6dcb8b32474d2f69514d4dfa4e1e8430122e1f20390f5ce59f3ed61aea7e591"
+    },
+    {
+      "section_id": "lyric-0001",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "ac9c3d70c8033725108412ba124e9a865659a6d142ffee73ee28f111384d5002",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is self-deprecating and matter-of-fact, blending casual irony with a sense of personal routine and detachment. The themes explore identity, solitude, and the mundane rituals that shape individuality.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "cfe1f4fb6304c335738385be1b710af852f0185574c5fe49de4523fce173a920"
+    },
+    {
+      "section_id": "lyric-0002",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "d7848206ab26e407a5f64bc0eaf6eb5826c26f69c25e85545ff957a6d71f2c19",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is self-deprecating and casually reflective, blending mundane routine with moments of internal hesitation and fleeting anxiety. The themes revolve around routine, personal restraint, and the quiet absurdity of everyday life, underscored by a sense of detached observation.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "e05aa40537f95a71952c84f5fdc04cbcef49393851c7501127f2d722ebb54433"
+    },
+    {
+      "section_id": "lyric-0003",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "e201ae5123411fe1ec6bcda22528bae033b7e0f4e2779dd91d15f77a155f0e73",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is self-deprecating and matter-of-fact, blending casual confidence with a sense of personal authenticity. The themes revolve around individuality, mundane preferences, and a quiet assertion of personal identity through everyday choices.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "97302c73a145f4aa470cf57256003a02be242409667d7df4b765b8716ab6f5f3"
+    },
+    {
+      "section_id": "lyric-0004",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "1ad84b599a62c1334bed0a563fa2d9d6a9d9e93838c1f46dbf860de095cfd0c7",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is raw and introspective, blending vulnerability with a sense of quiet resilience. The themes center on the enduring impact of early emotional wounds, the unexpected sources of sensitivity, and the quiet strength found in enduring everyday pain.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "8f49ef85e3caf0361dfbdaa8d0e9d77426a38650f3c4f205fa2f430a424a19eb"
+    },
+    {
+      "section_id": "lyric-0005",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "b1a17c81cc5fae78b54bdc968b7b2b7bd006aadaa2b38f08584fda438f3aa547",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is self-deprecating and matter-of-fact, blending casualness with a sense of ironic humility. The themes revolve around ordinary, unremarkable personal preferences and behaviors, presenting them as both mundane and strangely defining.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "e4113073de491faf4114ba3f220d1433f1494ab0be9ed773885c878b83397545"
+    },
+    {
+      "section_id": "lyric-0006",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "a44c9c4629ae8a4467651e52dd41edfa8c9051b3d50b50223ba8382b4f5a567e",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a mix of frustration and detached amusement, highlighting themes of financial strain and emotional disconnection from social celebrations.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "37c57d301a7c51fb4cd4ff55fb559b7a0cc426853eb6da0da461dbfbb0239fe6"
+    },
+    {
+      "section_id": "span-0000",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    }
+  ]
+}

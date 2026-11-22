@@ -1,0 +1,105 @@
+{
+  "schema_version": 1,
+  "track_id": "0VyNMIEYCl1pld53eYmgBJ",
+  "cohort": "random",
+  "display_only": true,
+  "registered_scores_unchanged": true,
+  "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+  "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "prompt_sha256": "ffdf21672c16d12394441664976928ac03a51b35d721d3925cca9be8adc58e3d",
+  "registered_checkpoint_sha256": "818fcae4e127fa3ab3661f74c0236467ace75ae695c51beff55e3dede1f983f5",
+  "reading_label": "L1's interpretation of the lyrics",
+  "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+  "reading_type": "model_interpretation",
+  "decoding": {
+    "do_sample": false,
+    "num_beams": 1,
+    "max_new_tokens": 128,
+    "torch_dtype": "float16",
+    "seed": 20261115
+  },
+  "overlap_rule": "NFKC/casefold 4-word ngrams; additionally 4 consecutive ja/ko/zh script characters with spacing/punctuation removed; block if either overlaps.",
+  "sections": [
+    {
+      "section_id": "lyric-0000",
+      "set": "secondary",
+      "language": "uncertain",
+      "text_sha256": "2dcb4a7bc26fe049a62e8baccb65f8bcf7b948b3ce86cd5c2eee416c30cbd3e7",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is detached and observational, presenting a sense of quiet introspection amid ambiguity. The themes revolve around isolation, internal conflict, and the tension between perception and reality.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "f5646e4a6c93b016258ea630a0ef2b2945607da9a4bf0f8a6e097774ae265c3b"
+    },
+    {
+      "section_id": "lyric-0001",
+      "set": "secondary",
+      "language": "uncertain",
+      "text_sha256": "dc21753337a7536b93c006798725eda03b3f5684b151eb7085c6a4d070815373",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is energetic and celebratory, emphasizing boundless potential and youthful exuberance. The themes revolve around self-assurance, unyielding determination, and the joy of beginning anew with confidence.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "4edd124167a878757eab64a88fbf51846f5e0565cdfee2123784fa0559b38740"
+    },
+    {
+      "section_id": "lyric-0002",
+      "set": "secondary",
+      "language": "uncertain",
+      "text_sha256": "1d55ca99b8958d4d36b2ffa99cbca9674c7f84c7ae6f4b01b0d7d7c36ac8011f",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is repetitive and insistent, conveying a sense of persistence or fixation. The themes suggest identity, presence, and the quiet assertion of self within a defined or confined space.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "02e783fa122f77e346b6d143f3cde65157207486ac3c1536681ff4099c7442f6"
+    },
+    {
+      "section_id": "lyric-0003",
+      "set": "secondary",
+      "language": "uncertain",
+      "text_sha256": "8c6eb3530f5af0778a88146bb19d4530e8ce60ec866f6b0ee1cb646e54322202",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is energetic and triumphant, conveying a sense of unstoppable momentum and self-assured confidence. The themes revolve around relentless progress, radiant positivity, and the fulfillment of potential through perseverance.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "b0739f811169dcadc126702472e54b2cf2bd4a67942fd69c4d0ba49660b6aa70"
+    },
+    {
+      "section_id": "span-0001",
+      "set": "secondary",
+      "language": "uncertain",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    }
+  ]
+}

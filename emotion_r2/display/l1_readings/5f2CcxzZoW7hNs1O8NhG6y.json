@@ -1,0 +1,169 @@
+{
+  "schema_version": 1,
+  "track_id": "5f2CcxzZoW7hNs1O8NhG6y",
+  "cohort": "random",
+  "display_only": true,
+  "registered_scores_unchanged": true,
+  "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+  "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "prompt_sha256": "ffdf21672c16d12394441664976928ac03a51b35d721d3925cca9be8adc58e3d",
+  "registered_checkpoint_sha256": "842d0c89dee25f2ea499b0dfc9cce8d5ff465bcb22fcbbb2d803122337247dbe",
+  "reading_label": "L1's interpretation of the lyrics",
+  "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+  "reading_type": "model_interpretation",
+  "decoding": {
+    "do_sample": false,
+    "num_beams": 1,
+    "max_new_tokens": 128,
+    "torch_dtype": "float16",
+    "seed": 20261115
+  },
+  "overlap_rule": "NFKC/casefold 4-word ngrams; additionally 4 consecutive ja/ko/zh script characters with spacing/punctuation removed; block if either overlaps.",
+  "sections": [
+    {
+      "section_id": "lyric-0000",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "d180f656415cacefd77fac79e00561d4cc1488b92c9daae3844fc3dde5d7b8bf",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a reflective melancholy, emphasizing the passage of time and the longing for enduring moments. The central theme explores the contrast between fleeting memories and the desire for permanence.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "4c357941bbcb43904c7934883f0d8308a97150715a47b074487b0a37853762db"
+    },
+    {
+      "section_id": "lyric-0001",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": "981d646c37fe5a4537c30e111ec8d173e80718b32c6721e19e85b216e9440ed5",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of nostalgic stillness and emotional containment, suggesting a longing for a preserved, idealized moment. The themes revolve around memory, permanence, and the quiet desire to remain in a state of unchanging, peaceful observation.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "de56da02b1fe9875be614d32989ae7a9967e5f0da29132f0272407e70147ec89"
+    },
+    {
+      "section_id": "lyric-0002",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": "61a17d28133800dc32903809df9e542c9c4a73555d3298702f2accfa0946bd75",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a reflective melancholy, emphasizing the passage of time and the longing for enduring connection. The central theme explores the contrast between fleeting moments and the desire for lasting memory.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "b1de3353c3a53a3d595246ea7387a881ab8ea692b56f7126d36489d01b4bc205"
+    },
+    {
+      "section_id": "lyric-0003",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": "76b64f5074ae70c12442cfbc3d1efe1849d0cef5ce62c35e914fed65b7661af9",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a mix of idealism and vulnerability, reflecting on youthful aspirations and the longing for enduring connection. The themes explore the contrast between hopeful dreams and the inevitability of change, with a quiet reverence for memories that persist beyond time.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "6d3991130839d39dd0f6a3f085d6cd46307380e58e131e2aaefd93a3e5e1e3b3"
+    },
+    {
+      "section_id": "lyric-0004",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": "86680fdf22cb9d89c87ee5f34cb6a8b833f8aee0930a90fd00254acbc52beabc",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a reflective melancholy, emphasizing the passage of time and the longing for enduring connection. The central theme explores the contrast between fleeting moments and the desire for lasting memory.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "b1de3353c3a53a3d595246ea7387a881ab8ea692b56f7126d36489d01b4bc205"
+    },
+    {
+      "section_id": "lyric-0005",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": "2907b0438a61b922fd73defa81e2e8211b205507e46e76b033202f30755c3415",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of urgency and emotional preservation, suggesting a deep longing to hold onto a relationship despite the passage of time. The themes revolve around memory, the struggle against change, and the desire to maintain a love that remains untouched by the present.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "4e6239782e20748c61dbe1737de36419ec6dde3d1e735a9159ea386cb76f20fb"
+    },
+    {
+      "section_id": "lyric-0006",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": "86680fdf22cb9d89c87ee5f34cb6a8b833f8aee0930a90fd00254acbc52beabc",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a reflective melancholy, emphasizing the passage of time and the longing for enduring connection. The central theme explores the contrast between fleeting moments and the desire for lasting memory.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "b1de3353c3a53a3d595246ea7387a881ab8ea692b56f7126d36489d01b4bc205"
+    },
+    {
+      "section_id": "span-0000",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    },
+    {
+      "section_id": "span-0002",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    }
+  ]
+}

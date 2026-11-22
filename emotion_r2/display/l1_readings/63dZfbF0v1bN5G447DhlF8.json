@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "track_id": "63dZfbF0v1bN5G447DhlF8",
+  "cohort": "random",
+  "display_only": true,
+  "registered_scores_unchanged": true,
+  "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+  "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "prompt_sha256": "ffdf21672c16d12394441664976928ac03a51b35d721d3925cca9be8adc58e3d",
+  "registered_checkpoint_sha256": "892074da5e45d106313a29a51c0ce5b81e248732d29a7e4e34f22610b5f85a0a",
+  "reading_label": "L1's interpretation of the lyrics",
+  "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+  "reading_type": "model_interpretation",
+  "decoding": {
+    "do_sample": false,
+    "num_beams": 1,
+    "max_new_tokens": 128,
+    "torch_dtype": "float16",
+    "seed": 20261115
+  },
+  "overlap_rule": "NFKC/casefold 4-word ngrams; additionally 4 consecutive ja/ko/zh script characters with spacing/punctuation removed; block if either overlaps.",
+  "sections": [
+    {
+      "section_id": "lyric-0000",
+      "set": "primary",
+      "language": "fr",
+      "text_sha256": "d3b9eb9298cf4c2149e99be39e6669a5eebe703a5289ccaebb2a2645dd8d617b",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a persistent, almost reverent optimism, emphasizing enduring hope and the unchanging glow of life's fundamental joys. The themes revolve around the fleeting nature of early innocence and the lasting presence of a radiant, aspirational future.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "a798a53a72da61d0889df7a31ff54267651de74aa595627c5d6a401a4a894a30"
+    },
+    {
+      "section_id": "lyric-0001",
+      "set": "primary",
+      "language": "fr",
+      "text_sha256": "ffa1403e23cb380bbedb9b43bc4aef80035d5f01355af275d266f913179ea676",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is serene and persistent, conveying a quiet, enduring presence of hope. The theme centers on the continuous, steady flow of optimism that remains strong even in darkness.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "080266523eb8458c5e15602265adcb12da7077388edf78ab9ae2b00426fb6417"
+    }
+  ]
+}

@@ -1,0 +1,254 @@
+{
+  "schema_version": 1,
+  "track_id": "7gJD9BarjoFwL2BNQ0rpWT",
+  "cohort": "random",
+  "display_only": true,
+  "registered_scores_unchanged": true,
+  "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+  "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "prompt_sha256": "ffdf21672c16d12394441664976928ac03a51b35d721d3925cca9be8adc58e3d",
+  "registered_checkpoint_sha256": "675159069669b4c68a17f365fa4759124d0f76fdabb91f4075e158358fb93b2c",
+  "reading_label": "L1's interpretation of the lyrics",
+  "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+  "reading_type": "model_interpretation",
+  "decoding": {
+    "do_sample": false,
+    "num_beams": 1,
+    "max_new_tokens": 128,
+    "torch_dtype": "float16",
+    "seed": 20261115
+  },
+  "overlap_rule": "NFKC/casefold 4-word ngrams; additionally 4 consecutive ja/ko/zh script characters with spacing/punctuation removed; block if either overlaps.",
+  "sections": [
+    {
+      "section_id": "lyric-0000",
+      "set": "primary",
+      "language": "ja",
+      "text_sha256": "3922e9c326504ac2de879f765ff3bdbc4d8db8967c3250216e4b310000e6e589",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a deep, lingering sorrow intertwined with a desperate, almost defiant persistence in the face of overwhelming despair. The central theme explores the tension between unfulfilled longing and the destructive power of emotional exhaustion.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "c1d8bb4a8ce2ec56347e802247e3040693fe27323751c6495d4c25db71166452"
+    },
+    {
+      "section_id": "lyric-0001",
+      "set": "primary",
+      "language": "ja",
+      "text_sha256": "62953aaf3821da8b5c371cfc2ada29c06bdee82413d41983a9c95da8f9b8d79b",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of longing and emotional vulnerability, juxtaposing brightness and emptiness to explore the tension between hope and isolation. The themes center on the search for connection amid inner desolation and the ambiguity of responsibility in relationships.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "bf980bedcbe66beda99138ed878b348099aaad424df22d2d10b76b66d735fb9e"
+    },
+    {
+      "section_id": "lyric-0002",
+      "set": "primary",
+      "language": "ja",
+      "text_sha256": "796a5c0d8c50fe8df6d85a08ff113dec54e15383109049a0e0f16489bbd2631f",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of profound loss and emotional disruption, emphasizing the consequences of self-centeredness and the resulting instability in existence. The themes explore the fragility of balance and the destructive impact of unchecked individualism.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "879fce27e900be499cf046dd5c1cc00172686cdcf55d8a3b6345dd6b9f9b2c63"
+    },
+    {
+      "section_id": "lyric-0003",
+      "set": "primary",
+      "language": "ja",
+      "text_sha256": "248341e4a44255be562e96c7eef6b3996f03281d464181c1fcda4cdb79e61223",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a deep, vulnerable yearning for connection, intertwined with a sense of enduring pain that has been both inflicted and transformed into strength. The theme explores how personal suffering, when accepted and reframed, can become a source of clarity and illumination for past regrets.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "b6495d64ce382d1dc637595fd1c0757cac64fe51903287241822b7fcf6874cfc"
+    },
+    {
+      "section_id": "lyric-0004",
+      "set": "primary",
+      "language": "ja",
+      "text_sha256": "38ab18cc35ee3e4a371cbe76c2969ef93beab77840b35a80ffdc9b9c9f906403",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a deep, almost desperate longing intertwined with a sense of inevitable sorrow, emphasizing emotional dependency and unfulfilled need. The themes revolve around the inescapable nature of love and loss, where absence and incompleteness create a persistent, haunting ache.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "d63f81ae7b83a09e668b60daf48193a9e9d6532b41b3d1b710d3237f19bf1309"
+    },
+    {
+      "section_id": "lyric-0005",
+      "set": "primary",
+      "language": "ja",
+      "text_sha256": "6773e2abc4c481f64051ea06f7bf6143d3e12373da9b18999bf6a9300d0acfd8",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of intense emotional contrast between luminous beauty and profound inner dryness, while the themes explore the struggle between desire and destruction in the pursuit of idealized perfection.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "242dffaaaa142898a4f4f1c100c793922858b56784897bd845b93cbdd173bea2"
+    },
+    {
+      "section_id": "lyric-0006",
+      "set": "primary",
+      "language": "ja",
+      "text_sha256": "f717c5ae0e9b854d1ebe3a8a4c7acda58b076d4ef672b44a4fe9275175bdc8f7",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of overwhelming intensity and self-centered ambition, while the themes explore the transformation of inner emotions into a profound, almost consuming sense of personal destiny.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "fe3f1642319b859e625aafb5ff274cd7442eac688ad5ac4186f6f25251132d57"
+    },
+    {
+      "section_id": "lyric-0007",
+      "set": "primary",
+      "language": "ja",
+      "text_sha256": "7d277bb7f7998344855c0fcfe98e8ea45e496bbf307819ba99def193a35b1b03",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a desperate, almost suffocating dependence, blending intense longing with a sense of inevitable sorrow. The themes explore unattainable love, emotional vulnerability, and the painful certainty of a bond that feels both essential and fatally flawed.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "706d797aa1dbca1f610306e85a8b688197c4681d8d839ac997cce9811d38ef71"
+    },
+    {
+      "section_id": "lyric-0008",
+      "set": "primary",
+      "language": "ja",
+      "text_sha256": "ab491f8ac9107ddd84f7a4566610ea587c4700d7dd314658392b7e33fa812b5b",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a deep sense of unresolved pain and persistent longing, emphasizing the futility of repeated attempts to fulfill inner desires. The central theme explores the idea of a heart burdened by unhealed wounds, where even the most sincere efforts to find happiness remain futile.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "3422dc65749209dae3d651859b4dc807cd9b1f1c99fc7011de43b5cc3ca0a61b"
+    },
+    {
+      "section_id": "lyric-0009",
+      "set": "secondary",
+      "language": "ja",
+      "text_sha256": "5894ab7533d9b23d065437e6ae640559aca8ce9a168924d9a8b03160788bb39f",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a persistent, determined longing amid unyielding fate, while the themes explore the tension between striving toward a singular ideal and the inevitable shadow cast by predetermined destiny.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "6ab8a4717762af5a113950c3578f8e7c60e1c88ccb8fd22fc4f4f523f13e45e7"
+    },
+    {
+      "section_id": "lyric-0010",
+      "set": "secondary",
+      "language": "ja",
+      "text_sha256": "a8f9ec735f967941f6191cc45b9bfb5ac8be7e28b5d02ccfa127b46866497776",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a desperate, almost obsessive devotion intertwined with deep emotional vulnerability and a sense of inevitable sorrow. The themes explore the suffocating dependence on love, the longing to fill unbridgeable emotional gaps, and the inescapable weight of fate-driven suffering.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "a01ede18c5642abc79daefbc0f4ede8f58a9d89dc4426d49ccf41728f6f8df41"
+    },
+    {
+      "section_id": "lyric-0011",
+      "set": "primary",
+      "language": "ja",
+      "text_sha256": "c743b710f14b534a4c7c6d684ed6e6ca4e43fc038a24ab504cf5dbbcdb1672f5",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is reverent and emotionally charged, emphasizing a deep, almost mystical connection. The themes revolve around devotion, fate, and an unbreakable bond that transcends ordinary relationships.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "3b1f15aa25cbdd76eaeb95e9a04911f82ba5c0ab4e398ce7bb59a2202320b60c"
+    },
+    {
+      "section_id": "span-0000",
+      "set": "secondary",
+      "language": "ja",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    },
+    {
+      "section_id": "span-0010",
+      "set": "secondary",
+      "language": "ja",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    }
+  ]
+}

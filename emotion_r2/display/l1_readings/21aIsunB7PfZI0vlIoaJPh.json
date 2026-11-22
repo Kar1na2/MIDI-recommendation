@@ -1,0 +1,173 @@
+{
+  "schema_version": 1,
+  "track_id": "21aIsunB7PfZI0vlIoaJPh",
+  "cohort": "random",
+  "display_only": true,
+  "registered_scores_unchanged": true,
+  "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+  "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "prompt_sha256": "ffdf21672c16d12394441664976928ac03a51b35d721d3925cca9be8adc58e3d",
+  "registered_checkpoint_sha256": "57119a71b1c8d643dfe8de18ee9ab237a2c6ef7ce5162b7c9cc7a80ef51fc3f0",
+  "reading_label": "L1's interpretation of the lyrics",
+  "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+  "reading_type": "model_interpretation",
+  "decoding": {
+    "do_sample": false,
+    "num_beams": 1,
+    "max_new_tokens": 128,
+    "torch_dtype": "float16",
+    "seed": 20261115
+  },
+  "overlap_rule": "NFKC/casefold 4-word ngrams; additionally 4 consecutive ja/ko/zh script characters with spacing/punctuation removed; block if either overlaps.",
+  "sections": [
+    {
+      "section_id": "lyric-0000",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "165a12ca4827980ad572a365e61f866e065024ce3494f52dba136a0f4dd8acfc",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of energetic solidarity and defiant joy, emphasizing mutual support and the power of shared presence in challenging or overwhelming environments. The themes revolve around resilience, unyielding loyalty, and the transformative impact of standing together in the face of adversity.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "d2bf57281c1991cd59957630c0eba2bf7b1489665997f27557160a7a76c88c75"
+    },
+    {
+      "section_id": "lyric-0001",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "9871036f1316c4ca2bc9e8e82e87ce8442a923b86e0dd47c17a158aa34670d4c",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests a yearning for freedom and authenticity in a world that imposes judgment, contrasting with a past shared experience rooted in spontaneity and mutual understanding. The theme explores the tension between societal expectations and the desire to live according to one's true, unfiltered self.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "fc6d3f101dbf8cc4087aa194a76d8cd2daee7322313877646ce7c564fc7ecd58"
+    },
+    {
+      "section_id": "lyric-0002",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "c2a888c790453cd963799b25cbd01289e0c7e522d1746c5241712db5bcc06b11",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is defiant and confident, emphasizing independence from materialism and societal expectations. The theme centers on deep, unshakeable loyalty and a rebellious embrace of a modern, defiant identity.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "c230aed80a6de0839bcc5307fd419aa26689179a35a0e9f0f9e9dfb5ffb16dda"
+    },
+    {
+      "section_id": "lyric-0003",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "b2ecb69f6d97860f791b88d55606edc4d903a1523cee7bb58cee7076a2029cba",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of deep emotional connection and reassurance, emphasizing vulnerability and the offering of comfort. The central theme revolves around mutual understanding and the healing power of presence and empathy.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "43b14b0e8e005ceaae3b1beb0e0ebce4c450781abff0de9689129b24e8e9c1a4"
+    },
+    {
+      "section_id": "lyric-0004",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "9871036f1316c4ca2bc9e8e82e87ce8442a923b86e0dd47c17a158aa34670d4c",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests a yearning for freedom and authenticity in a world that imposes judgment, contrasting with a past shared experience rooted in spontaneity and mutual understanding. The theme explores the tension between societal expectations and the desire to live according to one's true, unfiltered self.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "fc6d3f101dbf8cc4087aa194a76d8cd2daee7322313877646ce7c564fc7ecd58"
+    },
+    {
+      "section_id": "lyric-0005",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "fc41aa98d715a4803ece47be6efe82aea5c3e7b031f443070f635686eaf1ace3",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a defiant confidence and a rejection of materialism, emphasizing deep personal connection and loyalty. The theme centers on finding fulfillment and joy through companionship rather than wealth or external validation.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "2649c501f7e20d9d5d9ad8de8b1b61936f16acd4fcc159f1a242a0181002396b"
+    },
+    {
+      "section_id": "lyric-0006",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "e8b5ef6271873f036bc36bd376e8143f750e20dffd1a9b21fc73af0a507ffa71",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is resolute and triumphant, conveying a sense of unshakable determination and collective ascent. The central theme revolves around enduring opposition and maintaining inner strength, with a belief that resilience and unity will ultimately prevail.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "62b53024d4783ef8b052a46c74f19c3ce0ad47431a6f108d7b41882eff07f349"
+    },
+    {
+      "section_id": "lyric-0007",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "428792258b8c0ede210013e82141690d076bf4c99477ad02bdc190e13409fc0e",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a defiant confidence and a rejection of materialism, emphasizing emotional connection and loyalty as sources of fulfillment. The theme centers on a deep, unshakeable bond that transcends societal expectations and material wealth.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "f5cd3dd153bce8e0cc24243efbcb1ca36669e006753d94b0a29dc804b25170af"
+    },
+    {
+      "section_id": "span-0000",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    }
+  ]
+}

@@ -1,0 +1,220 @@
+{
+  "schema_version": 1,
+  "track_id": "1lEk3U3MzbDeL5MNHkE9JU",
+  "cohort": "random",
+  "display_only": true,
+  "registered_scores_unchanged": true,
+  "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+  "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "prompt_sha256": "ffdf21672c16d12394441664976928ac03a51b35d721d3925cca9be8adc58e3d",
+  "registered_checkpoint_sha256": "0361605b5843ca3cd88536dc0aef8701c351e0eb026f4168d5145755020dad68",
+  "reading_label": "L1's interpretation of the lyrics",
+  "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+  "reading_type": "model_interpretation",
+  "decoding": {
+    "do_sample": false,
+    "num_beams": 1,
+    "max_new_tokens": 128,
+    "torch_dtype": "float16",
+    "seed": 20261115
+  },
+  "overlap_rule": "NFKC/casefold 4-word ngrams; additionally 4 consecutive ja/ko/zh script characters with spacing/punctuation removed; block if either overlaps.",
+  "sections": [
+    {
+      "section_id": "lyric-0000",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "30b3bdaab1ff97a797de54a047dbda8661cec6e9e814f504736dfc2643c8742c",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of deep emotional struggle and spiritual vulnerability, while the underlying theme suggests a hopeful invitation toward healing and restoration through a divine presence.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "dde871d436a98bc49a73eec00d0d453970b3ea5b4cc1eba024075713a9ece74f"
+    },
+    {
+      "section_id": "lyric-0001",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "5d986c601832bddd651d3cba2ad30009f45ff32c8bc7722177bcb147a7948a59",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of urgent invitation and spiritual longing, suggesting a profound call to transcend personal limits and seek deeper meaning. The central theme explores the search for fulfillment and connection beyond the self, pointing toward a transcendent source of sustenance and purpose.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "84116f89bc2b7e37da8ebe6fa74e00d7a38dd96c4096390422b3dbb50009d973"
+    },
+    {
+      "section_id": "lyric-0002",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "959c5faa5a4bbf24d4c2227b872167771503ae22da29ac86de95c5253689c266",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of divine accessibility and sacrificial love, emphasizing reconciliation through a profound, redemptive act. The central theme revolves around the availability of forgiveness rooted in a solemn, costly offering.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "c04a4a1cbdc730a419e32a9699c131d52aa01e54d588324a106403a61fc93db1"
+    },
+    {
+      "section_id": "lyric-0003",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "25ad292db646d35e8d0d46d0e83c93b1c16dee5d7e9d78015c5aff0e4fdffd9c",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of urgency and spiritual invitation, emphasizing release from past burdens and a forward-moving call to action. The central theme revolves around redemption, renewal, and the promise of a transformative present moment.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "f8335901e894b740fbd0f769c9de598cd36dab22355ff0692e4f209e405ba8ae"
+    },
+    {
+      "section_id": "lyric-0004",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "fa90d64a688d57d16d58e663ec34c4a66721b3c20689475ce8068ba57da8cd1c",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of hopeful transformation and spiritual renewal, emphasizing the exchange of pain for peace and the emergence of new beginnings through divine presence. The central theme revolves around resurrection and the promise of inner restoration amid suffering.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "d93de1c930479f80f97e993cb2dac303eec64e0363a54f73277abe456c71d48f"
+    },
+    {
+      "section_id": "lyric-0005",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "1e44e1c2516b69badffe2b3880df7d4e189c3a8073fbdb302d7fc115920d9834",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is reverent and inviting, emphasizing accessibility and grace. The central theme revolves around divine forgiveness made possible through sacrifice.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "e3bd7bcf80788739f5fa46d576b5417ac62815a90512c67169c094857b44c90e"
+    },
+    {
+      "section_id": "lyric-0006",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": "f4fc0f15457f2eb07a084fdb81a74a4ad4cc12ba2c8ae9d8e398f0c2511709b8",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is reverent and celebratory, emphasizing gratitude and awe toward a divine figure. The central theme revolves around the profound impact of sacrifice and the resulting spiritual devotion.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "572215f3e92dfa539f8b06af3b15031406595b7b944c274a83f9c64ae46b499f"
+    },
+    {
+      "section_id": "lyric-0007",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": "fb5181713a9d37d58cc754a5a39a3e74b57635b094eb37d5bd872e73e5ddf0c0",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is reverent and exultant, emphasizing awe and devotion toward a divine figure. The central theme revolves around the triumph of a sovereign, life-giving presence whose rise marks a profound spiritual transformation.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "6ba6a57077298d0261035fe3c7d49b00ddcfec47353187087a709c927f25c0cd"
+    },
+    {
+      "section_id": "lyric-0008",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": "878424949ec98585d30cf1db273ca61f020b16a7e8fc5fea0e9072558f0f2cda",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of urgent, joyful accessibility, emphasizing divine readiness and unconditional acceptance. The central theme revolves around the transformative power of grace, portraying it as a welcoming, restorative force available to all, regardless of past failure.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "ff3af74098f17370edc9a58e324717218f34377a921260e56772958e13a42203"
+    },
+    {
+      "section_id": "lyric-0009",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": "7b007cfccc4e6127ab4fbaacc057bb593c9c9946c5d698bf1b3c269697fc08fc",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is reverent and exultant, emphasizing awe and devotion. The central theme revolves around the divine authority and triumphant presence of a salvific figure.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "6fe25f247ca410124c262efd6935a39bd166647ca01860420d1a7149a4d2d03d"
+    },
+    {
+      "section_id": "span-0000",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    },
+    {
+      "section_id": "span-0007",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    }
+  ]
+}

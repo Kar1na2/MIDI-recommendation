@@ -1,0 +1,220 @@
+{
+  "schema_version": 1,
+  "track_id": "3clPsjTbx4UOPMeQn7FZkV",
+  "cohort": "pilot",
+  "display_only": true,
+  "registered_scores_unchanged": true,
+  "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+  "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "prompt_sha256": "ffdf21672c16d12394441664976928ac03a51b35d721d3925cca9be8adc58e3d",
+  "registered_checkpoint_sha256": "c43dd8b569217660793e8a4338745913c9d4ad243b8298fbd9ce443615b22931",
+  "reading_label": "L1's interpretation of the lyrics",
+  "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+  "reading_type": "model_interpretation",
+  "decoding": {
+    "do_sample": false,
+    "num_beams": 1,
+    "max_new_tokens": 128,
+    "torch_dtype": "float16",
+    "seed": 20261115
+  },
+  "overlap_rule": "NFKC/casefold 4-word ngrams; additionally 4 consecutive ja/ko/zh script characters with spacing/punctuation removed; block if either overlaps.",
+  "sections": [
+    {
+      "section_id": "lyric-0000",
+      "set": "primary",
+      "language": "ja",
+      "text_sha256": "635d68d10477a497e97e600a3de69e8409aad966dc9485b2fba8d5c4443bd348",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a quiet, reflective melancholy intertwined with a sense of gentle longing, while the themes explore the bittersweet transition of a season and the emotional vulnerability beneath surface-level calm.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "23bf4612f08aaf645afdf47f3f64b24c1c71ce19e6837c5f40bef975003c50d4"
+    },
+    {
+      "section_id": "lyric-0001",
+      "set": "primary",
+      "language": "ja",
+      "text_sha256": "ed583c2265e5279be0f8e1c1cb96b06fde1aaa60b23653c0cc29e52ab1c2fcf9",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is vibrant and emotionally charged, blending sensory immediacy with a sense of sudden, overwhelming attraction. The themes revolve around the intensity of a new connection, the physical and emotional sensations it evokes, and the quiet, flowing intimacy that develops between individuals.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "fe36ce9b56798e908a3761fdea6d275d5f5421eb2dccbf304e4ef4d03e8ab070"
+    },
+    {
+      "section_id": "lyric-0002",
+      "set": "primary",
+      "language": "ja",
+      "text_sha256": "1c04da02b19e620734ff9d2f7b132809ee5e48ee728160fac0709559ee8c3182",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a reflective, slightly melancholic resignation as summer fades, blending fleeting intimacy with a sense of quiet release. The themes explore the transient nature of youthful connection and the gentle, inevitable parting that follows seasonal change.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "4aeb1beed7f9c31fdce90b5b96fc434d9a4b7f0ff21e443d6feb50fc0b7edb78"
+    },
+    {
+      "section_id": "lyric-0003",
+      "set": "primary",
+      "language": "ja",
+      "text_sha256": "49f401648e620e9828c6f2274a72c92adbaab04c053fc2bb5032e642b2d54390",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests a quiet resignation mixed with uncertainty, conveying a sense of closure that feels ambiguous and slightly unresolved. The themes revolve around separation, internal conflict, and the hesitation to fully commit or release something emotionally significant.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "765590d4fac29ebe7d577f8b53db1559f31ad7960698bf5fdb6297630ca0c8e0"
+    },
+    {
+      "section_id": "lyric-0004",
+      "set": "primary",
+      "language": "ja",
+      "text_sha256": "56f7debe69c08085d319d0739bc7ef2d1c4559d1725dc4107ab27e66764f5414",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of quiet irritation mixed with subtle longing, while the themes explore the tension between effortless confidence and the emotional pull of intimacy.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "2d25826841ce50faa32484566272c8c09f24f5f7a2de9118f12a1bb564b92eac"
+    },
+    {
+      "section_id": "lyric-0005",
+      "set": "primary",
+      "language": "ja",
+      "text_sha256": "33841cd24a9fb68520ed06767ed7eee2a2a8d7548328c37a7e4e7684fac460e1",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a persistent, almost desperate longing for attention, emphasizing a deep personal need to be acknowledged and cared for. The theme centers on the intimacy and exclusivity of that need, suggesting a yearning that is both vulnerable and deeply individual.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "0cd8d9468b4ac52467e3480e15442f8701926d79221d2cbdd9a3672593919cc7"
+    },
+    {
+      "section_id": "lyric-0006",
+      "set": "primary",
+      "language": "ja",
+      "text_sha256": "895b84e0489aaddafde36ce06111bfa05770004aa1c5a0c347c7d210a78a5cb1",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a quiet, melancholic reflection on the fleeting nature of summer and the unspoken emotional weight shared between individuals. The themes explore vulnerability, the bittersweet end of a season, and the quiet struggle of enduring emotional tension without words.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "3fffe9109b1c7d16d387bf4806e39b3ee3977b37cc40196e8f58685f37b7ae98"
+    },
+    {
+      "section_id": "lyric-0007",
+      "set": "primary",
+      "language": "ja",
+      "text_sha256": "d8445123b674cbb70a1f65f17c77d69de4319441abf7d0d6eb8c88735a28f918",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a mix of intense emotional vulnerability and growing tension, marked by a sense of urgency and physical intimacy. Themes of connection, fear, and the struggle between desire and self-awareness emerge, suggesting a moment of profound personal reckoning.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "c1c0b065c455ce4d3d26e18d14517b31951ac9c26fc72a9f051c186b724641d6"
+    },
+    {
+      "section_id": "lyric-0008",
+      "set": "primary",
+      "language": "ja",
+      "text_sha256": "a1b2ec8455a8b9e9d43c9b0acd182ff98748d0601e1a357685bb0ecaa9b54f9f",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a quiet, reflective melancholy amid fleeting summer sensations, emphasizing the bittersweet passage of time and the gentle release of emotional connections. The themes explore impermanence, natural cycles, and the quiet intimacy of parting as summer fades.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "11c29705dc936e36b97710c606fc6a9773ea90502eaefe8f6d26600cf1a3ddae"
+    },
+    {
+      "section_id": "lyric-0009",
+      "set": "secondary",
+      "language": "ja",
+      "text_sha256": "9431f0a914f5c8644f54676febc76a45ac96a0649b394e018499467278d43002",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a resigned acceptance of emotional unavailability, emphasizing inner strength and a refusal to react with pain or vulnerability. The central theme explores the tension between desire for connection and the quiet endurance of emotional distance.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "ad79af11f6f13d0c42892aaeef84dc09a8829cb28d1ca0644e0447d5b596fd73"
+    },
+    {
+      "section_id": "span-0000",
+      "set": "secondary",
+      "language": "ja",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    },
+    {
+      "section_id": "span-0010",
+      "set": "secondary",
+      "language": "ja",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    }
+  ]
+}

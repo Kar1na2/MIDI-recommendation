@@ -1,0 +1,160 @@
+{
+  "schema_version": 1,
+  "track_id": "6AI3ezQ4o3HUoP6Dhudph3",
+  "cohort": "random",
+  "display_only": true,
+  "registered_scores_unchanged": true,
+  "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+  "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "prompt_sha256": "ffdf21672c16d12394441664976928ac03a51b35d721d3925cca9be8adc58e3d",
+  "registered_checkpoint_sha256": "969d220b977ce7c36bf3865b30a93401e1607a272b217f34c59b60c911e77376",
+  "reading_label": "L1's interpretation of the lyrics",
+  "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+  "reading_type": "model_interpretation",
+  "decoding": {
+    "do_sample": false,
+    "num_beams": 1,
+    "max_new_tokens": 128,
+    "torch_dtype": "float16",
+    "seed": 20261115
+  },
+  "overlap_rule": "NFKC/casefold 4-word ngrams; additionally 4 consecutive ja/ko/zh script characters with spacing/punctuation removed; block if either overlaps.",
+  "sections": [
+    {
+      "section_id": "lyric-0000",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "9072acf4dcfcc53df3bba2a031f587d84aee4cf3265929f6c262f9d96db74367",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests a blend of eerie intimacy and surreal unpredictability, while the themes explore the intersection of mortality, memory, and the uncanny presence of the past.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "4d5027359cb31bfec3f2732aa3c86f5c18261b4cfd6e09144d52fc391858f337"
+    },
+    {
+      "section_id": "lyric-0001",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "302925429512994880181f8282b1455f606c97680ac2f383c9cc4a0731022cb3",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is aggressive and confrontational, oscillating between boastful dominance and dark, menacing threats. The themes revolve around power, control, moral ambiguity, and the exploitation of vulnerability in interpersonal dynamics.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "a8333c0f725063396eff5ea6e048baa282611f8f47f2a643288cd2a881d43a2c"
+    },
+    {
+      "section_id": "lyric-0002",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "262c4ebcbb3cfe3af62592c50de544fc5f091df2d3492b8501914aa54d061f23",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a persistent sense of rejection and alienation, emphasizing a recurring, unrelenting disparity in perception or acceptance. The theme centers on a fundamental disconnect between groups, highlighting a cycle of misunderstanding and mutual disapproval.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "92534da11e6a50e05027e377105d44cfbbbb75c801dcd7b2d236757f955b2289"
+    },
+    {
+      "section_id": "lyric-0003",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "78970829dc063b5502dc2d5eee00edf9069917b2b79967d651f9a26da33d9de1",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is confrontational and assertive, emphasizing dominance and defiance against perceived rivals or misrepresentations. The themes revolve around power, control, cultural authenticity, and the rejection of external judgment or manipulation.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "f06f70e5c08e03cc3451d85985063ebc65fd2a394cde2ee2438ba1bbe9c78921"
+    },
+    {
+      "section_id": "lyric-0004",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "262c4ebcbb3cfe3af62592c50de544fc5f091df2d3492b8501914aa54d061f23",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a persistent sense of rejection and alienation, emphasizing a recurring, unrelenting disparity in perception or acceptance. The theme centers on a fundamental disconnect between groups, highlighting a cycle of misunderstanding and mutual disapproval.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "92534da11e6a50e05027e377105d44cfbbbb75c801dcd7b2d236757f955b2289"
+    },
+    {
+      "section_id": "lyric-0005",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "beac309cf5a5642701e20e20a7845cb313a2d6f159d900536f79cb924e5731e8",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is critical and confrontational, exposing systemic exploitation and deception. The central theme revolves around the cyclical nature of power, colonization, and the illusion of freedom within a cultural and economic framework.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "853ffef1d4d841a392f49b026a799d1ded267c9925651df2fe8af5b1ff0dd286"
+    },
+    {
+      "section_id": "lyric-0006",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "1c68111ecfbdd77e0d63da55b526c63a2decfb9425c7c885148d11a3bf22c890",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is aggressive and confrontational, emphasizing dominance and defiance. The themes revolve around rebellion, allure, and a sense of unpredictability in interpersonal dynamics.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "3216ff0abdadaf1520a89b11722ea34b43c878ab75f45ac678f4601e7280fa07"
+    },
+    {
+      "section_id": "lyric-0007",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "e960d54571f4f2cfbc482745f8cd20383efc1a162d64d9845a5a6cd71de5b522",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests a rhythmic, almost ritualistic inquiry into connection and mutual commitment, emphasizing repetition to convey a sense of urgency or shared intention. The themes revolve around identity in relationship, the search for belonging, and the performative nature of closeness.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "55a09609320f1bac72cc88c0a1c4a20e5e170b0319bea7d5cb6853be3622a704"
+    }
+  ]
+}

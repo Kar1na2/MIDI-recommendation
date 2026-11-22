@@ -1,0 +1,152 @@
+{
+  "schema_version": 1,
+  "track_id": "0i55G9XxEPCxYwzozhQun5",
+  "cohort": "random",
+  "display_only": true,
+  "registered_scores_unchanged": true,
+  "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+  "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "prompt_sha256": "ffdf21672c16d12394441664976928ac03a51b35d721d3925cca9be8adc58e3d",
+  "registered_checkpoint_sha256": "939c10d90c745f4ad1e113d7fa28260b494fffe5f6d21cb9b251c4314f64c119",
+  "reading_label": "L1's interpretation of the lyrics",
+  "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+  "reading_type": "model_interpretation",
+  "decoding": {
+    "do_sample": false,
+    "num_beams": 1,
+    "max_new_tokens": 128,
+    "torch_dtype": "float16",
+    "seed": 20261115
+  },
+  "overlap_rule": "NFKC/casefold 4-word ngrams; additionally 4 consecutive ja/ko/zh script characters with spacing/punctuation removed; block if either overlaps.",
+  "sections": [
+    {
+      "section_id": "lyric-0000",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": "a286f2155a9a0c53143b6ac4ba7034b7f6310209eb426b944c68f50f3665f94e",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is confrontational and provocative, blending sensuality with aggression. The themes explore power dynamics, boundary violation, and the blurring of intimacy and domination.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "001b7c94d8014d45b3aac5da6e1a30cb0dba59bded19d40dc629f433fb6c21ca"
+    },
+    {
+      "section_id": "lyric-0001",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "a5b2be8ad5a2b0b1168354e9a5438d2f6900c2d5c3e1f433f9f7e160eca8d1e5",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a passionate, almost desperate longing for connection, blending vulnerability with a sense of emotional intensity and idealized intimacy. The themes explore the transformative power of love, the internal struggle between solitude and companionship, and the yearning to share dreams and moments exclusively with another.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "ebedb1c1c4e19bb373d7a459d83310bd07069562f43f16d0635fce352edd3ad9"
+    },
+    {
+      "section_id": "lyric-0002",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "df4bc9ee09a4719ec7f3824036608fcb55e4cb73a37c6bc7941793306cce18b2",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a persistent, earnest commitment amid skepticism and external criticism, emphasizing loyalty and dedication despite perceived contradictions. The central theme revolves around the tension between public perception and personal devotion, highlighting the struggle to maintain authenticity in relationships.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "c0f58c815692a8cf1be36dadfceab0924547d361c62c40e51daa9099926f2378"
+    },
+    {
+      "section_id": "lyric-0003",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "4249f939cc95e71108a02d52d847341ee82f93376ab0e24148c1488ef29b51e9",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of vulnerability and emotional fragility, emphasizing deep dependence and the fear of emotional collapse in close connection. The central theme explores the tension between longing for intimacy and the risk of inner disintegration when that connection is present.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "95917a16aed794f956344f6b98c25165e1ccf1fdba7fcd2f930550394612da48"
+    },
+    {
+      "section_id": "lyric-0004",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "f42722e6e362e2b3e931b5c43b3cb948a460f6835653e5499fd7ef05ffff36c1",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a passionate, almost desperate longing for connection, blending vulnerability with a sense of emotional intensity and idealized intimacy. The themes explore the transformative power of love, the yearning for companionship in isolation, and the fantasy of shared, transcendent moments.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "d87398de76bf0962a78970af7d9223f4a9d5da8b3eda7256e4b62e21614bd288"
+    },
+    {
+      "section_id": "lyric-0005",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": "f7eac02f544fef28c97a680e646d4f7ac31c3af92647509cbe2cc8248be92cf7",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a mix of emotional dependency and visceral resentment, highlighting internal conflict between longing and distress. The themes explore the fragility of emotional connection and the painful consequences of intimacy that ultimately lead to disintegration.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "f788234d7d0bd7981833198201cc260ec28728dda9a60efe34c2792d96a11ff2"
+    },
+    {
+      "section_id": "span-0000",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    },
+    {
+      "section_id": "span-0005",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    }
+  ]
+}

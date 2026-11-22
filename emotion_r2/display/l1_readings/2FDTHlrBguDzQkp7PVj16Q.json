@@ -1,0 +1,88 @@
+{
+  "schema_version": 1,
+  "track_id": "2FDTHlrBguDzQkp7PVj16Q",
+  "cohort": "random",
+  "display_only": true,
+  "registered_scores_unchanged": true,
+  "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+  "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "prompt_sha256": "ffdf21672c16d12394441664976928ac03a51b35d721d3925cca9be8adc58e3d",
+  "registered_checkpoint_sha256": "eab02cb8832ff66fffbe088dfd2ca6af1754ba833fb9f9a2ec855ff5f28d35c0",
+  "reading_label": "L1's interpretation of the lyrics",
+  "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+  "reading_type": "model_interpretation",
+  "decoding": {
+    "do_sample": false,
+    "num_beams": 1,
+    "max_new_tokens": 128,
+    "torch_dtype": "float16",
+    "seed": 20261115
+  },
+  "overlap_rule": "NFKC/casefold 4-word ngrams; additionally 4 consecutive ja/ko/zh script characters with spacing/punctuation removed; block if either overlaps.",
+  "sections": [
+    {
+      "section_id": "lyric-0000",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "b065f9c5ba94d6ae31caf7379b8f74f04cf99d2be9434789da45896c808b0858",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of exaggerated self-awareness and playful exaggeration, blending humor with a theme of overwhelming abundance and social pressure. The underlying theme explores the tension between personal limits and the demands of social or romantic environments.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "6f682b426a65d8a17addee778451146711bf79c4d8a4e093a2d5a8ac078304c9"
+    },
+    {
+      "section_id": "lyric-0001",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "3d0a07bb25f7b0a60d1f1a787f0fad9da3cc7cb37774c2c567d40214cfa91226",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a mix of boastfulness and introspection, highlighting ambition and self-awareness amid personal and professional challenges. Themes of materialism, success, and the tension between public image and inner struggle emerge throughout.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "2db9818277e33ad84577d7b717d6df6489fcb178353e98b511abcdc074eb99b4"
+    },
+    {
+      "section_id": "lyric-0002",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "d249d58cfffaaea78a3e32e363e132abf0e8a91d9e9e2b978a8150623d49b97a",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone presents a self-aware, boastful confidence laced with irony and contradictions, oscillating between bravado and self-deprecation. Themes explore identity fragmentation, materialism, relationships marked by imbalance, and the tension between appearance and reality in personal and social interactions.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "6afb2bbc5664fcff8e0c2047e04908cc22a83e4affd92bb2093f203da70893d7"
+    },
+    {
+      "section_id": "span-0000",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    }
+  ]
+}

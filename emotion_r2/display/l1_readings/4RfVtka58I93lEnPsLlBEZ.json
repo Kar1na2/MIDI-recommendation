@@ -1,0 +1,241 @@
+{
+  "schema_version": 1,
+  "track_id": "4RfVtka58I93lEnPsLlBEZ",
+  "cohort": "pilot",
+  "display_only": true,
+  "registered_scores_unchanged": true,
+  "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+  "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "prompt_sha256": "ffdf21672c16d12394441664976928ac03a51b35d721d3925cca9be8adc58e3d",
+  "registered_checkpoint_sha256": "4507062401f09ef391f0d7f3760d11c81b3e98b21410e19d97aa07d2ca4292e0",
+  "reading_label": "L1's interpretation of the lyrics",
+  "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+  "reading_type": "model_interpretation",
+  "decoding": {
+    "do_sample": false,
+    "num_beams": 1,
+    "max_new_tokens": 128,
+    "torch_dtype": "float16",
+    "seed": 20261115
+  },
+  "overlap_rule": "NFKC/casefold 4-word ngrams; additionally 4 consecutive ja/ko/zh script characters with spacing/punctuation removed; block if either overlaps.",
+  "sections": [
+    {
+      "section_id": "lyric-0000",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "de735bda54b24da472fa4ce91791538c8080622bb7a1826e611a592403f8b2dc",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a warm, almost intense emotional surge, blending sensuality with a sense of sudden, vivid awakening. The theme explores the involuntary and powerful rise of memory or desire, portrayed as a physical and emotional heat that stirs within.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "73a7f8dbf48433f6d58d7be4e0587422f5c63535357ce0f4f693993c4e9e4dea"
+    },
+    {
+      "section_id": "lyric-0001",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "79e50abf0b8ab182fd6f5607eccd2d959baf54896aeea752b2c8b0f9be16ca60",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of melancholy and longing, emphasizing the struggle to find meaning in a world that offers only emptiness. The central theme explores the painful search for identity and connection in the absence of genuine belonging.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "a68b637fe4dac8b6a09b9493973c15927c82cfe6dd3c8303f56a4e49971b1690"
+    },
+    {
+      "section_id": "lyric-0002",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "e149a910362bb7e48a1e6fd300ad77418f75a57ea332d2d197b22b6e2955ef92",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests a quiet tension between moral restraint and hidden恶意, exploring the potential for inner darkness to manifest in unseen, destructive ways. The themes revolve around the duality of human intent—how even well-meaning actions may carry hidden consequences, and how suppressed negativity can eventually surface with harmful intent.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "0da67de9609f20e3acce0abbf3c3fc8d03167a20e9b496944685e898efd850f2"
+    },
+    {
+      "section_id": "lyric-0003",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "4a6cf468a002aa05cd6243fd81f6e75391241187714b0dede4f469b5a01a39b8",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a reflective and somewhat melancholic contrast between goodness and malice, highlighting internal conflict and the complexity of human emotions. The themes explore the duality of nature and character, suggesting that even beauty can be intertwined with hidden flaws or inner struggle.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "78ca71ff9dd09eb38ef524bcafd1e18effacfa9236955b4edddc53efcdafff01"
+    },
+    {
+      "section_id": "lyric-0004",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "c6daec4cd0e961f6e13389e737fbd487f2245a94ba9f883831c933b21e6b606f",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of quiet longing and emotional fragility, underscored by a persistent yearning for connection and presence. The themes explore the dissolution of intimacy and the human need for companionship in the face of absence.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "e891dc5ca0f8aaf47fa12bb310568702ef54c2027a0ad385768d96a72ed75e6f"
+    },
+    {
+      "section_id": "lyric-0005",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "44baeb90981f861a236cfe30d9423819857ff1a21a3351fcca79d1aec4a8f7ab",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of quiet longing and persistent yearning, underscored by a repetitive rhythm that reflects unresolved emotional attachment. The themes explore the fragility of presence and the enduring desire to reconnect despite inevitable absence.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "1c619762fd4e20988dbb0734bc9165ccf9f447b2872f7dcb6f57d5149412b2dd"
+    },
+    {
+      "section_id": "lyric-0006",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "6038f9801a4d40f1d73163fae55743e20d8f7f30584f0ba5fa4948a2b65bd849",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a warm, intense emotional surge, blending longing with a sensuous immediacy. The themes explore the deep, almost physical pull of memory and desire, where emotional heat mirrors the persistence of unresolved feelings.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "ccff7e93f933d19ee92c578f5a9dc3a14921df0f96e84d95dc2c10babca840a3"
+    },
+    {
+      "section_id": "lyric-0007",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "9e315a4d2188653b1733b829c871746cddd2f7e4af697ab72a69bbf4374b5fd9",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of quiet sorrow and persistent longing, while the themes explore memory, the passage of time, and the emotional weight of enduring quiet struggles.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "b903a136db8f431d658f6dd97bc97390e9b028767cc9e93ce5d515aa0686198c"
+    },
+    {
+      "section_id": "lyric-0008",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "e149a910362bb7e48a1e6fd300ad77418f75a57ea332d2d197b22b6e2955ef92",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests a quiet tension between moral restraint and hidden恶意, exploring the potential for inner darkness to manifest in unseen, destructive ways. The themes revolve around the duality of human intent—how even well-meaning actions may carry hidden consequences, and how suppressed negativity can eventually surface with harmful intent.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "0da67de9609f20e3acce0abbf3c3fc8d03167a20e9b496944685e898efd850f2"
+    },
+    {
+      "section_id": "lyric-0009",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "e0b3da8f4b977ff78727c1aa3e11290484a906909f3047a09ded438403a89ad7",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests a reflective and somewhat melancholic contemplation on internal contradictions, while the themes explore the duality of human nature—particularly the tension between kindness and malice, and the difficulty of discerning true intentions.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "a1f0594449f2acb0bf5fdf3337aa09bb028e97634ccbd1a6d77cb771d9fad708"
+    },
+    {
+      "section_id": "lyric-0010",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "50cb7a92c38c4645aa126cdee85531543132d19c5d8ff10ef2d9cf34e0349519",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of quiet sorrow and longing, underscored by a search for connection in the face of loss. The themes explore the fragility of relationships and the persistent yearning for presence and emotional continuity.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "7242763a3ed54375cc3ffd65e66ed76b60fb61ec3aec0256eefdb9a26b0d3d5d"
+    },
+    {
+      "section_id": "lyric-0011",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "44baeb90981f861a236cfe30d9423819857ff1a21a3351fcca79d1aec4a8f7ab",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of quiet longing and persistent yearning, underscored by a repetitive rhythm that reflects unresolved emotional attachment. The themes explore the fragility of presence and the enduring desire to reconnect despite inevitable absence.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "1c619762fd4e20988dbb0734bc9165ccf9f447b2872f7dcb6f57d5149412b2dd"
+    },
+    {
+      "section_id": "span-0000",
+      "set": "secondary",
+      "language": "ko",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    }
+  ]
+}

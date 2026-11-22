@@ -1,0 +1,177 @@
+{
+  "schema_version": 1,
+  "track_id": "6XVp0q2S9ORgOeHBeaXlke",
+  "cohort": "random",
+  "display_only": true,
+  "registered_scores_unchanged": true,
+  "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+  "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "prompt_sha256": "ffdf21672c16d12394441664976928ac03a51b35d721d3925cca9be8adc58e3d",
+  "registered_checkpoint_sha256": "75cf2b7890018cea2041a4d670d87276bafe8236de5dabcced4cf8bc56699ffe",
+  "reading_label": "L1's interpretation of the lyrics",
+  "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+  "reading_type": "model_interpretation",
+  "decoding": {
+    "do_sample": false,
+    "num_beams": 1,
+    "max_new_tokens": 128,
+    "torch_dtype": "float16",
+    "seed": 20261115
+  },
+  "overlap_rule": "NFKC/casefold 4-word ngrams; additionally 4 consecutive ja/ko/zh script characters with spacing/punctuation removed; block if either overlaps.",
+  "sections": [
+    {
+      "section_id": "lyric-0000",
+      "set": "secondary",
+      "language": "ko",
+      "text_sha256": "062d1fcec96e04bdb8f6b19d632e3e7922b4834045d5cdbf057801f6c4922651",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is repetitive and hypnotic, suggesting a sense of lingering or cyclical emotion. The themes revolve around resonance, reflection, and perhaps an unresolved or ongoing internal state.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "65698492297bcc7db24c8c406aac29374e38ec2ccc535c9ce2a4d65a96af4c21"
+    },
+    {
+      "section_id": "lyric-0001",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "d195ab8d4089ec5c0369866394705f08f850b3c901d8e785461be375c8c9e454",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a warm, affectionate enthusiasm, emphasizing deep emotional connection and sensory pleasure in the presence of the beloved. The themes revolve around intimacy, mutual admiration, and the transformative joy found in love.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "74ca9d42bb7f96e8e5af683cea778f852433cc2cfdb8b65523b17eb3545eb6e5"
+    },
+    {
+      "section_id": "lyric-0002",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "b482a21de1067f1638e858e3c5b0511f8995fc765482c1a583c3da424c1f6b61",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a deep, quiet wonder at the transformative power of connection, emphasizing how love brings unexpected light and joy even in difficult circumstances. The central theme explores the idea that human bonds can fundamentally alter emotional states, turning despair into hope and ordinary moments into profound fulfillment.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "cff531b2fa56ad1690f15156ada7d39a4dba399c8ffb81e5bd991b52ea4640a5"
+    },
+    {
+      "section_id": "lyric-0003",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "a0b088a2e7255870cfb7cdb0dfe5238aeeafe2dd4753cde52e78e6df9c43d24b",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a reflective and tender sense of emotional vulnerability, while the themes explore the quiet strength of patience and the gradual, soothing presence of a loved one.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "d9bec00a16a47eb29e0064b30ab3eb433809f68d98e3459446123dc016a2fcc5"
+    },
+    {
+      "section_id": "lyric-0004",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "5ce54de9c1cd2d4a6ecb4c112f38b78cdafe55c9e21cf42850c405d5f1b744be",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a warm, affectionate admiration, emphasizing the beauty and charm found in a partner's presence. The themes revolve around the transformation of emotional connection and the deepening of love through subtle, intimate gestures.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "c2e3ec2bc80aebd0b13ca8d6aa0151872ab0231b7d47f971951e9f87ef6acef7"
+    },
+    {
+      "section_id": "lyric-0005",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "79f0693a5494ab249dc2300503f7b8f071b57d0736e12a6b469f14e42c828287",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a reflective sense of personal growth and quiet self-acceptance, underpinned by a subtle undertone of emotional effort and self-awareness. The theme centers on transformation through care and introspection, suggesting a journey toward inner balance and self-worth.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "11bb8e3b23f688f074096de2c70c04f1aaf44ab19e0a455445de3679a61dc508"
+    },
+    {
+      "section_id": "lyric-0006",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "298a3dd381416ac47cc31cc02e5bdf73ea7233a4aae8c63299f912bbd284e0e6",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a warm, affectionate admiration, blending tenderness with quiet intimacy. The themes explore the transformation of a relationship into a source of deep emotional comfort and beauty.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "2d0b7870bfded2a49673bebe0d28a0a141fa3080c2e8abd8a56b611c93afb00f"
+    },
+    {
+      "section_id": "lyric-0007",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "0ab083ce881647f097cd1cce33d3a9c959b7b528391696d3bf3653a967902e2d",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys an overwhelming, almost suffocating intensity of affection and admiration, presented with a repetitive, almost hypnotic rhythm. The themes explore the paradox of being adored to the point of unbearable pressure, and the emotional weight of being both cherished and overwhelmed by that love.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "0b11c30f28844c31ee0ec6be4c3589f13e6491a82afcb8364135a2ca57b3708f"
+    },
+    {
+      "section_id": "lyric-0008",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "f4c78457afa734055b1892454d1724160e3c769bd6829e681283088b54767d5a",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a solemn, heartfelt vow, emphasizing enduring affection and personal devotion. The theme centers on the promise of unwavering love as a constant through time and uncertainty.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "2c1e6c964302a146d2ccb8db35ac3d1d5d12a33780b37876478824193097d683"
+    }
+  ]
+}

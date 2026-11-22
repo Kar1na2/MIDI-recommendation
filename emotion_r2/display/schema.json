@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Task I display-only text model exports",
+  "$defs": {
+    "nullableProbability": {"type": ["number", "null"], "minimum": 0, "maximum": 1},
+    "classifier": {
+      "type": "object",
+      "required": ["status", "probabilities", "valence", "registered_valence", "absolute_valence_error", "reproduction_check", "truncated"],
+      "properties": {
+        "status": {"enum": ["ok", "reused_round1", "missing_text", "unsupported_or_uncertain_language"]},
+        "probabilities": {
+          "type": "object", "required": ["positive", "neutral", "negative"],
+          "properties": {
+            "positive": {"$ref": "#/$defs/nullableProbability"},
+            "neutral": {"$ref": "#/$defs/nullableProbability"},
+            "negative": {"$ref": "#/$defs/nullableProbability"}
+          },
+          "additionalProperties": false
+        },
+        "valence": {"type": ["number", "null"], "minimum": -1, "maximum": 1},
+        "registered_valence": {"type": ["number", "null"], "minimum": -1, "maximum": 1},
+        "absolute_valence_error": {"type": ["number", "null"], "minimum": 0, "maximum": 0.00001},
+        "reproduction_check": {"enum": ["passed", "not_scored_registered_status"]},
+        "truncated": {"type": ["boolean", "null"]}
+      },
+      "additionalProperties": false
+    }
+  },
+  "oneOf": [
+    {
+      "type": "object",
+      "required": ["schema_version", "track_id", "cohort", "display_only", "registered_scores_unchanged", "models", "verification_absolute_tolerance", "sections"],
+      "properties": {
+        "schema_version": {"const": 1}, "track_id": {"type": "string"},
+        "cohort": {"enum": ["random", "pilot"]}, "display_only": {"const": true},
+        "registered_scores_unchanged": {"const": true}, "verification_absolute_tolerance": {"const": 0.00001},
+        "models": {"type": "object", "required": ["T1", "T3"]},
+        "sections": {"type": "array", "items": {
+          "type": "object", "required": ["section_id", "set", "language", "text_sha256", "T1", "T3"],
+          "properties": {
+            "section_id": {"type": "string"}, "set": {"enum": ["primary", "secondary"]},
+            "language": {"type": ["string", "null"]}, "text_sha256": {"type": ["string", "null"]},
+            "T1": {"$ref": "#/$defs/classifier"}, "T3": {"$ref": "#/$defs/classifier"}
+          }, "additionalProperties": false
+        }}
+      }, "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "required": ["schema_version", "track_id", "cohort", "display_only", "registered_scores_unchanged", "model_id", "revision", "prompt_sha256", "reading_label", "interpretation_notice", "decoding", "sections"],
+      "properties": {
+        "schema_version": {"const": 1}, "track_id": {"type": "string"},
+        "cohort": {"enum": ["random", "pilot"]}, "display_only": {"const": true},
+        "sections": {"type": "array", "items": {
+          "type": "object", "required": ["section_id", "set", "registered_status", "status", "reading", "reading_label", "interpretation_notice", "overlap_flags"],
+          "properties": {"reading": {"type": ["string", "null"]}}
+        }}
+      }
+    }
+  ]
+}

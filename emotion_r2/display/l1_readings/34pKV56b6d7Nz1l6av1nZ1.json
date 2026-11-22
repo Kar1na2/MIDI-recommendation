@@ -1,0 +1,220 @@
+{
+  "schema_version": 1,
+  "track_id": "34pKV56b6d7Nz1l6av1nZ1",
+  "cohort": "random",
+  "display_only": true,
+  "registered_scores_unchanged": true,
+  "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+  "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "prompt_sha256": "ffdf21672c16d12394441664976928ac03a51b35d721d3925cca9be8adc58e3d",
+  "registered_checkpoint_sha256": "55dfc7754d25bd6d72e15b397050f6e17157974ee888ba08e4f2b79b0a67e8c9",
+  "reading_label": "L1's interpretation of the lyrics",
+  "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+  "reading_type": "model_interpretation",
+  "decoding": {
+    "do_sample": false,
+    "num_beams": 1,
+    "max_new_tokens": 128,
+    "torch_dtype": "float16",
+    "seed": 20261115
+  },
+  "overlap_rule": "NFKC/casefold 4-word ngrams; additionally 4 consecutive ja/ko/zh script characters with spacing/punctuation removed; block if either overlaps.",
+  "sections": [
+    {
+      "section_id": "lyric-0000",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": "3ef4d2ed9d634a3f92379284a82a1d549220c228b901e7e04c3e874847964f89",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests a sense of quiet introspection and emotional distance, while the themes explore isolation and the subtle tensions between inner thoughts and external reality.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "4ddb3d424b3b0bbe847c01cce3af6004dd1c2752d8c7999509d128b1523c1527"
+    },
+    {
+      "section_id": "lyric-0001",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "75137e102e912aa35e712f843372a011ff2b283cf0914a8c4077ed47b7ab9eb0",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys an intense, almost obsessive desire, blending urgency with a sense of emotional or material longing. The themes explore the allure of immediate gratification and the repetitive, almost ritualistic pursuit of something desired, suggesting a deeper yearning for connection, validation, or fulfillment.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "4cde06a6891151af2d87e63c719bca95b3f69e43c9bdf9a751da86983922ee81"
+    },
+    {
+      "section_id": "lyric-0002",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "28e51ef8417b28bcfda8adff5f472961028c7428392e3dd2966e1aca86f06d4a",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is urgent and defiant, conveying a sense of relentless motion and unapologetic intensity. The themes explore identity, performance, and the tension between visibility and silence.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "dd8c6823d45664c9e21df9e52b33961d3c529822bbcef845bbdbfe2f8bbf7a46"
+    },
+    {
+      "section_id": "lyric-0003",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "4c5c8db24140e5a5990caf0d3441f8a8ddb499d023b3300da26d10b9698f0582",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys an intense, desperate longing, emphasizing emotional vulnerability and an unrelenting desire for connection and fulfillment. The central theme explores the pursuit of complete devotion and the depth of emotional need that drives a person to seek total surrender.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "9d908e6295ddd7a062035b9bb0cbde89ee795bb2c685a434cf1c7d3c67dd0595"
+    },
+    {
+      "section_id": "lyric-0004",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "75137e102e912aa35e712f843372a011ff2b283cf0914a8c4077ed47b7ab9eb0",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys an intense, almost obsessive desire, blending urgency with a sense of emotional or material longing. The themes explore the allure of immediate gratification and the repetitive, almost ritualistic pursuit of something desired, suggesting a deeper yearning for connection, validation, or fulfillment.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "4cde06a6891151af2d87e63c719bca95b3f69e43c9bdf9a751da86983922ee81"
+    },
+    {
+      "section_id": "lyric-0005",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "fb32d05f0908f3587f682af50524561ba7ae3c5f5c731524b70a14fc56f3cbf5",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests a calm, inviting openness with a hint of playful assurance, emphasizing connection and mutual possibility. The themes revolve around potential intimacy, shared journeys, and the quiet confidence in forming a bond through simple, accessible actions.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "07195b411ccf85189d81f102ec4eb05dfc4ea8b202035277760e95b89a0248cc"
+    },
+    {
+      "section_id": "lyric-0006",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "a24fd375b9d4c2e81a0b5b8014088e5b34ca4506503ef7c1283eb076489f8c16",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys an intense, desperate longing, emphasizing emotional extremity and a need for complete, unreserved connection. The central theme explores the pursuit of total surrender and the depth of desire for absolute devotion.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "86446b81f5d9aa61143423e9a54e53e7084425c297bf9b6cc82b426007b14088"
+    },
+    {
+      "section_id": "lyric-0007",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "75137e102e912aa35e712f843372a011ff2b283cf0914a8c4077ed47b7ab9eb0",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys an intense, almost obsessive desire, blending urgency with a sense of emotional or material longing. The themes explore the allure of immediate gratification and the repetitive, almost ritualistic pursuit of something desired, suggesting a deeper yearning for connection, validation, or fulfillment.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "4cde06a6891151af2d87e63c719bca95b3f69e43c9bdf9a751da86983922ee81"
+    },
+    {
+      "section_id": "lyric-0008",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": "32b86113c12303e39a4758528399a5480ef04280b09f8a64887ba238dfd49628",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests a yearning for intense, complex emotional experiences, while the themes explore the allure and depth of deeply psychological, possibly overwhelming or ambiguous, connections.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "b0b737c78e6fe50d0313f7631acbd4a6822f699ad1602e33442c5b2d74517fbb"
+    },
+    {
+      "section_id": "lyric-0009",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "10d2955996fa010d3190ac2d0ac1baa39488588ae55d7c61cdff5b955e58377b",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys an intense, almost obsessive desire, blending excitement with a sense of immediate, unyielding longing. The themes explore the allure of material possession and the emotional intensity tied to achieving a desired outcome.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "5deb7c23323924961a04749d23afe619774ff54a986158cde7c52c4466d7641f"
+    },
+    {
+      "section_id": "span-0000",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    },
+    {
+      "section_id": "span-0008",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    }
+  ]
+}

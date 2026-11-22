@@ -1,0 +1,186 @@
+{
+  "schema_version": 1,
+  "track_id": "2i2gDpKKWjvnRTOZRhaPh2",
+  "cohort": "random",
+  "display_only": true,
+  "registered_scores_unchanged": true,
+  "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+  "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "prompt_sha256": "ffdf21672c16d12394441664976928ac03a51b35d721d3925cca9be8adc58e3d",
+  "registered_checkpoint_sha256": "580d782d052be7316146b5da9cb941ec44b39a0dc776e93f928adccb173b5d66",
+  "reading_label": "L1's interpretation of the lyrics",
+  "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+  "reading_type": "model_interpretation",
+  "decoding": {
+    "do_sample": false,
+    "num_beams": 1,
+    "max_new_tokens": 128,
+    "torch_dtype": "float16",
+    "seed": 20261115
+  },
+  "overlap_rule": "NFKC/casefold 4-word ngrams; additionally 4 consecutive ja/ko/zh script characters with spacing/punctuation removed; block if either overlaps.",
+  "sections": [
+    {
+      "section_id": "lyric-0000",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "541b41e441b602438af3989799f6b2f504c987a8d292331bd8a9d72b0193ab38",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests a dreamlike, sensual escapism, blending intimacy with a sense of reverie and mild intoxication. The themes revolve around desire, self-perception, and the allure of shared, transcendent experiences under soft, mysterious light.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "5f7d66d49e04f4e678438b3d814f9750a1ff0fc2b7a9159986d335f0e08a59c7"
+    },
+    {
+      "section_id": "lyric-0001",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "c8d0721b52564963d116dd2109017d230de8f9c2e07305decbe3da138ff0fb83",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a detached yet observant awareness, emphasizing emotional distance and subtle surveillance. The themes explore self-presentation, internal vigilance, and the tension between appearance and hidden perception.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "414a5d9947c80de33b09cdc418a6327e4444a58617c16808ae0dc8a212249f48"
+    },
+    {
+      "section_id": "lyric-0002",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "1db13524c9a570e60432341e3644e0c1af3003203cf7ba32cabaa451eb5e95aa",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of release and liberation, suggesting a desire to abandon burdens and embrace spontaneity. The central theme revolves around the transformative power of connection and the promise of freedom found in shared moments.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "5bbe08e521180ee4b77ffd008d8b8e164244c3dbcb60a18562cd5485c658d172"
+    },
+    {
+      "section_id": "lyric-0003",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "541b41e441b602438af3989799f6b2f504c987a8d292331bd8a9d72b0193ab38",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests a dreamlike, sensual escapism, blending intimacy with a sense of reverie and mild intoxication. The themes revolve around desire, self-perception, and the allure of shared, transcendent experiences under soft, mysterious light.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "5f7d66d49e04f4e678438b3d814f9750a1ff0fc2b7a9159986d335f0e08a59c7"
+    },
+    {
+      "section_id": "lyric-0004",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "4f909fca14d48ff4e8bd34fed67b1b1f4209641d436a4710fb7e571d78fb5bf3",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of calm assurance and emotional protection, emphasizing care and stability. The themes revolve around mental well-being, mutual respect, and the effort to maintain emotional balance in a relationship.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "b96843d804d98a817636ae51425e52e7cbe25a6fa2585fdc8d47d2ab5b58504b"
+    },
+    {
+      "section_id": "lyric-0005",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "8b832cdc148ea5186d2bd9addca58205bb13a0ed913260878c16358548c3465f",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests a reflective and emotionally charged intimacy, emphasizing surrender and mutual prioritization. The themes revolve around freedom, emotional dependence, and the tension between connection and release.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "14c22aa74f5f8cc56d8a30e2907c3fffec3fc155e5aba26810f9e6813789b569"
+    },
+    {
+      "section_id": "lyric-0006",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "dd4877ae386a84227cba91cb2f093d215f43188a3f00cc18bf40d1249722745b",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests a yearning for escape and intimacy, blending sensuality with a dreamlike, almost reverent detachment. The themes explore desire, illusion, and the blurred boundaries between self-perception and connection.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "9bf175228f06a6d9bb319ae86290b42d92e171d560a1d13ad5af375651a781b7"
+    },
+    {
+      "section_id": "lyric-0007",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": "f619dc1122e3d9a8ac7278425aef09ccee43a69469071b4017c8e9ba2cfa8437",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is expansive and aspirational, conveying a sense of boundless journey and unity. The themes revolve around elevation—both physical and emotional—and the enduring connection formed through shared movement toward an unreachable ideal.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "b971b8f5238cf280e68aecd267ed9e9281f170a614185f8a76a91c1780cb6cd2"
+    },
+    {
+      "section_id": "span-0000",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    },
+    {
+      "section_id": "span-0008",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    }
+  ]
+}

@@ -1,0 +1,241 @@
+{
+  "schema_version": 1,
+  "track_id": "6IqKFke4ZhKbGYULllEezY",
+  "cohort": "random",
+  "display_only": true,
+  "registered_scores_unchanged": true,
+  "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+  "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "prompt_sha256": "ffdf21672c16d12394441664976928ac03a51b35d721d3925cca9be8adc58e3d",
+  "registered_checkpoint_sha256": "8e1748d7a998f3bf849fb52bf9a43677c803db3b7a12c6b30f2aaa17e942ed9a",
+  "reading_label": "L1's interpretation of the lyrics",
+  "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+  "reading_type": "model_interpretation",
+  "decoding": {
+    "do_sample": false,
+    "num_beams": 1,
+    "max_new_tokens": 128,
+    "torch_dtype": "float16",
+    "seed": 20261115
+  },
+  "overlap_rule": "NFKC/casefold 4-word ngrams; additionally 4 consecutive ja/ko/zh script characters with spacing/punctuation removed; block if either overlaps.",
+  "sections": [
+    {
+      "section_id": "lyric-0000",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "f3a511676935226203a95466d0df52e6930e2ad792f132cad56a324a45ba7cfd",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of urgency and determination, driven by a desire to assert personal agency and achieve success on one's own terms. The themes explore ambition, self-reliance, and the pursuit of material or symbolic validation as a path to fulfillment.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "ec9cf8800f0517f2b44b51026749a2d72184752a0283a54eadfe7f8536758e50"
+    },
+    {
+      "section_id": "lyric-0001",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "c59237de9a634f315fd92e756dd7f56479852d7d2c4a38489545eb3125c9ab8e",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is urgent and defiant, conveying a sense of immediate action and resistance. The central theme revolves around confronting opposition with resolve and determination.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "e3e6034a87e642c3b8d02cdf9956442c036fdf7c21544a25fdad85bb335ef124"
+    },
+    {
+      "section_id": "lyric-0002",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "243888fe3a0c85bf569aec14c499c30d1e071c25c7662de62f581b0d594c518b",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys urgency and determination, emphasizing a push to act decisively. The themes revolve around risk, commitment, and the consequences of inaction.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "897e7d8dc7fec243d8d7cb26ded23044fbf871fd037eeddcf2d2b98d316ab098"
+    },
+    {
+      "section_id": "lyric-0003",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "58875d9d2d4f1b61d4b94547ac1cd56174d9478bfb55ff46753a4f36f4c60186",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is detached and abstract, conveying a sense of emotional ambiguity mixed with casual, almost indifferent observations. The themes suggest a disconnection from conventional meaning, emphasizing randomness and the absence of clear emotional or logical structure.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "4324d8b1a65e00b6a9b69353e28aa5a18684270d40372cb7d7781d73e415af23"
+    },
+    {
+      "section_id": "lyric-0004",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "9e59f066e624c71ba7053c10980363781235e57c7c8b4069f33751c31f472942",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is confident and resolute, emphasizing forward motion and determination. The themes revolve around perseverance, commitment to a course of action, and the inevitability of progress.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "ded9154bf85c7ea6365fb153aa6757f26506229a9b4747ea0e9c90f4661ecb41"
+    },
+    {
+      "section_id": "lyric-0005",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "f3a511676935226203a95466d0df52e6930e2ad792f132cad56a324a45ba7cfd",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of urgency and determination, driven by a desire to assert personal agency and achieve success on one's own terms. The themes explore ambition, self-reliance, and the pursuit of material or symbolic validation as a path to fulfillment.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "ec9cf8800f0517f2b44b51026749a2d72184752a0283a54eadfe7f8536758e50"
+    },
+    {
+      "section_id": "lyric-0006",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "7495b862fbef08cee9e97d541bd4b68c825a1430372afa9b649ff4a763cacf15",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of urgency and internal struggle, intertwined with a fragile hope for resolution. The themes explore decision-making under pressure and the tension between fate and personal agency.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "d1d453371735b36def5c74311718fc9c003e580234100a52d50705052bf0e167"
+    },
+    {
+      "section_id": "lyric-0007",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "ea57eb829546877ed6908c9d89a4e470c1427e2fa4479ae0d09d6d4fcc503814",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys urgency and determination, emphasizing a push forward with no room for hesitation. The themes revolve around ambition, risk, and the consequences of inaction, suggesting a cultural or societal pressure to achieve or face failure.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "a618ee8a40cd6f75f6bcef330566b4fd8ab287bf046db4ccf1b17c407b15a466"
+    },
+    {
+      "section_id": "lyric-0008",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "58875d9d2d4f1b61d4b94547ac1cd56174d9478bfb55ff46753a4f36f4c60186",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is detached and abstract, conveying a sense of emotional ambiguity mixed with casual, almost indifferent observations. The themes suggest a disconnection from conventional meaning, emphasizing randomness and the absence of clear emotional or logical structure.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "4324d8b1a65e00b6a9b69353e28aa5a18684270d40372cb7d7781d73e415af23"
+    },
+    {
+      "section_id": "lyric-0009",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "02eb4abb803246d9ef7226262f79b8cea55aecf7e71d9a14ff3fd9d8b9414ddc",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is confident and resolute, emphasizing forward motion and bold commitment. The themes revolve around determination, risk-taking, and the inevitability of progress.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "1128895c33417b040462232bcbeadf4f68d0c814a12320aefe0275689175f249"
+    },
+    {
+      "section_id": "lyric-0010",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "3ecda84ad8a15981757f59bdc2a104fccfc4aebf3cf2a156e9d3a04e809495b8",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of urgency and personal determination, intertwined with emotional intensity and a desire for recognition or validation. The themes explore identity, commitment, and the pursuit of something significant, possibly symbolic or deeply personal.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "0fb47c9ea8df51740211357daa72d610770397c4fe658993035c657100065738"
+    },
+    {
+      "section_id": "lyric-0011",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "689424dea5ac8bb0e23070920fbddb2b16e85d930237c29188337c60c2ce3522",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests a sense of determination and high stakes, emphasizing ambition and the refusal to settle for less. The theme centers on the idea of embracing bold action as a necessity for achieving significant outcomes.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "37b28617ac09fd77c461351d7ebb7485600b0a3efb326857b5eb411cf3ef50a3"
+    },
+    {
+      "section_id": "span-0000",
+      "set": "secondary",
+      "language": "uncertain",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    }
+  ]
+}

@@ -1,0 +1,220 @@
+{
+  "schema_version": 1,
+  "track_id": "01prGWjCTxKBxJc400zwvQ",
+  "cohort": "random",
+  "display_only": true,
+  "registered_scores_unchanged": true,
+  "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+  "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "prompt_sha256": "ffdf21672c16d12394441664976928ac03a51b35d721d3925cca9be8adc58e3d",
+  "registered_checkpoint_sha256": "542433256d4ba7ed06bcc19c4a462c57d5e630701643e4fce55c0522f591db07",
+  "reading_label": "L1's interpretation of the lyrics",
+  "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+  "reading_type": "model_interpretation",
+  "decoding": {
+    "do_sample": false,
+    "num_beams": 1,
+    "max_new_tokens": 128,
+    "torch_dtype": "float16",
+    "seed": 20261115
+  },
+  "overlap_rule": "NFKC/casefold 4-word ngrams; additionally 4 consecutive ja/ko/zh script characters with spacing/punctuation removed; block if either overlaps.",
+  "sections": [
+    {
+      "section_id": "lyric-0000",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "305038a78933808f6f468960414608819a895d5cfa4f1102a662714d11857404",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone presents a confident, self-assured persona that blends glamor with a sense of playful defiance, while the themes explore identity, cultural exchange, and the allure of fame through a lens of personal expression and performance.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "8a5c972e5b2113a2d5de044ce16e54fef72d43afd116ec39a3930870e0d4af26"
+    },
+    {
+      "section_id": "lyric-0001",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "0e3ee96494192a19c0939b4250c6ffb757d2c023aabf1dd0d409cb39407acdaa",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of calculated danger and allure, emphasizing stealth, independence, and a magnetic presence in urban environments. The themes revolve around secrecy, personal agency, and the seductive nature of operating beyond conventional boundaries.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "956d994fb30cf7ff08b231db6674eeaba18cd20e327890809e56789317a9358e"
+    },
+    {
+      "section_id": "lyric-0002",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "305038a78933808f6f468960414608819a895d5cfa4f1102a662714d11857404",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone presents a confident, self-assured persona that blends glamor with a sense of playful defiance, while the themes explore identity, cultural exchange, and the allure of fame through a lens of personal expression and performance.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "8a5c972e5b2113a2d5de044ce16e54fef72d43afd116ec39a3930870e0d4af26"
+    },
+    {
+      "section_id": "lyric-0003",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "73ecd1dbfb6325b0cb9d4526ef42b6eeaf1e8e4f8ea83ff5755e208fa5f400e2",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is confident and self-assured, emphasizing strength and resilience through a bold, energetic stance. The theme centers on personal empowerment and the transformation of inner resolve into outward manifestation.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "b85e4caeab30a7cbc1c703ea791a5f6b09145fb7138f90b1d12df9cbb87b0faf"
+    },
+    {
+      "section_id": "lyric-0004",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "889f643327b5404cccbfc9bca7834a8830fd15e0593c7feb01dd15956effa43d",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of confidence and effortless luxury, emphasizing lifestyle choices and material expression. The themes revolve around freedom, self-assurance, and the presentation of a curated, stylish existence.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "9deac953f8efd081b3ae896201643fcf1045612f6000e97c3a8f5d442d238c31"
+    },
+    {
+      "section_id": "lyric-0005",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "0e3ee96494192a19c0939b4250c6ffb757d2c023aabf1dd0d409cb39407acdaa",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of calculated danger and allure, emphasizing stealth, independence, and a magnetic presence in urban environments. The themes revolve around secrecy, personal agency, and the seductive nature of operating beyond conventional boundaries.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "956d994fb30cf7ff08b231db6674eeaba18cd20e327890809e56789317a9358e"
+    },
+    {
+      "section_id": "lyric-0006",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "ccc4d7596b0a155be4af927aae8248b73d04fb78089736dcd53548adf205f139",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is confident and self-assured, presenting a sense of effortless charisma and cultural blending. The themes revolve around identity, performance, and the intersection of personal style with global influences.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "871ab9a4a1812fda7aa02a519e4a1fdfa17961bd16b8d0fa716a557f6381ab79"
+    },
+    {
+      "section_id": "lyric-0007",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "9290f4fd2552a038990f2c9b2f03ae21a9ba6cbd2d309c850a4a03bb455b34d2",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is confident and assertive, emphasizing self-empowerment through a bold, unapologetic declaration. The theme centers on authenticity and personal strength, contrasting manufactured image with genuine self-identity.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "5ede833f0f5fc9c891701dc039c3f60871ba7a5c9f852e4c2cbe1ef919587eaa"
+    },
+    {
+      "section_id": "lyric-0008",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "e17b3205e2c085109fb543ba58137d4edba7c73f6b88fe3811191ade6ee0c3e9",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests a rhythmic, sensuous energy, evoking a sense of emotional and physical stimulation. The themes center on attraction, arousal, and the influence of music and presence on mood.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "13d2d31825030f80fdc8fc078c9bb84247ecfec3d2df363911c99f9b9d615333"
+    },
+    {
+      "section_id": "lyric-0009",
+      "set": "secondary",
+      "language": "uncertain",
+      "text_sha256": "ba9e243008b24c75424166601e60d3965cc58a4b26d7b14f2f7ce38d4c3676d5",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is confident and self-assured, emphasizing a sense of personal empowerment and defiance of external validation. The central theme revolves around the assertion of individual identity and the rejection of superficial praise in favor of genuine self-acceptance.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "bfdf05ebf6ed62bf239e48048ef8c96f4b30c4d3f57413f023eda1914317d34b"
+    },
+    {
+      "section_id": "span-0000",
+      "set": "secondary",
+      "language": "uncertain",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    },
+    {
+      "section_id": "span-0010",
+      "set": "secondary",
+      "language": "uncertain",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    }
+  ]
+}

@@ -1,0 +1,139 @@
+{
+  "schema_version": 1,
+  "track_id": "0iWFz0Q5Qha9bx325ocFWq",
+  "cohort": "random",
+  "display_only": true,
+  "registered_scores_unchanged": true,
+  "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+  "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "prompt_sha256": "ffdf21672c16d12394441664976928ac03a51b35d721d3925cca9be8adc58e3d",
+  "registered_checkpoint_sha256": "52ca29b7a6d1ea110e46e7f9e7273a5892a7ba17ee32b132363076162c4445b3",
+  "reading_label": "L1's interpretation of the lyrics",
+  "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+  "reading_type": "model_interpretation",
+  "decoding": {
+    "do_sample": false,
+    "num_beams": 1,
+    "max_new_tokens": 128,
+    "torch_dtype": "float16",
+    "seed": 20261115
+  },
+  "overlap_rule": "NFKC/casefold 4-word ngrams; additionally 4 consecutive ja/ko/zh script characters with spacing/punctuation removed; block if either overlaps.",
+  "sections": [
+    {
+      "section_id": "lyric-0000",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "54fad797750e7e0f378c6c0c255d19ed7b462a04a98d519441eb8975a677bedb",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a passionate yet cautious desire, balancing intense emotional longing with a need for mutual commitment and quality. The theme centers on the importance of authenticity and presence in a close, intimate relationship.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "af96ec571987d5916dbfb22aa53499820d8ca4ee5986a30bbacb520c59531738"
+    },
+    {
+      "section_id": "lyric-0001",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "430dfe19cef68d9ea8874dd3e267a72d0d11ce12faf98969498ad3e0ecf830d7",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a confident and assertive expression of intimacy, emphasizing mutual understanding and personal boundaries within a romantic context. The theme centers on the assertion of individuality and the demand for respect in emotional and physical connection.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "7f206612e3e67ea02f54d9436ab3dd6fca56c4a2b880d9ec922129cf53c5b14f"
+    },
+    {
+      "section_id": "lyric-0002",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "e24cef1cd9d1e8d4782bcffefa00a97c165b39f0e7c25aba1e787d7c3961e1ef",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a possessive and directive intimacy, emphasizing control and expectation in a personal relationship. The central theme revolves around the imposition of idealized standards of affection, suggesting a one-sided focus on performance and conformity.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "9cf05d28ddf7d7c2ebe9dc1e80c195cc82a4c157d6f50d280410955fa836be80"
+    },
+    {
+      "section_id": "lyric-0003",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "3ea3178b9bbd529c1697b898c8e078de34edf26396225fbf135914ed709df3e1",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests a yearning for deep, attentive connection, emphasizing mutual understanding and responsiveness over physicality alone. The theme centers on emotional intimacy and the importance of active listening and shared vulnerability in sustaining love.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "99dd4c4500d102062b8e28a98c2262603ca904a858d659018b19b4870ff07c2c"
+    },
+    {
+      "section_id": "lyric-0004",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "430dfe19cef68d9ea8874dd3e267a72d0d11ce12faf98969498ad3e0ecf830d7",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a confident and assertive expression of intimacy, emphasizing mutual understanding and personal boundaries within a romantic context. The theme centers on the assertion of individuality and the demand for respect in emotional and physical connection.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "7f206612e3e67ea02f54d9436ab3dd6fca56c4a2b880d9ec922129cf53c5b14f"
+    },
+    {
+      "section_id": "lyric-0005",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "a7b2ded9af049a2193e6ae89dd63b5ae5691eace888049515f25b0140db8eaf5",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a possessive and directive intimacy, emphasizing control and expectation in a personal relationship. The central theme revolves around the imposition of idealized standards of affection, suggesting a one-sided focus on performance and conformity.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "9cf05d28ddf7d7c2ebe9dc1e80c195cc82a4c157d6f50d280410955fa836be80"
+    },
+    {
+      "section_id": "span-0000",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    }
+  ]
+}

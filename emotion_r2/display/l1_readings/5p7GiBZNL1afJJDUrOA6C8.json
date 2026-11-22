@@ -1,0 +1,186 @@
+{
+  "schema_version": 1,
+  "track_id": "5p7GiBZNL1afJJDUrOA6C8",
+  "cohort": "pilot",
+  "display_only": true,
+  "registered_scores_unchanged": true,
+  "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+  "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "prompt_sha256": "ffdf21672c16d12394441664976928ac03a51b35d721d3925cca9be8adc58e3d",
+  "registered_checkpoint_sha256": "9c7d74db6993a595567a564e7f05ed7dbe4e96c23f7317ad96c80cec28637318",
+  "reading_label": "L1's interpretation of the lyrics",
+  "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+  "reading_type": "model_interpretation",
+  "decoding": {
+    "do_sample": false,
+    "num_beams": 1,
+    "max_new_tokens": 128,
+    "torch_dtype": "float16",
+    "seed": 20261115
+  },
+  "overlap_rule": "NFKC/casefold 4-word ngrams; additionally 4 consecutive ja/ko/zh script characters with spacing/punctuation removed; block if either overlaps.",
+  "sections": [
+    {
+      "section_id": "lyric-0000",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": "3d5b263dcc1c5ce60858ced4d0954a6c2b9e7140da518c53e7366feb51de41a1",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is repetitive and emphatic, suggesting a sense of building intensity or emotional resonance. The themes revolve around affirmation, persistence, and a cyclical or escalating emotional state.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "6abdbe93dd191eac83b0e2340e64ff050ec855980c8a6ce55b0ab7b66d74ba03"
+    },
+    {
+      "section_id": "lyric-0001",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "ee38ab0c9ef12df02a47cd40cb4f2daee9b210768e1b0557141066a01b37ea1b",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of disillusionment and critical distance, highlighting a shift from hope to detachment. The themes revolve around transformation, the loss of shared meaning, and a moral or emotional judgment toward those who remain unaware or unresponsive.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "7ce1856ece92d29f5172fcf4549cfb75a8278a76fd5ff575058fe9dc55d2393d"
+    },
+    {
+      "section_id": "lyric-0002",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "89fc4a939fcfa8d5754187158b50dbbb8a377060027cb24f8506e9b1215859fa",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of internal tension between ambition and instability, marked by a restless drive amid growing isolation and emotional strain. The themes explore the cost of pursuing excess and self-assertion, revealing a paradox where success fuels disorientation and a deepening sense of alienation.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "ad7630022efee9b27906d48fbe5ed14f0ca27bfcaecaadd86845c8e12ff59d34"
+    },
+    {
+      "section_id": "lyric-0003",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "398dcba29bc1efa74f33845a891f6f9c17325152927e986fbcfdb9994e734372",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of disillusionment and critical distance, highlighting a shift from idealism to a fragmented, altered reality. The themes explore transformation, loss of authenticity, and a moral or emotional judgment toward those who remain unaware or unresponsive to change.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "7c432a753c1048600bf2c4742341615abbb4b9cabd4d477d4d9321c4159c88f7"
+    },
+    {
+      "section_id": "lyric-0004",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "1702b522b62a36be3abb968a1bfda9340ebe5e00dd5e72deae499d7c98926dc5",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests a cautious and empathetic approach to emotional interaction, emphasizing restraint and sensitivity. The themes revolve around the beginnings of a relationship or connection, marked by hesitation and a desire to avoid causing pain.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "bedb163ae0dff7ca5c9922435dbc36b50039c0df24f2cc12654208c4704e3952"
+    },
+    {
+      "section_id": "lyric-0005",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "b96f216cc29eecd110cf3bc4ea8437cd0b7a17d171594803ce8c436400260167",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a mix of defiant confidence and introspective awareness, balancing personal empowerment with a subtle critique of superficiality. A central theme emerges around the tension between outward displays of success and the underlying emotional struggles that persist beneath the surface.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "7808dfb2873a37e740668c1d15360870de6e9e3f33839581f3b6cf27d29100e5"
+    },
+    {
+      "section_id": "lyric-0006",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "398dcba29bc1efa74f33845a891f6f9c17325152927e986fbcfdb9994e734372",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of disillusionment and critical distance, highlighting a shift from idealism to a fragmented, altered reality. The themes explore transformation, loss of authenticity, and a moral or emotional judgment toward those who remain unaware or unresponsive to change.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "7c432a753c1048600bf2c4742341615abbb4b9cabd4d477d4d9321c4159c88f7"
+    },
+    {
+      "section_id": "lyric-0007",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "25294c0053b9be81cd4c1010872b8af1d75e03206a5816119dd1b21e789d81f2",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of emotional vulnerability and internal struggle, while the themes explore the complexity and depth of human pain and the difficulty of navigating unspoken or unresolved emotions.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "0d2b5b17b81eb618255ac8348fdf4fde40ec7273a9683e337c12a3df494ed20f"
+    },
+    {
+      "section_id": "span-0000",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    },
+    {
+      "section_id": "span-0002",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    }
+  ]
+}

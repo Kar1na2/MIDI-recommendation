@@ -1,0 +1,152 @@
+{
+  "schema_version": 1,
+  "track_id": "7tIJDktakabGoHjwTTa35W",
+  "cohort": "random",
+  "display_only": true,
+  "registered_scores_unchanged": true,
+  "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+  "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "prompt_sha256": "ffdf21672c16d12394441664976928ac03a51b35d721d3925cca9be8adc58e3d",
+  "registered_checkpoint_sha256": "e01ffa879ed6b74d89dba5c5bd65e3975390b357ef20827ba8a85cdfc9a64a82",
+  "reading_label": "L1's interpretation of the lyrics",
+  "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+  "reading_type": "model_interpretation",
+  "decoding": {
+    "do_sample": false,
+    "num_beams": 1,
+    "max_new_tokens": 128,
+    "torch_dtype": "float16",
+    "seed": 20261115
+  },
+  "overlap_rule": "NFKC/casefold 4-word ngrams; additionally 4 consecutive ja/ko/zh script characters with spacing/punctuation removed; block if either overlaps.",
+  "sections": [
+    {
+      "section_id": "lyric-0000",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "67a8fd46838f2f74c40dbf0bd40d1a20f8e8eabfbd45c7d8392fd1abdba4c397",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of vulnerability and yearning, emphasizing internal emotional turmoil and a deep desire for connection. The themes revolve around the struggle to express inner feelings and the isolation caused by unspoken emotions and external deception.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "f66fdd04fe2e31e41393060db5304b0c865fa82d6750e2daa548003c34208394"
+    },
+    {
+      "section_id": "lyric-0001",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "38b32c354f7b73fd31c02b147da3030cd2338d9b5f447f3e7e72ec6b74b51eb4",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sincere desire for reconciliation and healing, emphasizing patience and the importance of rebuilding a foundation that has been damaged. The central theme revolves around the persistent effort to restore faith and connection after a period of betrayal or loss.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "d306c1d102eb1636ed5466323699a6d08c5d03b12fdf201543beb81f620327e8"
+    },
+    {
+      "section_id": "lyric-0002",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "3aa8e8077afbe7115ae6eccf044bb22e7cc2fe117ff97034d52313be22c6b9e0",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests a reflective and earnest attempt at connection, balancing vulnerability with a desire for mutual understanding. The themes revolve around trust, emotional transparency, and the evolving dynamics of a relationship grounded in patience and shared intention.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "bb0698d4cc04a011b7454b330a423d3152fe643a8c154ca67e451e84cdebe2ab"
+    },
+    {
+      "section_id": "lyric-0003",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": "da08a526067877ef226d6a37060c25f887afe6f32e7e1cf4bfb171cb96ccea17",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a confident, self-assured assertion of independence intertwined with a subtle yearning for mutual connection and recognition. The themes explore identity, strength, and the possibility of a balanced, reciprocal relationship grounded in mutual value.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "d67369683588681c8eda53598a3986539b7ddd18583d23b40c60e35156c638b8"
+    },
+    {
+      "section_id": "lyric-0004",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "38b32c354f7b73fd31c02b147da3030cd2338d9b5f447f3e7e72ec6b74b51eb4",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sincere desire for reconciliation and healing, emphasizing patience and the importance of rebuilding a foundation that has been damaged. The central theme revolves around the persistent effort to restore faith and connection after a period of betrayal or loss.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "d306c1d102eb1636ed5466323699a6d08c5d03b12fdf201543beb81f620327e8"
+    },
+    {
+      "section_id": "lyric-0005",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "5a2bdfb5288a673fb9c6a0ab49c5ccde2f7cfc925c4bc6f91bd3b9579f5f4fce",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests a call for unity and collective commitment, emphasizing renewal and shared purpose. The themes revolve around rebuilding confidence in a shared foundation and reinforcing mutual responsibility.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "40c9af91c71c57eff299083e0ce901d18340a2942737b0ae193243a300760890"
+    },
+    {
+      "section_id": "span-0000",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    },
+    {
+      "section_id": "span-0004",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    }
+  ]
+}

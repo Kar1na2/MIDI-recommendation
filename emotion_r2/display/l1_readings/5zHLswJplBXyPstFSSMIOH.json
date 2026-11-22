@@ -1,0 +1,139 @@
+{
+  "schema_version": 1,
+  "track_id": "5zHLswJplBXyPstFSSMIOH",
+  "cohort": "random",
+  "display_only": true,
+  "registered_scores_unchanged": true,
+  "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+  "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "prompt_sha256": "ffdf21672c16d12394441664976928ac03a51b35d721d3925cca9be8adc58e3d",
+  "registered_checkpoint_sha256": "c0e307666a2c79bcc30f25234517d5c5be43d92f22772deb966cc60dab3bc159",
+  "reading_label": "L1's interpretation of the lyrics",
+  "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+  "reading_type": "model_interpretation",
+  "decoding": {
+    "do_sample": false,
+    "num_beams": 1,
+    "max_new_tokens": 128,
+    "torch_dtype": "float16",
+    "seed": 20261115
+  },
+  "overlap_rule": "NFKC/casefold 4-word ngrams; additionally 4 consecutive ja/ko/zh script characters with spacing/punctuation removed; block if either overlaps.",
+  "sections": [
+    {
+      "section_id": "lyric-0000",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "c07fb5521e8c627ea518c1604e66661bfb53488f08a0bf18c51feab09d70860f",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is tender and hopeful, conveying a deep desire for emotional connection and joy. The central theme revolves around the longing for genuine, heartfelt love that brings warmth and musicality to life.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "fd21dd9ee6e21697ebe84a6e308a7dec9811ddfb7dd1e58682b3c29e6ed4571f"
+    },
+    {
+      "section_id": "lyric-0001",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "02b3a39ec2690449520384d3a50044a8e55adb33ea076b9b743271600d34b9ff",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is warm and inviting, conveying a sense of gentle care and affection. The themes center on simplicity, natural beauty, and the enduring value of emotional connection over material gain.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "e91fb373a90123d421dd547e12d6903d61028a39ceedda92d8c1c03483cd35d1"
+    },
+    {
+      "section_id": "lyric-0002",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "3808e6bd4c84394e7cb990c314db078683b4cf29d652879ce97c451ad034a0bc",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of quiet resignation and emotional release, emphasizing acceptance over conflict. The central theme explores the inevitability of separation and the act of letting go as a form of self-preservation.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "31b2d472c325d8e926ab3b46202f24c3a2f96a334078b568bb324888304f52db"
+    },
+    {
+      "section_id": "lyric-0003",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "5f797dd4c392d5ec001e8e31e01bfd28443650527ac8cc8f2272ecd5ddfd6200",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is tender and protective, conveying a deep desire for emotional safety and connection. The central theme revolves around the enduring power of love as a source of comfort and resilience in difficult times.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "dcbf5d806f3aff7efd12c0f015813acf8044c3d583d298102f2c67feac1475ff"
+    },
+    {
+      "section_id": "lyric-0004",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "3808e6bd4c84394e7cb990c314db078683b4cf29d652879ce97c451ad034a0bc",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of quiet resignation and emotional release, emphasizing acceptance over conflict. The central theme explores the inevitability of separation and the act of letting go as a form of self-preservation.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "31b2d472c325d8e926ab3b46202f24c3a2f96a334078b568bb324888304f52db"
+    },
+    {
+      "section_id": "lyric-0005",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "a3968048d482bd90291b70a61b07f298c620e979f15f1fa5e0ea19b19a323a02",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a deep, enduring desire for comfort and emotional connection. The themes center on protection, warmth, and the profound importance of love in times of difficulty.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "9d41e95d488c0483b2a05748008be210c2edabdd2a9750ec5f804f3a0402d1bc"
+    },
+    {
+      "section_id": "span-0000",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    }
+  ]
+}

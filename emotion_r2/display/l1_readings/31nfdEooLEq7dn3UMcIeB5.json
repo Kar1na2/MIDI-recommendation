@@ -1,0 +1,118 @@
+{
+  "schema_version": 1,
+  "track_id": "31nfdEooLEq7dn3UMcIeB5",
+  "cohort": "random",
+  "display_only": true,
+  "registered_scores_unchanged": true,
+  "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+  "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "prompt_sha256": "ffdf21672c16d12394441664976928ac03a51b35d721d3925cca9be8adc58e3d",
+  "registered_checkpoint_sha256": "b430f182b8857998a716ac0c99d3163560f972399e5d11f926fb619cf998ec7b",
+  "reading_label": "L1's interpretation of the lyrics",
+  "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+  "reading_type": "model_interpretation",
+  "decoding": {
+    "do_sample": false,
+    "num_beams": 1,
+    "max_new_tokens": 128,
+    "torch_dtype": "float16",
+    "seed": 20261115
+  },
+  "overlap_rule": "NFKC/casefold 4-word ngrams; additionally 4 consecutive ja/ko/zh script characters with spacing/punctuation removed; block if either overlaps.",
+  "sections": [
+    {
+      "section_id": "lyric-0000",
+      "set": "primary",
+      "language": "fr",
+      "text_sha256": "104e1666543bfb34e51255302116bdf29578dafa0b77de0ddce4635a91050384",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is hopeful and reflective, conveying a sense of enduring inner light amid the loss of youthful innocence. The themes revolve around the persistence of optimism and the lasting presence of cherished, early experiences.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "45ce29175ce86f3786a2ad9cdb9dcc3b4c075499033da85ff3631dde2dfefe7c"
+    },
+    {
+      "section_id": "lyric-0001",
+      "set": "primary",
+      "language": "fr",
+      "text_sha256": "92c8e168aa662db5db966d1cb960acd3bf47e3a42a0ea0de7efd5a5591dd154e",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is resolute and uplifting, emphasizing perseverance and hope amid uncertainty. The central theme revolves around guiding others toward a brighter future through compassion and unwavering determination.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "09781ff31e7e1dbf201c7757855ee588202e4073beef41c8c884646cb88e082a"
+    },
+    {
+      "section_id": "lyric-0002",
+      "set": "primary",
+      "language": "fr",
+      "text_sha256": "62c07d3f530a74059bbbf7b00fb586be2004c53de8b5f3622f80b1d3f0fedb2b",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is one of resilient optimism and quiet determination, emphasizing hope and active compassion in the face of uncertainty. The central theme revolves around guiding others toward a brighter future through solidarity and unwavering belief in life's potential.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "97bf988fa191d55ead8dc08c7af52fdc3258195391ef785790d8701bf4e39d88"
+    },
+    {
+      "section_id": "lyric-0003",
+      "set": "secondary",
+      "language": "fr",
+      "text_sha256": "f66cc8dbf51c162f3305883ef793e0856935263529ca23dca538ac9aabb17838",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a persistent, inner vitality that endures even in darkness, emphasizing hope as a steady and resonant force. The theme centers on the enduring presence of life's passion and optimism amid silence and uncertainty.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "a4e33b6481218f160ed80ca3d40a89a9859dea55b12a91b9a9c5fac6e1fb48b5"
+    },
+    {
+      "section_id": "span-0000",
+      "set": "secondary",
+      "language": "fr",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    },
+    {
+      "section_id": "span-0004",
+      "set": "secondary",
+      "language": "fr",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    }
+  ]
+}

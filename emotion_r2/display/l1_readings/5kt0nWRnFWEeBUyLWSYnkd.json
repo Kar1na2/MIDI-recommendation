@@ -1,0 +1,212 @@
+{
+  "schema_version": 1,
+  "track_id": "5kt0nWRnFWEeBUyLWSYnkd",
+  "cohort": "random",
+  "display_only": true,
+  "registered_scores_unchanged": true,
+  "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+  "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "prompt_sha256": "ffdf21672c16d12394441664976928ac03a51b35d721d3925cca9be8adc58e3d",
+  "registered_checkpoint_sha256": "edca69e8a0fb449fe12eaa1e73f6c0f810cd74691015e0c8900306272019dce8",
+  "reading_label": "L1's interpretation of the lyrics",
+  "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+  "reading_type": "model_interpretation",
+  "decoding": {
+    "do_sample": false,
+    "num_beams": 1,
+    "max_new_tokens": 128,
+    "torch_dtype": "float16",
+    "seed": 20261115
+  },
+  "overlap_rule": "NFKC/casefold 4-word ngrams; additionally 4 consecutive ja/ko/zh script characters with spacing/punctuation removed; block if either overlaps.",
+  "sections": [
+    {
+      "section_id": "lyric-0000",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "3799834cf08f223d764e4a243151fd495c065931efcc446aa1b5c2787a2426a5",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of weary routine and subtle existential repetition, emphasizing the monotony of daily life amid a quiet, almost dreamlike detachment. The themes explore the passage of time, the illusion of novelty, and the quiet exhaustion that follows habitual patterns.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "e5b38c7405b4fb396787f40918fc4614fb9f8940aa43ec9ac45c4bdd97bd9015"
+    },
+    {
+      "section_id": "lyric-0001",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "91d77dc1baa3b6f668f0d5a18449be4ad3b87d65a854c98edda2184d5e08dc98",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a quiet, reflective stillness amidst the chaos of daily life, suggesting a moment of simple, unforced connection. The theme explores the quiet beauty found in ordinary moments and the human instinct to find meaning in fleeting encounters.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "b5b63663082234d2683a55cd26491747b6b774c6ed93dad418a9a7fd99db5667"
+    },
+    {
+      "section_id": "lyric-0002",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "7ea190c1dfd53ebb69f564189939351924c60d557f10bd0cb62139032fb08170",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of sudden disruption and internal unease, marked by emotional vulnerability and a desire to avoid confronting deeper feelings. The themes explore the fragility of peace, the intrusion of unprocessed emotions, and a quiet resistance to emotional exposure.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "d9e63b44a6c82da825c46438d9cb16629b5004a15c1ad74f0d07080e8211de3f"
+    },
+    {
+      "section_id": "lyric-0003",
+      "set": "secondary",
+      "language": "ko",
+      "text_sha256": "091eabf705331707abc63760d8534b392d9ad68777d24d03b44159a24cf307b8",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of mental exhaustion and emotional detachment, while the themes explore the disintegration of self-control and the overwhelming burden of daily stress.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "e9b918dae74e181280cbdc945f12b4836eeb104c30235a4df6f856b7f4aa7990"
+    },
+    {
+      "section_id": "lyric-0004",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "76c342706f6fb4af601551b92621819cfa74881093cb5629105b0fc64548656c",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a mix of emotional vulnerability and self-aware irony, suggesting a complex inner state where nostalgia and awkwardness coexist. The themes explore the ambiguity of first impressions and the tension between genuine feeling and the discomfort of expressing it.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "49e55f95e77a5d4bfe381b1e772eaf68ac693a22804f343143eadd50071f6141"
+    },
+    {
+      "section_id": "lyric-0005",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "7ea190c1dfd53ebb69f564189939351924c60d557f10bd0cb62139032fb08170",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of sudden disruption and internal unease, marked by emotional vulnerability and a desire to avoid confronting deeper feelings. The themes explore the fragility of peace, the intrusion of unprocessed emotions, and a quiet resistance to emotional exposure.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "d9e63b44a6c82da825c46438d9cb16629b5004a15c1ad74f0d07080e8211de3f"
+    },
+    {
+      "section_id": "lyric-0006",
+      "set": "secondary",
+      "language": "ko",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    },
+    {
+      "section_id": "lyric-0007",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "ca968fc5cb175ff713781d63816a62bc81b9156572c59f2fa7cfa4ebaba59c88",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of quiet despair and emotional detachment, marked by a reluctance to engage with inner turmoil. The theme explores the tension between overwhelming feelings and the instinct to suppress or ignore them.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "6fdffb30b1ec2ff0f240799cc8cfac4471d816ced7e16620eee3920c6fe9256b"
+    },
+    {
+      "section_id": "lyric-0008",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "6d20d4244e6253ad5931287409931e532e82f63ad76c10d1e71f522e39fb7bda",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of cautious detachment and emotional restraint, emphasizing avoidance of pain through passive acceptance. The theme explores the tension between confronting discomfort and choosing to move on, suggesting a prioritization of emotional safety over resolution.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "5ef7c2a2d19a4921b1b3e7a76d4c27260bf7cf473748a07403529ad72d0cf83e"
+    },
+    {
+      "section_id": "span-0000",
+      "set": "secondary",
+      "language": "ko",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    },
+    {
+      "section_id": "span-0004",
+      "set": "secondary",
+      "language": "ko",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    },
+    {
+      "section_id": "span-0007",
+      "set": "secondary",
+      "language": "ko",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    }
+  ]
+}

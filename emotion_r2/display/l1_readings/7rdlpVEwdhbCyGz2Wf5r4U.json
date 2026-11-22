@@ -1,0 +1,178 @@
+{
+  "schema_version": 1,
+  "track_id": "7rdlpVEwdhbCyGz2Wf5r4U",
+  "cohort": "random",
+  "display_only": true,
+  "registered_scores_unchanged": true,
+  "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+  "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "prompt_sha256": "ffdf21672c16d12394441664976928ac03a51b35d721d3925cca9be8adc58e3d",
+  "registered_checkpoint_sha256": "12a5596ca5313d381286717c862b42a4da4c39c75e8b44329ec9e6ee64e1bd33",
+  "reading_label": "L1's interpretation of the lyrics",
+  "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+  "reading_type": "model_interpretation",
+  "decoding": {
+    "do_sample": false,
+    "num_beams": 1,
+    "max_new_tokens": 128,
+    "torch_dtype": "float16",
+    "seed": 20261115
+  },
+  "overlap_rule": "NFKC/casefold 4-word ngrams; additionally 4 consecutive ja/ko/zh script characters with spacing/punctuation removed; block if either overlaps.",
+  "sections": [
+    {
+      "section_id": "lyric-0000",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "e06cd052ceafd64ae6c41eb39ca22c4f751ab414bd3de3690bed50e459e5e892",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone evokes a serene, reflective stillness, blending intimacy with natural beauty. The themes center on fleeting moments of idealized connection and the quiet comfort found in imagined presence.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "eb14700f34aac64653fab8f69b7630d240508378ae583a1622f6478c7e763cea"
+    },
+    {
+      "section_id": "lyric-0001",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "05c7f73e18b5dff6214b7ed9712d8863d468c2b570b7acfd4c8f4c2fe532bc0c",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a reflective and tender longing, tinged with subtle frustration and yearning for deeper connection. The themes explore memory, intimacy, and the emotional distance that persists despite shared experiences.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "7b3a42125dfeb9d7599c29f8392310c3b14f6c563860784e6c76860399722aae"
+    },
+    {
+      "section_id": "lyric-0002",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "5a131c02cdb393a027d6db1cb2292fd3c244496f39fbed2b56f3ba003bf19cf9",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests a serene and escapist quality, evoking a sense of peaceful immersion in a fleeting, idealized moment. The theme centers on the allure of temporary escape into a tranquil, sensory-rich state of mind.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "3e8a9ee72a14595e6562967deb60aefcce1fe527c2f4ed467be3d45620901553"
+    },
+    {
+      "section_id": "lyric-0003",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "05c7f73e18b5dff6214b7ed9712d8863d468c2b570b7acfd4c8f4c2fe532bc0c",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a reflective and tender longing, tinged with subtle frustration and yearning for deeper connection. The themes explore memory, intimacy, and the emotional distance that persists despite shared experiences.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "7b3a42125dfeb9d7599c29f8392310c3b14f6c563860784e6c76860399722aae"
+    },
+    {
+      "section_id": "lyric-0004",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "48511675bc6580b1d2dbf8b76f0ae503330f6596bf7c8b28bad86e38297fd439",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is serene and immersive, suggesting a peaceful, almost timeless engagement with a shared moment of joy. The theme centers on the blending of presence and imagination, where routine is transformed into a continuous, flowing experience of connection and beauty.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "c24c666604ef77fb8c6104f61ce3bbf0a40bf3284191d5b4093d94de2ef9816b"
+    },
+    {
+      "section_id": "lyric-0005",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "fa28f7c3fb4f47c74fbace923724207394060bc441915ace9527e1d534f7154f",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is repetitive and hypnotic, suggesting a sense of cyclical motion or emotional inertia. The themes imply isolation, routine, or a struggle to break free from a persistent pattern.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "2bede0260182be9bbfaf1866639af1de2695ad57d72a9477a942480511352976"
+    },
+    {
+      "section_id": "span-0000",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    },
+    {
+      "section_id": "span-0002",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    },
+    {
+      "section_id": "span-0004",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    },
+    {
+      "section_id": "span-0006",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    }
+  ]
+}

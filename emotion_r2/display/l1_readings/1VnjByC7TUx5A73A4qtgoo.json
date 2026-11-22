@@ -1,0 +1,255 @@
+{
+  "schema_version": 1,
+  "track_id": "1VnjByC7TUx5A73A4qtgoo",
+  "cohort": "random",
+  "display_only": true,
+  "registered_scores_unchanged": true,
+  "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+  "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "prompt_sha256": "ffdf21672c16d12394441664976928ac03a51b35d721d3925cca9be8adc58e3d",
+  "registered_checkpoint_sha256": "6872fcd02d99948eff89a1672486a1085222b1a4e7b996d4777e6ab0f109c011",
+  "reading_label": "L1's interpretation of the lyrics",
+  "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+  "reading_type": "model_interpretation",
+  "decoding": {
+    "do_sample": false,
+    "num_beams": 1,
+    "max_new_tokens": 128,
+    "torch_dtype": "float16",
+    "seed": 20261115
+  },
+  "overlap_rule": "NFKC/casefold 4-word ngrams; additionally 4 consecutive ja/ko/zh script characters with spacing/punctuation removed; block if either overlaps.",
+  "sections": [
+    {
+      "section_id": "lyric-0000",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "730136c8563012bf5a3b0bdf364a5d0966bb5cb4a285988d18cbc4e3cdf2a0d9",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of quiet, persistent sorrow, blending natural imagery with internal emotional overflow. The theme explores the quiet accumulation of unexpressed feelings that eventually break through, mirroring the inevitability of emotional release.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "1b87a6fc9997521fde417a462af42e907e2a3bb1b91b0bad8f49654ce71f8604"
+    },
+    {
+      "section_id": "lyric-0001",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "d9736cde2d0c601df16518bea5d890ffa96c6899691100a083113ba9925518fb",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a quiet melancholy and a sense of emotional isolation, underscored by the weight of memories that no longer fit in the present. The themes revolve around loss, the passage of time, and the longing for connection in a cold, indifferent world.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "3a1edca9f2c60a9464affaf8a002e6efe5736d343aaec31460745e05377f4326"
+    },
+    {
+      "section_id": "lyric-0002",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "730136c8563012bf5a3b0bdf364a5d0966bb5cb4a285988d18cbc4e3cdf2a0d9",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of quiet, persistent sorrow, blending natural imagery with internal emotional overflow. The theme explores the quiet accumulation of unexpressed feelings that eventually break through, mirroring the inevitability of emotional release.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "1b87a6fc9997521fde417a462af42e907e2a3bb1b91b0bad8f49654ce71f8604"
+    },
+    {
+      "section_id": "lyric-0003",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "d81fd19ed0f03f775aa46063e3fe3091c28a6f8564217b51dd72b6728988bc19",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of quiet dependence and emotional intimacy, underscored by a melancholic acceptance of unspoken bonds. The themes explore the quiet erosion of individuality in the presence of a steady, almost inevitable connection.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "9a5a2425459efc6ff307a144c00ea8023f5a93cebd0f2c3ccd14f396700cdb9e"
+    },
+    {
+      "section_id": "lyric-0004",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "45dd853af0b8426a803e4894851952fc76c5ccd36412c1cbdc1cd755a7ae6e1b",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of isolation and emotional suffering, underscored by a persistent, unrelenting despair. The themes revolve around longing, inability to release someone, and the overwhelming weight of personal anguish.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "131dfd95b7b9b899b79424a3de939eb4a57815d625b331420cd4305269f0ad85"
+    },
+    {
+      "section_id": "lyric-0005",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "1d560a8cad4e6e5b0a0afbb77c8102567b2572cfe0e9a475dc920f9404d0f400",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a melancholic reflection on lost connection and the fragility of shared moments, emphasizing emotional distance and the erosion of once-bonded intimacy. The central theme explores the quiet dissolution of a relationship, where memories and gestures once symbolizing unity now reveal vulnerability and solitude.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "16f79c6ea107bb9e4f2b12f666eda017b064919ce233c2200fbbed53f739ce16"
+    },
+    {
+      "section_id": "lyric-0006",
+      "set": "secondary",
+      "language": "ko",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    },
+    {
+      "section_id": "lyric-0007",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "75319d071fc7d772fe3b3a03fb4134cf55e076be50fce851edb512871731e43a",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of quiet dependence and emotional intimacy, underscored by a melancholic acceptance of unspoken connection. The themes explore the quiet, enduring bond formed through shared experiences and the quiet loneliness that persists even in presence.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "231e3e7414d51cbc43c41d77fd99e8e0ca86ee084b4aba87bd41572a886a83fd"
+    },
+    {
+      "section_id": "lyric-0008",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "0399d59c72f0140a8e04db4aa94ec67feac81c0a30c82354d65af74e5db6ee0f",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of quiet vulnerability and dependence, portraying a relationship where protection and shelter are central. The themes explore emotional openness and the idea of being sustained by another's presence, with a focus on comfort, safety, and the interplay between individuality and connection.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "ad79a51a81af190a8650149f36f5a6688621ec0ee0f314e4fc9795b20eecbe98"
+    },
+    {
+      "section_id": "lyric-0009",
+      "set": "secondary",
+      "language": "ko",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    },
+    {
+      "section_id": "lyric-0010",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "7a8ba1df17de755590cd1a245df02a955adee5f348f83d4d2b24b55234b8a4c1",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of dependency and emotional vulnerability, emphasizing the irreplaceable role of a presence in sustaining one's inner world. The central theme explores the idea of incompleteness and loss, where absence is felt as a physical and emotional void, underscoring the deep connection formed through shared experience.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "f9298d2fc9cad61506018a484b8fc9dae7176a78069719077536b625d01cfb27"
+    },
+    {
+      "section_id": "span-0000",
+      "set": "secondary",
+      "language": "ko",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    },
+    {
+      "section_id": "span-0002",
+      "set": "secondary",
+      "language": "ko",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    },
+    {
+      "section_id": "span-0006",
+      "set": "secondary",
+      "language": "ko",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    },
+    {
+      "section_id": "span-0009",
+      "set": "secondary",
+      "language": "ko",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    }
+  ]
+}

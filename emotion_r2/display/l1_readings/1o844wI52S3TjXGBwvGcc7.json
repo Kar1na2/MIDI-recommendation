@@ -1,0 +1,186 @@
+{
+  "schema_version": 1,
+  "track_id": "1o844wI52S3TjXGBwvGcc7",
+  "cohort": "random",
+  "display_only": true,
+  "registered_scores_unchanged": true,
+  "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+  "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "prompt_sha256": "ffdf21672c16d12394441664976928ac03a51b35d721d3925cca9be8adc58e3d",
+  "registered_checkpoint_sha256": "6b66930b8dee6bd5c6e20e8f60d13dfb894922f6a9ff982b1bfababace122644",
+  "reading_label": "L1's interpretation of the lyrics",
+  "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+  "reading_type": "model_interpretation",
+  "decoding": {
+    "do_sample": false,
+    "num_beams": 1,
+    "max_new_tokens": 128,
+    "torch_dtype": "float16",
+    "seed": 20261115
+  },
+  "overlap_rule": "NFKC/casefold 4-word ngrams; additionally 4 consecutive ja/ko/zh script characters with spacing/punctuation removed; block if either overlaps.",
+  "sections": [
+    {
+      "section_id": "lyric-0000",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "b4a00dfa06d7a993d8f2afc7140df41b6147bb56525af74d872d333c7a6abcba",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests a sense of urgency and emotional entanglement, conveying a fragile, intense connection that feels both alluring and unstable. The themes explore the paradox of intimacy and illusion, where a relationship is portrayed as something imagined yet deeply felt.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "9491a50b0ee3abd8883ed4e7f432bbb3247ee735a1be4f0ae15f76f56723babb"
+    },
+    {
+      "section_id": "lyric-0001",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "7c4377550ef4b1b8823e279c318acc10e2e3475f867e601b8cd6985b768fc32e",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of overwhelming pressure balanced with fragile hope, suggesting resilience in the face of immense difficulty. The themes explore the struggle against insurmountable challenges and the possibility of finding meaning or renewal even within collapse.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "1061dd2bd99f40a9064ae606ecd700b1414c060db8b8fddba7d986ff1b4cc81d"
+    },
+    {
+      "section_id": "lyric-0002",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "0f62cf3d12f0acb53356af422897e4c798f84198214783ed687731f165da1ada",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of urgency and relentless forward motion, emphasizing struggle and risk amid a seemingly endless journey. The themes revolve around perseverance, the dangers of complacency, and the tension between personal agency and external forces.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "0e9dbbbd507dd72af6322c2fe9d4a93ef2123e820065943c19141286783bb2b9"
+    },
+    {
+      "section_id": "lyric-0003",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "9fb5d8419c2baec9daadba9a2ebb8459bde6d3dbbb51a8855d69a1f8de34ad5d",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of intense, restless energy and emotional unpredictability, suggesting a relationship driven by passion and instability. The themes explore the allure of a volatile, dreamlike connection that defies conventional stability.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "facb2f05d43f9d8ec55e57dd7afc836eadba840549218a0e85c245f1a7a0668d"
+    },
+    {
+      "section_id": "lyric-0004",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": "5dcdbdbc490dd3548c6fefa391e5b19f5241de5161e915973b781549869002eb",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a conflicted yet determined resolve, blending hostility with an underlying sense of destined connection. The themes explore the tension between opposing forces and the value of authenticity in the face of societal order.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "468132d3b421277abae12b2a59632734d5d2a600825205a80c8bb24a67a84b49"
+    },
+    {
+      "section_id": "lyric-0005",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "8e7f8fbc2d66c6c5d8b57f419761e95a751098d6dba65485f2d9081da39fc704",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of urgency and relentless forward motion, emphasizing survival and resilience amid overwhelming challenges. The themes revolve around perseverance, the dangers of complacency, and the precarious nature of achieving success in a complex, unforgiving environment.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "7a77d72606eb6f09f62a783b6be88fa75872c015a4bf51d592c17f47e5348447"
+    },
+    {
+      "section_id": "lyric-0006",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "ae3a96abca17f915e38a94a42977479a929df55ead096dbff8f43a1c1a60e0a9",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of intense, unstable connection marked by exhilarating unpredictability. The themes explore the allure of a volatile, dream-driven bond that defies conventional stability.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "82bc4e18c31b76ac3b653c88575459468e6163fee6d7effaac07a24790b5e7c8"
+    },
+    {
+      "section_id": "lyric-0007",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "891b13440be8b61dedbd05900fa02fc4c4308089980cbcb2c62316a62adb926d",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is repetitive and hypnotic, suggesting a sense of urgency or emotional entrapment. The themes revolve around clinging to something intangible, possibly representing a desire for stability or connection in an uncertain state.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "ca955eac9549881bf78e3e2451996d59619482a8d3950f9ff1b5f7e1613e56f4"
+    },
+    {
+      "section_id": "span-0000",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    },
+    {
+      "section_id": "span-0005",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    }
+  ]
+}

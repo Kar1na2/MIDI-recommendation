@@ -152,11 +152,11 @@ async function openSong(item) {
 
   const names = ['report', 'beats', 'lyrics', 'patterns', 'layers'];
 
-  const emotionRequest = fetchSource(`/data/emotion/${item.id}.json`);
+  const emotionRequest = fetchSource(`./data/emotion/${item.id}.json`);
   const [responses, emotionResponse, readingsResponse] = await Promise.all([
     Promise.allSettled(names.map(name => fetchSource(`/outputs/${item.id}/${name}.json`))),
     emotionRequest.then(value => ({ value }), error => ({ error: error.message })),
-    fetchSource(`/data/emotion/${item.id}.readings.json`).then(value => ({ value }), error => ({ error: error.message }))
+    fetchSource(`./data/emotion/${item.id}.readings.json`).then(value => ({ value }), error => ({ error: error.message }))
   ]);
 
   if (request !== loadToken) return;
@@ -441,7 +441,7 @@ document.querySelector('.brand').addEventListener('click', event => { event.prev
 
 Promise.all([
   fetchSource('/mvp/sample.csv', false), fetchSource('/mvp/summary.csv', false), fetchSource('/catalog/additions'),
-  fetchSource('/data/emotion/manifest.json').catch(() => null), fetchSource('/data/emotion/corpus.json').catch(() => null), fetchSource('/data/emotion/models.json').catch(() => null)
+  fetchSource('./data/emotion/manifest.json').catch(() => null), fetchSource('./data/emotion/corpus.json').catch(() => null), fetchSource('./data/emotion/models.json').catch(() => null)
 ]).then(([sample, summary, additions, manifest, corpus, models]) => {
   catalog = [...buildCatalog(sample, summary), ...additions.extra]; skippedSongs = additions.skipped;
   emotionManifest = manifest; emotionCorpus = corpus; emotionModels = models;

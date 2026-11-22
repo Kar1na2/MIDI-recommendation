@@ -1,0 +1,122 @@
+{
+  "schema_version": 1,
+  "track_id": "3S1tTwSKIZgf4QGltFyCxM",
+  "cohort": "random",
+  "display_only": true,
+  "registered_scores_unchanged": true,
+  "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+  "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "prompt_sha256": "ffdf21672c16d12394441664976928ac03a51b35d721d3925cca9be8adc58e3d",
+  "registered_checkpoint_sha256": "3bd8d9450d8344e0785250b1970cf6ef2461704ec62006fb345d6c7f46f28b7a",
+  "reading_label": "L1's interpretation of the lyrics",
+  "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+  "reading_type": "model_interpretation",
+  "decoding": {
+    "do_sample": false,
+    "num_beams": 1,
+    "max_new_tokens": 128,
+    "torch_dtype": "float16",
+    "seed": 20261115
+  },
+  "overlap_rule": "NFKC/casefold 4-word ngrams; additionally 4 consecutive ja/ko/zh script characters with spacing/punctuation removed; block if either overlaps.",
+  "sections": [
+    {
+      "section_id": "lyric-0000",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "8b5462bddf4e577bc63e046bd538627a3b03ea5b3852a5d829ece84353319df9",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of inevitability and internal conflict, suggesting a struggle between personal choices and natural, instinctive forces. The themes explore the tension between human agency and environmental or primal instincts, highlighting a journey marked by irreversible decisions and self-imposed deviation from natural rhythms.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "732b5d9342d6d809a0b6248aaedbde16aeaa3d730255ca25fb5341b6431d4b25"
+    },
+    {
+      "section_id": "lyric-0001",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "ee52d2d07491d109d5b8659ffab7c8de26dba350a1cae443ecd994c7fd9ac431",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests a widespread desire for control and dominance, while the themes explore ambition, power, and the human yearning to influence or govern larger systems.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "27d8439207cbcd2f2e032a255afb22ce708b4403ee53fce5d4477e0055c86f91"
+    },
+    {
+      "section_id": "lyric-0002",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "dd15ddddaa668a9c3287a7b19f2d2efd4ecbac5f1389ccc03429ca12b97a0c20",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a reflective and introspective struggle with personal responsibility and the fleeting nature of choices. The themes explore the tension between autonomy and regret, and the inherent impermanence of pleasure and freedom.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "6eb12347464555a6dfe28679e3d1ae83621e093eceefaa3d1172c376d49089da"
+    },
+    {
+      "section_id": "lyric-0003",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "ee52d2d07491d109d5b8659ffab7c8de26dba350a1cae443ecd994c7fd9ac431",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests a widespread desire for control and dominance, while the themes explore ambition, power, and the human yearning to influence or govern larger systems.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "27d8439207cbcd2f2e032a255afb22ce708b4403ee53fce5d4477e0055c86f91"
+    },
+    {
+      "section_id": "lyric-0004",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "ee7196ba87ce06d7cc5f67b5a78e7421e2808a940a8e4b5a64c02372799e6fe8",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a mix of fragile hope and inevitable loss, underscored by a pervasive yearning for control and dominance in a world that resists stability. The themes explore the tension between collective ambition and the fragility of shared moments, suggesting that desire for power often clashes with the impermanence of connection and safety.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "5f8294dcb68861ed7b0ccb4819d2c315485097b6a99836f4a29af5869621bfe2"
+    },
+    {
+      "section_id": "span-0000",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    }
+  ]
+}
