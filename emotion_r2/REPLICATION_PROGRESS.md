@@ -31,3 +31,7 @@ emotion-round-2 suite including the 6 new tests: 28 passed; display: 6 passed.
 The supervisor appends counts, failure categories and ETA every three hours and
 at stage transitions. Its exact current phase is in `replication/progress.json`;
 worker errors are in `replication/supervisor.log` and `replication/logs/`.
+
+- 2026-11-22T15:02:27.821966+00:00 — STOPPED: Command '['git', 'show', 'HEAD:emotion_r2/REPLICATION_NOTES.md']' returned non-zero exit status 128.; backend {'done': 60, 'pending': 668}; failures {}; emotion checkpoints {'T1': 0, 'T3': 0, 'L1': 0, 'M1': 0, 'M2': 0, 'M3': 0, 'voice_gate': 0, 'V1': 0, 'V3': 0}; backend ETA hours not yet measured. No interim H1/chorus–verse statistics.
+
+- 2026-11-22T15:27:23.326855+00:00 — Pass 1 actively transcribing; registration-start guard resolved; final orchestration tests passed; backend {'done': 60, 'running': 1, 'pending': 667}; failures {}; emotion checkpoints {'T1': 0, 'T3': 0, 'L1': 0, 'M1': 0, 'M2': 0, 'M3': 0, 'voice_gate': 0, 'V1': 0, 'V3': 0}; backend ETA hours not yet measured; free disk bytes 863411257344. No interim H1/chorus–verse statistics.

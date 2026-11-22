@@ -170,7 +170,14 @@ def inventory():
             measured['emotion_separation'].append(read(p)['wall_seconds'])
     timings={k:{'observations':len(v),'mean_seconds':statistics.mean(v),'total_logged_seconds':sum(v),
                 'projected_library_hours':statistics.mean(v)*sum(s['audio_exists'] for s in library)/3600} for k,v in measured.items() if v}
-    worker_wall={'M3':13404,'V1':660,'V3':3603}
+    continuation=(R2/'continuation_run.log').read_text(encoding='utf8').splitlines()
+    def timestamp(marker):
+        hits=[datetime.fromisoformat(line.split()[0]) for line in continuation if marker in line]
+        if len(hits)!=1:raise RuntimeError('Ambiguous measured worker boundary: '+marker)
+        return hits[0]
+    worker_wall={'M3':(timestamp('M3 checkpoints verified; waiting')-timestamp('L1 checkpoints verified; starting M3')).total_seconds(),
+                 'V1':(timestamp('V1 checkpoints verified; starting V3')-timestamp('Gate checkpoints verified; starting V1')).total_seconds(),
+                 'V3':(timestamp('All model checkpoints verified; preparing')-timestamp('V1 checkpoints verified; starting V3')).total_seconds()}
     for k,v in worker_wall.items():
         timings[k]={'basis':'Actual completed 325-run worker start/end timestamps in continuation_run.log; includes overhead, not utilization',
                     'development_wall_seconds':v,'projected_library_hours':v/325*sum(s['audio_exists'] for s in library)/3600}

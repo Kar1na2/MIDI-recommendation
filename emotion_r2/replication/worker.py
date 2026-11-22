@@ -105,6 +105,7 @@ def separate():
     import soundfile as sf
     for song in selected():
         tid=song['track_id'];audio=Path(song['audio_path']);target=DEST/'stems'/tid/'separation.json'
+        if not audio.resolve().is_relative_to((ROOT/'liked-audio').resolve()):raise RuntimeError('Audio outside library root')
         fingerprint=sha(audio);dest=target.parent;out=dest/'instrumental.flac'
         if target.exists():
             previous=read(target)

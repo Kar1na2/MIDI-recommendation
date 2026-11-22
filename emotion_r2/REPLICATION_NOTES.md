@@ -113,3 +113,28 @@ report cache hits, unlogged stages and incomplete timing coverage explicitly.
 Do not present synthetic timing estimates as measured utilization. Commit code,
 notes, freeze and reports with explicit task paths and a staged-path allowlist;
 never push, rewrite history or touch docs/pages/front-end work.
+
+### Implementation clarification before emotion scoring
+
+The final Task F feature diagnostics aggregated prosody using the original
+diagnostic frame selection. Preserve those feature calculations for the
+descriptive comparison; they do **not** select V1/V3 model windows, which use
+only the saved, unchanged pYIN gate. Preserve the final Task F importance-stability
+audit even when R² is nonpositive, while forbidding driver claims in that case.
+Also bind the saved reference-normalization file; no reference normalization is
+refitted. Instrumental whole-song windows for M1/M2 follow the original code and
+are explicitly `instrumental`, never synthetic lyric or H1 sections.
+
+The supervisor retries an unexpected backend process exit from existing
+checkpoints at most three times, and a native model-worker crash once, logging
+each retry. Registered scoring exceptions and intentional/failure-rate stops
+are not overridden. A shutdown requires re-launching the provided supervisor
+command after the machine/session is available; no new Windows schedule or
+startup setting is installed, and the existing Task B scheduled task stays
+disabled. Checkpoints are retained for that resume. A keep-awake request cannot
+prevent forced restart or loss of power.
+
+Exploratory alignment uses the existing raw/strict v1 outputs and unchanged
+accompaniment-only circular-shift kernels (10,000 shuffles, ±1 bar), without a
+v2 recompute or any claim of replicating the v2 auto-grid analysis. The absence
+of a registered alignment-replication section is reported explicitly.

@@ -6,15 +6,18 @@ from .audit import ROOT, R2, DEST, read, sha, save
 
 TASK_PATHS = ('emotion_r2/replication/', 'emotion_r2/REPLICATION_NOTES.md',
               'emotion_r2/REPLICATION_PROGRESS.md', 'emotion_r2/REPLICATION_REPORT.md',
+              'emotion_r2/display/.gitignore',
               'emotion_r2/replication_development_snapshot.json')
 
 def git(*args):
     return subprocess.run(['git',*args],cwd=ROOT,check=True,capture_output=True).stdout
 
 def allowed(path):
+    if '..' in Path(path).parts:return False
     return any(path.startswith(p) if p.endswith('/') else path==p for p in TASK_PATHS)
 
 def commit(paths, message):
+    if git('branch','--show-current').decode().strip()!='codex/library-replication':raise RuntimeError('Wrong branch; no staging or commit performed')
     if not paths or not all(allowed(p) for p in paths):raise RuntimeError('Out-of-scope commit paths')
     current=git('diff','--cached','--name-only','-z').decode().split('\0')
     if any(p and not allowed(p) for p in current):raise RuntimeError('Foreign paths already staged; index left unchanged')
@@ -30,6 +33,7 @@ def registered_sources():
     names=['emotion_r2/ANALYSIS_PLAN.md','emotion_r2/models.json','emotion_r2/models_amended.json',
            'emotion_r2/models_amended.sha256','emotion_r2/l1_prompt.txt',
            'emotion_r2/validation/normalization.json','emotion_r2/validation/trust.json',
+           'emotion_r2/validation/reference_normalization.json',
            'emotion_r2/audio_scores_r2.py','emotion_r2/voicing.py','emotion_r2/score_text_model.py',
            'emotion_r2/language_weighted.py','emotion_r2/statistics_r2.py',
            'emotion_r2/explanation_repair.py','emotion_r2/display/l1_reading_prompt.txt',
@@ -37,7 +41,8 @@ def registered_sources():
            'emotion/background_m1.py','emotion/background_m2.py','emotion/feature_explanations.py',
            'emotion/pinned_demucs.py','emotion/models.json','emotion/prepare_inputs.py',
            'emotion_r2/recover_lyrics.py','emotion_r2/label_cached.py','emotion_r2/registration.py',
-           'emotion/voice_scores.py','emotion/aggregate_scores.py']
+           'emotion/voice_scores.py','emotion/aggregate_scores.py',
+           'analysis_v2/ANALYSIS_PLAN.md','pipeline/v2_stats.py']
     return {name:sha(ROOT/name) for name in names}
 
 def lock_sources():
@@ -48,6 +53,7 @@ def lock_sources():
     else:save(target,actual)
 
 def pre_scoring():
+    if git('branch','--show-current').decode().strip()!='codex/library-replication':raise RuntimeError('Wrong branch for Task K')
     if not read(DEST/'integrity_start.json')['passed']:raise RuntimeError('Initial snapshots failed')
     if git('show','HEAD:emotion_r2/REPLICATION_NOTES.md')!=(R2/'REPLICATION_NOTES.md').read_bytes():
         raise RuntimeError('Operational decisions must be committed before scoring')

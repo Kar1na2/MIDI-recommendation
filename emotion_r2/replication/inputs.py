@@ -3,12 +3,16 @@ from collections import Counter
 import hashlib
 import random
 import sys
+from pathlib import Path
 from .audit import ROOT, R2, DEST, read, save, sha, now
 from .controls import pre_scoring
 
 sys.path[:0]=[str(R2),str(ROOT/'emotion'),str(R2/'vendor')]
 
 def maybe(path):return read(path) if path.is_file() else {}
+
+def draw_eligible(eligible):
+    return random.Random(20261115).sample(sorted(eligible,key=lambda s:s['track_id']),min(300,len(eligible)))
 
 def prepare():
     pre_scoring()
@@ -27,8 +31,9 @@ def prepare():
         tid=song['track_id'];folder=ROOT/'outputs'/tid
         stages={s:maybe(folder/(s+'.json')) for s in required}
         lyric=maybe(folder/'lyrics.json');data=lyric.get('data') or {}
-        backend_ok=all(stages[s].get('status') in ('ok','ok_with_warning','complete') for s in required)
-        reason=('missing_audio' if not song['audio_exists'] else
+        audio_available=bool(song.get('audio_path') and Path(song['audio_path']).is_file())
+        backend_ok=audio_available and all(stages[s].get('status') in ('ok','ok_with_warning','complete') for s in required)
+        reason=('missing_audio' if not audio_available else
                 'missing_or_failed_pass1_stage' if not backend_ok else
                 'pending_genius' if lyric.get('status')=='pending_genius' else
                 'missing_lyric_sections' if lyric.get('status') not in ('ok','ok_with_warning','complete') or not data.get('sections') else None)
@@ -89,7 +94,7 @@ def prepare():
         prepared.append({**identity,'language':language})
         print(tid+': input prepared (no model scores)',flush=True)
     eligibility.sort(key=lambda s:s['track_id'])
-    selected=random.Random(20261115).sample(eligibility,min(300,len(eligibility)))
+    selected=draw_eligible(eligibility)
     draw={'seed':20261115,'selection_utc':now(),'eligible_count':len(eligibility),'selected_count':len(selected),
           'sampling':'Original selection: sort eligible track IDs, uniformly sample without replacement; no emotion-conditioned exclusion or resampling',
           'eligible_ids':[s['track_id'] for s in eligibility],'rejected_counts':dict(rejected),'songs':selected}

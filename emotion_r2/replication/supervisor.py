@@ -22,8 +22,12 @@ def append_progress(phase):
     stages={}
     for role in ('T1','T3','L1','M1','M2','M3','voice_gate','V1','V3'):
         stages[role]=len(list((DEST/'scores'/role).glob('*.json')))
+    ratio=backend.get('measured_seconds_per_audio_second')
+    remaining=sum(float(s.get('duration_s',0)) for s in states.values() if s.get('status') not in ('done','failed','skipped'))
+    eta=remaining*ratio/3600 if ratio is not None else 'not yet measured'
+    from shutil import disk_usage
     with (R2/'REPLICATION_PROGRESS.md').open('a',encoding='utf8') as f:
-        f.write(f'\n- {now()} — {phase}; backend {counts}; failures {failures}; emotion checkpoints {stages}; backend ETA hours {backend.get("remaining_eta_hours", "not yet measured")}. No interim H1/chorus–verse statistics.\n')
+        f.write(f'\n- {now()} — {phase}; backend {counts}; failures {failures}; emotion checkpoints {stages}; backend ETA hours {eta}; free disk bytes {disk_usage(ROOT).free}. No interim H1/chorus–verse statistics.\n')
 
 def alive(pid_path):
     try:
@@ -43,7 +47,7 @@ def library_pass():
         # Existing Task B launcher and progress are retained, never reconstructed.
         subprocess.run([sys.executable,'-B','-m','pipeline.batch','resume','--set','library'],cwd=ROOT,check=True)
     update('backend_pass1',checkpoint='library/progress.json')
-    last=0
+    last=-10800;restarts=0
     while True:
         state=maybe(ROOT/'library/progress.json')
         if state.get('status')=='complete':break
@@ -52,7 +56,14 @@ def library_pass():
             raise RuntimeError('Library stop condition: '+str(state.get('stop_reason')))
         if (ROOT/'library/stop.requested').exists():raise RuntimeError('Stop requested; not overridden')
         if not alive(ROOT/'library/batch.pid'):
-            raise RuntimeError('Library worker exited; checkpoints retained; inspect library/daemon.log before resume')
+            if restarts>=3:raise RuntimeError('Library worker exited after three crash restarts; inspect library/daemon.log')
+            restarts+=1
+            append_progress('Unexpected backend exit; checkpoint resume '+str(restarts)+'/3')
+            # Never override intentional stop/failure conditions. The file is
+            # only a stale process reference, not completed output or a cache.
+            (ROOT/'library/batch.pid').unlink(missing_ok=True)
+            time.sleep(30)
+            subprocess.run([sys.executable,'-B','-m','pipeline.batch','resume','--set','library'],cwd=ROOT,check=True)
         time.sleep(30)
 
 def worker(module,*args):
@@ -61,14 +72,19 @@ def worker(module,*args):
     started=time.monotonic();started_utc=now()
     update('worker',module=module,arguments=list(args),started_utc=started_utc)
     env={**os.environ,'PYTHONDONTWRITEBYTECODE':'1','OMP_NUM_THREADS':'2','MKL_NUM_THREADS':'2'}
-    with (dest/(name+'.log')).open('ab',buffering=0) as f:
-        process=subprocess.Popen([sys.executable,'-B','-m',module,*args],cwd=ROOT,env=env,stdout=f,stderr=subprocess.STDOUT)
-        save(DEST/'active_worker.json',{'pid':process.pid,'module':module,'arguments':list(args),'started_utc':now()})
-        last=0
-        while process.poll() is None:
-            if time.monotonic()-last>=10800:append_progress(name);last=time.monotonic()
-            time.sleep(30)
-        if process.returncode:raise RuntimeError('Worker failed: '+module+' '+name+'; see '+str(dest/(name+'.log')))
+    for attempt in range(2):
+        with (dest/(name+'.log')).open('ab',buffering=0) as f:
+            process=subprocess.Popen([sys.executable,'-B','-m',module,*args],cwd=ROOT,env=env,stdout=f,stderr=subprocess.STDOUT)
+            save(DEST/'active_worker.json',{'pid':process.pid,'module':module,'arguments':list(args),'started_utc':now()})
+            last=-10800
+            while process.poll() is None:
+                if time.monotonic()-last>=10800:append_progress(name);last=time.monotonic()
+                time.sleep(30)
+        if process.returncode==0:break
+        if process.returncode<0 and attempt==0:
+            append_progress('Native worker crash '+name+'; one checkpoint retry, signal '+str(-process.returncode))
+            time.sleep(30);continue
+        raise RuntimeError('Worker failed: '+module+' '+name+'; see '+str(dest/(name+'.log')))
     with (DEST/'stage_times.jsonl').open('a',encoding='utf8') as f:
         f.write(__import__('json').dumps({'module':module,'arguments':list(args),'started_utc':started_utc,'finished_utc':now(),'wall_seconds':time.monotonic()-started})+'\n')
 
@@ -88,10 +104,10 @@ def run():
     worker('emotion_r2.replication.finish','analyze')
     integrity('end')
     worker('emotion_r2.replication.finish','report')
+    append_progress('Complete; reports and final four-snapshot verification finished')
     commit(['emotion_r2/REPLICATION_REPORT.md','emotion_r2/REPLICATION_PROGRESS.md',
             'emotion_r2/replication/integrity_end.json'],'Report registered library replication and protected integrity')
     update('complete')
-    append_progress('Complete')
     (DEST/'keep_awake.stop').touch()
 
 def main():
@@ -100,9 +116,13 @@ def main():
     if a.action=='start':
         pid=DEST/'supervisor.pid'
         if pid.exists():
-            try:os.kill(int(pid.read_text()),0)
+            try:
+                previous=int(pid.read_text());os.kill(previous,0)
+                proc=__import__('pathlib').Path('/proc')/str(previous)
+                active=proc.exists() and (proc/'stat').read_text().split()[2]!='Z' and b'emotion_r2.replication.supervisor' in (proc/'cmdline').read_bytes()
             except (ProcessLookupError,ValueError):pass
-            else:raise RuntimeError('Task K supervisor already running')
+            else:
+                if active:raise RuntimeError('Task K supervisor already running')
         with (DEST/'supervisor.log').open('ab',buffering=0) as log:
             proc=subprocess.Popen([sys.executable,'-B','-m','emotion_r2.replication.supervisor','run'],cwd=ROOT,
                 stdin=subprocess.DEVNULL,stdout=log,stderr=subprocess.STDOUT,start_new_session=True,
@@ -113,6 +133,8 @@ def main():
         update('stopped_error',error=type(error).__name__+': '+str(error))
         append_progress('STOPPED: '+str(error))
         raise
-    finally:(DEST/'supervisor.pid').unlink(missing_ok=True)
+    finally:
+        (DEST/'supervisor.pid').unlink(missing_ok=True)
+        (DEST/'keep_awake.stop').touch()
 
 if __name__=='__main__':main()
