@@ -152,5 +152,5 @@ export function musicSummary(reading) {
     const upper = Math.ceil(Math.max(...positions));
     agreement = `All three models rate it among the calmest ${upper}% of sections.`;
   }
-  return `${energyWords[reading.consensus.band].split(',')[0]}${phrases.length ? ' with ' + phrases.join(', ') : ''}. ${agreement}`;
+  return `${energyWords[reading.consensus.band].split(',')[0]}${phrases.length ? ' with ' + phrases.join(', ') : ''} · ${agreement}`;
 }
