@@ -1,0 +1,92 @@
+{
+  "created_utc": "2026-11-22T14:52:45.669335+00:00",
+  "library_count": 803,
+  "audio_available": 728,
+  "missing_audio": 75,
+  "pending_backend": 668,
+  "near_duplicate_ids": 7,
+  "mean_325_bytes": {
+    "backend_bytes": 172558510.37846154,
+    "emotion_stem_bytes": 18920692.452307694,
+    "r2_score_bytes": 181238.96923076923
+  },
+  "free_bytes": 863421755392,
+  "projected_additional_bytes": 129175291007.6923,
+  "margin": 1.3,
+  "disk_passed": true,
+  "stage_timings_from_actual_logs": {
+    "beats": {
+      "observations": 300,
+      "mean_seconds": 5.542113333333333,
+      "total_logged_seconds": 1662.6340000000005,
+      "projected_library_hours": 1.120738474074074
+    },
+    "quantize": {
+      "observations": 299,
+      "mean_seconds": 0.10798996655518395,
+      "total_logged_seconds": 32.28899999999998,
+      "projected_library_hours": 0.021837971014492755
+    },
+    "layers": {
+      "observations": 299,
+      "mean_seconds": 0.1473076923076923,
+      "total_logged_seconds": 44.04499999999997,
+      "projected_library_hours": 0.02978888888888889
+    },
+    "patterns": {
+      "observations": 299,
+      "mean_seconds": 0.44383277591973247,
+      "total_logged_seconds": 132.70599999999996,
+      "projected_library_hours": 0.0897528502415459
+    },
+    "rhythm": {
+      "observations": 299,
+      "mean_seconds": 1.4551438127090301,
+      "total_logged_seconds": 435.0879999999999,
+      "projected_library_hours": 0.29426241545893717
+    },
+    "tuning": {
+      "observations": 274,
+      "mean_seconds": 2.4633248175182483,
+      "total_logged_seconds": 674.9509999999998,
+      "projected_library_hours": 0.4981390186536902
+    },
+    "separation": {
+      "observations": 274,
+      "mean_seconds": 12.288919708029198,
+      "total_logged_seconds": 3367.1640000000007,
+      "projected_library_hours": 2.4850926520681265
+    },
+    "transcription": {
+      "observations": 273,
+      "mean_seconds": 334.9056446886447,
+      "total_logged_seconds": 91429.241,
+      "projected_library_hours": 67.7253637037037
+    },
+    "routing": {
+      "observations": 99,
+      "mean_seconds": 231.88235353535353,
+      "total_logged_seconds": 22956.353000000006,
+      "projected_library_hours": 46.891764826038155
+    },
+    "T1": {
+      "observations": 325,
+      "mean_seconds": 0.059700324338464096,
+      "total_logged_seconds": 19.40260541000083,
+      "projected_library_hours": 0.012072732255111629
+    },
+    "T3": {
+      "observations": 325,
+      "mean_seconds": 0.09281181997231006,
+      "total_logged_seconds": 30.163841491000767,
+      "projected_library_hours": 0.018768612483289367
+    },
+    "L1": {
+      "observations": 325,
+      "mean_seconds": 6.910694583661535,
+      "total_logged_seconds": 2245.97573969,
+      "projected_library_hours": 1.3974960158071104
+    }
+  },
+  "timing_limitations": "Inference logs omit some startup/verification/interruption overhead; zero is not inferred for unlogged stages. Original backend routing timings are reported separately if present."
+}
