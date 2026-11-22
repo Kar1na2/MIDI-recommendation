@@ -4,6 +4,9 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { buildCatalog } from './model.mjs';
 import { makeCalibration, buildSongReadings } from './emotion_readings.mjs';
+import { musicCalibration, calibrationSummary as musicCalibrationSummary, buildMusicSections, isMusicFeature } from './music_readings.mjs';
+import { execFile } from 'node:child_process';
+import { promisify } from 'node:util';
 
 const root = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
 export const sourceFolder = path.join(root, 'emotion_r2/digest/frontend_data');
@@ -42,10 +45,28 @@ export async function buildEmotionData({ source = sourceFolder, destination = da
   const calibrationSummary = { ...calibration };
   delete calibrationSummary.distributions;
   await fs.writeFile(path.join(destination, 'calibration.json'), JSON.stringify(calibrationSummary, null, 2) + '\n');
+  const musicReference = musicCalibration(entries);
+  await fs.writeFile(path.join(destination, 'musicCalibration.json'), JSON.stringify(musicCalibrationSummary(musicReference), null, 2) + '\n');
+  const windowFolder = path.join(root, 'frontend/scratch/music-windows');
+  let windowExport = { availableSongs: 0, failedSongs: {}, windows: 0, readerError: 'Window export unavailable for this build root.' };
+  if (metadataRoot === root) {
+    const linuxPath = value => value.replaceAll('\\', '/').replace(/^([A-Za-z]):/, (_, drive) => `/mnt/${drive.toLowerCase()}`);
+    const pythonArgs = [linuxPath(path.join(root, 'frontend/read_music_windows.py')), '--root', linuxPath(root), '--destination', linuxPath(windowFolder)];
+    try {
+      const { stdout } = process.platform === 'win32'
+        ? await promisify(execFile)('wsl.exe', ['-d', 'Ubuntu-22.04', '--exec', '/home/usr/venvs/midi/bin/python', '-B', ...pythonArgs], { windowsHide: true, maxBuffer: 1024 * 1024 })
+        : await promisify(execFile)('/home/usr/venvs/midi/bin/python', ['-B', ...pythonArgs], { maxBuffer: 1024 * 1024 });
+      windowExport = JSON.parse(stdout);
+    } catch (error) {
+      windowExport.readerError = error.message;
+    }
+    if (windowExport.readerError || Object.keys(windowExport.failedSongs).length) console.error('Per-window export incomplete', JSON.stringify(windowExport));
+  }
   let models = [];
+  let musicContext = null;
   try {
     const manifest = JSON.parse(await fs.readFile(path.join(metadataRoot, 'emotion_r2/models_amended.json'), 'utf8'));
-    models = manifest.models.filter(model => ['T1', 'T3', 'L1'].includes(model.role)).map(model => ({
+    models = manifest.models.filter(model => ['T1', 'T3', 'L1', 'M1', 'M2', 'M3'].includes(model.role)).map(model => ({
       role: model.role,
       id: model.id,
       family: model.family || null,
@@ -53,11 +74,20 @@ export async function buildEmotionData({ source = sourceFolder, destination = da
       distinctFromT1: model.distinct_from_T1 || null,
       relatedFamily: model.related_family || null,
       languages: model.languages || [],
-      trainingData: model.training_data || null
+      trainingData: model.training_data || null,
+      card: model.card || null,
+      distinctFromM1: model.distinct_from_M1 || null,
+      possibleSharedTrainingData: model.possible_shared_training_data ?? null
     }));
-    if (new Set(models.map(model => model.role)).size !== 3) throw new Error('Expected model manifest entries for T1, T3 and L1.');
+    if (new Set(models.map(model => model.role)).size !== 6) throw new Error('Expected the six Words and Music model manifest entries.');
   } catch (error) { if (error.code !== 'ENOENT') throw error; }
-  await fs.writeFile(path.join(destination, 'models.json'), JSON.stringify({ source: 'emotion_r2/models_amended.json', models }, null, 2) + '\n');
+  try {
+    const checks = JSON.parse(await fs.readFile(path.join(metadataRoot, 'emotion_r2/validation/explanation_checks.json'), 'utf8')).background_arousal;
+    musicContext = { source: 'emotion_r2/validation/explanation_checks.json', sections: checks.n_sections, songs: checks.n_songs, r2: checks.full.oof_r2,
+      leadingFeatures: checks.full.permutation_importance.filter(feature => isMusicFeature(feature.feature)).slice(0, 5).map(feature => ({ feature: feature.feature, meanR2Drop: feature.mean_r2_drop, positiveFolds: feature.positive_folds, folds: feature.fold_r2_drops.length })) };
+  } catch (error) { if (error.code !== 'ENOENT') throw error; }
+  await fs.writeFile(path.join(destination, 'models.json'), JSON.stringify({ source: 'emotion_r2/models_amended.json', models, musicContext }, null, 2) + '\n');
+  const musicCoverage = { songsWithSections: 0, sections: 0, scoredSections: 0, sectionsWithAllModels: 0, sectionsWithFeatures: 0, sectionsWithWindows: 0, windowExport };
   for (const entry of entries) {
     const readOptional = async filename => {
       try { return JSON.parse(await fs.readFile(path.join(metadataRoot, filename), 'utf8')); }
@@ -76,6 +106,18 @@ export async function buildEmotionData({ source = sourceFolder, destination = da
       }
     }
     const reading = buildSongReadings(entry.data, entry.sections, calibration, { probabilities, l1, descriptions });
+    let windows = { status: 'unavailable', sections: {} };
+    if (metadataRoot === root && !windowExport.readerError) {
+      windows = await readOptional(`frontend/scratch/music-windows/${id}.json`) || windows;
+    }
+    reading.music = buildMusicSections(entry, musicReference, windows);
+    const musicSections = Object.values(reading.music.sections);
+    if (musicSections.length) musicCoverage.songsWithSections++;
+    musicCoverage.sections += musicSections.length;
+    musicCoverage.scoredSections += musicSections.filter(s => Number.isFinite(s.consensus.z)).length;
+    musicCoverage.sectionsWithAllModels += musicSections.filter(s => Object.values(s.models).every(m => Number.isFinite(m.z))).length;
+    musicCoverage.sectionsWithFeatures += musicSections.filter(s => Object.values(s.features).some(f => Number.isFinite(f.raw))).length;
+    musicCoverage.sectionsWithWindows += musicSections.filter(s => s.consensusWindows.length).length;
     await fs.writeFile(path.join(destination, `${entry.data.track_id}.readings.json`), JSON.stringify(reading, null, 2) + '\n');
   }
   const withFile = songs.filter(s => tracks[s.id]);
@@ -102,6 +144,7 @@ export async function buildEmotionData({ source = sourceFolder, destination = da
     withoutEmotionTrackIds: songs.filter(s => !tracks[s.id]).map(s => s.id),
     withoutScoredTrackIds: songs.filter(s => !tracks[s.id]?.scored).map(s => s.id)
   };
+  manifest.musicCoverage = musicCoverage;
   await fs.copyFile(path.join(source, 'corpus.json'), path.join(destination, 'corpus.json'));
   await fs.writeFile(path.join(destination, 'manifest.json'), JSON.stringify(manifest, null, 2) + '\n');
   return manifest;

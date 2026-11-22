@@ -144,6 +144,7 @@ async function openSong(item) {
 
   $('onion').replaceChildren();
   $('emotionTimeline').replaceChildren();
+  $('songTempo').textContent = '';
 
   for (const id of ['play', 'back', 'forward', 'timeline', 'hub']) $(id).disabled = true;
 
@@ -165,6 +166,7 @@ async function openSong(item) {
   song = buildSong(item, files); song.summaries = summarizeSections(song); document.body.classList.remove('loading');
   song.emotion = emotionResponse.value || null;
   song.emotionReadings = readingsResponse.value || null;
+  $('songTempo').textContent = typeof song.emotionReadings?.music?.tempo_bpm === 'number' ? `Song tempo · ${song.emotionReadings.music.tempo_bpm.toFixed(1)} BPM` : 'Song tempo · not measured';
   song.emotionModels = emotionModels;
   song.emotionError = emotionResponse.error ? 'Emotion data unavailable for this song · not scored.' : '';
   song.emotionMeta = emotionManifest?.tracks?.[item.id] || null;

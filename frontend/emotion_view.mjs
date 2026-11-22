@@ -1,6 +1,7 @@
 import { formatBoundary, formatTime } from './model.mjs';
 import { finite, emotionValue, timedSection, sectionWindow, overlaps, selectedEmotionSections, missingLabel, curvePaths, corpusCallout } from './emotion.mjs';
 import { readingWords, togetherLabel, lyricModels, lyricMood } from './emotion_readings.mjs';
+import { musicModels, energyWords, featureLabels, musicSummary, measuredLabel, instrumentName, instrumentNotice } from './music_readings.mjs';
 
 const element = (tag, text, className) => {
   const result = document.createElement(tag);
@@ -24,6 +25,7 @@ const lanes = [
 ];
 
 const sectionReading = (song, section) => song.emotionReadings?.sections?.[section?.section_id];
+const musicSection = (song, section) => song.emotionReadings?.music?.sections?.[section?.section_id];
 const signed = value => finite(value) ? `${value >= 0 ? '+' : ''}${value.toFixed(2)}` : null;
 const modelProfile = (song, role) => song.emotionModels?.models?.find(model => model.role === role);
 const modelNote = (song, role) => {
@@ -60,6 +62,80 @@ function appendWordsRows(host, song, section) {
   host.append(element('p', finite(average) ? `Average · ${signed(average)} z` : `Average · ${missingLabel(song, section, 'words_valence_z')}`, 'words-average'));
 }
 
+function musicSparkline(model, section, extent, role) {
+  const points = model.windows || [];
+  const root = svg('svg', { viewBox: '0 0 240 42', class: 'music-sparkline', role: 'img', 'aria-label': `${role} energy within this section on the shared z scale` });
+  root.append(svg('line', { x1: 0, x2: 240, y1: 21, y2: 21, class: 'emotion-average' }));
+  let path = '', previous = null;
+  for (const point of points) {
+    if (!finite(point.z) || !finite(point.start_s)) { previous = null; continue; }
+    const command = previous !== null && point.start_s - previous <= 1.001 ? 'L' : 'M';
+    path += `${command}${(point.start_s - section.start_s) / (section.end_s - section.start_s) * 240},${21 - point.z / extent * 17} `;
+    previous = point.start_s;
+  }
+  if (path) root.append(svg('path', { d: path, class: `emotion-line model-${role.toLowerCase()}` }));
+  return root;
+}
+
+function appendMeasured(host, reading) {
+  const disclosure = element('details', null, 'data-disclosure music-measurements');
+  disclosure.append(element('summary', 'Measured in this section'), element('p', measuredLabel, 'words-model-note'));
+  for (const name of [...Object.keys(featureLabels), 'major_mode_score']) {
+    const value = reading?.features?.[name];
+    const row = element('div', null, 'music-feature');
+    const label = featureLabels[name]?.[0] || 'Mode';
+    const text = !finite(value?.raw) ? 'not measured' : value.words || (name === 'key_strength' ? 'middle range' : 'not measured');
+    row.append(element('strong', label), element('span', text));
+    if (finite(value?.raw)) row.append(element('small', `Raw ${value.raw.toFixed(3)} · z ${finite(value.z) ? signed(value.z) : 'unavailable'} · percentile ${finite(value.percentile) ? value.percentile.toFixed(1) : 'unavailable'}`));
+    disclosure.append(row);
+  }
+  disclosure.append(element('p', instrumentNotice, 'words-model-note'));
+  for (const name of reading?.topInstruments || []) {
+    const metric = reading.features[name];
+    disclosure.append(element('p', `${instrumentName(name)} · onset density ${metric.raw.toFixed(2)} per second · percentile ${finite(metric.percentile) ? metric.percentile.toFixed(1) : 'unavailable'} · z ${finite(metric.z) ? signed(metric.z) : 'unavailable'}`));
+  }
+  for (const name of reading?.dropouts || []) disclosure.append(element('p', `${instrumentName(name)} nearly drop out · below the 15th percentile`));
+  for (const [name, metric] of Object.entries(reading?.features || {})) {
+    if (name.startsWith('onset_density__') && !finite(metric.raw)) disclosure.append(element('p', `${instrumentName(name)} · not measured`));
+  }
+  host.append(disclosure);
+}
+
+function appendMusicRows(host, song, section) {
+  host.replaceChildren();
+  const reading = musicSection(song, section);
+  const values = musicModels.flatMap(role => [reading?.models?.[role]?.z, ...(reading?.models?.[role]?.windows || []).map(p => p.z)]).filter(finite);
+  const extent = Math.max(1, ...values.map(Math.abs));
+  for (const role of musicModels) {
+    const model = reading?.models?.[role];
+    const metadata = modelProfile(song, role);
+    const row = element('div', null, 'music-model-row');
+    const heading = element('div', null, 'words-model-title');
+    heading.append(element('strong', role), element('span', finite(model?.z) ? `${signed(model.z)} z · percentile ${model.percentile.toFixed(1)} · ${energyWords[model.band]}` : 'not scored'));
+    row.append(heading);
+    if (model?.windows?.some(p => finite(p.z))) row.append(musicSparkline(model, section, extent, role));
+    else row.append(element('p', 'Per-window curve unavailable.', 'words-model-note'));
+    row.append(element('p', metadata ? `${metadata.family || metadata.id}. Training data · ${metadata.trainingData || 'not specified in the supplied manifest'}. ${metadata.coverageNote || ''}` : 'Model manifest details unavailable.', 'words-model-note'));
+    if (metadata?.card) { const link = element('a', metadata.id, 'model-card'); link.href = metadata.card; link.target = '_blank'; link.rel = 'noopener noreferrer'; row.append(link); }
+    if (['M1', 'M3'].includes(role)) row.append(element('p', 'M1 and M3 share MediaEval training-data lineage.', 'words-model-note'));
+    if (finite(model?.raw)) row.append(element('small', `Raw model arousal ${model.raw.toFixed(3)}`, 'words-model-note'));
+    host.append(row);
+  }
+  host.append(element('p', `Shared curve scale −${extent.toFixed(1)} to +${extent.toFixed(1)} z`, 'words-model-note'));
+  const consensus = reading?.consensus;
+  host.append(element('p', finite(consensus?.z) ? `Average · ${signed(consensus.z)} z · ${Math.round(consensus.percentile)}th percentile` : 'Average · not scored', 'words-average'));
+  const motion = reading?.movement;
+  host.append(element('p', `${motion?.word || 'Movement not scored'}${finite(motion?.peak_s) ? ` · peaks at ${formatTime(motion.peak_s)}` : ''}`, 'music-movement'));
+  host.append(element('p', musicSummary(reading), 'music-summary'), element('p', measuredLabel, 'words-model-note'));
+  appendMeasured(host, reading);
+  const experimental = element('details', null, 'data-disclosure'); experimental.append(element('summary', 'Experimental, not trusted · background mood'));
+  for (const role of musicModels) {
+    const value = reading?.models?.[role]?.valence;
+    experimental.append(element('p', `${role} · z ${finite(value?.z) ? signed(value.z) : 'not scored'} · raw ${finite(value?.raw) ? value.raw.toFixed(3) : 'not scored'}`));
+  }
+  host.append(experimental);
+}
+
 function laneReading(song, section, lane) {
   const reading = sectionReading(song, section), words = readingWords(reading);
   const label = words[lane.key];
@@ -93,6 +169,7 @@ function updateReadingSummary(host, window, position = 0) {
   for (const target of host.querySelectorAll('[data-reading-lane]')) {
     const lane = lanes.find(l => l.key === target.dataset.readingLane);
     if (lane.key === 'lyrics') appendWordsRows(target, song, section);
+    else if (lane.key === 'music') appendMusicRows(target, song, section);
     else target.textContent = section ? laneReading(song, section, lane) : missingLabel(song, null, lane.channels[0]);
   }
   const combined = host.querySelector('.reading-combined');
@@ -128,11 +205,13 @@ export function renderEmotion(host, song, corpus, choose) {
     const heading = element('div', null, 'lane-heading');
     heading.append(element('h3', lane.name), badge(lane.experimental));
     article.append(heading, element('p', lane.subtitle, 'lane-subtitle'));
-    const reading = element(lane.key === 'lyrics' ? 'div' : 'p', null, 'lane-reading'); reading.dataset.readingLane = lane.key; article.append(reading);
+    const reading = element(lane.key === 'voice' ? 'p' : 'div', null, 'lane-reading'); reading.dataset.readingLane = lane.key; article.append(reading);
     if (lane.experimental) article.append(element('p', 'Models agree, but may track pitch/brightness; the singing detector misses many sections.', 'voice-reason'));
     const chart = svg('svg', { viewBox: '0 0 720 84', preserveAspectRatio: 'none', class: 'emotion-chart', role: 'group', 'aria-label': `${lane.name} on the full song timeline` });
     chart.append(svg('line', { x1: 0, x2: 720, y1: 42, y2: 42, class: 'emotion-average' }));
-    const values = lane.key === 'lyrics' ? timed.flatMap(s => lyricModels.map(model => sectionReading(song, s)?.wordsModels?.[model])).filter(finite) : timed.flatMap(s => lane.channels.map(ch => emotionValue(s, ch))).concat((data?.curves_1hz || []).flatMap(p => lane.channels.map(ch => emotionValue(p, ch)))).filter(finite);
+    const values = lane.key === 'lyrics' ? timed.flatMap(s => lyricModels.map(model => sectionReading(song, s)?.wordsModels?.[model])).filter(finite)
+      : lane.key === 'music' ? timed.flatMap(s => musicModels.flatMap(model => [musicSection(song, s)?.models?.[model]?.z, ...(musicSection(song, s)?.models?.[model]?.windows || []).map(p => p.z)])).filter(finite)
+      : timed.flatMap(s => lane.channels.map(ch => emotionValue(s, ch))).filter(finite);
     const extent = Math.max(1, ...values.map(Math.abs));
     for (const section of timed) {
       const window = sectionWindow(section);
@@ -151,12 +230,15 @@ export function renderEmotion(host, song, corpus, choose) {
     }
     lane.channels.forEach((channel, index) => {
       // Background uses the supplied 1 Hz curve. Words and voice use section scores.
-      if (channel === 'background_arousal_z' && data) {
-        for (const d of curvePaths(data, channel, song.duration, 720, 84, extent)) {
-          if (d.includes('L')) chart.append(svg('path', { d, class: 'emotion-line' }));
+      if (lane.key === 'music' && data) {
+        for (const model of musicModels) {
+          const curves = { sections: timed, curves_1hz: timed.flatMap(s => (musicSection(song, s)?.models?.[model]?.windows || []).map(point => ({ section_id: s.section_id, start_s: point.start_s, background_arousal_z: point.z }))) };
+          for (const d of curvePaths(curves, channel, song.duration, 720, 84, extent)) {
+          if (d.includes('L')) chart.append(svg('path', { d, class: `emotion-line model-${model.toLowerCase()}` }));
           else {
             const [cx, cy] = d.slice(1).split(',');
-            chart.append(svg('circle', { cx, cy, r: 2, class: 'emotion-point' }));
+            chart.append(svg('circle', { cx, cy, r: 2, class: `emotion-point model-${model.toLowerCase()}` }));
+          }
           }
         }
       } else if (lane.key === 'lyrics') {
@@ -183,6 +265,13 @@ export function renderEmotion(host, song, corpus, choose) {
     host.append(article);
   }
   host.append(element('div', null, 'reading-combined'));
+  const context = song.emotionModels?.musicContext;
+  if (context) {
+    const box = element('details', null, 'music-context data-disclosure');
+    box.append(element('summary', 'What usually goes with higher energy'), element('p', 'Associations across all songs, not causes.', 'words-model-note'));
+    for (const feature of context.leadingFeatures) box.append(element('p', `${featureLabels[feature.feature]?.[0] || feature.feature.replaceAll('_', ' ')} · held-out R² drop ${feature.meanR2Drop.toFixed(3)} · positive in ${feature.positiveFolds}/${feature.folds} folds`));
+    host.append(box);
+  }
   const labelled = timed.filter(s => markers[s.section_id]);
   if (labelled.length) {
     const nav = element('div', null, 'emotion-markers'); nav.setAttribute('aria-label', 'Genius section labels');
@@ -246,6 +335,7 @@ export function appendEmotionDetails(panel, song, window) {
       const heading = element('div', null, 'lane-heading'); heading.append(element('h4', lane.name), badge(lane.experimental)); item.append(heading);
       if (lane.experimental) item.append(element('p', 'Experimental · models agree, but may track pitch/brightness; the singing detector misses many sections.', 'voice-reason'));
       if (lane.key === 'lyrics') { const rows = element('div', null, 'words-models'); appendWordsRows(rows, song, section); item.append(rows); }
+      else if (lane.key === 'music') { const rows = element('div', null, 'music-models'); appendMusicRows(rows, song, section); item.append(rows); }
       else item.append(element('p', laneReading(song, section, lane), 'emotion-reading'));
     }
     const together = element('div', null, 'reading-combined'); appendTogether(together, song, section); item.append(together);

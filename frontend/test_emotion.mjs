@@ -271,7 +271,8 @@ test('lane selection updates all model rows, highlights and the combined reading
     assert.ok(rows[2].textContent.includes("the model's own description, written after scoring"));
     assert.equal(rows.some(row => /^Mixed:/m.test(row.textContent)), false);
     assert.equal(lyrics.querySelector('.words-average').textContent, 'Average · +0.15 z');
-    assert.ok(host.querySelectorAll('[data-reading-lane]')[1].textContent.startsWith('Moderate, steady'));
+    assert.equal(host.querySelectorAll('[data-reading-lane]')[1].querySelectorAll('.music-model-row').length, 3);
+    assert.ok(host.querySelectorAll('[data-reading-lane]')[1].textContent.includes('Moderate, steady'));
     assert.ok(host.querySelector('.reading-combined').textContent.includes('Steady groove'));
     assert.equal(host.querySelectorAll('[data-emotion-id]').filter(e => e.dataset.emotionId === verse.section_id && e.getAttribute('aria-pressed') === 'true').length, 3);
     assert.equal(host.querySelectorAll('.emotion-playhead').every(e => Number(e.getAttribute('x1')) === verse.start_s / 220 * 720), true);
@@ -311,7 +312,7 @@ test('ATTITUDE Verse 2 displays three shared-scale rows and all model outputs', 
   assert.equal(details.L1.energy, 0.8);
   assert.equal(details.L1.uncertain, false);
   assert.ok(details.L1.description);
-  assert.equal(models.models.length, 3);
+  assert.equal(models.models.filter(model => ['T1', 'T3', 'L1'].includes(model.role)).length, 3);
   assert.equal(Object.hasOwn(section, 'text'), false);
 });
 
@@ -342,17 +343,44 @@ test('model outputs preserve nulls and Part B absence remains explicit', () => {
 
 test('generated display data never embeds a source section-text string', async () => {
   const files = await fs.readdir(dataFolder);
-  const ids = files.filter(name => /^[A-Za-z0-9]+\.json$/.test(name) && !['corpus.json', 'manifest.json', 'calibration.json', 'models.json'].includes(name)).map(name => name.slice(0, -5));
+  const ids = files.filter(name => /^[A-Za-z0-9]+\.json$/.test(name) && !['corpus.json', 'manifest.json', 'calibration.json', 'models.json', 'musicCalibration.json'].includes(name)).map(name => name.slice(0, -5));
   assert.equal(ids.length, 325);
   for (const id of ids) {
     let privateData;
     try { privateData = JSON.parse(await fs.readFile(path.join(root, 'emotion_r2/private', `${id}.json`), 'utf8')); }
     catch (error) { if (error.code === 'ENOENT') continue; throw error; }
-    const display = await Promise.all([`${id}.json`, `${id}.readings.json`].map(name => fs.readFile(path.join(dataFolder, name), 'utf8')));
+    const display = await Promise.all([`${id}.json`, `${id}.readings.json`].map(name => fs.readFile(path.join(dataFolder, name), 'utf8').then(JSON.parse)));
+    const strings = value => typeof value === 'string' ? [value] : value && typeof value === 'object' ? Object.values(value).flatMap(strings) : [];
+    const visibleStrings = display.flatMap(strings);
     for (const section of privateData.sections || []) {
-      if (typeof section.text === 'string' && section.text.trim()) for (const asset of display) assert.equal(asset.includes(section.text), false);
+      if (typeof section.text === 'string' && section.text.trim()) assert.equal(visibleStrings.some(value => value.includes(section.text)), false, `${id} display asset contains source section text`);
     }
   }
+});
+
+test('Music lane selection exposes model curves, measured descriptions and missing feature states', async () => {
+  const { data, readings, models } = await attitude();
+  withTestDocument(() => {
+    const host = new TestElement('section');
+    let selected;
+    const song = { emotion: data, emotionReadings: readings, emotionModels: models, duration: 220 };
+    renderEmotion(host, song, null, (_, window) => { selected = window; updateEmotionTime(host, { window, position: window.start, duration: 220 }); });
+    const music = host.querySelectorAll('.emotion-lane')[1];
+    const bridge = data.sections.find(s => s.label === 'Bridge 1');
+    music.querySelectorAll('[data-emotion-id]').find(band => band.dataset.emotionId === bridge.section_id).listeners.click();
+    assert.equal(selected.start, bridge.start_s);
+    assert.equal(selected.end, bridge.end_s);
+    assert.equal(music.querySelectorAll('.music-model-row').length, 3);
+    assert.equal(music.querySelectorAll('.music-sparkline').length, 3);
+    const summary = music.querySelector('.music-summary').textContent;
+    assert.ok(summary.includes('quiet'));
+    assert.ok(summary.includes('dark'));
+    assert.ok(summary.includes('sparse drums'));
+    assert.ok(music.querySelector('.music-measurements').textContent.includes('not measured'));
+    assert.doesNotMatch(music.textContent, /tempo|BPM/);
+    assert.equal(music.querySelectorAll('.music-model-row').filter(row => row.textContent.includes('MediaEval training-data lineage')).length, 2);
+    assert.ok(music.querySelector('.music-movement').textContent.includes('peaks at'));
+  });
 });
 
 test('all Part B missing-text sections retain null scores, energy, uncertainty and descriptions', async () => {
