@@ -51,8 +51,16 @@ let app=fs.readFileSync(path.join(out,'app.mjs'),'utf8');
 app=app.replace('`/outputs/${item.id}/${name}.json`','`app-data/songs/${item.id}/${name}.json`');
 const boot=/Promise\.all\(\[\s*fetchSource\('\/mvp\/sample\.csv', false\),[\s\S]*?\]\)\.then\(\(\[sample, summary, additions, manifest, corpus, models\]\) => \{[\s\S]*?\}\)\.catch\(error => \{ searchMessage\(`Song search is unavailable\. \$\{error\.message\}`, true\); announce\(error\.message\); \}\);/;
 if (!boot.test(app)) throw new Error('Frontend bootstrap changed; static export must be updated.');
-app=app.replace(boot,"fetchSource('app-data/catalog.json').then(({catalog: records, skipped}) => {\n  catalog = records; skippedSongs = skipped;\n  emotionManifest = fetchEmotionData.manifest; emotionCorpus = fetchEmotionData.corpus; emotionModels = fetchEmotionData.models;\n  announce(`${catalog.length} MVP songs are searchable.`);\n}).catch(error => { searchMessage(`Song search is unavailable. ${error.message}`, true); announce(error.message); });");
-app=app.replace("import { buildCatalog, buildSong, formatBoundary, formatTime, songAngle } from './model.mjs';", "import { buildCatalog, buildSong, formatBoundary, formatTime, songAngle } from './model.mjs';\nconst fetchEmotionData = await Promise.all(['manifest','corpus','models'].map(name => fetch(`data/emotion/${name}.json`).then(r => r.json()))).then(([manifest,corpus,models]) => ({manifest,corpus,models}));");
+app=app.replace(boot,`Promise.all([
+  fetchSource('app-data/catalog.json'),
+  fetchSource('./data/emotion/manifest.json').catch(() => null),
+  fetchSource('./data/emotion/corpus.json').catch(() => null),
+  fetchSource('./data/emotion/models.json').catch(() => null)
+]).then(([records, manifest, corpus, models]) => {
+  catalog = records.catalog; skippedSongs = records.skipped;
+  emotionManifest = manifest; emotionCorpus = corpus; emotionModels = models;
+  announce(\`\${catalog.length} MVP songs are searchable.\`);
+}).catch(error => { searchMessage(\`Song search is unavailable. \${error.message}\`, true); announce(error.message); });`);
 fs.writeFileSync(path.join(out,'app.mjs'),app);
 let player=fs.readFileSync(path.join(out,'player.mjs'),'utf8');
 const audioLine="    this.audio.src = `/audio/${song.id}`; this.audio.preload = 'metadata'; this.audio.load(); this.emit();";
