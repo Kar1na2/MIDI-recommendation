@@ -1,0 +1,54 @@
+{
+  "reference": {
+    "cohort": "random",
+    "songs": 300,
+    "sectionSet": "primary",
+    "sections": 1877
+  },
+  "percentileMethod": "Empirical midrank: 100 × (count below + half the count equal) / count scored. Nulls excluded.",
+  "bandBoundaries": "Very low covers percentiles below 10. Low covers 10 to under 30. Middle covers 30 to under 70. High covers 70 through 90. Very high covers values over 90.",
+  "channels": {
+    "words_valence_z": {
+      "count": 1636,
+      "cutoffs": {
+        "p10": -1.2011030817215758,
+        "p30": -0.3973355924512513,
+        "p70": 0.5966242798339587,
+        "p90": 1.0531071852464988
+      }
+    },
+    "background_arousal_z": {
+      "count": 1877,
+      "cutoffs": {
+        "p10": -1.1291498205930401,
+        "p30": -0.4894806703624725,
+        "p70": 0.4677625321303327,
+        "p90": 1.2308411765322718
+      }
+    },
+    "voice_arousal": {
+      "count": 1091,
+      "cutoffs": {
+        "p10": -1.3944853744439127,
+        "p30": -0.5470126955411116,
+        "p70": 0.647703009518636,
+        "p90": 1.249688517618453
+      }
+    },
+    "voice_valence": {
+      "count": 1091,
+      "cutoffs": {
+        "p10": -1.0728501037542195,
+        "p30": -0.4596296052186102,
+        "p70": 0.414165197816008,
+        "p90": 1.1164836986838536
+      }
+    }
+  },
+  "wordsAgreement": {
+    "count": 1636,
+    "firstTercile": 0.5443285655034354,
+    "secondTercile": 1.163456717167841,
+    "signMagnitude": 0.3
+  }
+}

@@ -1,6 +1,8 @@
 import { buildCatalog, buildSong, formatBoundary, formatTime, songAngle } from './model.mjs';
 
 import { TimelinePlayer } from './player.mjs';
+import { renderEmotion, updateEmotionTime, appendEmotionDetails } from './emotion_view.mjs';
+import { overlaps } from './emotion.mjs';
 
 import { summarizeSections, friendly as instrumentName } from './summaries.mjs';
 
@@ -15,6 +17,7 @@ const svg = (tag, attrs) => { const e = document.createElementNS('http://www.w3.
 let catalog = [], skippedSongs = [], matches = [], activeResult = -1, song = null, selected = null, displayed = null, loadToken = 0, needle;
 
 let lastState = { playing: false, position: 0, duration: 0 }, audioFailure = '';
+let emotionManifest = null, emotionCorpus = null, emotionModels = null;
 
 const announce = text => { $('announcement').textContent = text; };
 
@@ -33,6 +36,7 @@ async function fetchSource(url, json = true) {
 const player = new TimelinePlayer($('audio'), state => {
 
   lastState = state;
+  updateEmotionTime($('emotionTimeline'), state);
 
   $('timeline').value = String(state.position);
 
@@ -139,6 +143,8 @@ async function openSong(item) {
   $('hubArtist').textContent = item.artist; $('hubTitle').textContent = item.title; $('hubDuration').textContent = formatTime(item.duration);
 
   $('onion').replaceChildren();
+  $('emotionTimeline').replaceChildren();
+  $('songTempo').textContent = '';
 
   for (const id of ['play', 'back', 'forward', 'timeline', 'hub']) $(id).disabled = true;
 
@@ -146,13 +152,25 @@ async function openSong(item) {
 
   const names = ['report', 'beats', 'lyrics', 'patterns', 'layers'];
 
-  const responses = await Promise.allSettled(names.map(name => fetchSource(`app-data/songs/${item.id}/${name}.json`)));
+  const emotionRequest = fetchSource(`./data/emotion/${item.id}.json`);
+  const [responses, emotionResponse, readingsResponse] = await Promise.all([
+    Promise.allSettled(names.map(name => fetchSource(`app-data/songs/${item.id}/${name}.json`))),
+    emotionRequest.then(value => ({ value }), error => ({ error: error.message })),
+    fetchSource(`./data/emotion/${item.id}.readings.json`).then(value => ({ value }), error => ({ error: error.message }))
+  ]);
 
   if (request !== loadToken) return;
 
   const files = Object.fromEntries(names.map((name, i) => [name, responses[i].status === 'fulfilled' ? responses[i].value : { error: responses[i].reason.message }]));
 
   song = buildSong(item, files); song.summaries = summarizeSections(song); document.body.classList.remove('loading');
+  song.emotion = emotionResponse.value || null;
+  song.emotionReadings = readingsResponse.value || null;
+  $('songTempo').textContent = typeof song.emotionReadings?.music?.tempo_bpm === 'number' ? `Song tempo · ${song.emotionReadings.music.tempo_bpm.toFixed(1)} BPM` : 'Song tempo · not measured';
+  song.emotionModels = emotionModels;
+  song.emotionError = emotionResponse.error ? 'Emotion data unavailable for this song · not scored.' : '';
+  song.emotionMeta = emotionManifest?.tracks?.[item.id] || null;
+  renderEmotion($('emotionTimeline'), song, emotionCorpus, choose);
 
   renderRecord(); $('timeline').max = String(song.duration); player.load(song);
 
@@ -226,13 +244,13 @@ function renderRecord() {
 
     for (const section of ring.segments) {
 
-      const shape = svg('path', { d: annulus(section.start, section.end, inner, outer), fill: color(ring, section), class: 'section-arc', 'data-section': section.id, tabindex: 0, role: 'button', 'aria-label': `${ring.name}: ${section.label}, ${formatBoundary(section.start)} to ${formatBoundary(section.end)}${section.labelUnverified ? ', label unverified' : ''}` });
+      const shape = svg('path', { d: annulus(section.start, section.end, inner, outer), fill: color(ring, section), class: 'section-arc', 'data-section': section.id, 'data-start': section.start, 'data-end': section.end, tabindex: 0, role: 'button', 'aria-label': `${ring.name}: ${section.label}, ${formatBoundary(section.start)} to ${formatBoundary(section.end)}${section.labelUnverified ? ', label unverified' : ''}` });
 
       shape.append(svg('title', {})); shape.firstChild.textContent = `${ring.name} · ${section.label} · ${formatBoundary(section.start)}–${formatBoundary(section.end)}`;
 
       shape.addEventListener('mouseenter', () => { if (!selected) showDetails(ring, section); });
 
-      shape.addEventListener('focus', () => showDetails(ring, section));
+      shape.addEventListener('focus', () => { if (!selected) showDetails(ring, section); });
 
       shape.addEventListener('click', () => choose(ring, section));
 
@@ -256,7 +274,10 @@ function choose(ring, section) {
 
   selected = section; player.select(section);
 
-  $('onion').querySelectorAll('[data-section]').forEach(p => p.classList.toggle('selected', p.dataset.section === section.id));
+  $('onion').querySelectorAll('[data-section]').forEach(p => {
+    const active = overlaps(section, { start: Number(p.dataset.start), end: Number(p.dataset.end) });
+    p.classList.toggle('selected', active); p.setAttribute('aria-pressed', String(active));
+  });
 
   showDetails(ring, section);
 
@@ -266,7 +287,10 @@ function choose(ring, section) {
 
 function dismissDetails() { $('details').hidden = true; displayed = null; }
 
-function clearSelection() { selected = null; player.window = null; player.emit(); $('onion').querySelectorAll('.selected').forEach(e => e.classList.remove('selected')); }
+function clearSelection() {
+  selected = null; player.window = null; player.emit();
+  $('onion').querySelectorAll('.selected').forEach(e => { e.classList.remove('selected'); e.setAttribute('aria-pressed', 'false'); });
+}
 
 const friendly = name => name.replaceAll('__', ' · ').replaceAll('_', ' ');
 
@@ -303,6 +327,7 @@ function showDetails(ring, section) {
   if (audioFailure) panel.append(node('p', audioFailure, 'error-note'));
 
   if (ring.error) panel.append(node('p', ring.error, 'error-note'));
+  if (section) appendEmotionDetails(panel, song, section);
 
   if (song.summary.status === 'failed') panel.append(node('p', `${song.summary.failure_category}: ${song.summary.error}`, 'error-note'));
 
@@ -414,4 +439,13 @@ document.addEventListener('keydown', event => { if (event.key === 'Escape' && !$
 
 document.querySelector('.brand').addEventListener('click', event => { event.preventDefault(); loadToken++; player.pause(); player.duration = 0; player.emit(); song = null; selected = null; displayed = null; needle = null; document.body.classList.remove('has-song', 'loading'); $('stage').hidden = true; $('details').hidden = true; $('search').value = ''; hideResults(); searchMessage(''); document.title = 'bepop'; $('search').focus(); });
 
-fetchSource('app-data/catalog.json').then(({catalog: records, skipped}) => { catalog = records; skippedSongs = skipped; announce(`${catalog.length} MVP songs are searchable.`); }).catch(error => { searchMessage(`Song search is unavailable. ${error.message}`, true); announce(error.message); });
+Promise.all([
+  fetchSource('app-data/catalog.json'),
+  fetchSource('./data/emotion/manifest.json').catch(() => null),
+  fetchSource('./data/emotion/corpus.json').catch(() => null),
+  fetchSource('./data/emotion/models.json').catch(() => null)
+]).then(([records, manifest, corpus, models]) => {
+  catalog = records.catalog; skippedSongs = records.skipped;
+  emotionManifest = manifest; emotionCorpus = corpus; emotionModels = models;
+  announce(`${catalog.length} MVP songs are searchable.`);
+}).catch(error => { searchMessage(`Song search is unavailable. ${error.message}`, true); announce(error.message); });

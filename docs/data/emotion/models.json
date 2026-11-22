@@ -1,0 +1,167 @@
+{
+  "source": "emotion_r2/models_amended.json",
+  "models": [
+    {
+      "role": "T1",
+      "id": "clapAI/roberta-base-multilingual-sentiment",
+      "family": null,
+      "coverageNote": "Model card reports 16+ languages and training on mixed-source review and sentiment datasets; lyric-domain validity is unverified.",
+      "distinctFromT1": null,
+      "relatedFamily": null,
+      "languages": [
+        "en",
+        "ja",
+        "ko",
+        "zh",
+        "ar",
+        "de",
+        "es",
+        "fr",
+        "hi",
+        "id",
+        "it",
+        "ms",
+        "pt",
+        "ru",
+        "tr",
+        "vi"
+      ],
+      "trainingData": "https://huggingface.co/datasets/clapAI/MultiLingualSentiment",
+      "card": "https://huggingface.co/clapAI/roberta-base-multilingual-sentiment",
+      "distinctFromM1": null,
+      "possibleSharedTrainingData": null
+    },
+    {
+      "role": "M2",
+      "id": "laion/clap-htsat-unfused",
+      "family": null,
+      "coverageNote": "English text prompts; music audio is not language-restricted.",
+      "distinctFromT1": null,
+      "relatedFamily": null,
+      "languages": [
+        "en"
+      ],
+      "trainingData": null,
+      "card": "https://huggingface.co/laion/clap-htsat-unfused",
+      "distinctFromM1": null,
+      "possibleSharedTrainingData": null
+    },
+    {
+      "role": "M1",
+      "id": "Essentia emomusic-msd-musicnn",
+      "family": null,
+      "coverageNote": "Music regressors; vocal language transfer and separation artifacts unvalidated.",
+      "distinctFromT1": null,
+      "relatedFamily": null,
+      "languages": [
+        "audio, language independent"
+      ],
+      "trainingData": null,
+      "card": "https://essentia.upf.edu/models.html",
+      "distinctFromM1": null,
+      "possibleSharedTrainingData": null
+    },
+    {
+      "role": "T3",
+      "id": "Horizon-Labs/multilingual-sentiment-base",
+      "family": "mmBERT-base, supervised three-class sentiment student",
+      "coverageNote": "Supervised multilingual sentiment; lyric-domain and singing validity unverified.",
+      "distinctFromT1": "Different training corpora and label pipeline from clapAI MultiLingualSentiment; both are transformer encoders, recorded as a shared architecture family.",
+      "relatedFamily": "L1: training labels generated using a Qwen teacher; L1 is Qwen",
+      "languages": [
+        "en",
+        "ja",
+        "ko",
+        "zh",
+        "ar",
+        "de",
+        "es",
+        "fr",
+        "hi",
+        "id",
+        "it",
+        "nl",
+        "pt",
+        "ru",
+        "tr",
+        "vi"
+      ],
+      "trainingData": null,
+      "card": "https://huggingface.co/Horizon-Labs/multilingual-sentiment-base",
+      "distinctFromM1": null,
+      "possibleSharedTrainingData": null
+    },
+    {
+      "role": "L1",
+      "id": "Qwen/Qwen3-4B-Instruct-2507",
+      "family": "Qwen3 4B instruct, decoder-only LLM",
+      "coverageNote": "Instruct LLM rated on section text only, with no title or artist, so it rates text rather than recalling a known song. Runs locally in fp16 on the 4060 Ti.",
+      "distinctFromT1": null,
+      "relatedFamily": "T3: T3 labels generated using a Qwen teacher",
+      "languages": [
+        "en",
+        "ja",
+        "ko",
+        "zh",
+        "and 100+ reported by the model card"
+      ],
+      "trainingData": null,
+      "card": "https://huggingface.co/Qwen/Qwen3-4B-Instruct-2507",
+      "distinctFromM1": null,
+      "possibleSharedTrainingData": null
+    },
+    {
+      "role": "M3",
+      "id": "huyleit/mert-v1-95m-music-emotion-int8",
+      "family": "MERT-v1-95M self-supervised music encoder, int8 ONNX regressor head",
+      "coverageNote": "Trained on 45 s excerpts of Western popular music; 4 s window transfer is unvalidated.",
+      "distinctFromT1": null,
+      "relatedFamily": null,
+      "languages": [
+        "audio, language independent"
+      ],
+      "trainingData": "DEAM/MediaEval valence-arousal annotations",
+      "card": "https://huggingface.co/huyleit/mert-v1-95m-music-emotion-int8",
+      "distinctFromM1": "Different backbone; overlap in MediaEval/DEAM training tracks not established.",
+      "possibleSharedTrainingData": true
+    }
+  ],
+  "musicContext": {
+    "source": "emotion_r2/validation/explanation_checks.json",
+    "sections": 1877,
+    "songs": 262,
+    "r2": 0.4993920680889775,
+    "leadingFeatures": [
+      {
+        "feature": "instrumental_rms",
+        "meanR2Drop": 0.18214602523602105,
+        "positiveFolds": 5,
+        "folds": 5
+      },
+      {
+        "feature": "instrumental_brightness_hz",
+        "meanR2Drop": 0.0664011000458849,
+        "positiveFolds": 5,
+        "folds": 5
+      },
+      {
+        "feature": "median_register_midi",
+        "meanR2Drop": 0.051237552554353236,
+        "positiveFolds": 5,
+        "folds": 5
+      },
+      {
+        "feature": "onset_density_total",
+        "meanR2Drop": 0.03665445805796863,
+        "positiveFolds": 5,
+        "folds": 5
+      },
+      {
+        "feature": "family_guitar",
+        "meanR2Drop": 0.020994753158485945,
+        "positiveFolds": 4,
+        "folds": 5
+      }
+    ]
+  }
+}
