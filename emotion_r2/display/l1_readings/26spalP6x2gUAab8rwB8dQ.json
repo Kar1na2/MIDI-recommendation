@@ -1,0 +1,221 @@
+{
+  "schema_version": 1,
+  "track_id": "26spalP6x2gUAab8rwB8dQ",
+  "cohort": "random",
+  "display_only": true,
+  "registered_scores_unchanged": true,
+  "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+  "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "prompt_sha256": "ffdf21672c16d12394441664976928ac03a51b35d721d3925cca9be8adc58e3d",
+  "registered_checkpoint_sha256": "4b178c9bdd8e30d2ec1f0a127e0f6da4946ab64382eb90c83569582a917ecae4",
+  "reading_label": "L1's interpretation of the lyrics",
+  "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+  "reading_type": "model_interpretation",
+  "decoding": {
+    "do_sample": false,
+    "num_beams": 1,
+    "max_new_tokens": 128,
+    "torch_dtype": "float16",
+    "seed": 20261115
+  },
+  "overlap_rule": "NFKC/casefold 4-word ngrams; additionally 4 consecutive ja/ko/zh script characters with spacing/punctuation removed; block if either overlaps.",
+  "sections": [
+    {
+      "section_id": "lyric-0000",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "ff287c0e788fb842f792afe97236817451217468a2f85d39eb027b5a314e4ec5",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a mix of casual confidence and playful defiance, emphasizing personal expression and attraction. The themes revolve around self-assurance, the desire for connection through shared energy, and the celebration of individuality in a vibrant, unapologetic manner.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "83cdc67c94acf98f1444ddbc4577515157d79463293692d403edacdb69e785cb"
+    },
+    {
+      "section_id": "lyric-0001",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "dc88c6cdd9f19554caa71440b2f8ea07c6dae006f2e610e9e7dd871d7b7eb78d",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is repetitive and hesitant, conveying a sense of struggle or uncertainty in identity. The themes suggest a search for belonging and a longing to be recognized within a social or familial structure.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "136aeda22b3683bbd368c3bcb63a1c19b213113efbba0db4d5970b2153a8b7cf"
+    },
+    {
+      "section_id": "lyric-0002",
+      "set": "secondary",
+      "language": "uncertain",
+      "text_sha256": "b0dac07d69f2363e2cf3099f900b46cdcca8cb4f1b22e51015a24dff141288eb",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is repetitive and hesitant, conveying a sense of uncertainty and self-examination. The themes explore identity and the struggle to define oneself within societal roles.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "2ab725c19c7ae4ba965c2b5fc0d504543d1b744fd81c83d1f88e728300350f0f"
+    },
+    {
+      "section_id": "lyric-0003",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "e80ba1454407c76dafee71dfb3cc5008c35cab6a36ae9c87bbcf0ec4b919eafa",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is energetic and assertive, emphasizing a sense of urgency and dominance in a rhythmic, almost commanding delivery. The themes revolve around physical presence, sensory intensity, and the assertion of control through movement and sensation.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "19caaf9b7f2294040b15012436ba1c65af363751e6dea575466862c256ffcdcb"
+    },
+    {
+      "section_id": "lyric-0004",
+      "set": "secondary",
+      "language": "uncertain",
+      "text_sha256": "dc88c6cdd9f19554caa71440b2f8ea07c6dae006f2e610e9e7dd871d7b7eb78d",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is repetitive and hesitant, conveying a sense of struggle or uncertainty in identity. The themes suggest a search for belonging and a longing to be recognized within a social or familial structure.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "136aeda22b3683bbd368c3bcb63a1c19b213113efbba0db4d5970b2153a8b7cf"
+    },
+    {
+      "section_id": "lyric-0005",
+      "set": "secondary",
+      "language": "uncertain",
+      "text_sha256": "b0dac07d69f2363e2cf3099f900b46cdcca8cb4f1b22e51015a24dff141288eb",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is repetitive and hesitant, conveying a sense of uncertainty and self-examination. The themes explore identity and the struggle to define oneself within societal roles.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "2ab725c19c7ae4ba965c2b5fc0d504543d1b744fd81c83d1f88e728300350f0f"
+    },
+    {
+      "section_id": "lyric-0006",
+      "set": "secondary",
+      "language": "uncertain",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    },
+    {
+      "section_id": "lyric-0007",
+      "set": "secondary",
+      "language": "uncertain",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    },
+    {
+      "section_id": "lyric-0008",
+      "set": "secondary",
+      "language": "uncertain",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    },
+    {
+      "section_id": "lyric-0009",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "c4c3a1e69f8e83f26f15c392abdd03c9c4ea622656d0d4d616f6669bb36cb71a",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests a repetitive, almost ritualistic invocation of familial and social roles, evoking a sense of routine and perhaps a search for stability or identity within structured relationships. The themes center on the interplay between personal identity and societal expectations, reflecting a quiet tension between individuality and the demands of familial or communal roles.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "565ab0daa02af41b311ebb0129cb907f382f4616a1bfcd59dfdff4c18fe3d13a"
+    },
+    {
+      "section_id": "span-0000",
+      "set": "secondary",
+      "language": "uncertain",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    },
+    {
+      "section_id": "span-0002",
+      "set": "secondary",
+      "language": "uncertain",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    },
+    {
+      "section_id": "span-0004",
+      "set": "secondary",
+      "language": "uncertain",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    }
+  ]
+}

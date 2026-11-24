@@ -1,0 +1,173 @@
+{
+  "schema_version": 1,
+  "track_id": "0Yz3F0UGDibDe8uU69zmjn",
+  "cohort": "random",
+  "display_only": true,
+  "registered_scores_unchanged": true,
+  "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+  "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "prompt_sha256": "ffdf21672c16d12394441664976928ac03a51b35d721d3925cca9be8adc58e3d",
+  "registered_checkpoint_sha256": "5753cdf94bc28b5f4b7ab6b2c495b90f43a72c9d3d0ac2d0e116cc468f8482aa",
+  "reading_label": "L1's interpretation of the lyrics",
+  "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+  "reading_type": "model_interpretation",
+  "decoding": {
+    "do_sample": false,
+    "num_beams": 1,
+    "max_new_tokens": 128,
+    "torch_dtype": "float16",
+    "seed": 20261115
+  },
+  "overlap_rule": "NFKC/casefold 4-word ngrams; additionally 4 consecutive ja/ko/zh script characters with spacing/punctuation removed; block if either overlaps.",
+  "sections": [
+    {
+      "section_id": "lyric-0000",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "47345e707564175b3e02b79f046b8c5cdebba56f66dbc38a746a53c7f68dddb4",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of emotional intensity and vulnerability, blending quiet desperation with a growing sense of overwhelm. The themes explore the dissonance between ordinary experiences and their unexpected, painful emotional impact.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "13297f937346d682d120f3ddcdaff55aff438dc6ae57987b0938941351effbfc"
+    },
+    {
+      "section_id": "lyric-0001",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "2e31a97e65aaa64efd05c5338069e76e8859b6fe7af3cbd3513f8ad24f7ddf38",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys frustration and disbelief at a situation that seems inconsistent with prior understanding, highlighting a sense of confusion and emotional exhaustion. The themes revolve around the dissonance between expected behavior and current actions, and the underlying tension of being caught in a cycle of repetition and unmet expectations.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "3b05ab95d1680839f09084457f7c0fc22bd5488228a1001eb7dab0872e312b17"
+    },
+    {
+      "section_id": "lyric-0002",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "9c35a1dd7a1c73bc6e9a05128b69142c44d648b516cffd25d44fe9b27f40a7b7",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sincere and idealized devotion, emphasizing unwavering commitment and emotional openness. The themes revolve around the transformative power of love and the belief that connection can fulfill all desires.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "0922a7f7a0428c2ae01a7ee34c4c4d0cbfe957a4bb92d7ffae4e2418139c798b"
+    },
+    {
+      "section_id": "lyric-0003",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "e15f6a1fae22939143ac2eff20c4f9442b3f83565c3c2927ef6bddc7f44e3a2b",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a blend of warmth and quiet longing, underscored by a sense of emotional readiness and gentle anticipation. The themes explore the tension between suppressed feelings and the quiet courage to express them, even amid uncertainty and postponed moments.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "bf8c4385c56db51cbad39c2e7d287b128a6f742efca5c993d7df6aa6bfa97d60"
+    },
+    {
+      "section_id": "lyric-0004",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "f82f3aa1f2c3527f14f461669e4016b9a7e0e08f4570ae583a95174ec9a6ec8f",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a yearning and idealized devotion, blending emotional vulnerability with a sense of longing for connection. The themes explore the transformative power of love and the quiet solitude that persists even in the midst of shared moments.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "2878687fea12b03ff63f81d36470b5c8b1a7a10ffb547c65ba662238718d1c80"
+    },
+    {
+      "section_id": "lyric-0005",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "e9bf10586a8b7b8acbb56940a3f7e18f61ddeb95eaf698cebf30b72aee653beb",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of lingering hesitation and emotional weight, underscored by a quiet longing that persists despite the desire to act. The themes explore the tension between unresolved feelings and the inevitability of parting, highlighting internal conflict and the difficulty of making decisive choices.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "1939acb8768c10886457fd0c22e6315f694c80949e290fed7e4b0e8271051c8f"
+    },
+    {
+      "section_id": "lyric-0006",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "0e8d955f9a11885449812646d279ec71928400a4120206f37dd74509948dddee",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a quiet, introspective vulnerability, marked by hesitation and a growing sense of emotional exposure. The themes revolve around unspoken longing, the passage of time, and the quiet decision to reveal hidden truths in the face of shifting circumstances.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "3fde724f0cd5067844d9746fb3d39d7106aee8a83435e346949d389b9804530a"
+    },
+    {
+      "section_id": "lyric-0007",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "129ccd9168d0e3c40fd16b7cd8a909cf6168e4f8f21b1e083d151847666092c1",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a calm, almost detached reassurance, balanced with a subtle undercurrent of introspection and personal ambiguity. The themes explore self-perception, emotional stability, and the complexity of identity in relation to external validation.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "d94c1207eb4cbf79d05a8d854b5b7dabf40642d1c2045141654af74854fc5794"
+    },
+    {
+      "section_id": "span-0000",
+      "set": "secondary",
+      "language": "ko",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    }
+  ]
+}

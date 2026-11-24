@@ -1,0 +1,241 @@
+{
+  "schema_version": 1,
+  "track_id": "3G7MgLuWLzUJQflWOCDZit",
+  "cohort": "random",
+  "display_only": true,
+  "registered_scores_unchanged": true,
+  "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+  "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "prompt_sha256": "ffdf21672c16d12394441664976928ac03a51b35d721d3925cca9be8adc58e3d",
+  "registered_checkpoint_sha256": "208d3bff6c6019baff722997e0f4371baa0f84c9598bac2d4f62627e2fd06c5f",
+  "reading_label": "L1's interpretation of the lyrics",
+  "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+  "reading_type": "model_interpretation",
+  "decoding": {
+    "do_sample": false,
+    "num_beams": 1,
+    "max_new_tokens": 128,
+    "torch_dtype": "float16",
+    "seed": 20261115
+  },
+  "overlap_rule": "NFKC/casefold 4-word ngrams; additionally 4 consecutive ja/ko/zh script characters with spacing/punctuation removed; block if either overlaps.",
+  "sections": [
+    {
+      "section_id": "lyric-0000",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "21a5f979ed952a64294300107c8cef66ba08bccf256ef871fba1b85da4f0f988",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a quiet, introspective intimacy, suggesting a moment of vulnerability as the night deepens. The theme explores the possibility of greater honesty emerging in the stillness and solitude of late hours.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "08e02a28d5eedd977191a53581539f9027a2d3b41fa1175f09483df13f6d635f"
+    },
+    {
+      "section_id": "lyric-0001",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "abd49e76feb754d46f7a85a8a2b414574752a5c58ee599ef772d95447839b43d",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of introspective unpredictability and private vulnerability, while the themes explore the boundaries between personal imagination and public perception.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "9bef41e52cda8a166b0f7fc393099c5bb911313b77ae782d4ebb8c147093047b"
+    },
+    {
+      "section_id": "lyric-0002",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "e8d154c7cbec61fd85c3f6c24ada466c4dddeb4cb0d00173143ada494060dedf",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a restless, urgent energy sustained through the night, emphasizing continuity and emotional intensity. The themes revolve around unending connection and the resistance to letting go, suggesting a deep, persistent engagement that refuses to be interrupted or resolved.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "751b49731f185e24a021b458c448e46fb8bd16c8fd3c1d4f6373a0f5312e2e93"
+    },
+    {
+      "section_id": "lyric-0003",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "5d3232640d61401b024076c53e0292fbce8c42083eb4dffe547578b591504ef8",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests a quiet yearning and curiosity toward something concealed or restricted, evoking a sense of longing for intimacy or forbidden knowledge. The themes explore the human desire to break through barriers, both emotional and symbolic, in pursuit of deeper connection or revelation.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "773e43293d442d6670a32f54a48f06a95c48acf357711b65046c25b83f3ca461"
+    },
+    {
+      "section_id": "lyric-0004",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "8cd3ddb4ac10c543b2bb9ea41652fd89a6d2a27ab53b6300272b82489a42422a",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a shift from innocence to revealed inner darkness, suggesting a deliberate exposure of hidden truths. The theme explores the inevitability of confronting one's true nature, even in the absence of outward appearances.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "46fbbd5332a086be3a24c6b32e2482b851b0fb1ad3fd32f918f54645f38c599b"
+    },
+    {
+      "section_id": "lyric-0005",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "e8d154c7cbec61fd85c3f6c24ada466c4dddeb4cb0d00173143ada494060dedf",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a restless, urgent energy sustained through the night, emphasizing continuity and emotional intensity. The themes revolve around unending connection and the resistance to letting go, suggesting a deep, persistent engagement that refuses to be interrupted or resolved.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "751b49731f185e24a021b458c448e46fb8bd16c8fd3c1d4f6373a0f5312e2e93"
+    },
+    {
+      "section_id": "lyric-0006",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "0ac93a5adb8dba55260438bb1576d3a96837b0a8d63ccf3ae86151006e16afd4",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests intimacy and openness, with a sense of urgency and continuity in shared vulnerability. The themes revolve around connection, emotional exposure, and the persistence of dialogue beyond conventional boundaries.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "617a24e0a2be2c9f57b31b0a7dade5ff3793e94ea64499376b01f3741fb5e515"
+    },
+    {
+      "section_id": "lyric-0007",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "f7ad8d556d5629aaea1b5358a7d6468bf070e80d644625a18c2812d5c1f802ba",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of introspective longing and quiet urgency, blending personal desire with emotional ambiguity. The themes explore the search for deeper, more intimate connections beyond ordinary experiences, suggesting a yearning for something hidden, intense, and personally meaningful.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "a2d6b5106e2792182138ce287a9146df0975abac20d50c9e2e4170aff1a29ea9"
+    },
+    {
+      "section_id": "lyric-0008",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "a1b8549e9ec28391c761502d500dea8bc51b0f5e72b402672ab5031fe19ea4c8",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of intense emotional tension and psychological complexity, oscillating between allure and danger. The themes explore the paradox of love as both a source of healing and destruction, highlighting internal conflict and the instability of emotional bonds.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "a038e514c93cfb3e4c93a1c48f90d33f5590b9a546c93cc8f518ce6732f432d4"
+    },
+    {
+      "section_id": "lyric-0009",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "e8d154c7cbec61fd85c3f6c24ada466c4dddeb4cb0d00173143ada494060dedf",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a restless, urgent energy sustained through the night, emphasizing continuity and emotional intensity. The themes revolve around unending connection and the resistance to letting go, suggesting a deep, persistent engagement that refuses to be interrupted or resolved.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "751b49731f185e24a021b458c448e46fb8bd16c8fd3c1d4f6373a0f5312e2e93"
+    },
+    {
+      "section_id": "lyric-0010",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "95a0a057d6f3292df1f1885223350b72623616ffee6ebea9377d86b6084a31b2",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a reflective and intimate atmosphere, blending quiet observation with a sense of emotional depth. The themes explore connection, presence, and the quiet beauty found in moments of stillness and gaze.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "1df5f4d34e3e1dcb4dcc3675cc24a2465e45f9b6b484b20ba7e9045bbfed6218"
+    },
+    {
+      "section_id": "lyric-0011",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "51f5af7f83fdbb6f1593d530f0dc9dfb1a32d35ea3456ab57fec60855e588643",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests a reflective, slightly restless atmosphere, marked by quiet introspection and a sense of lingering unease. The themes revolve around isolation, the passage of time, and the struggle to find stillness in a restless state.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "ef0620783e19a46a31c764772742caf0420ea48f7e4db2c2e6c188c0c4df9b4a"
+    },
+    {
+      "section_id": "span-0000",
+      "set": "secondary",
+      "language": "ko",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    }
+  ]
+}

@@ -1,0 +1,139 @@
+{
+  "schema_version": 1,
+  "track_id": "4nwjvcUjV7cexhwA40Bh5i",
+  "cohort": "random",
+  "display_only": true,
+  "registered_scores_unchanged": true,
+  "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+  "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "prompt_sha256": "ffdf21672c16d12394441664976928ac03a51b35d721d3925cca9be8adc58e3d",
+  "registered_checkpoint_sha256": "4326ccad8454d1d94828f3c20acd1ab6fecb9b7a5e5af091a51e8ddefe4c6c23",
+  "reading_label": "L1's interpretation of the lyrics",
+  "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+  "reading_type": "model_interpretation",
+  "decoding": {
+    "do_sample": false,
+    "num_beams": 1,
+    "max_new_tokens": 128,
+    "torch_dtype": "float16",
+    "seed": 20261115
+  },
+  "overlap_rule": "NFKC/casefold 4-word ngrams; additionally 4 consecutive ja/ko/zh script characters with spacing/punctuation removed; block if either overlaps.",
+  "sections": [
+    {
+      "section_id": "lyric-0000",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "192aacf4aed60bcd7c732f0bb468da4e24923cb67088b0e134bee4cff1b27893",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of urgency and emotional instability, blending anxiety with a frantic internal rhythm. The themes explore isolation, the passage of time, and the overwhelming effort required to endure separation.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "41d6930cc5414a3f1d02c02ba2160c41eceb3523cf82a4dbd8e3b3f34ff72fbc"
+    },
+    {
+      "section_id": "lyric-0001",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "92d4d73dd160d75150e6a4bad036010612ceac5c36e44f9609444a8c971c286b",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a mix of admiration and internal struggle, highlighting the emotional intensity and burdens of being deeply affected by love. The themes explore self-doubt, the exhausting nature of romantic obsession, and the paradox of desire and vulnerability.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "6ea2ab6a3c6d53e04b2b1cdc0ec53ea9c177cb412776223f03c6a4c85be458d1"
+    },
+    {
+      "section_id": "lyric-0002",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "5039de444542cbc0babd357145ea6459e1ecc66162787d31edd82f8cb11877ec",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of internal turmoil and emotional urgency, marked by self-awareness and vulnerability. The themes explore isolation, suppressed identity, and the struggle to express genuine emotions in a state of emotional chaos.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "f075a1250bc7ebcc6378e22623d16abbfee14fa4877b56b7d4163ca2430c3f00"
+    },
+    {
+      "section_id": "lyric-0003",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "dc757c8a1822ecd3b46814519e9c9038e11f00b31a4f609d40b76b59cb1ccbed",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a mix of admiration and internal struggle, highlighting the overwhelming and often burdensome nature of romantic obsession. The themes explore the paradox of love—its allure and the emotional labor it demands, transforming desire into a persistent, consuming force.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "7e3d54c55f278a034b9a938ced5909637508afdb59f982002a379e9ed4e270f2"
+    },
+    {
+      "section_id": "lyric-0004",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "8f040e4b08e74179908f0cd66989c14f14975364973582b7de303dc4b9ebc8c6",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a restless, yearning anticipation laced with delusion and emotional intensity. The themes explore obsession, the blurring of reality and imagination, and a deep, unfulfilled longing.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "de34e5b00a7baabeaa690f0936315caa8c7889aa69b592e506668beab3f71ad8"
+    },
+    {
+      "section_id": "lyric-0005",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "1c26fdd7c104290c85eb62c286cb36b8b208c682098e849b3c2d4c866842547b",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a mix of admiration and internal conflict, highlighting the overwhelming and sometimes burdensome nature of being deeply affected by love. The themes explore obsession, emotional dependency, and the paradox of being both transformed and trapped by romantic involvement.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "d4ea3c93153084bc69c40a33c4dc8a0eef4a65586caed858f485a163affc0868"
+    },
+    {
+      "section_id": "span-0000",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    }
+  ]
+}

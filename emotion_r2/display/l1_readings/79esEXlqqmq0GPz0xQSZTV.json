@@ -1,0 +1,199 @@
+{
+  "schema_version": 1,
+  "track_id": "79esEXlqqmq0GPz0xQSZTV",
+  "cohort": "random",
+  "display_only": true,
+  "registered_scores_unchanged": true,
+  "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+  "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "prompt_sha256": "ffdf21672c16d12394441664976928ac03a51b35d721d3925cca9be8adc58e3d",
+  "registered_checkpoint_sha256": "6b30af5ae5ede2de06022e954f5fc59f4f161c74ef490464b2c37117f7e75564",
+  "reading_label": "L1's interpretation of the lyrics",
+  "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+  "reading_type": "model_interpretation",
+  "decoding": {
+    "do_sample": false,
+    "num_beams": 1,
+    "max_new_tokens": 128,
+    "torch_dtype": "float16",
+    "seed": 20261115
+  },
+  "overlap_rule": "NFKC/casefold 4-word ngrams; additionally 4 consecutive ja/ko/zh script characters with spacing/punctuation removed; block if either overlaps.",
+  "sections": [
+    {
+      "section_id": "lyric-0000",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "d4353be3f76f2b594fdee1fc04b1dffd7f7141681d4742de9629f3159994e4ce",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a yearning and hopeful urgency, driven by a desire for connection despite uncertainty. The themes explore the longing for shared experience and the belief that simple actions can bridge distance and bring people together.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "a9ec850712dea3b7dbc9725b8ac43ebacb852551f2b7fdf08377f5ecdd552df3"
+    },
+    {
+      "section_id": "lyric-0001",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "271d562548e2ce2b4aa4a7cb300ec0ed60ea2e5bff513afb794573421f41bf03",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys persistent longing and emotional urgency, driven by a deep, unrelenting fixation on the other person. The central theme explores the intensity of desire and the difficulty of letting go, even when physical distance and practical constraints exist.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "eb284f1ff5e1d4a228381cc50112436b98b6e6a252786fe3f546c90bd10d3897"
+    },
+    {
+      "section_id": "lyric-0002",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": "3c1d56a50fd7878b42cc9215ce60410d48f206d0e99bf102363aea7ebce0515c",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a persistent, almost obsessive longing, while the central theme explores the difficulty of escaping emotional attachment and the desire to immerse oneself in a shared, fleeting moment of connection.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "396e8c933dbb69106757950ff45d7ca33ca109e0d269d5017d01e51115577ab6"
+    },
+    {
+      "section_id": "lyric-0003",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": "e114fe4f6b2f10f6b85cc91eea53d9c8647222e8ce50655ecaf1cc77e90a1387",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of underlying emotional strain and urgency, marked by quiet desperation and unspoken tension. The themes explore the boundaries between intimacy and friendship, and the fear of losing connection amid impending separation.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "6918e8d1371085c7285dacd93c1457e238dba2e524e3ee6d848ac84841e2603c"
+    },
+    {
+      "section_id": "lyric-0004",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "0795870f969b93c578532899c566de1fc188d344c9948b5027d4f0454dc717a6",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a persistent, almost obsessive longing, driven by emotional intensity and a desire for immediate connection. The central theme explores the power of a person to dominate one's thoughts and actions, creating a sense of internal fixation and yearning.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "7027310b6f80cac5cc2c115c5124b8315dced4e2ea4166e654d8f02d7a1276f2"
+    },
+    {
+      "section_id": "lyric-0005",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "baa441d8a6f59b55b8de5840d92a08bdfd4ced8f55f09383982eda0ec55a1dcf",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys persistent emotional attachment and yearning, while the central theme explores the difficulty of letting go of a significant influence in one's thoughts and actions.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "94c6b49795059716c4b42b08d1ffde94416ef97b2d21c8c436fefd3790da6322"
+    },
+    {
+      "section_id": "lyric-0006",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "abbdb0c0b06e725cba8e309a2a5436e33afaf8ccdaf7cd189dbe7c69ff35fc7c",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a persistent, almost obsessive longing, driven by emotional intensity and a desire for immediate connection. The central theme explores the power of a person to dominate one's thoughts and actions, creating a sense of internal fixation and yearning.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "7027310b6f80cac5cc2c115c5124b8315dced4e2ea4166e654d8f02d7a1276f2"
+    },
+    {
+      "section_id": "lyric-0007",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": "be2531a8f67c7f7b6901c4af66da1ebd5f609ccb073b0c91614dd7554937f2f6",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests a yearning for escape and emotional immersion, while the themes explore persistent attachment and the difficulty of letting go.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "41d928518f9c717a36eebb0a19533f5e45c694115841fceb4880c3482a2f4457"
+    },
+    {
+      "section_id": "span-0000",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    },
+    {
+      "section_id": "span-0003",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    },
+    {
+      "section_id": "span-0007",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    }
+  ]
+}

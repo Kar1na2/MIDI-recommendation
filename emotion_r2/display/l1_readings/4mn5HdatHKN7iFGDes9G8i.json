@@ -1,0 +1,161 @@
+{
+  "schema_version": 1,
+  "track_id": "4mn5HdatHKN7iFGDes9G8i",
+  "cohort": "random",
+  "display_only": true,
+  "registered_scores_unchanged": true,
+  "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+  "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "prompt_sha256": "ffdf21672c16d12394441664976928ac03a51b35d721d3925cca9be8adc58e3d",
+  "registered_checkpoint_sha256": "23870aecec8b3a44e62e7e08a805d2f4d91d749bd7d1c0880677f67ca3c31f05",
+  "reading_label": "L1's interpretation of the lyrics",
+  "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+  "reading_type": "model_interpretation",
+  "decoding": {
+    "do_sample": false,
+    "num_beams": 1,
+    "max_new_tokens": 128,
+    "torch_dtype": "float16",
+    "seed": 20261115
+  },
+  "overlap_rule": "NFKC/casefold 4-word ngrams; additionally 4 consecutive ja/ko/zh script characters with spacing/punctuation removed; block if either overlaps.",
+  "sections": [
+    {
+      "section_id": "lyric-0000",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "a187cda1b5bf6ca8b1223a39209241bdfe1b6ba980bdd49f92497ecdef9c923c",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a blend of detachment and self-deprecation, juxtaposing defiance with vulnerability. The themes explore identity, financial instability, and a sense of existential emptiness masked by bravado.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "5c00aa4498f7595738a2221c41f3ecc17bec45bd34a33a9cfc6ac676bdb1b8b8"
+    },
+    {
+      "section_id": "lyric-0001",
+      "set": "secondary",
+      "language": "uncertain",
+      "text_sha256": "12715b7120d3fcc03170b87f4ada5f38b4f6169595641fc6e7b3b63a837ebcc9",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of reflective melancholy, contrasting youthful rebellion with the quiet desolation of aging. The themes explore the emotional distance that comes with time, suggesting a transformation from passion and freedom to detachment and resignation.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "36f3c0b13d63aa5e20aec872f6f0d7ee7b9d91e61940dc6be7b81e61ab14c361"
+    },
+    {
+      "section_id": "lyric-0002",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "c52ff695bc12c24f9c36cb98359f51c9c7d5ad99e7e44d4ac3d99e9f666daab9",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests a moment of sudden pause or surprise, conveying a sense of immediacy and emotional interruption. The central theme revolves around the tension between internal reaction and external stimuli, highlighting a shift in focus or awareness.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "5f8d0ed93ba3cf0e79db0379f0a3a82e0d75cf5100781d6dd7b841c32d2acf18"
+    },
+    {
+      "section_id": "lyric-0003",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "89b23822d0f9dd4258e63ec7b8d15754eba203409038357a7c5ff54d114f46e2",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a reflective sense of detachment, suggesting a transition from youthful rebellion to a more reserved, perhaps disillusioned, emotional state. The theme explores the inevitable shift in emotional warmth accompanying aging, implying a quiet acceptance of emotional distance as a natural consequence of time.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "e53b9a2b11024bab3fc7a02acb5490cf9e9425cde2296491e3790fea0cc2c4f7"
+    },
+    {
+      "section_id": "lyric-0004",
+      "set": "secondary",
+      "language": "uncertain",
+      "text_sha256": "ca6961be0d61b23de25e3c2b6d114af2760d02a90db780c570e08283895ed337",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests a reflective, somewhat resigned acceptance of daily routines and the passage of time. The themes revolve around the cyclical nature of life and the quiet acknowledgment of endings, even when they are not fully felt or acknowledged.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "9a5841971420fa615559c5e2c04905236ebefebb7fad6b95418738f8eb916288"
+    },
+    {
+      "section_id": "span-0000",
+      "set": "secondary",
+      "language": "uncertain",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    },
+    {
+      "section_id": "span-0002",
+      "set": "secondary",
+      "language": "uncertain",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    },
+    {
+      "section_id": "span-0004",
+      "set": "secondary",
+      "language": "uncertain",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    },
+    {
+      "section_id": "span-0006",
+      "set": "secondary",
+      "language": "uncertain",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    }
+  ]
+}

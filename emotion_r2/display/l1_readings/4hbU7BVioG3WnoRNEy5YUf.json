@@ -1,0 +1,326 @@
+{
+  "schema_version": 1,
+  "track_id": "4hbU7BVioG3WnoRNEy5YUf",
+  "cohort": "random",
+  "display_only": true,
+  "registered_scores_unchanged": true,
+  "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+  "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "prompt_sha256": "ffdf21672c16d12394441664976928ac03a51b35d721d3925cca9be8adc58e3d",
+  "registered_checkpoint_sha256": "73460db47f1d90f3a1a76aa6556172a44fae9b6c4cf999cb6a0c680dad6fa905",
+  "reading_label": "L1's interpretation of the lyrics",
+  "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+  "reading_type": "model_interpretation",
+  "decoding": {
+    "do_sample": false,
+    "num_beams": 1,
+    "max_new_tokens": 128,
+    "torch_dtype": "float16",
+    "seed": 20261115
+  },
+  "overlap_rule": "NFKC/casefold 4-word ngrams; additionally 4 consecutive ja/ko/zh script characters with spacing/punctuation removed; block if either overlaps.",
+  "sections": [
+    {
+      "section_id": "lyric-0000",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "fe87c555be186254366a50b72e4167ae6fe98c7abd2eb64ce4275fb49924da27",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a confident, self-assured attitude marked by emotional independence and a sense of personal empowerment. The themes revolve around individuality, inner peace, and the quiet strength found in choosing one's own path.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "bf66b7e38d5c0980044b29b473b3f5a7dc7959e1cc95d18399b837a1f5fbaeef"
+    },
+    {
+      "section_id": "lyric-0001",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "28193227a62082825552f6679bc2b9993163e48b62d35640d622a652c55bf2fc",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a confident, self-assured rejection of external judgment, emphasizing authenticity and personal freedom. The central theme revolves around embracing one's natural identity and resisting the need to conform or measure oneself against arbitrary standards.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "301006bd247f1b12993e930f8d3645bb171346518ce2138606d9f135b31443bb"
+    },
+    {
+      "section_id": "lyric-0002",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "c88d4749331bb23728172cf2e41c2330df760aad38f34beb7bd6eb451da7c85b",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of performative confidence and curated self-expression, emphasizing the artificiality and popularity of personal validation in a stylized, nostalgic context. The themes revolve around the construction of identity through external approval and the imitation of a desired, idealized aesthetic.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "69f7cb514941669360fa00820a1dbf288d6d66156708e38ebaca103b6c92f109"
+    },
+    {
+      "section_id": "lyric-0003",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "5f9cec19522c733ae05f6334b61339be82966d45c6532115195b8978e6a92613",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of restless energy and defiance, blending technological influence with a rebellious, almost chaotic creativity. The themes explore the tension between human expression and algorithmic control, suggesting a struggle for authenticity in a mechanized world.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "46c045923c82d2b8bb78c2654450f9aa51fd53cf2a891e8171b1c5fa4eb1c05a"
+    },
+    {
+      "section_id": "lyric-0004",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "f810bec6e9195d138c470c7a6da14b47220af50433f1c0e791d8ea105cea91fe",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests a nostalgic, self-reflective celebration of a particular era, emphasizing personal identity and cultural familiarity. The recurring structure implies a sense of repetition and internal consistency, reflecting themes of belonging, individuality, and the curated essence of a shared past.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "f2d403a3e3e7a7103782395a825ab0b92d51ef7b3e583441d8c9eac953c117c4"
+    },
+    {
+      "section_id": "lyric-0005",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "6ad1d32dd63164bc3a44a818816b377b9fbadb880d2d31f57689aaa332111910",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests a playful, repetitive celebration of a stylized, self-defined cultural identity, emphasizing individuality and carefree expression within a nostalgic framework. The themes revolve around the construction of personal freedom through shared, exaggerated aesthetic choices and collective self-expression.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "1cc966c169a1266590c335c2126108c48b9546379410426c8455f750643e3db8"
+    },
+    {
+      "section_id": "lyric-0006",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "ea91567deef55bd22b8acbd7887f83075ee6c593a94cdef776071d784646b5c9",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a confident, self-aware resistance to manipulation, emphasizing autonomy and emotional independence. The central theme explores the deliberate choice to remain unswayed by subtle or hidden intentions, asserting personal boundaries with clarity and resolve.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "85ac192a4e980ac54cd6c348f23302407ab1b9bde2008cd0c117708b90ed82dd"
+    },
+    {
+      "section_id": "lyric-0007",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "c88d4749331bb23728172cf2e41c2330df760aad38f34beb7bd6eb451da7c85b",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of performative confidence and curated self-expression, emphasizing the artificiality and popularity of personal validation in a stylized, nostalgic context. The themes revolve around the construction of identity through external approval and the imitation of a desired, idealized aesthetic.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "69f7cb514941669360fa00820a1dbf288d6d66156708e38ebaca103b6c92f109"
+    },
+    {
+      "section_id": "lyric-0008",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "5f9cec19522c733ae05f6334b61339be82966d45c6532115195b8978e6a92613",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of restless energy and defiance, blending technological influence with a rebellious, almost chaotic creativity. The themes explore the tension between human expression and algorithmic control, suggesting a struggle for authenticity in a mechanized world.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "46c045923c82d2b8bb78c2654450f9aa51fd53cf2a891e8171b1c5fa4eb1c05a"
+    },
+    {
+      "section_id": "lyric-0009",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "f810bec6e9195d138c470c7a6da14b47220af50433f1c0e791d8ea105cea91fe",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests a nostalgic, self-reflective celebration of a particular era, emphasizing personal identity and cultural familiarity. The recurring structure implies a sense of repetition and internal consistency, reflecting themes of belonging, individuality, and the curated essence of a shared past.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "f2d403a3e3e7a7103782395a825ab0b92d51ef7b3e583441d8c9eac953c117c4"
+    },
+    {
+      "section_id": "lyric-0010",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "6ad1d32dd63164bc3a44a818816b377b9fbadb880d2d31f57689aaa332111910",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests a playful, repetitive celebration of a stylized, self-defined cultural identity, emphasizing individuality and carefree expression within a nostalgic framework. The themes revolve around the construction of personal freedom through shared, exaggerated aesthetic choices and collective self-expression.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "1cc966c169a1266590c335c2126108c48b9546379410426c8455f750643e3db8"
+    },
+    {
+      "section_id": "lyric-0011",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "509dbecb299f217d5eda61608f6eed48ad599d2ab526965db3c27b542d68fd91",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a confident, self-assured assertion of personal choice, rejecting external expectations or trivial concerns. The theme centers on individual autonomy and the prioritization of personal desires over societal or imposed norms.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "44eff00c2b22d7d7da75329c9b8a7886b22cfba056099955991712fa97eee3dd"
+    },
+    {
+      "section_id": "lyric-0012",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "9575388ecd08f16df28375e753da1ea0adc015a2ffab5d2d7935c19e80f10b35",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a defiant embrace of freedom and individuality, rejecting societal constraints with a sense of urgency and self-assuredness. The central theme explores the pursuit of personal autonomy in a stifling environment, emphasizing choice, rebellion, and the assertion of one's own path.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "95fddae88f9998f0f234f22ad2d81ff6c9b2ec5c0cb4d3b7e632c8e8cddb38a7"
+    },
+    {
+      "section_id": "lyric-0013",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "c88d4749331bb23728172cf2e41c2330df760aad38f34beb7bd6eb451da7c85b",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of performative confidence and curated self-expression, emphasizing the artificiality and popularity of personal validation in a stylized, nostalgic context. The themes revolve around the construction of identity through external approval and the imitation of a desired, idealized aesthetic.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "69f7cb514941669360fa00820a1dbf288d6d66156708e38ebaca103b6c92f109"
+    },
+    {
+      "section_id": "lyric-0014",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "5f9cec19522c733ae05f6334b61339be82966d45c6532115195b8978e6a92613",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of restless energy and defiance, blending technological influence with a rebellious, almost chaotic creativity. The themes explore the tension between human expression and algorithmic control, suggesting a struggle for authenticity in a mechanized world.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "46c045923c82d2b8bb78c2654450f9aa51fd53cf2a891e8171b1c5fa4eb1c05a"
+    },
+    {
+      "section_id": "lyric-0015",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "f810bec6e9195d138c470c7a6da14b47220af50433f1c0e791d8ea105cea91fe",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests a nostalgic, self-reflective celebration of a particular era, emphasizing personal identity and cultural familiarity. The recurring structure implies a sense of repetition and internal consistency, reflecting themes of belonging, individuality, and the curated essence of a shared past.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "f2d403a3e3e7a7103782395a825ab0b92d51ef7b3e583441d8c9eac953c117c4"
+    },
+    {
+      "section_id": "lyric-0016",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "3e154ba557d47ce41420421e7c6f729df59b08751f34edb3d4faee39b64aa90d",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests a playful, repetitive celebration of a stylized, self-defined cultural identity rooted in a specific era. The themes revolve around individuality, creative freedom, and the embrace of artificial or exaggerated aesthetics as a form of personal expression.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "77ee902748df0d23145868dfc14c917a08248a51abac3dd84fc06794c41176c2"
+    },
+    {
+      "section_id": "span-0000",
+      "set": "secondary",
+      "language": "ko",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    }
+  ]
+}

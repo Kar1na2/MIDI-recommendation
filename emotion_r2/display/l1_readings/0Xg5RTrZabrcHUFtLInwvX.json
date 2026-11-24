@@ -1,0 +1,88 @@
+{
+  "schema_version": 1,
+  "track_id": "0Xg5RTrZabrcHUFtLInwvX",
+  "cohort": "random",
+  "display_only": true,
+  "registered_scores_unchanged": true,
+  "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+  "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "prompt_sha256": "ffdf21672c16d12394441664976928ac03a51b35d721d3925cca9be8adc58e3d",
+  "registered_checkpoint_sha256": "ad899a1dc4cc089b0d36ff22e95079b1129c9f465770b467efc0694817e62d24",
+  "reading_label": "L1's interpretation of the lyrics",
+  "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+  "reading_type": "model_interpretation",
+  "decoding": {
+    "do_sample": false,
+    "num_beams": 1,
+    "max_new_tokens": 128,
+    "torch_dtype": "float16",
+    "seed": 20261115
+  },
+  "overlap_rule": "NFKC/casefold 4-word ngrams; additionally 4 consecutive ja/ko/zh script characters with spacing/punctuation removed; block if either overlaps.",
+  "sections": [
+    {
+      "section_id": "lyric-0000",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "e9419891f8c527ebeff93d66875aeacec26b1413259c4610fbcdc280768cd998",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is repetitive and insistent, conveying a sense of relentless pressure or urgency. The theme suggests a struggle or effort that is ongoing, unrelenting, and possibly overwhelming.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "190ee289602c78f760b2fd15bee9db2b7d0133dcd558d858c3183dccf276606e"
+    },
+    {
+      "section_id": "lyric-0001",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "e9419891f8c527ebeff93d66875aeacec26b1413259c4610fbcdc280768cd998",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is repetitive and insistent, conveying a sense of relentless pressure or urgency. The theme suggests a struggle or effort that is ongoing, unrelenting, and possibly overwhelming.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "190ee289602c78f760b2fd15bee9db2b7d0133dcd558d858c3183dccf276606e"
+    },
+    {
+      "section_id": "lyric-0002",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "e9419891f8c527ebeff93d66875aeacec26b1413259c4610fbcdc280768cd998",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is repetitive and insistent, conveying a sense of relentless pressure or urgency. The theme suggests a struggle or effort that is ongoing, unrelenting, and possibly overwhelming.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "190ee289602c78f760b2fd15bee9db2b7d0133dcd558d858c3183dccf276606e"
+    },
+    {
+      "section_id": "span-0000",
+      "set": "secondary",
+      "language": "uncertain",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    }
+  ]
+}

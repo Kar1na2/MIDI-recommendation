@@ -1,0 +1,131 @@
+{
+  "schema_version": 1,
+  "track_id": "5Xjcst6Rle74VteHx0zczO",
+  "cohort": "random",
+  "display_only": true,
+  "registered_scores_unchanged": true,
+  "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+  "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "prompt_sha256": "ffdf21672c16d12394441664976928ac03a51b35d721d3925cca9be8adc58e3d",
+  "registered_checkpoint_sha256": "88b2971e272a5c427761f4e53de944888a2351a98b079c99f4066d4c059aab00",
+  "reading_label": "L1's interpretation of the lyrics",
+  "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+  "reading_type": "model_interpretation",
+  "decoding": {
+    "do_sample": false,
+    "num_beams": 1,
+    "max_new_tokens": 128,
+    "torch_dtype": "float16",
+    "seed": 20261115
+  },
+  "overlap_rule": "NFKC/casefold 4-word ngrams; additionally 4 consecutive ja/ko/zh script characters with spacing/punctuation removed; block if either overlaps.",
+  "sections": [
+    {
+      "section_id": "lyric-0000",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "d8ed359c05a807587eb4df640ec6d8fccf3eacfd5fc04209b64843a311a52a0f",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys deep reverence and unwavering faith, emphasizing the irreplaceable value of a central, sustaining presence. The theme centers on hope as a vital, unique force that defines existence and provides enduring significance.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "7a64e977e2ffd4f072f5944253a5bc71eb23d45db45be9175a688ed361285df2"
+    },
+    {
+      "section_id": "lyric-0001",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "c95d5de16159107f1ca00ec02fc56cc7ad8d50c2e6fff7c2b7a01fe55e34dab9",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of profound spiritual release and emotional transformation, while the themes explore the dissolution of inner barriers through a deep, personal connection to a higher presence.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "ca01f56ade876162a94b4299431ab1ee4f89ccdbef0a23a3fb0efa5e06bd37a2"
+    },
+    {
+      "section_id": "lyric-0002",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "eb5bde4ecb427d16f9cfd233a1aa14075954e2204e4b948cdda252ada65bf505",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is reverent and yearning, expressing a deep desire for divine presence and transformation. The central theme revolves around the longing for spiritual fulfillment through the overwhelming influence of the sacred.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "9c4c231100abc2c8448972cdd2793d976c338cc9252b659d2a89c86e4b16bc5b"
+    },
+    {
+      "section_id": "lyric-0003",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": "fb98371cf536a1cd67327b3f0fb5f53907484bf88816e668c4c4f218c9154f0e",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is reverent and introspective, emphasizing a deepening sense of connection and recognition of benevolent forces. The central theme revolves around spiritual awakening and the transformative experience of encountering unconditional positivity.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "7f31f1079ef8e600854b04c6c3b798e123d52d648ffd786e62748983bc70b9d7"
+    },
+    {
+      "section_id": "span-0000",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    },
+    {
+      "section_id": "span-0003",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    },
+    {
+      "section_id": "span-0005",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    }
+  ]
+}

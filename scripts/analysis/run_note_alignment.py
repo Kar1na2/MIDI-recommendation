@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-Phase 3B full-corpus step: pairwise Smith-Waterman local alignment of every
-song's melodic-interval sequence against every other song's, using the
+Phase 3B step: Smith-Waterman local alignment of retained candidate pairs of
+songs' melodic-interval sequences, using the
 calibration validated in scripts/analysis/validate_note_alignment_sample.py
 (see output/analysis/NOTE_ANALYSIS_DESIGN.md for the full design history).
 
@@ -41,9 +41,9 @@ established "long batch run" convention comfortably (see
 background-run-conventions memory) - a k-mer prefilter would add real
 complexity (build, validate against brute force, maintain) to solve a
 problem that measuring first showed doesn't actually exist here.
-**Decision: no prefilter used; output/analysis/note_kmer_candidates.csv is
-not produced** - see design doc for this reasoning spelled out for anyone
-revisiting the scale question later (e.g. if the corpus grows much larger).
+For the expanded liked-library run, build_alignment_candidates supplies the
+same kind of seed-and-extend shortlist that the earlier design identified as
+the next scale step. --all-pairs remains available for historical reproduction.
 
 Reads:  output/analysis/note_sequences.csv
 Writes: output/analysis/note_similarity_matrix.csv (streamed, flushed after
@@ -53,13 +53,16 @@ Writes: output/analysis/note_similarity_matrix.csv (streamed, flushed after
 Usage:
     python -m scripts.analysis.run_note_alignment --dry-run
     python -m scripts.analysis.run_note_alignment --limit 20     # smoke test
+    python -m scripts.analysis.run_note_alignment --workers 8    # parallel full run
     python -m scripts.analysis.run_note_alignment                # full corpus
+    python -m scripts.analysis.run_note_alignment --all-pairs   # historical quadratic run
 """
 import argparse
 import csv
 import itertools
 import time
 import traceback
+from concurrent.futures import ProcessPoolExecutor
 from collections import defaultdict
 from pathlib import Path
 
@@ -69,15 +72,18 @@ from lib.note_similarity import interval_substitution_score, MATCH_SCORE
 SEQUENCES_CSV = Path("output/analysis/note_sequences.csv")
 OUT_CSV = Path("output/analysis/note_similarity_matrix.csv")
 FAILURE_LOG = Path("output/analysis/_note_alignment_failures.log")
+CANDIDATE_PAIRS_CSV = Path("output/analysis/alignment_candidates.csv")
 
 GAP_PENALTY = -2.0  # chosen at the validation checkpoint - see design doc
 MAX_POSITION_SCORE = MATCH_SCORE  # score of a perfect match, for normalization (no root-bonus term here, unlike chords)
 
 FIELDNAMES = [
-    "song_a", "song_b", "len_a", "len_b",
+    "song_a", "song_b", "candidate_type", "retrieval_score", "len_a", "len_b",
     "raw_score", "normalized_score",
     "span_a_start", "span_a_end", "span_b_start", "span_b_end", "aligned_len",
 ]
+
+_WORKER_SEQUENCES = {}
 
 
 def load_sequences():
@@ -99,16 +105,63 @@ def align_pair(seq_a, seq_b):
     return result, norm
 
 
+def _init_worker(sequences):
+    global _WORKER_SEQUENCES
+    _WORKER_SEQUENCES = sequences
+
+
+def _align_job(job):
+    song_a, song_b, candidate_type, retrieval_score = job
+    seq_a, seq_b = _WORKER_SEQUENCES[song_a], _WORKER_SEQUENCES[song_b]
+    result, norm = align_pair(seq_a, seq_b)
+    return {
+        "song_a": song_a, "song_b": song_b,
+        "candidate_type": candidate_type,
+        "retrieval_score": round(retrieval_score, 6),
+        "len_a": len(seq_a), "len_b": len(seq_b),
+        "raw_score": round(result.score, 3),
+        "normalized_score": round(norm, 4),
+        "span_a_start": result.span_a[0], "span_a_end": result.span_a[1],
+        "span_b_start": result.span_b[0], "span_b_end": result.span_b[1],
+        "aligned_len": len(result.aligned_a),
+    }
+
+
+def load_candidate_pairs(path: Path, valid_songs: set[str]):
+    pairs = []
+    with path.open(newline="", encoding="utf-8") as f:
+        for row in csv.DictReader(f):
+            if row["mode"] != "note":
+                continue
+            song_a, song_b = row["song_a"], row["song_b"]
+            if song_a in valid_songs and song_b in valid_songs:
+                pairs.append((
+                    song_a, song_b, row.get("candidate_type", "candidate"),
+                    float(row.get("retrieval_score") or 0),
+                ))
+    return pairs
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--dry-run", action="store_true")
     ap.add_argument("--limit", type=int, default=None, help="process only the first N pairs (smoke test)")
+    ap.add_argument("--candidate-pairs", type=Path, default=CANDIDATE_PAIRS_CSV)
+    ap.add_argument("--all-pairs", action="store_true",
+                    help="Ignore the candidate file and reproduce the quadratic full matrix")
+    ap.add_argument("--workers", type=int, default=1,
+                    help="Parallel worker processes (same scoring, useful for large candidate sets)")
     args = ap.parse_args()
 
     by_song = load_sequences()
     songs = sorted(by_song)
-    pairs = list(itertools.combinations(songs, 2))
-    print(f"{len(songs)} songs -> {len(pairs)} pairs")
+    if args.all_pairs or not args.candidate_pairs.exists():
+        pairs = [(a, b, "all_pairs", 0.0) for a, b in itertools.combinations(songs, 2)]
+        pair_source = "all pairs"
+    else:
+        pairs = load_candidate_pairs(args.candidate_pairs, set(songs))
+        pair_source = str(args.candidate_pairs)
+    print(f"{len(songs)} songs -> {len(pairs)} pairs ({pair_source})")
 
     if args.dry_run:
         print(f"Would run {len(pairs)} pairs, gap={GAP_PENALTY}, writing to {OUT_CSV}")
@@ -125,30 +178,36 @@ def main():
     with OUT_CSV.open("w", newline="", encoding="utf-8") as f, FAILURE_LOG.open("w", encoding="utf-8") as flog:
         w = csv.DictWriter(f, fieldnames=FIELDNAMES)
         w.writeheader()
-        for i, (song_a, song_b) in enumerate(pairs, 1):
-            try:
-                seq_a, seq_b = by_song[song_a], by_song[song_b]
-                result, norm = align_pair(seq_a, seq_b)
-                w.writerow({
-                    "song_a": song_a, "song_b": song_b,
-                    "len_a": len(seq_a), "len_b": len(seq_b),
-                    "raw_score": round(result.score, 3),
-                    "normalized_score": round(norm, 4),
-                    "span_a_start": result.span_a[0], "span_a_end": result.span_a[1],
-                    "span_b_start": result.span_b[0], "span_b_end": result.span_b[1],
-                    "aligned_len": len(result.aligned_a),
-                })
-                f.flush()
-            except Exception:
-                n_failed += 1
-                flog.write(f"{song_a} | {song_b}\n{traceback.format_exc()}\n")
-                flog.flush()
+        if args.workers > 1:
+            executor = ProcessPoolExecutor(
+                max_workers=args.workers,
+                initializer=_init_worker,
+                initargs=(by_song,),
+            )
+            results = executor.map(_align_job, pairs, chunksize=4)
+        else:
+            executor = None
+            results = (_align_job(job) for job in pairs)
+        try:
+            for i, job in enumerate(pairs, 1):
+                song_a, song_b = job[:2]
+                try:
+                    row = next(results) if executor else next(results)
+                    w.writerow(row)
+                    f.flush()
+                except Exception:
+                    n_failed += 1
+                    flog.write(f"{song_a} | {song_b}\n{traceback.format_exc()}\n")
+                    flog.flush()
 
-            if i % 100 == 0 or i == len(pairs):
-                elapsed = time.time() - t_start
-                rate = i / elapsed
-                eta = (len(pairs) - i) / rate if rate > 0 else float("inf")
-                print(f"[{i}/{len(pairs)}] elapsed={elapsed:.0f}s eta={eta:.0f}s failed={n_failed}", flush=True)
+                if i % 100 == 0 or i == len(pairs):
+                    elapsed = time.time() - t_start
+                    rate = i / elapsed
+                    eta = (len(pairs) - i) / rate if rate > 0 else float("inf")
+                    print(f"[{i}/{len(pairs)}] elapsed={elapsed:.0f}s eta={eta:.0f}s failed={n_failed}", flush=True)
+        finally:
+            if executor:
+                executor.shutdown()
 
     print(f"Done. {len(pairs)} pairs, {n_failed} failed -> {OUT_CSV}")
     if n_failed:

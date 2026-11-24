@@ -1,0 +1,186 @@
+{
+  "schema_version": 1,
+  "track_id": "4C7PyWUlTLUUgVZQVboCma",
+  "cohort": "random",
+  "display_only": true,
+  "registered_scores_unchanged": true,
+  "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+  "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "prompt_sha256": "ffdf21672c16d12394441664976928ac03a51b35d721d3925cca9be8adc58e3d",
+  "registered_checkpoint_sha256": "e6c8d2c4275a8695dd1d0be53bcb80a6d53ef00e32f809f1047a7b03c90ad9d7",
+  "reading_label": "L1's interpretation of the lyrics",
+  "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+  "reading_type": "model_interpretation",
+  "decoding": {
+    "do_sample": false,
+    "num_beams": 1,
+    "max_new_tokens": 128,
+    "torch_dtype": "float16",
+    "seed": 20261115
+  },
+  "overlap_rule": "NFKC/casefold 4-word ngrams; additionally 4 consecutive ja/ko/zh script characters with spacing/punctuation removed; block if either overlaps.",
+  "sections": [
+    {
+      "section_id": "lyric-0000",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "ad2036030a22239f21295c6527a964f0c8596c78d7078e8766feda3557d696b0",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of emotional distance and rejection, emphasizing autonomy and the refusal of dependency. The themes revolve around broken trust, the consequences of past actions, and a deliberate withdrawal from affection.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "9339fda2999e3995ce35ee41f4ee82e3737e3203830a07c06e8e34c3ae0c682a"
+    },
+    {
+      "section_id": "lyric-0001",
+      "set": "secondary",
+      "language": "uncertain",
+      "text_sha256": "dfe068aeb3ceadb91ac188c6a87f0536d132882b462439833ce05c97ab38fe8f",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a detached resolve and emotional distance, emphasizing finality and the rejection of obligation. The central theme explores the tension between choice and inevitability in a relationship that has lost its emotional weight.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "e22699bde979c4ce8d39f0319cb9e14519c8a67e1a6d290fcb7a8c707b368ec0"
+    },
+    {
+      "section_id": "lyric-0002",
+      "set": "secondary",
+      "language": "uncertain",
+      "text_sha256": "02ce6f870b1f4313fef798edd9435781ead990b433678e6de02d83b52c614a55",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is defiant and dismissive, asserting independence and rejecting manipulation. The central theme revolves around autonomy and the rejection of superficial or insincere communication.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "b68aeec9fcb996dc6215bac597104484ec22522c98853ef04c76989f50aff3e2"
+    },
+    {
+      "section_id": "lyric-0003",
+      "set": "secondary",
+      "language": "uncertain",
+      "text_sha256": "0e93545e957a582aec456c72e0cf9de5a29103ce6f437b462a67abc0315d9bea",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a firm rejection of dependency and control, emphasizing autonomy and emotional independence. The central theme explores the boundaries between identity and manipulation, asserting self-worth in the face of perceived ownership or emotional coercion.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "04d3e39c21b299ff8317ea93980f69953b9e95e9ea36740eb2ae0f36ebe3a945"
+    },
+    {
+      "section_id": "lyric-0004",
+      "set": "secondary",
+      "language": "uncertain",
+      "text_sha256": "053006051cc4f897289991905d68e650fb521800ba263d1ebe36eeddf617c14c",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a resilient, defiant assertion of independence within a relationship, emphasizing emotional boundaries and past experiences of deception. The central theme revolves around self-worth and the refusal to be manipulated or reduced to a passive role.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "ab5d28179291447f930bb28d670142a503dfd74d36d7d8f8a94ec506ee0adf89"
+    },
+    {
+      "section_id": "lyric-0005",
+      "set": "secondary",
+      "language": "uncertain",
+      "text_sha256": "b95f405c7053037c7092717f09d3c6a3c961cdad93834cacc2bb8f827cf661fc",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of weary resolve and emotional detachment, marked by a quiet defiance against manipulation. The themes explore the exhaustion of repeated deception and the decision to break free from cycles of obligation and expectation.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "ecc30ec0d532676830cd08c18dbeed3059b1375f40d78fa8ebac691d76204a7d"
+    },
+    {
+      "section_id": "lyric-0006",
+      "set": "secondary",
+      "language": "uncertain",
+      "text_sha256": "02ce6f870b1f4313fef798edd9435781ead990b433678e6de02d83b52c614a55",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is defiant and dismissive, asserting independence and rejecting manipulation. The central theme revolves around autonomy and the rejection of superficial or insincere communication.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "b68aeec9fcb996dc6215bac597104484ec22522c98853ef04c76989f50aff3e2"
+    },
+    {
+      "section_id": "lyric-0007",
+      "set": "secondary",
+      "language": "uncertain",
+      "text_sha256": "a86bb95d7dc7db4a1bfaab5a6e26b1d4fe4723f8ba44c2438b97400f75e7429b",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is defiant and assertive, rejecting dependency and emotional manipulation. The central theme revolves around autonomy and the rejection of being controlled or used by others.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "eec5c137dd109eb717e4af96edb1c957c4266742895c41d52444c347d43c3acf"
+    },
+    {
+      "section_id": "span-0000",
+      "set": "secondary",
+      "language": "uncertain",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    },
+    {
+      "section_id": "span-0002",
+      "set": "secondary",
+      "language": "uncertain",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    }
+  ]
+}

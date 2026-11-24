@@ -1,0 +1,64 @@
+{
+  "checked_at": "2026-11-22T15:16:58+00:00",
+  "python_executable": "/home/usr/venvs/midi/bin/python",
+  "python_imports": {
+    "muscriptor": true,
+    "beat_this": true,
+    "madmom": true,
+    "huggingface_hub": true
+  },
+  "hugging_face_authenticated": true,
+  "genius_authenticated": true,
+  "genius_token_printed": false,
+  "nvidia_smi": "passed",
+  "gpu": [
+    "| NVIDIA-SMI 610.57.01              KMD Version: 610.88        CUDA UMD Version: 13.3     |",
+    "+-----------------------------------------+------------------------+----------------------+",
+    "| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |",
+    "| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |"
+  ],
+  "disk": {
+    "checked_at": "2026-11-22T15:16:58+00:00",
+    "remaining_songs": 668,
+    "assumed_output_bytes_per_song": 169000000,
+    "projected_remaining_bytes": 112892000000,
+    "multiplier": 1.3,
+    "minimum_free_bytes": 146759600000.0,
+    "free_bytes": 863421292544,
+    "passed": true,
+    "projection_source": "Task B stated approximately 169 MB/song and 120 GB total"
+  },
+  "machine": {
+    "sleep_after_ac_seconds": 0,
+    "hibernate_after_ac_seconds": 0,
+    "reboot_required": true,
+    "pending_file_rename_operations": true,
+    "windows_update_or_cbs_reboot_required": false,
+    "sleep_change_command": "powercfg.exe /change standby-timeout-ac 0"
+  },
+  "task_a_v1_integrity": {
+    "unchanged": 7849,
+    "total": 7849,
+    "differences": [],
+    "pass": true
+  },
+  "protected_v1_snapshot": {
+    "total": 7849,
+    "unchanged": 7849,
+    "missing": [],
+    "extra": [],
+    "changed": [],
+    "pass": true
+  },
+  "protected_mvp_325_snapshot": {
+    "total": 1097,
+    "unchanged": 1097,
+    "missing": [],
+    "extra": [],
+    "changed": [],
+    "pass": true
+  },
+  "timeout_fix": "chunk timing and token-count heartbeat logging; 45-minute retry only after a library transcription timeout",
+  "timeout_diagnosis": "confirmed cumulative deadline can cut transcription short after tuning, beats and separation",
+  "stages_started": false
+}

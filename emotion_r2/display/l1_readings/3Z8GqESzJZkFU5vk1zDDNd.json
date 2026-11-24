@@ -1,0 +1,220 @@
+{
+  "schema_version": 1,
+  "track_id": "3Z8GqESzJZkFU5vk1zDDNd",
+  "cohort": "random",
+  "display_only": true,
+  "registered_scores_unchanged": true,
+  "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+  "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "prompt_sha256": "ffdf21672c16d12394441664976928ac03a51b35d721d3925cca9be8adc58e3d",
+  "registered_checkpoint_sha256": "7b76d274aa98f581d059e73b1db84b7c87445ade80720ca4c147e19ced24163c",
+  "reading_label": "L1's interpretation of the lyrics",
+  "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+  "reading_type": "model_interpretation",
+  "decoding": {
+    "do_sample": false,
+    "num_beams": 1,
+    "max_new_tokens": 128,
+    "torch_dtype": "float16",
+    "seed": 20261115
+  },
+  "overlap_rule": "NFKC/casefold 4-word ngrams; additionally 4 consecutive ja/ko/zh script characters with spacing/punctuation removed; block if either overlaps.",
+  "sections": [
+    {
+      "section_id": "lyric-0000",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "1f87832d5b1e6e35f149fccdb8f08a4005da9de54322db22fc51a21bd7988c9b",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is energetic and rhythmic, emphasizing repetition and a sense of collective momentum. The themes suggest identity, cultural resonance, and the transmission of heritage through sound and pattern.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "af99badbb6b235c11677f5838d5bdd98a1dbb2e13996169a0790de39849421f3"
+    },
+    {
+      "section_id": "lyric-0001",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "76980f97754f5662ab05fe7832ab1e499454b102fa9bbe4c558a753061a3eadb",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a confident, casual demeanor with a focus on material success and domestic partnership. The themes revolve around financial stability, shared intimacy, and the evolution of a relationship through mutual growth and routine.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "7cca7021dfebf79a3f8f0284d112583db0b0ab303241f1b0eee8fa29bb184227"
+    },
+    {
+      "section_id": "lyric-0002",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "590f58569b531523cca784eac3603c656b3bb28e6a94f6fa528f5e2f1fbe03b9",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys confidence and ambition, centered on material success and a shared, calculated pursuit of wealth. The themes emphasize control, strategic planning, and an unyielding commitment to financial goals within a relationship.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "4146936b9612729d157c40d513f0544a7a30e27e01c6689558c38396ff779750"
+    },
+    {
+      "section_id": "lyric-0003",
+      "set": "secondary",
+      "language": "uncertain",
+      "text_sha256": "67b028a5a5bcc8dce055fbf9e9c0970d753099652317c329874bb90de8a61d90",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of ease, intimacy, and playful confidence, emphasizing connection and shared activity. The themes revolve around companionship, spontaneity, and the joy found in simple, everyday moments together.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "fee2ee219418a1ba54ce44a11fc43eaf5ed856317a04fa534f2e7e83a0001b14"
+    },
+    {
+      "section_id": "lyric-0004",
+      "set": "secondary",
+      "language": "uncertain",
+      "text_sha256": "af6d7916bbe8894f2cd9590c03845ae7b786d111c87ad150d4d90781a39a64f9",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a relaxed, confident ease, emphasizing independence and domestic vitality. The themes revolve around personal freedom, familial connection, and a sense of grounded, everyday strength.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "ef63f8eaa6073c40c1a153af5954dc4f3db38fb46b6cfeabaa7652788dcebd7a"
+    },
+    {
+      "section_id": "lyric-0005",
+      "set": "secondary",
+      "language": "uncertain",
+      "text_sha256": "cf9be80460192171c06ad27c5c2ecd408888db8ddb53e618802c1c909596b401",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is assertive and confident, emphasizing financial success and self-sufficiency. The themes revolve around ambition, material achievement, and a relentless drive toward economic stability.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "d19e3774ba312098ca850134915b5c539d61a28b6c9475c2a49ddefbebec3e76"
+    },
+    {
+      "section_id": "lyric-0006",
+      "set": "secondary",
+      "language": "uncertain",
+      "text_sha256": "737e939c7504129870d9dd63556f013b6caff8d61d5a761d5165846c6f2d47a7",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is rhythmic and repetitive, suggesting a sense of cultural or historical invocation, while the themes point to identity, tradition, and the blending of present and past through patterned speech.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "a41051307ed4b3261d64f7a270736c66f691ad47fa79205fb7f25d9ca9e06d20"
+    },
+    {
+      "section_id": "lyric-0007",
+      "set": "secondary",
+      "language": "uncertain",
+      "text_sha256": "1fa865c0b3b8b949d0e6548a595b6b25f29bc6b1455caf7794663c6e743d0ba5",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests a casual, confident demeanor with a focus on shared experiences and domestic intimacy. The themes revolve around partnership, mutual growth, and the blending of personal habits and routines in a stable, grounded relationship.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "5bc8b4a631a018d41cc2cfba856d9139b2c7b9905c91e5768907b972743c60e7"
+    },
+    {
+      "section_id": "lyric-0008",
+      "set": "secondary",
+      "language": "uncertain",
+      "text_sha256": "b6f4d7a00108d9a6937cbfb97106c2230edee3aaf347566a74bf434b0bee6ea2",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a confident, possessive attitude toward wealth and partnership, emphasizing control and commitment within a materialistic context. The themes revolve around financial ambition, mutual dedication, and the idea of building a shared future through wealth and loyalty.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "7e451d381462826cd1b6db82af8662d02501f2201cfa444f7e78f101fdb24c6c"
+    },
+    {
+      "section_id": "lyric-0009",
+      "set": "secondary",
+      "language": "uncertain",
+      "text_sha256": "b5f40bbbb77eea338bfa297e3c6f770cbb694d70412f908ff37f539ee37fb680",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone presents a carefree, rhythmic celebration of intimacy and shared activity, emphasizing connection through everyday moments. The themes revolve around companionship, comfort, and the joy found in simple, grounded interactions.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "51fef9d6e76d6dc0364fb5ffbd9996a3c8d6960c579fde42175ff7c90aca1280"
+    },
+    {
+      "section_id": "span-0000",
+      "set": "secondary",
+      "language": "uncertain",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    },
+    {
+      "section_id": "span-0004",
+      "set": "secondary",
+      "language": "uncertain",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    }
+  ]
+}

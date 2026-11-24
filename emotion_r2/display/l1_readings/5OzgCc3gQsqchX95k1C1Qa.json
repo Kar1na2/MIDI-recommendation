@@ -1,0 +1,139 @@
+{
+  "schema_version": 1,
+  "track_id": "5OzgCc3gQsqchX95k1C1Qa",
+  "cohort": "random",
+  "display_only": true,
+  "registered_scores_unchanged": true,
+  "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+  "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "prompt_sha256": "ffdf21672c16d12394441664976928ac03a51b35d721d3925cca9be8adc58e3d",
+  "registered_checkpoint_sha256": "a413e3cd5c2f370acc3b77e58e387828c037b05700944cf3ad53f0f10668a336",
+  "reading_label": "L1's interpretation of the lyrics",
+  "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+  "reading_type": "model_interpretation",
+  "decoding": {
+    "do_sample": false,
+    "num_beams": 1,
+    "max_new_tokens": 128,
+    "torch_dtype": "float16",
+    "seed": 20261115
+  },
+  "overlap_rule": "NFKC/casefold 4-word ngrams; additionally 4 consecutive ja/ko/zh script characters with spacing/punctuation removed; block if either overlaps.",
+  "sections": [
+    {
+      "section_id": "lyric-0000",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "2d21189738ca11515cebe98d7d7fcc7385fab9183e54f54c04c42ae1e65d58d8",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests a moment of sudden awareness or revelation, blending casual acknowledgment with a sense of quiet intensity. The themes explore connection, observation, and the emergence of meaning in a seemingly ordinary interaction.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "f18516da65eebad155bcd3e77d14053de937df8bdf322ea03761a7d8a6fc2754"
+    },
+    {
+      "section_id": "lyric-0001",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "4f4f96414d3e0d3c50252f4b615992b9a96780383d69482aea8eaf7ff7b19a17",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is confident and defiant, asserting personal capability against doubt. The themes revolve around perseverance, self-achievement, and a sense of rising success and global recognition.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "a1d422303cabc3b2b743139470b80db379373c8de087bcb7b3b425bf6a1fc5b5"
+    },
+    {
+      "section_id": "lyric-0002",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "f88313987aac97fa9479ef7ef097ad1e32974de2553f4e6339334b507473e61b",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is aggressive and driven, emphasizing relentless momentum and a sense of self-assured dominance. Themes of speed, control, and defiance of conventional limits emerge, blending hyperbolic ambition with a surreal, almost cinematic flair.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "bff350642d9d1f99320b08dc58e6c1856bf0eaab211179fc6e5086d7f1b77aff"
+    },
+    {
+      "section_id": "lyric-0003",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "2ca92c3c338469ac800964f9ab87b1f3c945ebfbb5e89305bc61d6a2599cad26",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of confident, almost effortless achievement, emphasizing personal success and a global perspective. The themes revolve around self-assuredness, continuous progress, and a feeling of being at the peak of one's capabilities.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "35d8209dea5e6e96e576a727f71044d5d42840c725462901af8b4491e1ebce8e"
+    },
+    {
+      "section_id": "lyric-0004",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "dcc15c449c4e1c9e03702e2cf57a4c12402c14bf39239900932a1371c9209cfd",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is defiant and introspective, blending self-assurance with a sense of existential uncertainty. Themes of identity, desire, and the tension between appearance and inner reality emerge, suggesting a struggle to define oneself amid external expectations and internal contradictions.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "7e957b51acc878544f035b74016b8a1a77fc3e2e736a27eeefc8e6c4816d4f7a"
+    },
+    {
+      "section_id": "lyric-0005",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "4f4f96414d3e0d3c50252f4b615992b9a96780383d69482aea8eaf7ff7b19a17",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is confident and defiant, asserting personal capability against doubt. The themes revolve around perseverance, self-achievement, and a sense of rising success and global recognition.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "a1d422303cabc3b2b743139470b80db379373c8de087bcb7b3b425bf6a1fc5b5"
+    },
+    {
+      "section_id": "span-0000",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    }
+  ]
+}

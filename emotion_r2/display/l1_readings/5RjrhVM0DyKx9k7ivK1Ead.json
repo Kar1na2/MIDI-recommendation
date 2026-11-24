@@ -1,0 +1,122 @@
+{
+  "schema_version": 1,
+  "track_id": "5RjrhVM0DyKx9k7ivK1Ead",
+  "cohort": "random",
+  "display_only": true,
+  "registered_scores_unchanged": true,
+  "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+  "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "prompt_sha256": "ffdf21672c16d12394441664976928ac03a51b35d721d3925cca9be8adc58e3d",
+  "registered_checkpoint_sha256": "6112e2a1170cd4ff527da05560e2b8767f12e0b4fc992574ef45cdd55c4ab686",
+  "reading_label": "L1's interpretation of the lyrics",
+  "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+  "reading_type": "model_interpretation",
+  "decoding": {
+    "do_sample": false,
+    "num_beams": 1,
+    "max_new_tokens": 128,
+    "torch_dtype": "float16",
+    "seed": 20261115
+  },
+  "overlap_rule": "NFKC/casefold 4-word ngrams; additionally 4 consecutive ja/ko/zh script characters with spacing/punctuation removed; block if either overlaps.",
+  "sections": [
+    {
+      "section_id": "lyric-0000",
+      "set": "primary",
+      "language": "zh",
+      "text_sha256": "66f6424a8670f8cebf6245d15674a7d80d55c1303fed36eb104b78f40b0ebcae",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of weary resignation amid ambition, highlighting the tension between personal success and the burdens carried by others. The themes explore the cost of prosperity, the illusion of privilege, and the hidden struggles that underlie apparent achievement.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "e3b7cfaf0036a27ec22edd0833b92cbf9c195a463bd5b35d609f5c6325bd85c6"
+    },
+    {
+      "section_id": "lyric-0001",
+      "set": "primary",
+      "language": "zh",
+      "text_sha256": "0d55e4148ae5663876611a127527246b33631f37fda3c9d0a064af1418e22e67",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a detached, almost indifferent acceptance of economic exploitation, framing wealth generation as a neutral or even positive outcome. The theme centers on the prioritization of financial gain over moral or ethical considerations, suggesting a worldview where personal benefit supersedes responsibility.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "9e06996d364a21ecc2b967265e068b7515f4b5f91e234df58d63b0be4685f5cc"
+    },
+    {
+      "section_id": "lyric-0002",
+      "set": "primary",
+      "language": "zh",
+      "text_sha256": "183389d99e8664b371ae59b0aa686af718ca2726b01c614f76de2c738b42a24d",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is defiant and critical, portraying a struggle against systemic power and corruption. The themes revolve around control, transformation, and the tension between personal ambition and societal decay.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "01911b309f2cc40991afef52fec711230cc525750600bd25aabac579a32fae3f"
+    },
+    {
+      "section_id": "lyric-0003",
+      "set": "primary",
+      "language": "zh",
+      "text_sha256": "5138f67237a018297c90aefb72202c0056f9dcb56fe9762ae3088c5fa2141870",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a detached, almost transactional optimism, emphasizing ease and mutual benefit in a system where wealth generation is prioritized over ethical or social considerations. The theme centers on the commodification of resources and the prioritization of financial gain over accountability or shared responsibility.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "18f6cb57f979a29a53344353f9123346eda1f6f949fe11294e254bab95ac16d8"
+    },
+    {
+      "section_id": "lyric-0004",
+      "set": "primary",
+      "language": "zh",
+      "text_sha256": "ba0d581538a14e1d74b3729acae401e632465bc40d4e60d16c05d32d9d82324c",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests a detached, calculating observation of power and obligation, emphasizing control, economic pressure, and hidden moral contradictions. The themes revolve around authority, exploitation, and the uneasy balance between responsibility and personal gain.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "dcda3eec272aec6ded409de1c30432939f0d318954de1b638ef2b335f065dc5d"
+    },
+    {
+      "section_id": "span-0000",
+      "set": "secondary",
+      "language": "zh",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    }
+  ]
+}

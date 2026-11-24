@@ -1,0 +1,343 @@
+{
+  "schema_version": 1,
+  "track_id": "5vNRhkKd0yEAg8suGBpjeY",
+  "cohort": "random",
+  "display_only": true,
+  "registered_scores_unchanged": true,
+  "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+  "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "prompt_sha256": "ffdf21672c16d12394441664976928ac03a51b35d721d3925cca9be8adc58e3d",
+  "registered_checkpoint_sha256": "37b0e94dc9f59b39a6ee6c05507bce9b40ef4c51eacab2804a1aebec0678fc56",
+  "reading_label": "L1's interpretation of the lyrics",
+  "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+  "reading_type": "model_interpretation",
+  "decoding": {
+    "do_sample": false,
+    "num_beams": 1,
+    "max_new_tokens": 128,
+    "torch_dtype": "float16",
+    "seed": 20261115
+  },
+  "overlap_rule": "NFKC/casefold 4-word ngrams; additionally 4 consecutive ja/ko/zh script characters with spacing/punctuation removed; block if either overlaps.",
+  "sections": [
+    {
+      "section_id": "lyric-0000",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "7af8e9551a7c98c73d11cd28034ed389b785ee2a0c6eaa3684b005454f7d78e4",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests a casual, playful initiation into an unpredictable experience, emphasizing spontaneity and engagement. The theme centers on chance, interaction, and the excitement derived from unknown outcomes.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "2c524f888f211189656348841cdd4793caaf0dcbcd12da1284f70264e233a672"
+    },
+    {
+      "section_id": "lyric-0001",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "c0736a7954c10d4dd1e35df6a45a0d02b4b998dc837576c589e44c844163e4f4",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is repetitive and rhythmic, suggesting a sense of routine or mechanical existence. The themes imply isolation and the monotony of urban life, emphasizing the pervasive presence of standardized environments.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "5e6867b8b223c98864e9c8c95e6a8f580d1d3e851c03a5b508fe173d81f822cc"
+    },
+    {
+      "section_id": "lyric-0002",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "c0736a7954c10d4dd1e35df6a45a0d02b4b998dc837576c589e44c844163e4f4",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is repetitive and rhythmic, suggesting a sense of routine or mechanical existence. The themes imply isolation and the monotony of urban life, emphasizing the pervasive presence of standardized environments.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "5e6867b8b223c98864e9c8c95e6a8f580d1d3e851c03a5b508fe173d81f822cc"
+    },
+    {
+      "section_id": "lyric-0003",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "30fb5497dcfdf164f902682332cea6f974e73c3f9ab3fbe16d094636cbb3c1f9",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a playful and sensual urgency, emphasizing physical desire and emotional intimacy through repeated, rhythmic imagery. The themes revolve around the contrast between virtual connection and the longing for genuine, tangible affection.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "d1f8be4011ac111ff20ad6211635993820028bc7fe957708de1fb4270da001d6"
+    },
+    {
+      "section_id": "lyric-0004",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "df7422416ad44d4289e4aa273ae29cb887ae73b1a5efea3c153373c9250723c9",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys an urgent, passionate plea rooted in mutual desire and immediate emotional intensity. The central theme explores the inseparability of two beings driven by reciprocal need and the longing for spontaneous, intense connection.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "4a8b6e823ff0eb668f69739dad645fe8ab3b20f14684f97872a296510b6288d2"
+    },
+    {
+      "section_id": "lyric-0005",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "c0736a7954c10d4dd1e35df6a45a0d02b4b998dc837576c589e44c844163e4f4",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is repetitive and rhythmic, suggesting a sense of routine or mechanical existence. The themes imply isolation and the monotony of urban life, emphasizing the pervasive presence of standardized environments.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "5e6867b8b223c98864e9c8c95e6a8f580d1d3e851c03a5b508fe173d81f822cc"
+    },
+    {
+      "section_id": "lyric-0006",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "c0736a7954c10d4dd1e35df6a45a0d02b4b998dc837576c589e44c844163e4f4",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is repetitive and rhythmic, suggesting a sense of routine or mechanical existence. The themes imply isolation and the monotony of urban life, emphasizing the pervasive presence of standardized environments.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "5e6867b8b223c98864e9c8c95e6a8f580d1d3e851c03a5b508fe173d81f822cc"
+    },
+    {
+      "section_id": "lyric-0007",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "83b4eee8df4c0001802d08e83d2c5de75c9e38c88cc62f627f4cb490875c5686",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is carefree and energetic, emphasizing freedom and spontaneity in social activity. The themes revolve around indulgence, celebration, and the blending of personal choice with communal revelry.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "f611115819be845a9abc8077a148a0b5b768a209f197764f71807ea17ceefefe"
+    },
+    {
+      "section_id": "lyric-0008",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "df7422416ad44d4289e4aa273ae29cb887ae73b1a5efea3c153373c9250723c9",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys an urgent, passionate plea rooted in mutual desire and immediate emotional intensity. The central theme explores the inseparability of two beings driven by reciprocal need and the longing for spontaneous, intense connection.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "4a8b6e823ff0eb668f69739dad645fe8ab3b20f14684f97872a296510b6288d2"
+    },
+    {
+      "section_id": "lyric-0009",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "c0736a7954c10d4dd1e35df6a45a0d02b4b998dc837576c589e44c844163e4f4",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is repetitive and rhythmic, suggesting a sense of routine or mechanical existence. The themes imply isolation and the monotony of urban life, emphasizing the pervasive presence of standardized environments.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "5e6867b8b223c98864e9c8c95e6a8f580d1d3e851c03a5b508fe173d81f822cc"
+    },
+    {
+      "section_id": "lyric-0010",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "c0736a7954c10d4dd1e35df6a45a0d02b4b998dc837576c589e44c844163e4f4",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is repetitive and rhythmic, suggesting a sense of routine or mechanical existence. The themes imply isolation and the monotony of urban life, emphasizing the pervasive presence of standardized environments.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "5e6867b8b223c98864e9c8c95e6a8f580d1d3e851c03a5b508fe173d81f822cc"
+    },
+    {
+      "section_id": "lyric-0011",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "777c43a122ee064c2a69c343377010046c47fdb82a13a2c99665cda32a857b56",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of urgency and inevitability, suggesting a confrontation or pursuit that feels both personal and unavoidable. The central theme revolves around control, anticipation, and the tension between escape and capture.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "1f684d4236a9e373f0cdff9eb48052205c035dcab2c6f20cf17b21310ed7884e"
+    },
+    {
+      "section_id": "lyric-0012",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "6f704cf0b4f04f80dc18ada88d677bcf695d1645aca3cd71892e3633b0d2bd2c",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is urgent and repetitive, conveying a sense of movement and determination. The theme centers on perseverance and the promise of arrival, emphasizing commitment to a journey despite delays or obstacles.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "a4653ca4dac9edfdd194d682b06238d589b7cb4d8beaebf5ac3ba09a292cd60e"
+    },
+    {
+      "section_id": "lyric-0013",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "df7422416ad44d4289e4aa273ae29cb887ae73b1a5efea3c153373c9250723c9",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys an urgent, passionate plea rooted in mutual desire and immediate emotional intensity. The central theme explores the inseparability of two beings driven by reciprocal need and the longing for spontaneous, intense connection.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "4a8b6e823ff0eb668f69739dad645fe8ab3b20f14684f97872a296510b6288d2"
+    },
+    {
+      "section_id": "lyric-0014",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "8f6953f2a69125211d8d981093bde477b27cf5e31c5288f83f0cd5e2d0b142c2",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is repetitive and slightly detached, suggesting a sense of routine or mechanical interaction. The themes revolve around isolation and the impersonal nature of modern living, emphasizing a quiet, unspoken connection within a structured environment.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "9a98075930e10e09961c95df0990d28636a96e0364c15e74a5f6220df347271a"
+    },
+    {
+      "section_id": "lyric-0015",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "8f6953f2a69125211d8d981093bde477b27cf5e31c5288f83f0cd5e2d0b142c2",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is repetitive and slightly detached, suggesting a sense of routine or mechanical interaction. The themes revolve around isolation and the impersonal nature of modern living, emphasizing a quiet, unspoken connection within a structured environment.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "9a98075930e10e09961c95df0990d28636a96e0364c15e74a5f6220df347271a"
+    },
+    {
+      "section_id": "lyric-0016",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "8f6953f2a69125211d8d981093bde477b27cf5e31c5288f83f0cd5e2d0b142c2",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is repetitive and slightly detached, suggesting a sense of routine or mechanical interaction. The themes revolve around isolation and the impersonal nature of modern living, emphasizing a quiet, unspoken connection within a structured environment.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "9a98075930e10e09961c95df0990d28636a96e0364c15e74a5f6220df347271a"
+    },
+    {
+      "section_id": "lyric-0017",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "c0736a7954c10d4dd1e35df6a45a0d02b4b998dc837576c589e44c844163e4f4",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is repetitive and rhythmic, suggesting a sense of routine or mechanical existence. The themes imply isolation and the monotony of urban life, emphasizing the pervasive presence of standardized environments.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "5e6867b8b223c98864e9c8c95e6a8f580d1d3e851c03a5b508fe173d81f822cc"
+    },
+    {
+      "section_id": "span-0000",
+      "set": "secondary",
+      "language": "uncertain",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    }
+  ]
+}

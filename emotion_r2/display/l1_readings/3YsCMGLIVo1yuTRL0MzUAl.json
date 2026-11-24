@@ -1,0 +1,156 @@
+{
+  "schema_version": 1,
+  "track_id": "3YsCMGLIVo1yuTRL0MzUAl",
+  "cohort": "random",
+  "display_only": true,
+  "registered_scores_unchanged": true,
+  "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+  "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "prompt_sha256": "ffdf21672c16d12394441664976928ac03a51b35d721d3925cca9be8adc58e3d",
+  "registered_checkpoint_sha256": "8e6b3776a515e5ba23598896c38e1a7fc3233cfd8d62470cd62504a2d08030aa",
+  "reading_label": "L1's interpretation of the lyrics",
+  "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+  "reading_type": "model_interpretation",
+  "decoding": {
+    "do_sample": false,
+    "num_beams": 1,
+    "max_new_tokens": 128,
+    "torch_dtype": "float16",
+    "seed": 20261115
+  },
+  "overlap_rule": "NFKC/casefold 4-word ngrams; additionally 4 consecutive ja/ko/zh script characters with spacing/punctuation removed; block if either overlaps.",
+  "sections": [
+    {
+      "section_id": "lyric-0000",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "df196329360beeff486fc280bf98dce4e0d0d9c53d7203fdba25cde822b18dd3",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a gentle, reflective warmth, centered on shared imagination and emotional resonance. The theme explores the quiet joy found in connection and the natural flow of happiness that arises from mutual presence.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "25c0f60de8acb549bc53d09454b7573bf996d3c07ba99e3b6418943ef1cc0923"
+    },
+    {
+      "section_id": "lyric-0001",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "caddae15c9d9b6ea1e04f21b3eecb36b369b651910702aa3f5b69e682bcc7868",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a mix of emotional intensity and quiet longing, while the themes explore the internal stirrings caused by another's presence and the passage of time marked by restless, reflective moments.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "bd1da78b13d6de9360231e1ea56167dd4ed8eba9e231ccef9fd5c117d471f99f"
+    },
+    {
+      "section_id": "lyric-0002",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "17bbd12e6193010ae43575d057c1d76ac9a7242b73846bc81aced64428dd3e6b",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a reflective, almost self-observing acceptance of emotional intimacy, suggesting a sense of inevitability and quiet certainty in a relationship. The themes explore the paradox of love—its apparent naturalness despite potential weariness, and the idea that deep connection becomes undeniable through simple, repeated presence.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "27602aaf9ec070a514ecf2a8f1433b1e165609f4d168a18c7b34276e6d82e2be"
+    },
+    {
+      "section_id": "lyric-0003",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "5ddc336f8b340e5e7f1723ca038571ba3f7f480980cc0fea13d09e63f60aa05d",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a quiet, reflective longing, centered on the accumulation of unspoken desires and subtle yearning for connection. The theme explores the intimacy found in imagined shared moments and the quiet buildup of emotional presence over time.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "730095a8c8b73998d46984fc0c044a4162271e30edb6c6dbbb848d2bca1a83df"
+    },
+    {
+      "section_id": "lyric-0004",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "17bbd12e6193010ae43575d057c1d76ac9a7242b73846bc81aced64428dd3e6b",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a reflective, almost self-observing acceptance of emotional intimacy, suggesting a sense of inevitability and quiet certainty in a relationship. The themes explore the paradox of love—its apparent naturalness despite potential weariness, and the idea that deep connection becomes undeniable through simple, repeated presence.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "27602aaf9ec070a514ecf2a8f1433b1e165609f4d168a18c7b34276e6d82e2be"
+    },
+    {
+      "section_id": "lyric-0005",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "5a916736e96b5136ecb445259e8d5d0759c88ae0e70cf3c0819a89ee19579c17",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a gentle, spontaneous joy rooted in shared emotional resonance, while the theme explores the subtle, contagious nature of happiness in human connection.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "e6dc4d8d6b44bdd16e6adde1115864ced0507d52c26fd9039e4d888c918de458"
+    },
+    {
+      "section_id": "lyric-0006",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "ff0f2ae0bd582ec2d40a4c5142ac332251545a79164d66f759f297d9685be765",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests a quiet confidence and mutual recognition, implying a growing sense of compatibility and emotional readiness. The themes revolve around trust, shared understanding, and the quiet affirmation of a developing connection.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "e11102ae81a6d118b0a0fdeffd610d32afa118b5e76e69fe48e60e175a6417fd"
+    },
+    {
+      "section_id": "span-0000",
+      "set": "secondary",
+      "language": "ko",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    }
+  ]
+}

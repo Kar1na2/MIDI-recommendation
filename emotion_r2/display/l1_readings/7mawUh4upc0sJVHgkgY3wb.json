@@ -1,0 +1,212 @@
+{
+  "schema_version": 1,
+  "track_id": "7mawUh4upc0sJVHgkgY3wb",
+  "cohort": "random",
+  "display_only": true,
+  "registered_scores_unchanged": true,
+  "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+  "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "prompt_sha256": "ffdf21672c16d12394441664976928ac03a51b35d721d3925cca9be8adc58e3d",
+  "registered_checkpoint_sha256": "f4993e1f1cf6433f0cf3a16cd7c1d59eb0a0d090f34b8a28d30e63ac6ee28e90",
+  "reading_label": "L1's interpretation of the lyrics",
+  "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+  "reading_type": "model_interpretation",
+  "decoding": {
+    "do_sample": false,
+    "num_beams": 1,
+    "max_new_tokens": 128,
+    "torch_dtype": "float16",
+    "seed": 20261115
+  },
+  "overlap_rule": "NFKC/casefold 4-word ngrams; additionally 4 consecutive ja/ko/zh script characters with spacing/punctuation removed; block if either overlaps.",
+  "sections": [
+    {
+      "section_id": "lyric-0000",
+      "set": "primary",
+      "language": "ja",
+      "text_sha256": "d497d05f49c98d600cd52b1ec56ae110a63ae1879900c77194e58c006b2c6450",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys an intense, almost overwhelming affection, blending romantic idealism with a sense of surrender and devotion. The themes revolve around unconditional love, emotional vulnerability, and the desire to bestow the highest form of affection.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "5f980d79c3471705b0458e12a056818424b99c2277568665203acced6cd4b2fc"
+    },
+    {
+      "section_id": "lyric-0001",
+      "set": "primary",
+      "language": "ja",
+      "text_sha256": "9993a81318f8bf9bea395b52224bcfe340796afb95a6d93af7cdc7c751764fca",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a mix of emotional vulnerability and quiet resentment, underscored by a sense of personal isolation and unspoken longing. The themes explore the tension between outward affection and internal dissonance, highlighting the complexity of emotional connections and the difficulty of sharing one's true feelings.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "4d1fee3edb9c76a8d348ff9952dd7c9a23093b3414f1d963bf3518ca34f9ce8d"
+    },
+    {
+      "section_id": "lyric-0002",
+      "set": "primary",
+      "language": "ja",
+      "text_sha256": "34480433b1ca9eade1dd406716fdffb3fce5a7d7202198e72550867d4007ce1b",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a heartfelt, almost overwhelming emotion that seeks connection and mutual understanding. The central theme explores the shared experience of deep feeling and the desire for resonance between individuals.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "705f76da869aa4e51d4fb90e91bfe5645c7fecf291ebfda58de6e45496012a23"
+    },
+    {
+      "section_id": "lyric-0003",
+      "set": "primary",
+      "language": "ja",
+      "text_sha256": "fcb8b76a55afa64faed875fea7fa8801fb9ffa62773737f40ecf85f2997fd78e",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys an intense, reverent devotion marked by emotional immediacy and exclusivity. The central theme explores the overwhelming pull of affection and the promise of unconditional, singular love.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "e81348dd5c629473e55e97f6e17abff6dd37f77a54512cc8498fbe861963ad13"
+    },
+    {
+      "section_id": "lyric-0004",
+      "set": "primary",
+      "language": "ja",
+      "text_sha256": "c4b29ddede6340610db2a4b2d7a8f97609fd61c45201c166629098190a12afe5",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of quiet longing and emotional hesitation, marked by internal conflict between desire and fear. The central theme explores the difficulty and pain of expressing affection in a way that feels both inevitable and overwhelming.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "017cea75cc7e4ab609b96934f859dcf51a5a5cbe3047939b24f95a1dccd1d8b2"
+    },
+    {
+      "section_id": "lyric-0005",
+      "set": "primary",
+      "language": "ja",
+      "text_sha256": "51c24658664544105fe36c15864a6f3ae540b80f752bd901616e3ab2c04649cd",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests a sense of urgency and gentle prompting, emphasizing awareness and timely action. The themes revolve around recognition, the passage of time, and the quiet pressure to respond or awaken to a present moment.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "f21a9017006906179fb914b45787a57437be1be637726183f833114e22cabb09"
+    },
+    {
+      "section_id": "lyric-0006",
+      "set": "primary",
+      "language": "ja",
+      "text_sha256": "970e2da722c354356aee54f9b6c149b850a316aa41b49b702617c44453f4c986",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a persistent, almost overwhelming affection that resists change or rejection, emphasizing emotional constancy and deep longing. The central theme explores the enduring power of love that remains unshaken despite distance or external circumstances.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "0cede099450d8d9e12ea0f3dbda2aca285513526194aa52580b975c83ee5c22f"
+    },
+    {
+      "section_id": "lyric-0007",
+      "set": "primary",
+      "language": "ja",
+      "text_sha256": "792afdd532a3c9413af90f212c6c9286a90dfed1dccfde9380f2699103d1d2e5",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys an intense, reverent devotion marked by emotional immediacy and unwavering commitment. The central theme explores the exclusivity and depth of a profound, almost overwhelming affection that transcends ordinary relationships.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "922b5aa190b70ebb99204f4c47538676f352bf5acd22101ea2722eca15f1ff10"
+    },
+    {
+      "section_id": "span-0000",
+      "set": "secondary",
+      "language": "ja",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    },
+    {
+      "section_id": "span-0004",
+      "set": "secondary",
+      "language": "ja",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    },
+    {
+      "section_id": "span-0006",
+      "set": "secondary",
+      "language": "ja",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    },
+    {
+      "section_id": "span-0008",
+      "set": "secondary",
+      "language": "ja",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    }
+  ]
+}

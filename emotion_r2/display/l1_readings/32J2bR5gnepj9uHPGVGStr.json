@@ -1,0 +1,139 @@
+{
+  "schema_version": 1,
+  "track_id": "32J2bR5gnepj9uHPGVGStr",
+  "cohort": "random",
+  "display_only": true,
+  "registered_scores_unchanged": true,
+  "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+  "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "prompt_sha256": "ffdf21672c16d12394441664976928ac03a51b35d721d3925cca9be8adc58e3d",
+  "registered_checkpoint_sha256": "b68d4779dd7300e3d4a670cb9994ea23b17f4eb423006245f357621112279697",
+  "reading_label": "L1's interpretation of the lyrics",
+  "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+  "reading_type": "model_interpretation",
+  "decoding": {
+    "do_sample": false,
+    "num_beams": 1,
+    "max_new_tokens": 128,
+    "torch_dtype": "float16",
+    "seed": 20261115
+  },
+  "overlap_rule": "NFKC/casefold 4-word ngrams; additionally 4 consecutive ja/ko/zh script characters with spacing/punctuation removed; block if either overlaps.",
+  "sections": [
+    {
+      "section_id": "lyric-0000",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "5638cdd4516f53e5dbd5c264ffbac91e8009053daa6ba1f2df74cc7d5480d572",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of emotional detachment and resistance to dependency, emphasizing freedom and independence. The central theme explores the rejection of constraints, both emotional and psychological, in favor of personal autonomy.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "fd53aaf4341b6c5e0e3ef08c3affa0263bedaf1b844f964289215d887890aadb"
+    },
+    {
+      "section_id": "lyric-0001",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "c671aa70ca8dd32c6332927d73896f853d4faedb546615c210ed8c5663ec604d",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of urgency and emotional intimacy mixed with evasion, suggesting a fleeting connection driven by desire and movement. The themes explore dependency, the tension between presence and absence, and the allure of temporary emotional bonds.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "262611a546b6386e108b5c0a5bea9cba35c12e2205d3705ae1b2de65c65a7ecf"
+    },
+    {
+      "section_id": "lyric-0002",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "9e6b01620603441be2823e0c874f02680fe5613256764c21ae6da643f3d9c219",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys an urgent, exhilarating drive toward immediate experience and risk, emphasizing speed and defiance of restraint. The central theme explores the allure of uncontrolled motion and the refusal to conform to measured or safe paths.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "530765b37a5205099ddb7417db3ffe1d64ffad873b37a2949f1d3d54908bb7e6"
+    },
+    {
+      "section_id": "lyric-0003",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "9b1bf444d075e3858f028e4baea2d80318992a2eba4d7fa5ac324438d15839d5",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of emotional exhaustion and resolve, marked by internal conflict and a desire to move forward despite personal pain. The themes explore isolation, the weight of responsibility, and the struggle to maintain integrity in the face of uncertainty.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "bc9b724787d684cde5280edeaa15870b03df4b4dafe4ce1efe1961ce3451b892"
+    },
+    {
+      "section_id": "lyric-0004",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "97342984499f93ef2c605e427254da64b8f02a24558f95c44c51e189965eb203",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of restless urgency and emotional intimacy mixed with evasion, while the themes explore longing, fleeting connection, and the tension between commitment and escape.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "0b86e482b1a96bde71f086b188ee5f489defc08bae2a6b963db4e1cf0982ec65"
+    },
+    {
+      "section_id": "lyric-0005",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "9e6b01620603441be2823e0c874f02680fe5613256764c21ae6da643f3d9c219",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys an urgent, exhilarating drive toward immediate experience and risk, emphasizing speed and defiance of restraint. The central theme explores the allure of uncontrolled motion and the refusal to conform to measured or safe paths.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "530765b37a5205099ddb7417db3ffe1d64ffad873b37a2949f1d3d54908bb7e6"
+    },
+    {
+      "section_id": "span-0000",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    }
+  ]
+}

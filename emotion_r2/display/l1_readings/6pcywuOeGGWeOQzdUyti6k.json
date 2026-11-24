@@ -1,0 +1,152 @@
+{
+  "schema_version": 1,
+  "track_id": "6pcywuOeGGWeOQzdUyti6k",
+  "cohort": "random",
+  "display_only": true,
+  "registered_scores_unchanged": true,
+  "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+  "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "prompt_sha256": "ffdf21672c16d12394441664976928ac03a51b35d721d3925cca9be8adc58e3d",
+  "registered_checkpoint_sha256": "39345119c9110ab4cbb6cc507d93f7653f55af5d0eae49893c88b023a836bb2b",
+  "reading_label": "L1's interpretation of the lyrics",
+  "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+  "reading_type": "model_interpretation",
+  "decoding": {
+    "do_sample": false,
+    "num_beams": 1,
+    "max_new_tokens": 128,
+    "torch_dtype": "float16",
+    "seed": 20261115
+  },
+  "overlap_rule": "NFKC/casefold 4-word ngrams; additionally 4 consecutive ja/ko/zh script characters with spacing/punctuation removed; block if either overlaps.",
+  "sections": [
+    {
+      "section_id": "lyric-0000",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": "c83851676d7c51c96ac491ff730a461e433c871be3b58d03eaadb592cfa3bf9f",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is aggressive and confrontational, emphasizing urgency and dominance. The themes revolve around power, control, and a sense of relentless motion, suggesting a focus on influence and assertiveness in a competitive environment.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "7a6d29db83ceba0f4ef032578bc25884ff34bc86aec45d6ff898e6d0c2c8a06b"
+    },
+    {
+      "section_id": "lyric-0001",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": "e632c56473f5f9c425f6a9a95825e5dad0028913ec3b40dbc7ab6d8a5c5a9a0d",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is aggressive and assertive, emphasizing dominance and control through force and intimidation. The themes revolve around power, violence, and the assertion of authority in a confrontational social context.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "f46f07b2b0b038442525f8afb16e83f88c639d69938205ee275d40708840056c"
+    },
+    {
+      "section_id": "lyric-0002",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": "2d0e68642282aa419f35549dd75b8da9e12c67237d0a77a78645a95ab54d925f",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is defiant and gritty, emphasizing a life marked by struggle, violence, and personal transformation. The themes revolve around survival, physical and emotional scars, and a deep, almost ritualistic connection to the tools and experiences that define one's journey.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "cc588c7643bac323a89c7809f8ab523055d7a07010c15ab23ab321d7a3ef9974"
+    },
+    {
+      "section_id": "lyric-0003",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "9345186df37f1d516284f9adb56353d3f44ecb06fd17d1113fa0feee23b0d3dd",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is assertive and dominant, emphasizing control, material success, and sexual confidence. The themes revolve around power, wealth, assertive masculinity, and the prioritization of loyalty and dominance over personal or emotional vulnerability.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "79f4979cb8473bd095d5266e70312de602140545efef099ec9a7bcf243eecbb0"
+    },
+    {
+      "section_id": "lyric-0004",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": "ac64be255dbca8e7d6533b1295fc4d669cda20553d074e644a825d3b09e2de1f",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is hardened and introspective, conveying a sense of physical and emotional burden carried through routine and survival. Themes of entrapment, resilience, and the internalization of violence and identity emerge as central.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "c586d32c106afbf84ba01f6185c4e65ebcc25740b73db2325650a8afd15e4d5a"
+    },
+    {
+      "section_id": "lyric-0005",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": "735a8b57d13e2ead094dc1e5d40b705d8e021f7f8bbf4ce4b2c6cdc581aad437",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a defiant assertion of authenticity and resistance against perceived corruption or compromise. The themes revolve around choosing a raw, uncompromising lifestyle and rejecting superficial or deceptive alternatives.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "e955a4e0121a44490baed7edf3d39013ac526578ca74e4a96e7abd7024819012"
+    },
+    {
+      "section_id": "span-0000",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    },
+    {
+      "section_id": "span-0002",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    }
+  ]
+}

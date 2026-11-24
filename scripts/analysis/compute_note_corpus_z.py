@@ -141,7 +141,7 @@ def main():
         out_rows.append(new_row)
 
     fieldnames = [
-        "song_a", "song_b", "len_a", "len_b",
+        "song_a", "song_b", "candidate_type", "retrieval_score", "len_a", "len_b",
         "raw_score", "normalized_score", "len_regression_residual",
         "corpus_z_a", "corpus_z_b", "corpus_z",
         "span_a_start", "span_a_end", "span_b_start", "span_b_end", "aligned_len",

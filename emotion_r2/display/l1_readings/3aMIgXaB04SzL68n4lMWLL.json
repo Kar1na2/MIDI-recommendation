@@ -1,0 +1,156 @@
+{
+  "schema_version": 1,
+  "track_id": "3aMIgXaB04SzL68n4lMWLL",
+  "cohort": "random",
+  "display_only": true,
+  "registered_scores_unchanged": true,
+  "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+  "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "prompt_sha256": "ffdf21672c16d12394441664976928ac03a51b35d721d3925cca9be8adc58e3d",
+  "registered_checkpoint_sha256": "409da0f904fce2af8a71bcd24eff772168e6a38458dffd6bc9e2410c08754417",
+  "reading_label": "L1's interpretation of the lyrics",
+  "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+  "reading_type": "model_interpretation",
+  "decoding": {
+    "do_sample": false,
+    "num_beams": 1,
+    "max_new_tokens": 128,
+    "torch_dtype": "float16",
+    "seed": 20261115
+  },
+  "overlap_rule": "NFKC/casefold 4-word ngrams; additionally 4 consecutive ja/ko/zh script characters with spacing/punctuation removed; block if either overlaps.",
+  "sections": [
+    {
+      "section_id": "lyric-0000",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "9ea7c783bd5dca13231630203707b7a7b3ad24769cb4a2ad1e363a9d79ab0c6d",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is defiant and scornful, rejecting false appearances and futile efforts. The themes revolve around resistance to deception and the futility of misguided actions.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "3aadc6377cfa369fccc6041677021e9df916acf0f81a6527924613cdb5a9b532"
+    },
+    {
+      "section_id": "lyric-0001",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "6a4c703ffa40b9021b32ab154188314ffe63b0249d1d308b38beb8b35f57e585",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is defiant and scornful, conveying a rejection of deceit and futility. The themes revolve around resistance to manipulation, the futility of misguided efforts, and the degradation of those who serve empty or harmful purposes.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "4cdbf9cb2dae43c079f1c55d031e8e15fcea9e778d32c19d8fe5abe9c379d086"
+    },
+    {
+      "section_id": "lyric-0002",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "09b54d4e38938b9b88c6fac9f79be0857c4e6994f62cb79c32ec7b3a34eed7cc",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is defiant and scornful, rejecting external pressures and futile efforts with a sense of bitter resolve. The themes revolve around resistance to manipulation, the futility of misguided actions, and the dehumanization of those who pursue them.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "964fe407dd449869461f02dfc02b8aaa8d5855fe64bf0b3be6281db8026b7a79"
+    },
+    {
+      "section_id": "lyric-0003",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "e1e98e93d8175dafa0de1a4cf5909a82f2f71d72a86f0f5f818c5e9de69d6737",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of longing and reverence, blending emotional yearning with a deep admiration for something lost or unattainable. The themes explore the tension between what is absent and what is valued, suggesting a search for meaning through memory and idealized presence.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "fd9c72d2b5c2b6a1e0e09b683e2a0131714715f6ee60f9148a08ac24d6a02ee9"
+    },
+    {
+      "section_id": "lyric-0004",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "a13cf482053c226641a8fa49a9a7473fb2988dfe121da2daab0388173fba37d4",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is defiant and critical, expressing resistance against manipulation and futility. The themes revolve around rejection of deceit, the consequences of flawed decisions, and the moral judgment of wasted effort.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "fa7bafb8ec8baeea4cf597d649e7005f8abc33d18304db7515356d6d7c190045"
+    },
+    {
+      "section_id": "lyric-0005",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "e1e98e93d8175dafa0de1a4cf5909a82f2f71d72a86f0f5f818c5e9de69d6737",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of longing and reverence, blending emotional yearning with a deep admiration for something lost or unattainable. The themes explore the tension between what is absent and what is valued, suggesting a search for meaning through memory and idealized presence.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "fd9c72d2b5c2b6a1e0e09b683e2a0131714715f6ee60f9148a08ac24d6a02ee9"
+    },
+    {
+      "section_id": "lyric-0006",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "e09a4a5086750b0f05d5642e41b3ffbe6dd3eac514dadb8fee3624cf5340441c",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is defiant and critical, conveying a strong rejection of insincere or deceptive behavior. The theme centers on resistance against superficiality and the moral compromise it represents.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "3f1d70cdd933b905807e5ee8058949ab318bb43b5cf2cb92534c71b1ff65d803"
+    },
+    {
+      "section_id": "span-0000",
+      "set": "secondary",
+      "language": "uncertain",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    }
+  ]
+}

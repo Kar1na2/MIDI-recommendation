@@ -1,0 +1,139 @@
+{
+  "schema_version": 1,
+  "track_id": "5SoRwK3gXtq0AjRnynzr4g",
+  "cohort": "random",
+  "display_only": true,
+  "registered_scores_unchanged": true,
+  "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+  "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "prompt_sha256": "ffdf21672c16d12394441664976928ac03a51b35d721d3925cca9be8adc58e3d",
+  "registered_checkpoint_sha256": "142fd73cd6b1b1422ccb24f1f89dc38c0fc96ca475f79dd8a91422cdae980133",
+  "reading_label": "L1's interpretation of the lyrics",
+  "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+  "reading_type": "model_interpretation",
+  "decoding": {
+    "do_sample": false,
+    "num_beams": 1,
+    "max_new_tokens": 128,
+    "torch_dtype": "float16",
+    "seed": 20261115
+  },
+  "overlap_rule": "NFKC/casefold 4-word ngrams; additionally 4 consecutive ja/ko/zh script characters with spacing/punctuation removed; block if either overlaps.",
+  "sections": [
+    {
+      "section_id": "lyric-0000",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": "bef63c09610f83de531e9fc65f0188508e4f8ae27f54875fd82806dad6ab2d02",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is somber and introspective, conveying a sense of enduring hardship and quiet resilience. The central theme explores the weight of struggle and the persistence of inner strength amid overwhelming challenges.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "5c2e58397d0ed8daaf67213c400f6486b173d5df4c8d7af217a7e8bc2c8d3a26"
+    },
+    {
+      "section_id": "lyric-0001",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "d1a4c4d7a3828fde71a9a88a40480e2e3c865ceff09311dff667b1aeaf99bed0",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a defiant resolve and unshakable confidence, blending rebellion with a sense of enduring strength. The themes explore resistance to mortality, loyalty to a select few, and the pursuit of power and presence in the face of inevitable end.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "b3b362ec62f4995d2fde7fbff72262650c040a4214fb4625c13103b78aec5d05"
+    },
+    {
+      "section_id": "lyric-0002",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "d15599ad524cd47440012e753851c4ebce54429d882656a757fb43f66b1e5439",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is defiant and cynical, portraying a sense of betrayal and resistance against manipulation. The themes revolve around isolation, the danger of loyalty in toxic environments, and the internalization of fear and vengeance.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "91250f41d6d6c99b9cb5acbc5132e443b3ba9fc3014883506fd50dfe862057c3"
+    },
+    {
+      "section_id": "lyric-0003",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "c2e03649feca64398ebd6c00f6565c9de61c2cb03324fbc96feb336d3f037b05",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is defiant and unapologetic, conveying a sense of resilience and rebellion against mortality. The central themes revolve around enduring hardship, maintaining independence, and embracing a life of action and defiance until the very end.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "91ab5fad72f6adab17a8571a4d30f8d915f3abc1eccd55f3eb1a0c2c1c9759e7"
+    },
+    {
+      "section_id": "lyric-0004",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "8a013be0d7ab347b10e9f107ecdeee7985aa61cb8c1c870e3be1b93cb94c5617",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a mix of defiant resolve and sorrow, reflecting on personal struggle and the contrast between aspiration and systemic barriers. A central theme explores the tension between individual potential and the limitations imposed by societal and economic conditions.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "7fda6641a4e20a822432aaa0b72485f9255369d59522da11d35dc5ccdd25dc57"
+    },
+    {
+      "section_id": "lyric-0005",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "c2e03649feca64398ebd6c00f6565c9de61c2cb03324fbc96feb336d3f037b05",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is defiant and unapologetic, conveying a sense of resilience and rebellion against mortality. The central themes revolve around enduring hardship, maintaining independence, and embracing a life of action and defiance until the very end.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "91ab5fad72f6adab17a8571a4d30f8d915f3abc1eccd55f3eb1a0c2c1c9759e7"
+    },
+    {
+      "section_id": "span-0000",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    }
+  ]
+}

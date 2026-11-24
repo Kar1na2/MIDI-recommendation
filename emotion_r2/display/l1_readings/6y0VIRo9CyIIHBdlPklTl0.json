@@ -1,0 +1,199 @@
+{
+  "schema_version": 1,
+  "track_id": "6y0VIRo9CyIIHBdlPklTl0",
+  "cohort": "random",
+  "display_only": true,
+  "registered_scores_unchanged": true,
+  "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+  "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "prompt_sha256": "ffdf21672c16d12394441664976928ac03a51b35d721d3925cca9be8adc58e3d",
+  "registered_checkpoint_sha256": "e0e8eae52f6b934b5cf1548cd937d828e8fd6595ab5e2dc8d39c1783bee72725",
+  "reading_label": "L1's interpretation of the lyrics",
+  "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+  "reading_type": "model_interpretation",
+  "decoding": {
+    "do_sample": false,
+    "num_beams": 1,
+    "max_new_tokens": 128,
+    "torch_dtype": "float16",
+    "seed": 20261115
+  },
+  "overlap_rule": "NFKC/casefold 4-word ngrams; additionally 4 consecutive ja/ko/zh script characters with spacing/punctuation removed; block if either overlaps.",
+  "sections": [
+    {
+      "section_id": "lyric-0000",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "807baa48d283cd10885eef5f43e565dc642380504ef4d2782635eb0600c329bb",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys internal conflict and emotional complexity, marked by a tension between desire for connection and a sense of instability. The themes explore duality in personality, the struggle for recognition, and the paradox of well-intentioned actions that still provoke frustration.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "4493bb3b777593215c7ca2c223c7201653f43701a7d32458c5be1f5f4678ea39"
+    },
+    {
+      "section_id": "lyric-0001",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "98a868c7f938a31f5f4222ebe0de163c0e4a14e236e47f9083c10bc9e4fa812a",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests a calculated manipulation rooted in emotional conflict, where power is derived from provoking resistance. The theme explores the paradox of attraction in spite of hostility, highlighting a dynamic where rejection is both a tool and a source of continued connection.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "fbb0c96998835e95668e9a94af10f205565cbca46c6e50db24f3735530651086"
+    },
+    {
+      "section_id": "lyric-0002",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "d9b5f63f62ba161345ee9bc861cba46924d9f4cd946122844d016da3cb6dee1c",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests a performative intimacy, where emotional vulnerability is staged to manage underlying tension. The themes revolve around controlled emotion, mutual psychological dependence, and the use of fantasy as a shield against insecurity.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "6d5b999e153c297d91d37bbfe33e8fa2ea4a6c892d8330461530bda3918f1545"
+    },
+    {
+      "section_id": "lyric-0003",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "04ed5d6c97e66904a34b6fc5ad1646a2a55990a5b36106c09a932ca8a99e9954",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of calculated manipulation and emotional dominance, emphasizing a dynamic where power is derived from provoking resistance. The theme explores the paradox of attraction in conflict, where rejection and hostility are intertwined with continued dependence.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "a40754a804ef913d1e21ad94a4213fae2731903417999f71607a84f458fdf843"
+    },
+    {
+      "section_id": "lyric-0004",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": "eb63a3a855f15bb3776d7064375b7ac8906403149caea97af51874de7f6ed47d",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is defiant and self-assertive, emphasizing a deliberate embrace of a negative role. The theme explores identity and choice, suggesting a conscious decision to take on a harmful or antagonistic position.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "c60944bfa0127f88d0433704efaa6f6346db76cc70905b12e3324f457ac5b3cd"
+    },
+    {
+      "section_id": "lyric-0005",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "26e9bdcc6b7e36d57fee80b238986c2eebed60694ee9b1bc76f5009a62ab340c",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests a complex blend of longing and defiance, where emotional pain is intertwined with desire. The themes explore the paradox of love as both destructive and alluring, emphasizing a relationship built on tension, risk, and mutual attraction despite its harm.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "6b2c6ef2fcb1166fa51c1d9e851ec035e555d642aded3dc2650a5e482bc99090"
+    },
+    {
+      "section_id": "lyric-0006",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "04ed5d6c97e66904a34b6fc5ad1646a2a55990a5b36106c09a932ca8a99e9954",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of calculated manipulation and emotional dominance, emphasizing a dynamic where power is derived from provoking resistance. The theme explores the paradox of attraction in conflict, where rejection and hostility are intertwined with continued dependence.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "a40754a804ef913d1e21ad94a4213fae2731903417999f71607a84f458fdf843"
+    },
+    {
+      "section_id": "lyric-0007",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": "eb63a3a855f15bb3776d7064375b7ac8906403149caea97af51874de7f6ed47d",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is defiant and self-assertive, emphasizing a deliberate embrace of a negative role. The theme explores identity and choice, suggesting a conscious decision to take on a harmful or antagonistic position.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "c60944bfa0127f88d0433704efaa6f6346db76cc70905b12e3324f457ac5b3cd"
+    },
+    {
+      "section_id": "span-0000",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    },
+    {
+      "section_id": "span-0005",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    },
+    {
+      "section_id": "span-0008",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    }
+  ]
+}

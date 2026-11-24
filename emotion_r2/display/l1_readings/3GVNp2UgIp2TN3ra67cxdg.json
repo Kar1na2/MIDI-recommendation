@@ -1,0 +1,199 @@
+{
+  "schema_version": 1,
+  "track_id": "3GVNp2UgIp2TN3ra67cxdg",
+  "cohort": "pilot",
+  "display_only": true,
+  "registered_scores_unchanged": true,
+  "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+  "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "prompt_sha256": "ffdf21672c16d12394441664976928ac03a51b35d721d3925cca9be8adc58e3d",
+  "registered_checkpoint_sha256": "9b998e7a9586dea4a5daba6e3e8327dfe218045dd500f9f7832c8a71224f4aa0",
+  "reading_label": "L1's interpretation of the lyrics",
+  "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+  "reading_type": "model_interpretation",
+  "decoding": {
+    "do_sample": false,
+    "num_beams": 1,
+    "max_new_tokens": 128,
+    "torch_dtype": "float16",
+    "seed": 20261115
+  },
+  "overlap_rule": "NFKC/casefold 4-word ngrams; additionally 4 consecutive ja/ko/zh script characters with spacing/punctuation removed; block if either overlaps.",
+  "sections": [
+    {
+      "section_id": "lyric-0000",
+      "set": "primary",
+      "language": "ja",
+      "text_sha256": "db22664ee72553f55d8274a185d99bea7067be1b086e68bc38a76f1d49673582",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of lingering unrest and internal conflict, juxtaposed with a dreamlike, fragmented atmosphere. The themes explore the struggle between desire and self, set against a backdrop of emotional ambiguity and unresolved tension.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "69194a07af65620faebefaf942d32af796639dec4c9feea2925a43106958dd89"
+    },
+    {
+      "section_id": "lyric-0001",
+      "set": "primary",
+      "language": "ja",
+      "text_sha256": "c2e536c239a8faf200878b5c7f5a8c303e44c86606ba0480c490c6c4a76b2d36",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of quiet melancholy and disillusionment, underscored by a fleeting, almost dreamlike awareness of lost moments. The themes explore the inevitability of missteps in relationships and the hollowness of clinging to idealized pasts.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "c63d556f8063d19f1069fe4ea86667ea8e9a6fcdcb8218d756dcd8da98ef76b7"
+    },
+    {
+      "section_id": "lyric-0002",
+      "set": "primary",
+      "language": "ja",
+      "text_sha256": "14432ea9235e756c813e24b1da15dfb7fe4298ea481d43819cab2445a712fd38",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a reflective, almost resigned acceptance of personal freedom and cyclical patterns in life, while the themes explore the tension between autonomy and external expectations, and the allure of creative expression within a predetermined or recurring framework.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "f72fa3fb49a83e9d9eee146301f2c11a902da7e31e0ff87d9a046e400b9254f4"
+    },
+    {
+      "section_id": "lyric-0003",
+      "set": "primary",
+      "language": "ja",
+      "text_sha256": "99711105220f2320a51af866f72bdd64abbf7e7a91d80dd9a016a10d34b9212c",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of detached resignation, blending casual dismissal with a growing inevitability. The themes explore the passage of time and the acceptance of irreversible change.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "bab4f092d85a1c874230a10800e8acb37a8be3432de8c359ed24342b1d6f0ef4"
+    },
+    {
+      "section_id": "lyric-0004",
+      "set": "primary",
+      "language": "ja",
+      "text_sha256": "c2e536c239a8faf200878b5c7f5a8c303e44c86606ba0480c490c6c4a76b2d36",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of quiet melancholy and disillusionment, underscored by a fleeting, almost dreamlike awareness of lost moments. The themes explore the inevitability of missteps in relationships and the hollowness of clinging to idealized pasts.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "c63d556f8063d19f1069fe4ea86667ea8e9a6fcdcb8218d756dcd8da98ef76b7"
+    },
+    {
+      "section_id": "lyric-0005",
+      "set": "primary",
+      "language": "ja",
+      "text_sha256": "3b654e6447ec7a13383b8c2a58aee410443f6396fdac1c12b42bc7d4f663b85a",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of cyclical destruction and inevitable transformation, blending primal instincts with a dark, mechanical repetition. The themes explore consumption, decay, and the futility of resistance in the face of an unstoppable, self-perpetuating force.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "7327377e0390dfe6a6e079e1e8aa73824d7be7665ae24cd501e82ec856591157"
+    },
+    {
+      "section_id": "lyric-0006",
+      "set": "primary",
+      "language": "ja",
+      "text_sha256": "6afec720552f6977ecf72976333a51bf5d070ad53b009f84b6fb6ca70127b1bf",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a bittersweet melancholy, blending resignation with lingering emotional presence. The themes explore the persistence of unresolved connection and the quiet, intimate ways relationships continue to shape identity even after separation.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "5fd528caf1d9e3f7ea284d083faf2d726659f7fccbfe80ccbb789b9109155825"
+    },
+    {
+      "section_id": "lyric-0007",
+      "set": "primary",
+      "language": "ja",
+      "text_sha256": "c2e536c239a8faf200878b5c7f5a8c303e44c86606ba0480c490c6c4a76b2d36",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of quiet melancholy and disillusionment, underscored by a fleeting, almost dreamlike awareness of lost moments. The themes explore the inevitability of missteps in relationships and the hollowness of clinging to idealized pasts.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "c63d556f8063d19f1069fe4ea86667ea8e9a6fcdcb8218d756dcd8da98ef76b7"
+    },
+    {
+      "section_id": "span-0000",
+      "set": "secondary",
+      "language": "ja",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    },
+    {
+      "section_id": "span-0004",
+      "set": "secondary",
+      "language": "ja",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    },
+    {
+      "section_id": "span-0006",
+      "set": "secondary",
+      "language": "ja",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    }
+  ]
+}

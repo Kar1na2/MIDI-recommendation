@@ -1,0 +1,173 @@
+{
+  "schema_version": 1,
+  "track_id": "60cYr5uuMoxvyuIx45rGEW",
+  "cohort": "random",
+  "display_only": true,
+  "registered_scores_unchanged": true,
+  "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+  "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "prompt_sha256": "ffdf21672c16d12394441664976928ac03a51b35d721d3925cca9be8adc58e3d",
+  "registered_checkpoint_sha256": "628471944489036294502e958be20363ab9b2578c7c6afba762b54422ebfc8f7",
+  "reading_label": "L1's interpretation of the lyrics",
+  "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+  "reading_type": "model_interpretation",
+  "decoding": {
+    "do_sample": false,
+    "num_beams": 1,
+    "max_new_tokens": 128,
+    "torch_dtype": "float16",
+    "seed": 20261115
+  },
+  "overlap_rule": "NFKC/casefold 4-word ngrams; additionally 4 consecutive ja/ko/zh script characters with spacing/punctuation removed; block if either overlaps.",
+  "sections": [
+    {
+      "section_id": "lyric-0000",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "53bae3fb378374fbb5e94776a5dade12476f5e29cc1284ec1c64668ad852663a",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of isolation and internal conflict, juxtaposed with sudden exposure to external pressure. The themes explore the tension between personal protection and the inevitability of confronting painful truths.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "76f574e9d2d3c041376ca97a21abd068f808074f5e47d4cad0770c95e4b33d96"
+    },
+    {
+      "section_id": "lyric-0001",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "e2b140dcf23d864cfc4d6399aae4d120f1515fbfd526510d13423d6b3c7639e2",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys intense physical and emotional urgency, marked by a raw, almost primal energy. The themes explore readiness for confrontation and the surge of instinctual reaction in moments of heightened stress.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "319ece1a18cac4fbd708b72cb9c16dda11e454b3ab9679b5285a96561a425a68"
+    },
+    {
+      "section_id": "lyric-0002",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "e9b37e1fe0685b4f0018630a096b48ecdabc7236b2f79ba12c349d60f00cb36d",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is defiant and confrontational, emphasizing resistance to aggression. The central theme revolves around the inevitability of suffering for those who attempt to harm or provoke the subject.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "b807dd0fd644ee40a06dd99ef89e2a8415a335a4cc7acd52946d64f1293fce01"
+    },
+    {
+      "section_id": "lyric-0003",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "c5584f0433dfbac63e0fd24433e03ae02d4032f186b81abe25457241795358e8",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a mix of defiance and detached acceptance, portraying a confrontation that blends physical violence with a strange, almost erotic fascination. The theme explores the tension between self-protection and inevitable entanglement in conflict, suggesting a paradox where avoidance is undermined by an internal attraction to danger.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "1206175e64f65e59a60ce2c7b8303c5aa905f0f78408318f0b0a06056ae5b71b"
+    },
+    {
+      "section_id": "lyric-0004",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "3e992150b3f74791a2ea7991d0d0488fcc9b2e9f0542578abbba5d9e186b03f8",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys intense physical and emotional agitation, marked by a raw, urgent energy. The themes explore internal conflict, suppressed rage, and a sudden eruption of defiance or confrontation.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "34a4677a12771dc42a6b6391ad361bb55f4c5182018a378ce24a601f609b6a5a"
+    },
+    {
+      "section_id": "lyric-0005",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "6ae08befa767084f1a95f34640d925b4d5c6ea0455a593a627e7d82498b2defc",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is defiant and confrontational, emphasizing resistance to aggression. The central theme revolves around the inevitability of suffering when one acts out of malice, suggesting that cruelty ultimately backfires.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "59c2f13300274ec090f8ff453eeb16748c0fcbedb83838124b2fa5d62f890b89"
+    },
+    {
+      "section_id": "lyric-0006",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "94ca3aec18f36c64ed556c8aa5086df96077b60441f5ec1c71ef36a1721da940",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of weary resignation and quiet anger, underscored by a deep awareness of cyclical pain and inherited dysfunction. The themes explore the intergenerational transmission of violence, the struggle to break free from toxic environments, and the emotional weight of living within a household marked by alcoholism and abuse.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "672f936e710242c64db5c71f5ca0b8e48fee46bc6718f9fb514f9610d62c84b3"
+    },
+    {
+      "section_id": "lyric-0007",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "e9b37e1fe0685b4f0018630a096b48ecdabc7236b2f79ba12c349d60f00cb36d",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is defiant and confrontational, emphasizing resistance to aggression. The central theme revolves around the inevitability of suffering for those who attempt to harm or provoke the subject.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "b807dd0fd644ee40a06dd99ef89e2a8415a335a4cc7acd52946d64f1293fce01"
+    },
+    {
+      "section_id": "span-0000",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    }
+  ]
+}

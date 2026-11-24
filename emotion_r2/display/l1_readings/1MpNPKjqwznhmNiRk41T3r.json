@@ -1,0 +1,258 @@
+{
+  "schema_version": 1,
+  "track_id": "1MpNPKjqwznhmNiRk41T3r",
+  "cohort": "random",
+  "display_only": true,
+  "registered_scores_unchanged": true,
+  "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+  "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "prompt_sha256": "ffdf21672c16d12394441664976928ac03a51b35d721d3925cca9be8adc58e3d",
+  "registered_checkpoint_sha256": "671a1ea8bdcbef2cb42250bf6e5c6a78717c17bfb482a6b5544cfc9765d9a216",
+  "reading_label": "L1's interpretation of the lyrics",
+  "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+  "reading_type": "model_interpretation",
+  "decoding": {
+    "do_sample": false,
+    "num_beams": 1,
+    "max_new_tokens": 128,
+    "torch_dtype": "float16",
+    "seed": 20261115
+  },
+  "overlap_rule": "NFKC/casefold 4-word ngrams; additionally 4 consecutive ja/ko/zh script characters with spacing/punctuation removed; block if either overlaps.",
+  "sections": [
+    {
+      "section_id": "lyric-0000",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "72dd7f24483985d8fe6c6550557a1ac5be933a67b449c83c137b82466962fb22",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is sugary and repetitive, suggesting a sense of allure and temptation. The theme centers on irresistible attraction and the desire to be consumed or overwhelmed by something sweet and irresistible.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "603c7a77404e6bab4ddbd2ae0f14689ebb36bae4ec71ba6e2626d8ab2cd3ef41"
+    },
+    {
+      "section_id": "lyric-0001",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "9bd028b079429c226c94f3dcfbe2e627325040eccdb22547642ae34f09abfa66",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a intense, overwhelming desire driven by physical and emotional urgency, with themes of irresistible attraction and loss of self-control in the face of passion.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "11d6cd2db42ebc7074b4e247b7cce2b4053e346d5d45668fc53e754e5fc82f92"
+    },
+    {
+      "section_id": "lyric-0002",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "6fcf47be90c3217d5107166b61cc3e83e4d83ffd69390b22e009323e7fca9340",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of magnetic attraction and youthful curiosity, blending sensuality with an almost childlike eagerness. The theme explores the irresistible pull of desire and the heightened excitement that arises from being drawn into a passionate, immersive experience.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "dc32cf0b19104cbed117363cca16f555d6758b55c2b292c61a7f1b6bee22a152"
+    },
+    {
+      "section_id": "lyric-0003",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "42e6a7d6a2b6af3cdcf3267e9c84e0493814d3003527d3908354cbdb397e1e91",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of immediate, almost physical attraction and fascination, blending sensuality with a feeling of irresistible allure. The themes explore the transformative and addictive nature of connection, where presence becomes a melting, consuming force.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "7d965820dbcaa726031111e90ab59e2804b1efe27a5ad6aa408304e3fbfc88f7"
+    },
+    {
+      "section_id": "lyric-0004",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "93e6f47266b6a5c8de09570af4d18a99595c54e73df675cf392b7b4298c864d7",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys an urgent, almost irresistible desire, emphasizing immediacy and sensory allure. The themes revolve around temptation, fleeting pleasure, and the emotional pull of something sweet and irresistible.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "f308f675bd943296a945c8daceaf88ab4befc3fbeb7f664e1b671264e5c6b8a9"
+    },
+    {
+      "section_id": "lyric-0005",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "176831015a7b72d90542b7da166f6927eb8ccee4672aee2cb118df2be17aa4a3",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys an energetic, almost restless drive, emphasizing personal expression and the desire for growth through constant exploration. The themes revolve around self-driven ambition, the pursuit of intensity in creativity, and an insatiable curiosity that fuels forward motion.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "dd21555a030b8e1ba7159fc466837f3f14ad0db6bfa22134bf10d455217873b9"
+    },
+    {
+      "section_id": "lyric-0006",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "6fcf47be90c3217d5107166b61cc3e83e4d83ffd69390b22e009323e7fca9340",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of magnetic attraction and youthful curiosity, blending sensuality with an almost childlike eagerness. The theme explores the irresistible pull of desire and the heightened excitement that arises from being drawn into a passionate, immersive experience.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "dc32cf0b19104cbed117363cca16f555d6758b55c2b292c61a7f1b6bee22a152"
+    },
+    {
+      "section_id": "lyric-0007",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "42e6a7d6a2b6af3cdcf3267e9c84e0493814d3003527d3908354cbdb397e1e91",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of immediate, almost physical attraction and fascination, blending sensuality with a feeling of irresistible allure. The themes explore the transformative and addictive nature of connection, where presence becomes a melting, consuming force.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "7d965820dbcaa726031111e90ab59e2804b1efe27a5ad6aa408304e3fbfc88f7"
+    },
+    {
+      "section_id": "lyric-0008",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "c813cd115de6a8d076586284e1448fa8ef866affd93f6d2135b0bae538d68a18",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is eager and playful, emphasizing immediate desire and sensory delight. The theme centers on the irresistible, almost addictive appeal of a person, portrayed through sweet, fleeting imagery.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "78075ac8b18ddeded03075268f73d718e828d26719eeb79acc4f966c3aff7dc7"
+    },
+    {
+      "section_id": "lyric-0009",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "6dba20fd1b600a4e7e8e40ea12fa05685d441746a9d56ce246f5c4c1d0c831b8",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a confident and intimate expression of emotional vulnerability, blending romantic idealism with a sense of personal ownership over affection. The themes explore deep emotional connection, the sweetness of love, and the willingness to embrace it fully.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "7f8d0f801a0de71d9073ae2d58eeab409bdf015ddbba0892047b9aef05c05dcd"
+    },
+    {
+      "section_id": "lyric-0010",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "c813cd115de6a8d076586284e1448fa8ef866affd93f6d2135b0bae538d68a18",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is eager and playful, emphasizing immediate desire and sensory delight. The theme centers on the irresistible, almost addictive appeal of a person, portrayed through sweet, fleeting imagery.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "78075ac8b18ddeded03075268f73d718e828d26719eeb79acc4f966c3aff7dc7"
+    },
+    {
+      "section_id": "lyric-0011",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "42e6a7d6a2b6af3cdcf3267e9c84e0493814d3003527d3908354cbdb397e1e91",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of immediate, almost physical attraction and fascination, blending sensuality with a feeling of irresistible allure. The themes explore the transformative and addictive nature of connection, where presence becomes a melting, consuming force.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "7d965820dbcaa726031111e90ab59e2804b1efe27a5ad6aa408304e3fbfc88f7"
+    },
+    {
+      "section_id": "lyric-0012",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "2e70151dc3f7d42acbfc46353f09a7502b021aabedbbbc1b572f27f69611fe76",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is light and whimsical, suggesting a sense of sweetness and fleeting beauty. The theme explores the idea of something transient yet deeply appealing, evoking a sense of innocence and sensory delight.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "c55fdc4c174a1d8421325025373e356d27d842939e4da2b464c9b19d4c0861f0"
+    },
+    {
+      "section_id": "span-0000",
+      "set": "secondary",
+      "language": "uncertain",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    }
+  ]
+}

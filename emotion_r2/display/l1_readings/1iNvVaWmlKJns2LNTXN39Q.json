@@ -1,0 +1,186 @@
+{
+  "schema_version": 1,
+  "track_id": "1iNvVaWmlKJns2LNTXN39Q",
+  "cohort": "random",
+  "display_only": true,
+  "registered_scores_unchanged": true,
+  "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+  "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "prompt_sha256": "ffdf21672c16d12394441664976928ac03a51b35d721d3925cca9be8adc58e3d",
+  "registered_checkpoint_sha256": "6d56af3d4c827c107ea993aafeddbed72953f366c2a53cfaf57809a02185c19a",
+  "reading_label": "L1's interpretation of the lyrics",
+  "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+  "reading_type": "model_interpretation",
+  "decoding": {
+    "do_sample": false,
+    "num_beams": 1,
+    "max_new_tokens": 128,
+    "torch_dtype": "float16",
+    "seed": 20261115
+  },
+  "overlap_rule": "NFKC/casefold 4-word ngrams; additionally 4 consecutive ja/ko/zh script characters with spacing/punctuation removed; block if either overlaps.",
+  "sections": [
+    {
+      "section_id": "lyric-0000",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "81eafd838d5e2324f99bb2639431ba90559afd6e1f64658a26ef149cbbfd8c55",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests a persistent, forward-moving momentum, emphasizing growth and collective strength through daily effort. The themes revolve around continuous improvement and the power of unity in achieving a higher state of being.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "6b509346379441323c66548a6cfc74d1d9d17f353c7adf2d9a156037bdb25d03"
+    },
+    {
+      "section_id": "lyric-0001",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "c8cbb393b4b813910fd096db47c842b00e03341e9897e7c8d069053ddc2d43e4",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is confident and assertive, emphasizing dominance and self-awareness. The themes revolve around power, allure, and the deliberate projection of strength in a competitive environment.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "6fbb561d101df77f81d47ef972ebebca2a4a8b5cbba223169410bb12b94c2a5e"
+    },
+    {
+      "section_id": "lyric-0002",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "81eafd838d5e2324f99bb2639431ba90559afd6e1f64658a26ef149cbbfd8c55",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests a persistent, forward-moving momentum, emphasizing growth and collective strength through daily effort. The themes revolve around continuous improvement and the power of unity in achieving a higher state of being.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "6b509346379441323c66548a6cfc74d1d9d17f353c7adf2d9a156037bdb25d03"
+    },
+    {
+      "section_id": "lyric-0003",
+      "set": "secondary",
+      "language": "uncertain",
+      "text_sha256": "111cdc6f73e8a353c660d5b5e7a163b7e90be3f7787058c84fdc3d72acc9d442",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of energetic, almost surreal transformation and technological integration, blending identity shifts with a playful, futuristic atmosphere. The themes explore the fusion of individuality with digital or mechanical forces, suggesting a world where personal roles are redefined through advanced or alien systems.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "edefcb4752b2711b2a86e87b681e3a2cfd6e78d6afb58046d5e4ac4304b4f37d"
+    },
+    {
+      "section_id": "lyric-0004",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "6efafd374846033f39800740553e4950647313ab95b4e7e887578784c75ea4f8",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a resolute determination and unwavering commitment, emphasizing perseverance through adversity. The central theme explores the inevitability of personal growth and the strength derived from standing firm in the face of challenges.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "842fb1d917cd400d0cbb58164978459e33af6789a15717d3674b2f0dde9101e4"
+    },
+    {
+      "section_id": "lyric-0005",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "6735feaa407fb84f696fb839b225104780573b4de07121ef2b60e6d479ac5d4e",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests a persistent, upward progression toward improvement and unity, emphasizing daily growth and collective strength. The themes revolve around continuous development, inner alignment, and the power of interconnectedness in achieving a higher state of being.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "e39d436128b1adc88ed6420681ac9400153d90360ff500dd6a9abb067fb9bcef"
+    },
+    {
+      "section_id": "lyric-0006",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "5cda48380de69cfa884e0db71626eded9dbc3d2e28e912e2be06ed1989234dce",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is unified and celebratory, emphasizing collective identity and shared participation. The themes revolve around unity, empowerment, and the affirmation of a shared group spirit.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "9e08ee90b05d4fb1e914ff349e1bc6fb21ac4bc6c58e9895be807feaa89bf7f0"
+    },
+    {
+      "section_id": "lyric-0007",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "81eafd838d5e2324f99bb2639431ba90559afd6e1f64658a26ef149cbbfd8c55",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests a persistent, forward-moving momentum, emphasizing growth and collective strength through daily effort. The themes revolve around continuous improvement and the power of unity in achieving a higher state of being.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "6b509346379441323c66548a6cfc74d1d9d17f353c7adf2d9a156037bdb25d03"
+    },
+    {
+      "section_id": "span-0000",
+      "set": "secondary",
+      "language": "uncertain",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    },
+    {
+      "section_id": "span-0004",
+      "set": "secondary",
+      "language": "uncertain",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    }
+  ]
+}

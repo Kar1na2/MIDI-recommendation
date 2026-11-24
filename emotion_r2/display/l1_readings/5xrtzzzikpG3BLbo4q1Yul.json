@@ -1,0 +1,255 @@
+{
+  "schema_version": 1,
+  "track_id": "5xrtzzzikpG3BLbo4q1Yul",
+  "cohort": "random",
+  "display_only": true,
+  "registered_scores_unchanged": true,
+  "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+  "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "prompt_sha256": "ffdf21672c16d12394441664976928ac03a51b35d721d3925cca9be8adc58e3d",
+  "registered_checkpoint_sha256": "cf7685b0eefdcabd72e524b7927c883f43022449478ab766b05e981e653f6b0b",
+  "reading_label": "L1's interpretation of the lyrics",
+  "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+  "reading_type": "model_interpretation",
+  "decoding": {
+    "do_sample": false,
+    "num_beams": 1,
+    "max_new_tokens": 128,
+    "torch_dtype": "float16",
+    "seed": 20261115
+  },
+  "overlap_rule": "NFKC/casefold 4-word ngrams; additionally 4 consecutive ja/ko/zh script characters with spacing/punctuation removed; block if either overlaps.",
+  "sections": [
+    {
+      "section_id": "lyric-0000",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "43477afd5c61024e30ec4caadfd3f60751a8f5a2f0b1c201dfba5b5d69ced141",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a quiet, restrained sorrow, tinged with a sense of hidden longing and emotional containment. The theme explores the internal struggle of preserving deep feelings beneath the surface, willing to endure pain in order to keep them sealed away.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "4b6cbf69e8bb2088744fdf89c7e7516a3647b398e3937acb01416b8cdb95a328"
+    },
+    {
+      "section_id": "lyric-0001",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "c0ad25dd329fab9c1f9dd66b95191ba76918cb0f757a8b073626b94e1d9271d8",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a bittersweet resignation, blending emotional intimacy with the inevitability of parting. The themes revolve around the fragility of connection and the idea that endings can be both tender and definitive.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "97ed7aab6d4123002118ea677f7ea8486175e0b275cf6dbd3fb86b67a462aa9c"
+    },
+    {
+      "section_id": "lyric-0002",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "60a14b4370294e373f8c5d589d97c0879a9eb4600dd44a7ce014d9f78fc15168",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a bittersweet melancholy intertwined with nostalgic joy, emphasizing the beauty and finality of fleeting moments. The themes revolve around the passage of time, the impermanence of beauty, and the emotional resonance of endings.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "b7eed2505ac341e04bc9ddb3fff5bc8745ba88bf6d6f156a65c3fcc0cb3a46ae"
+    },
+    {
+      "section_id": "lyric-0003",
+      "set": "secondary",
+      "language": "ko",
+      "text_sha256": "e7c43ad473e1845fd6f327541c0854c7ccf6e0d09edb58be2f64ccf6d2b9a332",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests a fleeting, seasonal affection, emphasizing impermanence and the influence of natural cycles on emotional bonds. The theme centers on the idea that love is temporary and tied to specific times, reflecting a sense of vulnerability and dependence on external rhythms.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "9bab904363ee19ab80f2aa8e0dae93023b8a35390b4a3e788c9b42f8cb595b98"
+    },
+    {
+      "section_id": "lyric-0004",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "f0d0000c006305dad308fa6e7a653af54e179640d8f9e804651d7a2b25c5f49e",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a light, reflective joy, emphasizing a sense of harmony and personal contentment with the present moment. The themes revolve around natural beauty, emotional ease, and the quiet satisfaction found in simple, everyday experiences.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "2f686ca4b55de25cce0bfdd2c41aaa65d30ec3d40e2c37aaab7c8c2187ebc40c"
+    },
+    {
+      "section_id": "lyric-0005",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "8b8e7c577ca0e7945475e6ea03905040dee99170832a132c585bed690b3640d2",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone evokes a bittersweet nostalgia, blending longing with an almost idealized memory of affection. The themes explore the paradox of love as both tender and fleeting, suggesting that emotional connections can be beautiful even in their dissolution.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "d138f8637de2e2e63142f2e90e06a0e138d7e3361f9840f20da8e3dacc338805"
+    },
+    {
+      "section_id": "lyric-0006",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "60a14b4370294e373f8c5d589d97c0879a9eb4600dd44a7ce014d9f78fc15168",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a bittersweet melancholy intertwined with nostalgic joy, emphasizing the beauty and finality of fleeting moments. The themes revolve around the passage of time, the impermanence of beauty, and the emotional resonance of endings.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "b7eed2505ac341e04bc9ddb3fff5bc8745ba88bf6d6f156a65c3fcc0cb3a46ae"
+    },
+    {
+      "section_id": "lyric-0007",
+      "set": "secondary",
+      "language": "ko",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    },
+    {
+      "section_id": "lyric-0008",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "72c72279525a97f72b160f1936a4eb3c4d8890322082ea611e41fd893f7da921",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone evokes a quiet, reflective melancholy, suggesting a sense of temporal distance and the inevitability of forgetting. The themes center on memory, impermanence, and the fragile nature of present moments within a broader timeline of time and change.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "40d9ce38f714c577c8b52f9326028593c56cc86ee849722cd6ee96056d8a5439"
+    },
+    {
+      "section_id": "lyric-0009",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "ecc3379497d268f7e22b5baead580ba98834ed84045187f4f1a8b81af81c1706",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a bittersweet melancholy intertwined with nostalgic joy, emphasizing the emotional weight of parting and the lingering warmth of shared memories. The themes revolve around the passage of time, the inevitability of endings, and the enduring emotional resonance of fleeting moments.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "e1c16cebaafd6fefff6d5b7c062e39c8e98e8e249fa3e144fcda5e8e61531133"
+    },
+    {
+      "section_id": "lyric-0010",
+      "set": "secondary",
+      "language": "ko",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    },
+    {
+      "section_id": "span-0000",
+      "set": "secondary",
+      "language": "ko",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    },
+    {
+      "section_id": "span-0004",
+      "set": "secondary",
+      "language": "ko",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    },
+    {
+      "section_id": "span-0008",
+      "set": "secondary",
+      "language": "ko",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    },
+    {
+      "section_id": "span-0011",
+      "set": "secondary",
+      "language": "ko",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    }
+  ]
+}

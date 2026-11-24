@@ -1,0 +1,88 @@
+{
+  "schema_version": 1,
+  "track_id": "2D1hlMwWWXpkc3CZJ5U351",
+  "cohort": "random",
+  "display_only": true,
+  "registered_scores_unchanged": true,
+  "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+  "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "prompt_sha256": "ffdf21672c16d12394441664976928ac03a51b35d721d3925cca9be8adc58e3d",
+  "registered_checkpoint_sha256": "6d823019c46a46cfc47bbd9ac13bd927e6444c4b71f206e11f4db25b5393ace5",
+  "reading_label": "L1's interpretation of the lyrics",
+  "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+  "reading_type": "model_interpretation",
+  "decoding": {
+    "do_sample": false,
+    "num_beams": 1,
+    "max_new_tokens": 128,
+    "torch_dtype": "float16",
+    "seed": 20261115
+  },
+  "overlap_rule": "NFKC/casefold 4-word ngrams; additionally 4 consecutive ja/ko/zh script characters with spacing/punctuation removed; block if either overlaps.",
+  "sections": [
+    {
+      "section_id": "lyric-0000",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "df76fc109322093ca4eb8be37f24825e22ce00cfc5bd60748c51b2f0fa0f04e6",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is defiant and assertive, emphasizing self-reliance and resistance to external judgment. The central theme revolves around reclaiming identity and asserting strength in the face of misconceptions or stereotypes.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "4a1fea9e8c9ad235aec44ffe76e3c8767bfa486a45bf4b9c126272cfa8f1200e"
+    },
+    {
+      "section_id": "lyric-0001",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "a9f6ce240f8c6f13f40bdfbca0099d1b9736cbb71fa3231419e947e040deb5c2",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is confident and assertive, emphasizing dominance and self-awareness in a social or romantic context. The themes revolve around materialism, performance, and the dynamics of power and attraction in interpersonal relationships.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "9d36876b30fe8ce9f73706494818beb1024c14ed46d3a64cd2b03767abaf7e7c"
+    },
+    {
+      "section_id": "lyric-0002",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "35c6365081b21db632b0f520b93972500c15b119eeba7f887b1821474cbb5635",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone presents a defiant, self-assured assertion of power and independence, emphasizing material success and control over personal and financial relationships. The themes revolve around the illusion of wealth and status, the performance of masculinity and dominance, and the rejection of superficial appearances in favor of perceived authenticity and strength.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "bca5f36bcd5efa3ee9b5cc89aaec111f5efaf35645d7385a9b06429f0324b960"
+    },
+    {
+      "section_id": "span-0000",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    }
+  ]
+}

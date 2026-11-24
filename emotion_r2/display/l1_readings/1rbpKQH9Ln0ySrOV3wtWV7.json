@@ -1,0 +1,169 @@
+{
+  "schema_version": 1,
+  "track_id": "1rbpKQH9Ln0ySrOV3wtWV7",
+  "cohort": "random",
+  "display_only": true,
+  "registered_scores_unchanged": true,
+  "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+  "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "prompt_sha256": "ffdf21672c16d12394441664976928ac03a51b35d721d3925cca9be8adc58e3d",
+  "registered_checkpoint_sha256": "5d86d08cabac43d59a29bf34a7e68ed8168b70b61dddc1c085ca34aadb1204bb",
+  "reading_label": "L1's interpretation of the lyrics",
+  "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+  "reading_type": "model_interpretation",
+  "decoding": {
+    "do_sample": false,
+    "num_beams": 1,
+    "max_new_tokens": 128,
+    "torch_dtype": "float16",
+    "seed": 20261115
+  },
+  "overlap_rule": "NFKC/casefold 4-word ngrams; additionally 4 consecutive ja/ko/zh script characters with spacing/punctuation removed; block if either overlaps.",
+  "sections": [
+    {
+      "section_id": "lyric-0000",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": "81866616313184b702111ebac77b654e30c8a17d4994f394f57bc8570e6eef51",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of quiet resignation and self-awareness amid societal expectations, while the themes explore the tension between personal timing and external validation.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "46e7578379619f8c5bad8e75b133cd7b6f658ccf9e593e82fb68636c2ed6ad6f"
+    },
+    {
+      "section_id": "lyric-0001",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "d130b839ea63e9efd463f650b9408e1a5446531747777e697bc65558f2ad5a6c",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of quiet disillusionment and longing, underscored by a contrast between visible success and personal unfulfillment. A central theme explores the disconnect between societal appearances and individual aspirations, highlighting a yearning for recognition and achievement beyond peer comparisons.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "ee39d15923a349e897f63bef073a7a97d0c36a7f855472571ec4f60a1929d1e3"
+    },
+    {
+      "section_id": "lyric-0002",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "245fd710827f6ec566b879c44e90033d96887f160979c1270187aceafb731929",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of quiet resignation and subtle self-doubt, tinged with a quiet awareness of societal expectations. The themes explore the tension between personal timing and external validation, suggesting a struggle with belonging and the pressure to achieve milestones.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "1a7cb739970afd471d1925752e01cfa7887ae5c1e03c31a2fb62b721d7f2b4fd"
+    },
+    {
+      "section_id": "lyric-0003",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "551ec95251ff5c0216648d6ecc7627f2791a7bd5630b1a0a4f4782a889566a03",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of disillusionment and irony, highlighting the disparity between perceived success and actual achievement. The themes explore societal pressures, the illusion of validation, and the struggle for individual identity in a uniformized world.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "d024e0acb7e0c99366bbe079c9255155c41f784016c6b6e0a01430beef9eb4aa"
+    },
+    {
+      "section_id": "lyric-0004",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "245fd710827f6ec566b879c44e90033d96887f160979c1270187aceafb731929",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of quiet resignation and subtle self-doubt, tinged with a quiet awareness of societal expectations. The themes explore the tension between personal timing and external validation, suggesting a struggle with belonging and the pressure to achieve milestones.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "1a7cb739970afd471d1925752e01cfa7887ae5c1e03c31a2fb62b721d7f2b4fd"
+    },
+    {
+      "section_id": "lyric-0005",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "562e99fd17455152c7d732c4d494277c03dbd284879beff56b5009f6c0943bd7",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests a weary skepticism toward urgency and societal expectations, questioning the underlying motivations behind hurried actions. The recurring theme centers on the futility or lack of meaning in pursuing haste or immediate outcomes.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "6180708e8282bd9af6b26f8fcbb7bc8cd959c6db50824970366dfb34c8d78bea"
+    },
+    {
+      "section_id": "lyric-0006",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "fdd8aa649fe81ecaa11e10cc676d68f004cd4018143d7ea63e0813486af703bf",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests a sense of bewilderment and skepticism toward societal urgency, questioning the underlying motivations behind hurried actions. The theme explores the futility or emptiness of pursuing speed and immediacy in life.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "9ce3819d6f045fec6329acc27329f0932e2b784744a71df9e76ed2b672bc7118"
+    },
+    {
+      "section_id": "span-0000",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    },
+    {
+      "section_id": "span-0005",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    }
+  ]
+}

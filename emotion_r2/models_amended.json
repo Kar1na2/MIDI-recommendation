@@ -1,0 +1,1157 @@
+{
+  "schema_version": 2,
+  "round": 2,
+  "models": [
+    {
+      "id": "clapAI/roberta-base-multilingual-sentiment",
+      "revision": "5986405bd6f2fbaf98b2a5568fdbc02d74546694",
+      "files": [
+        {
+          "path": "all_results.json",
+          "sha256": "934bb6ab2ab46eb581c26cea2d992bf973ed61c82ca8690361f396a82334d251",
+          "size": 677
+        },
+        {
+          "path": "config.json",
+          "sha256": "d46970508c8ee7a75451d9d669a2178e1f0af13fcf7fb540b32b4d7a77ba7c77",
+          "size": 944
+        },
+        {
+          "path": "eval_results.json",
+          "sha256": "0ffb3c1f7badc1f8422040d58c6a4e3da6a64980a874f1f86793ac6dc0cd11bd",
+          "size": 274
+        },
+        {
+          "path": "model.safetensors",
+          "sha256": "01234f0e63a987c7bd768b5eb4a047343844de0414b14fa4f6625f88698c7771",
+          "size": 556116054
+        },
+        {
+          "path": "special_tokens_map.json",
+          "sha256": "06e405a36dfe4b9604f484f6a1e619af1a7f7d09e34a8555eb0b77b66318067f",
+          "size": 280
+        },
+        {
+          "path": "test_results.json",
+          "sha256": "68a6a154a9d35ef0ff39b5c01302dd2c63229e3b4c20093ed8b786f432843af2",
+          "size": 257
+        },
+        {
+          "path": "tokenizer.json",
+          "sha256": "3a56def25aa40facc030ea8b0b87f3688e4b3c39eb8b45d5702b3a1300fe2a20",
+          "size": 17082734
+        },
+        {
+          "path": "tokenizer_config.json",
+          "sha256": "6fad4d6385e29b05abc467af4707771008621f3671ae590e8549df22aeacb962",
+          "size": 1271
+        },
+        {
+          "path": "train_results.json",
+          "sha256": "20566276c5f36c467688826a576fd3e5855f584a67c5df02dd01f35c12fd42c0",
+          "size": 168
+        },
+        {
+          "path": "trainer_state.json",
+          "sha256": "4309ce63a0ffc52a0038dc4b64a6a812d6fb82d3e4600f499512a74ef2f1c447",
+          "size": 537065
+        }
+      ],
+      "channel": "words",
+      "role": "T1",
+      "license": "Apache-2.0",
+      "noncommercial": false,
+      "languages": [
+        "en",
+        "ja",
+        "ko",
+        "zh",
+        "ar",
+        "de",
+        "es",
+        "fr",
+        "hi",
+        "id",
+        "it",
+        "ms",
+        "pt",
+        "ru",
+        "tr",
+        "vi"
+      ],
+      "coverage_note": "Model card reports 16+ languages and training on mixed-source review and sentiment datasets; lyric-domain validity is unverified.",
+      "card": "https://huggingface.co/clapAI/roberta-base-multilingual-sentiment",
+      "training_data": "https://huggingface.co/datasets/clapAI/MultiLingualSentiment",
+      "weight": "model.safetensors",
+      "weight_sha256": "01234f0e63a987c7bd768b5eb4a047343844de0414b14fa4f6625f88698c7771",
+      "round": 1,
+      "carried_from_round1": true,
+      "trust_eligible": true
+    },
+    {
+      "id": "intfloat/multilingual-e5-base",
+      "revision": "d128750597153bb5987e10b1c3493a34e5a4502a",
+      "files": [
+        {
+          "path": "1_Pooling/config.json",
+          "sha256": "f586ab6c734af7b8d14d898bfa7faa886f23b46f86dd1730514309893af13d75",
+          "size": 200
+        },
+        {
+          "path": "config.json",
+          "sha256": "9dab198f24c8c0879e481cf7822005d5ecbceedbacb390ffafa594e28d31bac4",
+          "size": 694
+        },
+        {
+          "path": "model.safetensors",
+          "sha256": "a18a44fad1d0b46ded15928144138cff1135d5cc8233bdd90be5f18822de09a7",
+          "size": 1112201288
+        },
+        {
+          "path": "modules.json",
+          "sha256": "c6e29747481e8b5dd2b58401966aeac910de39092f90cda9a704b1545f902b04",
+          "size": 387
+        },
+        {
+          "path": "sentence_bert_config.json",
+          "sha256": "948201d8329907aae938fa62f9ceeed53f5694dacc2b87b9f3b78b37ee986529",
+          "size": 57
+        },
+        {
+          "path": "sentencepiece.bpe.model",
+          "sha256": "cfc8146abe2a0488e9e2a0c56de7952f7c11ab059eca145a0a727afce0db2865",
+          "size": 5069051
+        },
+        {
+          "path": "special_tokens_map.json",
+          "sha256": "06e405a36dfe4b9604f484f6a1e619af1a7f7d09e34a8555eb0b77b66318067f",
+          "size": 280
+        },
+        {
+          "path": "tokenizer.json",
+          "sha256": "62c24cdc13d4c9952d63718d6c9fa4c287974249e16b7ade6d5a85e7bbb75626",
+          "size": 17082660
+        },
+        {
+          "path": "tokenizer_config.json",
+          "sha256": "efb5c0d09722e5fe59a462cd2a9976ee216d55b037597d997cd3fe833216da15",
+          "size": 418
+        }
+      ],
+      "channel": "words",
+      "role": "T2",
+      "license": "MIT",
+      "noncommercial": false,
+      "languages": [
+        "en",
+        "ja",
+        "ko",
+        "zh"
+      ],
+      "coverage_note": "Model card reports XLM-R coverage of 100 languages, with lower-resource degradation possible; not trained as an emotion classifier.",
+      "card": "https://huggingface.co/intfloat/multilingual-e5-base",
+      "weight": "model.safetensors",
+      "weight_sha256": "a18a44fad1d0b46ded15928144138cff1135d5cc8233bdd90be5f18822de09a7",
+      "round": 1,
+      "carried_from_round1": true,
+      "trust_eligible": false,
+      "trust_note": "Kept for reference only. Excluded from round-2 trust decisions for words valence; its e5 arousal anchors remain reported as low-confidence."
+    },
+    {
+      "id": "laion/clap-htsat-unfused",
+      "revision": "8fa0f1c6d0433df6e97c127f64b2a1d6c0dcda8a",
+      "files": [
+        {
+          "path": "config.json",
+          "sha256": "9efb9557bc804f2ca6e394486af2e45dfed0b18554909735a99c6220b84e4288",
+          "size": 5390
+        },
+        {
+          "path": "merges.txt",
+          "sha256": "fe36cab26d4f4421ed725e10a2e9ddb7f799449c603a96e7f29b5a3c82a95862",
+          "size": 456356
+        },
+        {
+          "path": "preprocessor_config.json",
+          "sha256": "9739f58296aa6f9ac18008fd0150fb2649bc554985fbde86d0a4041c882ac753",
+          "size": 541
+        },
+        {
+          "path": "pytorch_model.bin",
+          "sha256": "1cd3c601bc4afe0fa87be3de4c13dd2cfadd249fac1e29acf74a9b296c3219bb",
+          "size": 614525833
+        },
+        {
+          "path": "special_tokens_map.json",
+          "sha256": "06e405a36dfe4b9604f484f6a1e619af1a7f7d09e34a8555eb0b77b66318067f",
+          "size": 280
+        },
+        {
+          "path": "tokenizer.json",
+          "sha256": "77ef92283d67f0d97e1454909a964afcbfa2019f0fb9f18f8e88d5c25c3ba729",
+          "size": 2108746
+        },
+        {
+          "path": "tokenizer_config.json",
+          "sha256": "377f91458f7729a4574a84c77bdce67dbc3c58c1a345a29bbf8c4eb1307948a3",
+          "size": 384
+        },
+        {
+          "path": "vocab.json",
+          "sha256": "ed19656ea1707df69134c4af35c8ceda2cc9860bf2c3495026153a133670ab5e",
+          "size": 798293
+        }
+      ],
+      "channel": "background",
+      "role": "M2",
+      "license": "Apache-2.0",
+      "noncommercial": false,
+      "languages": [
+        "en"
+      ],
+      "coverage_note": "English text prompts; music audio is not language-restricted.",
+      "card": "https://huggingface.co/laion/clap-htsat-unfused",
+      "weight": "pytorch_model.bin",
+      "weight_sha256": "1cd3c601bc4afe0fa87be3de4c13dd2cfadd249fac1e29acf74a9b296c3219bb",
+      "round": 1,
+      "carried_from_round1": true,
+      "trust_eligible": true
+    },
+    {
+      "id": "audeering/wav2vec2-large-robust-12-ft-emotion-msp-dim",
+      "revision": "6eba34a2485ea31cb03600241787c3a5edab8626",
+      "files": [
+        {
+          "path": "config.json",
+          "sha256": "c0962c3d1f065972bbebbba0bbffb8016ef4e9aae4a9b07e5fec22f770d2cddb",
+          "size": 2344
+        },
+        {
+          "path": "model.safetensors",
+          "sha256": "efa5ac1a13b2d2f42182738e44794b1eb4c0cdd221a8b4ae11304c3a5f5fae95",
+          "size": 661375508
+        },
+        {
+          "path": "preprocessor_config.json",
+          "sha256": "60ca5a31e13f69ee2fbf147504c8676db5f6398fd7a6b12294341dff838edfcf",
+          "size": 214
+        },
+        {
+          "path": "vocab.json",
+          "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+          "size": 2
+        }
+      ],
+      "channel": "voice",
+      "role": "V1",
+      "license": "CC-BY-NC-SA-4.0",
+      "noncommercial": true,
+      "languages": [
+        "en"
+      ],
+      "coverage_note": "English speech; singing and cross-language use are unvalidated.",
+      "card": "https://huggingface.co/audeering/wav2vec2-large-robust-12-ft-emotion-msp-dim",
+      "weight": "model.safetensors",
+      "weight_sha256": "efa5ac1a13b2d2f42182738e44794b1eb4c0cdd221a8b4ae11304c3a5f5fae95",
+      "round": 1,
+      "carried_from_round1": true,
+      "trust_eligible": true
+    },
+    {
+      "id": "Essentia emomusic-msd-musicnn",
+      "role": "M1",
+      "channel": "background",
+      "revision": "emomusic-msd-musicnn-2 + msd-musicnn-1",
+      "license": "CC-BY-NC-SA-4.0",
+      "noncommercial": true,
+      "languages": [
+        "audio, language independent"
+      ],
+      "coverage_note": "Music regressors; vocal language transfer and separation artifacts unvalidated.",
+      "card": "https://essentia.upf.edu/models.html",
+      "files": [
+        {
+          "url": "https://essentia.upf.edu/models/feature-extractors/musicnn/msd-musicnn-1.pb",
+          "path": "msd-musicnn-1.pb",
+          "size": 3197999,
+          "sha256": "cdea0722bcee7f731286843f2233e3aa69887bb5c3e2dce011eff55f38d04f3e"
+        },
+        {
+          "url": "https://essentia.upf.edu/models/feature-extractors/musicnn/msd-musicnn-1.json",
+          "path": "msd-musicnn-1.json",
+          "size": 3299,
+          "sha256": "8e6b3b509f0610c0e65dce467fd459d6777509388eaddb13ed138d8ac1341ffe"
+        },
+        {
+          "url": "https://essentia.upf.edu/models/classification-heads/emomusic/emomusic-msd-musicnn-2.pb",
+          "path": "emomusic-msd-musicnn-2.pb",
+          "size": 82460,
+          "sha256": "fcfb486510213b35e0a691975325f58170f648ad4a02d749bce790da13ded43b"
+        },
+        {
+          "url": "https://essentia.upf.edu/models/classification-heads/emomusic/emomusic-msd-musicnn-2.json",
+          "path": "emomusic-msd-musicnn-2.json",
+          "size": 2715,
+          "sha256": "fe393417b709080582201f15624460882702d596b534344d00f7a256db87c5a8"
+        }
+      ],
+      "round": 1,
+      "carried_from_round1": true,
+      "trust_eligible": true
+    },
+    {
+      "id": "fixed prosody feature composite",
+      "role": "V2",
+      "channel": "voice",
+      "revision": "defined in preregistration",
+      "license": "not applicable",
+      "noncommercial": false,
+      "languages": [
+        "audio, language independent"
+      ],
+      "coverage_note": "Heuristic, uncalibrated composite; not a trained emotion model.",
+      "files": [],
+      "round": 1,
+      "carried_from_round1": true,
+      "trust_eligible": false,
+      "trust_note": "Explanation-only in round 2. It is not treated as an emotion model."
+    },
+    {
+      "role": "T3",
+      "id": "Horizon-Labs/multilingual-sentiment-base",
+      "revision": "fede3aec59df484af8f39535558e582c72039b63",
+      "round": 2,
+      "files": [
+        {
+          "path": ".cache/huggingface/.gitignore",
+          "sha256": "684888c0ebb17f374298b65ee2807526c066094c701bcc7ebbe1c1095f494fc1",
+          "size": 1
+        },
+        {
+          "path": ".cache/huggingface/CACHEDIR.TAG",
+          "sha256": "f6572428f6d5e1575e73a1502895a8731f10757dfbb634909c6e154b849af91d",
+          "size": 191
+        },
+        {
+          "path": ".cache/huggingface/download/LICENSE.lock",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "size": 0
+        },
+        {
+          "path": ".cache/huggingface/download/LICENSE.metadata",
+          "sha256": "2379650fac15b12bbc9eb63042a3e2b182495cd4ae8fa2510b74ab62e2c88f6c",
+          "size": 100
+        },
+        {
+          "path": ".cache/huggingface/download/NOTICE.lock",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "size": 0
+        },
+        {
+          "path": ".cache/huggingface/download/NOTICE.metadata",
+          "sha256": "2265edbe698dd319b4af1f76d4354d399477e9fe3ea2074d5fdc0c6e7bc98cea",
+          "size": 101
+        },
+        {
+          "path": ".cache/huggingface/download/README.md.lock",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "size": 0
+        },
+        {
+          "path": ".cache/huggingface/download/README.md.metadata",
+          "sha256": "28e9968277cee0784b2a1891a1b76b028640bc909d659c0aaa6febd098ddb0eb",
+          "size": 101
+        },
+        {
+          "path": ".cache/huggingface/download/config.json.lock",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "size": 0
+        },
+        {
+          "path": ".cache/huggingface/download/config.json.metadata",
+          "sha256": "a75cc44d1f1090171be64a31f63b86b3ef2f6319aa3776cf512b1455c344ef42",
+          "size": 100
+        },
+        {
+          "path": ".cache/huggingface/download/model.safetensors.lock",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "size": 0
+        },
+        {
+          "path": ".cache/huggingface/download/model.safetensors.metadata",
+          "sha256": "d6e1a3ddc4d6ca16b190c53a404b6da6c68d6f829581bd02ad3934a2848e95eb",
+          "size": 125
+        },
+        {
+          "path": ".cache/huggingface/download/special_tokens_map.json.lock",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "size": 0
+        },
+        {
+          "path": ".cache/huggingface/download/special_tokens_map.json.metadata",
+          "sha256": "a28eb6ac2d60d3e6263816bb19c10a748ca76831791b075af084356a4520586e",
+          "size": 101
+        },
+        {
+          "path": ".cache/huggingface/download/tokenizer.json.lock",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "size": 0
+        },
+        {
+          "path": ".cache/huggingface/download/tokenizer.json.metadata",
+          "sha256": "a9b233e4116848aa523d364b0cf9fc722c834936c6aa4292468143e921837dfb",
+          "size": 125
+        },
+        {
+          "path": ".cache/huggingface/download/tokenizer_config.json.lock",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "size": 0
+        },
+        {
+          "path": ".cache/huggingface/download/tokenizer_config.json.metadata",
+          "sha256": "0d7d6056d33b15f1b735856705109ee9eec84b021e4c215e9602ab078f7cb9eb",
+          "size": 101
+        },
+        {
+          "path": ".cache/huggingface/trees/fede3aec59df484af8f39535558e582c72039b63.json",
+          "sha256": "4c9b93b0d7c6b15ac0226189c075a9365389bb2b06d501120f9ff493f1edeff7",
+          "size": 4081
+        },
+        {
+          "path": "LICENSE",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+          "size": 11358
+        },
+        {
+          "path": "NOTICE",
+          "sha256": "15483d78e5a0bbac1723c70e5a1e6eaea4cc07d52d2de366f9a9e79e5b26bba6",
+          "size": 1562
+        },
+        {
+          "path": "README.md",
+          "sha256": "bf17ecc6bc4e9d54d4c7e11454717e64326659aed3889dca5e623c925c668b2a",
+          "size": 9886
+        },
+        {
+          "path": "config.json",
+          "sha256": "ba605d60a7e1b2036c12ed44acf8e865cbf346f5717905ff4fc906a454eaeb07",
+          "size": 2076
+        },
+        {
+          "path": "model.safetensors",
+          "sha256": "fa9b7002c7b4f100569c2ed44124383389702035545693944c1036900b6dc160",
+          "size": 1230144500
+        },
+        {
+          "path": "special_tokens_map.json",
+          "sha256": "baec30ea10906f16adb8c18af7a34023002c1746542612b8b41c9f09e1351351",
+          "size": 636
+        },
+        {
+          "path": "tokenizer.json",
+          "sha256": "f34b44a6dc8a0eef651bfa10e8325057530152606a69d9c3b6ae02efb1558f0a",
+          "size": 34363286
+        },
+        {
+          "path": "tokenizer_config.json",
+          "sha256": "1d2f82c1341a79748e00efe82e67690f99d00b3c2a894f2b23128fd9d3519da3",
+          "size": 46440
+        }
+      ],
+      "smoke_test": {
+        "status": "passed",
+        "details": {
+          "device": "cuda",
+          "result_shape": [
+            1,
+            3
+          ]
+        },
+        "input": "synthetic, no song data"
+      },
+      "channel": "words",
+      "dimensions": [
+        "valence"
+      ],
+      "license": "Apache-2.0",
+      "noncommercial": false,
+      "languages": [
+        "en",
+        "ja",
+        "ko",
+        "zh",
+        "ar",
+        "de",
+        "es",
+        "fr",
+        "hi",
+        "id",
+        "it",
+        "nl",
+        "pt",
+        "ru",
+        "tr",
+        "vi"
+      ],
+      "family": "mmBERT-base, supervised three-class sentiment student",
+      "distinct_from_T1": "Different training corpora and label pipeline from clapAI MultiLingualSentiment; both are transformer encoders, recorded as a shared architecture family.",
+      "coverage_note": "Supervised multilingual sentiment; lyric-domain and singing validity unverified.",
+      "card": "https://huggingface.co/Horizon-Labs/multilingual-sentiment-base",
+      "trust_eligible": true,
+      "related_family": "L1: training labels generated using a Qwen teacher; L1 is Qwen"
+    },
+    {
+      "role": "L1",
+      "id": "Qwen/Qwen3-4B-Instruct-2507",
+      "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+      "round": 2,
+      "files": [
+        {
+          "path": ".cache/huggingface/.gitignore",
+          "sha256": "684888c0ebb17f374298b65ee2807526c066094c701bcc7ebbe1c1095f494fc1",
+          "size": 1
+        },
+        {
+          "path": ".cache/huggingface/CACHEDIR.TAG",
+          "sha256": "f6572428f6d5e1575e73a1502895a8731f10757dfbb634909c6e154b849af91d",
+          "size": 191
+        },
+        {
+          "path": ".cache/huggingface/download/LICENSE.lock",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "size": 0
+        },
+        {
+          "path": ".cache/huggingface/download/LICENSE.metadata",
+          "sha256": "1e9bdb27a15de0b465e94607d3d43094a55c0dd802bf3b8668dd09c50524a23b",
+          "size": 101
+        },
+        {
+          "path": ".cache/huggingface/download/README.md.lock",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "size": 0
+        },
+        {
+          "path": ".cache/huggingface/download/README.md.metadata",
+          "sha256": "07e975db12823ab70772227de098f614f87a3f784472a8b0c2c0cff2694014f1",
+          "size": 99
+        },
+        {
+          "path": ".cache/huggingface/download/config.json.lock",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "size": 0
+        },
+        {
+          "path": ".cache/huggingface/download/config.json.metadata",
+          "sha256": "916f61b96c87bba009244455efb22e9e961c74d087611ef927803cf2e1eb3431",
+          "size": 101
+        },
+        {
+          "path": ".cache/huggingface/download/generation_config.json.lock",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "size": 0
+        },
+        {
+          "path": ".cache/huggingface/download/generation_config.json.metadata",
+          "sha256": "aa7bfb787375ae618a83b15f87a5095a4af65a1ccec77bd233ce049ca53452ea",
+          "size": 100
+        },
+        {
+          "path": ".cache/huggingface/download/merges.txt.lock",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "size": 0
+        },
+        {
+          "path": ".cache/huggingface/download/merges.txt.metadata",
+          "sha256": "8bc481605f0d08fd4d1f76936ad59de26248c85b2d743325151688bb931d925b",
+          "size": 101
+        },
+        {
+          "path": ".cache/huggingface/download/model-00001-of-00003.safetensors.lock",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "size": 0
+        },
+        {
+          "path": ".cache/huggingface/download/model-00001-of-00003.safetensors.metadata",
+          "sha256": "9175f3da13503052e90e877954423e564ced9f4919cd107c6f062d67cdcf56fa",
+          "size": 125
+        },
+        {
+          "path": ".cache/huggingface/download/model-00002-of-00003.safetensors.lock",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "size": 0
+        },
+        {
+          "path": ".cache/huggingface/download/model-00002-of-00003.safetensors.metadata",
+          "sha256": "c9b8fabf6633492179ccae713921ffedbabb80c8ba88ff8572ef6fd83e48da54",
+          "size": 125
+        },
+        {
+          "path": ".cache/huggingface/download/model-00003-of-00003.safetensors.lock",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "size": 0
+        },
+        {
+          "path": ".cache/huggingface/download/model-00003-of-00003.safetensors.metadata",
+          "sha256": "ab4c578da788f3f1803dd8325f49b8ca3fd01b26ead1f2d0ec597ee1c2df6d9d",
+          "size": 125
+        },
+        {
+          "path": ".cache/huggingface/download/model.safetensors.index.json.lock",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "size": 0
+        },
+        {
+          "path": ".cache/huggingface/download/model.safetensors.index.json.metadata",
+          "sha256": "a081182247b3a3907b686c37ac961d062c2017e16fc879da7f7c46f7daba4972",
+          "size": 101
+        },
+        {
+          "path": ".cache/huggingface/download/tokenizer.json.lock",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "size": 0
+        },
+        {
+          "path": ".cache/huggingface/download/tokenizer.json.metadata",
+          "sha256": "2840b4b3249cebcdb7667241122f9183148333e64dc0dc325d88e9e3c6a873cc",
+          "size": 125
+        },
+        {
+          "path": ".cache/huggingface/download/tokenizer_config.json.lock",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "size": 0
+        },
+        {
+          "path": ".cache/huggingface/download/tokenizer_config.json.metadata",
+          "sha256": "7eba7631ed1c22ae7c470cd45b1acddc870c697389ed04d35a736d95d27f2bf3",
+          "size": 101
+        },
+        {
+          "path": ".cache/huggingface/download/vocab.json.lock",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "size": 0
+        },
+        {
+          "path": ".cache/huggingface/download/vocab.json.metadata",
+          "sha256": "5494efda0e37c626245e4c6955881df185dbf5dab4fe24073c0725027381d31d",
+          "size": 100
+        },
+        {
+          "path": ".cache/huggingface/trees/cdbee75f17c01a7cc42f958dc650907174af0554.json",
+          "sha256": "ee7e7f91e73861f3eb73333a5e1c092dda6672c6426f35bf87935c0b529c401d",
+          "size": 2214
+        },
+        {
+          "path": "LICENSE",
+          "sha256": "832dd9e00a68dd83b3c3fb9f5588dad7dcf337a0db50f7d9483f310cd292e92e",
+          "size": 11343
+        },
+        {
+          "path": "README.md",
+          "sha256": "8e3dd0c3b5b11897cc71092ccfe517bb7a9783479baa3665aad73c8d1a2041cd",
+          "size": 8168
+        },
+        {
+          "path": "config.json",
+          "sha256": "5beea1a4a34c62782bfb2f911c606741a3bab8f92d80a118fa053c28af12e8ba",
+          "size": 727
+        },
+        {
+          "path": "generation_config.json",
+          "sha256": "835fffe355c9438e7a25be099b3fccaa98350b83451f9fd2d99512e74f1ade48",
+          "size": 238
+        },
+        {
+          "path": "merges.txt",
+          "sha256": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3",
+          "size": 1671839
+        },
+        {
+          "path": "model-00001-of-00003.safetensors",
+          "sha256": "75311d91bb08cf0b882913da464a1e722a31fb44db35208663487efb7a3d8ed6",
+          "size": 3957900840
+        },
+        {
+          "path": "model-00002-of-00003.safetensors",
+          "sha256": "0b48adbb1f60e901153d91907ba11ce63bd4b8b584482e730f48808d055dfba1",
+          "size": 3987450520
+        },
+        {
+          "path": "model-00003-of-00003.safetensors",
+          "sha256": "7dd39ccca5e4de123c74c14af44c9bf2eb75df33b4614382af0134528e060d5d",
+          "size": 99630640
+        },
+        {
+          "path": "model.safetensors.index.json",
+          "sha256": "d6c42883a895dfef5b0080ed2116a1bcd764f558406b98923d675978a1abf29c",
+          "size": 32819
+        },
+        {
+          "path": "tokenizer.json",
+          "sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
+          "size": 11422654
+        },
+        {
+          "path": "tokenizer_config.json",
+          "sha256": "a62ff0a2472a0fa1b8eaabcb57c59b58afa42a22831dc141400b6e0cf2b65ce3",
+          "size": 9377
+        },
+        {
+          "path": "vocab.json",
+          "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+          "size": 2776833
+        }
+      ],
+      "smoke_test": {
+        "status": "passed",
+        "details": {
+          "device": "cuda",
+          "generated_tokens": 31,
+          "json_shape_valid": true
+        },
+        "input": "synthetic, no song data"
+      },
+      "channel": "words",
+      "dimensions": [
+        "valence",
+        "arousal"
+      ],
+      "license": "Apache-2.0",
+      "noncommercial": false,
+      "languages": [
+        "en",
+        "ja",
+        "ko",
+        "zh",
+        "and 100+ reported by the model card"
+      ],
+      "family": "Qwen3 4B instruct, decoder-only LLM",
+      "coverage_note": "Instruct LLM rated on section text only, with no title or artist, so it rates text rather than recalling a known song. Runs locally in fp16 on the 4060 Ti.",
+      "card": "https://huggingface.co/Qwen/Qwen3-4B-Instruct-2507",
+      "trust_eligible": true,
+      "related_family": "T3: T3 labels generated using a Qwen teacher"
+    },
+    {
+      "role": "M3",
+      "id": "huyleit/mert-v1-95m-music-emotion-int8",
+      "revision": "080701a30fa9021ccacd2a7bddb9d61f58c48ead",
+      "round": 2,
+      "files": [
+        {
+          "path": ".cache/huggingface/.gitignore",
+          "sha256": "684888c0ebb17f374298b65ee2807526c066094c701bcc7ebbe1c1095f494fc1",
+          "size": 1
+        },
+        {
+          "path": ".cache/huggingface/CACHEDIR.TAG",
+          "sha256": "f6572428f6d5e1575e73a1502895a8731f10757dfbb634909c6e154b849af91d",
+          "size": 191
+        },
+        {
+          "path": ".cache/huggingface/download/README.md.lock",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "size": 0
+        },
+        {
+          "path": ".cache/huggingface/download/README.md.metadata",
+          "sha256": "b92bc79ca2235b8a610ba75e107f803d64bc0ad96eead695b32e72577ee805ad",
+          "size": 101
+        },
+        {
+          "path": ".cache/huggingface/download/config.json.lock",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "size": 0
+        },
+        {
+          "path": ".cache/huggingface/download/config.json.metadata",
+          "sha256": "83ee2024e5d3b34dab3b2bdf5619b24f3b9070c9e4af96467b5b13b4ff0668eb",
+          "size": 100
+        },
+        {
+          "path": ".cache/huggingface/download/mert_emotion_int8.onnx.lock",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "size": 0
+        },
+        {
+          "path": ".cache/huggingface/download/mert_emotion_int8.onnx.metadata",
+          "sha256": "220811e5297b2e6015c863fccab153fd209d1405e6c81bf5e4e42073a4ed3432",
+          "size": 124
+        },
+        {
+          "path": ".cache/huggingface/trees/080701a30fa9021ccacd2a7bddb9d61f58c48ead.json",
+          "sha256": "74a999ed9ca7e5e489e20ab93b8a8f62db2e23fcb4c83fbd476b63261c733de6",
+          "size": 639
+        },
+        {
+          "path": "README.md",
+          "sha256": "ced876cec3fc1dc9c7c3a06bb25f82eca1ea56c99d3e38bd64d901c0a66decaa",
+          "size": 7738
+        },
+        {
+          "path": "config.json",
+          "sha256": "2b3b8d2c7cf755e52d3fc39e6f0a388885e00471bad99b1a02b3d51695608610",
+          "size": 933
+        },
+        {
+          "path": "mert_emotion_int8.onnx",
+          "sha256": "b05ef3fbe904f1121b32632da9ad4907afb676a11e348fe01484a71412c42e01",
+          "size": 95552890
+        }
+      ],
+      "smoke_test": {
+        "status": "passed",
+        "details": {
+          "device": "cpu",
+          "synthetic_seconds": 4,
+          "result_shape": [
+            1,
+            2
+          ]
+        },
+        "input": "synthetic, no song data"
+      },
+      "channel": "background",
+      "dimensions": [
+        "valence",
+        "arousal"
+      ],
+      "license": "Conflicting: prior manifest CC-BY-NC-4.0; model card Apache-2.0; underlying permissions unresolved",
+      "noncommercial": true,
+      "languages": [
+        "audio, language independent"
+      ],
+      "family": "MERT-v1-95M self-supervised music encoder, int8 ONNX regressor head",
+      "training_data": "DEAM/MediaEval valence-arousal annotations",
+      "distinct_from_M1": "Different backbone; overlap in MediaEval/DEAM training tracks not established.",
+      "shared_backbone": false,
+      "coverage_note": "Trained on 45 s excerpts of Western popular music; 4 s window transfer is unvalidated.",
+      "card": "https://huggingface.co/huyleit/mert-v1-95m-music-emotion-int8",
+      "trust_eligible": true,
+      "possible_shared_training_data": true,
+      "license_conflict": true,
+      "license_evidence": [
+        "emotion_r2/models.json",
+        "https://huggingface.co/huyleit/mert-v1-95m-music-emotion-int8"
+      ]
+    },
+    {
+      "role": "V3",
+      "id": "MERaLiON/MERaLiON-SER-v1",
+      "revision": "7e3ee6fa4534dea8316e8ca43e377e2fbb58496b",
+      "round": 2,
+      "files": [
+        {
+          "path": ".cache/huggingface/.gitignore",
+          "sha256": "684888c0ebb17f374298b65ee2807526c066094c701bcc7ebbe1c1095f494fc1",
+          "size": 1
+        },
+        {
+          "path": ".cache/huggingface/CACHEDIR.TAG",
+          "sha256": "f6572428f6d5e1575e73a1502895a8731f10757dfbb634909c6e154b849af91d",
+          "size": 191
+        },
+        {
+          "path": ".cache/huggingface/download/MERaLiON-Public-Licence-SER-V1.pdf.lock",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "size": 0
+        },
+        {
+          "path": ".cache/huggingface/download/MERaLiON-Public-Licence-SER-V1.pdf.metadata",
+          "sha256": "5705f2b8ca9ee33663ed6e64d54e6e1cb5db8d0fee56d1b69cf529a67d59df01",
+          "size": 125
+        },
+        {
+          "path": ".cache/huggingface/download/README.md.lock",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "size": 0
+        },
+        {
+          "path": ".cache/huggingface/download/README.md.metadata",
+          "sha256": "97589b4461b0559171b756017f58da1f39cc42fe0fc4389a411d6f2c54847b85",
+          "size": 99
+        },
+        {
+          "path": ".cache/huggingface/download/added_tokens.json.lock",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "size": 0
+        },
+        {
+          "path": ".cache/huggingface/download/added_tokens.json.metadata",
+          "sha256": "a5a9f81ab93889887b555dfd4ce776edea97c596e8fc0fec72658dfb1222f59b",
+          "size": 101
+        },
+        {
+          "path": ".cache/huggingface/download/config.json.lock",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "size": 0
+        },
+        {
+          "path": ".cache/huggingface/download/config.json.metadata",
+          "sha256": "0ece34f1e25c0c1ec867b6413f4a2a2c309689c34114f5d81c014ef6c590e35b",
+          "size": 101
+        },
+        {
+          "path": ".cache/huggingface/download/configuration_ser_whisper_ecapa.py.lock",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "size": 0
+        },
+        {
+          "path": ".cache/huggingface/download/configuration_ser_whisper_ecapa.py.metadata",
+          "sha256": "d3faa7fd254d1a68a8e162d4a030c4391d4d8d3937560237c27b7965c400e00c",
+          "size": 100
+        },
+        {
+          "path": ".cache/huggingface/download/exporter_lora_whisper.py.lock",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "size": 0
+        },
+        {
+          "path": ".cache/huggingface/download/exporter_lora_whisper.py.metadata",
+          "sha256": "6d6db679cf40f3a3b98a2b26b7bda832fb05f0486c6561b258b1c0c3dbab79fe",
+          "size": 101
+        },
+        {
+          "path": ".cache/huggingface/download/exporter_stub.py.lock",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "size": 0
+        },
+        {
+          "path": ".cache/huggingface/download/exporter_stub.py.metadata",
+          "sha256": "0777690a574d1cecc6a7ba7882ab870910aa0686423a3f5a991b43033d8a8fd6",
+          "size": 101
+        },
+        {
+          "path": ".cache/huggingface/download/merges.txt.lock",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "size": 0
+        },
+        {
+          "path": ".cache/huggingface/download/merges.txt.metadata",
+          "sha256": "89354040c58697ff93579c5f6b460774d898045f7604121339537dad8779306c",
+          "size": 100
+        },
+        {
+          "path": ".cache/huggingface/download/model.safetensors.lock",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "size": 0
+        },
+        {
+          "path": ".cache/huggingface/download/model.safetensors.metadata",
+          "sha256": "a65b4280c2db70167cc9e015056a144a7bf31e88280a20eaeebd0ba889d2317d",
+          "size": 124
+        },
+        {
+          "path": ".cache/huggingface/download/modeling_ser_whisper_ecapa.py.lock",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "size": 0
+        },
+        {
+          "path": ".cache/huggingface/download/modeling_ser_whisper_ecapa.py.metadata",
+          "sha256": "4d8257a431e4e153f4458bb1d921a66aad1b30e7bfecd263ab084bcc28ca1197",
+          "size": 101
+        },
+        {
+          "path": ".cache/huggingface/download/normalizer.json.lock",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "size": 0
+        },
+        {
+          "path": ".cache/huggingface/download/normalizer.json.metadata",
+          "sha256": "51669c4bca429f1c2d391335782829a4c8e3acd7ffdae4245b80c317719ebc97",
+          "size": 100
+        },
+        {
+          "path": ".cache/huggingface/download/preprocessor_config.json.lock",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "size": 0
+        },
+        {
+          "path": ".cache/huggingface/download/preprocessor_config.json.metadata",
+          "sha256": "ee03f5b2eb725902c133abb6f47246cf12f8e0da1e24858bc90c08c610056edc",
+          "size": 101
+        },
+        {
+          "path": ".cache/huggingface/download/special_tokens_map.json.lock",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "size": 0
+        },
+        {
+          "path": ".cache/huggingface/download/special_tokens_map.json.metadata",
+          "sha256": "01d65361c051d83dd5df270052bd164c45abba9976ea117a62497ca6667ab073",
+          "size": 101
+        },
+        {
+          "path": ".cache/huggingface/download/tokenizer_config.json.lock",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "size": 0
+        },
+        {
+          "path": ".cache/huggingface/download/tokenizer_config.json.metadata",
+          "sha256": "c6b5ce4a8acaf1368b8f3a6ad80eb5779eb4f5bd5eab9d86c08f351db4b8c48f",
+          "size": 101
+        },
+        {
+          "path": ".cache/huggingface/download/vocab.json.lock",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "size": 0
+        },
+        {
+          "path": ".cache/huggingface/download/vocab.json.metadata",
+          "sha256": "1fcd1fa029629e09a89c7b8a60c0e05cc55a6b938be1ca96d1c7d80fd2051325",
+          "size": 101
+        },
+        {
+          "path": ".cache/huggingface/trees/7e3ee6fa4534dea8316e8ca43e377e2fbb58496b.json",
+          "sha256": "b8982d0bc9d64cdb23f9a5a2fd472e0c9c2c21185e1869891c28f95a202546b1",
+          "size": 3628
+        },
+        {
+          "path": "MERaLiON-Public-Licence-SER-V1.pdf",
+          "sha256": "0c66abf221cd3065c91d45ddee81e92b5416f1b8e47887617af3bca232059bbd",
+          "size": 377588
+        },
+        {
+          "path": "README.md",
+          "sha256": "d94e26ec264f46139ebe09eeac5166309e31e610728c2dc176b87b0e3a5257c0",
+          "size": 10681
+        },
+        {
+          "path": "added_tokens.json",
+          "sha256": "9715fd2243b6f06a5858b5e32950d2853f73dd5bc201aafcf76f5082a2d8acd1",
+          "size": 34604
+        },
+        {
+          "path": "config.json",
+          "sha256": "f8008a982be09d7d9b0c65e9a2b856480b45849ecc951cbe4b6818e7b69f0826",
+          "size": 883
+        },
+        {
+          "path": "configuration_ser_whisper_ecapa.py",
+          "sha256": "b983c9837deb069eb06695482f16cfb61d662161052ed5bf781a466c4bd741bb",
+          "size": 853
+        },
+        {
+          "path": "exporter_lora_whisper.py",
+          "sha256": "1f1a0c0cfab2a6fc487a9b0f3e05bd5da736cd01e190adc5eb15bf80c33d4969",
+          "size": 5802
+        },
+        {
+          "path": "exporter_stub.py",
+          "sha256": "92892bfe124810b806eb4594d56a09fc453b714bfba72968f38d34f9a4e18da5",
+          "size": 1331
+        },
+        {
+          "path": "merges.txt",
+          "sha256": "2df2990a395e35e8dfbc7511e08c12d56018d8d04691e0133e5d63b21e154dc6",
+          "size": 493869
+        },
+        {
+          "path": "model.safetensors",
+          "sha256": "a143a3890362fb405d07df1d4b5a6d2b4d6680824c5643800c52e40953286fbd",
+          "size": 3080143412
+        },
+        {
+          "path": "modeling_ser_whisper_ecapa.py",
+          "sha256": "b657e0005cccd6901d6e589b05fbc3e47abd64a746bed3bfbed36749ac35d363",
+          "size": 18593
+        },
+        {
+          "path": "normalizer.json",
+          "sha256": "bf1c507dc8724ca9cf9903640dacfb69dae2f00edee4f21ceba106a7392f26dd",
+          "size": 52666
+        },
+        {
+          "path": "preprocessor_config.json",
+          "sha256": "a6a76d28c93edb273669eb9e0b0636a2bddbb1272c3261e47b7ca6dfdbac1b8d",
+          "size": 339
+        },
+        {
+          "path": "special_tokens_map.json",
+          "sha256": "e67ae3a0aaa99abcd9f187138e12db1f65c16a14761c50ef10eef2c174a7a691",
+          "size": 2194
+        },
+        {
+          "path": "tokenizer_config.json",
+          "sha256": "21a4fc0483c14b87f4e0bbc177a9a357479bfa7c95aaf21ad53d71e9c5afafb9",
+          "size": 282713
+        },
+        {
+          "path": "vocab.json",
+          "sha256": "50d6a919f0a0601d56a04eb583c780d18553aa388254ba3158eb6a00f13e2c1a",
+          "size": 1036584
+        }
+      ],
+      "smoke_test": {
+        "status": "passed",
+        "details": {
+          "device": "cuda",
+          "synthetic_seconds": 4,
+          "result_shape": [
+            1,
+            3
+          ]
+        },
+        "input": "synthetic, no song data"
+      },
+      "channel": "voice",
+      "dimensions": [
+        "valence",
+        "arousal"
+      ],
+      "license": "MERaLiON Public Licence (SER v1), non-commercial research terms",
+      "noncommercial": true,
+      "languages": [
+        "en",
+        "zh",
+        "ms",
+        "ta",
+        "id",
+        "th",
+        "vi"
+      ],
+      "family": "Whisper encoder plus ECAPA, dimensional SER head",
+      "training_data": "Multilingual SER corpora distinct from the MSP-Podcast data used by V1",
+      "distinct_from_V1": "Different training corpora and a different encoder family from the audEERING wav2vec2 MSP-Podcast model.",
+      "output_mapping": "Native dimensional output (valence, arousal, dominance); dominance is recorded but unused. No categorical-to-dimensional mapping is required.",
+      "coverage_note": "Speech emotion recognition; singing voice and separation artifacts are out of distribution.",
+      "card": "https://huggingface.co/MERaLiON/MERaLiON-SER-v1",
+      "trust_eligible": true
+    }
+  ],
+  "channel_membership": {
+    "words_valence": [
+      "T1",
+      "T3",
+      "L1"
+    ],
+    "words_arousal": [
+      "L1",
+      "T2_e5_anchors"
+    ],
+    "background_valence": [
+      "M1",
+      "M2",
+      "M3"
+    ],
+    "background_arousal": [
+      "M1",
+      "M2",
+      "M3"
+    ],
+    "voice_valence": [
+      "V1",
+      "V3"
+    ],
+    "voice_arousal": [
+      "V1",
+      "V3"
+    ]
+  },
+  "excluded_from_trust": {
+    "T2": "reference only",
+    "V2": "explanation-only prosody composite"
+  },
+  "license_note": "Non-commercial flags apply to the named model weights. M1, V1, V3 and the separation model carry non-commercial terms, so round-2 outputs are research-use only.",
+  "amendment": "Amendment 1; original manifest preserved unchanged",
+  "original_manifest_sha256": "bab8f1a06d8232a62a0e01bd61ea0991725a713d402498b2da53043615d52fae"
+}

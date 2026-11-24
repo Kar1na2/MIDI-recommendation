@@ -1,0 +1,139 @@
+{
+  "schema_version": 1,
+  "track_id": "6s0hf9xfbG7gqcGMXXPJSZ",
+  "cohort": "random",
+  "display_only": true,
+  "registered_scores_unchanged": true,
+  "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+  "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "prompt_sha256": "ffdf21672c16d12394441664976928ac03a51b35d721d3925cca9be8adc58e3d",
+  "registered_checkpoint_sha256": "0a906aa1d36cadd7562a3f7691d7c311e9adc8fece0085f897349d93460dce5f",
+  "reading_label": "L1's interpretation of the lyrics",
+  "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+  "reading_type": "model_interpretation",
+  "decoding": {
+    "do_sample": false,
+    "num_beams": 1,
+    "max_new_tokens": 128,
+    "torch_dtype": "float16",
+    "seed": 20261115
+  },
+  "overlap_rule": "NFKC/casefold 4-word ngrams; additionally 4 consecutive ja/ko/zh script characters with spacing/punctuation removed; block if either overlaps.",
+  "sections": [
+    {
+      "section_id": "lyric-0000",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "37202e1de9f2fc1eaafb6f7f9dd1faa6b4902f96947a93207e6da0f5af8e5960",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a yearning for transcendence and intimacy, blending celestial wonder with deep emotional connection. The themes explore the desire to escape earthly limits while simultaneously seeking closeness and affection in the vastness of space.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "2fe455890534cb8f66da28c1b669b217a240e862a2616a029d18f4974a135de1"
+    },
+    {
+      "section_id": "lyric-0001",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "4bd5d518ff2578aeb3b2ee67784347c4a10b410a6b93be1cc399c95dbb6fc148",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a deep, persistent yearning for authenticity and emotional connection, emphasizing devotion and a desire for unwavering fidelity. The central theme revolves around the longing for genuine, enduring love as a source of inner fulfillment and identity.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "6b05bf54d76304b54f647b34b3deb1d4d8e8b8387231b84f1fe1d2b9db7d14f2"
+    },
+    {
+      "section_id": "lyric-0002",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "37202e1de9f2fc1eaafb6f7f9dd1faa6b4902f96947a93207e6da0f5af8e5960",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a yearning for transcendence and intimacy, blending celestial wonder with deep emotional connection. The themes explore the desire to escape earthly limits while simultaneously seeking closeness and affection in the vastness of space.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "2fe455890534cb8f66da28c1b669b217a240e862a2616a029d18f4974a135de1"
+    },
+    {
+      "section_id": "lyric-0003",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "4bd5d518ff2578aeb3b2ee67784347c4a10b410a6b93be1cc399c95dbb6fc148",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a deep, persistent yearning for authenticity and emotional connection, emphasizing devotion and a desire for unwavering fidelity. The central theme revolves around the longing for genuine, enduring love as a source of inner fulfillment and identity.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "6b05bf54d76304b54f647b34b3deb1d4d8e8b8387231b84f1fe1d2b9db7d14f2"
+    },
+    {
+      "section_id": "lyric-0004",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "201bef6c322d52996cc73f56eb8afaf7fbb908a21a7cc73e61a7876d1b5998e3",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests a persistent, almost obsessive focus on a single entity, emphasizing repetition and emotional intensity. The theme centers on isolation, identity, and the fixation that arises when one thing becomes the sole point of attention.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "8d7fa96dceedc35df7f2a315d756117d3c3e6d313686f823ce68f11c55bcbfb8"
+    },
+    {
+      "section_id": "lyric-0005",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "09ea52bf9c85b7f72dd5b72430e9f8deb00460e5b089242aa2545ca559d6e6a6",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a persistent, heartfelt devotion expressed through repetition and layered meaning, emphasizing sincerity and emotional intensity. The central theme revolves around unwavering affection and the desire for enduring, authentic connection.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "3d7ff9010dcd1da11f4e88adaf4841acab99e35d49da5b265196146daf6fc5c4"
+    },
+    {
+      "section_id": "span-0000",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    }
+  ]
+}

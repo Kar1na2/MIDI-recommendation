@@ -1,0 +1,566 @@
+{
+  "schema_version": 1,
+  "track_id": "5sjnkOfTLCLNfkkchI2re2",
+  "cohort": "random",
+  "display_only": true,
+  "registered_scores_unchanged": true,
+  "models": {
+    "T1": {
+      "model_id": "clapAI/roberta-base-multilingual-sentiment",
+      "revision": "5986405bd6f2fbaf98b2a5568fdbc02d74546694",
+      "registered_checkpoint_sha256": "e6adfaec65cdda39aa6eb4da56358bb89b26c8942eb496928433a85479c7b8a0"
+    },
+    "T3": {
+      "model_id": "Horizon-Labs/multilingual-sentiment-base",
+      "revision": "fede3aec59df484af8f39535558e582c72039b63",
+      "registered_checkpoint_sha256": "c42a375584aa91eb2c949a33e145ea3bd9b9c73d7b32d06ea75f9c395e29b3b8"
+    }
+  },
+  "verification_absolute_tolerance": 1e-05,
+  "sections": [
+    {
+      "section_id": "lyric-0000",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "7e237a6534e1bb26e592d8eb9597b848ad735b4939d1060a9625b2ed03c7cfd8",
+      "T1": {
+        "status": "reused_round1",
+        "probabilities": {
+          "positive": null,
+          "neutral": null,
+          "negative": null
+        },
+        "valence": null,
+        "registered_valence": null,
+        "absolute_valence_error": null,
+        "reproduction_check": "not_scored_registered_status",
+        "truncated": false
+      },
+      "T3": {
+        "status": "ok",
+        "probabilities": {
+          "negative": 0.028712047263979912,
+          "neutral": 0.6098855137825012,
+          "positive": 0.36140239238739014
+        },
+        "valence": 0.3326903451234102,
+        "registered_valence": 0.33269035816192627,
+        "absolute_valence_error": 1.30385160446167e-08,
+        "reproduction_check": "passed",
+        "truncated": false
+      }
+    },
+    {
+      "section_id": "lyric-0001",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "6cf5ac03ee3f2a51d12a05422deded6acdcd6bce72bfe6807ba183456abd4950",
+      "T1": {
+        "status": "reused_round1",
+        "probabilities": {
+          "positive": null,
+          "neutral": null,
+          "negative": null
+        },
+        "valence": null,
+        "registered_valence": null,
+        "absolute_valence_error": null,
+        "reproduction_check": "not_scored_registered_status",
+        "truncated": false
+      },
+      "T3": {
+        "status": "ok",
+        "probabilities": {
+          "negative": 0.7608329653739929,
+          "neutral": 0.1716858297586441,
+          "positive": 0.06748118996620178
+        },
+        "valence": -0.6933517754077911,
+        "registered_valence": -0.6933517456054688,
+        "absolute_valence_error": 2.9802322387695312e-08,
+        "reproduction_check": "passed",
+        "truncated": false
+      }
+    },
+    {
+      "section_id": "lyric-0002",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "a532e7ab5ef58679ba8508898f488e40e1b298c82ebbf424c7ac34fb97fd16f0",
+      "T1": {
+        "status": "reused_round1",
+        "probabilities": {
+          "positive": null,
+          "neutral": null,
+          "negative": null
+        },
+        "valence": null,
+        "registered_valence": null,
+        "absolute_valence_error": null,
+        "reproduction_check": "not_scored_registered_status",
+        "truncated": false
+      },
+      "T3": {
+        "status": "ok",
+        "probabilities": {
+          "negative": 0.01064686942845583,
+          "neutral": 0.027128899469971657,
+          "positive": 0.9622241854667664
+        },
+        "valence": 0.9515773160383105,
+        "registered_valence": 0.9515773057937622,
+        "absolute_valence_error": 1.0244548320770264e-08,
+        "reproduction_check": "passed",
+        "truncated": false
+      }
+    },
+    {
+      "section_id": "lyric-0003",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "6d7ef1decc9e1ebbfe1f239ec4bb23a6e6758b35752b31f827d3cc663e1badbe",
+      "T1": {
+        "status": "reused_round1",
+        "probabilities": {
+          "positive": null,
+          "neutral": null,
+          "negative": null
+        },
+        "valence": null,
+        "registered_valence": null,
+        "absolute_valence_error": null,
+        "reproduction_check": "not_scored_registered_status",
+        "truncated": false
+      },
+      "T3": {
+        "status": "ok",
+        "probabilities": {
+          "negative": 0.05051103234291077,
+          "neutral": 0.07330234348773956,
+          "positive": 0.876186728477478
+        },
+        "valence": 0.8256756961345673,
+        "registered_valence": 0.8256757259368896,
+        "absolute_valence_error": 2.9802322387695312e-08,
+        "reproduction_check": "passed",
+        "truncated": false
+      }
+    },
+    {
+      "section_id": "lyric-0004",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "32b8093308f1cedabf15b64b5eb7ae65f57cddec840c78552bd3fe565c8150f2",
+      "T1": {
+        "status": "reused_round1",
+        "probabilities": {
+          "positive": null,
+          "neutral": null,
+          "negative": null
+        },
+        "valence": null,
+        "registered_valence": null,
+        "absolute_valence_error": null,
+        "reproduction_check": "not_scored_registered_status",
+        "truncated": false
+      },
+      "T3": {
+        "status": "ok",
+        "probabilities": {
+          "negative": 0.04833904281258583,
+          "neutral": 0.4752429127693176,
+          "positive": 0.47641804814338684
+        },
+        "valence": 0.428079005330801,
+        "registered_valence": 0.4280790090560913,
+        "absolute_valence_error": 3.725290298461914e-09,
+        "reproduction_check": "passed",
+        "truncated": false
+      }
+    },
+    {
+      "section_id": "lyric-0005",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "ce58d31b5c6bc7b3fed558b047a93ded71eecb6c3e0f17060588c4a04777521f",
+      "T1": {
+        "status": "reused_round1",
+        "probabilities": {
+          "positive": null,
+          "neutral": null,
+          "negative": null
+        },
+        "valence": null,
+        "registered_valence": null,
+        "absolute_valence_error": null,
+        "reproduction_check": "not_scored_registered_status",
+        "truncated": false
+      },
+      "T3": {
+        "status": "ok",
+        "probabilities": {
+          "negative": 0.09459654986858368,
+          "neutral": 0.08639418333768845,
+          "positive": 0.8190093040466309
+        },
+        "valence": 0.7244127541780472,
+        "registered_valence": 0.724412739276886,
+        "absolute_valence_error": 1.4901161193847656e-08,
+        "reproduction_check": "passed",
+        "truncated": false
+      }
+    },
+    {
+      "section_id": "lyric-0006",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "ef67559139ec1840ce201d3a718b9f478b8ff2e250343430179a6542e7aaf25a",
+      "T1": {
+        "status": "reused_round1",
+        "probabilities": {
+          "positive": null,
+          "neutral": null,
+          "negative": null
+        },
+        "valence": null,
+        "registered_valence": null,
+        "absolute_valence_error": null,
+        "reproduction_check": "not_scored_registered_status",
+        "truncated": false
+      },
+      "T3": {
+        "status": "ok",
+        "probabilities": {
+          "negative": 0.48266130685806274,
+          "neutral": 0.2265748828649521,
+          "positive": 0.2907637655735016
+        },
+        "valence": -0.19189754128456116,
+        "registered_valence": -0.19189754128456116,
+        "absolute_valence_error": 0.0,
+        "reproduction_check": "passed",
+        "truncated": false
+      }
+    },
+    {
+      "section_id": "lyric-0007",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "35d6032563b435c3933d75bd63d0b5d7b4f7a6a352b0c8720a698160989b29eb",
+      "T1": {
+        "status": "reused_round1",
+        "probabilities": {
+          "positive": null,
+          "neutral": null,
+          "negative": null
+        },
+        "valence": null,
+        "registered_valence": null,
+        "absolute_valence_error": null,
+        "reproduction_check": "not_scored_registered_status",
+        "truncated": false
+      },
+      "T3": {
+        "status": "ok",
+        "probabilities": {
+          "negative": 0.04223315045237541,
+          "neutral": 0.2655941843986511,
+          "positive": 0.692172646522522
+        },
+        "valence": 0.6499394960701466,
+        "registered_valence": 0.6499394774436951,
+        "absolute_valence_error": 1.862645149230957e-08,
+        "reproduction_check": "passed",
+        "truncated": false
+      }
+    },
+    {
+      "section_id": "lyric-0008",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "8dd860fd3b32f5183a21ba4011ce78e332b38b944ed0434b659fe697721426f6",
+      "T1": {
+        "status": "reused_round1",
+        "probabilities": {
+          "positive": null,
+          "neutral": null,
+          "negative": null
+        },
+        "valence": null,
+        "registered_valence": null,
+        "absolute_valence_error": null,
+        "reproduction_check": "not_scored_registered_status",
+        "truncated": false
+      },
+      "T3": {
+        "status": "ok",
+        "probabilities": {
+          "negative": 0.0623367503285408,
+          "neutral": 0.08546841889619827,
+          "positive": 0.8521948456764221
+        },
+        "valence": 0.7898580953478813,
+        "registered_valence": 0.7898581027984619,
+        "absolute_valence_error": 7.450580596923828e-09,
+        "reproduction_check": "passed",
+        "truncated": false
+      }
+    },
+    {
+      "section_id": "lyric-0009",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "32b8093308f1cedabf15b64b5eb7ae65f57cddec840c78552bd3fe565c8150f2",
+      "T1": {
+        "status": "reused_round1",
+        "probabilities": {
+          "positive": null,
+          "neutral": null,
+          "negative": null
+        },
+        "valence": null,
+        "registered_valence": null,
+        "absolute_valence_error": null,
+        "reproduction_check": "not_scored_registered_status",
+        "truncated": false
+      },
+      "T3": {
+        "status": "ok",
+        "probabilities": {
+          "negative": 0.04833904281258583,
+          "neutral": 0.4752429127693176,
+          "positive": 0.47641804814338684
+        },
+        "valence": 0.428079005330801,
+        "registered_valence": 0.4280790090560913,
+        "absolute_valence_error": 3.725290298461914e-09,
+        "reproduction_check": "passed",
+        "truncated": false
+      }
+    },
+    {
+      "section_id": "lyric-0010",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "ce58d31b5c6bc7b3fed558b047a93ded71eecb6c3e0f17060588c4a04777521f",
+      "T1": {
+        "status": "reused_round1",
+        "probabilities": {
+          "positive": null,
+          "neutral": null,
+          "negative": null
+        },
+        "valence": null,
+        "registered_valence": null,
+        "absolute_valence_error": null,
+        "reproduction_check": "not_scored_registered_status",
+        "truncated": false
+      },
+      "T3": {
+        "status": "ok",
+        "probabilities": {
+          "negative": 0.09459654986858368,
+          "neutral": 0.08639418333768845,
+          "positive": 0.8190093040466309
+        },
+        "valence": 0.7244127541780472,
+        "registered_valence": 0.724412739276886,
+        "absolute_valence_error": 1.4901161193847656e-08,
+        "reproduction_check": "passed",
+        "truncated": false
+      }
+    },
+    {
+      "section_id": "lyric-0011",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "fed02822bdf78641be6b8584f077f9d6acf83c6ece9a36e4911588bd5e1212d5",
+      "T1": {
+        "status": "reused_round1",
+        "probabilities": {
+          "positive": null,
+          "neutral": null,
+          "negative": null
+        },
+        "valence": null,
+        "registered_valence": null,
+        "absolute_valence_error": null,
+        "reproduction_check": "not_scored_registered_status",
+        "truncated": false
+      },
+      "T3": {
+        "status": "ok",
+        "probabilities": {
+          "negative": 0.002784803044050932,
+          "neutral": 0.012327898293733597,
+          "positive": 0.9848873019218445
+        },
+        "valence": 0.9821024988777936,
+        "registered_valence": 0.9821025133132935,
+        "absolute_valence_error": 1.4435499906539917e-08,
+        "reproduction_check": "passed",
+        "truncated": false
+      }
+    },
+    {
+      "section_id": "lyric-0012",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "c15fadfaf432f51efebdb9621df915dfb2910048616806c4e9b03520fa221d04",
+      "T1": {
+        "status": "reused_round1",
+        "probabilities": {
+          "positive": null,
+          "neutral": null,
+          "negative": null
+        },
+        "valence": null,
+        "registered_valence": null,
+        "absolute_valence_error": null,
+        "reproduction_check": "not_scored_registered_status",
+        "truncated": false
+      },
+      "T3": {
+        "status": "ok",
+        "probabilities": {
+          "negative": 0.21395963430404663,
+          "neutral": 0.4291161596775055,
+          "positive": 0.35692426562309265
+        },
+        "valence": 0.14296463131904602,
+        "registered_valence": 0.14296463131904602,
+        "absolute_valence_error": 0.0,
+        "reproduction_check": "passed",
+        "truncated": false
+      }
+    },
+    {
+      "section_id": "lyric-0013",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "96307880c1f12a3bd874bd8d6ea4d633800a20dd298bcdbe4bdfa3ad4534eec8",
+      "T1": {
+        "status": "reused_round1",
+        "probabilities": {
+          "positive": null,
+          "neutral": null,
+          "negative": null
+        },
+        "valence": null,
+        "registered_valence": null,
+        "absolute_valence_error": null,
+        "reproduction_check": "not_scored_registered_status",
+        "truncated": false
+      },
+      "T3": {
+        "status": "ok",
+        "probabilities": {
+          "negative": 0.04822944477200508,
+          "neutral": 0.5761043429374695,
+          "positive": 0.37566623091697693
+        },
+        "valence": 0.32743678614497185,
+        "registered_valence": 0.32743677496910095,
+        "absolute_valence_error": 1.1175870895385742e-08,
+        "reproduction_check": "passed",
+        "truncated": false
+      }
+    },
+    {
+      "section_id": "lyric-0014",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "dc60aebe15818e57039dd29e549961aba83f126996dda9f52eb12b052386b43a",
+      "T1": {
+        "status": "reused_round1",
+        "probabilities": {
+          "positive": null,
+          "neutral": null,
+          "negative": null
+        },
+        "valence": null,
+        "registered_valence": null,
+        "absolute_valence_error": null,
+        "reproduction_check": "not_scored_registered_status",
+        "truncated": false
+      },
+      "T3": {
+        "status": "ok",
+        "probabilities": {
+          "negative": 0.07910878956317902,
+          "neutral": 0.14352549612522125,
+          "positive": 0.7773656845092773
+        },
+        "valence": 0.6982568949460983,
+        "registered_valence": 0.6982569098472595,
+        "absolute_valence_error": 1.4901161193847656e-08,
+        "reproduction_check": "passed",
+        "truncated": false
+      }
+    },
+    {
+      "section_id": "lyric-0015",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "0d7462105e09539bfd372c58061adbe3fe75248e858225eacf1236fae51df287",
+      "T1": {
+        "status": "reused_round1",
+        "probabilities": {
+          "positive": null,
+          "neutral": null,
+          "negative": null
+        },
+        "valence": null,
+        "registered_valence": null,
+        "absolute_valence_error": null,
+        "reproduction_check": "not_scored_registered_status",
+        "truncated": false
+      },
+      "T3": {
+        "status": "ok",
+        "probabilities": {
+          "negative": 0.07486186921596527,
+          "neutral": 0.34596097469329834,
+          "positive": 0.57917720079422
+        },
+        "valence": 0.5043153315782547,
+        "registered_valence": 0.5043153166770935,
+        "absolute_valence_error": 1.4901161193847656e-08,
+        "reproduction_check": "passed",
+        "truncated": false
+      }
+    },
+    {
+      "section_id": "span-0000",
+      "set": "secondary",
+      "language": "ko",
+      "text_sha256": null,
+      "T1": {
+        "status": "missing_text",
+        "probabilities": {
+          "positive": null,
+          "neutral": null,
+          "negative": null
+        },
+        "valence": null,
+        "registered_valence": null,
+        "absolute_valence_error": null,
+        "reproduction_check": "not_scored_registered_status",
+        "truncated": null
+      },
+      "T3": {
+        "status": "missing_text",
+        "probabilities": {
+          "positive": null,
+          "neutral": null,
+          "negative": null
+        },
+        "valence": null,
+        "registered_valence": null,
+        "absolute_valence_error": null,
+        "reproduction_check": "not_scored_registered_status",
+        "truncated": null
+      }
+    }
+  ]
+}

@@ -1,0 +1,802 @@
+{
+  "schema_version": 1,
+  "track_id": "2eaJ2Zd3NU5ZFweqW5R3ZW",
+  "cohort": "random",
+  "display_only": true,
+  "registered_scores_unchanged": true,
+  "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+  "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "prompt_sha256": "ffdf21672c16d12394441664976928ac03a51b35d721d3925cca9be8adc58e3d",
+  "registered_checkpoint_sha256": "efd022bcfc4c8f83d01b6e9da054191d744a801af5dab9aa47678b5244d95690",
+  "reading_label": "L1's interpretation of the lyrics",
+  "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+  "reading_type": "model_interpretation",
+  "decoding": {
+    "do_sample": false,
+    "num_beams": 1,
+    "max_new_tokens": 128,
+    "torch_dtype": "float16",
+    "seed": 20261115
+  },
+  "overlap_rule": "NFKC/casefold 4-word ngrams; additionally 4 consecutive ja/ko/zh script characters with spacing/punctuation removed; block if either overlaps.",
+  "sections": [
+    {
+      "section_id": "lyric-0000",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "b6984ccc54de543d72a7e5adf14e4da9c063af651a23edad99a7404c3be9810b",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is repetitive and rhythmic, suggesting a sense of cyclical motion or mechanical persistence. The themes imply continuity, routine, or an unchanging pattern that may evoke feelings of inevitability or detachment.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "36689cf23943fd6b546732f645db2593ed11b07a231ea700b1d842caa2da56d0"
+    },
+    {
+      "section_id": "lyric-0001",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "f07b8bd5fc82df619248ba741c12316013a5ba6b0713a698b3cbcdae825201ce",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests a sense of urgency and defiance, while the themes explore individual agency and the tension between direction and uncertainty.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "a2050060db7608009b29daf7ce9ef45f34007bf4db75193ddd842b86e4dd0dc6"
+    },
+    {
+      "section_id": "lyric-0002",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "9b2eab2116e2f4aadcc858255b1f58f9036d7cc899abca0771065a08feff8e36",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests a sense of urgency and forward motion, while the themes explore departure, transformation, and the pursuit of new beginnings.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "d777b07faca6129848fa894883bb7b8d5124254ebaa1e04b4f5622f13d4b29d2"
+    },
+    {
+      "section_id": "lyric-0003",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "ad2a24d6dcba53e7a5da5759b2b6d91eaf049924af26f066fc6ed84ab0a61b49",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of weary resignation and quiet defiance, while the themes explore the tension between personal identity and external judgment.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "07c65b2c8588df6d5cd9ada54fc9db62b2fb515d48405c3c14b64e024776d183"
+    },
+    {
+      "section_id": "lyric-0004",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "bd5cf2b624e72eb0d276bc547c4250047054d45c43a476aa9d23ff51021081a1",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is resolute and final, conveying a sense of irreversible departure. The theme centers on the inevitability of leaving behind a past or situation, emphasizing closure and movement forward.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "2d589225e8dec0c8eb2f63d9334458496c764543c0bc5774045b5b9a74380d4e"
+    },
+    {
+      "section_id": "lyric-0005",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "678827a35be1f33c18a43d76f7147790a533c71b3d75ec3713a5e81b7424dc3b",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a definitive and resolute departure, suggesting finality and a rejection of past connections. The theme centers on liberation through movement, implying a break from constraints or responsibilities.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "c7b95b0cd8ef3768f824b9c7a11e327a73960c2c5dcefa9349053e495d5f6dc1"
+    },
+    {
+      "section_id": "lyric-0006",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "3bfe46b2bfa8cbab10ddbd9974efbf27aa01f963be16f91176d5ab789cde27cc",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests a casual, open-ended inquiry, inviting response with a sense of immediacy and informality. The theme centers on communication and mutual exchange, emphasizing the fluidity and unpredictability of interaction.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "b8f8f5456dfe2a35a9d7a4e058354ee06c5d81706af4f68a93a24790950d7058"
+    },
+    {
+      "section_id": "lyric-0007",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "9cc7ff6895e7bf153b4554fe5eb96958177b83a8fea9f34b0fa9a61e89601a4f",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is resolute and final, conveying a sense of irreversible departure. The theme centers on the inevitability of leaving behind a past or a situation, emphasizing closure and movement forward.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "61b0313375bc639f5f9b26df82850ebe2b398b995f4acf092ec9c1ae83c801fb"
+    },
+    {
+      "section_id": "lyric-0008",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "9b5e07cc84c4656c961aac32170852e817e278135181a3886e3fbeaea4529c9e",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of finality and resolve, suggesting a departure that is both decisive and possibly irreversible. The theme centers on the idea of leaving behind a past or situation, emphasizing movement, separation, and the closure of a chapter.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "f2923bb5851a7ad259f4f244742c5c01249b8a557730b53779030a922f6fe365"
+    },
+    {
+      "section_id": "lyric-0009",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "e46edd6d825967ea025f8fd055b53806d532cd909b0279878e3117bcfa494ac8",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests disbelief and irony, contrasting a casual, forward-moving directive with an unexpected or absurd context. The theme explores the tension between action and hesitation, implying a disconnect between expectation and reality.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "1d24f236f53ab997c502473ba13246f47f2dc48c458576fbbe46c247c2c0b098"
+    },
+    {
+      "section_id": "lyric-0010",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "f7bd5a74499be0dcaff033721c9d9d8dfebad10f18f44893a28668d4f45e6048",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests uncertainty and hesitation, reflecting a moment of ambiguity in communication. The theme centers on the tension between spoken words and their perceived meaning.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "833109e45d4021e8cf9c8e7d3083904788c9e4be7f4ceeaaf1e929a6fc993d14"
+    },
+    {
+      "section_id": "lyric-0011",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "2c9e058d9477d81cd9e35a70f8882b6545fc81e389c866d95daa8fb47f914f6e",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests a casual, inviting beginning, possibly signaling a shift or introduction to a broader emotional or narrative context. The theme may revolve around connection, anticipation, or the emergence of something unresolved or open-ended.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "26248ad1375569848b5d0baf26ec5ecafcfc90a95a280a41520430c0cc7db226"
+    },
+    {
+      "section_id": "lyric-0012",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "38e98cf7d61b4f04cbde37ed7eac1ccf8d685ba9b09ebf1894eaa243c43dad80",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys frustration and a sense of emotional exhaustion, while the central theme explores the tension between expectation and treatment in interpersonal relationships.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "0c944b8d3ef7d7b53377bc809602991aa08e2a0853d14d556af78a5a056dc96d"
+    },
+    {
+      "section_id": "lyric-0013",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "65c81a808705cba600e559a7f905521cbe31c4f155459312b4dbc1ef06215113",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests resilience and a quiet determination to recover from hardship. The theme centers on the inevitability of resurgence despite current struggles.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "e95f8f086a3f73078567c2eb835fd5c5d8069d234715992465c49ee51ecd2b51"
+    },
+    {
+      "section_id": "lyric-0014",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "22e61c91010d28b0040b63806b909e9cf91b1e9526bfdf923c8b37d02149a5f0",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a resigned acceptance of limitations, emphasizing inevitability over resistance. The central theme explores the inescapable nature of financial constraints as a defining force in human action.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "4640e2e95ccb6310d76b612a1d4ceea1244f7a56e5e92986df9771bba5fe39eb"
+    },
+    {
+      "section_id": "lyric-0015",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "22e61c91010d28b0040b63806b909e9cf91b1e9526bfdf923c8b37d02149a5f0",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a resigned acceptance of limitations, emphasizing inevitability over resistance. The central theme explores the inescapable nature of financial constraints as a defining force in human action.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "4640e2e95ccb6310d76b612a1d4ceea1244f7a56e5e92986df9771bba5fe39eb"
+    },
+    {
+      "section_id": "lyric-0016",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "fe20154ed526222c5d7995e0d87b020c1b03080703b41850bc891fdf0315c611",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests a passive acceptance of departure, implying resignation or indifference to change. The theme centers on the quiet inevitability of separation and the lack of emotional resistance in facing it.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "4c189d3e7cafa563d9276a13749bd7902b2f9c7d21c805daa68a151564f88b04"
+    },
+    {
+      "section_id": "lyric-0017",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "9cc7ff6895e7bf153b4554fe5eb96958177b83a8fea9f34b0fa9a61e89601a4f",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is resolute and final, conveying a sense of irreversible departure. The theme centers on the inevitability of leaving behind a past or a situation, emphasizing closure and movement forward.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "61b0313375bc639f5f9b26df82850ebe2b398b995f4acf092ec9c1ae83c801fb"
+    },
+    {
+      "section_id": "lyric-0018",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "9311ed09a2266b2d7efc7a01b5087c6be1aa536406326793285a96b3d2fc1b3b",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of finality and resolve, suggesting a departure that is both decisive and emotionally charged. The central theme explores the cost of leaving behind a past, implying a transformation that may come at the expense of connection or return.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "1c29ea2bec6129efe2a2da99d7262c81179cb945e7db22a62a8c8ba2903f7444"
+    },
+    {
+      "section_id": "lyric-0019",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "004e88e51a2e5a9245006cd491d9eb8462a6771e77fde28195677b66e4bbe724",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests a casual, inquisitive engagement, inviting response and interaction. The theme centers on openness and the exchange of thoughts or opinions in a spontaneous, unstructured setting.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "8152f8a15936d38edaaa40c90d07c1dc27cf7fe2e7b793e16c564d31715587e3"
+    },
+    {
+      "section_id": "lyric-0020",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "5a4462dcb269cbd53751551a7320c58859ec4c4637155c5b3acf85b9a7c741c8",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests a call to action rooted in urgency and movement, conveying a sense of departure from stagnation. The central theme explores the pursuit of change, freedom, and the possibility of reinvention through forward motion.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "c6b52b21e665ee4f5e7a73b6c88bf2db6ae94ce168f376b7b0550572808d4bf0"
+    },
+    {
+      "section_id": "lyric-0021",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "49ec1d994fb2237d15cf09bb6208567ec5b0ca11a9ede8a84cb3d0483f8b9134",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a firm, resolute rejection, emphasizing finality and emotional distance. The theme centers on the enduring nature of separation and the refusal to reestablish connection.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "00371d811d38f3d483a7813b2192f3179d2a705779bb31f2d82f0b771995907c"
+    },
+    {
+      "section_id": "lyric-0022",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "f03caa3778e21ce5627a7ff61245e3a98c338f161ad15769fe63479b9e25ba37",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a definitive and final departure, suggesting a sense of irreversible change and emotional severance. The theme centers on loss of connection and the inevitability of separation.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "e7dc467c52cb62993f70b00de58b17f2945daa0a61a13e649a5f8bcaa045f8c9"
+    },
+    {
+      "section_id": "lyric-0023",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "80b0c34e8beb77b17948392e32f31bb5bba320114c7a045c256d133d9f09f8df",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys surprise and disbelief, suggesting a reaction to something unexpected or contradictory. The theme implies a disconnect between expectation and reality, highlighting the tension that arises when assumptions are challenged.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "3f9823e41e924fdd6d5f58590d4b7e64db3cec37c6c52695071370e1aaa49b3d"
+    },
+    {
+      "section_id": "lyric-0024",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "d5dcc6db1a599d04b21666de0885c8ba692fe68785ffcfd58aa0f21ef9ea9274",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests a sense of movement and departure, implying a transition from one state to another. The theme centers on journey, change, and the act of leaving behind, possibly symbolizing personal or existential transformation.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "dad20f1ad2fd8bb3e20af9ba2831170a6c99338b49eb293661d6f1aa1d27862f"
+    },
+    {
+      "section_id": "lyric-0025",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "004e88e51a2e5a9245006cd491d9eb8462a6771e77fde28195677b66e4bbe724",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests a casual, inquisitive engagement, inviting response and interaction. The theme centers on openness and the exchange of thoughts or opinions in a spontaneous, unstructured setting.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "8152f8a15936d38edaaa40c90d07c1dc27cf7fe2e7b793e16c564d31715587e3"
+    },
+    {
+      "section_id": "lyric-0026",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "d5dcc6db1a599d04b21666de0885c8ba692fe68785ffcfd58aa0f21ef9ea9274",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests a sense of movement and departure, implying a transition from one state to another. The theme centers on journey, change, and the act of leaving behind, possibly symbolizing personal or existential transformation.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "dad20f1ad2fd8bb3e20af9ba2831170a6c99338b49eb293661d6f1aa1d27862f"
+    },
+    {
+      "section_id": "lyric-0027",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "10e8696a02ba221ff46aa332f136bd9db1f6e4972a54d7fc6ee9dd83124f8cec",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests a casual, conversational exchange with a hint of playful urgency, while the themes explore movement, personal choice, and spontaneous decision-making.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "b4f2e91a348cf8b012bb8b9546481e04e20ce500ef0f31958f0c46ac715d3c08"
+    },
+    {
+      "section_id": "lyric-0028",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "5de593b7ea8895bed84c5ab0dbbc241beb653e6671d3e4ef9a63285a084c0912",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests a moment of hesitation and quiet inquiry, conveying a sense of uncertainty and openness. The themes explore communication, mutual understanding, and the subtle dynamics of interaction between individuals.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "f708766647ff1169902037a15eb30e29eb1ba398a06469b95b22d8a71501ab0f"
+    },
+    {
+      "section_id": "lyric-0029",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "bb6622fa06e06cc9fb13183e6f5c86f0f57e68d3bad4d71b34435d9b8233b80a",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests a moment of hesitant engagement, marked by uncertainty and a quiet search for connection. The themes revolve around communication, ambiguity, and the effort to establish meaning in a fragmented exchange.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "20b0ddf96e5b556cd50339c551e0d83b3e8d5265126d8849abb262cfe81cf7c1"
+    },
+    {
+      "section_id": "lyric-0030",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "04cc02cf6321a96c8ad048cae7e83648f2517c4cf6ad2bfcba8cc6190c0952d7",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a resilient, defiant spirit amid frustration, emphasizing perseverance and a quiet promise of eventual recovery. The central theme explores the tension between enduring hardship and the unyielding belief in personal restoration.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "c9cd6f50447288675e1f1897bc51526fc245af5d4d008270a9e01dfaaf206b85"
+    },
+    {
+      "section_id": "lyric-0031",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "cdb4a0544f812a4dadb5f75892e612ec1def3c5d8ee7ba22cc250fba87c9bad5",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a resigned acceptance of limitations, emphasizing systemic or structural barriers to action. The theme centers on the inescapability of financial or material constraints as a fundamental obstacle to possibility.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "d3065b032822fd1250320cc308d5b3c078db843192c015bd2af57fa7e70c8a11"
+    },
+    {
+      "section_id": "lyric-0032",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "c426a942c913775e22b4f7763378c6ad07db036a967d543ce33c81addbea8a3c",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests a passive acceptance of departure, implying resignation or compliance rather than active decision or emotion. The theme centers on the quiet inevitability of leaving, framed as a response to an external assertion rather than a personal choice.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "26fb8da6c929c684ceab353a175ccff3f9f8a65e7923f609b63165143757e47f"
+    },
+    {
+      "section_id": "lyric-0033",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "c426a942c913775e22b4f7763378c6ad07db036a967d543ce33c81addbea8a3c",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests a passive acceptance of departure, implying resignation or compliance rather than active decision or emotion. The theme centers on the quiet inevitability of leaving, framed as a response to an external assertion rather than a personal choice.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "26fb8da6c929c684ceab353a175ccff3f9f8a65e7923f609b63165143757e47f"
+    },
+    {
+      "section_id": "lyric-0034",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "5a4462dcb269cbd53751551a7320c58859ec4c4637155c5b3acf85b9a7c741c8",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests a call to action rooted in urgency and movement, conveying a sense of departure from stagnation. The central theme explores the pursuit of change, freedom, and the possibility of reinvention through forward motion.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "c6b52b21e665ee4f5e7a73b6c88bf2db6ae94ce168f376b7b0550572808d4bf0"
+    },
+    {
+      "section_id": "lyric-0035",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "49ec1d994fb2237d15cf09bb6208567ec5b0ca11a9ede8a84cb3d0483f8b9134",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a firm, resolute rejection, emphasizing finality and emotional distance. The theme centers on the enduring nature of separation and the refusal to reestablish connection.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "00371d811d38f3d483a7813b2192f3179d2a705779bb31f2d82f0b771995907c"
+    },
+    {
+      "section_id": "lyric-0036",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "f03caa3778e21ce5627a7ff61245e3a98c338f161ad15769fe63479b9e25ba37",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a definitive and final departure, suggesting a sense of irreversible change and emotional severance. The theme centers on loss of connection and the inevitability of separation.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "e7dc467c52cb62993f70b00de58b17f2945daa0a61a13e649a5f8bcaa045f8c9"
+    },
+    {
+      "section_id": "lyric-0037",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "106ffcf62594262a50d7d64a78233f67798a2578e6589a1c55305cea65f96198",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests a moment of abrupt, almost dismissive awareness, while the central theme implies a sense of detachment or unresolved tension in a quiet, unspoken context.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "b4c868ae6c2ff22eb85371f5d5784a82e18251b374bbb45b5f1b8ee3c501a166"
+    },
+    {
+      "section_id": "lyric-0038",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "a47b3ff79f6eaa7a0abbcc1a62ccf7e3a57e1577b61a19da0a034e426753bfaa",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is resolute and final, conveying a strong sense of departure and irreversible change. The theme centers on severance from the past, emphasizing a decisive break that leaves no room for return.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "ce51074150709b429ad79bb225a1d1e9189fcf16191890ad9c7f2b8e543241f7"
+    },
+    {
+      "section_id": "lyric-0039",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "9f5bc268253d5c1ec6fd533f650ef694fb3b87a14174f0aaa6615fa27bb03aca",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests a sense of anticipation or unresolved emotion, while the themes imply introspection and the lingering presence of unspoken feelings.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "48513b651937ec75c19e1b629494a0def3e2e5d78d354d8ae04bfc87c1606556"
+    },
+    {
+      "section_id": "lyric-0040",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "057621ba351a2312d5bee1f65bede6986e15c706dda446e7623d5f0b0e217b5f",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a firm, final rejection, and the theme centers on the irreversible end of a relationship or connection.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "914c176488e5a591a31c600591549cebb855bcc4796826c2e202f43a8284294c"
+    },
+    {
+      "section_id": "lyric-0041",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "85782ccd409a2a33c113da6bca21215cdf2f56e4813cb8531665f507079af5d9",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of finality and emotional distance, suggesting a break that is both decisive and emotionally charged. The central theme explores separation and the irreversible nature of choices made in the face of personal or relational conflict.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "f2d25497dd0c276b44272ff4cba8757da7b9f4fa91f4327276794855198ac06b"
+    },
+    {
+      "section_id": "lyric-0042",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "4d36de205f67217fd0da4089eb026edc167a94cb8cbc4b5450ee5c149fd90760",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of sharp disbelief and emotional rejection, while the central theme explores the rupture of connection and the refusal to reestablish a broken bond.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "f627ecc5b334712112993c40183c6ef9c94cf40ba47a6f0fd8eee46536c841e0"
+    },
+    {
+      "section_id": "lyric-0043",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "5f88ed7f7facbac01c2a2ebf5b8b1de72a35c98760ab731d3331097cce608416",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of confusion and emotional distance, suggesting a struggle to connect or reconcile differences. The central theme explores the difficulty of maintaining or restoring a relationship when mutual understanding has broken down.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "dcb22e2697fe76989179cf2546b27ae5ab57d2b65f1ac84d7ba46913a0dfeaf8"
+    },
+    {
+      "section_id": "lyric-0044",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "af8cb36a2f533e4768e80ecc82a97d14cd2b8617642d773955c2c3546ec06689",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of longing and emotional restraint, while the central theme explores the painful decision to sever a connection, possibly out of self-preservation or a desire to protect someone from further harm.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "5e2ff6a20b83c7bce9d4877efa8398be38273fa219fe160cdf185c0ac1fa273f"
+    },
+    {
+      "section_id": "span-0000",
+      "set": "secondary",
+      "language": "uncertain",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    }
+  ]
+}

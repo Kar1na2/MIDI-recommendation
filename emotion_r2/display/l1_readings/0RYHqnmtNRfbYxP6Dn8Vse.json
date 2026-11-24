@@ -1,0 +1,139 @@
+{
+  "schema_version": 1,
+  "track_id": "0RYHqnmtNRfbYxP6Dn8Vse",
+  "cohort": "random",
+  "display_only": true,
+  "registered_scores_unchanged": true,
+  "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+  "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "prompt_sha256": "ffdf21672c16d12394441664976928ac03a51b35d721d3925cca9be8adc58e3d",
+  "registered_checkpoint_sha256": "4a30a111d4a463f8c33e05bcc7598b8985be34ad610966b43e4e22cdf5cadd2d",
+  "reading_label": "L1's interpretation of the lyrics",
+  "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+  "reading_type": "model_interpretation",
+  "decoding": {
+    "do_sample": false,
+    "num_beams": 1,
+    "max_new_tokens": 128,
+    "torch_dtype": "float16",
+    "seed": 20261115
+  },
+  "overlap_rule": "NFKC/casefold 4-word ngrams; additionally 4 consecutive ja/ko/zh script characters with spacing/punctuation removed; block if either overlaps.",
+  "sections": [
+    {
+      "section_id": "lyric-0000",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": "355d78b6d56c5644ae33cc17d92266d27008bc647119a860b01756d13c2447a4",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys urgency and frustration, emphasizing a sense of being exploited or manipulated. The central theme revolves around the exhaustion of repeated deception or unmet expectations.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "1e070bd6e7a00d8586ca930c2cdc2ecf013bbc2977fdec89674af9506e364219"
+    },
+    {
+      "section_id": "lyric-0001",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": "e970f7f785c6d61945682fbd69248d55e7fa334863d5963ac4025f5b81231be9",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is aggressive and confident, emphasizing dominance and retaliation. The themes revolve around power, defiance, and a sense of invincibility in a confrontational environment.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "2b38abceb601a4b3b7d22cf08c14cd1259488e1ccbb07d17cffa3c9113267651"
+    },
+    {
+      "section_id": "lyric-0002",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": "fc8de27b72bd0d71df03f45d4daec8f6f7f033d8833d5cc8a9bbfb648006f4b1",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests a yearning for transcendence masked by deception, emphasizing a deep, almost desperate desire to escape the limitations of human existence. The theme centers on the tension between illusion and authenticity, with a focus on the soul's longing beyond the surface of mortal life.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "f2df30909cd97241bf0f860cdcf00226bb49235ab2a6ff78a3a495cc2f355167"
+    },
+    {
+      "section_id": "lyric-0003",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": "8c632e92007822e18672e7128b1efa67a1832d2327ca05874d7150f342ee859b",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is defiant and detached, blending aggression with a sense of mechanical confidence. The themes explore identity, invisibility, and the tension between self-perception and external observation.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "9cefb744decddb88e5ea5ce4fa6841f8b32f58f90ea6f0bce879ce7a7562aa20"
+    },
+    {
+      "section_id": "lyric-0004",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": "275d462a6a98e25f556bc8200cc14d8990602efb437719d489b242b249779336",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a confident, self-assured demeanor mixed with a sense of defiance and casual arrogance. Themes of materialism, youth-driven dominance, and social positioning emerge as central motifs.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "a132cfd65c400101fa94d9c4f970862354b1d02f480b1a168c7d32c6c2bffdd9"
+    },
+    {
+      "section_id": "lyric-0005",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "5fb6277bfc8d499c2d5ee3deeea9527eb81467f36c8c60260882fa3228e02f78",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone presents a chilling, intoxicating atmosphere of dominance and emotional detachment, blending supernatural imagery with a sense of internalized power and isolation. The themes explore the duality of allure and danger, where emotional numbness and self-obsession create a barrier between the self and others.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "5bd25edc2b2928061ac1a7ea8b074f8f29fa01a1a9a7f658e96f623fdcf7a231"
+    },
+    {
+      "section_id": "span-0000",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    }
+  ]
+}

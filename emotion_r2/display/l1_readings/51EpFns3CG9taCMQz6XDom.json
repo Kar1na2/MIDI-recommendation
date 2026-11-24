@@ -1,0 +1,156 @@
+{
+  "schema_version": 1,
+  "track_id": "51EpFns3CG9taCMQz6XDom",
+  "cohort": "random",
+  "display_only": true,
+  "registered_scores_unchanged": true,
+  "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+  "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "prompt_sha256": "ffdf21672c16d12394441664976928ac03a51b35d721d3925cca9be8adc58e3d",
+  "registered_checkpoint_sha256": "60eb9e380a8c9b63ebaa7b5b691dcb0e803cfd21ad46a597548086a19188c164",
+  "reading_label": "L1's interpretation of the lyrics",
+  "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+  "reading_type": "model_interpretation",
+  "decoding": {
+    "do_sample": false,
+    "num_beams": 1,
+    "max_new_tokens": 128,
+    "torch_dtype": "float16",
+    "seed": 20261115
+  },
+  "overlap_rule": "NFKC/casefold 4-word ngrams; additionally 4 consecutive ja/ko/zh script characters with spacing/punctuation removed; block if either overlaps.",
+  "sections": [
+    {
+      "section_id": "lyric-0000",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "e0094c658ffec1c6b8b0b37e739eddded238316bbe363e0977c728e9cbf5f062",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests a sense of isolation and absence, emphasizing something unperceived or unacknowledged. The recurring repetition underscores a theme of invisibility—both physical and existential—highlighting the struggle or reality of being overlooked or unseen.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "a70ef9592863afc0d7775c06b984112150283f935382ba677bc938f23f168a45"
+    },
+    {
+      "section_id": "lyric-0001",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "692ca4cc8a5a7d04de8f9d5eea43ba6f31e9519681b2401781aea2854d5a9a78",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of isolation and quiet resistance amid overwhelming external disturbance. The themes explore the struggle of being unseen and unheard, and the emotional weight of existing in a state of passive endurance.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "2996b38e69f010ea55bef56c9d7ef34582c605948554a0c2061c40eb5b76c995"
+    },
+    {
+      "section_id": "lyric-0002",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "af16a6d882fafe980384c5fe470cd58bd42f02309f40c4be5022c18684bda904",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of desperation and emotional vulnerability, reflecting a plea for recognition and connection. The central theme explores the erosion of presence and the fear of being forgotten or unseen in a relationship.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "0119031af754cea93ac7e35a15788e59e2d1ac8316de2f244870a6f295c39cf5"
+    },
+    {
+      "section_id": "lyric-0003",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "57e6d40c262f3afdded9c9427f4b8e5d6568b8e01b7310f41b78fabc72674adb",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of quiet despair and self-reckoning, emphasizing the painful clarity of past choices. The themes revolve around the contrast between idealized hopes and harsh realities, highlighting regret and the exposure of personal failure.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "823c315fa799db5b684ef088b58b3aac8bfa3eaeae9702a0899fe2e638ce9a03"
+    },
+    {
+      "section_id": "lyric-0004",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "6e5636831d4b700d3662798eb5e5e76eaf2745e0c283e2f539e285132fd560ff",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of emotional disconnection and quiet desperation, highlighting the struggle of being overlooked or unheard in a relationship. The central theme explores the fragility of communication and the painful realization that one's presence or voice may no longer be acknowledged.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "b34f3856243ddc9ecc1de93284035626f464af6c4f49ef9a12ed42877c55470d"
+    },
+    {
+      "section_id": "lyric-0005",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "dc7e5b42feb748e86db1a0b4c0304c7ff26fc751c6f7fcba643809bdc46b84f5",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests a sense of isolation and absence, emphasizing something fundamentally unperceived or unattainable. The recurring repetition underscores a theme of invisibility—both physical and emotional—highlighting the struggle to be seen or acknowledged.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "830026bf22cb112c9f4ef5f590f53307cd3c019b65413ea327311b7efd0cd283"
+    },
+    {
+      "section_id": "lyric-0006",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "e3602aaa63ebb58845e79eb9b9fbafae9fc0ad40336e461ca3064418d698aed8",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of quiet desperation and collective silence amid growing tension. The themes explore the erosion of individual identity and the fear of being overlooked in a charged, unspoken environment.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "b1a38140487fbf87e64b3b44a2bc6f2976ea4b1a5621bceb0eb041adb30b44cb"
+    },
+    {
+      "section_id": "span-0000",
+      "set": "secondary",
+      "language": "uncertain",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    }
+  ]
+}

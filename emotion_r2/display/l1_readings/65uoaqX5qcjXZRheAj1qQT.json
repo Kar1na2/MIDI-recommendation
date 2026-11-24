@@ -1,0 +1,118 @@
+{
+  "schema_version": 1,
+  "track_id": "65uoaqX5qcjXZRheAj1qQT",
+  "cohort": "random",
+  "display_only": true,
+  "registered_scores_unchanged": true,
+  "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+  "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "prompt_sha256": "ffdf21672c16d12394441664976928ac03a51b35d721d3925cca9be8adc58e3d",
+  "registered_checkpoint_sha256": "84d6d5bdce546072f6f10e5d3519206f4fe775e651139fcf6078d51bce5fbca0",
+  "reading_label": "L1's interpretation of the lyrics",
+  "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+  "reading_type": "model_interpretation",
+  "decoding": {
+    "do_sample": false,
+    "num_beams": 1,
+    "max_new_tokens": 128,
+    "torch_dtype": "float16",
+    "seed": 20261115
+  },
+  "overlap_rule": "NFKC/casefold 4-word ngrams; additionally 4 consecutive ja/ko/zh script characters with spacing/punctuation removed; block if either overlaps.",
+  "sections": [
+    {
+      "section_id": "lyric-0000",
+      "set": "primary",
+      "language": "fr",
+      "text_sha256": "aadc2affdaafc85cd452603aba50580f791fb3a73dd20dbf35814d62dafe8dd1",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a restless, yearning energy mixed with underlying anxiety and emotional emptiness. The themes explore the search for meaning in isolation, the contrast between fleeting joy and enduring sorrow, and the sense of being adrift in a world that lacks true connection.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "7b9567cf6999a5393df14c1e33b43343f7e6f8c83b752d1840c225e7b054c114"
+    },
+    {
+      "section_id": "lyric-0001",
+      "set": "secondary",
+      "language": "fr",
+      "text_sha256": "af1dee8db7546d66942df2948da1fb1812b722991dd05fdce562d5d5a9f094ba",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a restless, almost desperate energy, oscillating between freedom and fear. The themes explore the tension between escape and emotional pain, suggesting a search for connection amid chaos and uncertainty.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "f423e7af6b3d4bff418e5adbdfe43feca4bd472b91f7f73dab9de6aa67d68a61"
+    },
+    {
+      "section_id": "lyric-0002",
+      "set": "secondary",
+      "language": "fr",
+      "text_sha256": "e1f0e1649ca0610f66de8e257d535fd3dc402cc77693d880a575d6bd316a2b5e",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of urgency and emotional vulnerability, marked by a recurring cycle of fear and escape. The themes explore isolation, the search for release, and the overwhelming presence of pain in a crowded, indifferent world.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "f213498f6de3af7ec6e2f59cf640e70b3eadaf82c8c2d57b162646291669277c"
+    },
+    {
+      "section_id": "lyric-0003",
+      "set": "primary",
+      "language": "fr",
+      "text_sha256": "00ce65d9749b977e67a6f76a9515dcb2daa3c9f03117dcbed20a4e6e77a52324",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a restless, almost ecstatic blend of freedom and anxiety, oscillating between exhilaration and fear. The themes explore the search for personal release amidst chaos, with a sense of surrender and movement that mirrors both joy and inner turmoil.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "85caf15154dcf91b1662f9f233169048b3d09a3d4835a94e7eedd058c19f79c2"
+    },
+    {
+      "section_id": "span-0000",
+      "set": "secondary",
+      "language": "fr",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    },
+    {
+      "section_id": "span-0002",
+      "set": "secondary",
+      "language": "fr",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    }
+  ]
+}

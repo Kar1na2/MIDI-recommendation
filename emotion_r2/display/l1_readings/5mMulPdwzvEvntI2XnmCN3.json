@@ -1,0 +1,182 @@
+{
+  "schema_version": 1,
+  "track_id": "5mMulPdwzvEvntI2XnmCN3",
+  "cohort": "random",
+  "display_only": true,
+  "registered_scores_unchanged": true,
+  "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+  "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "prompt_sha256": "ffdf21672c16d12394441664976928ac03a51b35d721d3925cca9be8adc58e3d",
+  "registered_checkpoint_sha256": "f56aa075401481f2355f84a5205e1f9e780785b05621803ce511e4858aa6083c",
+  "reading_label": "L1's interpretation of the lyrics",
+  "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+  "reading_type": "model_interpretation",
+  "decoding": {
+    "do_sample": false,
+    "num_beams": 1,
+    "max_new_tokens": 128,
+    "torch_dtype": "float16",
+    "seed": 20261115
+  },
+  "overlap_rule": "NFKC/casefold 4-word ngrams; additionally 4 consecutive ja/ko/zh script characters with spacing/punctuation removed; block if either overlaps.",
+  "sections": [
+    {
+      "section_id": "lyric-0000",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "5a5a1657481443bafcbf2f58082b50d76b437634cd03ab7a8225a003e67b0171",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is resolute and driven, emphasizing relentless forward motion and inner strength. The central theme revolves around unwavering determination, self-reliance, and the belief that progress comes through action, regardless of setbacks or external constraints.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "f98153f5d0e6d974ad9ff9db3e1777db3d2270c1f0be6a7aaa35d434e9d0d510"
+    },
+    {
+      "section_id": "lyric-0001",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": "edd9397c0c4f3831d2c8d806e70a1905b4469778e02965e30b8a23a48a767672",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is assertive and self-reliant, emphasizing personal strength and divine support amid perceived internal and external threats. The central theme revolves around self-assertion, resilience, and the cultivation of inner power as a response to challenges and deception.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "4dd06643914db2902c167070a0bdc371e2ed6c824200eb0a359bc9cb703f09c6"
+    },
+    {
+      "section_id": "lyric-0002",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "82642c4378889d1c49cf0422841c7f5e05bdd4fc0ec8f495fd3d1647e9c7b86c",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is resolute and confident, emphasizing inner strength and unwavering direction. The central theme revolves around self-determination and the belief that personal purpose transcends external challenges and adversity.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "20980fecb80a87dd5fd8a1e450ffb3b3a561f05f8c6800128778d3ad63b54045"
+    },
+    {
+      "section_id": "lyric-0003",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "f24a1114a9ed522bbebb8cb4c58f7645f33e4b1f9af3461f221e8499fbfef9df",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is resolute and self-reflective, emphasizing personal growth and intentional action. The central themes revolve around overcoming internal struggle, taking responsibility for one's influence, and shifting focus from fear and negativity to constructive, mindful living.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "845d1849f56ac2cef6dbb9958e0b618525c80e4a89552896ab215027b14767f7"
+    },
+    {
+      "section_id": "lyric-0004",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": "9e9207608ffe70c43e5c151c72bbff599c6e71adc06eb845c33ebcddd4145817",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is assertive and self-reflective, emphasizing personal strength and inner focus amid perceived external threats. The central theme revolves around self-reliance and spiritual grounding as a means of maintaining identity and resilience.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "8a9e7c3f3371b3a3427cb9f7bdc9ba63d7535afbb5a66ed255b78f6aba4b6139"
+    },
+    {
+      "section_id": "lyric-0005",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "43f3a9b5c40e518886e0852bf05186205a999bc5e3c92eeabd70bb06eaf4dceb",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is resolute and confident, emphasizing inner strength and unwavering direction. The central theme revolves around personal destiny and the belief that one's purpose transcends adversity and external pressures.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "0f15a6e9ce67d5f0f6c591b056bd870eeeb1a9dffe36a9b0d8b4715b08e8b690"
+    },
+    {
+      "section_id": "lyric-0006",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "5dd997949da24978beb0e96cee56493e1fc8f23c2afeebf2ff9eb49670065912",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is reverent and deeply rooted in a sense of spiritual abundance, emphasizing gratitude and the presence of divine or universal blessings. The repetition suggests a meditative quality, focusing on the enduring and all-encompassing nature of positive, sustaining forces.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "0e56f5e4b20ee4f4f36545cd5d0075104aea56225828a98de57a10164b194c63"
+    },
+    {
+      "section_id": "span-0000",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    },
+    {
+      "section_id": "span-0002",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    },
+    {
+      "section_id": "span-0005",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    }
+  ]
+}

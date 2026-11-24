@@ -1,0 +1,135 @@
+{
+  "created_utc": "2026-11-22T15:16:29.035893+00:00",
+  "library_count": 803,
+  "audio_available": 728,
+  "missing_audio": 75,
+  "pending_backend": 668,
+  "near_duplicate_ids": 7,
+  "mean_325_bytes": {
+    "backend_bytes": 172558510.37846154,
+    "emotion_stem_bytes": 18920692.452307694,
+    "r2_score_bytes": 181238.96923076923
+  },
+  "free_bytes": 863421304832,
+  "projected_additional_bytes": 129175291007.6923,
+  "margin": 1.3,
+  "disk_passed": true,
+  "stage_timings_from_actual_logs": {
+    "beats": {
+      "observations": 300,
+      "mean_seconds": 5.542113333333333,
+      "total_logged_seconds": 1662.6340000000005,
+      "projected_library_hours": 1.120738474074074
+    },
+    "quantize": {
+      "observations": 299,
+      "mean_seconds": 0.10798996655518395,
+      "total_logged_seconds": 32.28899999999998,
+      "projected_library_hours": 0.021837971014492755
+    },
+    "layers": {
+      "observations": 299,
+      "mean_seconds": 0.1473076923076923,
+      "total_logged_seconds": 44.04499999999997,
+      "projected_library_hours": 0.02978888888888889
+    },
+    "patterns": {
+      "observations": 299,
+      "mean_seconds": 0.44383277591973247,
+      "total_logged_seconds": 132.70599999999996,
+      "projected_library_hours": 0.0897528502415459
+    },
+    "rhythm": {
+      "observations": 299,
+      "mean_seconds": 1.4551438127090301,
+      "total_logged_seconds": 435.0879999999999,
+      "projected_library_hours": 0.29426241545893717
+    },
+    "tuning": {
+      "observations": 274,
+      "mean_seconds": 2.4633248175182483,
+      "total_logged_seconds": 674.9509999999998,
+      "projected_library_hours": 0.4981390186536902
+    },
+    "separation": {
+      "observations": 274,
+      "mean_seconds": 12.288919708029198,
+      "total_logged_seconds": 3367.1640000000007,
+      "projected_library_hours": 2.4850926520681265
+    },
+    "transcription": {
+      "observations": 273,
+      "mean_seconds": 334.9056446886447,
+      "total_logged_seconds": 91429.241,
+      "projected_library_hours": 67.7253637037037
+    },
+    "routing": {
+      "observations": 99,
+      "mean_seconds": 231.88235353535353,
+      "total_logged_seconds": 22956.353000000006,
+      "projected_library_hours": 46.891764826038155
+    },
+    "T1": {
+      "observations": 325,
+      "mean_seconds": 0.059700324338464096,
+      "total_logged_seconds": 19.40260541000083,
+      "projected_library_hours": 0.012072732255111629
+    },
+    "T3": {
+      "observations": 325,
+      "mean_seconds": 0.09281181997231006,
+      "total_logged_seconds": 30.163841491000767,
+      "projected_library_hours": 0.018768612483289367
+    },
+    "L1": {
+      "observations": 325,
+      "mean_seconds": 6.910694583661535,
+      "total_logged_seconds": 2245.97573969,
+      "projected_library_hours": 1.3974960158071104
+    },
+    "M1": {
+      "observations": 325,
+      "mean_seconds": 37.5560502368554,
+      "total_logged_seconds": 12205.716326978007,
+      "projected_library_hours": 7.594667936786314
+    },
+    "M2": {
+      "observations": 324,
+      "mean_seconds": 19.05232266198147,
+      "total_logged_seconds": 6172.95254248199,
+      "projected_library_hours": 3.8528030272006974
+    },
+    "emotion_separation": {
+      "observations": 325,
+      "mean_seconds": 21.72634067490153,
+      "total_logged_seconds": 7061.060719342996,
+      "projected_library_hours": 4.393548892035643
+    },
+    "M3": {
+      "basis": "Actual completed 325-run worker start/end timestamps in continuation_run.log; includes overhead, not utilization",
+      "development_wall_seconds": 13404,
+      "projected_library_hours": 8.340266666666666
+    },
+    "V1": {
+      "basis": "Actual completed 325-run worker start/end timestamps in continuation_run.log; includes overhead, not utilization",
+      "development_wall_seconds": 660,
+      "projected_library_hours": 0.4106666666666666
+    },
+    "V3": {
+      "basis": "Actual completed 325-run worker start/end timestamps in continuation_run.log; includes overhead, not utilization",
+      "development_wall_seconds": 3603,
+      "projected_library_hours": 2.2418666666666667
+    },
+    "pYIN_gate": {
+      "basis": "Actual seeded ten-song development validation; extrapolation only",
+      "development_wall_seconds": 198.131545922,
+      "projected_library_hours": 4.006660150867111
+    },
+    "L1_display": {
+      "basis": "Actual 325-run display summary; includes identical-input reuse",
+      "development_wall_seconds": 3154.850672013,
+      "projected_library_hours": 1.9630181959192
+    }
+  },
+  "timing_limitations": "Inference logs omit some startup/verification/interruption overhead. T1 development timings include round-one reuse, so do not provide a reliable full-rescoring estimate. Lyrics and input preparation are unlogged; zero is not inferred. Backend routing timings are reported separately and are not part of Task B Pass 1. Projections use mean song durations and are refreshed from this run."
+}

@@ -1,0 +1,152 @@
+{
+  "schema_version": 1,
+  "track_id": "22hKfTC8X8o0ERmsAZNZsj",
+  "cohort": "random",
+  "display_only": true,
+  "registered_scores_unchanged": true,
+  "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+  "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "prompt_sha256": "ffdf21672c16d12394441664976928ac03a51b35d721d3925cca9be8adc58e3d",
+  "registered_checkpoint_sha256": "bebaa860887a93e6a38ecb23491210deee2e24cd27354e7d686ca0a1a1baa0c5",
+  "reading_label": "L1's interpretation of the lyrics",
+  "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+  "reading_type": "model_interpretation",
+  "decoding": {
+    "do_sample": false,
+    "num_beams": 1,
+    "max_new_tokens": 128,
+    "torch_dtype": "float16",
+    "seed": 20261115
+  },
+  "overlap_rule": "NFKC/casefold 4-word ngrams; additionally 4 consecutive ja/ko/zh script characters with spacing/punctuation removed; block if either overlaps.",
+  "sections": [
+    {
+      "section_id": "lyric-0000",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "f5722e1c9af66a5d79e4e9ded2f4e6751ddddd4b929cffcadc4d0336ee633c7d",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a confident, energetic rhythm with a touch of playful defiance, emphasizing spontaneity and individuality. The themes explore identity, self-expression, and the allure of living freely outside conventional norms.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "905e883ac2fb15ac20f855884e386d312e76a8f817e47061a3b661a695b25d95"
+    },
+    {
+      "section_id": "lyric-0001",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "2dc1669d963c6718683c5083317d737d148d4817dd01780db97327d6f4154f9e",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a confident, inviting assurance, blending casual charm with subtle romantic attentiveness. The themes revolve around personal availability, emotional intimacy, and the desire for immediate connection within a social setting.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "bef3705a2fb2e437834c7dea11f525cb1062973eff29756287c0f1dcb07b9030"
+    },
+    {
+      "section_id": "lyric-0002",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "7b8138cacb9dff2f763f08bfb9e12b301ba9c50dfd1fb39d1af48435a93b3743",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is vibrant and energetic, emphasizing spontaneity and unfiltered expression. The themes revolve around freedom, individuality, and the allure of living without constraints.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "63b6c916848739a700954ecf5f8e640c922b4ec98d7678ca8b870d77982eac14"
+    },
+    {
+      "section_id": "lyric-0003",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "368b05a2422cf840457eff267288788dec09e6ef494b3a740b7989da97b14201",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is confident and defiant, blending self-assurance with a touch of irreverent humor. The themes revolve around unapologetic self-expression, independence, and a playful challenge to societal expectations.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "8bcda344d5e3e7a84796bbc6641feee16fec5a23f346c10fa779518a84023790"
+    },
+    {
+      "section_id": "lyric-0004",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": "c0982931ce6aa8efdbde426f43a49101155868bd77feced1c54b0953bd5b811e",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a confident, energetic rhythm with a touch of playful defiance, emphasizing spontaneity and unapologetic individuality. Themes of freedom, self-expression, and the allure of living outside conventional norms emerge, highlighting a lifestyle that values authenticity and boldness.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "d4f1daf063bee86311a07e607d8e3d7ed929cb00385d7768d265f028c9112dab"
+    },
+    {
+      "section_id": "lyric-0005",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": "06bd72e9338f3449edaf02e8245057ecea0147a0fe3abe577dbddb26a64f41bc",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests a sense of playful defiance or casual recklessness, while the central theme explores the tension between control and unpredictability in interpersonal dynamics.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "7063adac8d0f504d0816276360a0ea1c0ae14b6b8396427c8a0c461d88d86027"
+    },
+    {
+      "section_id": "span-0000",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    },
+    {
+      "section_id": "span-0005",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    }
+  ]
+}

@@ -1,0 +1,122 @@
+{
+  "schema_version": 1,
+  "track_id": "5BEZtiV4ClWO0L2J0Mw7Hf",
+  "cohort": "random",
+  "display_only": true,
+  "registered_scores_unchanged": true,
+  "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+  "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "prompt_sha256": "ffdf21672c16d12394441664976928ac03a51b35d721d3925cca9be8adc58e3d",
+  "registered_checkpoint_sha256": "79c09e43e9893d8f7dbb70648d3b5256b21a35ae3529c26794f2fd7fb24c1a1d",
+  "reading_label": "L1's interpretation of the lyrics",
+  "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+  "reading_type": "model_interpretation",
+  "decoding": {
+    "do_sample": false,
+    "num_beams": 1,
+    "max_new_tokens": 128,
+    "torch_dtype": "float16",
+    "seed": 20261115
+  },
+  "overlap_rule": "NFKC/casefold 4-word ngrams; additionally 4 consecutive ja/ko/zh script characters with spacing/punctuation removed; block if either overlaps.",
+  "sections": [
+    {
+      "section_id": "lyric-0000",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "243cdbca005ad8c62374c7e53fb3ff82125979d53ab5f27b78fbb6155d002f34",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests a sense of vulnerability and quiet tension, with underlying themes of power dynamics and unspoken desire.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "3d1cce54ba1bf6964f093f8d28e92a7357ed228ec16d59ff362d7120cf5662b1"
+    },
+    {
+      "section_id": "lyric-0001",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "fe8a39fefb501fea5f58e272c1546bd21c5d4869ab36789e8cdea388b01b1c1f",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is dismissive and detached, emphasizing casual disregard for others' relationships and a sense of casual, possibly mocking, observation of social behavior. The themes revolve around emotional indifference, hedonism, and the casual exposure of personal boundaries in a moment of intoxication.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "aac34c63f259b727cf34fc8607b6297e889af23ae4b0cb5d61b46c5b2decb352"
+    },
+    {
+      "section_id": "lyric-0002",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "fce981e5ecb51a44d02557c7978dd486f825d143b48dc52aa4b578e224a4706a",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a mix of desperation and emotional tension, underscored by a sense of unmet need and subtle suspicion. The themes explore the conflict between material influence and genuine emotional connection, highlighting a yearning for authenticity amid power dynamics.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "fe4d980b5651762b42260013e23fddcc93c781e9fc569f494b29cac2ec1e9fb4"
+    },
+    {
+      "section_id": "lyric-0003",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "97f295261b0f0e701547d24deb94831ba49e186a528db2085859fc9f0f1684ca",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of weary frustration and emotional distance, highlighting unresolved tension and a growing sense of exhaustion in the relationship. The themes revolve around unmet expectations, mutual misunderstandings, and the eventual decision to disengage from a relationship that no longer serves either party.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "f998c346adb0e63ffb5734d91bd47db51a618b3c8f5c5033a10d0d39037b95e6"
+    },
+    {
+      "section_id": "lyric-0004",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "a84c8cd1eff92df5d41ba6bdb8d94f7e17224ee6acc4da0539f51917889c98bb",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a mix of desperation and emotional tension, underscored by a sense of unmet need and underlying conflict. The themes explore power dynamics, spiritual longing, and the ambiguity of desire in a relationship.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "a04e1de8db72c0113c54d137ef7a907263bbd0f066b6ec796b2e1e4c9fe9052b"
+    },
+    {
+      "section_id": "span-0000",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    }
+  ]
+}

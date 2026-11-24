@@ -1,0 +1,348 @@
+{
+  "schema_version": 1,
+  "track_id": "6wgO20bUFvsCtcpqxCDCjF",
+  "cohort": "random",
+  "display_only": true,
+  "registered_scores_unchanged": true,
+  "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+  "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "prompt_sha256": "ffdf21672c16d12394441664976928ac03a51b35d721d3925cca9be8adc58e3d",
+  "registered_checkpoint_sha256": "024612343ff14965248783390259775ecb2ce8585a36542031c106459ec369fb",
+  "reading_label": "L1's interpretation of the lyrics",
+  "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+  "reading_type": "model_interpretation",
+  "decoding": {
+    "do_sample": false,
+    "num_beams": 1,
+    "max_new_tokens": 128,
+    "torch_dtype": "float16",
+    "seed": 20261115
+  },
+  "overlap_rule": "NFKC/casefold 4-word ngrams; additionally 4 consecutive ja/ko/zh script characters with spacing/punctuation removed; block if either overlaps.",
+  "sections": [
+    {
+      "section_id": "lyric-0000",
+      "set": "primary",
+      "language": "ja",
+      "text_sha256": "66bd3f574c18e8c3ec130bc0bd68aef08b060a45f29f394a7641da400272ea18",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a repetitive, almost meditative rhythm that blends emotional resonance with a sense of unresolved tension. Themes of enduring presence, internal conflict, and the coexistence of joy and anxiety emerge beneath the surface.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "39a35abe71b68b0dc0c113a2af53d19e9eec43892517b6e6f7f541ab780beb32"
+    },
+    {
+      "section_id": "lyric-0001",
+      "set": "secondary",
+      "language": "ja",
+      "text_sha256": "9dbd87199fd5d6e78b352b73b615f76855740697a32b2668dae9982545891138",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is repetitive and emotionally resonant, conveying a sense of enduring connection and inner contentment. The themes revolve around unity, shared existence, and an inherent, unshakable sense of happiness rooted in presence and mutual bond.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "2efa6a6f582697ce12469cfbef2e08e763e267994bec659a9eb9c723bc1c0f32"
+    },
+    {
+      "section_id": "lyric-0002",
+      "set": "primary",
+      "language": "ja",
+      "text_sha256": "2986a0d1dc0eea24cba20335a05f78c3ecef78575c7cab91072035982fc808f5",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a quiet, steadfast loyalty amid vulnerability, emphasizing commitment despite personal limitations. The theme centers on unwavering support rooted in humility and a willingness to stand by someone even when one is not strong.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "0c8be7f7b4e68d122a0a2b212106224a47f3f0f595d1bbc199775c9107073c96"
+    },
+    {
+      "section_id": "lyric-0003",
+      "set": "primary",
+      "language": "ja",
+      "text_sha256": "6231c428f12077e258e49de86ee0bf1e4b8e850f611448376a40388e3c240736",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is energetic and optimistic, emphasizing joyful movement and inner confidence. The central theme revolves around finding happiness through presence, trust, and simple, consistent positivity.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "3f8990931ad86c504b5ff169d84aac55774892f6127f4e98457afa37a9c59a0b"
+    },
+    {
+      "section_id": "lyric-0004",
+      "set": "secondary",
+      "language": "ja",
+      "text_sha256": "35d71dccc757e9d180dadbea67e7a5339e09d50255e43986755530fb6985e03e",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a persistent, almost obsessive repetition that reflects a sense of unresolved longing and emotional instability. The themes explore identity, belonging, and the dissonance between inner feeling and external reality.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "26bbe6d99e66db53801beeb360c9133e61ce5916c37952854b0191518e6cf4d9"
+    },
+    {
+      "section_id": "lyric-0005",
+      "set": "secondary",
+      "language": "ja",
+      "text_sha256": "6cefcd3509b082b243bc67845de465709983301ac212ffc2111bd7697d0cbbfc",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is repetitive and emotionally charged, conveying a sense of overwhelming, almost obsessive joy or connection. The themes explore the physical and emotional intensity of human bonds, suggesting a fusion of intimacy, vitality, and an unyielding sense of fulfillment.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "f4311f9060c379e387a12cd5cc2db9ab641c83a2f025ecbe79b65ad1e6ee8116"
+    },
+    {
+      "section_id": "lyric-0006",
+      "set": "primary",
+      "language": "ja",
+      "text_sha256": "3d9a02ba7f718d2136d8cf2a9c518e30f5a4f3cde941483c1f6b322a0c7a6422",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests a calculated vulnerability, masking a deeper intention to gain trust or influence. The theme centers on strategic deception and the use of apparent weakness as a tool for alignment or control.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "43df00e88f8607f7b3d0f0ee4b316c2ae1949e1d68fa5f00a43cd1691deb8deb"
+    },
+    {
+      "section_id": "lyric-0007",
+      "set": "secondary",
+      "language": "ja",
+      "text_sha256": "1e8615bfdef2f4b308ec7c6f47fa456baff44e21fc8bb50e440318bee78b16dc",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is upbeat and resilient, emphasizing joyful perseverance and inner confidence. The central theme revolves around finding happiness through simple presence and trust in one's ability to move forward.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "9fa3367c86522306eb4a2e5dbe98e8a098e90d3a62d77c8e809b1e5965a6e465"
+    },
+    {
+      "section_id": "lyric-0008",
+      "set": "secondary",
+      "language": "ja",
+      "text_sha256": "29e0d76115c6d3f761e4d6ae135c0cf32c562d147b5fd725fd179afcf94c0c8e",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is repetitive and hypnotic, suggesting a sense of cyclical inevitability or emotional entrapment. The themes revolve around enduring, unchanging states of feeling—perhaps longing, melancholy, or passive acceptance—embedded within a rhythm that feels both mechanical and deeply personal.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "dc8849c8af0701b7ca6e98f1011bbe9c897c48b7a9a5db34e8020d7dd4f3b3b2"
+    },
+    {
+      "section_id": "lyric-0009",
+      "set": "secondary",
+      "language": "ja",
+      "text_sha256": "e029d5e72c4e345d82e730824a12c2b822d6376404846ef7f8ffd2b7712c9f2f",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is repetitive and rhythmic, suggesting a cyclical or obsessive pattern, while the underlying themes explore the tension between hope and uncertainty, and the ongoing struggle to find meaning or peace in a continuous, unchanging flow.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "8aa3c152ca387e62e60237376c0325526748923d551f9367c6db4ae9b0732a04"
+    },
+    {
+      "section_id": "lyric-0010",
+      "set": "secondary",
+      "language": "ja",
+      "text_sha256": "f591165bcb5fd2e8ee37d82eece7d72418d8e043c40bb36bad8215b695478097",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of quiet intimacy and unwavering devotion, while the central theme explores the enduring and all-encompassing nature of emotional connection.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "53877390a823b97604afc6e5c61cb3bc645fabb714bdf1dafe73780f68ad4f3f"
+    },
+    {
+      "section_id": "lyric-0011",
+      "set": "secondary",
+      "language": "ja",
+      "text_sha256": "fdd5023cbf93a225a66d16407dff24202d857cc73f6b5c74be1bc982fcda510a",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys an energetic and optimistic enthusiasm, driven by a sense of joyful anticipation and emotional connection. The central theme explores the idea of finding happiness and fulfillment through shared presence and mutual affection.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "2d5dce659afab82ead5ff6abad31892bf043c94e1198afdd99c7bff1d610b41e"
+    },
+    {
+      "section_id": "lyric-0012",
+      "set": "secondary",
+      "language": "ja",
+      "text_sha256": "10b4d955c9f624a690da3480d1a179a9b7732a03dd10762e7d72ea6635e8ac53",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is repetitive and rhythmic, suggesting a sense of cyclical inevitability or unresolved tension. The themes explore the persistence of sound or memory, and the ambiguity of existence or identity within a continuous, unchanging pattern.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "1aa9adc6b9770e9ed8c8b4885b291d9f37685e26bcbfcd7e123593165d17635b"
+    },
+    {
+      "section_id": "lyric-0013",
+      "set": "secondary",
+      "language": "ja",
+      "text_sha256": "dd5396dd69dce7bd84a69a77ec1016f397961f44a4447e8d5f07f710dc391de4",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is repetitive and rhythmic, suggesting a sense of cyclical persistence or emotional inertia, while the themes explore the ambiguity and uncertainty of happiness, questioning its presence and authenticity in a continuous, unchanging state.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "a2042fa066823b8836f0df4ab055762e979281a3e5ca75aa53d6769d750a8174"
+    },
+    {
+      "section_id": "lyric-0014",
+      "set": "secondary",
+      "language": "ja",
+      "text_sha256": "8c3bc97594b9e296813ec5a4da9993585f7d972eae0f0445c4c8f04cd2da063c",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of quiet certainty and emotional intimacy, suggesting a deep, almost inevitable connection between two individuals. The theme explores the idea of mutual recognition and shared identity, implying a bond that feels both natural and profoundly personal.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "b8637dfac2895bf416deeeb4c947af91d6b30d36a7dd85d7d42e1d24af526852"
+    },
+    {
+      "section_id": "lyric-0015",
+      "set": "secondary",
+      "language": "ja",
+      "text_sha256": "fdd5023cbf93a225a66d16407dff24202d857cc73f6b5c74be1bc982fcda510a",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys an energetic and optimistic enthusiasm, driven by a sense of joyful anticipation and emotional connection. The central theme explores the idea of finding happiness and fulfillment through shared presence and mutual affection.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "2d5dce659afab82ead5ff6abad31892bf043c94e1198afdd99c7bff1d610b41e"
+    },
+    {
+      "section_id": "span-0000",
+      "set": "secondary",
+      "language": "ja",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    },
+    {
+      "section_id": "span-0002",
+      "set": "secondary",
+      "language": "ja",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    },
+    {
+      "section_id": "span-0005",
+      "set": "secondary",
+      "language": "ja",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    },
+    {
+      "section_id": "span-0007",
+      "set": "secondary",
+      "language": "ja",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    }
+  ]
+}

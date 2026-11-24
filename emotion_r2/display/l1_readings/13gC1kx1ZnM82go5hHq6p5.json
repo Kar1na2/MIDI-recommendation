@@ -1,0 +1,173 @@
+{
+  "schema_version": 1,
+  "track_id": "13gC1kx1ZnM82go5hHq6p5",
+  "cohort": "pilot",
+  "display_only": true,
+  "registered_scores_unchanged": true,
+  "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+  "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "prompt_sha256": "ffdf21672c16d12394441664976928ac03a51b35d721d3925cca9be8adc58e3d",
+  "registered_checkpoint_sha256": "6808d1c102be731bee021c85daf1b059fb75b2ae9808610c6dc64a7bfd99fd59",
+  "reading_label": "L1's interpretation of the lyrics",
+  "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+  "reading_type": "model_interpretation",
+  "decoding": {
+    "do_sample": false,
+    "num_beams": 1,
+    "max_new_tokens": 128,
+    "torch_dtype": "float16",
+    "seed": 20261115
+  },
+  "overlap_rule": "NFKC/casefold 4-word ngrams; additionally 4 consecutive ja/ko/zh script characters with spacing/punctuation removed; block if either overlaps.",
+  "sections": [
+    {
+      "section_id": "lyric-0000",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "bb33db3a45da9205c9eda01603d7eca6175db14e34f004a7d7e8c6622bdae02e",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of melancholic inevitability, blending emotional weight with a dreamlike distortion. The themes explore the persistence of suffering and the deceptive nature of perceived reality.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "c2bf60b60fb8e4881344bf19b09bd105de06ee594d8b5ef7a3916928ced1ef55"
+    },
+    {
+      "section_id": "lyric-0001",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "8711641ed0551599c0cb07fa6ff8dddc84b63ee5007ab90749e7725393342e3c",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests a seductive and risky allure, blending excitement with moral ambiguity. The themes explore the tension between desire and forbidden boundaries, inviting contemplation of choices that challenge established norms.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "e082db1bee28d403b6cd1fd3ac13d80dda646b46556817979c4c88a5ea2c145c"
+    },
+    {
+      "section_id": "lyric-0002",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "f0122247b2f1734d06b09c7d14173f37b81b5ed28174379c54fdbe97ba7b5031",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a desperate, almost ritualistic yearning amid emotional turmoil, blending raw pain with a sense of cyclical suffering and unrelenting longing. Themes of identity, internal conflict, and the struggle to escape a persistent, consuming state of emotional distress emerge as central.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "c30e5c1e68a953d9ae6d95b2c72c75d49ad6afe1356150f137089de12274e16f"
+    },
+    {
+      "section_id": "lyric-0003",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "1d36796e10415a10ac760a59bf1d8ff9164912c8b0ed92c81fd143b09645034e",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is soothing and gentle, evoking a sense of safety and calm, while the themes suggest a contrast between stillness and movement, hinting at the tension between peace and the subtle pull of something beyond control.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "6cdef7de40fcc6e2a636415f9539cd3a4010fe8f121447b60e6f0daf0a2b3a93"
+    },
+    {
+      "section_id": "lyric-0004",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "d21635f367207bbf1e348d277502a475899cef8502ef31b70e330f2a53af5bd3",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a restless, intense energy marked by hidden turmoil and a yearning that disrupts calm. Themes of internal conflict, transformation, and the breaking of boundaries emerge as forces that drive a sense of upheaval and awakening.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "7deac834f0fb3415a1ffc388b3d49f4a437aa1139a2ce4fa168124e2eef8d8de"
+    },
+    {
+      "section_id": "lyric-0005",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "94594d7ea3249e04fa739828f0253d7eb72a8e43449cb49e90b197cfa4046152",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a restless, almost desperate yearning amid emotional turmoil, blending raw intensity with a sense of cyclical suffering. Themes of identity, internal conflict, and unrelenting emotional struggle emerge, suggesting a journey through pain that persists despite attempts to escape or transform.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "93a7cbef15adf2e02666ff22c0115b0f7d8a7f793d1629ae91e008643e1f3766"
+    },
+    {
+      "section_id": "lyric-0006",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "3267b5e65bcc1ee1d70d53900152bbd4f12b85765942cb0035136e792a97c4c4",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of urgency and emotional entrapment, suggesting a struggle against internal or external forces. The themes explore moral ambiguity and the pervasive nature of negative traits, implying a world where corruption or malice is deeply embedded and difficult to escape.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "1850111a72d64ddea67a64ff2855fed3b15e89cec2a80357fbe94c3cb106634d"
+    },
+    {
+      "section_id": "lyric-0007",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "e06007130e043fe2c14981244c5d8a4e65a7360ff9f03c991675b4892701d442",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a restless, almost desperate intensity, blending defiance with emotional entrapment. Themes of internal struggle, cyclical suffering, and a yearning for transcendence emerge beneath a surface of relentless motion and unrelenting pain.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "8b94127e90232190484e85dcc6e899bef8b884a6c0eaf07defd110bfdcd60f7c"
+    },
+    {
+      "section_id": "span-0000",
+      "set": "secondary",
+      "language": "uncertain",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    }
+  ]
+}

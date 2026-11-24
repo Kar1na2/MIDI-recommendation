@@ -1,0 +1,250 @@
+{
+  "schema_version": 1,
+  "track_id": "76qqDJijAjFph7sjUxNVG8",
+  "cohort": "random",
+  "display_only": true,
+  "registered_scores_unchanged": true,
+  "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+  "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "prompt_sha256": "ffdf21672c16d12394441664976928ac03a51b35d721d3925cca9be8adc58e3d",
+  "registered_checkpoint_sha256": "3fb501e18fb583b60db58934de2fa524b0b1deb5f5a009aaa041e8fcdc4ebe99",
+  "reading_label": "L1's interpretation of the lyrics",
+  "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+  "reading_type": "model_interpretation",
+  "decoding": {
+    "do_sample": false,
+    "num_beams": 1,
+    "max_new_tokens": 128,
+    "torch_dtype": "float16",
+    "seed": 20261115
+  },
+  "overlap_rule": "NFKC/casefold 4-word ngrams; additionally 4 consecutive ja/ko/zh script characters with spacing/punctuation removed; block if either overlaps.",
+  "sections": [
+    {
+      "section_id": "lyric-0000",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "68d8383eeac3dd8f08fdcb2f897b66c5e546d34baebe29ca94786de78a0849b4",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a persistent, almost obsessive desire rooted in emotional intensity and visible expression. The themes explore the tension between inner longing and outward appearance, highlighting how emotions are both felt and perceived.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "fb33ae779f17fad79de1648d8d02b072fbabad24c6ec3aa274b1e73ab687904b"
+    },
+    {
+      "section_id": "lyric-0001",
+      "set": "secondary",
+      "language": "uncertain",
+      "text_sha256": "da1648ec04080642c66b96156953bb2e84df6c1ea165a97b14b9f655234fab6e",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a reflective, almost serene acceptance of self amidst uncertainty and fleeting emotions. The themes explore personal authenticity, the quiet strength of embracing one's true nature, and a sense of gentle, ongoing connection with the world.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "cb9ccfee0535faa5caede86777c9de30ae623b16e2c130df17ed738e6c53d0c7"
+    },
+    {
+      "section_id": "lyric-0002",
+      "set": "secondary",
+      "language": "uncertain",
+      "text_sha256": "ae24c517375d55607d5f677dca9231cb88a5592205bd9283e783b0f53d14cfbd",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of intimate assertion and emotional intensity, emphasizing uniqueness and unwavering individuality. The themes revolve around self-identity, resilience in the face of external expectations, and a defiant affirmation of personal worth.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "22ed9ee6d0cc4f095a48b8271831ba541aa94b5ed1e8a35e0d10f8714ca09886"
+    },
+    {
+      "section_id": "lyric-0003",
+      "set": "secondary",
+      "language": "uncertain",
+      "text_sha256": "738cbf293a57916b32ba49c933bf1faffd9e37e3deb9137f6748fcfe6f05ab9a",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sensual and immersive atmosphere, emphasizing intimacy and emotional resonance through rhythmic, flowing imagery. The themes revolve around desire, fantasy, and the blending of reality and imagination in a deeply personal and evocative experience.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "327c805da9a8a1bcd7db3052b57aa83053497219339e8419eaadeeb7ed8299e0"
+    },
+    {
+      "section_id": "lyric-0004",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "a7d6dc18678f02f230d577fe76261e3633b4bb222aeaaef4975d165f43f020f6",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is repetitive and insistent, conveying a strong, almost obsessive desire. The theme centers on an unrelenting yearning for something deeply personal and emotionally significant.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "4cc5173033f1efed789f389f67543478ab03d34f2948c1b21884ea099959815f"
+    },
+    {
+      "section_id": "lyric-0005",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "74254989c6bb0411bb6af3d2abfe978d8a3077e2af774c4568167847dd0e2579",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone presents an confident, commanding presence that emphasizes allure and self-assurance, while the themes revolve around unapologetic self-expression and the pursuit of desired ideals with intense passion.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "15bf4a05b9c11629a9ca36152cb905e3679726844c1449432496e8df369878c5"
+    },
+    {
+      "section_id": "lyric-0006",
+      "set": "secondary",
+      "language": "uncertain",
+      "text_sha256": "ae24c517375d55607d5f677dca9231cb88a5592205bd9283e783b0f53d14cfbd",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of intimate assertion and emotional intensity, emphasizing uniqueness and unwavering individuality. The themes revolve around self-identity, resilience in the face of external expectations, and a defiant affirmation of personal worth.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "22ed9ee6d0cc4f095a48b8271831ba541aa94b5ed1e8a35e0d10f8714ca09886"
+    },
+    {
+      "section_id": "lyric-0007",
+      "set": "secondary",
+      "language": "uncertain",
+      "text_sha256": "738cbf293a57916b32ba49c933bf1faffd9e37e3deb9137f6748fcfe6f05ab9a",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sensual and immersive atmosphere, emphasizing intimacy and emotional resonance through rhythmic, flowing imagery. The themes revolve around desire, fantasy, and the blending of reality and imagination in a deeply personal and evocative experience.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "327c805da9a8a1bcd7db3052b57aa83053497219339e8419eaadeeb7ed8299e0"
+    },
+    {
+      "section_id": "lyric-0008",
+      "set": "secondary",
+      "language": "uncertain",
+      "text_sha256": "47b4736293d5366944b8e19a133f62e9c430d3152f439bf39f239af4057b03d5",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests a casual, interactive exchange with a hint of encouragement and subtle pressure. The themes revolve around imitation, mutual agreement, and the dynamics of shared action or performance.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "1a81b7aee08d6c737e5d3fbb2dd9fdc046a9091e580f097635636d8863bca053"
+    },
+    {
+      "section_id": "lyric-0009",
+      "set": "secondary",
+      "language": "uncertain",
+      "text_sha256": "475419be1591dbd572ac88470a047689ccc04557791207a22adfe2d6d6f46f54",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests a persistent, almost inevitable return to emotional connection, emphasizing cyclical and natural bonds. The theme centers on the unbreakable pull of feeling and the recurring nature of returning to one another.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "97562db9246a0b27bbfc6070fd6b92c609c4506d12468a99419e826f5a1b593e"
+    },
+    {
+      "section_id": "lyric-0010",
+      "set": "secondary",
+      "language": "uncertain",
+      "text_sha256": "b7ac9f4300a422039e9f0cdba3fc2ef6def95de75d87b297b5e91cc50ad8b957",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests a rhythmic, immersive engagement with movement and sensation, emphasizing a shared, almost instinctual connection between individuals. The themes revolve around synchronization, desire, and the allure of flowing, spontaneous interaction.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "1b84a7aeab6837638e202998f608296cbfc99c4aebac0429c319f1754e1c5657"
+    },
+    {
+      "section_id": "span-0000",
+      "set": "secondary",
+      "language": "uncertain",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    },
+    {
+      "section_id": "span-0002",
+      "set": "secondary",
+      "language": "uncertain",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    },
+    {
+      "section_id": "span-0005",
+      "set": "secondary",
+      "language": "uncertain",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    }
+  ]
+}

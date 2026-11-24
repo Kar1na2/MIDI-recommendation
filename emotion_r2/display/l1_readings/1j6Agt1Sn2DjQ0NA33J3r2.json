@@ -1,0 +1,122 @@
+{
+  "schema_version": 1,
+  "track_id": "1j6Agt1Sn2DjQ0NA33J3r2",
+  "cohort": "pilot",
+  "display_only": true,
+  "registered_scores_unchanged": true,
+  "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+  "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "prompt_sha256": "ffdf21672c16d12394441664976928ac03a51b35d721d3925cca9be8adc58e3d",
+  "registered_checkpoint_sha256": "f0de1fd4fbf93d63b345b99a91e0ab2bea4b3ffff5848a31b232573182afcca3",
+  "reading_label": "L1's interpretation of the lyrics",
+  "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+  "reading_type": "model_interpretation",
+  "decoding": {
+    "do_sample": false,
+    "num_beams": 1,
+    "max_new_tokens": 128,
+    "torch_dtype": "float16",
+    "seed": 20261115
+  },
+  "overlap_rule": "NFKC/casefold 4-word ngrams; additionally 4 consecutive ja/ko/zh script characters with spacing/punctuation removed; block if either overlaps.",
+  "sections": [
+    {
+      "section_id": "lyric-0000",
+      "set": "primary",
+      "language": "ja",
+      "text_sha256": "10f55ef22797c8ecad96d7ce027754f14faba01e77385b0848cba6a48f0bcb3f",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone presents a restless, urgent energy amid a backdrop of nocturnal activity, blending allure and anxiety. Themes revolve around the relentless pace of nighttime existence, the seduction of darkness, and the tension between escapism and the pressures of a hurried, adult-driven lifestyle.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "3418e1fccc6533cdd5b7526fce2d5a14d4143d5c2099ece1cda620952f1fc40a"
+    },
+    {
+      "section_id": "lyric-0001",
+      "set": "primary",
+      "language": "ja",
+      "text_sha256": "5bd8361222f502cfe8207eaea04f3d509fb6c8f95e92da0820022c8eb29bfa99",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a mix of yearning and introspective obsession, marked by a sense of quiet, unspoken desire and emotional entanglement. Themes of discovery, forbidden intimacy, and the blurred boundaries between desire and transgression underlie the narrative.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "1a1ea854724aadd892531ad31b41090aff13c2840941a476dc44121ae786aaf8"
+    },
+    {
+      "section_id": "lyric-0002",
+      "set": "primary",
+      "language": "ja",
+      "text_sha256": "10f55ef22797c8ecad96d7ce027754f14faba01e77385b0848cba6a48f0bcb3f",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone presents a restless, urgent energy amid a backdrop of nocturnal activity, blending allure and anxiety. Themes revolve around the relentless pace of nighttime existence, the seduction of darkness, and the tension between escapism and the pressures of a hurried, adult-driven lifestyle.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "3418e1fccc6533cdd5b7526fce2d5a14d4143d5c2099ece1cda620952f1fc40a"
+    },
+    {
+      "section_id": "lyric-0003",
+      "set": "primary",
+      "language": "ja",
+      "text_sha256": "e524615ffda199a74c1ea351f9fc8be15e90855a6ffdd9ad63f2559d35adb867",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of quiet resignation and internal struggle, marked by a detached yet persistent yearning for autonomy in a world that feels indifferent or hostile. The themes explore isolation, the tension between self-perception and external judgment, and the difficulty of finding stability or belonging in a system that resists personal authenticity.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "7c62c6dd830e20733e0e6a9317a631bf8f4f755079c7ece879fdf508f5bc97f1"
+    },
+    {
+      "section_id": "lyric-0004",
+      "set": "primary",
+      "language": "ja",
+      "text_sha256": "10f55ef22797c8ecad96d7ce027754f14faba01e77385b0848cba6a48f0bcb3f",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone presents a restless, urgent energy amid a backdrop of nocturnal activity, blending allure and anxiety. Themes revolve around the relentless pace of nighttime existence, the seduction of darkness, and the tension between escapism and the pressures of a hurried, adult-driven lifestyle.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "3418e1fccc6533cdd5b7526fce2d5a14d4143d5c2099ece1cda620952f1fc40a"
+    },
+    {
+      "section_id": "span-0000",
+      "set": "secondary",
+      "language": "ja",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    }
+  ]
+}

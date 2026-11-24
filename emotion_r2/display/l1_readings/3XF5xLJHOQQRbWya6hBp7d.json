@@ -1,0 +1,139 @@
+{
+  "schema_version": 1,
+  "track_id": "3XF5xLJHOQQRbWya6hBp7d",
+  "cohort": "pilot",
+  "display_only": true,
+  "registered_scores_unchanged": true,
+  "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+  "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "prompt_sha256": "ffdf21672c16d12394441664976928ac03a51b35d721d3925cca9be8adc58e3d",
+  "registered_checkpoint_sha256": "e722ef29d499520cd76a89177a31c65dab4be3313ab51214e43837ad741eb4a9",
+  "reading_label": "L1's interpretation of the lyrics",
+  "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+  "reading_type": "model_interpretation",
+  "decoding": {
+    "do_sample": false,
+    "num_beams": 1,
+    "max_new_tokens": 128,
+    "torch_dtype": "float16",
+    "seed": 20261115
+  },
+  "overlap_rule": "NFKC/casefold 4-word ngrams; additionally 4 consecutive ja/ko/zh script characters with spacing/punctuation removed; block if either overlaps.",
+  "sections": [
+    {
+      "section_id": "lyric-0000",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "d1ae57f9597616a8b42b12b5cb75c5676a259d7e85d2d38cc344ecd032d21e0a",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a restrained intensity mixed with internal conflict, suggesting a struggle between desire and self-control. The themes explore isolation, the cost of waiting, and the tension between personal vision and external reality.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "b1401803a002fb060dba9863351123e6d0616b703acf081e930ab63fd7caeb5e"
+    },
+    {
+      "section_id": "lyric-0001",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "15fc088c7200ea9d827a3bddffe9d584b99fef73a5cd0db17d359e4615a38124",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of confident dominance and theatrical authority, emphasizing control and the quiet power derived from others' submission. The themes revolve around self-assertion, the illusion of power, and the psychological impact of silence as a tool of influence.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "d8689804aa6b005b16e1736b5566ffd684b9d019508affb038cb0efebcb390b7"
+    },
+    {
+      "section_id": "lyric-0002",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "a0dc6d3e97b3ae8ebb13434504ece175cce4920cc3120e10cba25a0f51d1c37d",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is tense and unsettling, conveying a sense of impending doom and psychological disorientation. The themes explore the fragility of life, the blurring of reality and death, and the internal struggle between survival and surrender.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "0037c943a4ab9da1b9525b8089af98af11e335b2f7948225d1b7f42f1e9a3cf5"
+    },
+    {
+      "section_id": "lyric-0003",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "d2108474f71fcedb2a7b3d74d076f1cd619a6756ae5f5a12b48acdf004163b0d",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is firm and assertive, conveying a clear boundary between self-worth and external validation. The theme centers on autonomy and the rejection of conditional affection based on appearance or perceived value.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "29052e1497fecaac6153181dad377d1a748a2d1aa5f296e2d8cedfc9287e8443"
+    },
+    {
+      "section_id": "lyric-0004",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "15fc088c7200ea9d827a3bddffe9d584b99fef73a5cd0db17d359e4615a38124",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of confident dominance and theatrical authority, emphasizing control and the quiet power derived from others' submission. The themes revolve around self-assertion, the illusion of power, and the psychological impact of silence as a tool of influence.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "d8689804aa6b005b16e1736b5566ffd684b9d019508affb038cb0efebcb390b7"
+    },
+    {
+      "section_id": "lyric-0005",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "b4a6afb45393d176323059c1617f5929aa1ad7a6889b2e82851d95cc9010eb77",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of dominance and quiet confidence, emphasizing control and the gradual subjugation of others. The themes revolve around power, isolation, and the allure of authority derived from silence and presence.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "e145e9ee8ce7f46ee7ce132d77675bd5e410660e1f9c7e7338f0c2d7cbd611b9"
+    },
+    {
+      "section_id": "span-0000",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    }
+  ]
+}

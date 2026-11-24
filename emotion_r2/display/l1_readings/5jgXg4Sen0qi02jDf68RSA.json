@@ -1,0 +1,156 @@
+{
+  "schema_version": 1,
+  "track_id": "5jgXg4Sen0qi02jDf68RSA",
+  "cohort": "pilot",
+  "display_only": true,
+  "registered_scores_unchanged": true,
+  "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+  "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "prompt_sha256": "ffdf21672c16d12394441664976928ac03a51b35d721d3925cca9be8adc58e3d",
+  "registered_checkpoint_sha256": "1e34f0da2334e7401a9282a1496cc66c3c38582d36604312adef8e6bcb380df2",
+  "reading_label": "L1's interpretation of the lyrics",
+  "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+  "reading_type": "model_interpretation",
+  "decoding": {
+    "do_sample": false,
+    "num_beams": 1,
+    "max_new_tokens": 128,
+    "torch_dtype": "float16",
+    "seed": 20261115
+  },
+  "overlap_rule": "NFKC/casefold 4-word ngrams; additionally 4 consecutive ja/ko/zh script characters with spacing/punctuation removed; block if either overlaps.",
+  "sections": [
+    {
+      "section_id": "lyric-0000",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "66f73e14fc8993bf8b33bb522120052b457cfd19af7c7ededd41f98c7f02056a",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of internal contradiction—simultaneously isolated and connected, searching for presence while feeling empty. The theme explores the tension between loneliness and the illusion of companionship, suggesting a deep emotional struggle with identity and belonging.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "11102cda461635313891944b5ceffb4da99739bdd67032f8464d0cae74dc32b5"
+    },
+    {
+      "section_id": "lyric-0001",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "8c6fb1a46f7b10d99d0f27292792a8ced4ff3dd1ebdf301b3b2221292e7223af",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of emotional exhaustion and resignation, marked by a quiet defiance amid personal loss. The themes explore the fragility of connection, the pain of identity shift in relationships, and the acceptance of love as both a battle and a possible surrender.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "bee7b7ea7999f8c107b3e863182a9c162b0a707b735b220993bc32127b569d4b"
+    },
+    {
+      "section_id": "lyric-0002",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "d87079dfd0024af7deebe198f183db3f4d252548206391744309992a5ee293f5",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of inevitable suffering and loss, portraying love as a force that spreads uncontrollably and ultimately leaves only pain. The theme explores the destructive potential of emotional connections that, despite their intensity, result in personal depletion and emptiness.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "204551840174a13f267e046eedf0458766597f75b1da17b1450b9a928c524c3f"
+    },
+    {
+      "section_id": "lyric-0003",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "d2f601752da470b4409bad51729d28873dd6e70988425bb177ef0e3fd9557a9d",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a deep, aching longing mixed with resignation and emotional exhaustion, portraying love as both a source of suffering and a necessary, enduring force. The central theme explores the paradox of wanting to love despite knowing it brings pain, suggesting that connection persists even when it is futile or destructive.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "40190f55a45df7adb0edb5a280bfbf23ed84cdf5016c9b44750c71683b5e6b6d"
+    },
+    {
+      "section_id": "lyric-0004",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "d87079dfd0024af7deebe198f183db3f4d252548206391744309992a5ee293f5",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of inevitable suffering and loss, portraying love as a force that spreads uncontrollably and ultimately leaves only pain. The theme explores the destructive potential of emotional connections that, despite their intensity, result in personal depletion and emptiness.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "204551840174a13f267e046eedf0458766597f75b1da17b1450b9a928c524c3f"
+    },
+    {
+      "section_id": "lyric-0005",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "fa27ae99225dbf3c9ea31752ebb629dc96a73417299fd916798f330ca7b7327d",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of emotional pain and internal conflict, marked by a struggle between vulnerability and silence. The themes explore the lingering impact of love and loss, suggesting that memory and pain are inescapable forces that shape identity and connection.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "9efee65d3b968f2b044e4509e9f2c063a144e79039995b020ce7a233d59082a2"
+    },
+    {
+      "section_id": "lyric-0006",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "37ab6be47197be92251c0850ea00cfba82c255daea9483483819d8b8a2d26573",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a reflective and introspective longing, blending idealism with a sense of unresolved emotional distance. The themes explore the enduring nature of love and the hidden pain of isolation, even within intimate connections.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "e133c2d604fb87fe6144df9489f11d352bce3afae9089607e972a2d617a95580"
+    },
+    {
+      "section_id": "span-0000",
+      "set": "secondary",
+      "language": "ko",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    }
+  ]
+}

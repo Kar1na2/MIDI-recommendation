@@ -1,0 +1,169 @@
+{
+  "schema_version": 1,
+  "track_id": "5sdQOyqq2IDhvmx2lHOpwd",
+  "cohort": "random",
+  "display_only": true,
+  "registered_scores_unchanged": true,
+  "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+  "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "prompt_sha256": "ffdf21672c16d12394441664976928ac03a51b35d721d3925cca9be8adc58e3d",
+  "registered_checkpoint_sha256": "18559dfb25e30feb406ab785b950e712fc5c59f48887087458fa77daad75d48d",
+  "reading_label": "L1's interpretation of the lyrics",
+  "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+  "reading_type": "model_interpretation",
+  "decoding": {
+    "do_sample": false,
+    "num_beams": 1,
+    "max_new_tokens": 128,
+    "torch_dtype": "float16",
+    "seed": 20261115
+  },
+  "overlap_rule": "NFKC/casefold 4-word ngrams; additionally 4 consecutive ja/ko/zh script characters with spacing/punctuation removed; block if either overlaps.",
+  "sections": [
+    {
+      "section_id": "lyric-0000",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "4fe03a665fc1d0fda7a36b76785e198dd4e37fed928f39567cef5396d3a69ee4",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a mix of vulnerability and quiet determination, highlighting internal conflict between hesitation and a deep desire for connection. The central theme explores the tension between personal reserve and the yearning to form a close, intimate bond.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "77fd7436acf0fd136f355dd22ecd7976c43461e6db4fa264a533facf959ef804"
+    },
+    {
+      "section_id": "lyric-0001",
+      "set": "secondary",
+      "language": "uncertain",
+      "text_sha256": "5986250e5997046b588f5adba00558018d5d0a3fda678ea8d6a91922a864182f",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a warm, intimate longing, emphasizing connection and mutual presence. The themes revolve around shared moments, visual and emotional resonance, and the spark of recognition between two individuals.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "75d4632f85844ead531f15ce7eaa482c0fcd9dd7f115e4272a186c2478dd2a97"
+    },
+    {
+      "section_id": "lyric-0002",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "f1faaa3d6df4610487280f23eff0721353f64da8f5d4b169b5ecde700143f66f",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of quiet desperation and isolation, emphasizing the profound gap between recognition and identity. The central theme explores the fragility of being known and the emotional weight of being unseen.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "f9c52d96b9f0610a706c6f3125f9c96f6faa3a600ab17b7a72df31e7bb3ffadc"
+    },
+    {
+      "section_id": "lyric-0003",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "4fe03a665fc1d0fda7a36b76785e198dd4e37fed928f39567cef5396d3a69ee4",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a mix of vulnerability and quiet determination, highlighting internal conflict between hesitation and a deep desire for connection. The central theme explores the tension between personal reserve and the yearning to form a close, intimate bond.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "77fd7436acf0fd136f355dd22ecd7976c43461e6db4fa264a533facf959ef804"
+    },
+    {
+      "section_id": "lyric-0004",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "e50121899c4351b546506ac66ce8fd8e2c1bc7de094f1f3ac3dd654993d0e67e",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a mix of admiration and subtle unease, blending praise with an underlying sense of dissonance. The themes explore identity, uniqueness, and the tension between recognition and discomfort in a relationship.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "f2291f19bd8876e7a54d181a02ef8a5cdac8f83620b4f46823cbac6adbfa0f57"
+    },
+    {
+      "section_id": "lyric-0005",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "4fe03a665fc1d0fda7a36b76785e198dd4e37fed928f39567cef5396d3a69ee4",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a mix of vulnerability and quiet determination, highlighting internal conflict between hesitation and a deep desire for connection. The central theme explores the tension between personal reserve and the yearning to form a close, intimate bond.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "77fd7436acf0fd136f355dd22ecd7976c43461e6db4fa264a533facf959ef804"
+    },
+    {
+      "section_id": "lyric-0006",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "6cb47728210ac3d8fe28f2cdcdd14c62a25dd360c38ccc2e8acd7b3e54fc8c0d",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a mix of vulnerability and quiet longing, emphasizing a sense of unrecognized presence and emotional restraint. The central theme explores the tension between deep personal feeling and the inability to express it, highlighting intimacy that remains unacknowledged.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "7783927200fd68258c3308721987d616153d92108347785a6a3ec09194aeecf4"
+    },
+    {
+      "section_id": "span-0000",
+      "set": "secondary",
+      "language": "uncertain",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    },
+    {
+      "section_id": "span-0002",
+      "set": "secondary",
+      "language": "uncertain",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    }
+  ]
+}

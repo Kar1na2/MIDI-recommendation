@@ -1,0 +1,152 @@
+{
+  "schema_version": 1,
+  "track_id": "7ovUcF5uHTBRzUpB6ZOmvt",
+  "cohort": "random",
+  "display_only": true,
+  "registered_scores_unchanged": true,
+  "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+  "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "prompt_sha256": "ffdf21672c16d12394441664976928ac03a51b35d721d3925cca9be8adc58e3d",
+  "registered_checkpoint_sha256": "c7821304ea78214eb4f12c4eb0ff641f08f56cce8fb6cb2537b1aaf224d6801d",
+  "reading_label": "L1's interpretation of the lyrics",
+  "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+  "reading_type": "model_interpretation",
+  "decoding": {
+    "do_sample": false,
+    "num_beams": 1,
+    "max_new_tokens": 128,
+    "torch_dtype": "float16",
+    "seed": 20261115
+  },
+  "overlap_rule": "NFKC/casefold 4-word ngrams; additionally 4 consecutive ja/ko/zh script characters with spacing/punctuation removed; block if either overlaps.",
+  "sections": [
+    {
+      "section_id": "lyric-0000",
+      "set": "primary",
+      "language": "ja",
+      "text_sha256": "18a2bddfb7dae9dbf779b709cde089389c8a81d9b6a6f374750b2aed40fa4e9a",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone presents a paradoxical blend of admiration and critical observation, contrasting idealized perfection with underlying flaws. The themes explore the tension between public image and hidden imperfections, suggesting a critique of authenticity in performance and perception.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "e05fdcff8e658821baa8113989e08868ec198174a7bf948df7223ded262930a3"
+    },
+    {
+      "section_id": "lyric-0001",
+      "set": "primary",
+      "language": "ja",
+      "text_sha256": "ff79c8412adabce6859d382ef556e415774b2d4b583a63aa9fd39ba2af3809a7",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests evasion and detachment, marked by a deliberate avoidance of direct answers. The themes revolve around privacy, ambiguity, and a reluctance to engage fully with questions.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "c876fa861bb5a48cf5bb8fa28bf0b4722ecf29bdb2295a872b4c03556e774ff7"
+    },
+    {
+      "section_id": "lyric-0002",
+      "set": "primary",
+      "language": "ja",
+      "text_sha256": "40f9d7203b5c1cff21900a985ada0f9a5a00e60f6842f2b1ace3ce1728377d16",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone presents a calm yet radiant ambiguity, blending sincerity with subtle mystery. The themes explore the elusive nature of desire and identity, suggesting that true understanding remains just beyond reach, hidden in the sweetness of unspoken truths.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "efe71cbf687b0a41577d608ee6f1e3981244e202bade9c310ff64d28d57d7a63"
+    },
+    {
+      "section_id": "lyric-0003",
+      "set": "primary",
+      "language": "ja",
+      "text_sha256": "830ad808385a52220b214d81bf71d3941e9bfbbf2f3cdecb9c10edbb5955d565",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of confusion and vulnerability, suggesting an internal struggle with the inexplicable nature of affection. The theme explores the involuntary and unpredictable way emotions can overwhelm a person, leading to a recurring cycle of emotional entanglement.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "ab2e1e9b243a39f79a29de96025557780b230843a3e02ca0617c72f37a0f0f68"
+    },
+    {
+      "section_id": "lyric-0004",
+      "set": "primary",
+      "language": "ja",
+      "text_sha256": "1b79e27409d20ef2d0f3d7af8910d1a3e507d1b792fae2295355d3a29b4c39bb",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone presents a self-reflective, almost obsessive devotion masked as performance, blending idealization with underlying vulnerability. The central theme explores the tension between constructed authenticity and genuine emotional connection, suggesting that love and identity are shaped through deception, yet ultimately yearn for truth.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "a6a445c6e9ef2350d1a33a873d87b475f48538a6caf307c156c2985388e1c719"
+    },
+    {
+      "section_id": "lyric-0005",
+      "set": "primary",
+      "language": "ja",
+      "text_sha256": "0ac2e2ce83b1d84ad85832cb34a13f96fbf451fda2c5850b7575d8a3723b69cf",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys an intense, unwavering devotion and emotional reliance, emphasizing a deep sense of mutual commitment and spiritual or emotional salvation. The themes revolve around enduring loyalty, transformative connection, and the idea of being fundamentally saved or redeemed through another.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "b902c36e4575861a3d5baef62077eec31ddbbf843cf0c5c89c23865722254a7f"
+    },
+    {
+      "section_id": "span-0000",
+      "set": "secondary",
+      "language": "ja",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    },
+    {
+      "section_id": "span-0006",
+      "set": "secondary",
+      "language": "ja",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    }
+  ]
+}

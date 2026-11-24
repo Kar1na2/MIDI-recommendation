@@ -1,0 +1,139 @@
+{
+  "schema_version": 1,
+  "track_id": "0f6Es3lVLNI4niwc8QsHRF",
+  "cohort": "random",
+  "display_only": true,
+  "registered_scores_unchanged": true,
+  "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+  "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "prompt_sha256": "ffdf21672c16d12394441664976928ac03a51b35d721d3925cca9be8adc58e3d",
+  "registered_checkpoint_sha256": "76cd9238a764958b275490df259938e95a07eab0013873840807c14eb6cfeaee",
+  "reading_label": "L1's interpretation of the lyrics",
+  "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+  "reading_type": "model_interpretation",
+  "decoding": {
+    "do_sample": false,
+    "num_beams": 1,
+    "max_new_tokens": 128,
+    "torch_dtype": "float16",
+    "seed": 20261115
+  },
+  "overlap_rule": "NFKC/casefold 4-word ngrams; additionally 4 consecutive ja/ko/zh script characters with spacing/punctuation removed; block if either overlaps.",
+  "sections": [
+    {
+      "section_id": "lyric-0000",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "c6ba7a4ea9a7822c79abed2b17b6d3e9763eb2e2172a39c9350e2afdace3a8d4",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests a request made with a sense of urgency or need, while the theme implies a focus on acquiring something essential or desired, possibly within a context of scarcity or ongoing demand.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "1529c15032b5fdc1dd051d3f16f920c41d3b6ab57ed0f162f7c6c386a7257f7c"
+    },
+    {
+      "section_id": "lyric-0001",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "52b5ed770c6a547c54b9978dce3691d06a21c586254f909d92f9356da4eb12c3",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is detached and rhythmic, suggesting a sense of irony or self-awareness amid casual repetition. The themes explore identity and belonging, questioning authenticity and the construction of self through external references.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "404c3a7d63a0a69106e5752592fecf2b11ccde0f713001564111316b0db1eff2"
+    },
+    {
+      "section_id": "lyric-0002",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "a3602fdf3272911fec981bc4a4b439348a120439c74f9dfb1035511178d01a09",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is critical and dismissive, highlighting a sense of superiority and irony in interpersonal dynamics. The themes revolve around social comparison, superficiality in relationships, and the contrast between genuine authenticity and performative appearances.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "937cceb6f87cdc5fa783b3d1e410ae9b70679f33916cb52afbd1ba6668edc027"
+    },
+    {
+      "section_id": "lyric-0003",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "f470fc81ff82d21fafa0d2b3d52c974a408377122d42dad3d7a5784eaaf7bdbc",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is detached and rhythmic, conveying a sense of routine or mechanical repetition. The themes suggest identity fragmentation and a disconnection between self and environment, framed through a series of disjointed, almost indifferent statements.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "e52ff5452fc959d5213e9cdc9d5b2c201e323b77ce052278d97e79efa192e669"
+    },
+    {
+      "section_id": "lyric-0004",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "b316003e4dc9b03beda47d50f55167832c5321040f0e9c8575d95c582db52dc7",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is confrontational and dismissive, emphasizing superiority and mockery of perceived flaws. The themes revolve around power dynamics, materialism, and the devaluation of others' self-worth in favor of dominance and performance.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "dd0c2ec5fb6a3851104b9ea315a18c79066aefd6d34a06862aa78655901b578a"
+    },
+    {
+      "section_id": "lyric-0005",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "a1ea8cd836f9e39265c6d8aef985b3f6463d1595dc831d2f050cd00fe9e91cf5",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is playful and repetitive, suggesting a lighthearted, almost ritualistic engagement with identity and origin. The themes explore the idea of emergence and connection—how something or someone arises from a foundational source through a process of simple, rhythmic affirmation.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "d586c5396deed0be3eeee7ddbc036a1ef229bbaffedc1907ec3082635a5efcf1"
+    },
+    {
+      "section_id": "span-0000",
+      "set": "secondary",
+      "language": "ko",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    }
+  ]
+}

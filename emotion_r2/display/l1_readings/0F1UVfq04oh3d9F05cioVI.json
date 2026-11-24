@@ -1,0 +1,207 @@
+{
+  "schema_version": 1,
+  "track_id": "0F1UVfq04oh3d9F05cioVI",
+  "cohort": "random",
+  "display_only": true,
+  "registered_scores_unchanged": true,
+  "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+  "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "prompt_sha256": "ffdf21672c16d12394441664976928ac03a51b35d721d3925cca9be8adc58e3d",
+  "registered_checkpoint_sha256": "147526d6662f8d5b16817162bc1826dcca50d045b695242b21e7f25260d53b67",
+  "reading_label": "L1's interpretation of the lyrics",
+  "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+  "reading_type": "model_interpretation",
+  "decoding": {
+    "do_sample": false,
+    "num_beams": 1,
+    "max_new_tokens": 128,
+    "torch_dtype": "float16",
+    "seed": 20261115
+  },
+  "overlap_rule": "NFKC/casefold 4-word ngrams; additionally 4 consecutive ja/ko/zh script characters with spacing/punctuation removed; block if either overlaps.",
+  "sections": [
+    {
+      "section_id": "lyric-0000",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "648de5483bf725ed2e05d2ed253864841591ffeb8a625f902745dcd101b315d9",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a quiet melancholy and a sense of lingering attachment, while the themes explore memory, the passage of time, and the emotional distance that follows a relationship's end.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "ea32ad2da6175af3bd6bff85162df0d32983d6ffb912a0966e18854e9a8e8e0d"
+    },
+    {
+      "section_id": "lyric-0001",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "616c17a74a017ed7b0cf7a30e3431d9b8ddbefca221648f7f39b580912164c32",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of lingering attachment and regret, underscored by a quiet desperation to reverse a lost moment. The central theme explores the impossibility of undoing the past and the enduring emotional weight of what once was.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "fb14128aa46d9b995da448a15ac09e0dd0920d0163d8dc93e66f4b6a8993e525"
+    },
+    {
+      "section_id": "lyric-0002",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "a4f766509e254f878bb824bbe2829d83c062b2db9cf383a8cd9ca9f44b478630",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests a reflective and somewhat melancholic contemplation of past choices and relationships, while the themes explore the contrast between present realities and potential alternatives, questioning the validity of current life decisions.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "25577a35606aaa7298a007acdd7aa4bb6b3e7c0397beb3c9ca7ec61e5cab5bab"
+    },
+    {
+      "section_id": "lyric-0003",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "9abc0f7990d9f830685b8ee26b800964b95282210c69d4049ed3a5ae90884600",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of exclusive intimacy and enduring devotion, emphasizing a deep, almost idealized bond that persists despite loss. The themes revolve around uniqueness, shared identity, and the resilience of a connection that remains central even in the face of decline.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "00edd4e5d23ec5ae7fa3ad08dd819554552de246ce709250eb587b3a521803df"
+    },
+    {
+      "section_id": "lyric-0004",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "ab2d55ae80aa184627ede5bcc834bf72e0c13e8c24fdbbe74a9930b5154bc5e5",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a lingering sense of emotional absence and unresolved longing, while the themes explore the persistence of memory and the ache of being left behind in a relationship that no longer exists.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "abd3558e059373c5d7f136c959ec6941128eeaaa4b6f28874a08e3e9799a9f1a"
+    },
+    {
+      "section_id": "lyric-0005",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "a4f766509e254f878bb824bbe2829d83c062b2db9cf383a8cd9ca9f44b478630",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests a reflective and somewhat melancholic contemplation of past choices and relationships, while the themes explore the contrast between present realities and potential alternatives, questioning the validity of current life decisions.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "25577a35606aaa7298a007acdd7aa4bb6b3e7c0397beb3c9ca7ec61e5cab5bab"
+    },
+    {
+      "section_id": "lyric-0006",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "635b00dbdf189ec42aade339d7ffd8d99942845ad4c57b69cd97767dcad87e32",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of exclusive intimacy and nostalgic pride, emphasizing a unique, almost idealized bond. The themes revolve around the enduring strength of a personal connection, contrasted with a painful realization of its loss.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "6694cf4919293329650fdfb84b046e8333880acfa91657a33623b3a263545ff3"
+    },
+    {
+      "section_id": "lyric-0007",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "c323f1d23cc1c43ec375ca081f0056ae7028afa8d48896bc431d5d923c658de9",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a reflective and introspective melancholy, suggesting lingering emotional connections that persist beyond physical presence. The themes explore memory, emotional continuity, and the ambiguity of longing in the absence of a relationship.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "d75816f5f64122d67a69705cc164c9426da0e3ea9987315aeaafffd9561bd5ed"
+    },
+    {
+      "section_id": "lyric-0008",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "635b00dbdf189ec42aade339d7ffd8d99942845ad4c57b69cd97767dcad87e32",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of exclusive intimacy and nostalgic pride, emphasizing a unique, almost idealized bond. The themes revolve around the enduring strength of a personal connection, contrasted with a painful realization of its loss.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "6694cf4919293329650fdfb84b046e8333880acfa91657a33623b3a263545ff3"
+    },
+    {
+      "section_id": "lyric-0009",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "f7dd82115dbc2ef7cdc62fe64d223e1806cd1373abd06e5a194d5e9cf7756fe0",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of longing and emotional vulnerability, centered on a deep personal dependency and the yearning for reconciliation. The themes explore the fragility of emotional connection and the desire to rebuild a bond after separation.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "c9cbd7bac1e23e7bed9631b6c82b4f0e18d8528ffc0f4d2ebee80f459cd7391b"
+    },
+    {
+      "section_id": "span-0000",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    }
+  ]
+}

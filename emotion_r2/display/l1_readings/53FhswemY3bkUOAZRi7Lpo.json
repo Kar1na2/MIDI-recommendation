@@ -1,0 +1,105 @@
+{
+  "schema_version": 1,
+  "track_id": "53FhswemY3bkUOAZRi7Lpo",
+  "cohort": "random",
+  "display_only": true,
+  "registered_scores_unchanged": true,
+  "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+  "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "prompt_sha256": "ffdf21672c16d12394441664976928ac03a51b35d721d3925cca9be8adc58e3d",
+  "registered_checkpoint_sha256": "2bbaa2d5b1d6b6dbd51387a6afe584d883b9c716a4b9226d71169148927b3f68",
+  "reading_label": "L1's interpretation of the lyrics",
+  "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+  "reading_type": "model_interpretation",
+  "decoding": {
+    "do_sample": false,
+    "num_beams": 1,
+    "max_new_tokens": 128,
+    "torch_dtype": "float16",
+    "seed": 20261115
+  },
+  "overlap_rule": "NFKC/casefold 4-word ngrams; additionally 4 consecutive ja/ko/zh script characters with spacing/punctuation removed; block if either overlaps.",
+  "sections": [
+    {
+      "section_id": "lyric-0000",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "e88d7367bf96999decb75f25e99c4b6c441aa6d11bfd03ee01bc2de8d5516624",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a warm, affectionate openness, emphasizing deep personal connection and mutual desire. The central theme explores the uniqueness of a bond that brings genuine joy and emotional resonance.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "01b14303fef86da46472cfc951b507e7c22384b618e25c17960dbbb6957b39ff"
+    },
+    {
+      "section_id": "lyric-0001",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "452bd7cf46198225852b370e0ce168d22429cb21e726f1b4a34fb2cbe7b080be",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is possessive and idealized, presenting a romanticized vision of intimacy centered on dependency and exclusivity. The theme emphasizes the belief that presence and connection can fulfill all emotional needs, reducing the relationship to a state of mutual reliance and unity.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "3c3d359717dd8e585cec37e5f76d3ff550cd891a2f7603d7191a06556aa0865f"
+    },
+    {
+      "section_id": "lyric-0002",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "e88d7367bf96999decb75f25e99c4b6c441aa6d11bfd03ee01bc2de8d5516624",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a warm, affectionate openness, emphasizing deep personal connection and mutual desire. The central theme explores the uniqueness of a bond that brings genuine joy and emotional resonance.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "01b14303fef86da46472cfc951b507e7c22384b618e25c17960dbbb6957b39ff"
+    },
+    {
+      "section_id": "lyric-0003",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "13349688f5b3add19318789ce07ba894592e50ac2097edc88916659478594dca",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is possessive and idealized, presenting a romanticized vision of intimacy centered on dependency and unity. The theme emphasizes the belief that presence and connection can fulfill all emotional needs, reducing the self to a state of complete devotion to another.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "bfad30b78940befebe57a36c50b2d8c56f952fba6324217265f7b70a7b141b9e"
+    },
+    {
+      "section_id": "span-0000",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    }
+  ]
+}

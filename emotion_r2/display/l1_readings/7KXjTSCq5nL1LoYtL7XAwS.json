@@ -1,0 +1,122 @@
+{
+  "schema_version": 1,
+  "track_id": "7KXjTSCq5nL1LoYtL7XAwS",
+  "cohort": "pilot",
+  "display_only": true,
+  "registered_scores_unchanged": true,
+  "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+  "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "prompt_sha256": "ffdf21672c16d12394441664976928ac03a51b35d721d3925cca9be8adc58e3d",
+  "registered_checkpoint_sha256": "922716caee0cdd04d185e6d1be949d438a8fd440f9f4d2898ddfd94d2e508af3",
+  "reading_label": "L1's interpretation of the lyrics",
+  "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+  "reading_type": "model_interpretation",
+  "decoding": {
+    "do_sample": false,
+    "num_beams": 1,
+    "max_new_tokens": 128,
+    "torch_dtype": "float16",
+    "seed": 20261115
+  },
+  "overlap_rule": "NFKC/casefold 4-word ngrams; additionally 4 consecutive ja/ko/zh script characters with spacing/punctuation removed; block if either overlaps.",
+  "sections": [
+    {
+      "section_id": "lyric-0000",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "d2604f326a9ee3271d8899028e8d0b533e211c68332db6e88976606f9f12ec64",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of isolation and resignation, emphasizing a personal struggle without external support. The theme centers on existential detachment and the feeling of being overlooked or abandoned by others.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "554f7bc5931d7df42c738665c2c46368e2cc64fd4f714b457ea2ff8d634a6378"
+    },
+    {
+      "section_id": "lyric-0001",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "fa7b500aa612e26479afb025eaf6cffc6f6f2ada538d941c7bf321b80f1595b8",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is boastful and self-assured, emphasizing dominance and control over both material and social circumstances. The themes revolve around wealth, power, and the persistence of influence despite external pressures or changes.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "a29287c010a1c142d141279930444521df7fd20851304f69d5ab8a65db61c10e"
+    },
+    {
+      "section_id": "lyric-0002",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "43839e61ccebfa31bd133471088c894aba031fa58b299fe50990c276cb42a09b",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a repetitive, commanding urgency, emphasizing control and submission through rhythmic insistence. The themes revolve around power dynamics, the imposition of order, and the cyclical nature of dominance and compliance.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "16567d541b63ae18ec8b5d4053cab931a2f1215ce12c52ae2b81121b1c0fd93e"
+    },
+    {
+      "section_id": "lyric-0003",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "964c042ed8c7dd5225fa9efd1fede19d0aad8d663043e2b4a6546f73b083462e",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is defiant and self-assured, emphasizing authenticity and rejection of artificiality. The central theme revolves around the contrast between genuine, unfiltered expression and manufactured or exaggerated appearances.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "b242257e5776a49d45dee60bf9e3aed6333a33d537c1557c5fb0326632810e53"
+    },
+    {
+      "section_id": "lyric-0004",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "15cbd3959f6a2a80f27619c631f048f5e63d63814401efba5aa4af97b8c0b7f4",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a repetitive, commanding urgency, emphasizing control and submission through rhythmic insistence. The themes revolve around power dynamics, the imposition of order, and the pressure to conform to a dominant authority.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "0845ef82a3f3c97b696aa943132cd02effc3a858340d6ea6b702ecf3e1b84df6"
+    },
+    {
+      "section_id": "span-0000",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    }
+  ]
+}

@@ -1,0 +1,122 @@
+{
+  "schema_version": 1,
+  "track_id": "6aLzDW8TlgccoWycY99mfU",
+  "cohort": "random",
+  "display_only": true,
+  "registered_scores_unchanged": true,
+  "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+  "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "prompt_sha256": "ffdf21672c16d12394441664976928ac03a51b35d721d3925cca9be8adc58e3d",
+  "registered_checkpoint_sha256": "b43239dcad6dc31d57fc5b2ff150fbe27b1290424b6c3108a0229a5d6b4f7622",
+  "reading_label": "L1's interpretation of the lyrics",
+  "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+  "reading_type": "model_interpretation",
+  "decoding": {
+    "do_sample": false,
+    "num_beams": 1,
+    "max_new_tokens": 128,
+    "torch_dtype": "float16",
+    "seed": 20261115
+  },
+  "overlap_rule": "NFKC/casefold 4-word ngrams; additionally 4 consecutive ja/ko/zh script characters with spacing/punctuation removed; block if either overlaps.",
+  "sections": [
+    {
+      "section_id": "lyric-0000",
+      "set": "secondary",
+      "language": "uncertain",
+      "text_sha256": "13bd595f4a7a5b8639a4dc1b8c9cdcfc30fb66ffeeba7a96c32841e37640cf91",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone presents a confident, detached assertion of dominance and emotional indifference, emphasizing control and a dismissive attitude toward relationships. The central theme revolves around the idea of emotional manipulation and the prioritization of personal gratification over genuine connection.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "d214e2ff1c60a934f31dabb18a478513fcc929e218c4ca4d348e49a8a3f766b1"
+    },
+    {
+      "section_id": "lyric-0001",
+      "set": "secondary",
+      "language": "uncertain",
+      "text_sha256": "821064142032695143eb6eb95c710a9cd03fb9011f68e65a24f879c9808d29b1",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a defiant, self-assured confidence mixed with a sense of detachment and control, emphasizing rebellion against criticism and a belief in one's own agency. The themes revolve around autonomy, emotional manipulation, and the allure of power and independence in relationships.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "4b66c9c1164733b3e6c6dd1e50776fb31a0ecd4224b5d0b1deb94ec1a56526fe"
+    },
+    {
+      "section_id": "lyric-0002",
+      "set": "secondary",
+      "language": "uncertain",
+      "text_sha256": "3f066263731e86a494d2a1af82e88a8eb7d1f21d9e3399c0daceb4d3f424cf72",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is aggressive and detached, emphasizing dominance and emotional coldness. The themes revolve around manipulation, control, and a disregard for emotional boundaries.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "09b4dc8c2a2df11a0c8604ac5016adff325d302f8ba43843f9c879985234fef7"
+    },
+    {
+      "section_id": "lyric-0003",
+      "set": "secondary",
+      "language": "uncertain",
+      "text_sha256": "5c61d3c41cf11ca003999fb81d650783c4d3cf6dc425075723643b4fb187fdd0",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is dismissive and self-assertive, portraying a sense of emotional detachment and contempt for perceived weakness in relationships. The themes revolve around rejection of vulnerability, the glorification of control, and the devaluation of emotional reciprocity.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "e0209934c0386d40078aa836e4a2f77c6997e866a179f6946747a8ec3bcafa96"
+    },
+    {
+      "section_id": "lyric-0004",
+      "set": "secondary",
+      "language": "uncertain",
+      "text_sha256": "73bd70e0c3abc1931e77c3d95da60061db9c3673c43ad01b6b8492aff7eaa6dd",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone presents a confident, detached assertion of dominance and emotional unpredictability, emphasizing control and indifference in interpersonal relationships. The central theme revolves around the idea of emotional manipulation and the prioritization of personal advancement over relational commitment.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "3e9c57e82f91f49878d482eb6090ea2012a769959cb57e2e4364ed94dea38318"
+    },
+    {
+      "section_id": "span-0001",
+      "set": "secondary",
+      "language": "uncertain",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    }
+  ]
+}

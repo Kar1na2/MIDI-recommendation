@@ -1,0 +1,190 @@
+{
+  "schema_version": 1,
+  "track_id": "3SKzTIl9mW0DadTys9SFo3",
+  "cohort": "random",
+  "display_only": true,
+  "registered_scores_unchanged": true,
+  "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+  "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "prompt_sha256": "ffdf21672c16d12394441664976928ac03a51b35d721d3925cca9be8adc58e3d",
+  "registered_checkpoint_sha256": "aaa05cbd53d161e5e599ea0121d04ef7ee5a669d10da95009ef875ba994ba454",
+  "reading_label": "L1's interpretation of the lyrics",
+  "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+  "reading_type": "model_interpretation",
+  "decoding": {
+    "do_sample": false,
+    "num_beams": 1,
+    "max_new_tokens": 128,
+    "torch_dtype": "float16",
+    "seed": 20261115
+  },
+  "overlap_rule": "NFKC/casefold 4-word ngrams; additionally 4 consecutive ja/ko/zh script characters with spacing/punctuation removed; block if either overlaps.",
+  "sections": [
+    {
+      "section_id": "lyric-0000",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "dff013d8e6f0481ced1cd982089285bb94af752c0bdb4ab3c7a9c657321ded1b",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is one of isolation and psychological dread, emphasizing internal turmoil and the burden of hidden truths. The themes revolve around fear of exposure, the corrupting nature of secrets, and a sense of being pursued by unseen, oppressive forces.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "52abb8a08648bc9e85ca442964cbb9cd18bd2c415ed41a83c24026b59b44d9c4"
+    },
+    {
+      "section_id": "lyric-0001",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "22b01362dc218f450e622ed9f6a90496400092f401691524815fff888df39f37",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of overwhelming internal force and emotional distance, suggesting a struggle between self-perception and external reality. The themes explore identity as something vast and unyielding, contrasting inner intensity with fragile human responses.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "179e4b3e7a335f8d3ac3a998fabb0ba6ddba65e8b4ef2a3bb353c0c11669d3fd"
+    },
+    {
+      "section_id": "lyric-0002",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "b15432923140acd584bec5086637a2e998f37398757d485b646be79b185ec037",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of intense, unsettling power and psychological dominance, while the themes explore control, fear, and the instability of authority in a confrontational dynamic.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "6784ae5cef81dd706a313ff63b725167bb45b71cd5706c93b9a70e0f03ed4ccd"
+    },
+    {
+      "section_id": "lyric-0003",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "1e8a865ec02b46cb6e9741d1853aefd6365a500c27eb3d32f55310a37cf67660",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of internal turmoil and isolation, marked by anxiety and a struggle with self-perception. The themes explore disconnection from one's own identity and a desperate attempt to escape or redefine the self.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "d303c7014a991e6f4397adbf20d90072c44583f1ae86ec3a670d49b9ad68dfcd"
+    },
+    {
+      "section_id": "lyric-0004",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "22b01362dc218f450e622ed9f6a90496400092f401691524815fff888df39f37",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of overwhelming internal force and emotional distance, suggesting a struggle between self-perception and external reality. The themes explore identity as something vast and unyielding, contrasting inner intensity with fragile human responses.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "179e4b3e7a335f8d3ac3a998fabb0ba6ddba65e8b4ef2a3bb353c0c11669d3fd"
+    },
+    {
+      "section_id": "lyric-0005",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "c7cca6f08fd1a7f589a8f713c145c5147d84190b2a2645645376e69c5cf7e853",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of intense, unsettling power and dominance, with underlying tension and a challenge to perceived boundaries. The themes explore control, fear, and the psychological imbalance between individuals in a confrontational dynamic.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "2d121fc7f2a3e20df1411b182997eaa11b10f9d5870c366137a40240dbde79ae"
+    },
+    {
+      "section_id": "lyric-0006",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "23eac77e2cf738f35e6759ced72c085038fe2a01c4c7cf0d2492babedb46b949",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests a haunting, introspective blend of obsession and entrapment, where creative imagination blurs with personal identity. The themes explore the persistence of dark impulses and the fear of being forgotten, reflecting a deep psychological connection between creation and self.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "042c2db9eb2c954f6183d33112b496908e7e835d42439e1812e804afb9d7f661"
+    },
+    {
+      "section_id": "lyric-0007",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "83c9683f9eae3e0dec4d782965471ce770910a26aacb111ea5dba279f92068d2",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of overwhelming internal force, suggesting a deep, unyielding presence that transcends physical form and emotional limitations. The themes explore identity as something vast, detached, and potentially hostile, emphasizing a self that exists beyond conventional boundaries of self-perception.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "c2eadf83301e8db61c34e7785e60c3250ce49778e6f3ebc676f971e5f60e9dc6"
+    },
+    {
+      "section_id": "lyric-0008",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "cc6c07e2c1bc4c6c83137ab1e5f4be1c3496542c8652cc6efd334b5742653a0d",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of overwhelming power and dominance, contrasting with expressions of fear and helplessness. The central theme explores the tension between control and submission, highlighting an unyielding force that asserts its authority despite attempts to resist.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "886d7ebd8e95eeff8349a17b0c057114c9c5eef56df43739fad95eb5c3676e54"
+    },
+    {
+      "section_id": "span-0000",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    }
+  ]
+}

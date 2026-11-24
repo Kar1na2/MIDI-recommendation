@@ -83,7 +83,8 @@ def main():
         out_rows.append(new_row)
 
     fieldnames = [
-        "song_a", "song_b", "len_a", "len_b", "best_transposition",
+        "song_a", "song_b", "candidate_type", "retrieval_score",
+        "len_a", "len_b", "best_transposition",
         "raw_score", "normalized_score",
         "perm_null_mean_deprecated", "perm_null_sd_deprecated", "perm_z_score_deprecated",
         "corpus_z_a", "corpus_z_b", "corpus_z",

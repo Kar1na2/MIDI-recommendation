@@ -1,0 +1,259 @@
+{
+  "schema_version": 1,
+  "track_id": "4wQDjZtXjsFtU3BLSiIH4t",
+  "cohort": "random",
+  "display_only": true,
+  "registered_scores_unchanged": true,
+  "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+  "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "prompt_sha256": "ffdf21672c16d12394441664976928ac03a51b35d721d3925cca9be8adc58e3d",
+  "registered_checkpoint_sha256": "33cdd3825363a4de77f1026cfd0f13a58f0d83916092b356edd1a00ab574a26c",
+  "reading_label": "L1's interpretation of the lyrics",
+  "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+  "reading_type": "model_interpretation",
+  "decoding": {
+    "do_sample": false,
+    "num_beams": 1,
+    "max_new_tokens": 128,
+    "torch_dtype": "float16",
+    "seed": 20261115
+  },
+  "overlap_rule": "NFKC/casefold 4-word ngrams; additionally 4 consecutive ja/ko/zh script characters with spacing/punctuation removed; block if either overlaps.",
+  "sections": [
+    {
+      "section_id": "lyric-0000",
+      "set": "secondary",
+      "language": "ko",
+      "text_sha256": "68caaa3b9fac5032ce3c111e54948e123a209b5a68942bd9d68a5da830e2668a",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests a playful, rhythmic sensuality, blending contrasting elements in a repeating, hypnotic pattern. The themes explore duality and sensory harmony, emphasizing the interplay between opposing yet complementary sensations.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "72011e181a307468ec54d90759d0f9d580656e3a410395ca0c4343c793fe80ca"
+    },
+    {
+      "section_id": "lyric-0001",
+      "set": "secondary",
+      "language": "ko",
+      "text_sha256": "33107b4eea9fc95ff3c160618036dd03b041e98ebba1da311215c077fb65627b",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys an urgent, exhilarating energy, driven by a sense of movement and intensifying sensation. The themes explore the pursuit of something unique and transformative, where experience grows richer and more overwhelming through combination and escape.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "ebc7225b846948aad2d934772b1c40eb62025b82eb93ac14cbd15a6ae0d6cab0"
+    },
+    {
+      "section_id": "lyric-0002",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "a47e2e281b2d711341d881429db50023ccf04f9b37fd0ac6b4bfe8f92a9c5c17",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of quiet melancholy and finality, emphasizing the lingering presence of something lost. The themes explore emotional dissolution and the quiet aftermath of departure, where memory and absence intertwine.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "daea2f74e635bf841ccfa083d3d938e1c30147a131ad925132b1d96f1b2c013f"
+    },
+    {
+      "section_id": "lyric-0003",
+      "set": "secondary",
+      "language": "ko",
+      "text_sha256": "f990ac7c49eea3bad183ca931f6fd7e6d821561d430f73472bb55c1a12f214cc",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a playful yet complex emotional contrast, blending unexpected sensations with deep, lingering attraction. The themes explore the duality of human experience—opposing yet complementary emotions—that create a profound and memorable connection.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "45beb2085a4786229e83381fb631f41345892d8b38e04eadd667696030a3f23e"
+    },
+    {
+      "section_id": "lyric-0004",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "a8e365bc641888c9924f26c1173e2513e5f5a4e43e1a03739fa2507acd6d41db",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests a seductive and deceptive allure, masking a hidden cost. The theme explores the danger of temptation that promises beauty and pleasure but ultimately demands sacrifice.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "d1aa1961c8d6749d2994a4ca21488d465ea58ff0be1a51be614c70ceae11f40c"
+    },
+    {
+      "section_id": "lyric-0005",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "782df41c8deebfe745d7bfab8af536951f678ed9b843b7996eac0ebce47bc8c5",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of quiet loss and finality, emphasizing the irreversible absence of a presence that once deeply influenced the speaker. The theme centers on the quiet erosion of connection and the emotional weight of departure, even when it occurs without explicit explanation.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "f8f09c366e529a94ae64e20f172c2ad3f6dba938f128ad29fc1cd56e2c2b259b"
+    },
+    {
+      "section_id": "lyric-0006",
+      "set": "secondary",
+      "language": "ko",
+      "text_sha256": "f990ac7c49eea3bad183ca931f6fd7e6d821561d430f73472bb55c1a12f214cc",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a playful yet complex emotional contrast, blending unexpected sensations with deep, lingering attraction. The themes explore the duality of human experience—opposing yet complementary emotions—that create a profound and memorable connection.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "45beb2085a4786229e83381fb631f41345892d8b38e04eadd667696030a3f23e"
+    },
+    {
+      "section_id": "lyric-0007",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "f4e3d9dde9de0a50dad4f42cea6781ce9d43f41a9543ebd529b44e40aadac039",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of inevitable consumption and emotional transformation, where clarity gives way to darkness and self-absorption. The theme explores the loss of individuality in the face of overwhelming internal or external forces.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "129b50e8eef5b6f8425a1dd0b1b3b7223a52c282bf59335d3c72b033b5f31fa7"
+    },
+    {
+      "section_id": "lyric-0008",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "0144afae800bd4c3385c1fe21abf2e05ee364b6f0907fcd861500f06f1e23214",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone evokes a rhythmic, almost hypnotic quality, blending contrasting elements in a way that suggests duality and balance. The themes explore the interplay between opposing forces, presenting them as intertwined and inseparable.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "dea76b38f42238bcc44406072b0ed87ea1a7de80e4d1ebdd188959d4a10eb652"
+    },
+    {
+      "section_id": "lyric-0009",
+      "set": "secondary",
+      "language": "ko",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    },
+    {
+      "section_id": "lyric-0010",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "82a3d379a75acdc94ee3941b4502fea0aef38e32ce13d43f2997123812b0d80d",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone evokes a contrasting duality, blending intense sensory appeal with a sense of overwhelming, almost chaotic emotion. The themes suggest a profound tension between opposing forces—perhaps desire and restraint, pleasure and pain, or stability and instability—expressed through repetitive, hypnotic patterns.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "eb63446da49f2b3a67c00ebede1cc385a883d34fe384770256927915bf5cd313"
+    },
+    {
+      "section_id": "span-0000",
+      "set": "secondary",
+      "language": "ko",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    },
+    {
+      "section_id": "span-0002",
+      "set": "secondary",
+      "language": "ko",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    },
+    {
+      "section_id": "span-0005",
+      "set": "secondary",
+      "language": "ko",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    },
+    {
+      "section_id": "span-0008",
+      "set": "secondary",
+      "language": "ko",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    }
+  ]
+}

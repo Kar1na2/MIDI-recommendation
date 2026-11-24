@@ -1,0 +1,237 @@
+{
+  "schema_version": 1,
+  "track_id": "1Jo0Zg7XlrA6z0mFTZVdkn",
+  "cohort": "random",
+  "display_only": true,
+  "registered_scores_unchanged": true,
+  "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+  "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "prompt_sha256": "ffdf21672c16d12394441664976928ac03a51b35d721d3925cca9be8adc58e3d",
+  "registered_checkpoint_sha256": "bedf9527e173c7515f8e40399896dd12c7b15d51a1a9af96765300845319dfcc",
+  "reading_label": "L1's interpretation of the lyrics",
+  "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+  "reading_type": "model_interpretation",
+  "decoding": {
+    "do_sample": false,
+    "num_beams": 1,
+    "max_new_tokens": 128,
+    "torch_dtype": "float16",
+    "seed": 20261115
+  },
+  "overlap_rule": "NFKC/casefold 4-word ngrams; additionally 4 consecutive ja/ko/zh script characters with spacing/punctuation removed; block if either overlaps.",
+  "sections": [
+    {
+      "section_id": "lyric-0000",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "5353463603f15cd3c95ef56d1846d472cd82584545da0e338df7312664421fda",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is persistent and urgent, conveying a deep desire to maintain continuity and avoid disruption. The theme centers on the emotional or psychological value of ongoing experience, suggesting that interruption threatens stability or meaning.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "25da948f5614b01e32c62affcc9134ad07b6b3788f1eaedaa8a478f13d2ceea7"
+    },
+    {
+      "section_id": "lyric-0001",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "241ad74da619d9132727d723caeeac2481cffdbeb716057e9312d6d6155dacd6",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of quiet attraction and emotional vulnerability, while the themes explore the unexpected impact of presence and the difficulty of resisting connection in a moment of personal stillness.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "e0b241b8c2cd74d1cc407b1b4e980a14eaccb9535b307429c5fbaf46d6c44996"
+    },
+    {
+      "section_id": "lyric-0002",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": "e55e0900fc5bee35ec4a5ebc1a93feae3a7ff5dea20c97eddeaba123063f2116",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is energetic and immersive, emphasizing connection and spontaneity within a vibrant, rhythmic atmosphere. The themes revolve around intimacy, shared presence, and the transformative power of music in fostering closeness.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "e24b7dfcfad3fcf77a722edc868281ab854db1fffcbbf3871512a70168f7992f"
+    },
+    {
+      "section_id": "lyric-0003",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "edac29dec51c49e9d1f1cd9d137c3d62de74e1eb1a6d0a583caf2f6c1c5e3953",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys an urgent, immersive desire to dissolve into a rhythmic experience, emphasizing surrender and collective movement. The central theme explores the power of sound to transport and unify individuals, creating a sense of escape from reality.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "da131b75482f08acd57a0568e29ffb69cb933336daae31d821d7bd9f5427d7c1"
+    },
+    {
+      "section_id": "lyric-0004",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "741d1a4101ea31dcdccbe76cd6f67c5e915818aca19e8e48d9df76f40a0cfae2",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests intensity and exclusivity, emphasizing a charged, personal connection that is meant to remain hidden from outsiders. The themes revolve around emotional urgency, intimacy, and the desire for private, unshared experiences.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "6539b6e542dda9f0197fb088e622feb70089ece3c2e3599222d217f26de03fc8"
+    },
+    {
+      "section_id": "lyric-0005",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": "e55e0900fc5bee35ec4a5ebc1a93feae3a7ff5dea20c97eddeaba123063f2116",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is energetic and immersive, emphasizing connection and spontaneity within a vibrant, rhythmic atmosphere. The themes revolve around intimacy, shared presence, and the transformative power of music in fostering closeness.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "e24b7dfcfad3fcf77a722edc868281ab854db1fffcbbf3871512a70168f7992f"
+    },
+    {
+      "section_id": "lyric-0006",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "edac29dec51c49e9d1f1cd9d137c3d62de74e1eb1a6d0a583caf2f6c1c5e3953",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys an urgent, immersive desire to dissolve into a rhythmic experience, emphasizing surrender and collective movement. The central theme explores the power of sound to transport and unify individuals, creating a sense of escape from reality.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "da131b75482f08acd57a0568e29ffb69cb933336daae31d821d7bd9f5427d7c1"
+    },
+    {
+      "section_id": "lyric-0007",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "e55814c7f229315e7975b0b454f21edd352bc27006a34bd31abf2ca264231ace",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is reverent and yearning, emphasizing a deep emotional connection to a shared experience. The central theme revolves around the desire to escape reality and preserve a moment of unity and joy through continuous presence and shared rhythm.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "cf77e4647428151fd677aad53c0402cfac896614297cd661dbea7db2a1f9f8f7"
+    },
+    {
+      "section_id": "lyric-0008",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "edac29dec51c49e9d1f1cd9d137c3d62de74e1eb1a6d0a583caf2f6c1c5e3953",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys an urgent, immersive desire to dissolve into a rhythmic experience, emphasizing surrender and collective movement. The central theme explores the power of sound to transport and unify individuals, creating a sense of escape from reality.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "da131b75482f08acd57a0568e29ffb69cb933336daae31d821d7bd9f5427d7c1"
+    },
+    {
+      "section_id": "lyric-0009",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "925439426b0f5751201b5086169957ea0992b1c57e8b9116c86483d0e3a32693",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is repetitive and emotionally resonant, conveying a deep yearning to preserve a sense of continuity and connection. The themes revolve around the enduring power of tradition, memory, and the desire to maintain a shared, comforting rhythm in the face of change.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "272d9e402fb4ae040695354c0dc11cc5fb30ed394cb469c1a6564a0ed4230ba9"
+    },
+    {
+      "section_id": "lyric-0010",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "cb7d403d9c1fbea70fbb53b4c221920bc0fd2564920b52f2b7b5ce6865186e05",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is repetitive and rhythmic, suggesting a sense of continuity and emotional resonance. The theme centers on the enduring presence of music as a unifying and comforting force.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "22223db742824b043d75a42621b111f03cb8434bd41d162982e5645d77d240c9"
+    },
+    {
+      "section_id": "span-0002",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    },
+    {
+      "section_id": "span-0005",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    }
+  ]
+}

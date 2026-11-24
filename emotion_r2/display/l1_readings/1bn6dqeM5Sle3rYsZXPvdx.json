@@ -1,0 +1,131 @@
+{
+  "schema_version": 1,
+  "track_id": "1bn6dqeM5Sle3rYsZXPvdx",
+  "cohort": "random",
+  "display_only": true,
+  "registered_scores_unchanged": true,
+  "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+  "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "prompt_sha256": "ffdf21672c16d12394441664976928ac03a51b35d721d3925cca9be8adc58e3d",
+  "registered_checkpoint_sha256": "9b88ab6f23dff5f01f729f51248315fb5516b8eff5675b02d6e1b12bdcb8f59e",
+  "reading_label": "L1's interpretation of the lyrics",
+  "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+  "reading_type": "model_interpretation",
+  "decoding": {
+    "do_sample": false,
+    "num_beams": 1,
+    "max_new_tokens": 128,
+    "torch_dtype": "float16",
+    "seed": 20261115
+  },
+  "overlap_rule": "NFKC/casefold 4-word ngrams; additionally 4 consecutive ja/ko/zh script characters with spacing/punctuation removed; block if either overlaps.",
+  "sections": [
+    {
+      "section_id": "lyric-0000",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "97d9a19b6a2f4a86d952524479741ade294c4b4bbf0e78612396a383a39e85b0",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a mix of vulnerability and longing, driven by an intense, uncontrolled emotional response to the presence of another. The central theme explores the powerful, almost physical pull of desire and connection, suggesting that the speaker's feelings are deeply influenced by the other person's actions and presence.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "fa1287d04e604f40e3dcc2f7ade257b0a1449c7de698dfd2004d6fb5982d7411"
+    },
+    {
+      "section_id": "lyric-0001",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "4b5e832481175ac8464099fe6684f4adf7161ed7e7134ea5e4ac0074bc923b10",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys an intense, almost obsessive devotion, emphasizing physical and emotional dependence. The central theme explores the idea of an unbreakable bond that fuels both passion and a sense of inevitability in a relationship.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "082dca960524a24581ca15d7d85c071de514058b2655b00abd2e8a9c543fa4f3"
+    },
+    {
+      "section_id": "lyric-0002",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "69d88a9e4c30e989e4c8c94b5726e91ebf80912b4972e21d8f99a960e5c10668",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests a blend of intimacy and dependency, emphasizing mutual influence and emotional vulnerability. The themes revolve around desire, control, and the reciprocal nature of emotional connection.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "c7d0fd73f849584c1e329c6f6d4236384c956f3fdae0a47172c95f7b8bfb50a4"
+    },
+    {
+      "section_id": "lyric-0003",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "61977dbfce083dc5f8900f2b23c15a7730d77443ed1391531e774595e15627e8",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is intensely passionate and possessive, conveying a deep, almost physical dependence on the beloved. The central theme revolves around unyielding emotional and physical attachment, where the presence of the other person triggers an overwhelming, inescapable need.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "d9326c4b148049a8042cf5ed9b938048c09ccce299c838218b53802cb5799db7"
+    },
+    {
+      "section_id": "span-0000",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    },
+    {
+      "section_id": "span-0002",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    },
+    {
+      "section_id": "span-0004",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    }
+  ]
+}

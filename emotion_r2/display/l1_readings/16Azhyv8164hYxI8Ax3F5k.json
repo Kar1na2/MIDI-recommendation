@@ -1,0 +1,139 @@
+{
+  "schema_version": 1,
+  "track_id": "16Azhyv8164hYxI8Ax3F5k",
+  "cohort": "random",
+  "display_only": true,
+  "registered_scores_unchanged": true,
+  "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+  "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "prompt_sha256": "ffdf21672c16d12394441664976928ac03a51b35d721d3925cca9be8adc58e3d",
+  "registered_checkpoint_sha256": "19f29df72012865cb7eeb2cbdacfa3b36112ff41c4a6e4282bf32b012d0379c7",
+  "reading_label": "L1's interpretation of the lyrics",
+  "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+  "reading_type": "model_interpretation",
+  "decoding": {
+    "do_sample": false,
+    "num_beams": 1,
+    "max_new_tokens": 128,
+    "torch_dtype": "float16",
+    "seed": 20261115
+  },
+  "overlap_rule": "NFKC/casefold 4-word ngrams; additionally 4 consecutive ja/ko/zh script characters with spacing/punctuation removed; block if either overlaps.",
+  "sections": [
+    {
+      "section_id": "lyric-0000",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "c92e53917ab60442afbaa3513b5f160495016bf3b46e36632efd18f1eaa7506d",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys surprise and a mix of admiration and unexpected intensity, suggesting a sudden shift in dynamics between two individuals. The themes explore unforeseen transformation, hidden strength beneath a gentle exterior, and the contrast between appearance and actual impact.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "ef5d6e83f9ce7ce8831eab9b8d85dbac15dd003e7afe14f578432f6f4b9ce291"
+    },
+    {
+      "section_id": "lyric-0001",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "921f09affc7a15c6ae2824aaa9b3402d8104620b43462dd91864cc22dfc936b1",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of vigilant awareness and quiet suspicion, underpinned by a deep, unshakable intuition. The themes explore hidden intentions, the danger of deception, and the instinctive response to perceived betrayal.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "2d69bd9c86ec8b78f759682877770ce4ed155e7ab532aca8ff81819b8bc206e3"
+    },
+    {
+      "section_id": "lyric-0002",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "1a6a0942e4f714e44c23455fc0d7fab0f137c6af5f638775126dd202c093caf5",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of escape and emotional detachment, marked by intoxication and repetition. The themes explore disillusionment with a relationship and the use of alcohol as a means to dissolve pain and retreat into a state of numbness.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "c4c93871ab0ad56ae9028147c5f1e387ad21e74ae04d6dabb66a3fdfcadebb72"
+    },
+    {
+      "section_id": "lyric-0003",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "c4ae0165d76c1dcc9dea48e150dde3292dd65f5aec29cdbd5128bf5799ccc92b",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a shift from passive endurance to active resistance, marked by growing frustration and a decisive break from a relationship perceived as manipulative and unstable. The central theme explores the consequences of emotional neglect and the point at which a person chooses to end a dynamic that no longer serves them.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "0a08e03fb79a82771f371e60ddf7bd8aaa4051f65cf78132a30a8b19682641b8"
+    },
+    {
+      "section_id": "lyric-0004",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "283acb1a646d00440d96039b7f880fe0d4cc3672ae759596ce25d9d581786190",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of existential uncertainty and emotional vulnerability, blending introspection with a haunting awareness of mortality. The themes explore identity, the blurring of reality and illusion, and the profound fear of ending without clarity.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "68cf45d7d85c27948ed14c5169396fb9d0fdb8ba20e7870536af224844b9d99a"
+    },
+    {
+      "section_id": "lyric-0005",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "297d065076c774cf76381074385c4b34d8b4ae05a81a8d841f189e5008fd3e9a",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of emotional release and escapism, marked by intoxication and detachment. The central theme explores the use of alcohol and movement as mechanisms to distance oneself from a painful relationship.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "7d72098abf46bafe157c22f9fa714a012bd164e1727309e48f321278cd878875"
+    },
+    {
+      "section_id": "span-0000",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    }
+  ]
+}

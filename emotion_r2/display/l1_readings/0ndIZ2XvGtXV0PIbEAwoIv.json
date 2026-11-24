@@ -1,0 +1,173 @@
+{
+  "schema_version": 1,
+  "track_id": "0ndIZ2XvGtXV0PIbEAwoIv",
+  "cohort": "random",
+  "display_only": true,
+  "registered_scores_unchanged": true,
+  "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+  "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "prompt_sha256": "ffdf21672c16d12394441664976928ac03a51b35d721d3925cca9be8adc58e3d",
+  "registered_checkpoint_sha256": "b923975ecaf2c86e5788c6e22ef5db43b0ac1f1b9e2b4d11fc98e9513e8bbfa9",
+  "reading_label": "L1's interpretation of the lyrics",
+  "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+  "reading_type": "model_interpretation",
+  "decoding": {
+    "do_sample": false,
+    "num_beams": 1,
+    "max_new_tokens": 128,
+    "torch_dtype": "float16",
+    "seed": 20261115
+  },
+  "overlap_rule": "NFKC/casefold 4-word ngrams; additionally 4 consecutive ja/ko/zh script characters with spacing/punctuation removed; block if either overlaps.",
+  "sections": [
+    {
+      "section_id": "lyric-0000",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "2219e888d384b7e7decc1f25399b6e4f5138d056c243420e22be128c33800296",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of overwhelming intensity and internal disorientation, as if the self is being consumed by a singular, dominating presence. The themes explore isolation, sensory distortion, and the blurring of reality and mental instability.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "aec2b0361dee30bbd9134440071b79c74a3206ddb67a16fbd77dec3bdabfa083"
+    },
+    {
+      "section_id": "lyric-0001",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "fea106695cb53de3d4703e503f47892850ebc11ffd9127a6575589096f56fe18",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of internal confusion and self-doubt, blending emotional intensity with uncertainty. The theme explores the disorienting experience of unspoken feelings and the blurring line between genuine affection and mental instability.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "3b760be1ce322e37e1ceddfa65a82ece7da86d04769dde7949aaba4fdf4b9364"
+    },
+    {
+      "section_id": "lyric-0002",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "17f3b78070c70cf2d9bf3bab9e55897c3cc33b95377a4929655e4ec341e55428",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of instability and confusion, suggesting repeated shifts in behavior that disrupt emotional clarity. The central theme explores the disorienting impact of inconsistency on personal connection.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "34163a28e13972601b5065dd8bdef4bfddfc2660d4e79c0e77c74f1be70ab34b"
+    },
+    {
+      "section_id": "lyric-0003",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "2a567c4a5eeab8497fb3010576db3e99c4fbf7bb9aae040ad2f82a54d04d3225",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a persistent, intimate sense of longing and emotional isolation, where presence is felt only through the observer's own perception. The theme explores the idea of unshared inner experience, highlighting how connection remains subjective and confined to one's own vision.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "f858570af8242786722f725d6f66195b440a3516bef6646eb698ec4d3566311d"
+    },
+    {
+      "section_id": "lyric-0004",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "2219e888d384b7e7decc1f25399b6e4f5138d056c243420e22be128c33800296",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of overwhelming intensity and internal disorientation, as if the self is being consumed by a singular, dominating presence. The themes explore isolation, sensory distortion, and the blurring of reality and mental instability.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "aec2b0361dee30bbd9134440071b79c74a3206ddb67a16fbd77dec3bdabfa083"
+    },
+    {
+      "section_id": "lyric-0005",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "095d72f226389009ea1bd6d6769dff231b47b6e34b2f5bec0e066cf5555ea167",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests a quiet, unresolved tension, conveying a sense of hidden emotion and internal struggle. The theme explores the complexity of concealment and the ambiguity of presence or absence in human connection.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "d058b65bbc58c4b6373dc977735916aa405ac9a20e2392b8f44a2ce92801ef32"
+    },
+    {
+      "section_id": "lyric-0006",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "3efe5790322262505caf8502981f8ad28be59c53f00949506cf7d5988c20d151",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of restless evasion and inner turmoil, suggesting a struggle to find stability amidst persistent discomfort. The central theme explores the futility of escape when faced with an inescapable emotional or existential pressure.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "fd81ab4c06d04b3db9f34bb4944181fd6c87d41fdc8560e4dbdca036b29bb073"
+    },
+    {
+      "section_id": "lyric-0007",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "24557c2e57e1d43955455d5019c23dda410e9db4e7628033218e7f40a02ab6ca",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a persistent, almost obsessive awareness of an unshakable presence, emphasizing the intimacy and inescapability of a particular perception. The theme explores the idea of being seen and known in a way that transcends physical reality, highlighting a deep, personal connection that remains constant regardless of external conditions.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "8e33d61013272acd28d9d4fcf4f22648e1e27df89dcb92c269ec3f482013228e"
+    },
+    {
+      "section_id": "span-0000",
+      "set": "secondary",
+      "language": "ko",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    }
+  ]
+}

@@ -1,0 +1,156 @@
+{
+  "schema_version": 1,
+  "track_id": "3Pj6u2KTgepyyidp5xfbHp",
+  "cohort": "random",
+  "display_only": true,
+  "registered_scores_unchanged": true,
+  "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+  "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "prompt_sha256": "ffdf21672c16d12394441664976928ac03a51b35d721d3925cca9be8adc58e3d",
+  "registered_checkpoint_sha256": "265bc4dcef854b6793514941b5c10ef89716818d5592634c542f1058b658d7b5",
+  "reading_label": "L1's interpretation of the lyrics",
+  "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+  "reading_type": "model_interpretation",
+  "decoding": {
+    "do_sample": false,
+    "num_beams": 1,
+    "max_new_tokens": 128,
+    "torch_dtype": "float16",
+    "seed": 20261115
+  },
+  "overlap_rule": "NFKC/casefold 4-word ngrams; additionally 4 consecutive ja/ko/zh script characters with spacing/punctuation removed; block if either overlaps.",
+  "sections": [
+    {
+      "section_id": "lyric-0000",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "cf402c0d2cd23ed2a1a7546e2a07e08fbd6640e229b9be2a24768d543a2392e6",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a desperate, passionate longing mixed with a sense of entrapment and dark allure, while the themes explore obsession, emotional dependency, and the blurred boundaries between desire and damnation.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "9ef0616542eefcbb35fe9cd0c79e69eae53eb22b3340f5a3c662579de5d5bf1d"
+    },
+    {
+      "section_id": "lyric-0001",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "904ad103b94f1ffd04d841d989086bb91c9d9d9f39ffd838188d811dd97528b0",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of intense emotional disturbance and obsession, while the central theme explores the overwhelming and potentially destructive influence of a person on another's mental state.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "e37dd5086f13513bb69e84a8379c6e4491a70525fc033f82c44075aee1e10fd8"
+    },
+    {
+      "section_id": "lyric-0002",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "487923afc406dc696fcf5052a26c900b41f8650a547fbcf969971d8c0eadd2ff",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is intense and impassioned, conveying a surge of emotional fervor and possessive devotion. The themes revolve around obsession, the overwhelming power of desire, and a transformation triggered by a moment of intense experience.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "383f08656b73aec3138b589b0216b2809be7f73d2654950a8048b540ffea63f5"
+    },
+    {
+      "section_id": "lyric-0003",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "997317fcf9d97f4617a03a681d8be9ba0f8dec6def78c2c10ae251352162e2c2",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of intense emotional dependency and power reversal, where vulnerability is intertwined with desire and submission. The themes explore manipulation, shifting roles in a relationship, and a yearning for control and shared dominance.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "de93500b2659ba90a1b9fd7d51e5199b84e6fb7675ea7a7e06c247fbfec9d392"
+    },
+    {
+      "section_id": "lyric-0004",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "904ad103b94f1ffd04d841d989086bb91c9d9d9f39ffd838188d811dd97528b0",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of intense emotional disturbance and obsession, while the central theme explores the overwhelming and potentially destructive influence of a person on another's mental state.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "e37dd5086f13513bb69e84a8379c6e4491a70525fc033f82c44075aee1e10fd8"
+    },
+    {
+      "section_id": "lyric-0005",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "52d843bb8fda91b2d0df6f9bd25a8a223810f6bd5d05126532a7b38986097319",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is intense and impassioned, conveying a surge of emotional fervor and possessive devotion. The themes revolve around obsession, surrender to desire, and the destructive power of uncontrolled passion.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "f70b3407ef61c5e1b989bbc9e59cefc99b78929e8b9909626525c54577881cd7"
+    },
+    {
+      "section_id": "lyric-0006",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "31c23c6a4dd8db070bd0d3210c775ef2a2380757f2edef6e0e23b91b52e6cc96",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests intense emotional urgency and a desire for transformation, while the themes explore destruction and renewal as part of a passionate, possibly chaotic pursuit of connection.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "a0922fffc9013e6a8e6754dcb352ad1e66eb3224a4d06d4dd2242de651cf9c3f"
+    },
+    {
+      "section_id": "span-0000",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    }
+  ]
+}

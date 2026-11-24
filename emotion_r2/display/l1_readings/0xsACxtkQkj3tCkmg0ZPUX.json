@@ -1,0 +1,156 @@
+{
+  "schema_version": 1,
+  "track_id": "0xsACxtkQkj3tCkmg0ZPUX",
+  "cohort": "random",
+  "display_only": true,
+  "registered_scores_unchanged": true,
+  "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+  "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "prompt_sha256": "ffdf21672c16d12394441664976928ac03a51b35d721d3925cca9be8adc58e3d",
+  "registered_checkpoint_sha256": "36225a8c176fccd2c37cf76f40cb4ae595b87ba2aad2287421725655a1e1c40d",
+  "reading_label": "L1's interpretation of the lyrics",
+  "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+  "reading_type": "model_interpretation",
+  "decoding": {
+    "do_sample": false,
+    "num_beams": 1,
+    "max_new_tokens": 128,
+    "torch_dtype": "float16",
+    "seed": 20261115
+  },
+  "overlap_rule": "NFKC/casefold 4-word ngrams; additionally 4 consecutive ja/ko/zh script characters with spacing/punctuation removed; block if either overlaps.",
+  "sections": [
+    {
+      "section_id": "lyric-0000",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "7408ea5e2a0fcecf9fc0d8e5838178ba3c8b436917d65e15eb45873c487ce35c",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is reflective and contemplative, emphasizing enduring resilience and the weight of inherited responsibility. The theme centers on the tension between personal uncertainty and the stability provided by historical continuity.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "e8ea3f3bc853586b7c64e68144c4ed72511f31278aa1a73ffbe0b30fba7ef373"
+    },
+    {
+      "section_id": "lyric-0001",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "5d3f45f1b40c918299672ce01997f17f17d161f25601b898638e77f67af4c1f1",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of urgency and disorientation, suggesting a struggle to ground oneself amidst external pressures. The themes explore mental detachment and the intrusion of alerts or demands that disrupt inner peace.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "942c4bc534f0faa3da604e2ed75fa5138dbd1b3e23b422dac74606ca0f85a0b1"
+    },
+    {
+      "section_id": "lyric-0002",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "8d3c1ad31bcc736642b879e667958d59aa621673ab6e494292f1541c379dbd45",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone evokes a serene, drifting tranquility, blending natural imagery with a sense of infinite, gentle movement. The themes suggest continuity, dissolution into the unknown, and a peaceful transition between realms.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "333577e18034edc429ae02ba2b1b04dcb82d86aaf6b26e8ae9829766f62819e8"
+    },
+    {
+      "section_id": "lyric-0003",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "cd66e17775d7d26803db420baa89ca85e1bcf83931cd6afccb1ee2d469fb32f9",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is resolute and urgent, emphasizing inner strength and the necessity of breaking free from self-imposed suffering. The central theme revolves around liberation through self-awareness and the rejection of suppression in favor of authentic, grounded existence.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "9fad37cac0b8747afbbf0b30a7164a190f03cc7d77da9f684d9b4e47f069dc51"
+    },
+    {
+      "section_id": "lyric-0004",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "444906d2feb26b0278099290d7dbfe3ddac6ac6785a3eecf4edd9d5d50d92cec",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone evokes a serene, almost dreamlike movement through vast and fluid spaces, suggesting a sense of effortless flow and dissolution into something infinite and peaceful. The themes center on continuity, transition, and the merging of self with an expansive, natural environment.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "c8ea87df00445f4ff707aea1d9cb6b93833cdbb63de47c1d24520ada83bbc9ef"
+    },
+    {
+      "section_id": "lyric-0005",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "77211512d53d855c85e848c2963596177d20223c52cbeb98d841e8d1fde60989",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is grand and unyielding, emphasizing inevitability and lasting triumph. The themes revolve around divine recognition, the permanence of success, and the elevation of a life deemed worthy.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "fb44f067eaf238a41dda5a26adc023e8f84d51f31892f6b4032994f6fc49c805"
+    },
+    {
+      "section_id": "lyric-0006",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "d76dcfb03f03cfb03348424569cc34eb785ffefdd2498df5b3d32ff3e917dbc8",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests a sense of warning and caution, implying that desires or intentions may lead to unintended consequences. A central theme revolves around the potential dangers of unchecked ambition or wishful thinking.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "a20117864628bd0ac9469c7b68df4d0eb60471f6fb40f7cef11b33dadde08af3"
+    },
+    {
+      "section_id": "span-0000",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    }
+  ]
+}

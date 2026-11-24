@@ -1,0 +1,203 @@
+{
+  "schema_version": 1,
+  "track_id": "7lAoovVf67mECK18oOpJbc",
+  "cohort": "random",
+  "display_only": true,
+  "registered_scores_unchanged": true,
+  "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+  "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "prompt_sha256": "ffdf21672c16d12394441664976928ac03a51b35d721d3925cca9be8adc58e3d",
+  "registered_checkpoint_sha256": "0f5199fd3b0505dd9be9313c4e0649d01628093e55e0af155ecca94370246179",
+  "reading_label": "L1's interpretation of the lyrics",
+  "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+  "reading_type": "model_interpretation",
+  "decoding": {
+    "do_sample": false,
+    "num_beams": 1,
+    "max_new_tokens": 128,
+    "torch_dtype": "float16",
+    "seed": 20261115
+  },
+  "overlap_rule": "NFKC/casefold 4-word ngrams; additionally 4 consecutive ja/ko/zh script characters with spacing/punctuation removed; block if either overlaps.",
+  "sections": [
+    {
+      "section_id": "lyric-0000",
+      "set": "secondary",
+      "language": "uncertain",
+      "text_sha256": "a5775292c89217dab43caf6a0c3eddf7d0240ac4558f8d40ae91128e9622ae07",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is repetitive and emotionally intense, conveying a deep, almost obsessive devotion. The theme explores the idea of love as something endlessly revisited, suggesting both enduring passion and a desire to relive moments of connection.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "b3afd26866e887fe76e6a18e52e06e81d6a5fc3d2196e8aba3a1e47cff7956c8"
+    },
+    {
+      "section_id": "lyric-0001",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "001f2e7ae21888100f062e035f56652a3bd75ea844633e941ae39edb7392cfac",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of reverent admiration and emotional intimacy, emphasizing enduring beauty and personal significance. The themes revolve around the timeless nature of love, the transformative power of connection, and the idea of being cherished as a source of inspiration and salvation.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "a6d93be8c6b8b894d44703cb4c5ffe652cfffcc4ea3b26064ec3911a8148427a"
+    },
+    {
+      "section_id": "lyric-0002",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "a518b730b3042673170140f0b016e6513f41289f65f7f20d4eb177095e3adbd5",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is repetitive and obsessive, emphasizing an intense, almost mechanical devotion. The theme explores the idea of love as something endlessly replayed, suggesting emotional fixation and the desire to relive and reinforce connection through constant return.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "a4f914e760f95b7eb92af59574497cbac8f6ff00b331793a87d42157724153b2"
+    },
+    {
+      "section_id": "lyric-0003",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "173891de03be65438e7cb27cf72108d9f3f9471ae476636d578f6f80d9ced7ec",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of overwhelming, almost involuntary attraction and emotional surrender, while the themes explore the power of influence, the allure of destiny, and the feeling of being deeply transformed by another's presence.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "c87f422876fd7c3ab005384642e6797ca36a61024a1f983391bb1d4d75763d2e"
+    },
+    {
+      "section_id": "lyric-0004",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "7ba8f90a9aea21f879a98eaca16a54356698875cf3dcdf9e839358b688d00c13",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is repetitive and obsessive, emphasizing an intense, almost mechanical devotion. The themes revolve around enduring affection and the idea of love being looped endlessly, suggesting both emotional fixation and a desire for permanence.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "3744ee51949d4b05d493fd7c8c8771819b80e55b5422e975fa3fa3753245c604"
+    },
+    {
+      "section_id": "lyric-0005",
+      "set": "primary",
+      "language": "uncertain",
+      "text_sha256": "440d5ccd7d147ce388631cb79fdce00f5fce94c10330efef060f60fda52dcf83",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys deep, enduring affection and a sense of uniqueness, emphasizing the lasting impact of a particular experience or connection. The themes revolve around permanence, emotional resonance, and the idea of something irreplaceable within a personal history.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "f421560300a41f6c5a50b191b2be599b48962eb0051ef7a93aae6abf3d9cec93"
+    },
+    {
+      "section_id": "lyric-0006",
+      "set": "secondary",
+      "language": "uncertain",
+      "text_sha256": "a05066cfb0a7374a982b03393cb75fea95353f0f5e0615e916dc45ba613ad57f",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is repetitive and emotionally intense, conveying a sense of enduring, almost ritualistic devotion. The themes revolve around the cyclical nature of love and the idea of love being experienced as a continuous, unbroken melody.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "1f5a9408abb8e00dde629d01db7592dcc9474047b86aab480e5b5df84fbfd624"
+    },
+    {
+      "section_id": "lyric-0007",
+      "set": "secondary",
+      "language": "uncertain",
+      "text_sha256": "a5775292c89217dab43caf6a0c3eddf7d0240ac4558f8d40ae91128e9622ae07",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is repetitive and emotionally intense, conveying a deep, almost obsessive devotion. The theme explores the idea of love as something endlessly revisited, suggesting both enduring passion and a desire to relive moments of connection.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "b3afd26866e887fe76e6a18e52e06e81d6a5fc3d2196e8aba3a1e47cff7956c8"
+    },
+    {
+      "section_id": "lyric-0008",
+      "set": "secondary",
+      "language": "uncertain",
+      "text_sha256": "a5775292c89217dab43caf6a0c3eddf7d0240ac4558f8d40ae91128e9622ae07",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is repetitive and emotionally intense, conveying a deep, almost obsessive devotion. The theme explores the idea of love as something endlessly revisited, suggesting both enduring passion and a desire to relive moments of connection.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "identical_input_cache",
+      "raw_output_sha256": "b3afd26866e887fe76e6a18e52e06e81d6a5fc3d2196e8aba3a1e47cff7956c8"
+    },
+    {
+      "section_id": "span-0000",
+      "set": "secondary",
+      "language": "uncertain",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    },
+    {
+      "section_id": "span-0006",
+      "set": "secondary",
+      "language": "uncertain",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    }
+  ]
+}

@@ -1,7 +1,7 @@
 # PIPELINE_MAP.md
 
 Source of truth for how this repo's pipeline actually works and where the
-75-song corpus currently stands. Written 2026-09-12 by walking the repo,
+original 75-song corpus currently stands. Written 2026-09-12 by walking the repo,
 reading every stage script, and cross-checking against real files on disk
 (not just docstrings) — see "How this was verified" at the bottom for the
 exact commands run.
@@ -28,21 +28,21 @@ done. See the stage table below for the real per-stage state.
 
 | # | Stage | Script (Makefile target) | Input | Output | Key deps | Resumable? |
 |---|-------|---------------------------|-------|--------|----------|------------|
-| 1 | Stem separation | `scripts/separation/separate_stems.py` (`make separate-stems`) | `audio/*.mp3`, `k-indie/*.mp3` | `stems/<song>/{drums,bass,other,vocals}.wav` | Demucs `htdemucs_ft`, torch/CUDA (GPU, CPU fallback) | Yes — skips existing stem dirs |
+| 1 | Stem separation | `scripts/separation/separate_stems.py` (`make separate-stems`) | `audio/*.mp3`, `k-indie/*.mp3`, `liked-audio/*.mp3` | `stems/<song>/{drums,bass,other,vocals}.wav` | Demucs `htdemucs_ft`, torch/CUDA (GPU, CPU fallback) | Yes — skips existing stem dirs |
 | 2a | Harmonic transcription | `scripts/transcription/transcribe_harmonic.py` (`make transcribe-harmonic`) | `stems/<song>/{other,bass}.wav` | `midi/<song>/{other,bass}.mid` | Basic Pitch (CPU; TF can't see GPU here) | Yes — skips `(song,stem)` pairs whose `.mid` exists |
 | 2b | Drum transcription | `scripts/transcription/transcribe_drums.py` (`make transcribe-drums`) | `stems/<song>/drums.wav` | `midi/<song>/drums.mid` | ADTLib + madmom + TensorFlow 1.15, **must run under `tools/adtlib-env/bin/python`** (isolated Python 3.7.17 env, not the main `.venv`) | Yes — skips songs with existing `drums.mid` |
 | 3 | Merge | `scripts/transcription/merge_stems.py` (`make merge-stems`) | `midi/<song>/{other,bass,drums}.mid` (any subset ≥1) | `merged/<song>.mid` (multi-track) | pretty_midi | Yes — re-merges if fewer than 3 stems present or any stem is newer than the merged file; also has `--check` (re-run sanity check only) |
 | 4 | Chord detection | `scripts/chords/extract_chords.py` (`make extract-chords`) | `stems/<song>/other.wav` | `chords/<song>/other_chordnotes.csv` | Chordino (nnls-chroma Vamp plugin), built from source at `tools/vamp-plugins/`; script sets `VAMP_PATH` itself | Yes — skips songs with existing chordnotes CSV |
 | 5 | Chord-tone tagging | `lib/tag_chord_tones.py` (`make tag-chord-tones`) | `merged/<song>.mid` + `chords/<song>/other_chordnotes.csv` | `chords/<song>/other_note_tags.csv` | none beyond stdlib/mido | Yes — needs both inputs, skips+logs if chordnotes missing |
 | 6 | Review ranking | `scripts/chords/rank_review_candidates.py` (`make rank-review-candidates`) | `chords/<song>/other_note_tags.csv` (all songs) | `output/review_candidates.csv`, `output/chord_review_candidates.csv` | none | Recomputed fresh each run (cheap, corpus-wide scan) |
-| 7 | Auto-correction | `scripts/correction/auto_correct_pitches.py` / `scripts/correction/correct_notes.py` (`make correct-notes`) | `merged/<song>.mid` + tagged chord data | `corrected/<song>.mid` (only if ≥1 fix applied), `_changelog.csv`, `_proposals.csv` | none | Yes |
+| 7 | Auto-correction | `scripts/correction/correct_notes.py` + `scripts/correction/correct_octave_duplicates.py` (`make correct-notes`, then `make correct-octave-duplicates`) | `merged/<song>.mid` + tagged chord data | `corrected/<song>.mid`, correction logs/proposals | none | Yes |
 | 8 | Export | `scripts/export/export_note_events.py` (`make export-note-events`) | `corrected/` or `merged/` (whichever exists) + `chords/` | `output/note_events_other.csv`, `output/chord_segments.csv` | none | Recomputed fresh each run |
 
 Evaluation (`scripts/evaluation/evaluate_transcription.py` and friends) is a
 side-branch against hand-labeled `ground_truth/` — not on the critical path
 to corpus coverage, see README.
 
-## Corpus-wide completion, verified today (2026-09-12)
+## Corpus-wide completion, verified 2026-09-12
 
 Corpus = 75 unique songs (68 in `audio/` + 30 in `k-indie/`, deduped — same
 count the README/prior notes use).
@@ -199,6 +199,30 @@ make export-note-events
 ```
 
 All accept `--retry-failed` to clear that stage's failure log and retry.
+
+## Liked-library expansion (local run, 2026-10-30)
+
+`liked-audio/` is a local-only source directory populated by
+`archive/download_songs.py` from Spotify track metadata. The downloader uses
+Spotify IDs for stable filenames, records existing-corpus aliases and exact
+audio duplicates, and resumes from `liked-audio/download_manifest.json`.
+Neither the MP3s nor `archive/liked_songs.json` are repository deliverables.
+
+The original pairwise alignment scripts were written for 75 songs. For the
+expanded library, `make build-alignment-candidates` selects n-gram neighbors
+plus deterministic background pairs, and the unchanged chord/melodic
+Smith–Waterman scorers align that retained set. `make build-analysis-database`
+then imports the exported CSVs into an ignored SQLite staging database, and
+`make generate-corpus-report` writes the checked-in pattern report.
+
+Final local run: 1,128 Spotify records; 1,053 new downloads, 40 existing
+corpus matches, 17 exact duplicates, and 18 unavailable search results. The
+cleaned source set produced 1,128 unique local songs, 1,271,174 exported note
+events, 117,112 chord segments, 20,303 harmonic alignments, and 21,116
+melodic alignments, all with zero stage or alignment failures. Melodic
+alignment can use `make run-alignment ARGS="--workers 8"` and
+`make run-note-alignment ARGS="--workers 8"` to preserve the same scoring while
+parallelizing independent candidate pairs.
 
 ## How this was verified
 

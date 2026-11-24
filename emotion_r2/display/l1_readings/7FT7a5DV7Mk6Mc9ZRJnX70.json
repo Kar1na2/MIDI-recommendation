@@ -1,0 +1,105 @@
+{
+  "schema_version": 1,
+  "track_id": "7FT7a5DV7Mk6Mc9ZRJnX70",
+  "cohort": "random",
+  "display_only": true,
+  "registered_scores_unchanged": true,
+  "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+  "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "prompt_sha256": "ffdf21672c16d12394441664976928ac03a51b35d721d3925cca9be8adc58e3d",
+  "registered_checkpoint_sha256": "dc00cab65bc0a3e09ab5b41129678b1d5c6360ef8c89200ef2515fc04726ea0f",
+  "reading_label": "L1's interpretation of the lyrics",
+  "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+  "reading_type": "model_interpretation",
+  "decoding": {
+    "do_sample": false,
+    "num_beams": 1,
+    "max_new_tokens": 128,
+    "torch_dtype": "float16",
+    "seed": 20261115
+  },
+  "overlap_rule": "NFKC/casefold 4-word ngrams; additionally 4 consecutive ja/ko/zh script characters with spacing/punctuation removed; block if either overlaps.",
+  "sections": [
+    {
+      "section_id": "lyric-0000",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "20b6f908ec7bc6d4701e10c0130029fd05741f122ce9677f539268d201084f7e",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of quiet desperation and unresolved longing, marked by a lingering uncertainty about the direction of life. The central theme explores the emotional weight of moving forward without clear answers, where memory and loss shape a sense of disorientation and internal struggle.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "238c886a7fac01516ba5265dcbc22184562b95f62c8eea9e82aba79fbebc7d90"
+    },
+    {
+      "section_id": "lyric-0001",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "8e064b36f30b924eb073a0307e810154bf334cb30983a34aba62142d706f06a9",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of irreversible movement and emotional distance, emphasizing urgency and the impossibility of retreat. The central theme explores the pain of progress that leaves behind connection and the lingering sorrow of being unable to return.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "f34a13e1c9006dc826adb71f5da0b642334553003df763463884f66ea32e9c30"
+    },
+    {
+      "section_id": "lyric-0002",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "fca1963ad538b034523d2d752ca433c691bdc237f603e71c50a32d9bb5611714",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of quiet desperation and internal conflict, as the speaker grapples with a feeling of being out of sync with the surrounding world. The central theme explores identity and self-doubt, questioning whether individuality can survive in the face of conformity.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "39a52165af3447d93df496a13ef708605914156cceaf3a2fc5bf9862bfbaa979"
+    },
+    {
+      "section_id": "lyric-0003",
+      "set": "primary",
+      "language": "ko",
+      "text_sha256": "7e23dde33ebb969613a62d6d5f43c393629f3de6def9a7ede56729badbd0f095",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of irreversible motion and emotional weight, emphasizing the pain of progress that feels both inevitable and uncommunicable. The central theme explores the conflict between forward movement and the longing for connection, highlighting how distance—both physical and emotional—deepens sorrow despite the belief that no one can halt the journey.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "b3dfb0524b355cbf4da765b170e8190f672fcb6a814e2279e63b5d0e53887e6b"
+    },
+    {
+      "section_id": "span-0000",
+      "set": "secondary",
+      "language": "ko",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    }
+  ]
+}

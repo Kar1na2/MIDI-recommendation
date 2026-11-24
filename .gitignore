@@ -1,6 +1,9 @@
+# Python caches and local credentials
 __pycache__/
 *.pyc
+.env
 
+# Local media, environments, and tool builds
 /audio/
 /k-indie/
 /stems/
@@ -8,6 +11,10 @@ __pycache__/
 /merged/
 .venv/
 .cache
+.spotify-cache*
+/liked-audio/
+/archive/liked_songs.json
+/run-logs/
 tools/adtlib-env/
 tools/python3.7-base/
 tools/vamp-build/vamp-plugin-sdk/
@@ -29,5 +36,145 @@ tools/vamp-plugins/
 !/output/analysis/
 /output/analysis/*
 !/output/analysis/*.md
+# The Meaningless Love experiment report and Tidal sketch are authored,
+# reproducible review artifacts; its audio diagnostics and intermediate CSVs
+# remain local generated analysis output.
+!/output/analysis/meaningless_love/
+/output/analysis/meaningless_love/*
+!/output/analysis/meaningless_love/*.md
+!/output/analysis/meaningless_love/*.tidal
+# The arpeggio transcription/search report is authored review material; keep
+# downloaded models, transcriptions, reference scores, and CSVs local.
+!/output/analysis/arpeggio_experiment/
+/output/analysis/arpeggio_experiment/*
+!/output/analysis/arpeggio_experiment/REPORT.md
 ground_truth_anchor/*/*.wav
 ground_truth_anchor/*/*.mid
+
+# Generated local review catalog. Private lyrics/models remain under output/.
+/preview/rhythm-layers/data.json
+/preview/rhythm-layers/diagnostics/
+
+# Retired outputs stay on disk, including authored historical review artifacts.
+/output/
+/docs/data/
+/preview/rhythm-layers/
+/instrumentals/audio/
+/instrumentals/stems/
+/instrumentals/.partial/
+/instrumentals/catalog.json
+/instrumentals/catalog.sqlite*
+/midi_backup_pre_onset_fix/
+
+# New model caches, private lyric text, diagnostic crops and analysis results.
+/outputs/
+/data/genius_html/
+
+# Local tools and caches
+/.codex-attachments/
+/.uv-cache-codex/
+.pytest_cache/
+**/__pycache__/
+/.claude/settings.local.json
+**/private/
+**/model_cache/
+**/scratch/
+**/vendor/
+
+# Generated media and model weights
+*.wav
+*.flac
+*.mp3
+*.m4a
+*.parquet
+*.safetensors
+*.bin
+*.pt
+*.ckpt
+*.onnx
+*.pb
+# Existing published audio is intentionally tracked.
+!/docs/audio/163braces-lyrics-music-video.mp3
+!/docs/audio/1nonly-meaningless-love-official-music-video.mp3
+!/docs/audio/aespa-wda-whole-different-animal-feat-g-dragon-mv.mp3
+!/docs/audio/alice-u-official-video.mp3
+!/docs/audio/art-clip-youra-rawww.mp3
+!/docs/audio/bad-boy.mp3
+!/docs/audio/beast-on-rainy-days-lyrics-eng-rom-han.mp3
+!/docs/audio/bridge-collective-the-wonderful-blood.mp3
+!/docs/audio/broken.mp3
+!/docs/audio/creepy-nuts-mirage-official-music-video-op-theme-to-call-of.mp3
+!/docs/audio/dancing-in-my-closet-feat.mp3
+!/docs/audio/download.mp3
+!/docs/audio/emotional-oranges-not-worth-it-audio.mp3
+!/docs/audio/fendi-2.mp3
+!/docs/audio/g0nny-last-scene-mv.mp3
+!/docs/audio/get-up.mp3
+!/docs/audio/glass-animals-take-a-slice-lyrics.mp3
+!/docs/audio/halcali-summer-official-music-video.mp3
+!/docs/audio/heize-and-july-feat-dean-dj-friz-mv.mp3
+!/docs/audio/heize-jenga-feat-gaeko-mv.mp3
+!/docs/audio/heize-love-virus-feat-i-m-mv.mp3
+!/docs/audio/honey-see-you-isterif-turkce-ceviri.mp3
+!/docs/audio/honeymoon-un-deux-trois-piano-version.mp3
+!/docs/audio/ice-cube.mp3
+!/docs/audio/im-ballin.mp3
+!/docs/audio/imagine-dragons-bones-official-music-video.mp3
+!/docs/audio/imagine-dragons-natural.mp3
+!/docs/audio/imagine-dragons-sharks-official-music-video.mp3
+!/docs/audio/infinite-requiem-deoksoon.mp3
+!/docs/audio/irias-live-or-die.mp3
+!/docs/audio/irving-berlin-puttin-on-the-ritz.mp3
+!/docs/audio/kanye-west-heartless.mp3
+!/docs/audio/kanye-west-power.mp3
+!/docs/audio/kanye-west-stronger.mp3
+!/docs/audio/karma.mp3
+!/docs/audio/last-surprise.mp3
+!/docs/audio/live-cilp-between-walls-agwi-suyo.mp3
+!/docs/audio/live-cilp-lano-agwi-suyo.mp3
+!/docs/audio/live-clip-luina-agwi-suyo.mp3
+!/docs/audio/lyrics-dean-dayfly-ft-sulli-rad-museum.mp3
+!/docs/audio/lyrics-video.mp3
+!/docs/audio/mac-miller-self-care.mp3
+!/docs/audio/meovv-ddi-ro-ri-mv.mp3
+!/docs/audio/metric-lost-kitten-official-lyric-video.mp3
+!/docs/audio/milena-night-train.mp3
+!/docs/audio/minecraft-ost-pigstep-flyxthekid-remix.mp3
+!/docs/audio/mv-hyukoh-wi-ing-wi-ing.mp3
+!/docs/audio/mv-jannabi-for-lovers-who-hesitate.mp3
+!/docs/audio/mv-punch-sometimes.mp3
+!/docs/audio/mv-youra-mimi.mp3
+!/docs/audio/my-broken-heart.mp3
+!/docs/audio/no-jam.mp3
+!/docs/audio/nocturne-in-b-flat-minor-op-9-no-1.mp3
+!/docs/audio/off-the-feed.mp3
+!/docs/audio/olivia-marsh-paraglider-official-mv.mp3
+!/docs/audio/ph-1-54321-feat-haewon-of-nmixx-color-coded-lyrics.mp3
+!/docs/audio/pinyin-lyricsawalk-music.mp3
+!/docs/audio/quarto-de-hotel-vibed-out.mp3
+!/docs/audio/riches.mp3
+!/docs/audio/riddle-feat-khundi-panda.mp3
+!/docs/audio/rua-young-yesh.mp3
+!/docs/audio/sennarinkontinuummusic-videoto-be-hero-x.mp3
+!/docs/audio/so-yoon-x-phum-viphurit-wings-official-mv.mp3
+!/docs/audio/song.mp3
+!/docs/audio/starjunk-95-state-your-name.mp3
+!/docs/audio/still-with-you.mp3
+!/docs/audio/sunshine.mp3
+!/docs/audio/the-marias-hush.mp3
+!/docs/audio/the-rod-4k-lyrics.mp3
+!/docs/audio/time-to.mp3
+!/docs/audio/visualizer-milena-oh-rosy.mp3
+!/docs/audio/when-night-is-falling.mp3
+!/docs/audio/why-do-we-fall-in-love.mp3
+!/docs/audio/yaeji-raingurl.mp3
+!/docs/audio/youra-ral-9002-feat-heize-color-coded-lyrics-hanromeng.mp3
+
+# Long-running batch state and logs
+/batch/*.pid
+/batch/daemon.log
+/library/*.pid
+/library/daemon.log
+
+# Generated by frontend/export_site.mjs
+/frontend/site-export/

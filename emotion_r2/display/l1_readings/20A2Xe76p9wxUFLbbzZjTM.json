@@ -1,0 +1,105 @@
+{
+  "schema_version": 1,
+  "track_id": "20A2Xe76p9wxUFLbbzZjTM",
+  "cohort": "random",
+  "display_only": true,
+  "registered_scores_unchanged": true,
+  "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+  "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "prompt_sha256": "ffdf21672c16d12394441664976928ac03a51b35d721d3925cca9be8adc58e3d",
+  "registered_checkpoint_sha256": "de50f9fd26932a0c528b4a5b970dd638f701c0f442ab76ca0c6cd3812d4a104c",
+  "reading_label": "L1's interpretation of the lyrics",
+  "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+  "reading_type": "model_interpretation",
+  "decoding": {
+    "do_sample": false,
+    "num_beams": 1,
+    "max_new_tokens": 128,
+    "torch_dtype": "float16",
+    "seed": 20261115
+  },
+  "overlap_rule": "NFKC/casefold 4-word ngrams; additionally 4 consecutive ja/ko/zh script characters with spacing/punctuation removed; block if either overlaps.",
+  "sections": [
+    {
+      "section_id": "lyric-0000",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "d71ea4b75f4196fc5544713d5945f66dc544332e8361033f3d7130d454230073",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a deep, yearning desire for enduring presence and shared moments. The central theme explores the value of time and the wish to preserve and relive moments of connection indefinitely.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "1b4105d6360418bbf48d0a8a06587e5366f1fcdee48f4a454735159c89475545"
+    },
+    {
+      "section_id": "lyric-0001",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "0842f0b304f50f65c01149bc82a4e9a697de714da39f7f371512c1b33193a29c",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of longing and quiet determination, emphasizing the struggle between desire and time's limitations. The central theme explores the persistent human yearning to connect deeply with someone meaningful, despite the relentless passage of time.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "65cb3119343e93cce72e21560c38b804e94ec5073ec9be16ab2bcb4b5ed51632"
+    },
+    {
+      "section_id": "lyric-0002",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "312f99d4b3ce0776b53fc0445a0d89fa563302137a1135252f8246357fa3a35c",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a reflective and tender sentiment, emphasizing the lasting impact of meaningful connections. The theme centers on the idea that true fulfillment comes not from unfulfilled aspirations, but from the enduring influence of those who respond to one's hopes with care and presence.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "7b52d5c9a6c97b8e0a6582a90f317126708cd67cea4380550ce2c46be9e05ae8"
+    },
+    {
+      "section_id": "lyric-0003",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "aa7ae529550fe3f88e914a81633ef5ed427347fbe977970d37ee56eac04a1568",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of longing and quiet determination, emphasizing the struggle between time's limitations and the desire for meaningful connection. The central theme explores the tension between fleeting opportunities and the persistent yearning for a lasting, shared journey.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "4048571d7bc92d268efc165fd1a1f360b4bad312a0b8c51137fb10602b043809"
+    },
+    {
+      "section_id": "span-0000",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    }
+  ]
+}

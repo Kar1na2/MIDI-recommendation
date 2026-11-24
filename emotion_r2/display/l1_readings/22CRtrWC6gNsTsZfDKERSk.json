@@ -1,0 +1,156 @@
+{
+  "schema_version": 1,
+  "track_id": "22CRtrWC6gNsTsZfDKERSk",
+  "cohort": "random",
+  "display_only": true,
+  "registered_scores_unchanged": true,
+  "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+  "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "prompt_sha256": "ffdf21672c16d12394441664976928ac03a51b35d721d3925cca9be8adc58e3d",
+  "registered_checkpoint_sha256": "dcbfbcc5ad7ac73e707eb0f14536b75805298b00e858b2191639780e95486b98",
+  "reading_label": "L1's interpretation of the lyrics",
+  "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+  "reading_type": "model_interpretation",
+  "decoding": {
+    "do_sample": false,
+    "num_beams": 1,
+    "max_new_tokens": 128,
+    "torch_dtype": "float16",
+    "seed": 20261115
+  },
+  "overlap_rule": "NFKC/casefold 4-word ngrams; additionally 4 consecutive ja/ko/zh script characters with spacing/punctuation removed; block if either overlaps.",
+  "sections": [
+    {
+      "section_id": "lyric-0000",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "8e31abb542b360947ba7ada62ad4e862d05823ce040469a875f743710d9750a7",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of internal guilt and isolation, underscored by a quiet resignation to emotional detachment and self-perceived failure. The themes explore the tension between personal responsibility and external judgment, highlighting a cycle of withdrawal and self-awareness.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "470e39821dc93b57b38d6774fd81c4217b3c18d365b481ad6161f9bf5144abdf"
+    },
+    {
+      "section_id": "lyric-0001",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "f70ff47d2671be80def47d5747d2b780a5e53e63e566a59404265ef3ae526cc7",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests a passive acceptance of external definition, emphasizing fluidity and dependence on perception. The theme explores identity as shaped by others' judgments rather than intrinsic qualities.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "404600a36abaa4da37b7c445e6c97ce89495fa2bd28397c57fcefbf6a8869a00"
+    },
+    {
+      "section_id": "lyric-0002",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "fdf585447a351deef0c91d3bfb34dd8970031fb03a059b7f283d21ef3a14bc94",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of emotional detachment and defiance, with themes of identity being shaped by external perception rather than internal truth. It explores the tension between self-perception and how others define one's existence.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "5b2014fdc1dae66f576951c8d869ae651b11c6492f0acb15e9ab2fd0542f3c97"
+    },
+    {
+      "section_id": "lyric-0003",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "3829e77802e99202901bfbfd92a027946c3d0944a98a479b7f50089c88c1ca62",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests a reflective acceptance of fluid identity, emphasizing personal adaptability in response to external perception. The theme centers on the interplay between self-definition and the influence of others in shaping one's sense of being.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "d93df133413c1b3d1892f091ffd9cd8fe7e75291bc8f99f78b1544c7c1fc9387"
+    },
+    {
+      "section_id": "lyric-0004",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "c1215fe5066211e9d9083b1fa2fdfdf7510f9eed86d47dd7bf7bbfaf3fbfbf64",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of internal struggle and uncertainty, highlighting a disconnection from personal direction. The themes revolve around self-doubt, the absence of clear goals, and the difficulty of overcoming personal habits.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "a4cb14bafe170456d3eda1f394ff9d8153f8bca7710f254b5fee9725655a1b9a"
+    },
+    {
+      "section_id": "lyric-0005",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "2f48bab63308309413f38d4201d3fc7638aa656fe8d9471e4c8167d706072b6b",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of internal struggle and isolation, underscored by a quiet admission of failure and a resignation to being defined by external judgments. The themes explore identity, self-perception, and the emotional weight of being disconnected from both others and oneself.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "8b816475d9fc37a5e62d394c79af7a7cc84b3054267f99ebb140c346d6adbf56"
+    },
+    {
+      "section_id": "lyric-0006",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "33605d04514a654011878f75078bc0966636986df0eaae821af5d0eb5f246870",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests a reflective acceptance of fluid identity, emphasizing personal agency through external perception. The theme explores the interplay between self-definition and the influence of others in shaping one's sense of self.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "3ce0c3fb783fc652515810cddf1f22c16663e8a25b70b35ea3be77f0ac1dd286"
+    },
+    {
+      "section_id": "span-0000",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    }
+  ]
+}

@@ -1,0 +1,195 @@
+{
+  "schema_version": 1,
+  "track_id": "5goqVeMYUQecvpcjNxpadU",
+  "cohort": "random",
+  "display_only": true,
+  "registered_scores_unchanged": true,
+  "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+  "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "prompt_sha256": "ffdf21672c16d12394441664976928ac03a51b35d721d3925cca9be8adc58e3d",
+  "registered_checkpoint_sha256": "a59acd49fea129b507201c5e6b8b6440ffed5e1b79506f21e07cdd05ffb2c288",
+  "reading_label": "L1's interpretation of the lyrics",
+  "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+  "reading_type": "model_interpretation",
+  "decoding": {
+    "do_sample": false,
+    "num_beams": 1,
+    "max_new_tokens": 128,
+    "torch_dtype": "float16",
+    "seed": 20261115
+  },
+  "overlap_rule": "NFKC/casefold 4-word ngrams; additionally 4 consecutive ja/ko/zh script characters with spacing/punctuation removed; block if either overlaps.",
+  "sections": [
+    {
+      "section_id": "lyric-0000",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "396751f22b0a67df6bc0c6053ec346fac0398afaa4a77d6ad1f960087fe2e7da",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a conflicted awareness of moral compromise, balancing outward conformity with internal resistance to deeper ethical responsibilities. A central theme explores the tension between maintaining social appearances and the discomfort of confronting one's own biases and choices.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "099c88e8f905e51df30a15eac86f8e008553fa733014c154f8396a76da56b0ab"
+    },
+    {
+      "section_id": "lyric-0001",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "c75ea8d80ddf5ebff19868853a45d1f05189b4b940d3eddfbdd039029bfae42c",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a tense, internal struggle between vulnerability and resistance, marked by a desperate need for stability amid uncertainty. The themes explore the conflict between acknowledging weakness and choosing to suppress it in order to maintain a sense of control.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "1543f62559767b9f0290812de2859abb900b90cb4ac3e8dd4abdec5560048b28"
+    },
+    {
+      "section_id": "lyric-0002",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": "87beafd906a5c13505e5df0a9764c42c93b0d9a82ff1c76fb15edd1dcaabc483",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys urgency and a deep internal search for authenticity, while the themes explore personal integrity, emotional vulnerability, and the need to act with sincerity in a fleeting moment.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "9c6fdd3db9302a86763de2889a4b58f4cca326bcea917a1990fe8c93718549d6"
+    },
+    {
+      "section_id": "lyric-0003",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": "563fd9fd16186e73cb52cf5a50f7c7775c399d5d7005410c0cf96b8104e45765",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a desperate plea for stability and resilience amid uncertainty, marked by a mix of vulnerability and determination. The central theme explores the struggle to maintain inner strength and self-belief when facing collapse or doubt.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "25ec1cafb0be9ab32cd9cac317f233d19974002883cc6a66e4b9ca01c9518db7"
+    },
+    {
+      "section_id": "lyric-0004",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "cfa09d16d01cd7387ae0ab824e60bf7cc9a87e060a028b9152472578fa7d895e",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of internal conflict and self-doubt, tinged with vulnerability and quiet desperation. The themes explore guilt, personal failure, and the struggle to reconcile actions with perceived shortcomings.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "235eb6ab23a1c54fa8773744fd25368ee4c892494ee057976f1f5109a6a2b323"
+    },
+    {
+      "section_id": "lyric-0005",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "1de83716deedfd1fe215a4dbbc0196276b94b5b3cdca851a18d402ec946b0d45",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone conveys a sense of urgent resilience amid fear and internal conflict, emphasizing steadfastness in the face of instability. The themes revolve around personal endurance, the struggle between vulnerability and defiance, and the need to maintain composure under pressure.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "502f12b4394b06cca6710a5755645ca082c3f065b7c4a931ef21dda97bba79c9"
+    },
+    {
+      "section_id": "lyric-0006",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": "a8db688f37a241e99bcb81a512bcdfb2fb9fbf66cad1c5c0dfd3cfc9b1937d13",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is urgent and vulnerable, conveying a deep-seated fear of failure and a desperate plea for reliability. The central theme revolves around trust and the anxiety of dependence on something or someone essential.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "7a6b756e52d2573f850f5acd9aac6bed19d287f5605cacf38f4f77c46f7ed292"
+    },
+    {
+      "section_id": "span-0000",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    },
+    {
+      "section_id": "span-0002",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    },
+    {
+      "section_id": "span-0004",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    },
+    {
+      "section_id": "span-0007",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    }
+  ]
+}

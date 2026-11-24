@@ -1,0 +1,292 @@
+{
+  "schema_version": 1,
+  "track_id": "3VMzQ4rh7FtfSuyjHIcuZR",
+  "cohort": "random",
+  "display_only": true,
+  "registered_scores_unchanged": true,
+  "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+  "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "prompt_sha256": "ffdf21672c16d12394441664976928ac03a51b35d721d3925cca9be8adc58e3d",
+  "registered_checkpoint_sha256": "4b360cadbed7e1dcd4a50d4a5e89a8bbd8d5e1b1066726501916a7ac7ca8009c",
+  "reading_label": "L1's interpretation of the lyrics",
+  "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+  "reading_type": "model_interpretation",
+  "decoding": {
+    "do_sample": false,
+    "num_beams": 1,
+    "max_new_tokens": 128,
+    "torch_dtype": "float16",
+    "seed": 20261115
+  },
+  "overlap_rule": "NFKC/casefold 4-word ngrams; additionally 4 consecutive ja/ko/zh script characters with spacing/punctuation removed; block if either overlaps.",
+  "sections": [
+    {
+      "section_id": "lyric-0000",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "e263d36957dcdcd053f386b89ca4e809516d7f4fbded8dee927fe3a050ccdfb3",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone suggests a sense of isolation and sudden, unsettling intrusion, while the themes explore vulnerability, the blurring of reality and perception, and the psychological impact of unexpected encounters in solitude.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "32b96b8bca861d723cf9c07bb1a0fdc92200a1f1825d74e3866ce9c8d669c5a4"
+    },
+    {
+      "section_id": "lyric-0001",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "9e96fbedfb487068116219bf7c55ec16cc416134ae1dfa9ec5e2fb3fd8fdd73a",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is urgent and tense, conveying a sense of pursuit and escalating danger. The themes revolve around isolation, vulnerability, and the instinctive reaction to being threatened.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "a5e5496d0c167b5fcdfa80738f971f6d3b5c6c361ab1b27a589b6c1d7018057d"
+    },
+    {
+      "section_id": "lyric-0002",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "2ea2e3ff7e9e6d9f28cb9f08f77ae3b6d91c97086b7d716bdae925cd71cf1f14",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is urgent and visceral, conveying a sense of impending danger and chaos. The themes revolve around disorientation, violence, and the overwhelming presence of trauma.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "6c681c1ed9601c323e7895414fbe884673f4ef15136fb73d006fda833296e798"
+    },
+    {
+      "section_id": "lyric-0003",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "4d0d975a679aef4490d1799fd3f55c9261f14316a3a3fe56abc837502139ed6d",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is tense and ominous, suggesting a sense of danger and unpredictability. The themes revolve around vulnerability, hidden threats, and the contrast between public image and private risk.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "77bb609b0e01d0eddd53eb37eb03d140b4922527c2cae533c52a35bae2daf1f9"
+    },
+    {
+      "section_id": "lyric-0004",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "c9518fb71fc4344ec21672c94915b074927e963991a9632e5ecb130bfe0c2455",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is dark and sensational, emphasizing violent and grotesque imagery. The themes revolve around primal aggression, exploitation, and the blurring of reality and fiction.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "c12294dc0850d7f27c79569f257c1a8b248acdad3a9c9f93c515740f8b5078f0"
+    },
+    {
+      "section_id": "lyric-0005",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "f1f0f953c90ba79ca9c32173e06858e4b16cefaf96572bc47b48bac9ee49331e",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is eerie and isolating, conveying a sense of disorientation and danger amid a fragile, deteriorating situation. The themes explore abandonment, self-doubt, and the psychological weight of being trapped in a hostile and uncertain environment.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "fd3ce976026a3e79b07e7e2eab826c30688cbd3419c908fff1c53b99c2debdce"
+    },
+    {
+      "section_id": "lyric-0006",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "4a40e4faeea803b9b65d7383a26061369e8f648ac5f4dd7741f3d4807be296aa",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is abrupt and unexpectedly harsh, shifting from hopeful anticipation to sudden, painful realization. The theme centers on the fragility of hope and the sudden intrusion of danger that can shatter even quiet, forward-moving aspirations.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "b2b032128559a2b542eeedc8ad227cbadb320fbec33578dfa95a9a7bddbccf6c"
+    },
+    {
+      "section_id": "lyric-0007",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "890fc02569955f1215d975ba7bd5fba632ac2c09f971c913265afd0abd90c19f",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is cold and detached, conveying a sense of isolation and mechanical repetition. The themes explore physical and emotional disintegration, framed through a quiet, almost ritualistic progression toward a stagnant, inward state.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "bc07e30752999a3c8f227fe5dce69e95ee71f3d92be4d12204184bf4a9995a7d"
+    },
+    {
+      "section_id": "lyric-0008",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "4f7792631c3d0a7f48e62f9baec3654f174f852cd2a535f39dded7e9507da046",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is confrontational and satirical, portraying a dramatic yet absurd clash between authority and rebellion. The themes revolve around power dynamics, hidden threats, and the vulnerability of public figures amid growing scrutiny.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "b8227bb2bf8ab658dc4a2469611494011be06a38e3b1af44683d3dac46b904f3"
+    },
+    {
+      "section_id": "lyric-0009",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "4a0665ea6a5343ae5a48ec43534e6d50336e78aa4c8e469986e0cef1f3a8d46e",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is aggressive and confrontational, suggesting a violent, possibly absurd or hyperbolic struggle. The themes revolve around fear, retaliation, and the idea of overcoming a perceived threat through force.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "d9734580b8d9b55549b5d6c397d7df361fa87f4fa562fd4cbb7a71ac64de7036"
+    },
+    {
+      "section_id": "lyric-0010",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "6886af381491b2a722d1c74156b9f942b398522eac329084493dc6f57da509ce",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is grim and surreal, blending physical suffering with absurdity. The themes explore isolation, resilience in the face of trauma, and the distortion of identity in extreme conditions.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "fa897af2fb87fea3436323b22f31d71c603c1fb3d736a4699018dc30e5897ab9"
+    },
+    {
+      "section_id": "lyric-0011",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "2c06b1c886ebbd8c3c95e8e2086e647e2a98c8b7e5bd4b2b8d68dbed638c9b88",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is tense and urgent, conveying a moment of high stakes and sudden revelation. The themes explore defiance in the face of imminent danger and the possibility of overcoming overwhelming odds through inner strength.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "a6ec9faf2fb65fa625c7800b92c47c75bb8fcc43d6e97701e6013af1fe5f6647"
+    },
+    {
+      "section_id": "lyric-0012",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "ce2cbedc749181334b54e4b2cf613faab95232b343541e3bdce8c0c3ae621267",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is irreverent and playful, employing exaggerated imagery to create a sense of absurdity and mock intensity. The themes revolve around fame, confrontation, and the perception of power in a public figure's persona.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "56b1aeac3f24ce95f7977dbb1ecb42c26e856f65e6ef6bc2c3d1355f88eac1bd"
+    },
+    {
+      "section_id": "lyric-0013",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "8c2e3e2a484e4b49c7ac4cc71a310ed7f25c862ef8cf237c544497cd1757f274",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is aggressive and violent, emphasizing a relentless, almost mechanical sequence of action. The themes revolve around destruction, power, and the blurring of reality and fiction in a chaotic, unrelenting confrontation.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "fbb0bde7dea1b441bcbbe15d4a2bdc6f3be07db13ac91f771fb4da65f7e13a02"
+    },
+    {
+      "section_id": "lyric-0014",
+      "set": "primary",
+      "language": "en",
+      "text_sha256": "bb9b923f30d6a85a4caf5a8424a5264079e8a9afaf22e48b2cc4911d19574f2e",
+      "registered_status": "ok",
+      "status": "ok",
+      "reading": "The tone is detached and surreal, conveying a sense of abrupt transition from danger to relief. The themes explore isolation, vulnerability, and the psychological aftermath of trauma.",
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": {
+        "four_word_overlap": false,
+        "four_cjk_character_overlap": false
+      },
+      "generation_source": "local_greedy",
+      "raw_output_sha256": "765811ca3ae0c67d1ba395363f6439e8b28d0331f70e19f57d121387f8d4de35"
+    },
+    {
+      "section_id": "span-0000",
+      "set": "secondary",
+      "language": "en",
+      "text_sha256": null,
+      "registered_status": "missing_text",
+      "status": "missing_text",
+      "reading": null,
+      "reading_label": "L1's interpretation of the lyrics",
+      "interpretation_notice": "A model-generated interpretation, not verified songwriter intent or emotion, and not an explanation of how registered scores were computed.",
+      "overlap_flags": null,
+      "generation_source": null
+    }
+  ]
+}
